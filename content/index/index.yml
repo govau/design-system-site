@@ -1,0 +1,7 @@
+title: Homepage
+header:
+  - /_shared/header.md
+main:
+  - main.md
+footer:
+  - /_shared/footer.md

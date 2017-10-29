@@ -1,0 +1,47 @@
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Header Gov AU module
+// The Header gives context that you are on a .gov.au domain.
+//
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+@import '_print.scss';
+
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Header Gov AU styles
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
+.headergovau {
+	background-color: $uikit-colour-Primary--80;
+	color: #fff;
+
+	a {
+		color: #fff;
+	}
+}
+
+.headergovau__logo {
+	display: inline-block;
+	margin-right: uikit-space( 0.5 );
+	vertical-align: middle;
+
+	.uikit-body & {
+		color: #fff;
+		border-bottom: 0;
+
+		&:hover {
+			color: $uikit-colour-Text;
+		}
+	}
+
+	.globalheader--light & {
+		border-color: $uikit-colour-Text;
+		color: $uikit-colour-Text;
+	}
+}
+
+.headergovau__logo__svg {
+	height: 1em;
+	width: 1em;
+	margin-right: uikit-space( 0.25 );
+}
