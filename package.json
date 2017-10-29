@@ -52,7 +52,7 @@
 		"@gov.au/header": "^1.2.0",
 		"autoprefixer": "^7.1.6",
 		"concat-cli": "^4.0.0",
-		"cuttlebelle": "^1.0.0-alpha.32",
+		"cuttlebelle": "^1.0.0-alpha.33",
 		"node-sass": "^4.5.3",
 		"onchange": "^3.2.1",
 		"postcss-cli": "^4.1.1",
