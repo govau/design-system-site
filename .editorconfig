@@ -1,0 +1,17 @@
+# editorconfig.org
+root = true
+
+[*]
+indent_style = tab
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+# See http://stackoverflow.com/a/729795
+
+[*.md]
+indent_style = space
+trim_trailing_whitespace = false
+
+[*.yml]
+indent_style = space
