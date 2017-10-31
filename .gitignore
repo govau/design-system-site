@@ -1,0 +1,21 @@
+# system files
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+.idea
+
+
+# node / npm / sass
+node_modules
+.sass-cache
+validation-report.json
+validation-status.json
+npm-debug.log
+
+
+# artifacts
+site/
+docs/
+**/_uikit/**
+**/*.css
+src/assets/js/*

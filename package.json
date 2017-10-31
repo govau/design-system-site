@@ -1,0 +1,93 @@
+{
+	"name": "GOLD",
+	"version": "1.0.0",
+	"description": "The government open language for design website.",
+	"scripts": {
+		"build:docs": "cuttlebelle docs",
+		"build:site": "./node_modules/.bin/cuttlebelle",
+		"build:autoprefix": "postcss src/assets/css/*.css -u autoprefixer -r",
+		"build:css": "mkdir -p src/assets/css/ && node-sass --output-style compressed -o src/assets/css src/sass/style.scss",
+		"build:js-header": "concat-cli -f src/js/header/*.js -o src/assets/js/header.js",
+		"build:js-footer": "concat-cli -f src/js/footer/**/*.js src/js/footer/*.js -o src/assets/js/footer.js",
+		"build:uglify": "uglifyjs src/assets/js/header.js --compres --output src/assets/js/header.js && uglifyjs src/assets/js/footer.js --compres --output src/assets/js/footer.js",
+		"build:js": "mkdir -p src/assets/js/ && npm run build:js-header && npm run build:js-footer && npm run build:uglify",
+		"build:assets": "npm run build:css && npm run build:autoprefix && npm run build:js",
+		"build": "npm run build:assets && npm run build:site",
+		"watch:sass": "onchange 'src/sass/**/*.scss' -- npm run build:css && npm run build:autoprefix",
+		"watch:js": "onchange 'src/js/**/*.js' -- npm run build:js",
+		"watch:site": "cuttlebelle -w -n",
+		"watch": "npm run build && npm run watch:sass | npm run watch:js | npm run watch:site",
+		"test": "echo 'Error: no test specified' && exit 0"
+	},
+	"repository": "git+https://github.com/govau/GOLD.git",
+	"author": {
+		"name": "Commonwealth of Australia, DTA",
+		"email": "guides@digital.gov.au",
+		"url": "https://www.dta.gov.au/"
+	},
+	"homepage": "https://github.com/govau/GOLD",
+	"contributors": [
+		{
+			"name": "Dominik Wilkowski",
+			"email": "hi@dominik-wilkowski.com",
+			"url": "https://dominik-wilkowski.com/"
+		},
+		{
+			"name": "Alex Page",
+			"email": "alex@alexpage.com.au",
+			"url": "http://alexpage.com.au"
+		}
+	],
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://github.com/govau/GOLD/blob/master/LICENSE"
+		}
+	],
+	"devDependencies": {
+		"@gov.au/animate": "^0.1.5",
+		"@gov.au/body": "^0.1.2",
+		"@gov.au/footer": "^0.3.0",
+		"@gov.au/grid-12": "^0.1.1",
+		"@gov.au/header": "^1.2.0",
+		"autoprefixer": "^7.1.6",
+		"concat-cli": "^4.0.0",
+		"cuttlebelle": "^1.0.0-alpha.33",
+		"node-sass": "^4.5.3",
+		"onchange": "^3.2.1",
+		"postcss-cli": "^4.1.1",
+		"react": "^16.0.0",
+		"uglify-js": "^3.1.5"
+	},
+	"cuttlebelle": {
+		"folder": {
+			"code": "src/layout",
+			"assets": "src/assets"
+		},
+		"site": {
+			"doctype": "<!DOCTYPE html><!--[if lt IE 8]><html class=\"no-js lt-ie8 lt-ie9\" lang=\"en\"><![endif]--><!--[if IE 8]><html class=\"no-js lt-ie9 ie8\" lang=\"en\"><![endif]--><!--[if IE 9 ]><html class=\"no-js ie9\" lang=\"en\"><![endif]--><!--[if !(IE)]><!--><html class=\"no-js\" lang=\"en\"><!--<![endif]-->"
+		}
+	},
+	"pancake": {
+		"auto-save": false,
+		"plugins": true,
+		"ignore": [],
+		"css": {
+			"modules": false,
+			"location": false,
+			"name": false
+		},
+		"sass": {
+			"location": "src/_uikit/sass/",
+			"name": "_uikit.scss"
+		},
+		"js": {
+			"modules": false,
+			"location": "src/js/footer/_uikit/",
+			"name": "uikit.js"
+		},
+		"react": {
+			"location": "src/_uikit/layout/"
+		}
+	}
+}
