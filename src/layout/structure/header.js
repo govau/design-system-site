@@ -20,31 +20,31 @@ const themes = {
  *
  * Use for: thing thing thing
  */
-const Header = ( page ) => {
-	const HeadingTag = `h${ page.level }`;
+const Header = ( props ) => {
+	const HeadingTag = `h${ props.level }`;
 
 	return (
 		<header>
-			<HeaderGovAU />
+			<HeaderGovAU props={ props } />
 
 			<div className={`uikit-header${
-				page.hero
+				props.hero
 					? ' uikit-header--hero'
 					: ''
 			}${
-				page.theme
-					? ` ${ themes[ page.theme ] }`
+				props.theme
+					? ` ${ themes[ props.theme ] }`
 					: ''
 			}`} role="banner">
 				<div className="container">
 					<div className="row">
 						<div className="col-md-12">
-							<HeadingTag className="uikit-header-heading">{ page.title }</HeadingTag>
+							<HeadingTag className="uikit-header-heading">{ props.title }</HeadingTag>
 							{
-								page.subline
-									&& <span className="uikit-header-subline">{ page.subline }</span>
+								props.subline
+									&& <span className="uikit-header-subline">{ props.subline }</span>
 							}
-							{ page.children }
+							{ props.children }
 						</div>
 					</div>
 				</div>
