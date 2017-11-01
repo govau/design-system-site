@@ -17,13 +17,13 @@ import Footer, { FooterEnd } from '../../_uikit/layout/footer';
  *
  * Use for: thing thing thing
  */
-const FooterGovAU = ( props ) => (
+const FooterGovAU = ({ subline }) => (
 	<Footer>
 		<div className="container">
 			<div className="row">
 				<div className="col-md-12">
 					<FooterEnd>
-						<p>{ props.subline }</p>
+						<p>{ subline }</p>
 						<img className="uikit-responsive-media-img" src="http://placehold.it/157x80" alt="Commonwealth Coat of Arms crest logo" />
 						<p>
 							<small>

@@ -7,8 +7,8 @@ import React from 'react';
  *
  * @disable-docs
  */
-const Partial = ( page ) => (
-	<div className="uikit-partial">{ page._body }</div>
+const Partial = ({ _body }) => (
+	<div className="uikit-partial">{ _body }</div>
 );
 
 
