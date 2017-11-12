@@ -1,0 +1,3 @@
+[submodule "furnace"]
+	path = furnace
+	url = git@github.com:govau/furnace.git
