@@ -4,40 +4,62 @@ import React from "react";
 /**
  * The page component
  */
-const Page = ( props ) => (
+const Page = ({
+	_ID,
+	_relativeURL,
+	title,
+	header,
+	main,
+	footer
+}) => (
  <html>
 	<head>
-		<title>{ props.title }</title>
-		<link rel="shortcut icon" type="image/x-icon" href={ props._relativeURL( '/src/assets/img/favicon.ico', props._ID ) } />
-		<link rel="stylesheet" href={ props._relativeURL( '/src/assets/css/style.css', props._ID ) } />
-		<script src={ props._relativeURL( '/src/assets/js/header.js', props._ID ) } />
+		<title>{ title }</title>
+		<link rel="shortcut icon" type="image/x-icon" href={ _relativeURL( '/src/assets/img/favicon.ico', _ID ) } />
+		<link rel="stylesheet" href={ _relativeURL( '/src/assets/css/style.css', _ID ) } />
+		<script src={ _relativeURL( '/src/assets/js/header.js', _ID ) } />
 	</head>
 	<body>
 
 		<div className="uikit-body uikit-grid">
-			{ props.header }
+			{ header }
 			<main>
 				<div className="container">
 					<div className="row">
 						<div className="grids col-md-12">
-							{ props.main }
+							{ main }
 						</div>
 					</div>
 				</div>
 			</main>
-			{ props.footer }
+			{ footer }
 		</div>
 
-		<script src={ props._relativeURL( '/src/assets/js/footer.js', props._ID ) } />
+		<script src={ _relativeURL( '/src/assets/js/footer.js', _ID ) } />
 	</body>
  </html>
 );
 
 Page.propTypes = {
 	/**
-	 * _body: (partials)(4)
+	 * title: Homepage
 	 */
-	_body: PropTypes.node.isRequired,
+	title: PropTypes.string.isRequired,
+
+	/**
+	 * header: (partials)(2)
+	 */
+	header: PropTypes.node.isRequired,
+
+	/**
+	 * main: (partials)(4)
+	 */
+	main: PropTypes.node.isRequired,
+
+	/**
+	 * footer: (partials)(2)
+	 */
+	footer: PropTypes.node.isRequired,
 };
 
 

@@ -1,0 +1,13 @@
+---
+host: gold
+buildpack: nodejs_buildpack
+memory: 256M
+instances: 1
+env:
+  NODE_MODULES_CACHE: false
+path: ./
+command: node server/index.js staging
+
+applications:
+- name: gold-blue
+- name: gold-green

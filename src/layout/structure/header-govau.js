@@ -7,7 +7,7 @@ import React from 'react';
  *
  * Use for: thing thing thing
  */
-const HeaderGovAU = ({ props }) => (
+const HeaderGovAU = ({ _ID, _relativeURL }) => (
 	<div className="headergovau">
 		<div className="container">
 			<div className="row">
@@ -17,7 +17,7 @@ const HeaderGovAU = ({ props }) => (
 						<svg className="headergovau__logo__svg" role="img" title="The Commonwealth Star">
 							<title>Gov AU Star</title>
 							<desc>A six pointed star representing the commonwealth star.</desc>
-							<use xlinkHref={ props._relativeURL( '/src/assets/svg/map.svg#star', props._ID ) }/>
+							<use xlinkHref={ _relativeURL( '/src/assets/svg/map.svg#star', _ID ) }/>
 						</svg>
 
 						<span className="headergovau__logo__title">GOV.AU</span>

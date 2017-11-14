@@ -20,31 +20,40 @@ const themes = {
  *
  * Use for: thing thing thing
  */
-const Header = ( props ) => {
-	const HeadingTag = `h${ props.level }`;
+const Header = ({
+	_ID,
+	_relativeURL,
+	level,
+	hero,
+	theme,
+	title,
+	subline,
+	children
+}) => {
+	const HeadingTag = `h${ level }`;
 
 	return (
 		<header>
-			<HeaderGovAU props={ props } />
+			<HeaderGovAU _ID={ _ID } _relativeURL={ _relativeURL } />
 
 			<div className={`uikit-header${
-				props.hero
+				hero
 					? ' uikit-header--hero'
 					: ''
 			}${
-				props.theme
-					? ` ${ themes[ props.theme ] }`
+				theme
+					? ` ${ themes[ theme ] }`
 					: ''
 			}`} role="banner">
 				<div className="container">
 					<div className="row">
 						<div className="col-md-12">
-							<HeadingTag className="uikit-header-heading">{ props.title }</HeadingTag>
+							<HeadingTag className="uikit-header-heading">{ title }</HeadingTag>
 							{
-								props.subline
-									&& <span className="uikit-header-subline">{ props.subline }</span>
+								subline
+									&& <span className="uikit-header-subline">{ subline }</span>
 							}
-							{ props.children }
+							{ children }
 						</div>
 					</div>
 				</div>

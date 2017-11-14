@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "The government open language for design website.",
 	"scripts": {
-		"build:docs": "cuttlebelle docs",
+		"docs": "cuttlebelle docs",
 		"build:site": "./node_modules/.bin/cuttlebelle",
 		"build:autoprefix": "postcss src/assets/css/*.css -u autoprefixer -r",
 		"build:css": "mkdir -p src/assets/css/ && node-sass --output-style compressed -o src/assets/css src/sass/style.scss",
@@ -58,6 +58,12 @@
 		"postcss-cli": "^4.1.1",
 		"react": "^16.0.0",
 		"uglify-js": "^3.1.5"
+	},
+	"dependencies": {
+		"express": "^4.16.2"
+	},
+	"engines": {
+		"node": "8.8.0"
 	},
 	"cuttlebelle": {
 		"folder": {
