@@ -9,5 +9,4 @@ path: ./
 command: node server/index.js staging
 
 applications:
-- name: gold-blue
-- name: gold-green
+- name: gold
