@@ -9,5 +9,7 @@ path: ./
 command: node server/index.js
 
 applications:
-- name: gold-blue
-- name: gold-green
+- name: gold
+
+routes:
+- route: gold.service.gov.au
