@@ -1,5 +1,4 @@
 ---
-host: gold
 buildpack: nodejs_buildpack
 memory: 256M
 instances: 1
