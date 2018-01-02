@@ -63,7 +63,7 @@
 		"express": "^4.16.2"
 	},
 	"engines": {
-		"node": "8.8.0"
+		"node": "~9"
 	},
 	"cuttlebelle": {
 		"folder": {
