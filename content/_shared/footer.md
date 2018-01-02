@@ -1,4 +1,5 @@
 ---
-layout: structure/footer-govau
+layout: structure/footer
 subline: Hello
+alt: true
 ---

@@ -1,4 +1,5 @@
-// Our vars
+// Overwrites
+@import 'overwrites/colors';
 
 
 // UI-Kit
@@ -8,4 +9,4 @@
 // Our custom components and overrides
 @import 'base/reset';
 
-@import 'components/headergovau/module';
+

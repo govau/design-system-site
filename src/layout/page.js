@@ -4,14 +4,7 @@ import React from "react";
 /**
  * The page component
  */
-const Page = ({
-	_ID,
-	_relativeURL,
-	title,
-	header,
-	main,
-	footer
-}) => (
+const Page = ({ _ID,	_relativeURL, title, header, main, footer }) => (
  <html>
 	<head>
 		<title>{ title }</title>
@@ -21,7 +14,7 @@ const Page = ({
 	</head>
 	<body>
 
-		<div className="uikit-body uikit-grid">
+		<div className="au-body au-grid">
 			{ header }
 			<main>
 				<div className="container">
@@ -39,6 +32,7 @@ const Page = ({
 	</body>
  </html>
 );
+
 
 Page.propTypes = {
 	/**

@@ -9,7 +9,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Footer, { FooterEnd } from '../../_uikit/layout/footer';
+import AUfooter, { AUfooterEnd } from '../../_uikit/layout/footer';
 
 
 /**
@@ -17,32 +17,46 @@ import Footer, { FooterEnd } from '../../_uikit/layout/footer';
  *
  * Use for: thing thing thing
  */
-const FooterGovAU = ({ subline }) => (
-	<Footer>
+const Footer = ({ dark, alt, _body  }) => (
+	<AUfooter className={ `au-footer au-body ${ dark ? ' au-footer--dark au-body--dark' : '' }${ alt ? ' au-footer--alt au-body--alt' : '' } `} >
 		<div className="container">
 			<div className="row">
 				<div className="col-md-12">
-					<FooterEnd>
-						<p>{ subline }</p>
-						<img className="uikit-responsive-media-img" src="http://placehold.it/157x80" alt="Commonwealth Coat of Arms crest logo" />
+					<AUfooterEnd>
+						<div className="content">
+							{ _body }
+						</div>
+						<img className="au-responsive-media-img" src="http://placehold.it/157x80" alt="Commonwealth Coat of Arms crest logo" />
 						<p>
 							<small>
 								&copy; Commonwealth of Australia,
 								<a href="https://github.com/govau/uikit/blob/master/LICENSE.md" rel="external license">MIT licensed</a>
 							</small>
 						</p>
-					</FooterEnd>
+					</AUfooterEnd>
 				</div>
 			</div>
 		</div>
-	</Footer>
+	</AUfooter>
 );
 
-FooterGovAU.propTypes = {
+
+Footer.propTypes = {
 	/**
-	 * subline: Potato and tomato having the best time
+	 * _body: Potato and tomato having the best time
 	 */
-	subline: PropTypes.string.isRequired,
+	_body: PropTypes.node,
+
+	/**
+	 * dark: false
+	 */
+	dark: PropTypes.bool,
+
+	/**
+	 * alt: true
+	 */
+	alt: PropTypes.bool,
 };
 
-export default FooterGovAU;
+
+export default Footer;

@@ -1,18 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import HeaderGovAU from './header-govau';
-
-
-/**
- * All theme options
- *
- * @type {Object}
- */
-const themes = {
-	light: 'uikit-header--light',
-	dark: 'uikit-header--dark',
-};
+import AUheader from '../../_uikit/layout/header';
 
 
 /**
@@ -20,48 +9,27 @@ const themes = {
  *
  * Use for: thing thing thing
  */
-const Header = ({
-	_ID,
-	_relativeURL,
-	level,
-	hero,
-	theme,
-	title,
-	subline,
-	children
-}) => {
+const Header = ({ title, subline, level, dark, alt, hero, _body }) => {
+
 	const HeadingTag = `h${ level }`;
 
 	return (
-		<header>
-			<HeaderGovAU _ID={ _ID } _relativeURL={ _relativeURL } />
-
-			<div className={`uikit-header${
-				hero
-					? ' uikit-header--hero'
-					: ''
-			}${
-				theme
-					? ` ${ themes[ theme ] }`
-					: ''
-			}`} role="banner">
-				<div className="container">
-					<div className="row">
-						<div className="col-md-12">
-							<HeadingTag className="uikit-header-heading">{ title }</HeadingTag>
-							{
-								subline
-									&& <span className="uikit-header-subline">{ subline }</span>
-							}
-							{ children }
+		<AUheader className={`au-header au-body ${ hero ? ' au-header--hero' : '' }${ dark ? ' au-header--dark au-body--dark' : '' }${ alt ? ' au-header--alt  au-body--alt' : '' }`}>
+			<div className="container">
+				<div className="row">
+					<div className="col-md-12">
+						<HeadingTag>{ title }</HeadingTag>
+						<p>{ subline }</p>
+						<div className="content">
+							{ _body }
 						</div>
 					</div>
 				</div>
 			</div>
-
-		</header>
+		</AUheader>
 	);
 };
+
 
 Header.propTypes = {
 	/**
@@ -85,14 +53,19 @@ Header.propTypes = {
 	hero: PropTypes.bool,
 
 	/**
-	 * theme: dark
+	 * dark: false
 	 */
-	theme: PropTypes.oneOf([ 'light', 'dark' ]),
+	dark: PropTypes.bool,
 
 	/**
-	 * children: (text)(1)
+	 * alt: true
 	 */
-	children: PropTypes.node,
+	alt: PropTypes.bool,
+
+	/**
+	 * _body: (text)(1)
+	 */
+	_body: PropTypes.node,
 };
 
 
