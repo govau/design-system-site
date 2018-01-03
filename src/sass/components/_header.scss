@@ -1,5 +1,20 @@
 .header__logo {
 	@include AU-clearfix;
+	display: inline-block;
+	text-decoration: none;
+	color: $AU-color-Text;
+
+	@include AU-focus();
+
+	&:hover {
+		text-decoration: underline;
+		text-decoration-skip: ink;
+	}
+
+	.au-header--dark & {
+		color: $AU-colordark-Text;
+		@include AU-focus( 'dark' );
+	}
 
 	svg {
 		@include AU-space( max-width, 4unit );
@@ -10,6 +25,6 @@
 	.header__title {
 		@include AU-space( margin-top, 0.5unit );
 		@include AU-space( margin-left, 5unit );
-		@include AU-space( max-width, 16unit );
+		@include AU-space( max-width, 15unit );
 	}
 }

@@ -14,9 +14,9 @@ const Page = ({ _ID,	_relativeURL, title, header, main, footer }) => (
 	</head>
 	<body>
 
-		<div className="au-body au-grid">
+		<div className="au-grid">
 			{ header }
-			<main>
+			<main className="au-body">
 				<div className="container">
 					<div className="row">
 						<div className="grids col-md-12">

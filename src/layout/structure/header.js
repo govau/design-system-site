@@ -16,9 +16,9 @@ const Header = ({ title, subline, level, dark, alt, hero, _body }) => {
 
 	return (
 		<AUheader className={
-			`au-header au-body ${ hero ? ' au-header--hero' : '' }` +
-			`${ dark ? ' au-header--dark au-body--dark' : '' }` +
-			`${ alt ? ' au-header--alt  au-body--alt' : '' }`
+			`au-header ${ hero ? ' au-header--hero' : '' }` +
+			`${ dark ? ' au-header--dark' : '' }` +
+			`${ alt ? ' au-header--alt' : '' }`
 		}>
 			<div className="container">
 				<div className="row">
