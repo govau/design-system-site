@@ -20,7 +20,10 @@
 		"watch": "npm run build && npm run watch:sass | npm run watch:js | npm run watch:site",
 		"test": "echo 'Error: no test specified' && exit 0"
 	},
-	"repository": "git+https://github.com/govau/GOLD.git",
+	"repository": {
+		"type" : "git",
+		"https://github.com/govau/GOLD"
+	},
 	"author": {
 		"name": "Commonwealth of Australia, DTA",
 		"email": "guides@digital.gov.au",
