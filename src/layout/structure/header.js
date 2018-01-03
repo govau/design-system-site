@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React     from 'react';
 
 import AUheader  from '../../_uikit/layout/header';
-import { Logo }  from './icons';
+import { Logo }  from '../icons';
 
 
 /**
@@ -10,7 +10,7 @@ import { Logo }  from './icons';
  *
  * Use for: thing thing thing
  */
-const Header = ({ title, subline, level, dark, alt, hero, _body }) => {
+const Header = ({ navigation, title, subline, level, dark, alt, hero, _body }) => {
 
 	const HeadingTag = `h${ level }`;
 
@@ -27,8 +27,9 @@ const Header = ({ title, subline, level, dark, alt, hero, _body }) => {
 							<Logo title="GOLD logo" description="The Government Open Language for Design logo" />
 							<HeadingTag className="header__title au-display-lg">{ title }</HeadingTag>
 						</a>
-						<div className="content">
+						<div className={ `content au-body ${ dark ? ' au-body--dark' : '' }${ alt ? ' au-body--alt' : '' }` }>
 							{ _body }
+							{ navigation }
 						</div>
 					</div>
 				</div>
