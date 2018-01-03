@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React     from 'react';
 
-import AUheader from '../../_uikit/layout/header';
+import AUheader  from '../../_uikit/layout/header';
+import { Logo }  from './icons';
 
 
 /**
@@ -14,12 +15,18 @@ const Header = ({ title, subline, level, dark, alt, hero, _body }) => {
 	const HeadingTag = `h${ level }`;
 
 	return (
-		<AUheader className={`au-header au-body ${ hero ? ' au-header--hero' : '' }${ dark ? ' au-header--dark au-body--dark' : '' }${ alt ? ' au-header--alt  au-body--alt' : '' }`}>
+		<AUheader className={
+			`au-header au-body ${ hero ? ' au-header--hero' : '' }
+			${ dark ? ' au-header--dark au-body--dark' : '' }
+			${ alt ? ' au-header--alt  au-body--alt' : '' }`
+		}>
 			<div className="container">
 				<div className="row">
 					<div className="col-md-12">
-						<HeadingTag>{ title }</HeadingTag>
-						<p>{ subline }</p>
+						<div className="header__logo">
+							<Logo title="GOLD logo" description="The Government Open Language for Design logo" />
+							<HeadingTag className="header__title au-display-lg">{ title }</HeadingTag>
+						</div>
 						<div className="content">
 							{ _body }
 						</div>

@@ -1,10 +1,14 @@
-// Overwrites
-@import 'overwrites/colors';
+// Variable overides
+@import 'base/colors';
 
 
 // UI-Kit
 @import '../_uikit/sass/uikit';
 
 
-// Our custom components and overrides
+// Our reset
 @import 'base/reset';
+
+
+// Our component overrides and styles
+@import 'components/header';

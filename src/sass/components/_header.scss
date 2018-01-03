@@ -1,0 +1,15 @@
+.header__logo {
+	@include AU-clearfix;
+
+	svg {
+		@include AU-space( max-width, 4unit );
+		@include AU-space( margin-right, -4unit );
+		float: left;
+	}
+
+	.header__title {
+		@include AU-space( margin-top, 0.5unit );
+		@include AU-space( margin-left, 5unit );
+		@include AU-space( max-width, 16unit );
+	}
+}

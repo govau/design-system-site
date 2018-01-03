@@ -51,14 +51,15 @@
 		"@gov.au/footer": "^1.0.0-next.2",
 		"@gov.au/grid-12": "^1.0.0-next.1",
 		"@gov.au/header": "^2.0.0-next.1",
+		"@gov.au/headings": "^1.0.0-next.1",
 		"@gov.au/pancake-sass": "^1.1.1",
 		"autoprefixer": "^7.2.3",
 		"concat-cli": "^4.0.0",
 		"cuttlebelle": "^1.0.0-alpha.34",
+		"express": "^4.16.2",
 		"node-sass": "^4.7.2",
 		"postcss-cli": "^4.1.1",
-		"uglify-js": "^3.3.4",
-		"express": "^4.16.2"
+		"uglify-js": "^3.3.4"
 	},
 	"devDependencies": {
 		"onchange": "^3.3.0"
