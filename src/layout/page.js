@@ -7,6 +7,9 @@ import React from "react";
 const Page = ({ _ID,	_relativeURL, title, header, main, footer }) => (
  <html>
 	<head>
+		<meta charSet="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta httpEquiv="x-ua-compatible" content="ie=edge" />
 		<title>{ title }</title>
 		<link rel="shortcut icon" type="image/x-icon" href={ _relativeURL( '/src/assets/img/favicon.ico', _ID ) } />
 		<link rel="stylesheet" href={ _relativeURL( '/src/assets/css/style.css', _ID ) } />
@@ -44,11 +47,6 @@ Page.propTypes = {
 	 * header: (partials)(2)
 	 */
 	header: PropTypes.node.isRequired,
-
-	/**
-	 * nav: (partials)(2)
-	 */
-	navigation: PropTypes.node.isRequired,
 
 	/**
 	 * main: (partials)(4)

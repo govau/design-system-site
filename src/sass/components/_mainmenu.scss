@@ -1,42 +1,51 @@
 // Main menu styling
 .mainmenu {
+	background: $AU-color-Background;
+
 	@include AU-space( margin-top, 1unit );
-	@include AU-clearfix();
 
 	.nav__link {
+		@include AU-space( border-bottom, 0.5unit solid $AU-color-Action );
+
 		a {
-			display: block;
-			float: left;
 			@include AU-space( padding, 1unit );
-			@include AU-space( margin-bottom, -0.5unit ); // overlap the border
-			@include AU-space( border-bottom, 0.5unit solid $AU-color-Action );
+			display: block;
 		}
 
-		&.nav__link--active a,
-		&:hover a {
+		&:hover,
+		&.nav__link--active {
 			color: $AU-color-Text;
 			text-decoration: none;
 		}
 
-		&.nav__link--active a {
+		&.nav__link--active {
 			@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Background-light );
 		}
 	}
 
-	.au-header--dark & {
-		.nav__link {
-			a {
-				@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
-			}
+	.au-body--dark & {
+		background: $AU-colordark-Background;
 
-			&:hover a,
-			&.nav__link--active a {
+		.nav__link {
+			@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
+
+			&:hover,
+			&.nav__link--active {
 				color: $AU-colordark-Text;
 			}
 
-			&.nav__link--active a {
+			&.nav__link--active {
 				@include AU-space( border-bottom, 0.5unit solid $AU-color-Background-light );
 			}
+		}
+	}
+
+	@include AU-media( sm ) {
+		@include AU-space( margin-bottom, -1unit );
+		background: transparent;
+
+		.au-body--dark & {
+			background: transparent;
 		}
 	}
 }

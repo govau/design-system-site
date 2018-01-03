@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { Github } from '../icons';
-
 
 /**
  * The Navigation component
@@ -10,7 +8,7 @@ import { Github } from '../icons';
 const Navigation = ({ menuClass, links, _relativeURL, _ID }) => (
 
 	<nav className={ `nav${ menuClass ? ' ' + menuClass : '' }` }>
-		<ul className="au-link-list">
+		<ul className="au-link-list au-link-list--inline">
 			{
 				links.map( ( link, i ) => (
 					<li className={`nav__link nav__link--generated${
@@ -23,14 +21,7 @@ const Navigation = ({ menuClass, links, _relativeURL, _ID }) => (
 								? link.link
 								: _relativeURL( link.link, _ID )
 						}>
-							{
-								link.name === 'github'
-									? <span>
-											<Github className="nav__link__github" title="GitHub" desc="The GitHub logo" />
-											<span className="nav__link__github__text">{ link.name }</span>
-										</span>
-									: link.name
-							}
+							{ link.name }
 						</a>
 					</li>
 				))

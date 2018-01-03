@@ -6,6 +6,10 @@
 	&.au-header--dark {
 		@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
 	}
+
+	.au-body {
+		background: transparent;
+	}
 }
 
 
