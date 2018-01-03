@@ -8,7 +8,7 @@ import React from 'react';
 const Navigation = ({ menuClass, links, _relativeURL, _ID }) => (
 
 	<nav className={ `nav${ menuClass ? ' ' + menuClass : '' }` }>
-		<ul className="au-link-list au-link-list--inline">
+		<ul className="au-link-list">
 			{
 				links.map( ( link, i ) => (
 					<li className={`nav__link nav__link--generated${
