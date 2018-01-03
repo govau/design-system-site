@@ -1,0 +1,42 @@
+// Main menu styling
+.mainmenu {
+	@include AU-space( margin-top, 1unit );
+	@include AU-clearfix();
+
+	.nav__link {
+		a {
+			display: block;
+			float: left;
+			@include AU-space( padding, 1unit );
+			@include AU-space( margin-bottom, -0.5unit ); // overlap the border
+			@include AU-space( border-bottom, 0.5unit solid $AU-color-Action );
+		}
+
+		&.nav__link--active a,
+		&:hover a {
+			color: $AU-color-Text;
+			text-decoration: none;
+		}
+
+		&.nav__link--active a {
+			@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Background-light );
+		}
+	}
+
+	.au-header--dark & {
+		.nav__link {
+			a {
+				@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
+			}
+
+			&:hover a,
+			&.nav__link--active a {
+				color: $AU-colordark-Text;
+			}
+
+			&.nav__link--active a {
+				@include AU-space( border-bottom, 0.5unit solid $AU-color-Background-light );
+			}
+		}
+	}
+}

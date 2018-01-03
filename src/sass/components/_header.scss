@@ -1,3 +1,15 @@
+// Remove padding bottom as we have a menu
+.au-header {
+	@include AU-space( border-bottom, 0.5unit solid $AU-color-Action );
+	padding-bottom: 0;
+
+	&.au-header--dark {
+		@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
+	}
+}
+
+
+// Logo and title styling
 .header__logo {
 	@include AU-clearfix;
 	display: inline-block;

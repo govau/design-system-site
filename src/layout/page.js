@@ -46,6 +46,11 @@ Page.propTypes = {
 	header: PropTypes.node.isRequired,
 
 	/**
+	 * nav: (partials)(2)
+	 */
+	navigation: PropTypes.node.isRequired,
+
+	/**
 	 * main: (partials)(4)
 	 */
 	main: PropTypes.node.isRequired,
