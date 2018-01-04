@@ -1,0 +1,24 @@
+// Promo [img, title+link, text]
+
+.promo {
+	@include AU-space( margin-top, 5unit );
+	text-align: center;
+
+	.content {
+		text-align: center;
+		max-width: $AU-maxwidth;
+		margin: 0 auto;
+		@include AU-space( margin-top, 1unit );
+	}
+}
+
+.promo__thumbnail {
+	display: inline-block;
+	max-width: 60%;
+}
+
+.au-body .promo .promo__title { //specific to override AU-body
+	@include AU-fontgrid( lg );
+	@include AU-space( margin-top, 1unit );
+	font-weight: normal;
+}
