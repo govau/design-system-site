@@ -1,46 +1,31 @@
 // Remove padding bottom as we have a menu
-.au-header {
-	@include AU-space( border-bottom, 0.5unit solid $AU-color-Action );
+.au-header.au-header--dark {
+	@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
 	padding-bottom: 0;
-
-	&.au-header--dark {
-		@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
-	}
-
-	.au-body {
-		background: transparent;
-	}
 }
 
-
-// Logo and title styling
 .header__logo {
 	@include AU-clearfix;
 	display: inline-block;
 	text-decoration: none;
-	color: $AU-color-Text;
+	text-decoration-skip: ink;
+	color: $AU-colordark-Text;
 
-	@include AU-focus();
+	@include AU-focus( 'dark' );
 
 	&:hover {
 		text-decoration: underline;
-		text-decoration-skip: ink;
 	}
+}
 
-	.au-header--dark & {
-		color: $AU-colordark-Text;
-		@include AU-focus( 'dark' );
-	}
+.header__logo__gold {
+	@include AU-space( max-width, 4unit );
+	@include AU-space( margin-right, -4unit );
+	float: left;
+}
 
-	svg {
-		@include AU-space( max-width, 4unit );
-		@include AU-space( margin-right, -4unit );
-		float: left;
-	}
-
-	.header__title {
-		@include AU-space( margin-top, 0.5unit );
-		@include AU-space( margin-left, 5unit );
-		@include AU-space( max-width, 15unit );
-	}
+.header__logo__title {
+	@include AU-space( margin-top, 0.5unit );
+	@include AU-space( margin-left, 5unit );
+	@include AU-space( max-width, 15unit );
 }

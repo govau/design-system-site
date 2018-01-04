@@ -8,10 +8,10 @@
 
 // Our reset
 @import 'base/reset';
-@import 'base/highlighter';
+@import 'base/structure';
 
 
-// Our component overrides and styles
+// Our component styles
 @import 'components/footer';
 @import 'components/header';
 @import 'components/mainmenu';

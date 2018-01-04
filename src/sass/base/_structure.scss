@@ -1,0 +1,19 @@
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: 1fr auto;
+}
+
+.au-footer {
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+
+main.main {
+	@include AU-space( padding-top, 3unit );
+	@include AU-space( padding-bottom, 3unit );
+}

@@ -1,5 +1,6 @@
 ---
 layout: structure/footer
-subline: Hello
-dark: true
 ---
+
+
+© Commonwealth of Australia, [MIT licensed](https://github.com/govau/uikit/blob/master/LICENSE.md)

@@ -8,19 +8,16 @@ import React from 'react';
  * @disable-docs
  */
 const Partial = ({ _body }) => (
-	<div className="uikit-partial">{ _body }</div>
+	<div className="partial">{ _body }</div>
 );
-
 
 Partial.propTypes = {
 	/**
-	 * _body: (partials)(4)
+	 * _body: (text)(4)
 	 */
 	_body: PropTypes.node.isRequired,
 };
 
-
 Partial.defaultProps = {};
-
 
 export default Partial;

@@ -1,77 +1,45 @@
-// Main menu styling
-.mainmenu {
-	background: $AU-color-Background;
-
+.au-body.mainmenu {
 	@include AU-space( margin-top, 1unit );
+	@include AU-space( margin-bottom, -1unit );
+	background-color: transparent;
 
-	.au-link-list {
-		padding: 0;
+	& > .au-link-list {
+		@include AU-space( margin-left, -0.5unit );
+		@include AU-space( margin-bottom, 1unit );
+		display: block;
+
+		@media screen and ( min-width: 630px ) {
+			margin-bottom: 0;
+		}
 	}
 
-	.nav__link {
-		margin: 0;
-		padding: 0;
+	.au-link-list > li {
+		display: block;
+		margin-left: 0;
+		text-align: center;
 
-		& + * {
-			border-top: 1px solid $AU-color-Border;
-		}
-
-		a {
-			@include AU-space( padding, 1unit );
+		& > a {
 			display: block;
-		}
+			@include AU-space( font-size, 1.125unit );
+			@include AU-space( padding, 0.2unit 0.5unit );
 
-		&:hover,
-		&.nav__link--active {
-			color: $AU-color-Text;
-			text-decoration: none;
-		}
-	}
-
-	.au-body--dark & {
-		background: $AU-colordark-Background;
-
-		.nav__link {
-			& + * {
-				border-top: 1px solid $AU-colordark-Border;
-			}
-
-			&:hover,
-			&.nav__link--active {
-				color: $AU-colordark-Text;
+			&:hover {
+				border-color: $AU-colordark-Text;
 			}
 		}
 
-
-	}
-
-	@include AU-media( sm ) {
-		@include AU-space( margin-bottom, -1unit );
-		background: transparent;
-
-		.nav__link {
-			@include AU-space( border-bottom, 0.5unit solid $AU-color-Action );
+		@media screen and ( min-width: 630px ) {
 			display: inline-block;
 
-			& + * {
-				border-top: 0;
-			}
-		}
-
-		&.nav__link--active {
-			@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Background-light );
-		}
-
-		.au-body--dark & {
-			background: transparent;
-
-			.nav__link {
+			& > a {
+				@include AU-space( font-size, 1unit );
+				@include AU-space( padding, 1unit 0.5unit );
 				@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
 			}
+		}
 
-			&.nav__link--active {
-				@include AU-space( border-bottom, 0.5unit solid $AU-color-Background-light );
-			}
+		&.mainmenu--active > a {
+			border-color: $AU-colordark-Text;
 		}
 	}
 }
