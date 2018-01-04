@@ -1,3 +1,6 @@
+$breakpoint: 700px;
+$color-active: $AU-colordark-Text;
+
 .au-body.mainmenu {
 	@include AU-space( margin-top, 1unit );
 	@include AU-space( margin-bottom, -1unit );
@@ -8,7 +11,7 @@
 		@include AU-space( margin-bottom, 1unit );
 		display: block;
 
-		@media screen and ( min-width: 630px ) {
+		@media screen and ( min-width: $breakpoint ) {
 			margin-bottom: 0;
 		}
 	}
@@ -24,11 +27,11 @@
 			@include AU-space( padding, 0.2unit 0.5unit );
 
 			&:hover {
-				border-color: $AU-colordark-Text;
+				border-color: $color-active;
 			}
 		}
 
-		@media screen and ( min-width: 630px ) {
+		@media screen and ( min-width: $breakpoint ) {
 			display: inline-block;
 
 			& > a {
@@ -39,7 +42,7 @@
 		}
 
 		&.mainmenu--active > a {
-			border-color: $AU-colordark-Text;
+			border-color: $color-active;
 		}
 	}
 }

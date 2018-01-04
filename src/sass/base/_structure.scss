@@ -17,3 +17,10 @@ main.main {
 	@include AU-space( padding-top, 3unit );
 	@include AU-space( padding-bottom, 3unit );
 }
+
+@include AU-media( xs ) {
+	.au-grid .container-fluid {
+		@include AU-space( padding-left, 3unit );
+		@include AU-space( padding-right, 3unit );
+	}
+}

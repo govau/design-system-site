@@ -23,7 +23,7 @@ const Page = ({ _ID, _relativeURL, title, header, main, footer }) => (
 		<div className="content-wrapper">
 			{ header }
 
-			<main className="main au-body container">
+			<main className="main au-body container-fluid">
 				<div className="row">
 					<div className="grids col-md-12">
 						{ main }

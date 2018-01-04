@@ -9,7 +9,7 @@ import React     from 'react';
  */
 const Header = ({ title, _relativeURL, _ID, _pages }) => (
 	<AUheader dark>
-		<div className="header container">
+		<div className="header container-fluid">
 			<div className="row">
 				<div className="col-md-12">
 

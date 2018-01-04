@@ -24,7 +24,7 @@ const Navigation = ({ _relativeURL, _ID, _pages }) => {
 	);
 
 	return (
-		<nav className="mainmenu au-body  au-body--dark">
+		<nav className="mainmenu au-body au-body--dark">
 			<AUlinkList items={ links } inline />
 		</nav>
 	);
