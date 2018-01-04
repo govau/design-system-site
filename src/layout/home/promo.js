@@ -3,12 +3,9 @@ import React from 'react';
 
 
 /**
- * The partial component
- *
- * @disable-docs
+ * The Promo component
  */
-const Promo = ({ tiles, _body, _relativeURL, _ID, _parseMD }) => (
-
+const Promo = ({ tiles, _relativeURL, _ID, _parseMD }) => (
 	<div className="au-grid">
 		<div className="promo-wrapper row">
 			{
@@ -30,24 +27,38 @@ const Promo = ({ tiles, _body, _relativeURL, _ID, _parseMD }) => (
 							{ _parseMD( tile.text ) }
 						</div>
 
-					</div>//promo
+					</div>
 				))
 			}
 		</div>
 	</div>
-
 );
-
 
 Promo.propTypes = {
 	/**
-	 * _body: (text)(4)
+	 * tiles:
+	 *   - title: Community
+	 *     imgurl: http://placehold.it/320x320
+	 *     imgalt: Community Alt tag
+	 *     url: /community
+	 *     text: The Design System community has been created for designers and developers to help them transform their agency’s products and services.
+	 *   - title: Components
+	 *     imgurl: http://placehold.it/320x320
+	 *     imgalt: Components Alt tag
+	 *     url: /components
+	 *     text: Components are a collection of interface elements that can be used by teams of designers and developers across government to build products.
 	 */
-	_body: PropTypes.node.isRequired,
+	tiles: PropTypes.arrayOf(
+		PropTypes.shape({
+			title: PropTypes.string,
+			imgurl: PropTypes.string,
+			imgalt: PropTypes.string,
+			url: PropTypes.string,
+			text: PropTypes.string,
+		})
+	).isRequired,
 };
 
-
 Promo.defaultProps = {};
-
 
 export default Promo;

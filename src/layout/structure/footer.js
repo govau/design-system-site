@@ -28,9 +28,11 @@ const Footer = ({ _body  }) => (
 
 Footer.propTypes = {
 	/**
-	 * _body: (text)[4]
+	 * _body: (text)(4)
 	 */
 	_body: PropTypes.node.isRequired,
 };
+
+Footer.defaultProps = {};
 
 export default Footer;

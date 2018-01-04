@@ -44,8 +44,6 @@ Header.propTypes = {
 	title: PropTypes.node.isRequired,
 };
 
-Header.defaultProps = {
-	level: 1,
-};
+Header.defaultProps = {};
 
 export default Header;

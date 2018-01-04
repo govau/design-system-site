@@ -8,7 +8,7 @@ import React from 'react';
  * @disable-docs
  */
 const Partial = ({ _body }) => (
-	<div className="partial">{ _body }</div>
+	<div className="content">{ _body }</div>
 );
 
 Partial.propTypes = {
