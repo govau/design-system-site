@@ -20,7 +20,7 @@ const Navigation = ({ _relativeURL, _ID, _pages }) => {
 	const links = menu.links.map( link =>
 		_pages[ _ID ].url.startsWith( link.link )
 			? { text: link.text, link: link.link, className: 'mainmenu--active' }
-			: link
+			: { text: link.text, link: _relativeURL( link.link, _ID ) }
 	);
 
 	return (

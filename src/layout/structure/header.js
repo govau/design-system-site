@@ -13,7 +13,7 @@ const Header = ({ title, _relativeURL, _ID, _pages }) => (
 			<div className="row">
 				<div className="col-md-12">
 
-					<a href="/" className="header__logo">
+					<a href={ _relativeURL( '/', _ID ) } className="header__logo">
 
 						<svg className="header__logo__gold" role="img" title="GOLD">
 							<title>The Government Open Language for Design logo</title>

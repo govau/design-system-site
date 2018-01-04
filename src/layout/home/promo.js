@@ -12,7 +12,7 @@ const Promo = ({ tiles, _relativeURL, _ID, _parseMD }) => (
 				tiles.map( ( tile, i ) => (
 					<div className="promo col-sm-12 col-md-4" key={ i }>
 
-						<a href={ tile.url }>
+						<a href={ _relativeURL( tile.url, _ID ) }>
 							<img className="promo__thumbnail au-responsive-media-img"
 								src={
 									tile.imgurl.startsWith('http')
