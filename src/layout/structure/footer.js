@@ -8,7 +8,7 @@ import React from 'react';
  */
 const Footer = ({ _body  }) => (
 	<AUfooter className="au-footer au-body au-footer--dark au-body--dark">
-		<div className="container-fluid">
+		<div className="container">
 			<div className="row">
 				<div className="col-md-12">
 
