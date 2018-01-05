@@ -34,21 +34,24 @@ const Intro = ({ title, url, imgalt, imgurl, _body }) => (
 
 Intro.propTypes = {
 	/**
-	 * tiles:
-	 *   - title: Community
-	 *     imgurl: http://placehold.it/320x320
-	 *     imgalt: Community Alt tag
-	 *     url: /community
-	 *     text: The Design System community has been created for designers and developers to help them transform their agency’s products and services.
+	 * title: About
 	 */
-	tiles: PropTypes.arrayOf(
-		PropTypes.shape({
-			title: PropTypes.string,
-			imgurl: PropTypes.string,
-			imgalt: PropTypes.string,
-			url: PropTypes.string,
-		})
-	).isRequired,
+	title: PropTypes.string.isRequired,
+
+	/**
+	 * imgurl: http://placehold.it/500x400
+	 */
+	imgurl: PropTypes.string.isRequired,
+
+	/**
+	 * imgalt: Intro Alt Tag
+	 */
+	imgalt: PropTypes.string.isRequired,
+
+	/**
+	 * url: /get-started
+	 */
+	url: PropTypes.string.isRequired,
 };
 
 Intro.defaultProps = {};
