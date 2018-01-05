@@ -24,7 +24,7 @@ const Promo = ({ tiles, _relativeURL, _ID, _parseMD }) => (
 						</a>
 
 						<div className="content">
-							{ _parseMD( tile.text, 'partial.md', { _ID, _relativeURL } ) }
+							{ _parseMD( tile.text ) }
 						</div>
 
 					</div>
