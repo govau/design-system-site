@@ -1,0 +1,65 @@
+// Intro
+
+.intro {
+	@include AU-space( margin-top, 5unit );
+
+	.content {
+		@include AU-space( margin-top, 2unit );
+
+		em {
+			//Large text block in the Markdown
+			@include AU-fontgrid( md );
+			font-style: normal;
+		}
+
+		p {
+			//Center align while still using the A11y max-width feature
+			margin-left: auto;
+			margin-right: auto;
+
+			@include AU-media( md ) {
+				margin-left: 0;
+			}
+		}
+
+	}
+
+	.intro__cta {
+		@include AU-space( margin-top, 3unit );
+
+		//Center align while still using the A11y max-width feature
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+
+		@include AU-media( md ) {
+			text-align: left;
+			margin-left: 0;
+		}
+	}
+}
+
+.au-body .intro__title { //specific to override AU-body
+	@include AU-fontgrid( xxl, heading );
+	font-weight: normal;
+	text-align: center;
+
+	@include AU-media( md ) {
+		text-align: left;
+	}
+}
+
+.intro__imgpadding {
+	text-align: center; //center smaller images
+	@include AU-space( padding, 0 2unit 2unit 2unit);
+
+	@include AU-media( md ) {
+		padding: 0;
+		@include AU-space( padding-top, 5unit);
+	}
+
+	@include AU-media( lg ) {
+		@include AU-space( padding-top, 5unit);
+	}
+
+}
