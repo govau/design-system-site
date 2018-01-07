@@ -13,6 +13,11 @@ const Header = ({ title, _relativeURL, _ID, _pages }) => (
 			<div className="row">
 				<div className="col-md-12">
 
+					<svg className="header__coa" role="img" title="GOLD">
+						<title>The Australian Coat of Arms</title>
+						<use xlinkHref={ _relativeURL( '/assets/svg/map.svg#coa', _ID ) }/>
+					</svg>
+
 					<a href={ _relativeURL( '/', _ID ) } className="header__logo">
 
 						<svg className="header__logo__gold" role="img" title="GOLD">
