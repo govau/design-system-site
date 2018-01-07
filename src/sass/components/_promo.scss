@@ -1,7 +1,7 @@
 // Promo [img, title+link, text]
 
 .promo {
-	@include AU-space( margin-top, 5unit );
+	@include AU-space( margin-top, 10unit );
 	text-align: center;
 
 	.content {
