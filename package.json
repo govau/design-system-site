@@ -62,7 +62,7 @@
 		"@gov.au/responsive-media": "next",
 		"autoprefixer": "^7.2.3",
 		"concat-cli": "^4.0.0",
-		"cuttlebelle": "^1.0.0-alpha.38",
+		"cuttlebelle": "^1.0.0-alpha.39",
 		"express": "^4.16.2",
 		"node-sass": "^4.7.2",
 		"postcss-cli": "^4.1.1",
