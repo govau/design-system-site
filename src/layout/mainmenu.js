@@ -18,7 +18,7 @@ const Navigation = ({ _relativeURL, _ID, _pages }) => {
 
 	// and attach an active class to the item is one of the current parents
 	const links = menu.links.map( link =>
-		_pages[ _ID ].url.startsWith( link.link )
+		_pages[ _ID ]._url.startsWith( link.link )
 			? { text: link.text, link: link.link, className: 'mainmenu--active' }
 			: { text: link.text, link: _relativeURL( link.link, _ID ) }
 	);
