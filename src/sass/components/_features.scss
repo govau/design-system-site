@@ -1,0 +1,41 @@
+// Features
+
+.features {
+	@include AU-space( margin-top, 10unit );
+}
+
+.features-intro {
+	text-align: center;
+}
+
+.features-intro .content {
+	@include AU-space( margin-top, 2unit );
+}
+
+.au-body .features-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	@include AU-fontgrid( sm );
+	@include AU-space( margin-top, 3unit );
+}
+
+.feature-padding {
+	@include AU-space( border-top, 0.25unit solid $AU-color-Background-dark );
+	@include AU-space( border-bottom, 0.25unit solid $AU-color-Background-dark );
+	@include AU-space( padding, 2unit 0 );
+	min-height: 10em;
+}
+
+.feature h3 {
+		@include AU-fontgrid( md );
+}
+
+.au-body ul.features-list>li {
+	@include AU-space( margin-top, -0.25unit );
+}
+
+.features-cta {
+	text-align: center;
+	@include AU-space( margin-top, 3unit );
+}
