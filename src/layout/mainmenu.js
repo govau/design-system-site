@@ -18,16 +18,20 @@ const Navigation = ({ _relativeURL, _ID, _pages }) => {
 
 	const CreateLink = ( link, right = false ) => {
 
+		const linkClasses = `${ right ? ' mainmenu--right' : '' }` +
+			`${ link.text == 'Github' ? ' icon icon--github' : '' }` +
+			`${ link.text == 'Download' ? ' icon icon--download' : '' }`;
+
 		return _pages[ _ID ]._url.startsWith( link.link )
 			? {
 					text: link.text,
 					link: link.link,
-					className: `mainmenu--active${ right ? ' mainmenu--right' : '' }`
+					className: `mainmenu--active` + linkClasses
 				}
 			: {
 					text: link.text,
 					link: _relativeURL( link.link, _ID ),
-					className: `mainmenu--right${ right ? ' mainmenu--right' : '' }`
+					className: linkClasses
 				}
 	};
 
