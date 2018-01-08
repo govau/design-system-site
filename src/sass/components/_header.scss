@@ -2,18 +2,18 @@
 .au-header.au-header--dark {
 	@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
 	padding-bottom: 0;
+	text-align: center;
 }
 
 .header__coa {
 	display: block;
-	float: left;
+	margin: 0 auto;
 	@include AU-space( max-width, 6unit );
-	@include AU-space( margin-right, -6unit );
+	@include AU-space( margin-bottom, 1unit );
 }
 
 .header__logo {
 	@include AU-clearfix;
-	@include AU-space( margin-left, 7unit );
 	display: inline-block;
 	text-decoration: none;
 	color: $AU-colordark-Text;
@@ -27,13 +27,42 @@
 }
 
 .header__logo__gold {
-	@include AU-space( max-width, 4unit );
-	@include AU-space( margin-right, -4unit );
+	@include AU-space( max-width, 3unit );
+	@include AU-space( margin-right, -3unit );
 	float: left;
 }
 
 .header__logo__title {
 	@include AU-space( margin-top, 0.5unit );
-	@include AU-space( margin-left, 5unit );
-	@include AU-space( max-width, 15unit );
+	@include AU-space( margin-left, 4unit );
+	@include AU-space( max-width, 12unit );
+	text-align: left;
+}
+
+
+@media screen and ( min-width: $AU-media-sm ) {
+	.au-header.au-header--dark {
+		text-align: left;
+	}
+
+	.header__coa {
+		float: left;
+		margin: 0;
+		@include AU-space( margin-right, -6unit );
+	}
+
+	.header__logo {
+		@include AU-space( margin-left, 7unit );
+	}
+
+	.header__logo__gold {
+		@include AU-space( max-width, 4unit );
+		@include AU-space( margin-right, -4unit );
+	}
+
+	.header__logo__title {
+		@include AU-fontgrid( lg, heading );
+		@include AU-space( margin-left, 5unit );
+		@include AU-space( max-width, 15unit );
+	}
 }

@@ -32,7 +32,7 @@ const Header = ({ title, _relativeURL, _ID, _pages }) => (
 							<use xlinkHref={ _relativeURL( '/assets/svg/map.svg#gold', _ID ) }/>
 						</svg>
 
-						<h1 className="header__logo__title au-display-lg">{ title }</h1>
+						<h1 className="header__logo__title au-display-md">{ title }</h1>
 					</a>
 
 					<MainMenu _relativeURL={ _relativeURL } _ID={ _ID } _pages={ _pages } />
