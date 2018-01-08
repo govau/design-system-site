@@ -8,6 +8,10 @@ body {
 	grid-template-rows: 1fr auto;
 }
 
+.container-fluid {
+	max-width: 1200px;
+}
+
 .au-footer {
 	grid-row-start: 2;
 	grid-row-end: 3;
