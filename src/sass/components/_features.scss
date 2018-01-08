@@ -6,36 +6,36 @@
 
 .features-intro {
 	text-align: center;
+
+	.content {
+		@include AU-space( margin-top, 2unit );
+	}
+
+	.au-body & {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		@include AU-fontgrid( sm );
+		@include AU-space( margin-top, 3unit );
+	}
 }
 
-.features-intro .content {
-	@include AU-space( margin-top, 2unit );
-}
-
-.au-body .features-list {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	@include AU-fontgrid( sm );
-	@include AU-space( margin-top, 3unit );
-}
-
-.feature-padding {
+.feature__wrapper {
 	@include AU-space( border-top, 0.25unit solid $AU-color-Background-dark );
 	@include AU-space( border-bottom, 0.25unit solid $AU-color-Background-dark );
 	@include AU-space( padding, 2unit 0 );
 	min-height: 10em;
 }
 
-.feature h3 {
-		@include AU-fontgrid( md );
+.feature__wrapper__headline {
+	@include AU-fontgrid( md );
 }
 
-.au-body ul.features-list>li {
+.au-body ul.features__intro > li {
 	@include AU-space( margin-top, -0.25unit );
 }
 
-.features-cta {
+.features__cta {
 	text-align: center;
 	@include AU-space( margin-top, 3unit );
 }
