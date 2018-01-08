@@ -65,11 +65,11 @@ Features.propTypes = {
 	 *     text: Browser support back to IE8 and no-js fallbacks
 	 */
 	tiles: PropTypes.arrayOf(
- 		PropTypes.shape({
- 			smltitle: PropTypes.string,
- 			text: PropTypes.string,
- 		})
- 	).isRequired,
+		PropTypes.shape({
+			smltitle: PropTypes.string,
+			text: PropTypes.string,
+		})
+	).isRequired,
 };
 
 Features.defaultProps = {};

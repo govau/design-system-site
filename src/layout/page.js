@@ -6,7 +6,7 @@ import React from 'react';
  * The page component
  */
 const Page = ({ _ID, _relativeURL, title, header, main, footer }) => (
- <html>
+	<html>
 	<head>
 		<meta charSet="utf-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -36,7 +36,7 @@ const Page = ({ _ID, _relativeURL, title, header, main, footer }) => (
 
 		<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
 	</body>
- </html>
+	</html>
 );
 
 Page.propTypes = {

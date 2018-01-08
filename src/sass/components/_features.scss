@@ -10,13 +10,17 @@
 	.content {
 		@include AU-space( margin-top, 2unit );
 	}
+}
 
-	.au-body & {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		@include AU-fontgrid( sm );
-		@include AU-space( margin-top, 3unit );
+.au-body .features__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	@include AU-fontgrid( sm );
+	@include AU-space( margin-top, 3unit );
+
+	.feature {
+		@include AU-space( margin-top, -0.25unit );
 	}
 }
 
@@ -29,10 +33,6 @@
 
 .feature__wrapper__headline {
 	@include AU-fontgrid( md );
-}
-
-.au-body ul.features__intro > li {
-	@include AU-space( margin-top, -0.25unit );
 }
 
 .features__cta {
