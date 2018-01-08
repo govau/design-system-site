@@ -23,11 +23,13 @@ $color-active: $AU-colordark-Text;
 
 		& > a {
 			display: block;
+			text-decoration: none;
 			@include AU-space( font-size, 1.125unit );
 			@include AU-space( padding, 0.2unit 0.5unit );
 
 			&:hover {
-				border-color: $color-active;
+				text-decoration: underline;
+				text-decoration-skip: ink;
 			}
 		}
 
