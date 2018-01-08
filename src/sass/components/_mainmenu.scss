@@ -1,4 +1,5 @@
 $color-active: $AU-colordark-Text;
+$breakpoint: 1100px;
 
 .au-body.mainmenu {
 	@include AU-space( margin-top, 1unit );
@@ -30,7 +31,7 @@ $color-active: $AU-colordark-Text;
 			}
 		}
 
-		@media screen and ( min-width: $AU-media-sm ) {
+		@media screen and ( min-width: $breakpoint ) {
 			display: inline-block;
 
 			& > a {

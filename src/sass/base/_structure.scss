@@ -9,7 +9,7 @@ body {
 }
 
 .container-fluid {
-	max-width: 1200px;
+	@include AU-space( max-width, 75unit ); //1200px
 }
 
 .au-footer {
