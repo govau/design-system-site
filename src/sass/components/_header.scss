@@ -4,17 +4,25 @@
 	padding-bottom: 0;
 }
 
+.header__coa {
+	display: block;
+	float: left;
+	@include AU-space( max-width, 6unit );
+	@include AU-space( margin-right, -6unit );
+}
+
 .header__logo {
 	@include AU-clearfix;
+	@include AU-space( margin-left, 7unit );
 	display: inline-block;
 	text-decoration: none;
-	text-decoration-skip: ink;
 	color: $AU-colordark-Text;
 
 	@include AU-focus( 'dark' );
 
 	&:hover {
 		text-decoration: underline;
+		text-decoration-skip: ink;
 	}
 }
 
