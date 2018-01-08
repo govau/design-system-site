@@ -4,6 +4,7 @@ layout: components/component
 header:
   - header
 sections:
-  - /_components/buttons/overview.md
+  - 1.md
+  - 2.md
 footer:
   - footer
