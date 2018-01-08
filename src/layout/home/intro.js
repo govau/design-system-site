@@ -6,7 +6,6 @@ import React from 'react';
  * The Intro component
  */
 const Intro = ({ title, url, imgalt, imgurl, _body }) => (
-
 	<div className="intro au-grid">
 		<div className="intro-wrapper row">
 

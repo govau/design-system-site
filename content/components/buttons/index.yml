@@ -1,0 +1,9 @@
+# All we do here is reference the data from /_components so we don’t double up
+pagetitle: Buttons overview
+layout: components/component
+header:
+  - header
+sections:
+  - /_components/buttons/overview.md
+footer:
+  - footer

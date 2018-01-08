@@ -1,0 +1,8 @@
+pagetitle: Components
+layout: components/component
+header:
+  - header
+sections:
+  - here we sort after nav.md and show all sorts of cool things
+footer:
+  - footer

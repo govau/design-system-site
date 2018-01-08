@@ -3,9 +3,9 @@ import React from 'react';
 
 
 /**
- * The page component
+ * The Component component
  */
-const Page = ({ _ID, _relativeURL, pagetitle, header, main, footer }) => (
+const Component = ({ _ID, _relativeURL, pagetitle, header, sections, footer }) => (
 	<html>
 	<head>
 		<meta charSet="utf-8" />
@@ -26,7 +26,7 @@ const Page = ({ _ID, _relativeURL, pagetitle, header, main, footer }) => (
 			<main className="main au-body container">
 				<div className="row">
 					<div className="grids col-md-12">
-						{ main }
+						{ sections }
 					</div>
 				</div>
 			</main>
@@ -39,7 +39,7 @@ const Page = ({ _ID, _relativeURL, pagetitle, header, main, footer }) => (
 	</html>
 );
 
-Page.propTypes = {
+Component.propTypes = {
 	/**
 	 * pagetitle: Homepage
 	 */
@@ -51,9 +51,9 @@ Page.propTypes = {
 	header: PropTypes.node.isRequired,
 
 	/**
-	 * main: (partials)(4)
+	 * sections: (partials)(4)
 	 */
-	main: PropTypes.node.isRequired,
+	sections: PropTypes.node.isRequired,
 
 	/**
 	 * footer: (partials)(2)
@@ -61,6 +61,6 @@ Page.propTypes = {
 	footer: PropTypes.node.isRequired,
 };
 
-Page.defaultProps = {};
+Component.defaultProps = {};
 
-export default Page;
+export default Component;
