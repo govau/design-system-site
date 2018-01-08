@@ -13,7 +13,7 @@ import Fs from 'fs';
  */
 const Navigation = ({ _relativeURL, _ID, _pages }) => {
 	// let’s get our main menu yaml file
-	const menuPath = Path.normalize(`${ __dirname }/../../content/_shared/mainmenu.yaml`);
+	const menuPath = Path.normalize(`${ __dirname }/../../content/_shared/mainmenu.yml`);
 	const menu = YAML.parse( Fs.readFileSync( menuPath, `utf8` ) );
 
 	// and attach an active class to the item is one of the current parents
