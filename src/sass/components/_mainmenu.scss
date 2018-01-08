@@ -1,18 +1,15 @@
-$breakpoint: 700px;
 $color-active: $AU-colordark-Text;
 
 .au-body.mainmenu {
 	@include AU-space( margin-top, 1unit );
-	@include AU-space( margin-bottom, -1unit );
 	background-color: transparent;
 
 	& > .au-link-list {
-		@include AU-space( margin-left, -0.5unit );
-		@include AU-space( margin-bottom, 1unit );
-		display: block;
+		@include AU-space( margin-bottom, -1unit );
+		display: inline-block;
 
-		@media screen and ( min-width: $breakpoint ) {
-			margin-bottom: 0;
+		& + .au-link-list {
+			float: right;
 		}
 	}
 
@@ -22,10 +19,10 @@ $color-active: $AU-colordark-Text;
 		text-align: center;
 
 		& > a {
+			@include AU-fontgrid( sm );
+			@include AU-space( padding, 0.2unit 1unit );
 			display: block;
 			text-decoration: none;
-			@include AU-space( font-size, 1.125unit );
-			@include AU-space( padding, 0.2unit 0.5unit );
 
 			&:hover {
 				text-decoration: underline;
@@ -33,18 +30,23 @@ $color-active: $AU-colordark-Text;
 			}
 		}
 
-		@media screen and ( min-width: $breakpoint ) {
+		@media screen and ( min-width: $AU-media-sm ) {
 			display: inline-block;
 
 			& > a {
-				@include AU-space( font-size, 1unit );
-				@include AU-space( padding, 1unit 0.5unit );
+				@include AU-fontgrid( xs );
+				@include AU-space( padding, 1unit 1unit );
 				@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
 			}
 		}
 
 		&.mainmenu--active > a {
+			color: $color-active;
 			border-color: $color-active;
+
+			&:hover {
+				text-decoration: none;
+			}
 		}
 	}
 }

@@ -16,16 +16,28 @@ const Navigation = ({ _relativeURL, _ID, _pages }) => {
 	const menuPath = Path.normalize(`${ __dirname }/../../content/_shared/mainmenu.yml`);
 	const menu = YAML.parse( Fs.readFileSync( menuPath, `utf8` ) );
 
-	// and attach an active class to the item is one of the current parents
-	const links = menu.links.map( link =>
-		_pages[ _ID ]._url.startsWith( link.link )
-			? { text: link.text, link: link.link, className: 'mainmenu--active' }
-			: { text: link.text, link: _relativeURL( link.link, _ID ) }
-	);
+	const CreateLink = ( link, right = false ) => {
+
+		return _pages[ _ID ]._url.startsWith( link.link )
+			? {
+					text: link.text,
+					link: link.link,
+					className: `mainmenu--active${ right ? ' mainmenu--right' : '' }`
+				}
+			: {
+					text: link.text,
+					link: _relativeURL( link.link, _ID ),
+					className: `mainmenu--right${ right ? ' mainmenu--right' : '' }`
+				}
+	};
+
+	const linksLeft = menu.links.left.map( link => CreateLink( link ) );
+	const linksRight = menu.links.right.map( link => CreateLink( link, true ) );
 
 	return (
 		<nav className="mainmenu au-body au-body--dark">
-			<AUlinkList items={ links } inline />
+			<AUlinkList items={ linksLeft } inline />
+			<AUlinkList className="au-link-list au-link-list--inline main-menu--right" items={ linksRight } inline />
 		</nav>
 	);
 };
