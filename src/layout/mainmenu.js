@@ -18,8 +18,8 @@ const Navigation = ({ _relativeURL, _ID, _pages }) => {
 
 	const CreateLink = ( link ) => {
 
-		const linkClasses = `${ link.text == 'Github' ? ' icon icon--github--dark' : '' }` +
-			`${ link.text == 'Download' ? ' icon icon--download--dark' : '' }`;
+		const linkClasses = `${ link.text == 'Github' ? ' icon icon--dark icon--github--action' : '' }` +
+			`${ link.text == 'Download' ? ' icon icon--dark icon--download--action' : '' }`;
 
 		return _pages[ _ID ]._url === link.link ||
 			_pages[ _ID ]._url.startsWith( link.link ) && _pages[ _ID ]._url.split('/').length > link.link.split('/').length
@@ -41,6 +41,9 @@ const Navigation = ({ _relativeURL, _ID, _pages }) => {
 	return (
 		<nav className="mainmenu au-body au-body--dark">
 			<div className="container-fluid">
+				<span className="icon icon--dark icon--menu--action">
+					<button className="mainmenu--toggle au-btn au-btn--tertiary au-btn--block au-btn--dark">Open menu</button>
+				</span>
 				<AUlinkList items={ linksLeft } inline />
 				<AUlinkList className="au-link-list au-link-list--inline mainmenu--right" items={ linksRight } inline />
 			</div>
