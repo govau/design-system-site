@@ -16,10 +16,9 @@ const Navigation = ({ _relativeURL, _ID, _pages }) => {
 	const menuPath = Path.normalize(`${ __dirname }/../../content/_shared/mainmenu.yml`);
 	const menu = ParseYaml( Fs.readFileSync( menuPath, `utf8` ) );
 
-	const CreateLink = ( link, right = false ) => {
+	const CreateLink = ( link ) => {
 
-		const linkClasses = `${ right ? ' mainmenu--right' : '' }` +
-			`${ link.text == 'Github' ? ' icon icon--github--dark' : '' }` +
+		const linkClasses = `${ link.text == 'Github' ? ' icon icon--github--dark' : '' }` +
 			`${ link.text == 'Download' ? ' icon icon--download--dark' : '' }`;
 
 		return _pages[ _ID ]._url === link.link ||
@@ -41,8 +40,10 @@ const Navigation = ({ _relativeURL, _ID, _pages }) => {
 
 	return (
 		<nav className="mainmenu au-body au-body--dark">
-			<AUlinkList items={ linksLeft } inline />
-			<AUlinkList className="au-link-list au-link-list--inline main-menu--right" items={ linksRight } inline />
+			<div className="container-fluid">
+				<AUlinkList items={ linksLeft } inline />
+				<AUlinkList className="au-link-list au-link-list--inline mainmenu--right" items={ linksRight } inline />
+			</div>
 		</nav>
 	);
 };

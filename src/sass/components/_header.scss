@@ -1,7 +1,6 @@
 // Remove padding bottom as we have a menu
 .au-header.au-header--dark {
-	@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
-	padding-bottom: 0;
+	@include AU-space( padding-bottom, 2unit );
 }
 
 .header__coa {
