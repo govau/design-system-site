@@ -89,8 +89,8 @@
 		"plugins": true,
 		"ignore": [],
 		"css": {
-			"modules": false,
-			"location": false,
+			"modules": true,
+			"location": "src/assets/css/",
 			"name": false
 		},
 		"sass": {
