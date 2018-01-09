@@ -1,0 +1,47 @@
+// component-footer
+
+.componentfooter {
+	@include AU-space( margin-top, 5unit );
+
+	h3 {
+		@include AU-fontgrid( sm, heading );
+		@include AU-space( border-top, 0.25unit solid $AU-color-Background-dark );
+		@include AU-space( padding-top, 2unit );
+		color: $AU-color-Muted;
+		font-weight: normal;
+
+		@include AU-media( md ) {
+			@include AU-space( border-bottom, 0.25unit solid $AU-color-Background-dark );
+			@include AU-space( padding-bottom, 1unit );
+			padding-top: none;
+			border-top: none;
+		}
+	}
+
+	.col-sm-6 {
+		@include AU-space( margin-top, 2unit );
+		@include AU-media( md ) {
+			margin-top: 0;
+		}
+	}
+
+}
+
+.au-body .componentfooter li {
+	@include AU-space( margin-top, 0.75unit );
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+.au-body .componentfooter .au-link-list,
+.componentfooter ul {
+	//RESET UI-KIT
+	@include AU-space( margin, 1.5unit 0 0 0 );
+	padding: 0;
+
+	@include AU-fontgrid( xs, heading );
+	list-style: none;
+	padding: 0;
+}
