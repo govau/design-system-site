@@ -40,7 +40,7 @@
 }
 
 
-@media screen and ( min-width: $AU-media-sm ) {
+@media screen and ( min-width: $nav_breakpoint ) {
 	.au-header.au-header--dark {
 		text-align: left;
 	}

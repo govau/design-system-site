@@ -1,5 +1,4 @@
 $color-active: $AU-colordark-Text;
-$breakpoint: 1100px;
 
 .au-body.mainmenu {
 	@include AU-space( margin-top, 1unit );
@@ -7,11 +6,7 @@ $breakpoint: 1100px;
 
 	& > .au-link-list {
 		@include AU-space( margin-bottom, -1unit );
-		display: inline-block;
-
-		& + .au-link-list {
-			float: right;
-		}
+		display: block;
 	}
 
 	.au-link-list > li {
@@ -21,7 +16,7 @@ $breakpoint: 1100px;
 
 		& > a {
 			@include AU-fontgrid( sm );
-			@include AU-space( padding, 0.2unit 1unit );
+			@include AU-space( padding, 0.5unit 0 );
 			display: block;
 			text-decoration: none;
 
@@ -31,22 +26,33 @@ $breakpoint: 1100px;
 			}
 		}
 
-		@media screen and ( min-width: $breakpoint ) {
-			display: inline-block;
-
-			& > a {
-				@include AU-fontgrid( xs );
-				@include AU-space( padding, 1unit 1unit );
-				@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
-			}
-		}
-
 		&.mainmenu--active > a {
 			color: $color-active;
 			border-color: $color-active;
 
 			&:hover {
 				text-decoration: none;
+			}
+		}
+	}
+
+	@media screen and ( min-width: $nav_breakpoint ) {
+
+		& > .au-link-list {
+			display: inline-block;
+
+			& + .au-link-list {
+				float: right;
+			}
+		}
+
+		.au-link-list > li {
+			display: inline-block;
+
+			& > a {
+				@include AU-fontgrid( xs );
+				@include AU-space( padding, 1unit 1unit );
+				@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
 			}
 		}
 	}
