@@ -1,6 +1,6 @@
+import { ParseYaml } from 'cuttlebelle/dist/parse.js';
 import AUlinkList from '../_uikit/layout/link-list';
 import PropTypes from 'prop-types';
-import YAML from 'yamljs';
 import React from 'react';
 import Path from 'path';
 import Fs from 'fs';
@@ -14,7 +14,7 @@ import Fs from 'fs';
 const Navigation = ({ _relativeURL, _ID, _pages }) => {
 	// let’s get our main menu yaml file
 	const menuPath = Path.normalize(`${ __dirname }/../../content/_shared/mainmenu.yml`);
-	const menu = YAML.parse( Fs.readFileSync( menuPath, `utf8` ) );
+	const menu = ParseYaml( Fs.readFileSync( menuPath, `utf8` ) );
 
 	const CreateLink = ( link, right = false ) => {
 
@@ -22,7 +22,8 @@ const Navigation = ({ _relativeURL, _ID, _pages }) => {
 			`${ link.text == 'Github' ? ' icon icon--github' : '' }` +
 			`${ link.text == 'Download' ? ' icon icon--download' : '' }`;
 
-		return _pages[ _ID ]._url.startsWith( link.link )
+		return _pages[ _ID ]._url === link.link ||
+			_pages[ _ID ]._url.startsWith( link.link ) && _pages[ _ID ]._url.split('/').length > link.link.split('/').length
 			? {
 					text: link.text,
 					link: link.link,
