@@ -40,15 +40,7 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, example }) => (
 			</div>
 		</main>
 
-		{
-			modules.map( ( module, i ) => {
-				if( Fs.existsSync( Path.normalize(`../../assets/js/${ module }.js`) ) ) {
-					return (
-						<link rel="stylesheet" href={ _relativeURL( `/assets/js/${ module }.js`, _ID ) } />
-					);
-				}
-			})
-		}
+		<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
 	</body>
 	</html>
 );

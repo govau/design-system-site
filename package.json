@@ -5,7 +5,7 @@
 	"scripts": {
 		"docs": "cuttlebelle docs",
 		"build:site": "./node_modules/.bin/cuttlebelle",
-		"build:autoprefix": "postcss src/assets/css/*.css -u autoprefixer -r --no-map",
+		"build:autoprefix": "postcss src/assets/css/style.css -u autoprefixer -r --no-map",
 		"build:sass": "mkdir -p src/assets/css/ && node-sass --output-style compressed -o src/assets/css src/sass/style.scss",
 		"build:css": "npm run build:sass && npm run build:autoprefix",
 		"build:js-header": "concat-cli -f src/js/header/*.js -o src/assets/js/header.js",
