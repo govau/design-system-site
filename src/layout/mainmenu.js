@@ -19,8 +19,8 @@ const Navigation = ({ _relativeURL, _ID, _pages }) => {
 	const CreateLink = ( link, right = false ) => {
 
 		const linkClasses = `${ right ? ' mainmenu--right' : '' }` +
-			`${ link.text == 'Github' ? ' icon icon--github' : '' }` +
-			`${ link.text == 'Download' ? ' icon icon--download' : '' }`;
+			`${ link.text == 'Github' ? ' icon icon--github--dark' : '' }` +
+			`${ link.text == 'Download' ? ' icon icon--download--dark' : '' }`;
 
 		return _pages[ _ID ]._url === link.link ||
 			_pages[ _ID ]._url.startsWith( link.link ) && _pages[ _ID ]._url.split('/').length > link.link.split('/').length

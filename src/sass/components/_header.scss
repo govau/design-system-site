@@ -2,12 +2,10 @@
 .au-header.au-header--dark {
 	@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
 	padding-bottom: 0;
-	text-align: center;
 }
 
 .header__coa {
 	display: block;
-	margin: 0 auto;
 	@include AU-space( max-width, 6unit );
 	@include AU-space( margin-bottom, 1unit );
 }
@@ -40,10 +38,7 @@
 }
 
 
-@media screen and ( min-width: $AU-media-sm ) {
-	.au-header.au-header--dark {
-		text-align: left;
-	}
+@media screen and ( min-width: $nav_breakpoint ) {
 
 	.header__coa {
 		float: left;
