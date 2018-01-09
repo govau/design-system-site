@@ -37,8 +37,7 @@
 }
 
 
-@media screen and ( min-width: $nav_breakpoint ) {
-
+@include AU-media( xs ) {
 	.header__coa {
 		float: left;
 		margin: 0;

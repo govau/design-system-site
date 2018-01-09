@@ -1,4 +1,5 @@
 $color-active: $AU-colordark-Text;
+$nav_breakpoint: 1050px;
 
 .mainmenu {
 	@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
