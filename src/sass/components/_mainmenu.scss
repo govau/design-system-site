@@ -5,14 +5,13 @@ $color-active: $AU-colordark-Text;
 	background-color: transparent;
 
 	& > .au-link-list {
-		@include AU-space( margin-bottom, -1unit );
 		display: block;
 	}
 
 	.au-link-list > li {
 		display: block;
-		margin-left: 0;
-		text-align: center;
+		margin: 0;
+		border-top: 1px solid $AU-color-Border;
 
 		& > a {
 			@include AU-fontgrid( sm );
@@ -29,6 +28,7 @@ $color-active: $AU-colordark-Text;
 		&.mainmenu--active > a {
 			color: $color-active;
 			border-color: $color-active;
+			font-weight: bold;
 
 			&:hover {
 				text-decoration: none;
@@ -39,6 +39,7 @@ $color-active: $AU-colordark-Text;
 	@media screen and ( min-width: $nav_breakpoint ) {
 
 		& > .au-link-list {
+			@include AU-space( margin-bottom, -0.75unit );
 			display: inline-block;
 
 			& + .au-link-list {
@@ -48,6 +49,7 @@ $color-active: $AU-colordark-Text;
 
 		.au-link-list > li {
 			display: inline-block;
+			border-top: 0;
 
 			& > a {
 				@include AU-fontgrid( xs );
