@@ -1,17 +1,25 @@
-import PropTypes from 'prop-types';
+import { SETTINGS } from 'cuttlebelle/dist/settings.js';
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
+import Path from 'path';
+import Fs from 'fs';
 
 
 /**
  * The tab component
  */
-const Code = ({ _body, example }) => (
-	<Fragment>
-		{ _body }
-		{ example }
-		<iframe src={`${ example }/`}></iframe>
-	</Fragment>
-);
+const Code = ({ _body, example, _ID }) => {
+	const pathToCode = Path.normalize(`${ SETTINGS.get().folder.content }/${ _ID }/${ example }/code.md`);
+	const exampleCode = Fs.readFileSync( pathToCode, 'utf8' );
+
+	return (
+		<Fragment>
+			{ _body }
+
+			<iframe src={`${ example }/`}>{ exampleCode }</iframe>
+		</Fragment>
+	);
+}
 
 Code.propTypes = {
 	/**
