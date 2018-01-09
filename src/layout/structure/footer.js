@@ -6,7 +6,7 @@ import React from 'react';
 /**
  * The gov.au footer
  */
-const Footer = ({ _body  }) => (
+const Footer = ({ headline, legallist, mainlist, imgurl, imgalt,  _body  }) => (
 	<AUfooter className="au-footer au-body au-footer--dark au-body--dark">
 
 		<div className="container-fluid">
@@ -14,19 +14,25 @@ const Footer = ({ _body  }) => (
 				<div className="row">
 					<div className="col-md-offset-1 col-md-8 col-md-push-3">
 
-						<h2 className="au-display-md">Community</h2>
+						<h2 className="au-display-md">{ headline }</h2>
 						<ul class="au-footer--main-links au-link-list">
-							<li><a href="#">Forums</a></li>
-							<li><a href="#">Articles</a></li>
-							<li><a href="#">Roadmap</a></li>
-							<li><a href="#">Github</a></li>
+							{
+								mainlist.map( ( mainlist, i ) => (
+									<li key={ i }>
+										<a href={ mainlist.link }>{ mainlist.text }</a>
+									</li>
+								))
+							}
 						</ul>
 
 						<ul class="au-footer--legal-links au-link-list">
-							<li><a href="#">Privacy policy</a></li>
-							<li><a href="#">Need help? </a></li>
-							<li><a href="#">Accessibility</a></li>
-							<li><a href="#">Security</a></li>
+							{
+								legallist.map( ( legallist, i ) => (
+									<li key={ i }>
+										<a href={ legallist.link }>{ legallist.text }</a>
+									</li>
+								))
+							}
 						</ul>
 
 						<AUfooterEnd>
@@ -34,10 +40,18 @@ const Footer = ({ _body  }) => (
 								{ _body }
 							</div>
 						</AUfooterEnd>
+
 					</div>
 
+
 					<div className="col-md-3 col-md-pull-9 au-footer-logo">
-						<img className="au-responsive-media-img" src="http://placehold.it/500x200" alt="Commonwealth Coat of Arms crest logo" />
+						<img className="au-responsive-media-img"
+							src={
+								imgurl.startsWith('http')
+									? imgurl
+									: _relativeURL( imgurl )
+							}
+							alt={ imgalt } />
 					</div>
 
 				</div>
