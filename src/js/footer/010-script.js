@@ -1,13 +1,11 @@
-
-
 // Mobile menu
-const mainMenuToggle = document.getElementById( "mainmenu-toggle" );
-const mainMenu = document.getElementById( "mainmenu" );
+var mainMenuToggle = document.getElementById( "mainmenu-toggle" );
+var mainMenu = document.getElementById( "mainmenu" );
 
 mainMenuToggle.classList.add( "js-toggle" );
 mainMenu.classList.add( "is-closed" );
 
-mainMenuToggle.addEventListener('click', () => {
+mainMenuToggle.addEventListener('click', function() {
 	if ( mainMenu.classList.contains( "is-closed" ) ) {
 		mainMenu.classList.remove( "is-closed" );
 		mainMenu.classList.add( "is-open" );
