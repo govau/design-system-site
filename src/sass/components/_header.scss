@@ -1,6 +1,29 @@
+.header {
+	position: relative;
+}
+
 // Remove padding bottom as we have a menu
 .au-header.au-header--dark {
-	@include AU-space( padding-bottom, 2unit );
+	padding-bottom: 0;
+	position: relative;
+	z-index: 400;
+}
+
+#mainmenu-toggle {
+	text-decoration: none;
+	text-align: left;
+	border: 0;
+	@include AU-fontgrid( sm );
+	@include AU-space( padding, 0.5unit 0 );
+
+	&:hover:not(:disabled) { // this is ugly
+		text-decoration: underline;
+		text-decoration-skip: ink;
+	}
+
+	@media screen and ( min-width: $nav_breakpoint ) {
+		display: none;
+	}
 }
 
 .header__coa {
@@ -10,6 +33,7 @@
 }
 
 .header__logo {
+	@include AU-space( padding-bottom, 1unit );
 	@include AU-clearfix;
 	display: inline-block;
 	text-decoration: none;
@@ -32,7 +56,7 @@
 .header__logo__title {
 	@include AU-space( margin-top, 0.25unit );
 	@include AU-space( margin-left, 4unit );
-	@include AU-space( max-width, 12unit );
+	@include AU-space( max-width, 13unit );
 	text-align: left;
 }
 

@@ -1,11 +1,28 @@
 $color-active: $AU-colordark-Text;
-$nav_breakpoint: 1050px;
 
 .mainmenu {
+	@include AU-clearfix();
 	@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
+	transition: margin-top 0.3s;
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 300;
 
 	.au-link-list {
 		display: block;
+		padding: 0;
+	}
+
+	a {
+		@include AU-fontgrid( sm );
+		@include AU-space( padding, 0.5unit 0 );
+		display: block;
+
+		&:hover {
+			text-decoration: underline;
+			text-decoration-skip: ink;
+		}
 	}
 
 	.au-link-list > li {
@@ -13,22 +30,9 @@ $nav_breakpoint: 1050px;
 		margin: 0;
 		border-top: 1px solid $AU-color-Border;
 
-		& > a {
-			@include AU-fontgrid( sm );
-			@include AU-space( padding, 0.5unit 0 );
-			display: block;
-			text-decoration: none;
-
-			&:hover {
-				text-decoration: underline;
-				text-decoration-skip: ink;
-			}
-		}
-
 		&.mainmenu--active > a {
 			color: $color-active;
 			border-color: $color-active;
-			font-weight: bold;
 
 			&:hover {
 				text-decoration: none;
@@ -36,15 +40,26 @@ $nav_breakpoint: 1050px;
 		}
 	}
 
-	@media screen and ( min-width: $nav_breakpoint ) {
+	&.is-closed {
+		margin-top: -100%;
+	}
 
-		.mainmenu--right {
-			float: right;
+	&.is-open {
+		margin-top: 0;
+	}
+
+	@media screen and ( min-width: $nav_breakpoint ) {
+		&.is-closed {
+			position: static;
 		}
 
 		.au-link-list {
-			display: inline-block;
-			@include AU-space( margin-bottom, -0.75unit );
+			@include AU-space( margin-bottom, -0.5unit );
+			float: left;
+
+			&.mainmenu--right {
+				float: right;
+			}
 
 			& > li {
 				display: inline-block;

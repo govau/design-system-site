@@ -39,11 +39,8 @@ const Navigation = ({ _relativeURL, _ID, _pages }) => {
 	const linksRight = menu.links.right.map( link => CreateLink( link, true ) );
 
 	return (
-		<nav className="mainmenu au-body au-body--dark">
+		<nav id="mainmenu" className="mainmenu au-body au-body--dark">
 			<div className="container-fluid">
-				<span className="icon icon--dark icon--menu--action">
-					<button className="mainmenu--toggle au-btn au-btn--tertiary au-btn--block au-btn--dark">Open menu</button>
-				</span>
 				<AUlinkList items={ linksLeft } inline />
 				<AUlinkList className="au-link-list au-link-list--inline mainmenu--right" items={ linksRight } inline />
 			</div>

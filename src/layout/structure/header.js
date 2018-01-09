@@ -8,9 +8,9 @@ import React, { Fragment } from 'react';
  * The header component
  */
 const Header = ({ title, _relativeURL, _ID, _pages }) => (
-	<Fragment>
+	<div className="header">
 		<AUheader dark>
-			<div className="header container-fluid">
+			<div className="container-fluid">
 				<div className="row">
 					<div className="col-md-12">
 
@@ -32,12 +32,15 @@ const Header = ({ title, _relativeURL, _ID, _pages }) => (
 
 							<h1 className="header__logo__title au-display-md">{ title }</h1>
 						</a>
+						<span className="icon icon--dark icon--menu--action">
+							<button id="mainmenu-toggle" className="au-btn au-btn--tertiary au-btn--block au-btn--dark">Open menu</button>
+						</span>
 					</div>
 				</div>
 			</div>
 		</AUheader>
 		<MainMenu _relativeURL={ _relativeURL } _ID={ _ID } _pages={ _pages } />
-	</Fragment>
+	</div>
 );
 
 Header.propTypes = {
