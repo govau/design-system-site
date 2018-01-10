@@ -8,7 +8,7 @@ import React from 'react';
  * The gov.au footer
  */
 const Footer = ({ headline, legallist, mainlist, _body, _ID, _relativeURL }) => (
-	<AUfooter className="footer au-footer au-footer--dark">
+	<AUfooter dark className="footer">
 
 		<div className="container-fluid">
 
