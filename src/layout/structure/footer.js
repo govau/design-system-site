@@ -30,7 +30,7 @@ const Footer = ({ headline, legallist, mainlist, _body, _ID, _relativeURL }) => 
 
 
 					<div className="col-md-3 col-md-pull-9 au-footer-logo">
-						<img className="footer__image" src={ _relativeURL( '/assets/img/coa.png', _ID ) } alt="The Australian Government coat of Arms" />
+						<a href="http://dta.gov.au"><img className="footer__image" src={ _relativeURL( '/assets/img/coa-footer.png', _ID ) } alt="Australian Government, Digital Transformation Agency" title="Australian Government, Digital Transformation Agency"/></a>
 					</div>
 
 				</div>
