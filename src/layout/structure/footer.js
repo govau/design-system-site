@@ -15,7 +15,7 @@ const Footer = ({ headline, legallist, mainlist, imgurl, imgalt,  _body  }) => (
 					<div className="col-md-offset-1 col-md-8 col-md-push-3">
 
 						<h2 className="au-display-md">{ headline }</h2>
-						<ul class="au-footer--main-links au-link-list">
+						<ul className="au-footer--main-links au-link-list">
 							{
 								mainlist.map( ( mainlist, i ) => (
 									<li key={ i }>
@@ -25,7 +25,7 @@ const Footer = ({ headline, legallist, mainlist, imgurl, imgalt,  _body  }) => (
 							}
 						</ul>
 
-						<ul class="au-footer--legal-links au-link-list">
+						<ul className="au-footer--legal-links au-link-list">
 							{
 								legallist.map( ( legallist, i ) => (
 									<li key={ i }>

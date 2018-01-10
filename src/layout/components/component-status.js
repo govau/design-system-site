@@ -44,15 +44,7 @@ import React from 'react';
 	</div>
  );
 
-ComponentStatus.propTypes = {
-	/**
-	 * tiles:
-	 */
-	tiles: PropTypes.arrayOf(
-		PropTypes.shape({
-		})
-	).isRequired,
-};
+ComponentStatus.propTypes = {};
 
 ComponentStatus.defaultProps = {};
 
