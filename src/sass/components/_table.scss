@@ -1,0 +1,49 @@
+
+// Table. Just a typical one.
+
+// FIXME:
+.au-header {
+	height: 1px !important;
+}
+
+.au-body {
+	table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	th, td {
+		@include AU-space( padding, 1unit );
+	}
+
+	th {
+		text-align: left;
+		@include AU-space( border-bottom, 0.25unit solid $AU-color-Background-darkest );
+	}
+
+	td {
+		border-bottom: solid 1px $AU-color-Background-darkest;
+	}
+
+	tr:nth-child(2n+3) {
+		background: $AU-color-Background-dark;
+	}
+}
+
+.au-responsive-table {
+  overflow:auto;
+	@include AU-space( margin-top, 1unit );
+}
+
+.au-table-minwidth {
+	width: 1em;
+}
+
+.avitar_box {
+	float: left;
+	white-space: nowrap;
+
+	.avitar {
+		@include AU-space( margin-right, 0.5unit );
+	}
+}
