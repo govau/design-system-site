@@ -6,6 +6,7 @@ body {
 	min-height: 100%;
 	display: grid;
 	grid-template-rows: 1fr auto;
+	grid-template-columns: minmax( 100%, 0 );
 }
 
 .container-fluid {
