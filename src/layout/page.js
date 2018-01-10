@@ -42,6 +42,8 @@ const Page = ({ _ID, _relativeURL, pagetitle, header, main, footer }) => {
 
 			{ footer }
 
+			<div id="overlay" className="overlay"></div>
+
 			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
 		</body>
 		</html>

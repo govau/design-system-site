@@ -1,13 +1,12 @@
 $color-active: $AU-colordark-Text;
 
 .mainmenu {
-	@include AU-clearfix();
 	@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
 	transition: margin-top 0.3s;
 	position: absolute;
-	left: 0;
-	right: 0;
 	z-index: 300;
+	margin-top: -100%;
+	width: 100%;
 
 	.au-link-list {
 		display: block;
@@ -40,17 +39,31 @@ $color-active: $AU-colordark-Text;
 		}
 	}
 
-	&.is-closed {
+	.mainmenu-is-closed & {
 		margin-top: -100%;
 	}
 
-	&.is-open {
+	.mainmenu-is-open & {
 		margin-top: 0;
 	}
 
+	.no-js & {
+		margin-top: 0;
+		position: static;
+		border: none;
+	}
+
 	@media screen and ( min-width: $nav_breakpoint ) {
-		&.is-closed {
+		@include AU-space( padding-top, 1unit );
+		border: none;
+		transition: none;
+		position: static;
+		margin-top: 0;
+
+		.mainmenu-is-open &,
+		.mainmenu-is-closed & {
 			position: static;
+			margin-top: 0;
 		}
 
 		.au-link-list {
@@ -74,3 +87,79 @@ $color-active: $AU-colordark-Text;
 		}
 	}
 }
+
+
+.mainmenu-toggle.au-btn.au-btn--tertiary {
+	@include AU-fontgrid( sm );
+	@include AU-space( padding, 0.5unit 0 );
+	text-decoration: none;
+	text-align: left;
+	border: 0;
+
+	&:hover:not(:disabled) {
+		text-decoration: underline;
+		text-decoration-skip: ink;
+	}
+
+	.no-js & {
+		display: none;
+	}
+
+	.mainmenu-is-open & {
+		&:before {
+			background-image: AU-svguri('<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#{ $AU-colordark-Action }">' +
+				'<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>' +
+				'<path d="M0 0h24v24H0z" fill="none"/>' +
+			'</svg>');
+		}
+
+		&:hover:not(:disabled):before {
+			background-image: AU-svguri('<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#{ $AU-colordark-Text }">' +
+				'<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>' +
+				'<path d="M0 0h24v24H0z" fill="none"/>' +
+			'</svg>');
+		}
+	}
+
+	.mainmenu-is-closed & {
+		&:before {
+			background-image: AU-svguri('<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#{ $AU-colordark-Action }">' +
+				'<path d="M0 0h24v24H0z" fill="none"/>' +
+				'<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>' +
+			'</svg>');
+		}
+
+		&:hover:not(:disabled):before {
+			background-image: AU-svguri('<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#{ $AU-colordark-Text }">' +
+				'<path d="M0 0h24v24H0z" fill="none"/>' +
+				'<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>' +
+			'</svg>');
+		}
+	}
+
+	@media screen and ( min-width: $nav_breakpoint ) {
+		display: none;
+	}
+}
+
+
+.mainmenu-is-open {
+
+	.overlay {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: $AU-colordark-Background-darkest;
+		background: rgba( 29, 29, 29, 0.9 );
+		content: " ";
+		z-index: 50;
+		cursor: pointer;
+
+		@media screen and ( min-width: $nav_breakpoint ) {
+			display: none;
+		}
+	}
+}
+
