@@ -17,7 +17,6 @@ const Header = ({ title, _relativeURL, _ID, _pages }) => (
 						<img className="header__coa" src={ _relativeURL( '/assets/img/coa.png', _ID ) }/>
 
 						<a href={ _relativeURL( '/', _ID ) } className="header__logo">
-
 							<svg className="header__logo__gold" role="img" title="GOLD">
 								<title>The Government Open Language for Design logo</title>
 								<defs>
@@ -32,8 +31,8 @@ const Header = ({ title, _relativeURL, _ID, _pages }) => (
 
 							<h1 className="header__logo__title au-display-md">{ title }</h1>
 						</a>
-						<span className="icon icon--dark icon--menu--action">
-							<button id="mainmenu-toggle" className="au-btn au-btn--tertiary au-btn--block au-btn--dark">Open menu</button>
+						<span className="icon">
+							<button id="mainmenu-toggle" className="mainmenu-toggle au-btn au-btn--tertiary au-btn--block au-btn--dark">Open menu</button>
 						</span>
 					</div>
 				</div>
