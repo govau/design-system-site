@@ -23,7 +23,7 @@
 	}
 }
 
-.au-footer-logo {
+.footer__logo {
 	@include AU-space( margin-top, 2unit );
 
 	@include AU-media( md ) {
@@ -48,8 +48,8 @@
 	}
 }
 
-.au-body.au-body--dark .footer__legal,
-.au-body.au-body--dark .footer__legal-links {
+.au-body .footer__legal,
+.au-body .footer__legal-links {
 	@include AU-fontgrid( xs, heading );
 
 	a {
@@ -60,5 +60,5 @@
 .footer__image {
 	display: block;
 	width: 100%;
-	max-width: 300px;
+	max-width: 250px;
 }

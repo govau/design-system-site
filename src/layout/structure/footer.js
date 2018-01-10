@@ -1,5 +1,6 @@
 import AUfooter, { AUfooterEnd } from '../../_uikit/layout/footer';
 import AUlinkList from '../../_uikit/layout/link-list';
+import AUheading from '../../_uikit/layout/headings';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -14,7 +15,7 @@ const Footer = ({ headline, legallist, mainlist, _body, _ID, _relativeURL }) => 
 
 				<div className="row">
 					<div className="col-md-offset-1 col-md-8 col-md-push-3 au-body au-body--dark">
-						<h2 className="au-display-md">{ headline }</h2>
+						<AUheading size="md" level="2" text={ headline } />
 
 						<AUlinkList items={ mainlist } inline/>
 
@@ -29,7 +30,7 @@ const Footer = ({ headline, legallist, mainlist, _body, _ID, _relativeURL }) => 
 					</div>
 
 
-					<div className="col-md-3 col-md-pull-9 au-footer-logo">
+					<div className="col-md-3 col-md-pull-9 footer__logo">
 						<a href="http://dta.gov.au"><img className="footer__image" src={ _relativeURL( '/assets/img/coa-footer.png', _ID ) } alt="Australian Government, Digital Transformation Agency" title="Australian Government, Digital Transformation Agency"/></a>
 					</div>
 
