@@ -1,4 +1,5 @@
 import AUfooter, { AUfooterEnd } from '../../_uikit/layout/footer';
+import AUlinkList from '../../_uikit/layout/link-list';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -6,37 +7,21 @@ import React from 'react';
 /**
  * The gov.au footer
  */
-const Footer = ({ headline, legallist, mainlist, imgurl, imgalt,  _body  }) => (
-	<AUfooter className="au-footer au-body au-footer--dark au-body--dark">
+const Footer = ({ headline, legallist, mainlist, _body, _ID, _relativeURL }) => (
+	<AUfooter className="footer au-footer au-footer--dark">
 
 		<div className="container-fluid">
 
 				<div className="row">
-					<div className="col-md-offset-1 col-md-8 col-md-push-3">
-
+					<div className="col-md-offset-1 col-md-8 col-md-push-3 au-body au-body--dark">
 						<h2 className="au-display-md">{ headline }</h2>
-						<ul className="au-footer--main-links au-link-list">
-							{
-								mainlist.map( ( mainlist, i ) => (
-									<li key={ i }>
-										<a href={ mainlist.link }>{ mainlist.text }</a>
-									</li>
-								))
-							}
-						</ul>
 
-						<ul className="au-footer--legal-links au-link-list">
-							{
-								legallist.map( ( legallist, i ) => (
-									<li key={ i }>
-										<a href={ legallist.link }>{ legallist.text }</a>
-									</li>
-								))
-							}
-						</ul>
+						<AUlinkList items={ mainlist } inline/>
+
+						<AUlinkList items={ legallist } className="footer__legal-links" />
 
 						<AUfooterEnd>
-							<div className="content au-footer--legal">
+							<div className="content footer__legal">
 								{ _body }
 							</div>
 						</AUfooterEnd>
@@ -45,13 +30,7 @@ const Footer = ({ headline, legallist, mainlist, imgurl, imgalt,  _body  }) => (
 
 
 					<div className="col-md-3 col-md-pull-9 au-footer-logo">
-						<img className="au-responsive-media-img"
-							src={
-								imgurl.startsWith('http')
-									? imgurl
-									: _relativeURL( imgurl )
-							}
-							alt={ imgalt } />
+						<img className="footer__image" src={ _relativeURL( '/assets/img/coa.png', _ID ) } alt="The Australian Government coat of Arms" />
 					</div>
 
 				</div>
@@ -62,7 +41,40 @@ const Footer = ({ headline, legallist, mainlist, imgurl, imgalt,  _body  }) => (
 
 Footer.propTypes = {
 	/**
-	 * _body: (text)(4)
+	 * headline: Community
+	 */
+	headline: PropTypes.string.isRequired,
+
+	/**
+	 * legallist:
+	 *   - text: Forums
+	 *     link: /
+	 *   - text: Articles
+	 *     link: /
+	 */
+	legallist: PropTypes.arrayOf(
+		PropTypes.shape({
+			text: PropTypes.string.isRequired,
+			link: PropTypes.string.isRequired,
+		})
+	).isRequired,
+
+	/**
+	 * mainlist:
+	 *   - text: Privacy policy
+	 *     link: /
+	 *   - text: Need help?
+	 *     link: /
+	 */
+	mainlist: PropTypes.arrayOf(
+		PropTypes.shape({
+			text: PropTypes.string.isRequired,
+			link: PropTypes.string.isRequired,
+		})
+	).isRequired,
+
+	/**
+	 * _body: (text)(1)
 	 */
 	_body: PropTypes.node.isRequired,
 };

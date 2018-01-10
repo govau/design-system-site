@@ -5,7 +5,7 @@ import React from 'react';
 /**
  * The Promo component
  */
- const ComponentFooter = ({ title, feedback, _body }) => (
+ const ComponentFooter = ({ feedback }) => (
 	<div className="componentfooter au-grid">
 		<div className="row">
 			<div className="col-sm-12 col-md-6">
@@ -32,27 +32,9 @@ import React from 'react';
 
 ComponentFooter.propTypes = {
 	/**
-	 * tiles:
-	 *   - title: Community
-	 *     imgurl: http://placehold.it/320x320
-	 *     imgalt: Community Alt tag
-	 *     url: /community
-	 *     text: The Design System community has been created for designers and developers to help them transform their agency’s products and services.
-	 *   - title: Components
-	 *     imgurl: http://placehold.it/320x320
-	 *     imgalt: Components Alt tag
-	 *     url: /components
-	 *     text: Components are a collection of interface elements that can be used by teams of designers and developers across government to build products.
+	 * feedback: (partials)(1)
 	 */
-	tiles: PropTypes.arrayOf(
-		PropTypes.shape({
-			title: PropTypes.string,
-			imgurl: PropTypes.string,
-			imgalt: PropTypes.string,
-			url: PropTypes.string,
-			text: PropTypes.string,
-		})
-	).isRequired,
+	feedback: PropTypes.node.isRequired,
 };
 
 ComponentFooter.defaultProps = {};

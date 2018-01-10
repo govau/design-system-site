@@ -1,10 +1,25 @@
-.au-footer {
+.footer {
 	@include AU-space( padding, 5unit 0 );
 	border-top: none;
 
 	.au-link-list {
 		@include AU-space( padding, 2unit 0 );
 		@include AU-space( margin-top, -0.5unit );
+		@include AU-clearfix();
+		width: 100%;
+
+		& > li {
+			width: 50%;
+			float: left;
+			margin: 0;
+
+			@include AU-media( md ) {
+				display: inline-block;
+				width: auto;
+				float: none;
+				@include AU-space( margin-right, 2unit );
+			}
+		}
 	}
 }
 
@@ -16,30 +31,12 @@
 	}
 }
 
-.au-footer--legal {
+.footer__legal {
 	@include AU-space( padding-top, 2unit );
 }
 
-.au-footer--main-links {
-	@include AU-clearfix();
 
-		li {
-			@include AU-space( margin-top, 1unit );
-			width: 50%;
-			float: left;
-			margin: 0;
-
-			@include AU-media( md ) {
-					display: inline-block;
-					width: auto;
-					float: none;
-					@include AU-space( margin-right, 2unit );
-			}
-		}
-}
-
-
-.au-footer--legal-links {
+.footer__legal-links {
 	border-top: solid 1px $AU-colordark-Border;
 	border-bottom: solid 1px $AU-colordark-Border;
 
@@ -51,10 +48,17 @@
 	}
 }
 
-.au-body.au-body--dark .au-footer--legal,
-.au-body.au-body--dark .au-footer--legal-links {
+.au-body.au-body--dark .footer__legal,
+.au-body.au-body--dark .footer__legal-links {
 	@include AU-fontgrid( xs, heading );
+
 	a {
 		color: $AU-colordark-Text;
 	}
+}
+
+.footer__image {
+	display: block;
+	max-width: 100px;
+	margin: 0 auto;
 }

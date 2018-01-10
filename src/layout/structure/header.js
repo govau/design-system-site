@@ -1,7 +1,7 @@
 import AUheader  from '../../_uikit/layout/header';
+import React, { Fragment } from 'react';
 import MainMenu  from '../mainmenu';
 import PropTypes from 'prop-types';
-import React, { Fragment } from 'react';
 
 
 /**
@@ -14,7 +14,7 @@ const Header = ({ title, _relativeURL, _ID, _pages }) => (
 				<div className="row">
 					<div className="col-md-12">
 
-						<img className="header__coa" src={ _relativeURL( '/assets/img/coa.png', _ID ) }/>
+						<img className="header__coa" src={ _relativeURL( '/assets/img/coa.png', _ID ) } alt="The Australian Government coat of Arms"/>
 
 						<a href={ _relativeURL( '/', _ID ) } className="header__logo">
 							<svg className="header__logo__gold" role="img" title="GOLD">

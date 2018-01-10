@@ -15,9 +15,26 @@ const FooterList = ({ headline, links }) => (
 
 FooterList.propTypes = {
 	/**
-	 * _body: (text)(4)
+	 * headline: Feedback
 	 */
-	_body: PropTypes.node.isRequired,
+	headline: PropTypes.string.isRequired,
+
+	/**
+	 * links:
+	 *   - text: Community discussion
+	 *     link: /community
+	 *     className: community
+	 *   - text: Community discussion
+	 *     link: /community
+	 *     className: community
+	 */
+	links: PropTypes.arrayOf(
+		PropTypes.shape({
+			text: PropTypes.string.isRequired,
+			link: PropTypes.string.isRequired,
+			className: PropTypes.string,
+		})
+	).isRequired,
 };
 
 FooterList.defaultProps = {};

@@ -1,8 +1,6 @@
 ---
 layout: structure/footer
 headline: Community
-imgurl: http://placehold.it/500x400
-imgalt: alt-tag
 mainlist:
   - text: Forums
     link: /
