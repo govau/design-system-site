@@ -18,4 +18,5 @@ site/
 docs/
 **/_uikit/**
 **/*.css
-src/assets/js/*
+src/assets/js/footer.js
+src/assets/js/header.js

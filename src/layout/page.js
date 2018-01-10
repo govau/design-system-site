@@ -5,39 +5,49 @@ import React from 'react';
 /**
  * The page component
  */
-const Page = ({ _ID, _relativeURL, pagetitle, header, main, footer }) => (
-	<html>
-	<head>
-		<meta charSet="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta httpEquiv="x-ua-compatible" content="ie=edge" />
+const Page = ({ _ID, _relativeURL, pagetitle, header, main, footer }) => {
 
-		<title>{ pagetitle }</title>
+	const headContent = `
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
 
-		<link rel="shortcut icon" type="image/x-icon" href={ _relativeURL( '/assets/img/favicon.ico', _ID ) } />
-		<link rel="stylesheet" href={ _relativeURL( '/assets/css/style.css', _ID ) } />
+<title>${ pagetitle }</title>
 
-		<script src={ _relativeURL( '/assets/js/header.js', _ID ) } />
-	</head>
-	<body className="au-grid">
-		<div className="content-wrapper">
-			{ header }
+<link rel="shortcut icon" type="image/x-icon" href=${ _relativeURL( '/assets/img/favicon.ico', _ID ) }>
+<link rel="stylesheet" href=${ _relativeURL( '/assets/css/style.css', _ID ) }>
 
-			<main className="main au-body container-fluid">
-				<div className="row">
-					<div className="grids col-md-12">
-						{ main }
+<!--[if lte IE 9]>
+	<script src="${ _relativeURL( '/assets/js/html5shiv.js', _ID ) }"></script>
+	<script src="${ _relativeURL( '/assets/js/respond.js', _ID ) }"></script>
+<![endif]-->
+
+<script src=${ _relativeURL( '/assets/js/header.js', _ID ) }></script>`;
+
+	return (
+		<html>
+		<head dangerouslySetInnerHTML={{ __html: headContent }} />
+		<body className="au-grid">
+			<div className="content-wrapper">
+				{ header }
+
+				<main className="main au-body container-fluid">
+					<div className="row">
+						<div className="grids col-md-12">
+							{ main }
+						</div>
 					</div>
-				</div>
-			</main>
-		</div>
+				</main>
+			</div>
 
-		{ footer }
+			{ footer }
 
-		<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
-	</body>
-	</html>
-);
+			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
+		</body>
+		</html>
+	)
+}
+
 
 Page.propTypes = {
 	/**
