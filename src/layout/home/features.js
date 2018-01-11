@@ -1,3 +1,5 @@
+import AUheading from '../../_uikit/layout/headings';
+import AUbutton from '../../_uikit/layout/buttons';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -19,7 +21,7 @@ const Features = ({ title, btnURL, btntext, tiles, _relativeURL, _ID, _parseMD, 
 				tiles.map( ( tile, i ) => (
 					<li className="feature col-xs-6 col-sm-3 col-lg-2" key={ i }>
 						<div className="feature__wrapper">
-							<h3 className="feature__wrapper__headline au-display-sm">{ tile.smltitle }</h3>
+							<AUheading className="feature__wrapper__headline" size="sm" level="3">{ tile.smltitle }</AUheading>
 							<p>{ tile.text }</p>
 						</div>
 					</li>
@@ -27,7 +29,7 @@ const Features = ({ title, btnURL, btntext, tiles, _relativeURL, _ID, _parseMD, 
 			}
 		</ul>
 		<div className="features__cta">
-			<a href={ btnURL } className="au-btn au-btn--secondary">{ btntext }</a>
+			<AUbutton href={ btnURL } as='secondary'>{ btntext }</AUbutton>
 		</div>
 	</div>
 );

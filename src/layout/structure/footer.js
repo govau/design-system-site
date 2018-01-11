@@ -15,7 +15,7 @@ const Footer = ({ headline, legallist, mainlist, _body, _ID, _relativeURL }) => 
 
 				<div className="row">
 					<div className="col-md-offset-1 col-md-8 col-md-push-3 au-body au-body--dark">
-						<AUheading size="md" level="2" text={ headline } />
+						<AUheading size="md" level="2">{ headline }</AUheading>
 
 						<AUlinkList items={ mainlist } inline/>
 

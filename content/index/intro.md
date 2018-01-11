@@ -4,6 +4,7 @@ title: About
 imgurl: http://placehold.it/500x400
 imgalt: Intro Alt Tag
 url: /get-started
+cta: Getting Started
 ---
 
 *Our Design System is based on the [Digital Service Standard](#) and provides a framework and a set of tools to help designers and developers create government products and services faster easier better.*

@@ -1,3 +1,4 @@
+import AUbutton from '../../_uikit/layout/buttons';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -5,7 +6,7 @@ import React from 'react';
 /**
  * The Intro component
  */
-const Intro = ({ title, url, imgalt, imgurl, _body }) => (
+const Intro = ({ title, url, imgalt, imgurl, cta, _body }) => (
 	<div className="intro au-grid">
 		<div className="intro-wrapper row">
 
@@ -24,7 +25,9 @@ const Intro = ({ title, url, imgalt, imgurl, _body }) => (
 			<div className="intro__text col-sm-12 col-md-5 col-md-pull-6">
 				<h2 className="intro__title">{ title }</h2>
 				<div className="content">{ _body }</div>
-				<p className="intro__cta"><a href={ url } className="au-btn au-btn--secondary">Getting Started</a></p>
+				<p className="intro__cta">
+					<AUbutton href={ url } as='secondary'>{ cta }</AUbutton>
+				</p>
 			</div>
 
 		</div>
