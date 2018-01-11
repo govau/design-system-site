@@ -6,77 +6,99 @@ import React from 'react';
 /**
  * The Intro component
  */
-const Table = ({ _body }) => (
+const Table = ({ title, btntext, btnURL, btnIcon, tableTH, components }) => (
 	<div>
-		{ _body }
-		<h2>In progress</h2>
+		<h2>{ title }</h2>
 
 		<div className="au-responsive-table">
 			<table className="table__in-progress">
 				<caption>A table of in progress components including their status, current version, and contributors.</caption>
 				<tr>
-					<th scope="col">Title</th>
-					<th className="au-table-minwidth" scope="col">Status</th>
-					<th className="au-table-minwidth" scope="col">Version</th>
-					<th className="au-table-minwidth" scope="col">Contributors</th>
+					{
+						tableTH.map( ( tableTH, i ) => (
+							<th scope="col" key={ i }
+								className={
+									tableTH.tightcol
+										? 'au-table-minwidth'
+										: ''
+								} >
+								{ tableTH.text }
+							</th>
+						))
+					}
 				</tr>
-				<tr>
-					<td><a href="#">Typeface: Discussion</a></td>
-					<td>0.1.2</td>
-					<td>0.1.2</td>
-					<td>
-						<div className="avatar_box">
-							<a href="#" className="avatar"><img src="http://via.placeholder.com/24x24" alt="Username" title="Username"/></a>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td><a href="#">Typeface: Discussion</a></td>
-					<td>0.1.2</td>
-					<td>0.1.2</td>
-					<td>
-						<div className="avatar_box">
-							<a href="#" className="avatar"><img src="http://via.placeholder.com/24x24" alt="Username" title="Username"/></a>
-							<a href="#" className="avatar"><img src="http://via.placeholder.com/24x24" alt="Username" title="Username"/></a>
-							<a href="#" className="avatar"><img src="http://via.placeholder.com/24x24" alt="Username" title="Username"/></a>
-							<a href="#">20+</a>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td><a href="#">Typeface: Discussion</a></td>
-					<td>0.1.2</td>
-					<td>0.1.2</td>
-					<td>
-						<div className="avatar_box">
-							<a href="#" className="avatar"><img src="http://via.placeholder.com/24x24" alt="Username" title="Username"/></a>
-							<a href="#" className="avatar"><img src="http://via.placeholder.com/24x24" alt="Username" title="Username"/></a>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td><a href="#">Typeface: Discussion</a></td>
-					<td>0.1.2</td>
-					<td>0.1.2</td>
-					<td>
-						<div className="avatar_box">
-							<a href="#" className="avatar"><img src="http://via.placeholder.com/24x24" alt="Username" title="Username"/></a>
-							<a href="#" className="avatar"><img src="http://via.placeholder.com/24x24" alt="Username" title="Username"/></a>
-							<a href="#">20+</a>
-						</div>
-					</td>
-				</tr>
+
+				{
+					components.map( ( components, i ) => (
+						<tr key={ i }>
+							<td><a href={ components.url }>{ components.title }</a></td>
+							<td>{ components.status }</td>
+							<td>{ components.version }</td>
+							<td>
+								{ /** NOTE: This will need to be a shared component **/ }
+								<div className="avatar_box">
+									<a href="#" className="avatar"><img src="http://via.placeholder.com/24x24" alt="Username" title="Username"/></a>
+									<a href="#" className="avatar"><img src="http://via.placeholder.com/24x24" alt="Username" title="Username"/></a>
+									<a href="#" className="avatar"><img src="http://via.placeholder.com/24x24" alt="Username" title="Username"/></a>
+									<a href="#">20+</a>
+								</div>
+							</td>
+						</tr>
+					))
+				}
+
 			</table>
 		</div>
 
 		<p>
-			<AUbutton href="#" className="icon icon--community icon--dark"><span>Community</span></AUbutton>
+			<AUbutton href={ btnURL } className={ 'icon ' + btnIcon + ' icon--dark'}><span>{ btntext }</span></AUbutton>
 		</p>
 
 	</div>
 );
 
-Table.propTypes = {};
+Table.propTypes = {
+	/**
+	* title: In progress
+	* btntext: Community
+	* btnURL: /community
+	* btnIcon: icon--community
+	* tableTH:
+	*   - text: Title
+	*   - text: Status
+	*     tightcol: true
+	* components:
+	*   - title: MyComponentTitle
+	*     url: /MyComponentTitle2
+	*     status: XYZ
+	*     version: 0.1.2
+	*   - title: MyComponentTitle
+	*     url: /MyComponentTitle2
+	*     status: XYZ
+	*     version: 0.1.2
+	**/
+
+	title: PropTypes.string.isRequired,
+	btntext: PropTypes.string.isRequired,
+	btntext: PropTypes.string.isRequired,
+	btnIcon: PropTypes.string,
+
+	tableTH: PropTypes.arrayOf(
+		PropTypes.shape({
+			text: PropTypes.string.isRequired,
+			tightcol: PropTypes.bool,
+		})
+	).isRequired,
+
+	components: PropTypes.arrayOf(
+		PropTypes.shape({
+			title: PropTypes.string.isRequired,
+			url: PropTypes.string.isRequired,
+			version: PropTypes.string.isRequired,
+		})
+	).isRequired,
+
+};
 
 Table.defaultProps = {};
 
