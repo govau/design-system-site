@@ -42,7 +42,7 @@ const Navigation = ({ _relativeURL, _ID, _pages }) => {
 		<nav id="mainmenu" className="mainmenu au-body au-body--dark" aria-hidden="true" >
 			<div className="container-fluid">
 				<AUlinkList items={ linksLeft } inline />
-				<AUlinkList className="au-link-list au-link-list--inline mainmenu--right" items={ linksRight } inline />
+				<AUlinkList inline className="mainmenu--right" items={ linksRight } inline />
 			</div>
 		</nav>
 	);
