@@ -23,11 +23,20 @@ var mainMenuToggle = document.getElementById( 'mainmenu-toggle' );
 
 // Open and close the menu
 function ToggleMenu() {
+
+	AU.accordion.Toggle( mainMenuToggle, undefined,  {
+		afterOpen: function() {
+			return;
+		},
+		afterClose: function() {
+			mainmenu.removeAttribute( "style" );
+		},
+	});
+
 	if( HasClass( document.body, 'mainmenu-is-closed' ) ) {
 		mainMenuToggle.innerHTML = '<span>Close menu</span>';
 		RemoveClass( document.body, 'mainmenu-is-closed' );
 		AddClass( document.body, 'mainmenu-is-open' );
-		AU.accordion.Open( mainMenuToggle );
 		lockTop.setAttribute( "tabindex", 0 );
 		lockBottom.setAttribute( "tabindex", 0 );
 	}
@@ -35,7 +44,6 @@ function ToggleMenu() {
 		mainMenuToggle.innerHTML = '<span>Open menu</span>';
 		RemoveClass( document.body, 'mainmenu-is-open' );
 		AddClass( document.body, 'mainmenu-is-closed' );
-		AU.accordion.Close( mainMenuToggle );
 		lockTop.removeAttribute( "tabindex" );
 		lockBottom.removeAttribute( "tabindex" );
 	}
