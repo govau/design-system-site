@@ -27,7 +27,7 @@ const Page = ({ _ID, _relativeURL, pagetitle, header, main, footer }) => {
 	return (
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }} />
-		<body className="au-grid">
+		<body className="au-grid mainmenu-is-closed">
 			<div className="content-wrapper">
 				{ header }
 

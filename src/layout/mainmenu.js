@@ -1,7 +1,7 @@
 import { ParseYaml } from 'cuttlebelle/dist/parse.js';
 import AUlinkList from '../_uikit/layout/link-list';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { Fragment } from 'react';
 import Path from 'path';
 import Fs from 'fs';
 
@@ -39,7 +39,7 @@ const Navigation = ({ _relativeURL, _ID, _pages }) => {
 	const linksRight = menu.links.right.map( link => CreateLink( link, true ) );
 
 	return (
-		<nav className="mainmenu au-body au-body--dark">
+		<nav id="mainmenu" className="mainmenu au-body au-body--dark" aria-hidden="true" >
 			<div className="container-fluid">
 				<AUlinkList items={ linksLeft } inline />
 				<AUlinkList className="au-link-list au-link-list--inline mainmenu--right" items={ linksRight } inline />

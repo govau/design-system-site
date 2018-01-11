@@ -1,5 +1,6 @@
 .icon a:before,
-.icon button:before {
+.icon button:before,
+.icon span:before {
 	@include AU-space( margin-right, 0.5unit );
 	width: 1.25em;
 	height: 1.25em;

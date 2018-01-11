@@ -14,26 +14,34 @@ const Header = ({ title, _relativeURL, _ID, _pages }) => (
 				<div className="row">
 					<div className="col-md-12">
 
-						<img className="header__coa" src={ _relativeURL( '/assets/img/coa.png', _ID ) } alt="The Australian Government coat of Arms"/>
+						<div className="header__logo">
 
-						<a href={ _relativeURL( '/', _ID ) } className="header__logo">
-							<svg className="header__logo__gold" role="img" title="GOLD">
-								<title>The Government Open Language for Design logo</title>
-								<defs>
-									<linearGradient id="GOLD-gradient" x1="100%" x2="0%" y1="0%" y2="100%">
-										<stop offset="0%" stopColor="#FFE9B2" stopOpacity="1"/>
-										<stop offset="100%" stopColor="#BD952D"/>
-									</linearGradient>
-								</defs>
+							<img className="header__logo--coa" src={ _relativeURL( '/assets/img/coa.png', _ID ) } alt="The Australian Government coat of Arms"/>
 
-								<use xlinkHref={ _relativeURL( '/assets/svg/map.svg#gold', _ID ) }/>
-							</svg>
+							<a href={ _relativeURL( '/', _ID ) } className="header__logo--gold">
+								<svg role="img" title="GOLD">
+									<title>The Government Open Language for Design logo</title>
+									<defs>
+										<linearGradient id="GOLD-gradient" x1="100%" x2="0%" y1="0%" y2="100%">
+											<stop offset="0%" stopColor="#FFE9B2" stopOpacity="1"/>
+											<stop offset="100%" stopColor="#BD952D"/>
+										</linearGradient>
+									</defs>
 
-							<h1 className="header__logo__title au-display-md">{ title }</h1>
-						</a>
-						<span className="icon">
-							<button id="mainmenu-toggle" className="mainmenu-toggle au-btn au-btn--tertiary au-btn--block au-btn--dark">Open menu</button>
-						</span>
+									<use xlinkHref={ _relativeURL( '/assets/svg/map.svg#gold', _ID ) }/>
+								</svg>
+
+								<h1 className="header__logo--gold__title au-display-md">{ title }</h1>
+							</a>
+						</div>
+
+						<a id="mainmenu-toggle"
+							className="icon mainmenu-toggle js-au-accordion"
+							href="#mainmenu"
+							aria-controls="mainmenu"
+							aria-expanded="false"
+							aria-selected="false"
+							role="tab"><span>Open menu</span></a>
 					</div>
 				</div>
 			</div>
