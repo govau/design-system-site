@@ -6,7 +6,6 @@ $color-active: $AU-colordark-Text;
 	position: absolute;
 	width: 100%;
 	z-index: 200;
-	overflow: hidden;
 
 	.au-link-list {
 		display: block;
@@ -77,6 +76,7 @@ $color-active: $AU-colordark-Text;
 .mainmenu-toggle {
 	@include AU-fontgrid( sm );
 	@include AU-space( padding, 0.5unit 0 );
+	@include AU-space( margin-top, 1unit );
 	color: $AU-colordark-Action;
 	text-decoration: none;
 	display: block;
@@ -132,20 +132,32 @@ $color-active: $AU-colordark-Text;
 
 
 // Overlay
-.mainmenu-is-open .overlay {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: $AU-colordark-Background-darkest;
-	background: rgba( 29, 29, 29, 0.9 );
-	content: " ";
-	z-index: 50;
-	cursor: pointer;
+.mainmenu-is-open {
+	height: 100%;
 
-	@media screen and ( min-width: $nav_breakpoint ) {
-		display: none;
+	.content-wrapper {
+		overflow:hidden;
+	}
+
+	.header {
+		overflow: auto;
+	}
+
+	.overlay {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: $AU-colordark-Background-darkest;
+		background: rgba( 29, 29, 29, 0.9 );
+		content: " ";
+		z-index: 50;
+		cursor: pointer;
+
+		@media screen and ( min-width: $nav_breakpoint ) {
+			display: none;
+		}
 	}
 }
 

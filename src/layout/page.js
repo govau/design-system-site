@@ -28,9 +28,8 @@ const Page = ({ _ID, _relativeURL, pagetitle, header, main, footer }) => {
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }} />
 		<body className="au-grid mainmenu-is-closed">
+			{ header }
 			<div className="content-wrapper">
-				{ header }
-
 				<main className="main au-body container-fluid">
 					<div className="row">
 						<div className="grids col-md-12">
@@ -38,12 +37,8 @@ const Page = ({ _ID, _relativeURL, pagetitle, header, main, footer }) => {
 						</div>
 					</div>
 				</main>
+				{ footer }
 			</div>
-
-			{ footer }
-
-			<div id="overlay" className="overlay"></div>
-
 			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
 		</body>
 		</html>

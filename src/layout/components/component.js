@@ -20,9 +20,8 @@ const Component = ({ _ID, _relativeURL, pagetitle, header, sections, footer }) =
 		<script src={ _relativeURL( '/assets/js/header.js', _ID ) } />
 	</head>
 	<body className="au-grid mainmenu-is-closed">
+		{ header }
 		<div className="content-wrapper">
-			{ header }
-
 			<main className="main au-body container-fluid">
 				<div className="row">
 					<div className="grids col-md-12">
@@ -30,10 +29,8 @@ const Component = ({ _ID, _relativeURL, pagetitle, header, sections, footer }) =
 					</div>
 				</div>
 			</main>
+			{ footer }
 		</div>
-
-		{ footer }
-
 		<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
 	</body>
 	</html>

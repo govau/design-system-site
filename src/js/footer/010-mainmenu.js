@@ -1,7 +1,7 @@
-// Mobile menu
+var overlay        = document.getElementById( 'overlay' );
 var mainMenu       = document.getElementById( 'mainmenu' );
 var mainMenuToggle = document.getElementById( 'mainmenu-toggle' );
-var overlay        = document.getElementById( 'overlay' );
+
 
 // console.log(mainMenu)
 function OpenMenu() {

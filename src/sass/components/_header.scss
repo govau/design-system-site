@@ -1,12 +1,12 @@
 .header {
 	@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
-	position: relative;
-	z-index: 300;
 }
 
 // Remove padding bottom as we have a menu
 .au-header.au-header--dark {
 	padding-bottom: 0;
+	position: relative;
+	z-index: 300;
 }
 
 .header__logo {
