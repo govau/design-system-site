@@ -1,28 +1,20 @@
 ---
 layout: components/table
 title: In progress
+caption: A table of in progress components including their status, current version, and contributors.
 btntext: Community
 btnURL: /community
-btnIcon: icon--community
+btnIcon: community
 tableTH:
   - text: Title
   - text: Status
-    tightcol: true
+    className: component-table--minwidth
   - text: Version
-    tightcol: true
+    className: component-table--minwidth
   - text: Contributors
-    tightcol: true
+    className: component-table--minwidth
 components:
-  - title: MyComponentTitle
-    url: /MyComponentTitle2
-    status: XYZ
-    version: 0.1.2
-  - title: MyComponentTitle
-    url: /MyComponentTitle2
-    status: XYZ
-    version: 0.1.2
-  - title: MyComponentTitle
-    url: /MyComponentTitle2
-    status: XYZ
-    version: 0.1.2
+  - module: core
+  - module: buttons
+  - module: accordion
 ---

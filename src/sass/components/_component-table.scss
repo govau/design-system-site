@@ -1,0 +1,20 @@
+.component-table--minwidth {
+	// This just sets a small size for the table column
+	// the width of the content will then push it out.
+	width: 1em;
+}
+
+
+// .avatar_box {
+// 	// Give the avitar_box a 'solid' width so that it doesn't wrap avitars when in the TD
+// 	float: left;
+// 	white-space: nowrap;
+
+// 	.avatar {
+// 		@include AU-space( margin-right, 0.5unit );
+// 	}
+// }
+
+.component-table .au-responsive-table__caption {
+	@include AU-sronly();
+}

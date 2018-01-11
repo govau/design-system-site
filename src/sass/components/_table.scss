@@ -1,17 +1,9 @@
-
-
 // Table. Just a typical one.
 
 .au-table,
 .au-body table {
 	width: 100%;
 	border-collapse: collapse;
-
-	caption {
-		display: table-caption;
-		text-align: left;
-		@include AU-space( margin-bottom, 1unit );
-	}
 
 	th, td {
 		@include AU-space( padding, 1unit );
@@ -25,36 +17,19 @@
 	td {
 		border-bottom: solid 1px $AU-color-Background-darkest;
 	}
-
-	tr:nth-child(2n+3) { //odd rows but not the first
-		background: $AU-color-Background-dark;
-	}
 }
 
+.au-responsive-table__caption {
+	display: table-caption;
+	text-align: left;
+	@include AU-space( margin-bottom, 1unit );
+}
+
+.au-responsive-table__body:nth-child( even ) {
+	background: $AU-color-Background-dark;
+}
 
 .au-responsive-table {
-  overflow:auto;
+	overflow:auto;
 	@include AU-space( margin-top, 1unit );
-}
-
-
-.au-table-minwidth {
-	// This just sets a small size for the table column
-	// the width of the content will then push it out.
-	width: 1em;
-}
-
-
-.avatar_box {
-	// Give the avitar_box a 'solid' width so that it doesn't wrap avitars when in the TD
-	float: left;
-	white-space: nowrap;
-
-	.avatar {
-		@include AU-space( margin-right, 0.5unit );
-	}
-}
-
-.table__in-progress caption{
-	@include AU-sronly();
 }
