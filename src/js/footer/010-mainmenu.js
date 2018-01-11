@@ -1,32 +1,35 @@
 // Mobile menu
+var mainMenu       = document.getElementById( 'mainmenu' );
 var mainMenuToggle = document.getElementById( 'mainmenu-toggle' );
-var overlay = document.getElementById( 'overlay' );
+var overlay        = document.getElementById( 'overlay' );
 
-AddClass( mainMenuToggle, 'js-mainmenu-toggle' );
-AddClass( document.body, 'mainmenu-is-closed' );
-
-
+// console.log(mainMenu)
 function OpenMenu() {
-	mainMenuToggle.innerHTML = "Close menu";
+	mainMenuToggle.innerHTML = '<span>Close menu</span>';
 	RemoveClass( document.body, 'mainmenu-is-closed' );
 	AddClass( document.body, 'mainmenu-is-open' );
+	AU.accordion.Open( mainMenuToggle );
 }
+
 
 function CloseMenu() {
-	mainMenuToggle.innerHTML = "Open menu";
+	mainMenuToggle.innerHTML = '<span>Open menu</span>';
 	RemoveClass( document.body, 'mainmenu-is-open' );
 	AddClass( document.body, 'mainmenu-is-closed' );
+	AU.accordion.Close( mainMenuToggle );
 }
 
 
-mainMenuToggle.addEventListener( 'click', function() {
+mainMenuToggle.addEventListener( 'click', function( event ) {
+	event.preventDefault();
+
 	if( HasClass( document.body, 'mainmenu-is-closed' ) ) {
 		OpenMenu();
 	}
 	else {
 		CloseMenu();
 	}
-}, false);
+});
 
 
 overlay.addEventListener( 'click', function() {
