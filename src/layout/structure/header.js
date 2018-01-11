@@ -1,4 +1,4 @@
-import AUheader  from '../../_uikit/layout/header';
+import AUheader from '../../_uikit/layout/header';
 import React, { Fragment } from 'react';
 import MainMenu  from '../mainmenu';
 import PropTypes from 'prop-types';
