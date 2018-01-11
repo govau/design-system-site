@@ -40,15 +40,17 @@ $color-active: $AU-colordark-Text;
 		}
 	}
 
-	.mainmenu-is-closed & {
-		height: 0;
-		display: none;
-	}
-
 	@media screen and ( min-width: $nav_breakpoint ) {
 		@include AU-space( padding-top, 1unit );
 		border-bottom: 0;
 		position: static;
+
+		.js & {
+			&.au-accordion__body.au-accordion--closed {
+				height: auto;
+				display: block;
+			}
+		}
 
 		.au-link-list {
 			@include AU-space( margin-bottom, -0.5unit );

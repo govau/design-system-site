@@ -39,7 +39,7 @@ const Navigation = ({ _relativeURL, _ID, _pages }) => {
 	const linksRight = menu.links.right.map( link => CreateLink( link, true ) );
 
 	return (
-		<nav id="mainmenu" className="mainmenu au-body au-body--dark" aria-hidden="true" >
+		<nav id="mainmenu" className="mainmenu au-accordion__body au-accordion--closed au-body au-body--dark" aria-hidden="true" >
 			<div className="container-fluid">
 				<AUlinkList items={ linksLeft } inline />
 				<AUlinkList inline className="mainmenu--right" items={ linksRight } inline />
