@@ -1,4 +1,4 @@
 ---
-layout: home/component-footer
+layout: components/component-footer
 feedback: /_shared/feedback.md
 ---
