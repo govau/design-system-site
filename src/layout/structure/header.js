@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
  */
 const Header = ({ title, _relativeURL, _ID, _pages }) => (
 	<div className="header">
+		<div id="lockTop" class="lock"></div>
 		<AUheader dark>
 			<div className="container-fluid">
 				<div className="row">
@@ -47,6 +48,7 @@ const Header = ({ title, _relativeURL, _ID, _pages }) => (
 			</div>
 		</AUheader>
 		<MainMenu _relativeURL={ _relativeURL } _ID={ _ID } _pages={ _pages } />
+		<div id="lockBottom" class="lock"></div>
 	</div>
 );
 
