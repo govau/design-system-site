@@ -1,5 +1,4 @@
 ---
 layout: components/component-status
+module: buttons
 ---
-
-Test only
