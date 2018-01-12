@@ -1,9 +1,6 @@
-import { ParseYaml } from 'cuttlebelle/dist/parse.js';
 import AUlinkList from '../_uikit/layout/link-list';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
-import Path from 'path';
-import Fs from 'fs';
 
 
 /**
@@ -11,10 +8,7 @@ import Fs from 'fs';
  *
  * @disable-docs
  */
-const Navigation = ({ _relativeURL, _ID, _pages }) => {
-	// let’s get our main menu yaml file
-	const menuPath = Path.normalize(`${ __dirname }/../../content/_shared/mainmenu.yml`);
-	const menu = ParseYaml( Fs.readFileSync( menuPath, `utf8` ) );
+const Navigation = ({ id, navigation, _relativeURL, _ID, _pages }) => {
 
 	const CreateLink = ( link ) => {
 
@@ -36,12 +30,12 @@ const Navigation = ({ _relativeURL, _ID, _pages }) => {
 				}
 	};
 
-	const linksLeft = menu.links.left.map( link => CreateLink( link ) );
-	const linksRight = menu.links.right.map( link => CreateLink( link, true ) );
+	const linksLeft = navigation.left.map( link => CreateLink( link ) );
+	const linksRight = navigation.right.map( link => CreateLink( link, true ) );
 
 	return (
 		<Fragment>
-			<nav id="navigation" className="mainmenu au-accordion__body au-accordion--closed" aria-hidden="true" >
+			<nav id={ id } className="mainmenu au-accordion__body au-accordion--closed" aria-hidden="true" >
 				<div className="container-fluid">
 					<AUlinkList items={ linksLeft } inline />
 					<AUlinkList inline className="mainmenu--right" items={ linksRight } inline />
@@ -56,6 +50,7 @@ Navigation.propTypes = {
 	_relativeURL: PropTypes.func.isRequired,
 	_ID: PropTypes.string.isRequired,
 	_pages: PropTypes.object.isRequired,
+	id: PropTypes.string
 };
 
 Navigation.defaultProps = {};

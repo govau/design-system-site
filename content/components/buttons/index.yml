@@ -2,9 +2,11 @@
 pagetitle: Buttons overview
 layout: components/component
 header:
-  - header
+  - /_shared/header.md
+navigation:
+  - navigation.md
 sections:
   - 1.md
   - 2.md
 footer:
-  - footer
+  - /_shared/footer.md

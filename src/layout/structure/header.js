@@ -1,14 +1,14 @@
 import AUheader            from '../../_uikit/layout/header';
 import AUskipLink          from '../../_uikit/layout/skip-link';
 import React, { Fragment } from 'react';
-import MainMenu            from '../mainmenu';
+import Navigation          from '../navigation';
 import PropTypes           from 'prop-types';
 
 
 /**
  * The header component
  */
-const Header = ({ title, _relativeURL, _ID, _pages }) => (
+const Header = ({ title, mainmenu, _relativeURL, _ID, _pages }) => (
 	<Fragment>
 		<AUskipLink links={[
 			{
@@ -59,7 +59,7 @@ const Header = ({ title, _relativeURL, _ID, _pages }) => (
 					</div>
 				</div>
 			</AUheader>
-			<MainMenu _relativeURL={ _relativeURL } _ID={ _ID } _pages={ _pages } />
+			<Navigation id="navigation" navigation={ mainmenu } _relativeURL={ _relativeURL } _ID={ _ID } _pages={ _pages } />
 			<div id="focustrap-bottom"></div>
 		</div>
 		</Fragment>
