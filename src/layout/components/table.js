@@ -39,7 +39,7 @@ const ComponentTable = ({ title, caption, btntext, btnURL, btnIcon, tableTH, com
 
 			<p>
 				<AUbutton href={ btnURL } className={`icon icon--${ btnIcon } icon--dark`}>
-					<span>{ btntext }</span>
+					{ btntext }
 				</AUbutton>
 			</p>
 

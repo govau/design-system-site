@@ -1,5 +1,14 @@
 .header {
 	@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
+
+	a {
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+			text-decoration-skip: ink;
+		}
+	}
 }
 
 // Remove padding bottom as we have a menu
@@ -11,27 +20,22 @@
 
 .header__logo {
 	@include AU-clearfix();
-	@include AU-space( margin-bottom, 1unit );
 }
 
 .header__logo--coa {
 	display: block;
-	@include AU-space( max-width, 6unit );
+
+	.au-body & {
+		@include AU-space( max-width, 6unit );
+	}
 }
 
 .header__logo--gold {
+	@include AU-space( margin-top, 1unit );
 	@include AU-clearfix;
 	display: block;
 	float: left;
-	text-decoration: none;
-	color: $AU-colordark-Text;
-
 	@include AU-focus( 'dark' );
-
-	&:hover {
-		text-decoration: underline;
-		text-decoration-skip: ink;
-	}
 }
 
 .header__logo--gold svg {
@@ -45,14 +49,19 @@
 }
 
 .header__logo--gold__title {
-	@include AU-space( margin-top, 0.25unit );
-	@include AU-space( margin-left, 3.25unit );
 	@include AU-space( max-width, 13unit );
 	text-align: left;
+
+	.au-body & {
+		color: $AU-colordark-Text;
+		@include AU-space( margin-top, 0.25unit );
+		@include AU-space( margin-left, 3.25unit );
+	}
 }
 
 
 @include AU-media( xs ) {
+
 	.header__logo--coa {
 		float: left;
 		margin: 0;
@@ -60,6 +69,7 @@
 	}
 
 	.header__logo--gold {
+		margin-top: 0;
 		@include AU-space( margin-left, 7unit );
 	}
 
@@ -71,15 +81,12 @@
 	}
 
 	.header__logo--gold__title {
-		@include AU-fontgrid( lg, heading );
-		@include AU-space( margin-top, 0.5unit );
-		@include AU-space( margin-left, 5unit );
 		@include AU-space( max-width, 15unit );
-	}
-}
 
-@media screen and ( min-width: $nav_breakpoint ) {
-	.header__logo {
-		margin-bottom: 0;
+		.au-body & {
+			@include AU-fontgrid( lg, heading );
+			@include AU-space( margin-top, 0.5unit );
+			@include AU-space( margin-left, 5unit );
+		}
 	}
 }

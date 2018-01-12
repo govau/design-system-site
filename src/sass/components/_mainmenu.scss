@@ -7,9 +7,17 @@ $color-active: $AU-colordark-Text;
 	width: 100%;
 	z-index: 200;
 
+	.container-fluid {
+		background: $AU-colordark-Background-light;
+	}
+
 	.au-link-list {
 		display: block;
 		padding: 0;
+	}
+
+	.au-body {
+		@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
 	}
 
 	a {
@@ -40,9 +48,14 @@ $color-active: $AU-colordark-Text;
 	}
 
 	@media screen and ( min-width: $nav_breakpoint ) {
-		@include AU-space( padding-top, 1unit );
+		@include AU-space( margin-bottom, -0.5unit );
+		@include AU-space( padding-top, 2unit );
 		border-bottom: 0;
 		position: static;
+
+		.container-fluid {
+			background: transparent;
+		}
 
 		.js & {
 			&.au-accordion__body.au-accordion--closed {
@@ -52,7 +65,6 @@ $color-active: $AU-colordark-Text;
 		}
 
 		.au-link-list {
-			@include AU-space( margin-bottom, -0.5unit );
 			float: left;
 
 			&.mainmenu--right {
@@ -73,15 +85,17 @@ $color-active: $AU-colordark-Text;
 }
 
 
-.mainmenu-toggle {
+.mainmenu-toggle.au-btn.au-btn--tertiary {
 	@include AU-fontgrid( sm );
 	@include AU-space( padding, 0.5unit 0 );
 	@include AU-space( margin-top, 1unit );
 	color: $AU-colordark-Action;
 	text-decoration: none;
-	display: block;
 
-	@include AU-focus( 'dark' );
+	// button overrides
+	background-color: transparent;
+	border: none;
+	text-align: left;
 
 	&:hover {
 		color: $AU-colordark-Text;
@@ -93,46 +107,61 @@ $color-active: $AU-colordark-Text;
 		display: none;
 	}
 
-	.mainmenu-is-open & {
-		span:before {
-			background-image: AU-svguri('<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#{ $AU-colordark-Action }">' +
-				'<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>' +
-				'<path d="M0 0h24v24H0z" fill="none"/>' +
-			'</svg>');
-		}
-
-		&:hover span:before {
-			background-image: AU-svguri('<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#{ $AU-colordark-Text }">' +
-				'<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>' +
-				'<path d="M0 0h24v24H0z" fill="none"/>' +
-			'</svg>');
-		}
-	}
-
-	.mainmenu-is-closed & {
-		span:before {
-			background-image: AU-svguri('<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#{ $AU-colordark-Action }">' +
-				'<path d="M0 0h24v24H0z" fill="none"/>' +
-				'<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>' +
-			'</svg>');
-		}
-
-		&:hover span:before {
-			background-image: AU-svguri('<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#{ $AU-colordark-Text }">' +
-				'<path d="M0 0h24v24H0z" fill="none"/>' +
-				'<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>' +
-			'</svg>');
-		}
-	}
-
 	@media screen and ( min-width: $nav_breakpoint ) {
 		display: none;
+	}
+
+	&:before {
+		background-image: AU-svguri('<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#{ $AU-colordark-Action }">' +
+			'<path d="M0 0h24v24H0z" fill="none"/>' +
+			'<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>' +
+		'</svg>');
+	}
+
+	&:hover:before {
+		background-image: AU-svguri('<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#{ $AU-colordark-Text }">' +
+			'<path d="M0 0h24v24H0z" fill="none"/>' +
+			'<path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>' +
+		'</svg>');
+	}
+
+
+	&.au-accordion--open {
+		&:before {
+			background-image: AU-svguri('<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#{ $AU-colordark-Action }">' +
+				'<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>' +
+				'<path d="M0 0h24v24H0z" fill="none"/>' +
+			'</svg>');
+		}
+
+		&:hover:before {
+			background-image: AU-svguri('<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#{ $AU-colordark-Text }">' +
+				'<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>' +
+				'<path d="M0 0h24v24H0z" fill="none"/>' +
+			'</svg>');
+		}
 	}
 }
 
 
-// Overlay
-.mainmenu-is-open {
+// Overlay styles
+.overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: $AU-colordark-Background-darkest;
+	background: rgba( 29, 29, 29, 0.9 );
+	content: " ";
+	z-index: 50;
+	cursor: pointer;
+	display: none;
+}
+
+
+// When the overlay is open, lock scrolling
+.overlay--open {
 	height: 100%;
 
 	.content-wrapper {
@@ -143,21 +172,20 @@ $color-active: $AU-colordark-Text;
 		overflow: auto;
 	}
 
+	// Show the overlay
 	.overlay {
-		position: fixed;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		background: $AU-colordark-Background-darkest;
-		background: rgba( 29, 29, 29, 0.9 );
-		content: " ";
-		z-index: 50;
-		cursor: pointer;
+		display: block;
+	}
 
-		@media screen and ( min-width: $nav_breakpoint ) {
+	// Reset the lock when the nav is closed
+	@media screen and ( min-width: $nav_breakpoint ) {
+		.header,
+		.content-wrapper {
+			overflow: visible;
+		}
+
+		.overlay {
 			display: none;
 		}
 	}
 }
-

@@ -19,10 +19,10 @@ const Component = ({ _ID, _relativeURL, pagetitle, header, sections, footer }) =
 
 		<script src={ _relativeURL( '/assets/js/header.js', _ID ) } />
 	</head>
-	<body className="au-grid mainmenu-is-closed">
+	<body className="au-grid">
 		{ header }
 		<div className="content-wrapper">
-			<main className="main au-body container-fluid">
+			<main id="content" className="main au-body container-fluid">
 				<div className="row">
 					<div className="grids col-md-12">
 						{ sections }

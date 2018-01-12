@@ -18,20 +18,21 @@ const Navigation = ({ _relativeURL, _ID, _pages }) => {
 
 	const CreateLink = ( link ) => {
 
-		const linkClasses = `${ link.text == 'Github' ? ' icon icon--dark icon--github--action' : '' }` +
-			`${ link.text == 'Download' ? ' icon icon--dark icon--download--action' : '' }`;
+		const linkClasses = `${ link.text == 'Github' ? 'icon icon--dark icon--github icon--action' : '' }` +
+			`${ link.text == 'Download' ? 'icon icon--dark icon--download icon--action' : '' }`;
 
 		return _pages[ _ID ]._url === link.link ||
 			_pages[ _ID ]._url.startsWith( link.link ) && _pages[ _ID ]._url.split('/').length > link.link.split('/').length
 			? {
 					text: link.text,
 					link: link.link,
-					className: `mainmenu--active` + linkClasses
+					className: `mainmenu--active`,
+					// linkClass: linkClasses || ''
 				}
 			: {
 					text: link.text,
 					link: _relativeURL( link.link, _ID ),
-					className: linkClasses
+					// linkClass: linkClasses || ''
 				}
 	};
 
@@ -40,7 +41,7 @@ const Navigation = ({ _relativeURL, _ID, _pages }) => {
 
 	return (
 		<Fragment>
-			<nav id="mainmenu" className="mainmenu au-accordion__body au-accordion--closed au-body au-body--dark" aria-hidden="true" >
+			<nav id="navigation" className="mainmenu au-accordion__body au-accordion--closed" aria-hidden="true" >
 				<div className="container-fluid">
 					<AUlinkList items={ linksLeft } inline />
 					<AUlinkList inline className="mainmenu--right" items={ linksRight } inline />

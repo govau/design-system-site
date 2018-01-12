@@ -1,52 +1,28 @@
-// Lock the navigation inside the menu when it's open
-var lockTop       = document.getElementById( 'lockTop' );
-var lockBottom    = document.getElementById( 'lockBottom' );
-var mainMenuLinks = document.querySelectorAll( '.header a' );
+// Focus trap the navigation inside the menu when it's open
+var mainMenuToggle  = document.getElementById( 'mainmenu-toggle' );
+var overlay         = document.getElementById( 'overlay' );
 
 
-// Check for loss of focus on the last link in the menu
-lockTop.addEventListener( 'focus', function( event ) {
-	event.preventDefault();
-	mainMenuLinks[ mainMenuLinks.length - 1 ].focus();
-});
-
-lockBottom.addEventListener( 'focus', function( event ) {
-	event.preventDefault();
-	mainMenuLinks[ 0 ].focus();
-});
+var focusTrapTop    = document.getElementById( 'focustrap-top' );
+var focusTrapBottom = document.getElementById( 'focustrap-bottom' );
+var mainMenuLinks   = document.querySelectorAll( '.header a' );
 
 
-// The menu and the link to toggle the menu
-var mainMenu       = document.getElementById( 'mainmenu' );
-var mainMenuToggle = document.getElementById( 'mainmenu-toggle' );
-
-
-// Open and close the menu
 function ToggleMenu() {
-
-	AU.accordion.Toggle( mainMenuToggle, undefined,  {
-		afterOpen: function() {
-			return;
+	AU.accordion.Toggle( mainMenuToggle, undefined, {
+		onOpen: function() {
+			mainMenuToggle.innerHTML = 'Close menu';         // Change the text in the toggle
+			focusTrapTop.setAttribute( "tabindex", 0 );      // Enable the focus trap
+			focusTrapBottom.setAttribute( "tabindex", 0 );
+			AddClass( document.body, 'overlay--open' );      // Stop scrolling when overlay is open
 		},
-		afterClose: function() {
-			mainmenu.removeAttribute( "style" );
+		onClose: function() {
+			mainMenuToggle.innerHTML = 'Open menu';
+			focusTrapTop.removeAttribute( "tabindex" );
+			focusTrapBottom.removeAttribute( "tabindex" );
+			RemoveClass( document.body, 'overlay--open' );
 		},
 	});
-
-	if( HasClass( document.body, 'mainmenu-is-closed' ) ) {
-		mainMenuToggle.innerHTML = '<span>Close menu</span>';
-		RemoveClass( document.body, 'mainmenu-is-closed' );
-		AddClass( document.body, 'mainmenu-is-open' );
-		lockTop.setAttribute( "tabindex", 0 );
-		lockBottom.setAttribute( "tabindex", 0 );
-	}
-	else {
-		mainMenuToggle.innerHTML = '<span>Open menu</span>';
-		RemoveClass( document.body, 'mainmenu-is-open' );
-		AddClass( document.body, 'mainmenu-is-closed' );
-		lockTop.removeAttribute( "tabindex" );
-		lockBottom.removeAttribute( "tabindex" );
-	}
 }
 
 
@@ -58,8 +34,19 @@ mainMenuToggle.addEventListener( 'click', function( event ) {
 
 
 // Close the menu if the overlay is clicked
-var overlay = document.getElementById( 'overlay' );
 overlay.addEventListener( 'click', function( event ) {
 	event.preventDefault();
 	ToggleMenu();
+});
+
+
+// Move the focus to the correct item when it lands on a trap
+focusTrapTop.addEventListener( 'focus', function( event ) {
+	event.preventDefault();
+	mainMenuLinks[ mainMenuLinks.length - 1 ].focus();
+});
+
+focusTrapBottom.addEventListener( 'focus', function( event ) {
+	event.preventDefault();
+	mainMenuLinks[ 0 ].focus();
 });

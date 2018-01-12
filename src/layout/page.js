@@ -27,10 +27,10 @@ const Page = ({ _ID, _relativeURL, pagetitle, header, main, footer }) => {
 	return (
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }} />
-		<body className="au-grid mainmenu-is-closed">
+		<body className="au-grid">
 			{ header }
 			<div className="content-wrapper">
-				<main className="main au-body container-fluid">
+				<main id="content" className="main au-body container-fluid">
 					<div className="row">
 						<div className="grids col-md-12">
 							{ main }
