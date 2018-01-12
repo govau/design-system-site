@@ -1,23 +1,5 @@
 ---
 layout: structure/header
 title: Government Open Language for Design
-mainmenu:
-  left:
-    - text: About
-      link: /
-    - text: Getting started
-      link: /get-started
-    - text: Components
-      link: /components
-    - text: Templates
-      link: /templates
-    - text: Community
-      link: /community
-    - text: Support
-      link: /support
-  right:
-    - text: Github
-      link: https://github.com/govau/uikit/
-    - text: Download
-      link: /furnace
+mainmenu: /_shared/mainmenu.md
 ---

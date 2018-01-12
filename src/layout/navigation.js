@@ -8,7 +8,7 @@ import React, { Fragment } from 'react';
  *
  * @disable-docs
  */
-const Navigation = ({ id, navigation, _relativeURL, _ID, _pages }) => {
+const Navigation = ({ navigation, _relativeURL, _ID, _pages }) => {
 
 	const CreateLink = ( link ) => {
 
@@ -35,13 +35,12 @@ const Navigation = ({ id, navigation, _relativeURL, _ID, _pages }) => {
 
 	return (
 		<Fragment>
-			<nav id={ id } className="mainmenu au-accordion__body au-accordion--closed" aria-hidden="true" >
+			<nav id={ navigation.id } className={ `${ navigation.className ? navigation.className + " " : "" }navigation` } aria-hidden="true" >
 				<div className="container-fluid">
 					<AUlinkList items={ linksLeft } inline />
 					<AUlinkList inline className="mainmenu--right" items={ linksRight } inline />
 				</div>
 			</nav>
-			<div id="overlay" className="overlay"></div>
 		</Fragment>
 	);
 };
