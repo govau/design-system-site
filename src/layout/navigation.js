@@ -13,7 +13,8 @@ const Navigation = ({ navigation, _relativeURL, _ID, _pages }) => {
 	const CreateLink = ( link ) => {
 
 		const linkClasses = `${ link.text == 'Github' ? 'icon icon--dark icon--github icon--action' : '' }` +
-			`${ link.text == 'Download' ? 'icon icon--dark icon--download icon--action' : '' }`;
+			`${ link.text == 'Download' ? 'icon icon--dark icon--download icon--action' : '' }` +
+			`${ link.text == 'Live demo' ? 'icon icon--demo icon--action' : '' }`;
 
 		return _pages[ _ID ]._url === link.link ||
 			_pages[ _ID ]._url.startsWith( link.link ) && _pages[ _ID ]._url.split('/').length > link.link.split('/').length
@@ -35,11 +36,9 @@ const Navigation = ({ navigation, _relativeURL, _ID, _pages }) => {
 
 	return (
 		<Fragment>
-			<nav id={ navigation.id } className={ `${ navigation.className ? navigation.className + " " : "" }navigation` } aria-hidden="true" >
-				<div className="container-fluid">
-					<AUlinkList items={ linksLeft } inline />
-					<AUlinkList inline className="mainmenu--right" items={ linksRight } inline />
-				</div>
+			<nav className={ `navigation ${ navigation.dark ? 'navigation--dark ' : '' }` }>
+				<AUlinkList items={ linksLeft } inline />
+				<AUlinkList inline className="mainmenu--right" items={ linksRight } inline />
 			</nav>
 		</Fragment>
 	);

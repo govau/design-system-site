@@ -1,8 +1,7 @@
 ---
 layout: navigation
 navigation:
-  id: navigation
-  className: mainmenu
+  dark: true
   left:
     - text: About
       link: /

@@ -58,7 +58,15 @@ const Header = ({ title, mainmenu, _relativeURL, _ID, _pages }) => (
 					</div>
 				</div>
 			</AUheader>
-			{ mainmenu }
+			<div id="mainmenu" className="mainmenu au-body au-body--dark" aria-hidden="true" >
+				<div className="container-fluid">
+					<div className="row">
+						<div className="col-md-12">
+							{ mainmenu }
+						</div>
+					</div>
+				</div>
+			</div>
 			<div id="overlay" className="overlay"></div>
 			<div id="focustrap-bottom"></div>
 		</div>

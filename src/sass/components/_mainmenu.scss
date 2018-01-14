@@ -1,88 +1,26 @@
-$color-active: $AU-colordark-Text;
-
 .mainmenu {
-	@include AU-clearfix();
 	@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
+	@include AU-clearfix();
 	position: absolute;
 	width: 100%;
 	z-index: 200;
 
-	.container-fluid {
-		background: $AU-colordark-Background-light;
-	}
+	.navigation.navigation--dark {
 
-	.au-link-list {
-		display: block;
-		padding: 0;
-	}
+		@media screen and ( min-width: $nav_breakpoint ) {
+			position: static;
+			border-bottom: 0;
 
-	.au-body {
-		@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
-	}
-
-	a {
-		@include AU-fontgrid( sm );
-		@include AU-space( padding, 0.5unit 0 );
-		display: block;
-		text-decoration: none;
-
-		&:hover {
-			text-decoration: underline;
-			text-decoration-skip: ink;
-		}
-	}
-
-	.au-link-list > li {
-		display: block;
-		margin: 0;
-		border-top: 1px solid $AU-color-Border;
-
-		&.mainmenu--active > a {
-			color: $color-active;
-			border-color: $color-active;
-
-			&:hover {
-				text-decoration: none;
-			}
-		}
-	}
-
-	@media screen and ( min-width: $nav_breakpoint ) {
-		@include AU-space( margin-bottom, -0.5unit );
-		@include AU-space( padding-top, 2unit );
-		border-bottom: 0;
-		position: static;
-
-		.container-fluid {
-			background: transparent;
-		}
-
-		.js & {
-			&.au-accordion__body.au-accordion--closed {
-				height: auto;
-				display: block;
-			}
-		}
-
-		.au-link-list {
-			float: left;
-
-			&.mainmenu--right {
-				float: right;
-			}
-
-			& > li {
-				display: inline-block;
-				border-top: 0;
-
-				& > a {
-					@include AU-space( padding, 1unit 1unit );
-					@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
+			.js & {
+				&.au-accordion__body.au-accordion--closed {
+					height: auto;
+					display: block;
 				}
 			}
 		}
 	}
 }
+
 
 
 .mainmenu-toggle.au-btn.au-btn--tertiary {
@@ -142,7 +80,6 @@ $color-active: $AU-colordark-Text;
 		}
 	}
 }
-
 
 // Overlay styles
 .overlay {
