@@ -47,10 +47,33 @@ const Navigation = ({ navigation, _relativeURL, _ID, _pages }) => {
 };
 
 Navigation.propTypes = {
-	_relativeURL: PropTypes.func.isRequired,
-	_ID: PropTypes.string.isRequired,
-	_pages: PropTypes.object.isRequired,
-	id: PropTypes.string
+	/**
+	 * navigation:
+	 *  dark: true
+	 *  left:
+	 *   - text: Privacy policy
+	 *     link: /
+	 *   - text: Need help?
+	 *     link: /
+	 *  right:
+   *   - text: Github
+   *     link: https://github.com/govau/uikit/
+   *   - text: Download
+   *     link: /furnace
+	 */
+	navigation: PropTypes.arrayOf(
+		PropTypes.shape({
+			dark: PropTypes.boolean,
+			left: PropTypes.shape({
+				text: PropTypes.string.isRequired,
+				link: PropTypes.string.isRequired,
+			}),
+			right: PropTypes.shape({
+				text: PropTypes.string.isRequired,
+				link: PropTypes.string.isRequired,
+			}),
+		})
+	).isRequired,
 };
 
 Navigation.defaultProps = {};
