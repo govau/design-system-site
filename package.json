@@ -103,7 +103,8 @@
 		"js": {
 			"modules": false,
 			"location": "src/js/footer/_uikit/",
-			"name": "uikit.js"
+			"name": "uikit.js",
+			"minified": false
 		},
 		"react": {
 			"location": "src/_uikit/layout/"
