@@ -7,6 +7,7 @@
 
 	// No javascript menu styles
 	.no-js & {
+		@include AU-space( margin-top, 1unit ); // Add margin top because the toggle is display: none
 		position: static;
 
 		&.au-accordion__body.au-accordion--closed {
@@ -22,9 +23,14 @@
 	// Reset the mobile menu being closed
 	@media screen and ( min-width: $nav_breakpoint ) {
 		position: static;
+		overflow: visible;
 
 		.navigation {
 			border-bottom: 0;
+		}
+
+		.no-js & {
+			margin-top: 0;
 		}
 
 		.js & {
@@ -37,7 +43,7 @@
 }
 
 
-
+// Toggle styles
 .mainmenu-toggle.au-btn.au-btn--tertiary {
 	@include AU-fontgrid( sm );
 	@include AU-space( padding, 0.5unit 0 );
