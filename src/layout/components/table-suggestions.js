@@ -16,12 +16,6 @@ const ComponentTable = ({ title, caption, btntext, btnURL, btnIcon, tableTH, com
 				{
 					text: `tbg`,
 				},
-				{
-					text: `tbg`,
-				},
-				{
-					text: `tbg`,
-				},
 			];
 		}
 	);

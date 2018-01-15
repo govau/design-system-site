@@ -6,7 +6,8 @@ header:
 sections:
   - here we sort after nav.md and show all sorts of cool things
   - /_shared/component-status.md
-  - /_shared/table.md
+  - /_shared/table-in-progress.md
+  - /_shared/table-suggestions.md
   - /_shared/component-footer.md
 footer:
   - footer
