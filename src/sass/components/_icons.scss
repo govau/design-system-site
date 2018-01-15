@@ -8,6 +8,10 @@
 	content: " ";
 	background-repeat: no-repeat;
 	margin-top: -2px;
+
+	.lt-ie9 & {
+		display: none;
+	}
 }
 
 .icon:before {
