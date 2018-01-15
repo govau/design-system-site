@@ -24,6 +24,7 @@
 	@media screen and ( min-width: $nav_breakpoint ) {
 		position: static;
 		overflow: visible;
+		border-bottom: 0;
 
 		.navigation {
 			border-bottom: 0;
