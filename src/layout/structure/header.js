@@ -58,7 +58,7 @@ const Header = ({ title, mainmenu, _relativeURL, _ID, _pages }) => (
 					</div>
 				</div>
 			</AUheader>
-			<div id="mainmenu" className="mainmenu au-body au-body--dark" aria-hidden="true">
+			<div id="mainmenu" className="mainmenu au-body au-body--dark au-accordion__body au-accordion--closed" aria-hidden="true">
 				<div className="container-fluid">
 					<div className="row">
 						<div className="col-md-12">
