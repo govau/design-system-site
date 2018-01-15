@@ -19,33 +19,30 @@ const Header = ({ title, mainmenu, _relativeURL, _ID, _pages }) => (
 				text: 'Skip to content',
 			},
 		]} />
-		<div className="header au-body au-body--dark">
+		<div className="header">
 			<div id="focustrap-top"></div>
 			<AUheader dark>
 				<div className="container-fluid">
 					<div className="row">
 						<div className="col-md-12">
 
-							<div className="header__logo">
+							<a href={ _relativeURL( '/', _ID ) } className="header__logo">
+								<img className="header__logo--coa" src={ _relativeURL( '/assets/img/coa.png', _ID ) } alt="The Australian Government coat of Arms"/>
 
-								<a href={ _relativeURL( '/', _ID ) } className="header__logo--gold">
-									<img className="header__logo--coa" src={ _relativeURL( '/assets/img/coa.png', _ID ) } alt="The Australian Government coat of Arms"/>
+								<svg role="img" title="GOLD">
+									<title>The Government Open Language for Design logo</title>
+									<defs>
+										<linearGradient id="GOLD-gradient" x1="100%" x2="0%" y1="0%" y2="100%">
+											<stop offset="0%" stopColor="#FFE9B2" stopOpacity="1"/>
+											<stop offset="100%" stopColor="#BD952D"/>
+										</linearGradient>
+									</defs>
 
-									<svg role="img" title="GOLD">
-										<title>The Government Open Language for Design logo</title>
-										<defs>
-											<linearGradient id="GOLD-gradient" x1="100%" x2="0%" y1="0%" y2="100%">
-												<stop offset="0%" stopColor="#FFE9B2" stopOpacity="1"/>
-												<stop offset="100%" stopColor="#BD952D"/>
-											</linearGradient>
-										</defs>
+									<use xlinkHref={ _relativeURL( '/assets/svg/map.svg#gold', _ID ) }/>
+								</svg>
 
-										<use xlinkHref={ _relativeURL( '/assets/svg/map.svg#gold', _ID ) }/>
-									</svg>
-
-									<h1 className="header__logo--gold__title au-display-md">{ title }</h1>
-								</a>
-							</div>
+								<h1 className="header__title au-display-md">{ title }</h1>
+							</a>
 
 							<button id="mainmenu-toggle"
 								className="mainmenu-toggle au-btn au-btn--tertiary au-btn--dark au-btn--block icon js-au-accordion au-accordion--closed"
