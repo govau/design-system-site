@@ -21,13 +21,15 @@ const Navigation = ({ navigation, _relativeURL, _ID, _pages }) => {
 			? {
 					text: link.text,
 					link: link.link,
-					className: `mainmenu--active`,
-					// linkClass: linkClasses || ''
+					className: linkClasses || '',
+					li: {
+						className: `mainmenu--active`,
+					}
 				}
 			: {
 					text: link.text,
 					link: _relativeURL( link.link, _ID ),
-					// linkClass: linkClasses || ''
+					className: linkClasses || ''
 				}
 	};
 

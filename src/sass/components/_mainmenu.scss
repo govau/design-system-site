@@ -5,17 +5,32 @@
 	width: 100%;
 	z-index: 200;
 
-	.navigation.navigation--dark {
+	// No javascript menu styles
+	.no-js & {
+		position: static;
 
-		@media screen and ( min-width: $nav_breakpoint ) {
-			position: static;
+		&.au-accordion__body.au-accordion--closed {
+			display: block;
+			height: auto;
+		}
+	}
+
+	&.au-accordion__body.au-accordion--closed {
+		display: block;
+	}
+
+	// Reset the mobile menu being closed
+	@media screen and ( min-width: $nav_breakpoint ) {
+		position: static;
+
+		.navigation {
 			border-bottom: 0;
+		}
 
-			.js & {
-				&.au-accordion__body.au-accordion--closed {
-					height: auto;
-					display: block;
-				}
+		.js & {
+			&.au-accordion__body.au-accordion--closed {
+				display: block;
+				height: auto;
 			}
 		}
 	}
@@ -81,48 +96,3 @@
 	}
 }
 
-// Overlay styles
-.overlay {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: $AU-colordark-Background-darkest;
-	background: rgba( 29, 29, 29, 0.9 );
-	content: " ";
-	z-index: 50;
-	cursor: pointer;
-	display: none;
-}
-
-
-// When the overlay is open, lock scrolling
-.overlay--open {
-	height: 100%;
-
-	.content-wrapper {
-		overflow:hidden;
-	}
-
-	.header {
-		overflow: auto;
-	}
-
-	// Show the overlay
-	.overlay {
-		display: block;
-	}
-
-	// Reset the lock when the nav is closed
-	@media screen and ( min-width: $nav_breakpoint ) {
-		.header,
-		.content-wrapper {
-			overflow: visible;
-		}
-
-		.overlay {
-			display: none;
-		}
-	}
-}

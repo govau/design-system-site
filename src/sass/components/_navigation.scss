@@ -81,10 +81,10 @@
 		}
 
 		&.navigation--dark {
-			@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
+			border-color: $AU-colordark-Action;
 
 			.au-link-list > li > a {
-				@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
+				border-color: $AU-colordark-Action;
 			}
 		}
 	}

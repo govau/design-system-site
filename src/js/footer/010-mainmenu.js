@@ -41,7 +41,6 @@ window.addEventListener( 'load', function() {
 	// Close the menu if the overlay is clicked
 	overlay.addEventListener( 'click', function( event ) {
 		event.preventDefault();
-		console.log( 'close dammit' );
 		ToggleMenu();
 	});
 
