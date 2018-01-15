@@ -45,6 +45,7 @@
 	}
 
 	.header__logo--gold__title {
+		float: left;
 		@include AU-space( margin-top, 0.25unit );
 		@include AU-space( margin-left, 3.25unit );
 		@include AU-space( max-width, 13unit );
@@ -57,16 +58,14 @@
 		.header__logo--coa {
 			float: left;
 			margin: 0;
-			@include AU-space( margin-right, -6unit );
+			@include AU-space( margin-right, 1unit );
 		}
 
 		.header__logo--gold {
 			margin-top: 0;
-			@include AU-space( margin-left, 7unit );
 
 			svg {
 				@include AU-space( max-width, 4unit );
-				@include AU-space( margin-right, -4unit );
 				@include AU-space( width, 4unit );   // IE11 needs height and width
 				@include AU-space( height, 5unit );  // ^^^
 			}
