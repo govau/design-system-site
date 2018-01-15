@@ -2,7 +2,8 @@
 .overlay {
 	position: fixed;
 	top: 0;
-	width: 100%;
+	left: 0;
+	right: 0;
 	height: 0;
 	transition: background-color 0.5s ease-in-out;
 	background-color: $AU-colordark-Background-darkest;
