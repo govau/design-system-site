@@ -47,9 +47,8 @@ const Header = ({ title, mainmenu, _relativeURL, _ID, _pages }) => (
 								</a>
 							</div>
 
-							<button
-								id="mainmenu-toggle"
-								className="icon au-btn au-btn--tertiary au-btn--dark au-btn--block mainmenu-toggle js-au-accordion"
+							<button id="mainmenu-toggle"
+								className="icon au-btn au-btn--tertiary au-btn--dark au-btn--block mainmenu-toggle js-au-accordion au-accordion--closed"
 								aria-controls="mainmenu"
 								aria-expanded="false"
 								aria-selected="false"
@@ -58,7 +57,10 @@ const Header = ({ title, mainmenu, _relativeURL, _ID, _pages }) => (
 					</div>
 				</div>
 			</AUheader>
-			<div id="mainmenu" className="mainmenu au-body au-body--dark au-accordion__body au-accordion--closed" aria-hidden="true">
+			<div
+				aria-hidden="true"
+				id="mainmenu"
+				className="mainmenu au-body au-body--dark au-accordion__body au-accordion--closed">
 				<div className="container-fluid">
 					<div className="row">
 						<div className="col-md-12">
