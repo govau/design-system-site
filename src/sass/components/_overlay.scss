@@ -3,14 +3,15 @@
 	position: fixed;
 	top: 0;
 	right: 0;
-	bottom: 0;
 	left: 0;
-	background: $AU-colordark-Background-darkest;
-	background: rgba( 29, 29, 29, 0.9 );
+	bottom: 0;
+	transition: background-color 0.15s ease-in-out;
+	background-color: $AU-colordark-Background-darkest;
+	background-color: rgba( 29, 29, 29, 0 );
 	content: " ";
 	z-index: 50;
 	cursor: pointer;
-	display: none;
+	height: 0;
 }
 
 
@@ -29,6 +30,9 @@
 	// Show the overlay
 	.overlay {
 		display: block;
+		height: auto;
+		bottom: 0;
+		background-color: rgba( 29, 29, 29, 0.9 );
 	}
 
 	// Reset the lock when the nav is closed
