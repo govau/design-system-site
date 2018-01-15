@@ -2,16 +2,14 @@
 .overlay {
 	position: fixed;
 	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
-	transition: background-color 0.15s ease-in-out;
+	width: 100%;
+	height: 0;
+	transition: background-color 0.5s ease-in-out;
 	background-color: $AU-colordark-Background-darkest;
 	background-color: rgba( 29, 29, 29, 0 );
 	content: " ";
 	z-index: 50;
 	cursor: pointer;
-	height: 0;
 }
 
 
@@ -30,8 +28,7 @@
 	// Show the overlay
 	.overlay {
 		display: block;
-		height: auto;
-		bottom: 0;
+		height: 100%;
 		background-color: rgba( 29, 29, 29, 0.9 );
 	}
 
