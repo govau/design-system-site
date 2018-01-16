@@ -16,7 +16,7 @@ const ComponentStatus = ({ module, _ID, _relativeURL }) => (
 			<dt>Changelog</dt>
 			<dd><a href={`https://github.com/govau/uikit/blob/master/packages/${ module }/CHANGELOG.md`}>v0.5.0</a></dd>
 
-			<dt>Installd</dt>
+			<dt>Installed</dt>
 			<dd><a href="https://www.npmjs.com/package/@gov.au/buttons">{`npm i @gov.au/${ module }`}</a></dd>
 
 			<dt>Tags</dt>
