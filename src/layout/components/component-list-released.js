@@ -9,15 +9,15 @@ const componentListReleased = ({ components, _body }) => (
 	<div className="componentListReleased">
 		{ _body }
 
-		<ul className="row">
+		<ul className="row au-card__list">
 			{
 				components.map( ( components, i ) => (
-					<li key={ i } className="col-xs-6 col-sm-3">
+					<li key={ i } className="col-xs-6 col-sm-3 au-card__container">
 							<a href="{ components.url }" className="au-card">
 								<img src={ components.img } alt="" className="au-responsive-media-img"/>
-								<div className="">
-									<h3>{ components.module }</h3>
-									{ components.ver }
+								<div className="au-card__spacer">
+									<h3 className="au-card__psudo-link">{ components.module }</h3>
+									<div className="ver">{ components.ver }</div>
 								</div>
 							</a>
 					</li>

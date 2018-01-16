@@ -4,51 +4,51 @@ components:
   - module: Core
     url:  /components/core
     ver:  v0.5.0
-    img: http://via.placeholder.com/300x300
+    img: http://via.placeholder.com/300x300/f5f5f5/636363
   - module: Body
     url:  /components/body
     ver:  v0.5.0
-    img: http://via.placeholder.com/300x300
+    img: http://via.placeholder.com/300x300/f5f5f5/636363
   - module: Buttons
     url:  /components/buttons
     ver:  v0.5.0
-    img: http://via.placeholder.com/300x300
+    img: http://via.placeholder.com/300x300/f5f5f5/636363
   - module: Buttons
     url:  /components/buttons
     ver:  v0.5.0
-    img: http://via.placeholder.com/300x300
+    img: http://via.placeholder.com/300x300/f5f5f5/636363
   - module: Buttons
     url:  /components/buttons
     ver:  v0.5.0
-    img: http://via.placeholder.com/300x300
+    img: http://via.placeholder.com/300x300/f5f5f5/636363
   - module: Buttons
     url:  /components/buttons
     ver:  v0.5.0
-    img: http://via.placeholder.com/300x300
+    img: http://via.placeholder.com/300x300/f5f5f5/636363
   - module: Core
     url:  /components/core
     ver:  v0.5.0
-    img: http://via.placeholder.com/300x300
+    img: http://via.placeholder.com/300x300/f5f5f5/636363
   - module: Body
     url:  /components/body
     ver:  v0.5.0
-    img: http://via.placeholder.com/300x300
+    img: http://via.placeholder.com/300x300/f5f5f5/636363
   - module: Buttons
     url:  /components/buttons
     ver:  v0.5.0
-    img: http://via.placeholder.com/300x300
+    img: http://via.placeholder.com/300x300/f5f5f5/636363
   - module: Buttons
     url:  /components/buttons
     ver:  v0.5.0
-    img: http://via.placeholder.com/300x300
+    img: http://via.placeholder.com/300x300/f5f5f5/636363
   - module: Buttons
     url:  /components/buttons
     ver:  v0.5.0
-    img: http://via.placeholder.com/300x300
+    img: http://via.placeholder.com/300x300/f5f5f5/636363
   - module: Buttons
     url:  /components/buttons
     ver:  v0.5.0
-    img: http://via.placeholder.com/300x300
+    img: http://via.placeholder.com/300x300/f5f5f5/636363
 ---
 
 ## Released
