@@ -11,7 +11,7 @@ const Header = ({ title, mainmenu, _relativeURL, _ID, _pages }) => (
 	<Fragment>
 		<AUskipLink links={[
 			{
-				link: '#navigation',
+				link: '#mainmenu',
 				text: 'Skip to navigation',
 			},
 			{
