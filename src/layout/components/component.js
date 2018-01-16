@@ -5,7 +5,7 @@ import React from 'react';
 /**
  * The Component component
  */
-const Component = ({ _ID, _relativeURL, pagetitle, header, navigation, sections, footer }) => (
+const Component = ({ _ID, _relativeURL, pagetitle, header, componentHeader, sections, componentFooter, footer }) => (
 	<html>
 	<head>
 		<meta charSet="utf-8" />
@@ -26,8 +26,9 @@ const Component = ({ _ID, _relativeURL, pagetitle, header, navigation, sections,
 				<div className="row">
 					<div className="grids col-md-12">
 						<h1>{ pagetitle }</h1>
-						{ navigation }
+						{ componentHeader }
 						{ sections }
+						{ componentFooter }
 					</div>
 				</div>
 			</main>

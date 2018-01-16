@@ -3,10 +3,12 @@ pagetitle: Buttons overview
 layout: components/component
 header:
   - /_shared/header.md
-navigation:
-  - navigation.md
+componentHeader:
+  - /_shared/component-header.md
 sections:
   - 1.md
   - 2.md
+componentFooter:
+  - /_shared/component-footer.md
 footer:
   - /_shared/footer.md
