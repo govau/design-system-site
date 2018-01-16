@@ -1,10 +1,6 @@
 # All we do here is reference the data from /_components so we don’t double up
 pagetitle: Buttons research
 layout: components/component
-header:
-  - header
 sections:
   - 1.md
   - 2.md
-footer:
-  - footer
