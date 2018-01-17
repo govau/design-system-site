@@ -2,7 +2,7 @@ pagetitle: Components
 header:
   - /_shared/header.md
 main:
-  - /_shared/component-list-released.md
+  - /_shared/component-released.md
   - /_shared/table-in-progress.md
   - /_shared/table-suggestions.md
 footer:

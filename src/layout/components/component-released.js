@@ -5,7 +5,7 @@ import React, { Fragment } from 'react';
 /**
  * The Component Status
  */
-const ComponentListReleased = ({ components, _body }) => (
+const ComponentReleased = ({ components, _body }) => (
 	<Fragment>
 		{ _body }
 		<div className="row">
@@ -28,11 +28,11 @@ const ComponentListReleased = ({ components, _body }) => (
 	</Fragment>
 );
 
-ComponentListReleased.propTypes = {
+ComponentReleased.propTypes = {
 	/**
 	 * module: buttons
 	 */
 	module: PropTypes.string.isRequired,
 };
 
-export default ComponentListReleased;
+export default ComponentReleased;
