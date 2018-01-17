@@ -1,0 +1,100 @@
+.au-card {
+	display:block;
+
+	img {
+		display: block;
+	}
+
+	.au-body & {
+		text-decoration: none;
+	}
+
+	&.au-card--shadow {
+		@include AU-space( padding, 1unit );
+		border-radius: 4px;
+		overflow:hidden;
+		box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+		background: $AU-color-Background-light;
+
+		.lt-ie9 & {
+			border: solid 1px $AU-color-Border;
+		}
+
+		.au-card__fullwidth,
+		.au-card__bg {
+			@include AU-space( margin-left, -1unit );
+			@include AU-space( margin-right, -1unit );
+
+			&:first-child {
+				@include AU-space( margin-top, -1unit );
+			}
+
+			&:last-child {
+				@include AU-space( margin-bottom, -1unit );
+			}
+		}
+	}
+
+	&.au-card--centered {
+		text-align: center;
+	}
+}
+
+.au-card__bg {
+	@include AU-space( padding, 1unit );
+	background-color: $AU-color-Background-dark;
+
+	&:not(:first-child) {
+		@include AU-space( margin-top, 1unit );
+	}
+}
+
+
+// When the box is a link
+a.au-card {
+	color: $AU-color-Text;
+
+	&.au-card--shadow {
+		&:focus {
+			border-radius: 0;
+		}
+
+		&:hover {
+			box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+		}
+	}
+
+	.au-card__link {
+		color: $AU-color-Action;
+		text-decoration: underline;
+		text-decoration-skip: ink;
+	}
+
+	&:hover .au-card__link {
+		text-decoration: none;
+		color: $AU-color-Text;
+	}
+}
+
+
+
+
+
+// .au-card__bdr:after {
+// 	content: "";
+// 	display: block;
+//   border-top: solid 1px $AU-color-Border;
+// }
+
+// .au-card__spacer {
+// 	@include AU-space( padding, 1unit );
+
+// 	& + .au-card__spacer { // collapse padding between spacers
+// 	  padding-top:0;
+// 	}
+
+// 	&.au-card__bdr:after {
+// 		@include AU-space( margin-top, 1unit );
+// 	}
+
+// }

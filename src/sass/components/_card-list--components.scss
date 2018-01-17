@@ -1,0 +1,13 @@
+.au-card-list--components .au-card {
+
+	.card__title {
+		@include AU-fontgrid( sm, nospace );
+		font-weight: normal;
+	}
+
+	.card__version {
+		@include AU-fontgrid( xs );
+		@include AU-space( margin-top, 0.25unit );
+		color: $AU-color-Muted;
+	}
+}

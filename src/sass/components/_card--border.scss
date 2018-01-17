@@ -1,0 +1,20 @@
+.au-card {
+	&.au-card--detail {
+		@include AU-space( padding, 1unit 0 );
+		@include AU-space( border-top, 0.5unit solid $AU-color-Border );
+		@include AU-space( border-bottom, 0.5unit solid $AU-color-Border );
+
+		img:first-child {
+			@include AU-space( margin-top, -1unit );
+		}
+
+		img:last-child {
+			@include AU-space( margin-bottom, -1unit );
+		}
+	}
+
+	&.au-card--detail-left {
+		@include AU-space( padding, 0 0 0 1unit );
+		@include AU-space( border-left, 0.5unit solid $AU-color-Border );
+	}
+}
