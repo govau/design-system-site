@@ -5,8 +5,6 @@ import React, { Fragment } from 'react';
 
 /**
  * The Navigation component
- *
- * @disable-docs
  */
 const Navigation = ({ navigation, _relativeURL, _ID, _pages }) => {
 

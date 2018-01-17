@@ -5,7 +5,7 @@ navigation:
   left:
     - text: About
       link: /
-    - text: Getting started
+    - text: Get started
       link: /get-started
     - text: Components
       link: /components
