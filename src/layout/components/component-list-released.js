@@ -13,7 +13,7 @@ const componentListReleased = ({ components, _body }) => (
 			{
 				components.map( ( component, i ) => (
 					<li key={ i } className="col-xs-6 col-sm-3">
-						<a href="{ components.url }" className="au-card au-card--shadow">
+						<a href={ component.url } className="au-card au-card--shadow">
 							<div className="au-card__fullwidth">
 								<img src={ component.img } alt="" className="au-responsive-media-img"/>
 							</div>
