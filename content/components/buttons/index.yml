@@ -6,7 +6,9 @@ layout: components/component
 header:
   - /_shared/header.md
 componentHeader:
-  - /_shared/component-header.md
+  - header.md
+intro:  intro.md
+navigation: navigation.md
 sections:
   - 1.md
   - 2.md
@@ -14,6 +16,3 @@ componentFooter:
   - /_shared/component-footer.md
 footer:
   - /_shared/footer.md
-status: /_shared/component-status.md
-navigation: navigation.md
-intro:  intro.md

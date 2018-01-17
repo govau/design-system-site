@@ -1,6 +1,18 @@
 # All we do here is reference the data from /_components so we don’t double up
+module: buttons
 pagetitle: Buttons research
+version: v3
 layout: components/component
+header:
+  - /_shared/header.md
+componentHeader:
+  - header.md
+intro:  ../intro.md
+navigation: ../navigation.md
 sections:
   - 1.md
   - 2.md
+componentFooter:
+  - /_shared/component-footer.md
+footer:
+  - /_shared/footer.md

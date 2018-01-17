@@ -1,4 +1,4 @@
-import ComponentHeader from './component-header.js';
+import ComponentHeader from './component-header';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -40,10 +40,11 @@ const Component = ({ _ID, _relativeURL, navigation, intro, module, version, stat
 								pagetitle={ pagetitle }
 								intro={ intro }
 								version={ version }
-								navigation={ navigation }
 								module={ module }
 								_relativeURL={ _relativeURL }
 							/>
+
+							{ navigation }
 
 							{ sections }
 							{ componentFooter }

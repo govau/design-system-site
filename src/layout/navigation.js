@@ -59,19 +59,21 @@ Navigation.propTypes = {
    *   - text: Download
    *     link: /furnace
 	 */
-	navigation: PropTypes.arrayOf(
-		PropTypes.shape({
-			dark: PropTypes.boolean,
-			left: PropTypes.shape({
+	navigation: PropTypes.shape({
+		dark: PropTypes.boolean,
+		left: PropTypes.arrayOf(
+			PropTypes.shape({
 				text: PropTypes.string.isRequired,
 				link: PropTypes.string.isRequired,
-			}),
-			right: PropTypes.shape({
+			})
+		),
+		right: PropTypes.arrayOf(
+			PropTypes.shape({
 				text: PropTypes.string.isRequired,
 				link: PropTypes.string.isRequired,
-			}),
-		})
-	).isRequired,
+			})
+		),
+	}).isRequired,
 };
 
 Navigation.defaultProps = {};
