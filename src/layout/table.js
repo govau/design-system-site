@@ -95,10 +95,10 @@ Table.propTypes = {
 	body: PropTypes.arrayOf(
 		PropTypes.arrayOf(
 			PropTypes.shape({
-				text: PropTypes.string.isRequired,
+				text: PropTypes.node.isRequired,
 				className: PropTypes.string,
 			})
-		).isRequired
+		)
 	).isRequired,
 
 	/**

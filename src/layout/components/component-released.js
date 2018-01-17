@@ -13,9 +13,9 @@ const ComponentReleased = ({ components, _body }) => (
 				{
 					components.map( ( component, i ) => (
 						<li key={ i } className="col-xs-6 col-sm-3">
-							<a href={ component.url } className="au-card au-card--shadow">
+							<a href={ component.link } className="au-card au-card--shadow">
 								<div className="au-card__fullwidth">
-									<img src={ component.img } alt="" className="au-responsive-media-img"/>
+									<img src={ component.image } alt="" className="au-responsive-media-img"/>
 								</div>
 								<h3 className="au-card__link">{ component.module }</h3>
 								<div className="card__version">{ component.version }</div>
@@ -29,10 +29,14 @@ const ComponentReleased = ({ components, _body }) => (
 );
 
 ComponentReleased.propTypes = {
-	/**
-	 * module: buttons
-	 */
-	module: PropTypes.string.isRequired,
+	components: PropTypes.arrayOf(
+		PropTypes.shape({
+			image: PropTypes.string,
+			link: PropTypes.string.isRequired,
+			module: PropTypes.string.isRequired,
+			version: PropTypes.string.isRequired,
+		})
+	).isRequired
 };
 
 export default ComponentReleased;
