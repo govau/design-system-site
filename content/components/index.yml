@@ -1,8 +1,7 @@
 pagetitle: Components
-layout: components/component
 header:
   - /_shared/header.md
-sections:
+main:
   - /_shared/component-list-released.md
   - /_shared/table-in-progress.md
   - /_shared/table-suggestions.md

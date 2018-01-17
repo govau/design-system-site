@@ -1,5 +1,7 @@
 # All we do here is reference the data from /_components so we don’t double up
+module: buttons
 pagetitle: Buttons overview
+version: v3
 layout: components/component
 header:
   - /_shared/header.md
@@ -12,3 +14,6 @@ componentFooter:
   - /_shared/component-footer.md
 footer:
   - /_shared/footer.md
+status: /_shared/component-status.md
+navigation: navigation.md
+intro:  intro.md

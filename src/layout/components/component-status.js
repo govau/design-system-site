@@ -7,14 +7,14 @@ import React from 'react';
 /**
  * The Component Status
  */
-const ComponentStatus = ({ module, _ID, _relativeURL }) => (
+const ComponentStatus = ({ module, _ID, _relativeURL, version }) => (
 	<div className="componentStatus">
 
 		<AUheading size="md" level="2" className="componentStatus__title">Released</AUheading>
 
 		<dl className="componentStatus__definition">
 			<dt>Changelog</dt>
-			<dd><a href={ `https://github.com/govau/uikit/blob/master/packages/${ module }/CHANGELOG.md` }>v0.5.0</a></dd>
+			<dd><a href={`https://github.com/govau/uikit/blob/master/packages/${ module }/CHANGELOG.md`}>{ version }</a></dd>
 
 			<dt>Installed</dt>
 			<dd><a href="https://www.npmjs.com/package/@gov.au/buttons">{`npm i @gov.au/${ module }`}</a></dd>
