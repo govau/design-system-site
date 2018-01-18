@@ -1,3 +1,4 @@
+import AUcard from '../card';
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
@@ -9,21 +10,40 @@ const ComponentReleased = ({ components, _body }) => (
 	<Fragment>
 		{ _body }
 		<div className="row">
-			<ul className="au-card-list au-card-list--matchheight au-card-list--components">
+			<AUcard shadow centered card={[
 				{
-					components.map( ( component, i ) => (
-						<li key={ i } className="col-xs-6 col-sm-3">
-							<a href={ component.link } className="au-card au-card--shadow">
-								<div className="au-card__fullwidth">
-									<img src={ component.image } alt="" className="au-responsive-media-img"/>
-								</div>
-								<h3 className="au-card__link">{ component.module }</h3>
-								<div className="card__version">{ component.version }</div>
-							</a>
-						</li>
-					))
+					type: 'image',
+					image: 'http://via.placeholder.com/300x300/f5f5f5/636363',
+					fullwidth: true,
+					link: '#'
+				},
+				{
+					type: 'heading',
+					size: '5',
+					text: 'Hello world'
+				},
+				{
+					type: 'content',
+					text: 'Hello world'
+				},
+				{
+					type: 'image',
+					link: '#',
+					image: 'http://via.placeholder.com/300x300/f5f5f5/636363'
+				},
+				{
+					type: 'raw',
+					html: <p>Some raw html</p>
+				},
+				{
+					type: 'line'
+				},
+				{
+					type: 'cta',
+					link: '#',
+					text: 'Read more'
 				}
-			</ul>
+			]} />
 		</div>
 	</Fragment>
 );
@@ -40,3 +60,20 @@ ComponentReleased.propTypes = {
 };
 
 export default ComponentReleased;
+
+
+// <ul className="au-card-list au-card-list--matchheight au-card-list--components">
+// 	{
+// 		components.map( ( component, i ) => (
+// 			<li key={ i } className="col-xs-6 col-sm-3">
+// 				<a href={ component.link } className="au-card au-card--shadow">
+// 					<div className="au-card__fullwidth">
+// 						<img src={ component.image } alt="" className="au-responsive-media-img"/>
+// 					</div>
+// 					<h3 className="au-card__title au-card__link">{ component.module }</h3>
+// 					<p className="card__version">{ component.version }</p>
+// 				</a>
+// 			</li>
+// 		))
+// 	}
+// </ul>

@@ -1,5 +1,5 @@
 .au-card {
-	&.au-card--detail {
+	&.au-card--border {
 		@include AU-space( padding, 1unit 0 );
 		@include AU-space( border-top, 0.5unit solid $AU-color-Border );
 		@include AU-space( border-bottom, 0.5unit solid $AU-color-Border );
@@ -13,8 +13,22 @@
 		}
 	}
 
-	&.au-card--detail-left {
+	&.au-card--border-left {
 		@include AU-space( padding, 0 0 0 1unit );
 		@include AU-space( border-left, 0.5unit solid $AU-color-Border );
+	}
+}
+
+
+.au-card-list--components .au-card {
+
+	.card__title {
+		@include AU-fontgrid( sm, nospace );
+		font-weight: normal;
+	}
+
+	.card__version {
+		@include AU-fontgrid( xs );
+		color: $AU-color-Muted;
 	}
 }

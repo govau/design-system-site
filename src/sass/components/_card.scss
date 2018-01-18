@@ -5,6 +5,13 @@
 		display: block;
 	}
 
+	// Typographic spacing
+	* + hr,
+	* + p,
+	* + .au-card__title {
+		@include AU-space( margin-top, 1unit );
+	}
+
 	.au-body & {
 		text-decoration: none;
 	}
@@ -73,5 +80,41 @@ a.au-card {
 	&:hover .au-card__link {
 		text-decoration: none;
 		color: $AU-color-Text;
+	}
+}
+
+
+// Card listing match height
+.au-card-list {
+	list-style: none;
+	padding: 0;
+
+	li {
+		list-style: none;
+		padding: 0;
+	}
+
+	.au-body & {
+		li {
+			@include AU-space( margin-top, 1.5unit );
+		}
+	}
+
+	&.au-card-list--matchheight {
+		display:flex;
+		flex-wrap: wrap;
+
+		li {
+			display:flex;
+		}
+
+		.au-card {
+			display:flex;
+			flex-direction: column;
+		}
+
+		.au-card__stretch {
+			flex: 1 0 auto;
+		}
 	}
 }
