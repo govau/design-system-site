@@ -6,7 +6,7 @@ import Fs from 'fs';
 
 
 /**
- * The Promo component
+ * The component header component
  */
 const ComponentHeader = ({ _relativeURL, _parseYaml, _body, _self, _pages, _ID }) => {
 	const MODULE = _parseYaml(

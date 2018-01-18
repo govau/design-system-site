@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 
 /**
- * The Component Status
+ * The component released listing of cards
  */
 const ComponentReleased = ({ components, _body }) => (
 	<Fragment>

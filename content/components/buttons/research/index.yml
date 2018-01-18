@@ -13,6 +13,6 @@ sections:
   - 1.md
   - 2.md
 componentFooter:
-  - /_shared/component-footer.md
+  - /components/footer.md
 footer:
   - /_shared/footer.md

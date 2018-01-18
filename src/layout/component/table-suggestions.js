@@ -5,9 +5,9 @@ import Table from './../table';
 
 
 /**
- * The component table
+ * The table for suggested components
  */
-const ComponentTable = ({ title, caption, btntext, btnURL, btnIcon, tableTH, components }) => {
+const TableSuggestions = ({ title, caption, btntext, btnURL, btnIcon, tableTH, components }) => {
 	const body = components.map( component => {
 			return [
 				{
@@ -41,7 +41,7 @@ const ComponentTable = ({ title, caption, btntext, btnURL, btnIcon, tableTH, com
 	);
 }
 
-ComponentTable.propTypes = {
+TableSuggestions.propTypes = {
 	/**
 	 * title: In progress
 	 */
@@ -93,4 +93,4 @@ ComponentTable.propTypes = {
 	).isRequired,
 };
 
-export default ComponentTable;
+export default TableSuggestions;

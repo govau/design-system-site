@@ -3,7 +3,7 @@ import React from 'react';
 
 
 /**
- * The Component component
+ * The page component for components
  */
 const Component = ({
 	_ID,

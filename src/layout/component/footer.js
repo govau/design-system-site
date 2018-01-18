@@ -3,7 +3,7 @@ import React from 'react';
 
 
 /**
- * The Promo component
+ * The component footer component
  */
  const ComponentFooter = ({ feedback }) => (
 	<div className="componentfooter au-grid">

@@ -1,5 +1,5 @@
 ---
-layout: component/table-progress
+layout: component/table-inprogress
 title: In progress
 caption: A table of in progress components including their status, current version, and contributors.
 btntext: Community

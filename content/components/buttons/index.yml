@@ -10,7 +10,7 @@ sections:
   - navigation.md
   - 1.md
   - 2.md
-  - /_shared/component-footer.md
+  - /components/footer.md
 
 footer:
   - /_shared/footer.md

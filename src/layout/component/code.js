@@ -6,7 +6,7 @@ import Fs from 'fs';
 
 
 /**
- * The tab component
+ * The code component
  */
 const Code = ({ _body, example, _ID }) => {
 	const pathToCode = Path.normalize(`${ SETTINGS.get().folder.content }/${ _ID }/${ example }/code.md`);
