@@ -2,7 +2,6 @@ pagetitle: Homepage
 header:
   - /_shared/header.md
 main:
-  - main.md
   - intro.md
   - promo.md
   - features.md
