@@ -24,6 +24,20 @@ TextWithCTA.propTypes = {
 	 * _body: (text)(4)
 	 */
 	_body: PropTypes.node.isRequired,
+
+	/**
+	 * button:
+	 *   link: #
+	 *   text: Button text
+	 *   type: secondary
+	 *   icon: github
+	 */
+	button: PropTypes.shape({
+		link: PropTypes.string,
+		text: PropTypes.string,
+		type: PropTypes.string,
+		icon: PropTypes.string,
+	})
 };
 
 TextWithCTA.defaultProps = {};
