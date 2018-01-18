@@ -1,0 +1,16 @@
+layout: component/page
+module: buttons
+pagetitle: Buttons Rationale
+
+header:
+  - /_shared/header.md
+
+sections:
+  - /components/buttons/header.md
+  - /components/buttons/navigation.md
+  - 1.md
+  - 2.md
+  - /components/footer.md
+
+footer:
+  - /_shared/footer.md

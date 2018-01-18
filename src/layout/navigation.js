@@ -31,14 +31,14 @@ const Navigation = ({ navigation, _relativeURL, _ID, _pages }) => {
 		}
 	};
 
-	const linksLeft = navigation.left.map( link => CreateLink( link ) );
-	const linksRight = navigation.right.map( link => CreateLink( link, true ) );
+	const linksLeft = navigation.left ? navigation.left.map( link => CreateLink( link ) ) : false;
+	const linksRight = navigation.right ? navigation.right.map( link => CreateLink( link, true ) ) : false;
 
 	return (
 		<Fragment>
 			<nav className={ `navigation ${ navigation.dark ? 'navigation--dark ' : '' }` }>
-				<AUlinkList items={ linksLeft } inline />
-				<AUlinkList inline className="mainmenu--right" items={ linksRight } inline />
+				{ linksLeft !== false ? <AUlinkList items={ linksLeft } inline /> : null }
+				{ linksRight !== false ? <AUlinkList inline className="mainmenu--right" items={ linksRight } inline /> : null }
 			</nav>
 		</Fragment>
 	);

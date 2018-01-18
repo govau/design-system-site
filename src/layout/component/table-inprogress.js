@@ -47,7 +47,6 @@ const TableInProgress = ({ title, caption, btntext, btnURL, btnIcon, tableTH, co
 	);
 }
 
-
 TableInProgress.propTypes = {
 	/**
 	 * title: In progress

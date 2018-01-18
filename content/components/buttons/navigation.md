@@ -2,13 +2,13 @@
 layout: navigation
 navigation:
   left:
-    - text: User story
+    - text: Overview
       link: /components/buttons
-    - text: Latest updates
-      link: /components/buttons/updates
-    - text: Research
-      link: /components/buttons/research
-    - text: In discussion
+    - text: Rationale
+      link: /components/buttons/rationale
+    - text: Accessibility
+      link: /components/buttons/accessibility
+    - text: Discussion
       link: /components/buttons/discussion
   right:
     - text: Live demo

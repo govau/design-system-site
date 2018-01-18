@@ -1,6 +1,6 @@
 layout: component/page
 module: buttons
-pagetitle: Buttons research
+pagetitle: Buttons accessibility
 
 header:
   - /_shared/header.md
@@ -8,8 +8,7 @@ header:
 sections:
   - /components/buttons/header.md
   - /components/buttons/navigation.md
-  - 1.md
-  - 2.md
+  - FILL ME
   - /components/footer.md
 
 footer:

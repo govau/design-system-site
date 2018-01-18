@@ -75,26 +75,3 @@ a.au-card {
 		color: $AU-color-Text;
 	}
 }
-
-
-
-
-
-// .au-card__bdr:after {
-// 	content: "";
-// 	display: block;
-//   border-top: solid 1px $AU-color-Border;
-// }
-
-// .au-card__spacer {
-// 	@include AU-space( padding, 1unit );
-
-// 	& + .au-card__spacer { // collapse padding between spacers
-// 	  padding-top:0;
-// 	}
-
-// 	&.au-card__bdr:after {
-// 		@include AU-space( margin-top, 1unit );
-// 	}
-
-// }

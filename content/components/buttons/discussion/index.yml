@@ -1,0 +1,15 @@
+layout: component/page
+module: buttons
+pagetitle: Buttons discussion
+
+header:
+  - /_shared/header.md
+
+sections:
+  - /components/buttons/header.md
+  - /components/buttons/navigation.md
+  - FILL ME
+  - /components/footer.md
+
+footer:
+  - /_shared/footer.md

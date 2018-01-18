@@ -11,14 +11,14 @@ import Fs from 'fs';
  * @disable-docs
  */
 const Code = ({ _body, example, _ID }) => {
-	const pathToCode = Path.normalize(`${ SETTINGS.get().folder.content }/${ _ID }/${ example }/code.md`);
+	const pathToCode = Path.normalize(`${ SETTINGS.get().folder.content }/${ _ID }/examples/example${ example }/code.md`);
 	const exampleCode = Fs.readFileSync( pathToCode, 'utf8' );
 
 	return (
 		<Fragment>
 			{ _body }
 
-			<iframe src={`${ example }/`}>{ exampleCode }</iframe>
+			<iframe src={`examples/example${ example }/`}>{ exampleCode }</iframe>
 		</Fragment>
 	);
 }

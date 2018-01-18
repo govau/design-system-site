@@ -36,7 +36,7 @@ const Component = ({
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }} />
 
-		<body className="au-grid">
+		<body className="au-grid is-components">
 			{ header }
 
 			<div className="content-wrapper">
