@@ -1,8 +1,9 @@
 ---
 layout: content/text-with-cta
-buttonUrl: /download
-buttonText: Get your custom build
-buttonType: secondary
+button:
+  link: /download
+  text: Get your custom build
+  type: secondary
 ---
 
 ## Custom build

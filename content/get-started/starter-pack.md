@@ -1,9 +1,10 @@
 ---
 layout: content/text-with-cta
-buttonUrl: https://github.com/govau/uikit-starter#govau-ui-kit-starter-pack
-buttonText: Starter Pack on GitHub
-buttonType: secondary
-buttonIcon: github
+button:
+  link: https://github.com/govau/uikit-starter#govau-ui-kit-starter-pack
+  text: Starter Pack on GitHub
+  type: secondary
+  icon: github
 ---
 
 ## Starter Pack

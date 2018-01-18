@@ -7,12 +7,14 @@ import PropTypes from 'prop-types';
  *
  * @disable-docs
  */
-const TextWithCTA = ({ buttonType, buttonText, buttonUrl, buttonIcon, _body }) => (
+const TextWithCTA = ({ button, _body }) => (
 	<Fragment>
 		{ _body }
 
 		<p>
-			<a href={ buttonUrl } className={`au-btn au-btn--${ buttonType }${ buttonIcon ? ` icon icon--${ buttonIcon }` : '' }`}>{ buttonText }</a>
+			<a href={ button.link } className={ `au-btn au-btn--${ button.type }${ button.icon ? ` icon icon--${ button.icon }` : '' }` }>
+				{ button.text }
+			</a>
 		</p>
 	</Fragment>
 );

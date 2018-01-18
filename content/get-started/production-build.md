@@ -1,9 +1,10 @@
 ---
 layout: content/text-with-cta
-buttonUrl: https://github.com/govau/uikit#how-to-use
-buttonText: GitHub Readme
-buttonType: secondary
-buttonIcon: github
+button:
+  link: https://github.com/govau/uikit#how-to-use
+  text: GitHub Readme
+  type: secondary
+  icon: github
 ---
 
 ## Production build
