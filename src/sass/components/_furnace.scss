@@ -1,0 +1,80 @@
+.furnace {
+	fieldset {
+		border: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	// NOTE: This should prob be a global class
+	.sronly {
+		@include AU-sronly();
+	}
+}
+
+.furnace--border {
+	@include AU-clearfix;
+	@include AU-space( padding-bottom, 1.5unit );
+	@include AU-space( margin-bottom, 1.5unit );
+	@include AU-space( border-bottom, solid 0.25unit $AU-color-Background );
+
+	h3 {
+		float:left;
+	}
+	a {
+		float:right
+	}
+}
+
+.furnace--component-list {
+	list-style: none;
+	margin-top: 0;
+	padding: 0;
+
+	label {
+		@include AU-clearfix;
+		@include AU-space( padding, 1unit );
+		display: block;
+		background-color: $AU-color-Background;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $AU-color-Background-dark;
+		}
+	}
+
+	img {
+		@include AU-space( width, 4.5unit );
+		@include AU-space( margin-right, 1unit );
+		display: block;
+		float: left;
+	}
+
+	.furnace--component-actions {
+		float: right;
+		text-align: right;
+	}
+
+	.furnace--component-detail {
+		float: left;
+
+		h4 {
+			@include AU-fontgrid( sm, heading );
+		}
+		p {
+			@include AU-fontgrid( xs );
+			margin: 0;
+			margin-top: 0.5rem;
+		}
+	}
+}
+
+// Resets for body :(
+.au-body ul.furnace--component-list > li {
+	margin-top: 0;
+}
+.au-body ul.furnace--component-list > li + li {
+	@include AU-space( margin-top, 1unit );
+}
+.au-body *+ul.furnace--component-list {
+	margin-top: 0;
+}

@@ -1,0 +1,8 @@
+.download-intro {
+	@include AU-space( margin-bottom, 4unit );
+	@include AU-space( padding-top, 4unit );
+}
+
+.download-intro--border {
+	@include AU-space( border-top, solid 0.25unit $AU-color-Background );
+}

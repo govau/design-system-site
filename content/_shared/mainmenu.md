@@ -19,5 +19,5 @@ navigation:
     - text: Github
       link: https://github.com/govau/uikit/
     - text: Download
-      link: /furnace
+      link: /download
 ---
