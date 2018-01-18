@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 
 /**
  * The partial component
- *
- * @disable-docs
  */
 const TextWithCTA = ({ button, _body }) => (
 	<Fragment>
