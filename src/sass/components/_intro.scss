@@ -1,7 +1,7 @@
 // Intro
 
 .intro {
-	@include AU-space( margin-top, 10unit );
+	@include AU-space( margin-top, 5unit );
 
 	.content {
 		@include AU-space( margin-top, 2unit );

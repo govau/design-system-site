@@ -1,4 +1,2 @@
 ---
 ---
-
-## [lg]Hello world
