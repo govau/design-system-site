@@ -10,40 +10,7 @@ const ComponentReleased = ({ components, _body }) => (
 	<Fragment>
 		{ _body }
 		<div className="row">
-			<AUcard shadow centered card={[
-				{
-					type: 'image',
-					image: 'http://via.placeholder.com/300x300/f5f5f5/636363',
-					fullwidth: true,
-					link: '#'
-				},
-				{
-					type: 'heading',
-					size: '5',
-					text: 'Hello world'
-				},
-				{
-					type: 'content',
-					text: 'Hello world'
-				},
-				{
-					type: 'image',
-					link: '#',
-					image: 'http://via.placeholder.com/300x300/f5f5f5/636363'
-				},
-				{
-					type: 'raw',
-					html: <p>Some raw html</p>
-				},
-				{
-					type: 'line'
-				},
-				{
-					type: 'cta',
-					link: '#',
-					text: 'Read more'
-				}
-			]} />
+
 		</div>
 	</Fragment>
 );
