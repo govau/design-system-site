@@ -14,21 +14,22 @@ const Navigation = ({ navigation, _relativeURL, _ID, _pages }) => {
 			`${ link.text == 'Download' ? 'icon icon--dark icon--download icon--action' : '' }` +
 			`${ link.text == 'Live demo' ? 'icon icon--right icon--demo icon--action' : '' }`;
 
-		return _pages[ _ID ]._url === link.link ||
-			_pages[ _ID ]._url.startsWith( link.link ) && _pages[ _ID ]._url.split('/').length > link.link.split('/').length
-			? {
-					text: link.text,
-					link: link.link,
-					className: linkClasses || '',
-					li: {
-						className: `mainmenu--active`,
-					}
-				}
-			: {
-					text: link.text,
-					link: _relativeURL( link.link, _ID ),
-					className: linkClasses || ''
-				}
+		const active = _pages[ _ID ]._url === link.link;
+
+		const activeTrail =
+			_pages[ _ID ]._url.startsWith( link.link ) &&
+			link.link !== '/' &&
+			_pages[ _ID ]._url.split('/').length > link.link.split('/').length;
+
+		return {
+			text: link.text,
+			link: _relativeURL( link.link, _ID ),
+			className: linkClasses || '',
+			li: {
+				className: `${ active ? 'mainmenu--active' : ''  }` +
+									 `${ activeTrail ? 'mainmenu--active-trail' : ''  }`,
+			}
+		}
 	};
 
 	const linksLeft = navigation.left.map( link => CreateLink( link ) );

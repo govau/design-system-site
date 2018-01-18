@@ -20,6 +20,11 @@
 		display: block;
 	}
 
+	.navigation.navigation--dark .au-link-list > li.mainmenu--active-trail > a {
+		color: $AU-colordark-Text;
+		border-color: $AU-colordark-Text;
+	}
+
 	// Reset the mobile menu being closed
 	@media screen and ( min-width: $nav_breakpoint ) {
 		position: static;
