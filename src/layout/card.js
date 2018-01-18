@@ -43,6 +43,8 @@ AUcard.propTypes = {
 
 /**
  * The CardList component
+ *
+ * @disable-docs
  */
 const AUcardList = ({ cards, columnSize, matchheight, li = {}, card = {} }) => {
 

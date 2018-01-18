@@ -7,6 +7,8 @@ import Fs from 'fs';
 
 /**
  * The code component
+ *
+ * @disable-docs
  */
 const Code = ({ _body, example, _ID }) => {
 	const pathToCode = Path.normalize(`${ SETTINGS.get().folder.content }/${ _ID }/${ example }/code.md`);

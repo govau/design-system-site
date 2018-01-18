@@ -6,6 +6,8 @@ import Fs from 'fs';
 
 /**
  * The example component
+ *
+ * @disable-docs
  */
 const Example = ({ _ID, _relativeURL, pagetitle, modules, example }) => (
 	<html>
