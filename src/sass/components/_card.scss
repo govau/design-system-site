@@ -1,5 +1,6 @@
 .au-card {
 	display:block;
+	max-width: $AU-maxwidth;
 
 	img {
 		display: block;
@@ -8,12 +9,18 @@
 	// Typographic spacing
 	* + hr,
 	* + p,
-	* + .au-card__title {
+	* + .au-card__title,
+	* + .au-card__cta {
 		@include AU-space( margin-top, 1unit );
 	}
 
-	.au-body & {
-		text-decoration: none;
+	hr {
+		margin-bottom: 0;
+	}
+
+	.au-card__cta,
+	.au-card__image {
+		display: block;
 	}
 
 	&.au-card--shadow {
@@ -44,6 +51,10 @@
 
 	&.au-card--centered {
 		text-align: center;
+
+		img {
+			margin: 0 auto;
+		}
 	}
 }
 
@@ -60,6 +71,10 @@
 // When the box is a link
 a.au-card {
 	color: $AU-color-Text;
+
+	.au-body & {
+		text-decoration: none;
+	}
 
 	&.au-card--shadow {
 		&:focus {

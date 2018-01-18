@@ -1,16 +1,20 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { Fragment } from 'react';
 
 
 const AUcardHeading = ({ text, size, fullwidth }) => {
 
 	const HeadingContainer = `h${ size }`;
 
-	<HeadingContainer className={ `au-display-${size}${ fullwidth ? ' au-card__fullwidth' : '' }` }>{ text }</HeadingContainer>
+	return(
+		<HeadingContainer className={ `au-display-${size}${ fullwidth ? ' au-card__fullwidth' : '' }` }>
+			{ text }
+		</HeadingContainer>
+	);
 };
 
 
-const AUcardImage = ({ image, link, fullwidth }) => {
+const AUcardImage = ({ image, description, link, fullwidth }) => {
 	let ImageContainer = 'div';
 	let imageProps = {};
 
@@ -19,30 +23,52 @@ const AUcardImage = ({ image, link, fullwidth }) => {
 		imageProps = { href: link };
 	}
 
-	<ImageContainer className={ fullwidth ? 'au-card__fullwidth' : '' }>
-		<img src={ image } />
-	</ImageContainer>
+	return(
+		<ImageContainer { ...imageProps } className={ `au-card__image${ fullwidth ? ' au-card__fullwidth' : '' }` }>
+			<img alt={ description } src={ image } />
+		</ImageContainer>
+	);
 };
 
 
 const AUcardContent = ({ text, fullwidth }) => (
-	<p className={ fullwidth ? 'au-card__fullwidth' : '' }>{ text }</p>
+	<p className={ `au-card__content${ fullwidth ? ' au-card__fullwidth' : '' }` }>{ text }</p>
 );
 
 
 const AUcardRaw = ({ html, fullwidth }) => (
-	{ html }
+	<div className={ `au-card__raw${ fullwidth ? ' au-card__fullwidth' : '' }` }>
+		{ html }
+	</div>
 );
 
 
 const AUcardLine = ({ fullwidth }) => (
-	<hr />
+	<hr className={ `au-card__line${ fullwidth ? ' au-card__fullwidth' : '' }` } />
 );
+
+
+const AUcardCTA = ({ text, link, fullwidth }) => {
+	let CTAContainer = 'div';
+	let CTAProps = {};
+
+	if( link !== undefined ) {
+		CTAContainer = 'a';
+		CTAProps = { href: link };
+	}
+
+	return(
+		<CTAContainer { ...CTAProps } className={ `au-card__cta${ fullwidth ? ' au-card__fullwidth' : '' }` }>
+			{ text }
+		</CTAContainer>
+	);
+};
+
 
 /**
  * The card component
  */
-const AUcard = ({ cardData, link, shadow, centered }) => {
+const AUcard = ({ items, link, shadow, centered }) => {
 
 	let CardContainer = 'div';
 	let cardProps = {};
@@ -52,16 +78,31 @@ const AUcard = ({ cardData, link, shadow, centered }) => {
 		cardProps = { href: link };
 	}
 
-	return (
-		<CardContainer
-			{ ...cardProps }
-			className={ `au-card ${ shadow ? ' au-card--shadow' : '' } ${ centered ? ' au-card--centered': '' }` }
-		>
-			{
-				cardData.map( ( data, i ) => {
+	const cardData = [];
+	items.map( ( item, i ) => {
+		if( item.type === 'image' ) {
+			cardData.push( <AUcardImage description={ item.description } image={ item.image } link={ item.link } fullwidth={ item.fullwidth } /> );
+		}
+		else if( item.type === 'heading' ) {
+			cardData.push( <AUcardHeading size={ item.size } text={ item.text } fullwidth={ item.fullwidth } /> );
+		}
+		else if( item.type === 'content' ) {
+			cardData.push( <AUcardContent text={ item.text } fullwidth={ item.fullwidth } /> );
+		}
+		else if( item.type === 'raw' ) {
+			cardData.push( <AUcardRaw html={ item.html } fullwidth={ item.fullwidth } /> );
+		}
+		else if( item.type === 'line' ) {
+			cardData.push( <AUcardLine fullwidth={ item.fullwidth } /> );
+		}
+		else if( item.type === 'cta' ) {
+			cardData.push( <AUcardCTA text={ item.text } link={ item.link } fullwidth={ item.fullwidth } /> );
+		}
+	});
 
-				})
-			}
+	return (
+		<CardContainer { ...cardProps } className={ `au-card ${ shadow ? ' au-card--shadow' : '' } ${ centered ? ' au-card--centered': '' }` } >
+			{ cardData.map( ( card, i ) => <Fragment key={ i }>{ card }</Fragment> ) }
 		</CardContainer>
 	);
 }
