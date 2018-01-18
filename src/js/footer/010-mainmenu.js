@@ -48,4 +48,3 @@ AddEvent( focustrapBottom, 'focus', function( event ) {
 	PreventEvent( event );
 	mainmenuLinks[ 0 ].focus();
 });
-

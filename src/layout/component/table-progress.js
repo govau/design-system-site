@@ -1,7 +1,7 @@
 import AUbutton from '../../_uikit/layout/buttons';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Table from './../table';
-import React, { Fragment } from 'react';
 
 
 /**

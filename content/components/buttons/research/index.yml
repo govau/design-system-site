@@ -2,7 +2,7 @@
 module: buttons
 pagetitle: Buttons research
 version: v3
-layout: components/component
+layout: component/page
 header:
   - /_shared/header.md
 componentHeader:

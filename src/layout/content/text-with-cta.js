@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 
 /**
@@ -7,10 +7,13 @@ import React, { Fragment } from 'react';
  *
  * @disable-docs
  */
-const TextWithCTA = ({ btnclasses, btntext, btnurl, _body }) => (
+const TextWithCTA = ({ buttonType, buttonText, buttonUrl, buttonIcon, _body }) => (
 	<Fragment>
 		{ _body }
-		<p><a href={ btnurl } className={ btnclasses }>{ btntext }</a></p>
+
+		<p>
+			<a href={ buttonUrl } className={`au-btn au-btn--${ buttonType }${ buttonIcon ? ` icon icon--${ buttonIcon }` : '' }`}>{ buttonText }</a>
+		</p>
 	</Fragment>
 );
 

@@ -1,5 +1,5 @@
 ---
-layout: components/table-suggestions
+layout: component/table-suggestions
 title: Suggestions
 caption: A table of components that have been suggested, including their status.
 btntext: Make a Suggestion

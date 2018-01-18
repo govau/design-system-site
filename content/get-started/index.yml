@@ -1,10 +1,13 @@
 pagetitle: Get Started
+
 header:
   - /_shared/header.md
+
 main:
-  - main.md
+  - getting-started.md
   - production-build.md
   - starter-pack.md
   - custom-build.md
+
 footer:
   - /_shared/footer.md

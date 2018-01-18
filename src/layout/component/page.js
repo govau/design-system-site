@@ -1,4 +1,3 @@
-import ComponentHeader from './component-header';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -6,7 +5,15 @@ import React from 'react';
 /**
  * The Component component
  */
-const Component = ({ _ID, _relativeURL, navigation, intro, module, version, status, pagetitle, header, sections, componentFooter, footer }) => {
+const Component = ({
+	_ID,
+	_relativeURL,
+	header,
+	pagetitle,
+	module,
+	sections,
+	footer
+}) => {
 
 	const headContent = `
 <meta charset="utf-8">
@@ -31,26 +38,16 @@ const Component = ({ _ID, _relativeURL, navigation, intro, module, version, stat
 
 		<body className="au-grid">
 			{ header }
+
 			<div className="content-wrapper">
 				<main id="content" className="main au-body container-fluid">
 					<div className="row">
 						<div className="grids col-md-12">
-
-							<ComponentHeader
-								pagetitle={ pagetitle }
-								intro={ intro }
-								version={ version }
-								module={ module }
-								_relativeURL={ _relativeURL }
-							/>
-
-							{ navigation }
-
 							{ sections }
-							{ componentFooter }
 						</div>
 					</div>
 				</main>
+
 				{ footer }
 			</div>
 			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />

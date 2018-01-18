@@ -1,5 +1,5 @@
 ---
-layout: components/component-released
+layout: component/released
 components:
   - module: Core
     link: /components/core

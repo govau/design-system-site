@@ -7,7 +7,7 @@ function HasClass( element, elementClass ) {
 }
 
 function RemoveClass( element, elementClass ) {
-	if ( HasClass( element, elementClass ) ) {
+	if( HasClass( element, elementClass ) ) {
 		var reg = new RegExp( '(\\s|^)' + elementClass + '(\\s|$)' );
 		element.className = element.className.replace( reg, ' ' );
 	}
@@ -15,7 +15,7 @@ function RemoveClass( element, elementClass ) {
 
 // IE fallback for attachEvent
 function AddEvent( element, event, onEvent ) {
-	if ( element.attachEvent ) {
+	if( element.attachEvent ) {
 		return element.attachEvent( 'on' + event, onEvent );
 	}
 	else {

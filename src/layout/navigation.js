@@ -1,6 +1,6 @@
 import AUlinkList from '../_uikit/layout/link-list';
-import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 
 /**
@@ -16,7 +16,7 @@ const Navigation = ({ navigation, _relativeURL, _ID, _pages }) => {
 
 		const active = _pages[ _ID ]._url === link.link;
 
-		const activeTrail =
+		const _isActiveTrail =
 			_pages[ _ID ]._url.startsWith( link.link ) &&
 			link.link !== '/' &&
 			_pages[ _ID ]._url.split('/').length > link.link.split('/').length;
@@ -24,10 +24,9 @@ const Navigation = ({ navigation, _relativeURL, _ID, _pages }) => {
 		return {
 			text: link.text,
 			link: _relativeURL( link.link, _ID ),
-			className: linkClasses || '',
+			className: linkClasses,
 			li: {
-				className: `${ active ? 'mainmenu--active' : ''  }` +
-									 `${ activeTrail ? 'mainmenu--active-trail' : ''  }`,
+				className: `${ active ? 'mainmenu--active' : ''  }${ _isActiveTrail ? ' mainmenu--active-trail' : ''  }`,
 			}
 		}
 	};
