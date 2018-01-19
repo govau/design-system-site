@@ -6,109 +6,21 @@ import PropTypes from 'prop-types';
 /**
  * The component released listing of cards
  */
-const ComponentReleased = ({ components, _body }) => (
+const ComponentReleased = ({ cardList, _body }) => (
 	<Fragment>
 		{ _body }
 		<div className="row">
 			<AUcardList
-				matchHeight
-				columnSize="col-xs-6 col-sm-3"
-				centered
-				shadow
-				items={[{
-						cardRows: [
-							{
-								type: 'image',
-								image: 'http://via.placeholder.com/300x300/f5f5f5/636363',
-								fullwidth: true,
-								description: 'A 300x300 image'
-							},
-							{
-								type: 'heading',
-								size: '5',
-								text: 'Hello world'
-							}
-						]
-					},
-					{
-						cardRows: [
-							{
-								type: 'image',
-								image: 'http://via.placeholder.com/300x300/f5f5f5/636363',
-								fullwidth: true,
-								description: 'A 300x300 image'
-							},
-							{
-								type: 'heading',
-								size: '5',
-								text: 'Hello world'
-							}
-						]
-					},
-					{
-						cardRows: [
-							{
-								type: 'image',
-								image: 'http://via.placeholder.com/300x300/f5f5f5/636363',
-								fullwidth: true,
-								description: 'A 300x300 image'
-							},
-							{
-								type: 'heading',
-								size: '5',
-								text: 'Hello world'
-							}
-						]
-					},
-					{
-						cardRows: [
-							{
-								type: 'image',
-								image: 'http://via.placeholder.com/300x300/f5f5f5/636363',
-								fullwidth: true,
-								description: 'A 300x300 image'
-							},
-							{
-								type: 'heading',
-								size: '5',
-								text: 'Hello world'
-							}
-						]
-					},
-					{
-						cardRows: [
-							{
-								type: 'image',
-								image: 'http://via.placeholder.com/300x300/f5f5f5/636363',
-								fullwidth: true,
-								description: 'A 300x300 image'
-							},
-							{
-								type: 'heading',
-								size: '5',
-								text: 'Hello world'
-							}
-						]
-					},
-					{
-						cardRows: [
-							{
-								type: 'image',
-								image: 'http://via.placeholder.com/300x300/f5f5f5/636363',
-								fullwidth: true,
-								description: 'A 300x300 image'
-							},
-							{
-								type: 'heading',
-								size: '5',
-								text: 'Hello world'
-							}
-						]
-					}
-				]} />
+				shadow={ cardList.shadow }
+				items={ cardList.cards }
+				columnSize={ cardList.columns }
+				matchHeight={ cardList.matchHeight }
+				centered={ cardList.centered }
+				/>
 		</div>
 	</Fragment>
 );
+
 
 ComponentReleased.propTypes = {
 	components: PropTypes.arrayOf(

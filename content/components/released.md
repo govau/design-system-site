@@ -1,38 +1,27 @@
 ---
 layout: component/released
-components:
-  - module: Buttons
-    link: /components/buttons
-    version: v0.5.0
-    image: http://via.placeholder.com/300x300/f5f5f5/636363
-  - module: Buttons
-    link: /components/buttons
-    version: v0.5.0
-    image: http://via.placeholder.com/300x300/f5f5f5/636363
-  - module: Buttons
-    link: /components/buttons
-    version: v0.5.0
-    image: http://via.placeholder.com/300x300/f5f5f5/636363
-  - module: Buttons
-    link: /components/buttons
-    version: v0.5.0
-    image: http://via.placeholder.com/300x300/f5f5f5/636363
-  - module: Buttons
-    link: /components/buttons
-    version: v0.5.0
-    image: http://via.placeholder.com/300x300/f5f5f5/636363
-  - module: Buttons
-    link: /components/buttons
-    version: v0.5.0
-    image: http://via.placeholder.com/300x300/f5f5f5/636363
-  - module: Buttons
-    link: /components/buttons
-    version: v0.5.0
-    image: http://via.placeholder.com/300x300/f5f5f5/636363
-  - module: Buttons
-    link: /components/buttons
-    version: v0.5.0
-    image: http://via.placeholder.com/300x300/f5f5f5/636363
+cardList:
+  columns: col-xs-6 col-sm-3
+  matchHeight: true
+  centered: true
+  shadow: true
+  cards:
+    - cardRows:
+      - type: image
+        image: http://via.placeholder.com/300x300/f5f5f5/636363
+        description: A 300x300 image
+        fullwidth: true
+      - type: heading
+        size: 4
+        text: Hello world
+    - cardRows:
+      - type: image
+        image: http://via.placeholder.com/300x300/f5f5f5/636363
+        description: A 300x300 image
+        fullwidth: true
+      - type: heading
+        size: 4
+        text: Boop
 ---
 
 ## Released
