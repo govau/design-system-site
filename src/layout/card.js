@@ -67,7 +67,7 @@ const AUcardCTA = ({ text, link, fullwidth }) => {
 /**
  * The card component
  */
-const AUcard = ({ card, link, shadow, centered }) => {
+const AUcard = ({ card, link, appearance, centered }) => {
 
 	let CardContainer = 'div';
 	let cardProps = {};
@@ -103,7 +103,7 @@ const AUcard = ({ card, link, shadow, centered }) => {
 
 	return (
 		<CardContainer { ...cardProps } className={
-			`au-card ${ shadow ? ' au-card--shadow' : '' }` +
+			`au-card ${ appearance === 'shadow' ? ' au-card--shadow' : '' }` +
 			`${ centered ? ' au-card--centered': '' }`
 		}>
 			{ items.map( ( item, i ) =>
@@ -121,22 +121,19 @@ AUcard.propTypes = {
 /**
  * The CardList component
  */
-const AUcardList = ({ items, columnSize, matchheight, centered, shadow }) => {
-
-	return (
-		<ul className={ `au-card-list${ matchheight ? ' au-card-list--matchheight' : '' }` }>
-			{ items.map( ( item, i ) =>
-				<li key={ i } className={ columnSize } >
-					<AUcard
-						card={ item.card }
-						link={ item.link }
-						shadow={ item.shadow || shadow }
-						centered={ item.centered || centered } />
-				</li>
-			)}
-		</ul>
-	);
-};
+const AUcardList = ({ items, columnSize, matchHeight, centered, appearance }) => (
+	<ul className={ `au-card-list${ matchHeight ? ' au-card-list--matchheight' : '' }` }>
+		{ items.map( ( item, i ) =>
+			<li key={ i } className={ columnSize } >
+				<AUcard
+					card={ item.card }
+					link={ item.link }
+					appearance={ item.appearance || appearance }
+					centered={ item.centered || centered } />
+			</li>
+		)}
+	</ul>
+);
 
 
 export {

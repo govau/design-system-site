@@ -11,7 +11,7 @@ const ComponentReleased = ({ cardList, _body }) => (
 		{ _body }
 		<div className="row">
 			<AUcardList
-				shadow={ cardList.shadow }
+				appearance={ cardList.appearance }
 				items={ cardList.cards }
 				columnSize={ cardList.columns }
 				matchHeight={ cardList.matchHeight }

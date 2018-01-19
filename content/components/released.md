@@ -3,7 +3,7 @@ layout: component/released
 cardList:
   columns: col-xs-6 col-sm-3
   matchHeight: true
-  shadow: true
+  appearance: shadow
   cards:
     - card:
       - type: image
