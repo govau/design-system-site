@@ -56,17 +56,16 @@
 			margin: 0 auto;
 		}
 	}
-}
 
-.au-card__bg {
-	@include AU-space( padding, 1unit );
-	background-color: $AU-color-Background-dark;
+	.au-card__bg {
+		@include AU-space( padding, 1unit );
+		background-color: $AU-color-Background-dark;
 
-	&:not(:first-child) {
-		@include AU-space( margin-top, 1unit );
+		&:not(:first-child) {
+			@include AU-space( margin-top, 1unit );
+		}
 	}
 }
-
 
 // When the box is a link
 a.au-card {
@@ -86,7 +85,8 @@ a.au-card {
 		}
 	}
 
-	.au-card__link {
+	.au-card__link,
+	.au-card__cta {
 		color: $AU-color-Action;
 		text-decoration: underline;
 		text-decoration-skip: ink;

@@ -1,4 +1,4 @@
-import AUcard from '../card';
+import { AUcardList } from '../card';
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
@@ -10,74 +10,102 @@ const ComponentReleased = ({ components, _body }) => (
 	<Fragment>
 		{ _body }
 		<div className="row">
-			<AUcard shadow centered cardRows={[
-				{
-					type: 'image',
-					image: 'http://via.placeholder.com/300x300/f5f5f5/636363',
-					fullwidth: true,
-					description: 'A 300x300 image'
-				},
-				{
-					type: 'heading',
-					size: '5',
-					text: 'Hello world'
-				},
-				{
-					type: 'content',
-					text: 'Hello world'
-				},
-				{
-					type: 'image',
-					link: '#',
-					image: 'http://via.placeholder.com/300x300/f5f5f5/636363'
-				},
-				{
-					type: 'raw',
-					html: <p>Some raw html</p>
-				},
-				{
-					type: 'line'
-				},
-				{
-					type: 'cta',
-					link: '#',
-					text: 'Read more'
-				}
-			]} />
-			<AUcard link="#" shadow centered cardRows={[
-				{
-					type: 'image',
-					image: 'http://via.placeholder.com/300x300/f5f5f5/636363',
-					fullwidth: true,
-					description: 'A 300x300 image'
-				},
-				{
-					type: 'heading',
-					size: '5',
-					text: 'Hello world'
-				},
-				{
-					type: 'content',
-					text: 'Hello world'
-				},
-				{
-					type: 'image',
-					link: '#',
-					image: 'http://via.placeholder.com/300x300/f5f5f5/636363'
-				},
-				{
-					type: 'raw',
-					html: <p>Some raw html</p>
-				},
-				{
-					type: 'line'
-				},
-				{
-					type: 'cta',
-					link: '#',
-					text: 'Read more'
-				}
-			]} />
+			<AUcardList
+				matchHeight
+				columnSize="col-xs-6 col-sm-3"
+				centered
+				shadow
+				items={[{
+						cardRows: [
+							{
+								type: 'image',
+								image: 'http://via.placeholder.com/300x300/f5f5f5/636363',
+								fullwidth: true,
+								description: 'A 300x300 image'
+							},
+							{
+								type: 'heading',
+								size: '5',
+								text: 'Hello world'
+							}
+						]
+					},
+					{
+						cardRows: [
+							{
+								type: 'image',
+								image: 'http://via.placeholder.com/300x300/f5f5f5/636363',
+								fullwidth: true,
+								description: 'A 300x300 image'
+							},
+							{
+								type: 'heading',
+								size: '5',
+								text: 'Hello world'
+							}
+						]
+					},
+					{
+						cardRows: [
+							{
+								type: 'image',
+								image: 'http://via.placeholder.com/300x300/f5f5f5/636363',
+								fullwidth: true,
+								description: 'A 300x300 image'
+							},
+							{
+								type: 'heading',
+								size: '5',
+								text: 'Hello world'
+							}
+						]
+					},
+					{
+						cardRows: [
+							{
+								type: 'image',
+								image: 'http://via.placeholder.com/300x300/f5f5f5/636363',
+								fullwidth: true,
+								description: 'A 300x300 image'
+							},
+							{
+								type: 'heading',
+								size: '5',
+								text: 'Hello world'
+							}
+						]
+					},
+					{
+						cardRows: [
+							{
+								type: 'image',
+								image: 'http://via.placeholder.com/300x300/f5f5f5/636363',
+								fullwidth: true,
+								description: 'A 300x300 image'
+							},
+							{
+								type: 'heading',
+								size: '5',
+								text: 'Hello world'
+							}
+						]
+					},
+					{
+						cardRows: [
+							{
+								type: 'image',
+								image: 'http://via.placeholder.com/300x300/f5f5f5/636363',
+								fullwidth: true,
+								description: 'A 300x300 image'
+							},
+							{
+								type: 'heading',
+								size: '5',
+								text: 'Hello world'
+							}
+						]
+					}
+				]} />
 		</div>
 	</Fragment>
 );
@@ -111,3 +139,77 @@ export default ComponentReleased;
 // 		))
 // 	}
 // </ul>
+
+
+// <AUcard shadow centered items={[
+// 	{
+// 		type: 'image',
+// 		image: 'http://via.placeholder.com/300x300/f5f5f5/636363',
+// 		fullwidth: true,
+// 		description: 'A 300x300 image'
+// 	},
+// 	{
+// 		type: 'heading',
+// 		size: '5',
+// 		text: 'Hello world'
+// 	},
+// 	{
+// 		type: 'content',
+// 		text: 'Hello world'
+// 	},
+// 	{
+// 		type: 'image',
+// 		link: '#',
+// 		image: 'http://via.placeholder.com/300x300/f5f5f5/636363'
+// 	},
+// 	{
+// 		type: 'raw',
+// 		html: <p>Some raw html</p>
+// 	},
+// 	{
+// 		type: 'line'
+// 	},
+// 	{
+// 		type: 'cta',
+// 		link: '#',
+// 		text: 'Read more'
+// 	}
+// ]} />
+// 	<AUcard link="#" shadow centered items={[
+// 		{
+// 			type: 'image',
+// 			image: 'http://via.placeholder.com/300x300/f5f5f5/636363',
+// 			fullwidth: true,
+// 			description: 'A 300x300 image'
+// 		},
+// 		{
+// 			type: 'heading',
+// 			size: '5',
+// 			text: 'Hello world'
+// 		},
+// 		{
+// 			type: 'content',
+// 			text: 'Hello world'
+// 		},
+// 		{
+// 			type: 'content',
+// 			text: 'Hello world'
+// 		},
+// 		{
+// 			type: 'image',
+// 			link: '#',
+// 			image: 'http://via.placeholder.com/300x300/f5f5f5/636363'
+// 		},
+// 		{
+// 			type: 'raw',
+// 			html: <p>Some raw html</p>
+// 		},
+// 		{
+// 			type: 'line'
+// 		},
+// 		{
+// 			type: 'cta',
+// 			link: '#',
+// 			text: 'Read more'
+// 		}
+// 	]} />
