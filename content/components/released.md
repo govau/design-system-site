@@ -3,10 +3,9 @@ layout: component/released
 cardList:
   columns: col-xs-6 col-sm-3
   matchHeight: true
-  centered: true
   shadow: true
   cards:
-    - cardRows:
+    - card:
       - type: image
         image: http://via.placeholder.com/300x300/f5f5f5/636363
         description: A 300x300 image
@@ -14,7 +13,7 @@ cardList:
       - type: heading
         size: 4
         text: Hello world
-    - cardRows:
+    - card:
       - type: image
         image: http://via.placeholder.com/300x300/f5f5f5/636363
         description: A 300x300 image

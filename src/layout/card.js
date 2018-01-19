@@ -67,7 +67,7 @@ const AUcardCTA = ({ text, link, fullwidth }) => {
 /**
  * The card component
  */
-const AUcard = ({ cardRows, link, shadow, centered }) => {
+const AUcard = ({ card, link, shadow, centered }) => {
 
 	let CardContainer = 'div';
 	let cardProps = {};
@@ -87,7 +87,7 @@ const AUcard = ({ cardRows, link, shadow, centered }) => {
 	}
 
 	const items = [];
-	cardRows.map( cardRow => {
+	card.map( cardRow => {
 
 		// If the parent is a link remove link
 		if( CardContainer === 'a' ){
@@ -128,7 +128,7 @@ const AUcardList = ({ items, columnSize, matchheight, centered, shadow }) => {
 			{ items.map( ( item, i ) =>
 				<li key={ i } className={ columnSize } >
 					<AUcard
-						cardRows={ item.cardRows }
+						card={ item.card }
 						link={ item.link }
 						shadow={ item.shadow || shadow }
 						centered={ item.centered || centered } />
