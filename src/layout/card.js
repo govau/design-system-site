@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
 
-const AUcardHeading = ({ text, size, fullwidth }) => {
-	const HeadingContainer = `h${ size }`;
+const AUcardHeading = ({ text, headingSize, fullwidth }) => {
+	const HeadingContainer = `h${ headingSize }`;
 
 	return(
-		<HeadingContainer className={ `au-display-${size}${ fullwidth ? ' au-card__fullwidth' : '' }` }>
+		<HeadingContainer className={ `au-card__title${ fullwidth ? ' au-card__fullwidth' : '' }` }>
 			{ text }
 		</HeadingContainer>
 	);

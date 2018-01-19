@@ -23,12 +23,24 @@ const ComponentReleased = ({ cardList, _body }) => (
 
 
 ComponentReleased.propTypes = {
-	components: PropTypes.arrayOf(
+	cardList: PropTypes.arrayOf(
 		PropTypes.shape({
-			image: PropTypes.string,
-			link: PropTypes.string.isRequired,
-			module: PropTypes.string.isRequired,
-			version: PropTypes.string.isRequired,
+			apperance: PropTypes.string,
+			columnSize: PropTypes.string,
+			matchHeight: PropTypes.bool,
+			centered: PropTypes.string,
+			items: PropTypes.arrayOf(
+				PropTypes.shape({
+					type: PropTypes.string.isRequired,
+					image: PropTypes.string,
+					description: PropTypes.string,
+					text: PropTypes.string,
+					link: PropTypes.string,
+					fullwidth: PropTypes.bool,
+					headingSize: PropTypes.string,
+					html: PropTypes.node
+				})
+			)
 		})
 	).isRequired
 };

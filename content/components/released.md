@@ -5,13 +5,14 @@ cardList:
   matchHeight: true
   appearance: shadow
   cards:
-    - card:
+    - link: http://google.com
+      card:
       - type: image
         image: http://via.placeholder.com/300x300/f5f5f5/636363
         description: A 300x300 image
         fullwidth: true
       - type: heading
-        size: 4
+        headingSize: 3
         text: Hello world
     - card:
       - type: image
@@ -19,7 +20,7 @@ cardList:
         description: A 300x300 image
         fullwidth: true
       - type: heading
-        size: 4
+        headingSize: 3
         text: Boop
 ---
 
