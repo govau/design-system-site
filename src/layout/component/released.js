@@ -9,10 +9,11 @@ import PropTypes from 'prop-types';
 const ComponentReleased = ({ cardList, _body }) => (
 	<Fragment>
 		{ _body }
+
 		<div className="row">
 			<AUcardList
 				appearance={ cardList.appearance }
-				items={ cardList.cards }
+				cards={ cardList.cards }
 				columnSize={ cardList.columns }
 				matchHeight={ cardList.matchHeight }
 				centered={ cardList.centered }
@@ -29,16 +30,19 @@ ComponentReleased.propTypes = {
 			columnSize: PropTypes.string,
 			matchHeight: PropTypes.bool,
 			centered: PropTypes.string,
-			items: PropTypes.arrayOf(
+			cards: PropTypes.arrayOf(
 				PropTypes.shape({
-					type: PropTypes.string.isRequired,
-					image: PropTypes.string,
-					description: PropTypes.string,
-					text: PropTypes.string,
 					link: PropTypes.string,
-					fullwidth: PropTypes.bool,
-					headingSize: PropTypes.string,
-					html: PropTypes.node
+					rows: PropTypes.shape({
+						type: PropTypes.string.isRequired,
+						image: PropTypes.string,
+						description: PropTypes.string,
+						text: PropTypes.string,
+						link: PropTypes.string,
+						fullwidth: PropTypes.bool,
+						headingSize: PropTypes.string,
+						html: PropTypes.node,
+					})
 				})
 			)
 		})

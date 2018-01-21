@@ -6,15 +6,15 @@ cardList:
   appearance: shadow
   cards:
     - link: http://google.com
-      card:
-      - type: image
-        image: http://via.placeholder.com/300x300/f5f5f5/636363
-        description: A 300x300 image
-        fullwidth: true
-      - type: heading
-        headingSize: 3
-        text: Hello world
-    - card:
+      rows:
+        - type: image
+          image: http://via.placeholder.com/300x300/f5f5f5/636363
+          description: A 300x300 image
+          fullwidth: true
+        - type: heading
+          headingSize: 3
+          text: Hello world
+    - rows:
       - type: image
         image: http://via.placeholder.com/300x300/f5f5f5/636363
         description: A 300x300 image

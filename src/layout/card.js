@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
 
-const AUcardHeading = ({ text, headingSize, fullwidth }) => {
+export const AUcardHeading = ({ text, headingSize, fullwidth }) => {
 	const HeadingContainer = `h${ headingSize }`;
 
 	return(
@@ -13,7 +13,7 @@ const AUcardHeading = ({ text, headingSize, fullwidth }) => {
 };
 
 
-const AUcardImage = ({ image, description, link, fullwidth }) => {
+export const AUcardImage = ({ image, description, link, fullwidth }) => {
 	let ImageContainer = 'div';
 	let imageProps = {};
 
@@ -30,24 +30,24 @@ const AUcardImage = ({ image, description, link, fullwidth }) => {
 };
 
 
-const AUcardContent = ({ text, fullwidth }) => (
+export const AUcardContent = ({ text, fullwidth }) => (
 	<p className={ `au-card__content${ fullwidth ? ' au-card__fullwidth' : '' }` }>{ text }</p>
 );
 
 
-const AUcardRaw = ({ html, fullwidth }) => (
-	<div className={ `au-card__raw${ fullwidth ? ' au-card__fullwidth' : '' }` }>
+export const AUcardHTML = ({ html, fullwidth }) => (
+	<div className={ `au-card__html${ fullwidth ? ' au-card__fullwidth' : '' }` }>
 		{ html }
 	</div>
 );
 
 
-const AUcardLine = ({ fullwidth }) => (
+export const AUcardLine = ({ fullwidth }) => (
 	<hr className={ `au-card__line${ fullwidth ? ' au-card__fullwidth' : '' }` } />
 );
 
 
-const AUcardCTA = ({ text, link, fullwidth }) => {
+export const AUcardCTA = ({ text, link, fullwidth }) => {
 	let CTAContainer = 'div';
 	let CTAProps = {};
 
@@ -67,14 +67,13 @@ const AUcardCTA = ({ text, link, fullwidth }) => {
 /**
  * The card component
  */
-const AUcard = ({ card, link, appearance, centered }) => {
+export const AUcard = ({ rows, link, appearance, centered, href, ...attributesOptions = {} }) => {
 
 	let CardContainer = 'div';
-	let cardProps = {};
 
 	if( link !== undefined ) {
 		CardContainer = 'a';
-		cardProps = { href: link };
+		attributesOptions.href = link;
 	}
 
 	const CardComponents = {
@@ -83,11 +82,11 @@ const AUcard = ({ card, link, appearance, centered }) => {
 		image: AUcardImage,
 		heading: AUcardHeading,
 		content: AUcardContent,
-		raw: AUcardRaw,
+		html: AUcardHTML,
 	}
 
 	const items = [];
-	card.map( cardRow => {
+	rows.map( cardRow => {
 
 		// If the parent is a link remove link
 		if( CardContainer === 'a' ){
@@ -97,46 +96,43 @@ const AUcard = ({ card, link, appearance, centered }) => {
 		// Create an object to make the component
 		items.push({
 			component: CardComponents[ cardRow.type ],
-			props: cardRow
+			props: cardRow,
 		});
 	});
 
 	return (
-		<CardContainer { ...cardProps } className={
+		<CardContainer { ...attributesOptions } className={
 			`au-card ${ appearance === 'shadow' ? ' au-card--shadow' : '' }` +
 			`${ centered ? ' au-card--centered': '' }`
 		}>
-			{ items.map( ( item, i ) =>
-				<item.component { ...item.props } key={ i } />
-			)}
+			{
+				items.map( ( item, i ) =>
+					<item.component { ...item.props } key={ i } />
+				)
+			}
 		</CardContainer>
 	);
 }
 
-AUcard.propTypes = {
-
-};
+AUcard.propTypes = {};
 
 
 /**
  * The CardList component
  */
-const AUcardList = ({ items, columnSize, matchHeight, centered, appearance }) => (
+export const AUcardList = ({ cards, columnSize, matchHeight, centered, appearance }) => (
 	<ul className={ `au-card-list${ matchHeight ? ' au-card-list--matchheight' : '' }` }>
-		{ items.map( ( item, i ) =>
-			<li key={ i } className={ columnSize } >
-				<AUcard
-					card={ item.card }
-					link={ item.link }
-					appearance={ item.appearance || appearance }
-					centered={ item.centered || centered } />
-			</li>
-		)}
+		{
+			cards.map( ( item, i ) =>
+				<li key={ i } className={ columnSize } >
+					<AUcard
+						card={ item.card }
+						link={ item.link }
+						appearance={ item.appearance || appearance }
+						centered={ item.centered || centered }
+					/>
+				</li>
+			)
+		}
 	</ul>
 );
-
-
-export {
-	AUcard,
-	AUcardList
-};
