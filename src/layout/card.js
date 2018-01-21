@@ -2,6 +2,13 @@ import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
 
+/**
+ * [description]
+ * @param  {[type]} options.text        [description]
+ * @param  {[type]} options.headingSize [description]
+ * @param  {[type]} options.fullwidth   [description]
+ * @return {[type]}                     [description]
+ */
 export const AUcardHeading = ({ text, headingSize, fullwidth }) => {
 	const HeadingContainer = `h${ headingSize }`;
 
@@ -12,7 +19,19 @@ export const AUcardHeading = ({ text, headingSize, fullwidth }) => {
 	);
 };
 
+AUcardHeading.propTypes = {};
 
+AUcardHeading.defaultProps = {};
+
+
+/**
+ * [description]
+ * @param  {[type]} options.image       [description]
+ * @param  {[type]} options.description [description]
+ * @param  {[type]} options.link        [description]
+ * @param  {[type]} options.fullwidth   [description]
+ * @return {[type]}                     [description]
+ */
 export const AUcardImage = ({ image, description, link, fullwidth }) => {
 	let ImageContainer = 'div';
 	let imageProps = {};
@@ -29,24 +48,64 @@ export const AUcardImage = ({ image, description, link, fullwidth }) => {
 	);
 };
 
+AUcardImage.propTypes = {};
 
+AUcardImage.defaultProps = {};
+
+
+/**
+ * [description]
+ * @param  {[type]} options.text      [description]
+ * @param  {[type]} options.fullwidth [description]
+ * @return {[type]}                   [description]
+ */
 export const AUcardContent = ({ text, fullwidth }) => (
 	<p className={ `au-card__content${ fullwidth ? ' au-card__fullwidth' : '' }` }>{ text }</p>
 );
 
+AUcardContent.propTypes = {};
 
+AUcardContent.defaultProps = {};
+
+
+/**
+ * [description]
+ * @param  {[type]} options.html      [description]
+ * @param  {[type]} options.fullwidth [description]
+ * @return {[type]}                   [description]
+ */
 export const AUcardHTML = ({ html, fullwidth }) => (
 	<div className={ `au-card__html${ fullwidth ? ' au-card__fullwidth' : '' }` }>
 		{ html }
 	</div>
 );
 
+AUcardHTML.propTypes = {};
 
+AUcardHTML.defaultProps = {};
+
+
+/**
+ * [description]
+ * @param  {[type]} options.fullwidth [description]
+ * @return {[type]}                   [description]
+ */
 export const AUcardLine = ({ fullwidth }) => (
 	<hr className={ `au-card__line${ fullwidth ? ' au-card__fullwidth' : '' }` } />
 );
 
+AUcardLine.propTypes = {};
 
+AUcardLine.defaultProps = {};
+
+
+/**
+ * [description]
+ * @param  {[type]} options.text      [description]
+ * @param  {[type]} options.link      [description]
+ * @param  {[type]} options.fullwidth [description]
+ * @return {[type]}                   [description]
+ */
 export const AUcardCTA = ({ text, link, fullwidth }) => {
 	let CTAContainer = 'div';
 	let CTAProps = {};
@@ -63,9 +122,20 @@ export const AUcardCTA = ({ text, link, fullwidth }) => {
 	);
 };
 
+AUcardCTA.propTypes = {};
+
+AUcardCTA.defaultProps = {};
+
 
 /**
- * The card component
+ * [description]
+ * @param  {[type]}    options.rows              [description]
+ * @param  {[type]}    options.link              [description]
+ * @param  {[type]}    options.appearance        [description]
+ * @param  {[type]}    options.centered          [description]
+ * @param  {[type]}    options.href              [description]
+ * @param  {...[type]} options.attributesOptions [description]
+ * @return {[type]}                              [description]
  */
 export const AUcard = ({ rows, link, appearance, centered, href, ...attributesOptions = {} }) => {
 
@@ -116,9 +186,13 @@ export const AUcard = ({ rows, link, appearance, centered, href, ...attributesOp
 
 AUcard.propTypes = {};
 
+AUcard.defaultProps = {};
+
 
 /**
- * The CardList component
+ * [description]
+ * @param  {[type]} { cards,        columnSize, matchHeight, centered, appearance }) [description]
+ * @return {[type]}    [description]
  */
 export const AUcardList = ({ cards, columnSize, matchHeight, centered, appearance }) => (
 	<ul className={ `au-card-list${ matchHeight ? ' au-card-list--matchheight' : '' }` }>
@@ -136,3 +210,7 @@ export const AUcardList = ({ cards, columnSize, matchHeight, centered, appearanc
 		}
 	</ul>
 );
+
+AUcardList.propTypes = {};
+
+AUcardList.defaultProps = {};
