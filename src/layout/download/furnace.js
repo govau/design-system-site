@@ -4,6 +4,7 @@ import React from 'react';
 
 /**
  * The Intro component
+ * @disable-docs
  */
 const Furnace = ({ components, _body }) => (
 	<div className="au-grid">
@@ -29,7 +30,7 @@ const Furnace = ({ components, _body }) => (
 							          <span className="control">
 							            <input type="checkbox" name="components" className="au-control-input__input" value={ components.stub }
 														required={ components.required }
-														checked={ components.required }
+														defaultChecked={ components.required }
 														disabled={ components.required }
 													/>
 							            <span className="au-control-input__text"><span className="sronly">Add</span> { components.name } {
