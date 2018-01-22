@@ -57,7 +57,7 @@ module.exports = exports = function renderer({ Marked, _ID, _relativeURL }) {
 		if( href.startsWith('http://') || href.startsWith('https://') ) {
 			attr = ` rel="external"`;
 		}
-		else if( !href.startsWith('#') && typeof _relativeURL === 'function' ) {
+		else if( !href.startsWith('#') && !href.startsWith('mailto:') && typeof _relativeURL === 'function' ) {
 			href = _relativeURL( href, _ID );
 		}
 
