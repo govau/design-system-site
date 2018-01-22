@@ -1,0 +1,8 @@
+// Abstract
+// A visually larger block of text to introduce a page
+
+.abstract {
+	@include AU-fontgrid( lg );
+	@include AU-space( max-width, 40unit );
+	@include AU-space( margin-top, 1unit );
+}
