@@ -1,6 +1,6 @@
 /***************************************************************************************************************************************************************
  *
- * Card and CardList components
+ * Card, CardRows and CardList components
  *
  * Cards serve as an entry point to more detailed information
  *
@@ -42,7 +42,7 @@ export const AUcardHeading = ({ text, headingSize, fullwidth, link, href, ...att
 AUcardHeading.propTypes = {
 	text: PropTypes.string.isRequired,
 	headingSize: PropTypes.oneOf([ '1', '2', '3', '4', '5', '6' ]).isRequired,
-	fullwidth: PropTypes.string,
+	fullwidth: PropTypes.bool,
 	link: PropTypes.string,
 };
 
@@ -79,7 +79,7 @@ export const AUcardImage = ({ image, description, fullwidth, link, href, ...attr
 AUcardImage.propTypes = {
 	image: PropTypes.string.isRequired,
 	description: PropTypes.string.isRequired,
-	fullwidth: PropTypes.string,
+	fullwidth: PropTypes.bool,
 	link: PropTypes.string,
 };
 
@@ -114,7 +114,7 @@ export const AUcardContent = ({ text, fullwidth, link, href, ...attributesOption
 
 AUcardContent.propTypes = {
 	text: PropTypes.string.isRequired,
-	fullwidth: PropTypes.string,
+	fullwidth: PropTypes.bool,
 	link: PropTypes.string,
 };
 
@@ -149,7 +149,7 @@ export const AUcardCTA = ({ text, fullwidth, link, href, ...attributesOptions = 
 
 AUcardCTA.propTypes = {
 	text: PropTypes.string.isRequired,
-	fullwidth: PropTypes.string,
+	fullwidth: PropTypes.bool,
 	link: PropTypes.string.isRequired,
 };
 
@@ -168,7 +168,7 @@ export const AUcardHTML = ({ html, fullwidth }) => (
 
 AUcardHTML.propTypes = {
 	html: PropTypes.node.isRequired,
-	fullwidth: PropTypes.string,
+	fullwidth: PropTypes.bool,
 };
 
 
@@ -182,7 +182,7 @@ export const AUcardLine = ({ fullwidth }) => (
 );
 
 AUcardLine.propTypes = {
-	fullwidth: PropTypes.string,
+	fullwidth: PropTypes.bool,
 };
 
 
@@ -244,19 +244,44 @@ export const AUcard = ({ rows, appearance, centered, link, href, ...attributesOp
 }
 
 AUcard.propTypes = {
+	/**
+	 * appearance: shadow
+	 */
 	apperance: PropTypes.string,
+
+	/**
+	 * centered: true
+	 */
 	centered: PropTypes.string,
+
+	/**
+	 * link: #
+	 */
 	link: PropTypes.string,
-	rows: PropTypes.shape({
-		type: PropTypes.string.isRequired,
-		image: PropTypes.string,
-		description: PropTypes.string,
-		text: PropTypes.string,
-		link: PropTypes.string,
-		fullwidth: PropTypes.bool,
-		headingSize: PropTypes.string,
-		html: PropTypes.node,
-	})
+
+	/**
+	 * rows:
+	 *   - type: image
+	 *     image: http://via.placeholder.com/300x300/f5f5f5/636363
+	 *     description: A 300x300 image
+	 *     fullwidth: true
+	 *   - type: heading
+	 *     headingSize: 3
+	 *     text: Hello world
+	 *     link: #
+	 */
+	rows: PropTypes.arrayOf(
+		PropTypes.shape({
+			type: PropTypes.string.isRequired,
+			image: PropTypes.string,
+			description: PropTypes.string,
+			text: PropTypes.string,
+			link: PropTypes.string,
+			fullwidth: PropTypes.bool,
+			headingSize: PropTypes.string,
+			html: PropTypes.node,
+		})
+	).isRequired
 };
 
 AUcard.defaultProps = {};
@@ -289,25 +314,65 @@ export const AUcardList = ({ cards, columnSize, matchHeight, centered, appearanc
 );
 
 AUcardList.propTypes = {
+	/**
+	 * appearance: shadow
+	 */
 	apperance: PropTypes.string,
-	centered: PropTypes.string,
+
+	/**
+	 * centered: true
+	 */
+	centered: PropTypes.bool,
+
+	/**
+	 * columnSize: col-xs-6 col-sm-3
+	 */
 	columnSize: PropTypes.string,
+
+	/**
+	 * matchHeight: true
+	 */
 	matchHeight: PropTypes.bool,
+
+	/**
+	 * cards:
+	 * - rows:
+	 *   - type: image
+	 *     image: http://via.placeholder.com/300x300/f5f5f5/636363
+	 *     description: A 300x300 image
+	 *     fullwidth: true
+	 *   - type: heading
+	 *     headingSize: 3
+	 *     text: Hello world
+	 *     link: #
+	 *   link: #
+	 * - rows:
+	 *   - type: image
+	 *     image: http://via.placeholder.com/300x300/f5f5f5/636363
+	 *     description: A 300x300 image
+	 *     fullwidth: true
+	 *   - type: heading
+	 *     headingSize: 3
+	 *     text: Boop
+	 *     link: #
+	 */
 	cards: PropTypes.arrayOf(
 		PropTypes.shape({
 			apperance: PropTypes.string,
 			centered: PropTypes.string,
 			link: PropTypes.string,
-			rows: PropTypes.shape({
-				type: PropTypes.string.isRequired,
-				image: PropTypes.string,
-				description: PropTypes.string,
-				text: PropTypes.string,
-				link: PropTypes.string,
-				fullwidth: PropTypes.bool,
-				headingSize: PropTypes.string,
-				html: PropTypes.node,
-			})
+			rows: PropTypes.arrayOf(
+					PropTypes.shape({
+					type: PropTypes.string.isRequired,
+					image: PropTypes.string,
+					description: PropTypes.string,
+					text: PropTypes.string,
+					link: PropTypes.string,
+					fullwidth: PropTypes.bool,
+					headingSize: PropTypes.string,
+					html: PropTypes.node,
+				})
+			).isRequired
 		})
-	)
+	).isRequired
 };

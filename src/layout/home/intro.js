@@ -56,6 +56,11 @@ Intro.propTypes = {
 	url: PropTypes.string.isRequired,
 
 	/**
+	 * cta: Get started
+	 */
+	cta: PropTypes.string.isRequired,
+
+	/**
 	 * _body: (text)(4)
 	 */
 	_body: PropTypes.node.isRequired,

@@ -1,7 +1,7 @@
 ---
 layout: component/released
 cardList:
-  columns: col-xs-6 col-sm-3
+  columnSize: col-xs-6 col-sm-3
   matchHeight: true
   appearance: shadow
   cards:
@@ -11,7 +11,7 @@ cardList:
           description: A 300x300 image
           fullwidth: true
         - type: heading
-          headingSize: 3
+          headingSize: '3'
           text: Hello world
           link: http://google.com
       link: http://google.com
@@ -21,7 +21,7 @@ cardList:
         description: A 300x300 image
         fullwidth: true
       - type: heading
-        headingSize: 3
+        headingSize: '3'
         text: Boop
         link: http://google.com
 ---
