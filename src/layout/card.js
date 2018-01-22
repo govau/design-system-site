@@ -1,16 +1,36 @@
+/***************************************************************************************************************************************************************
+ *
+ * Card and CardList components
+ *
+ * Cards serve as an entry point to more detailed information
+ *
+ **************************************************************************************************************************************************************/
+
+import React from 'react';
 import PropTypes from 'prop-types';
-import React, { Fragment } from 'react';
 
 
 /**
- * [description]
- * @param  {[type]} options.text        [description]
- * @param  {[type]} options.headingSize [description]
- * @param  {[type]} options.fullwidth   [description]
- * @return {[type]}                     [description]
+ * AUcardHeading - A heading row inside a card
+ *
+ * @param  {string} text             - The text inside the heading
+ * @param  {string} headingSize      - The tag level (<h1/> <h2/> etc)
+ * @param  {string} fullwidth        - If the element stretches to the fullwidth of the container
+ * @param  {string} link             - The link that the element goes to
+ * @param  {string} href             - We add the href so it isn't added to the attributeOptions
+ * @param  {string} attributeOptions - All of the other properties that can be added
  */
-export const AUcardHeading = ({ text, headingSize, fullwidth }) => {
+export const AUcardHeading = ({ text, headingSize, fullwidth, link, href, ...attributesOptions = {} }) => {
+
 	const HeadingContainer = `h${ headingSize }`;
+
+	if ( link ) {
+		return (
+			<HeadingContainer className={ `au-card__title${ fullwidth ? ' au-card__fullwidth' : '' }` }>
+				<a href={ link } >{ text }</a>
+			</HeadingContainer>
+		)
+	}
 
 	return(
 		<HeadingContainer className={ `au-card__title${ fullwidth ? ' au-card__fullwidth' : '' }` }>
@@ -19,60 +39,126 @@ export const AUcardHeading = ({ text, headingSize, fullwidth }) => {
 	);
 };
 
-AUcardHeading.propTypes = {};
+AUcardHeading.propTypes = {
+	text: PropTypes.string.isRequired,
+	headingSize: PropTypes.oneOf([ '1', '2', '3', '4', '5', '6' ]).isRequired,
+	fullwidth: PropTypes.string,
+	link: PropTypes.string,
+};
 
-AUcardHeading.defaultProps = {};
+AUcardHeading.defaultProps = {
+	headingSize: '3',
+};
 
 
 /**
- * [description]
- * @param  {[type]} options.image       [description]
- * @param  {[type]} options.description [description]
- * @param  {[type]} options.link        [description]
- * @param  {[type]} options.fullwidth   [description]
- * @return {[type]}                     [description]
+ * AUcardImage - An image row inside a card
+ *
+ * @param  {string} image            - The image inside the row
+ * @param  {string} description      - The text only description for the image
+ * @param  {string} fullwidth        - If the element stretches to the fullwidth of the container
+ * @param  {string} link             - The link that the element goes to
+ * @param  {string} href             - We add the href so it isn't added to the attributeOptions
+ * @param  {string} attributeOptions - All of the other properties that can be added
  */
-export const AUcardImage = ({ image, description, link, fullwidth }) => {
+export const AUcardImage = ({ image, description, fullwidth, link, href, ...attributesOptions = {} }) => {
 	let ImageContainer = 'div';
-	let imageProps = {};
 
 	if( link !== undefined ) {
 		ImageContainer = 'a';
-		imageProps = { href: link };
+		attributesOptions.href = link;
 	}
 
 	return(
-		<ImageContainer { ...imageProps } className={ `au-card__image${ fullwidth ? ' au-card__fullwidth' : '' }` }>
+		<ImageContainer { ...attributesOptions } className={ `au-card__image${ fullwidth ? ' au-card__fullwidth' : '' }` }>
 			<img alt={ description } src={ image } />
 		</ImageContainer>
 	);
 };
 
-AUcardImage.propTypes = {};
-
-AUcardImage.defaultProps = {};
+AUcardImage.propTypes = {
+	image: PropTypes.string.isRequired,
+	description: PropTypes.string.isRequired,
+	fullwidth: PropTypes.string,
+	link: PropTypes.string,
+};
 
 
 /**
- * [description]
- * @param  {[type]} options.text      [description]
- * @param  {[type]} options.fullwidth [description]
- * @return {[type]}                   [description]
+ * AUcardContent - A content row inside a card
+ *
+ * @param  {string} text             - The text inside the content area
+ * @param  {string} fullwidth        - If the element stretches to the fullwidth of the container
+ * @param  {string} link             - The link that the element goes to
+ * @param  {string} href             - We add the href so it isn't added to the attributeOptions
+ * @param  {string} attributeOptions - All of the other properties that can be added
  */
-export const AUcardContent = ({ text, fullwidth }) => (
-	<p className={ `au-card__content${ fullwidth ? ' au-card__fullwidth' : '' }` }>{ text }</p>
-);
+export const AUcardContent = ({ text, fullwidth, link, href, ...attributesOptions = {} }) => {
 
-AUcardContent.propTypes = {};
+	let ContentContainer = 'p';
 
-AUcardContent.defaultProps = {};
+	if( link !== undefined ) {
+		ContentContainer = 'a';
+		attributesOptions.href = link;
+	}
+
+	return (
+		<ContentContainer
+			{ ...attributesOptions }
+			className={ `au-card__content${ fullwidth ? ' au-card__fullwidth' : '' }` }
+		>
+			{ text }
+		</ContentContainer>
+	);
+};
+
+AUcardContent.propTypes = {
+	text: PropTypes.string.isRequired,
+	fullwidth: PropTypes.string,
+	link: PropTypes.string,
+};
 
 
 /**
- * [description]
- * @param  {[type]} options.html      [description]
- * @param  {[type]} options.fullwidth [description]
- * @return {[type]}                   [description]
+ * AUcardCTA - A call to action row inside a card
+ *
+ * @param  {[type]} text             - The text inside the call to action
+ * @param  {string} fullwidth        - If the element stretches to the fullwidth of the container
+ * @param  {string} link             - The link that the element goes to
+ * @param  {string} href             - We add the href so it isn't added to the attributeOptions
+ * @param  {string} attributeOptions - All of the other properties that can be added
+ */
+export const AUcardCTA = ({ text, fullwidth, link, href, ...attributesOptions = {} }) => {
+
+	let CTAContainer = 'div';
+
+	if( link !== undefined ) {
+		CTAContainer = 'a';
+		attributesOptions.href = link;
+	}
+
+	return(
+		<CTAContainer
+			{ ...attributesOptions }
+			className={ `au-card__cta${ fullwidth ? ' au-card__fullwidth' : '' }` }
+		>
+			{ text }
+		</CTAContainer>
+	);
+};
+
+AUcardCTA.propTypes = {
+	text: PropTypes.string.isRequired,
+	fullwidth: PropTypes.string,
+	link: PropTypes.string.isRequired,
+};
+
+
+/**
+ * AUcardHTML - A html row inside a card
+ *
+ * @param  {[type]} html      - The HTML inside the row
+ * @param  {string} fullwidth - If the element stretches to the fullwidth of the container
  */
 export const AUcardHTML = ({ html, fullwidth }) => (
 	<div className={ `au-card__html${ fullwidth ? ' au-card__fullwidth' : '' }` }>
@@ -80,64 +166,37 @@ export const AUcardHTML = ({ html, fullwidth }) => (
 	</div>
 );
 
-AUcardHTML.propTypes = {};
-
-AUcardHTML.defaultProps = {};
+AUcardHTML.propTypes = {
+	html: PropTypes.node.isRequired,
+	fullwidth: PropTypes.string,
+};
 
 
 /**
- * [description]
- * @param  {[type]} options.fullwidth [description]
- * @return {[type]}                   [description]
+ * AUcardLine - A line row inside a card
+ *
+ * @param  {string} fullwidth - If the element stretches to the fullwidth of the container
  */
 export const AUcardLine = ({ fullwidth }) => (
 	<hr className={ `au-card__line${ fullwidth ? ' au-card__fullwidth' : '' }` } />
 );
 
-AUcardLine.propTypes = {};
-
-AUcardLine.defaultProps = {};
-
-
-/**
- * [description]
- * @param  {[type]} options.text      [description]
- * @param  {[type]} options.link      [description]
- * @param  {[type]} options.fullwidth [description]
- * @return {[type]}                   [description]
- */
-export const AUcardCTA = ({ text, link, fullwidth }) => {
-	let CTAContainer = 'div';
-	let CTAProps = {};
-
-	if( link !== undefined ) {
-		CTAContainer = 'a';
-		CTAProps = { href: link };
-	}
-
-	return(
-		<CTAContainer { ...CTAProps } className={ `au-card__cta${ fullwidth ? ' au-card__fullwidth' : '' }` }>
-			{ text }
-		</CTAContainer>
-	);
+AUcardLine.propTypes = {
+	fullwidth: PropTypes.string,
 };
 
-AUcardCTA.propTypes = {};
-
-AUcardCTA.defaultProps = {};
-
 
 /**
- * [description]
- * @param  {[type]}    options.rows              [description]
- * @param  {[type]}    options.link              [description]
- * @param  {[type]}    options.appearance        [description]
- * @param  {[type]}    options.centered          [description]
- * @param  {[type]}    options.href              [description]
- * @param  {...[type]} options.attributesOptions [description]
- * @return {[type]}                              [description]
+ * AUcard - An individual card
+ *
+ * @param  {object}  rows             - The rows inside the card
+ * @param  {string}  appearance       - The appearance of the card ( shadow border-left etc)
+ * @param  {boolean} centered         - If the card has centered text
+ * @param  {string}  link             - The link that the element goes to
+ * @param  {string}  href             - We add the href so it isn't added to the attributeOptions
+ * @param  {string}  attributeOptions - All of the other properties that can be added
  */
-export const AUcard = ({ rows, link, appearance, centered, href, ...attributesOptions = {} }) => {
+export const AUcard = ({ rows, appearance, centered, link, href, ...attributesOptions = {} }) => {
 
 	let CardContainer = 'div';
 
@@ -156,17 +215,17 @@ export const AUcard = ({ rows, link, appearance, centered, href, ...attributesOp
 	}
 
 	const items = [];
-	rows.map( cardRow => {
+	rows.map( row => {
 
 		// If the parent is a link remove link
 		if( CardContainer === 'a' ){
-			delete cardRow.link;
+			delete row.link;
 		}
 
 		// Create an object to make the component
 		items.push({
-			component: CardComponents[ cardRow.type ],
-			props: cardRow,
+			component: CardComponents[ row.type ],
+			props: row,
 		});
 	});
 
@@ -184,26 +243,44 @@ export const AUcard = ({ rows, link, appearance, centered, href, ...attributesOp
 	);
 }
 
-AUcard.propTypes = {};
+AUcard.propTypes = {
+	apperance: PropTypes.string,
+	centered: PropTypes.string,
+	link: PropTypes.string,
+	rows: PropTypes.shape({
+		type: PropTypes.string.isRequired,
+		image: PropTypes.string,
+		description: PropTypes.string,
+		text: PropTypes.string,
+		link: PropTypes.string,
+		fullwidth: PropTypes.bool,
+		headingSize: PropTypes.string,
+		html: PropTypes.node,
+	})
+};
 
 AUcard.defaultProps = {};
 
 
 /**
- * [description]
- * @param  {[type]} { cards,        columnSize, matchHeight, centered, appearance }) [description]
- * @return {[type]}    [description]
+ * AUcardList - A list of cards
+ *
+ * @param  {object}  cards       - The cards and what is inside each row
+ * @param  {string}  columnSize  - The column size for each individual card
+ * @param  {string}  appearance  - The appearance of all the cards ( shadow border-left etc)
+ * @param  {boolean} centered    - If all of the cards have centered text
+ * @param  {boolean} matchHeight - (col-xs-6 col-sm-3 etc)
  */
 export const AUcardList = ({ cards, columnSize, matchHeight, centered, appearance }) => (
 	<ul className={ `au-card-list${ matchHeight ? ' au-card-list--matchheight' : '' }` }>
 		{
-			cards.map( ( item, i ) =>
+			cards.map( ( card, i ) =>
 				<li key={ i } className={ columnSize } >
 					<AUcard
-						card={ item.card }
-						link={ item.link }
-						appearance={ item.appearance || appearance }
-						centered={ item.centered || centered }
+						rows={ card.rows }
+						link={ card.link }
+						appearance={ card.appearance || appearance }
+						centered={ card.centered || centered }
 					/>
 				</li>
 			)
@@ -211,6 +288,26 @@ export const AUcardList = ({ cards, columnSize, matchHeight, centered, appearanc
 	</ul>
 );
 
-AUcardList.propTypes = {};
-
-AUcardList.defaultProps = {};
+AUcardList.propTypes = {
+	apperance: PropTypes.string,
+	centered: PropTypes.string,
+	columnSize: PropTypes.string,
+	matchHeight: PropTypes.bool,
+	cards: PropTypes.arrayOf(
+		PropTypes.shape({
+			apperance: PropTypes.string,
+			centered: PropTypes.string,
+			link: PropTypes.string,
+			rows: PropTypes.shape({
+				type: PropTypes.string.isRequired,
+				image: PropTypes.string,
+				description: PropTypes.string,
+				text: PropTypes.string,
+				link: PropTypes.string,
+				fullwidth: PropTypes.bool,
+				headingSize: PropTypes.string,
+				html: PropTypes.node,
+			})
+		})
+	)
+};
