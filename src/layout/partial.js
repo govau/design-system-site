@@ -1,5 +1,5 @@
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import React from 'react';
 
 
 /**
@@ -8,7 +8,7 @@ import React from 'react';
  * @disable-docs
  */
 const Partial = ({ _body }) => (
-	<div className="content">{ _body }</div>
+	<Fragment>{ _body }</Fragment>
 );
 
 Partial.propTypes = {
