@@ -27,11 +27,13 @@ ComponentReleased.propTypes = {
 	cardList: PropTypes.arrayOf(
 		PropTypes.shape({
 			apperance: PropTypes.string,
+			centered: PropTypes.string,
 			columnSize: PropTypes.string,
 			matchHeight: PropTypes.bool,
-			centered: PropTypes.string,
 			cards: PropTypes.arrayOf(
 				PropTypes.shape({
+					apperance: PropTypes.string,
+					centered: PropTypes.string,
 					link: PropTypes.string,
 					rows: PropTypes.shape({
 						type: PropTypes.string.isRequired,
