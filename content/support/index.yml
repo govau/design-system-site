@@ -1,0 +1,12 @@
+pagetitle: Support
+
+header:
+  - /_shared/header.md
+
+main:
+  - git-issue.md
+  - faqs.md
+  - email-the-team.md
+
+footer:
+  - /_shared/footer.md
