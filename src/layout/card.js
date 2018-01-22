@@ -1,16 +1,33 @@
+/***************************************************************************************************************************************************************
+ *
+ * Card and CardList components
+ *
+ * Cards serve as an entry point to more detailed information
+ *
+ **************************************************************************************************************************************************************/
+
+import React from 'react';
 import PropTypes from 'prop-types';
-import React, { Fragment } from 'react';
 
 
 /**
- * [description]
- * @param  {[type]} options.text        [description]
- * @param  {[type]} options.headingSize [description]
- * @param  {[type]} options.fullwidth   [description]
- * @return {[type]}                     [description]
+ * AUcardHeading - A heading row inside a card
+ *
+ * @param  {[type]} text        -
+ * @param  {[type]} headingSize -
+ * @param  {[type]} fullwidth   -
  */
-export const AUcardHeading = ({ text, headingSize, fullwidth }) => {
+export const AUcardHeading = ({ text, headingSize, fullwidth, link, href, ...attributesOptions = {} }) => {
+
 	const HeadingContainer = `h${ headingSize }`;
+
+	if ( link ) {
+		return (
+			<HeadingContainer className={ `au-card__title${ fullwidth ? ' au-card__fullwidth' : '' }` }>
+				<a href={ link } >{ text }</a>
+			</HeadingContainer>
+		)
+	}
 
 	return(
 		<HeadingContainer className={ `au-card__title${ fullwidth ? ' au-card__fullwidth' : '' }` }>
@@ -25,24 +42,23 @@ AUcardHeading.defaultProps = {};
 
 
 /**
- * [description]
- * @param  {[type]} options.image       [description]
- * @param  {[type]} options.description [description]
- * @param  {[type]} options.link        [description]
- * @param  {[type]} options.fullwidth   [description]
- * @return {[type]}                     [description]
+ * AUcardImage - An image row inside a card
+ *
+ * @param  {[type]} image       -
+ * @param  {[type]} description -
+ * @param  {[type]} link        -
+ * @param  {[type]} fullwidth   -
  */
-export const AUcardImage = ({ image, description, link, fullwidth }) => {
+export const AUcardImage = ({ image, description, fullwidth, link, href, ...attributesOptions = {} }) => {
 	let ImageContainer = 'div';
-	let imageProps = {};
 
 	if( link !== undefined ) {
 		ImageContainer = 'a';
-		imageProps = { href: link };
+		attributesOptions.href = link;
 	}
 
 	return(
-		<ImageContainer { ...imageProps } className={ `au-card__image${ fullwidth ? ' au-card__fullwidth' : '' }` }>
+		<ImageContainer { ...attributesOptions } className={ `au-card__image${ fullwidth ? ' au-card__fullwidth' : '' }` }>
 			<img alt={ description } src={ image } />
 		</ImageContainer>
 	);
@@ -54,14 +70,29 @@ AUcardImage.defaultProps = {};
 
 
 /**
- * [description]
- * @param  {[type]} options.text      [description]
- * @param  {[type]} options.fullwidth [description]
- * @return {[type]}                   [description]
+ * AUcardContent - A content row inside a card
+ *
+ * @param  {[type]} text      -
+ * @param  {[type]} fullwidth -
  */
-export const AUcardContent = ({ text, fullwidth }) => (
-	<p className={ `au-card__content${ fullwidth ? ' au-card__fullwidth' : '' }` }>{ text }</p>
-);
+export const AUcardContent = ({ text, fullwidth, link, href, ...attributesOptions = {} }) => {
+
+	let ContentContainer = 'p';
+
+	if( link !== undefined ) {
+		ContentContainer = 'a';
+		attributesOptions.href = link;
+	}
+
+	return (
+		<ContentContainer
+			{ ...attributesOptions }
+			className={ `au-card__content${ fullwidth ? ' au-card__fullwidth' : '' }` }
+		>
+			{ text }
+		</ContentContainer>
+	);
+};
 
 AUcardContent.propTypes = {};
 
@@ -69,10 +100,41 @@ AUcardContent.defaultProps = {};
 
 
 /**
- * [description]
- * @param  {[type]} options.html      [description]
- * @param  {[type]} options.fullwidth [description]
- * @return {[type]}                   [description]
+ * AUcardCTA - A call to action row inside a card
+ *
+ * @param  {[type]} text      -
+ * @param  {[type]} link      -
+ * @param  {[type]} fullwidth -
+ */
+export const AUcardCTA = ({ text, fullwidth, link, href, ...attributesOptions = {} }) => {
+
+	let CTAContainer = 'div';
+
+	if( link !== undefined ) {
+		CTAContainer = 'a';
+		attributesOptions.href = link;
+	}
+
+	return(
+		<CTAContainer
+			{ ...attributesOptions }
+			className={ `au-card__cta${ fullwidth ? ' au-card__fullwidth' : '' }` }
+		>
+			{ text }
+		</CTAContainer>
+	);
+};
+
+AUcardCTA.propTypes = {};
+
+AUcardCTA.defaultProps = {};
+
+
+/**
+ * AUcardHTML - A html row inside a card
+ *
+ * @param  {[type]} html      -
+ * @param  {[type]} fullwidth -
  */
 export const AUcardHTML = ({ html, fullwidth }) => (
 	<div className={ `au-card__html${ fullwidth ? ' au-card__fullwidth' : '' }` }>
@@ -86,9 +148,9 @@ AUcardHTML.defaultProps = {};
 
 
 /**
- * [description]
- * @param  {[type]} options.fullwidth [description]
- * @return {[type]}                   [description]
+ * AUcardLine - A line row inside a card
+ *
+ * @param  {[type]} fullwidth -
  */
 export const AUcardLine = ({ fullwidth }) => (
 	<hr className={ `au-card__line${ fullwidth ? ' au-card__fullwidth' : '' }` } />
@@ -100,44 +162,16 @@ AUcardLine.defaultProps = {};
 
 
 /**
- * [description]
- * @param  {[type]} options.text      [description]
- * @param  {[type]} options.link      [description]
- * @param  {[type]} options.fullwidth [description]
- * @return {[type]}                   [description]
+ * AUcard - An individual card
+ *
+ * @param  {[type]}    rows              -
+ * @param  {[type]}    link              -
+ * @param  {[type]}    appearance        -
+ * @param  {[type]}    centered          -
+ * @param  {[type]}    href              -
+ * @param  {...[type]} attributesOptions -
  */
-export const AUcardCTA = ({ text, link, fullwidth }) => {
-	let CTAContainer = 'div';
-	let CTAProps = {};
-
-	if( link !== undefined ) {
-		CTAContainer = 'a';
-		CTAProps = { href: link };
-	}
-
-	return(
-		<CTAContainer { ...CTAProps } className={ `au-card__cta${ fullwidth ? ' au-card__fullwidth' : '' }` }>
-			{ text }
-		</CTAContainer>
-	);
-};
-
-AUcardCTA.propTypes = {};
-
-AUcardCTA.defaultProps = {};
-
-
-/**
- * [description]
- * @param  {[type]}    options.rows              [description]
- * @param  {[type]}    options.link              [description]
- * @param  {[type]}    options.appearance        [description]
- * @param  {[type]}    options.centered          [description]
- * @param  {[type]}    options.href              [description]
- * @param  {...[type]} options.attributesOptions [description]
- * @return {[type]}                              [description]
- */
-export const AUcard = ({ rows, link, appearance, centered, href, ...attributesOptions = {} }) => {
+export const AUcard = ({ rows, appearance, centered, link, href, ...attributesOptions = {} }) => {
 
 	let CardContainer = 'div';
 
@@ -156,17 +190,17 @@ export const AUcard = ({ rows, link, appearance, centered, href, ...attributesOp
 	}
 
 	const items = [];
-	rows.map( cardRow => {
+	rows.map( row => {
 
 		// If the parent is a link remove link
 		if( CardContainer === 'a' ){
-			delete cardRow.link;
+			delete row.link;
 		}
 
 		// Create an object to make the component
 		items.push({
-			component: CardComponents[ cardRow.type ],
-			props: cardRow,
+			component: CardComponents[ row.type ],
+			props: row,
 		});
 	});
 
@@ -190,20 +224,23 @@ AUcard.defaultProps = {};
 
 
 /**
- * [description]
- * @param  {[type]} { cards,        columnSize, matchHeight, centered, appearance }) [description]
- * @return {[type]}    [description]
+ * AUcardList - A list of cards
+ * @param  {[type]} cards       -
+ * @param  {[type]} columnSize  -
+ * @param  {[type]} matchHeight -
+ * @param  {[type]} centered    -
+ * @param  {[type]} appearance  -
  */
 export const AUcardList = ({ cards, columnSize, matchHeight, centered, appearance }) => (
 	<ul className={ `au-card-list${ matchHeight ? ' au-card-list--matchheight' : '' }` }>
 		{
-			cards.map( ( item, i ) =>
+			cards.map( ( card, i ) =>
 				<li key={ i } className={ columnSize } >
 					<AUcard
-						card={ item.card }
-						link={ item.link }
-						appearance={ item.appearance || appearance }
-						centered={ item.centered || centered }
+						rows={ card.rows }
+						link={ card.link }
+						appearance={ card.appearance || appearance }
+						centered={ card.centered || centered }
 					/>
 				</li>
 			)
@@ -214,3 +251,7 @@ export const AUcardList = ({ cards, columnSize, matchHeight, centered, appearanc
 AUcardList.propTypes = {};
 
 AUcardList.defaultProps = {};
+
+
+// Add prop types and defaults when needed
+// oneOf prop type

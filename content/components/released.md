@@ -5,8 +5,7 @@ cardList:
   matchHeight: true
   appearance: shadow
   cards:
-    - link: http://google.com
-      rows:
+    - rows:
         - type: image
           image: http://via.placeholder.com/300x300/f5f5f5/636363
           description: A 300x300 image
@@ -14,6 +13,8 @@ cardList:
         - type: heading
           headingSize: 3
           text: Hello world
+          link: http://google.com
+      link: http://google.com
     - rows:
       - type: image
         image: http://via.placeholder.com/300x300/f5f5f5/636363
@@ -22,6 +23,7 @@ cardList:
       - type: heading
         headingSize: 3
         text: Boop
+        link: http://google.com
 ---
 
 ## Released
