@@ -1,6 +1,9 @@
 /***************************************************************************************************************************************************************
  *
- * Card, CardRows and CardList components
+ * CardList component
+ *
+ * TODO: Remove disable docs on uikit
+ * @disable-docs
  *
  * Cards serve as an entry point to more detailed information
  *
@@ -17,10 +20,10 @@ import PropTypes from 'prop-types';
  * AUcardList - A list of cards
  *
  * @param  {object}  cards       - The cards and what is inside each row
- * @param  {string}  columnSize  - The column size for each individual card
+ * @param  {string}  columnSize  - The column size for each individual card (col-xs-6 col-sm-3 etc)
  * @param  {string}  appearance  - The appearance of all the cards ( shadow border-left etc)
  * @param  {boolean} alignment   - Text alignment
- * @param  {boolean} matchHeight - (col-xs-6 col-sm-3 etc)
+ * @param  {boolean} matchHeight - Adds flex stlyes so cards match height
  */
 const AUcardList = ({ cards, columnSize, matchHeight, alignment, appearance }) => (
 	<ul className={ `au-card-list${ matchHeight ? ' au-card-list--matchheight' : '' }` }>
@@ -40,39 +43,10 @@ const AUcardList = ({ cards, columnSize, matchHeight, alignment, appearance }) =
 );
 
 AUcardList.propTypes = {
-	/**
-	 * appearance: shadow
-	 */
 	apperance: PropTypes.oneOf([ 'flat', 'shadow', 'border-left' ]),
-
-	/**
-	 * alignment: center
-	 */
 	alignment: PropTypes.oneOf([ 'left', 'center', 'right' ]),
-
-	/**
-	 * columnSize: col-xs-6 col-sm-3
-	 */
 	columnSize: PropTypes.string,
-
-	/**
-	 * matchHeight: true
-	 */
 	matchHeight: PropTypes.bool,
-
-	/**
-   * cards:
-	 *   - link: http://google.com
-   *     rows:
-   *       - type: image
-   *         image: http://via.placeholder.com/300x300/f5f5f5/636363
-   *         description: A 300x300 image
-   *         fullwidth: true
-   *       - type: heading
-   *         headingSize: '3'
-   *         text: Hello world
-   *         link: http://google.com
-	 */
 	cards: PropTypes.arrayOf(
 		PropTypes.shape({
 			apperance: PropTypes.oneOf([ 'flat', 'shadow', 'border-left' ]),

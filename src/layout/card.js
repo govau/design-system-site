@@ -1,6 +1,9 @@
 /***************************************************************************************************************************************************************
  *
- * Card, CardRows and CardList components
+ * Card and CardRows components
+ *
+ * TODO: Remove disable docs on uikit
+ * @disable-docs
  *
  * Cards serve as an entry point to more detailed information
  *
@@ -244,32 +247,9 @@ const AUcard = ({ rows, appearance, alignment, link, href, ...attributesOptions 
 }
 
 AUcard.propTypes = {
-	/**
-	 * appearance: shadow
-	 */
 	apperance: PropTypes.oneOf([ 'flat', 'shadow', 'border-left' ]),
-
-	/**
-	 * alignment: center
-	 */
 	alignment: PropTypes.oneOf([ 'left', 'center', 'right' ]),
-
-	/**
-	 * link: #
-	 */
 	link: PropTypes.string,
-
-	/**
-	 * rows:
-	 *   - type: image
-	 *     image: http://via.placeholder.com/300x300/f5f5f5/636363
-	 *     description: A 300x300 image
-	 *     fullwidth: true
-	 *   - type: heading
-	 *     headingSize: '3'
-	 *     text: Hello world
-	 *     link: #
-	 */
 	rows: PropTypes.arrayOf(
 		PropTypes.shape({
 			type: PropTypes.string.isRequired,
