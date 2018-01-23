@@ -5,7 +5,7 @@ import React from 'react';
 /**
  * The page component for components
  */
-const Component = ({
+const ComponentPage = ({
 	_ID,
 	_relativeURL,
 	header,
@@ -56,7 +56,7 @@ const Component = ({
 	);
 }
 
-Component.propTypes = {
+ComponentPage.propTypes = {
 	/**
 	 * pagetitle: Homepage
 	 */
@@ -78,6 +78,6 @@ Component.propTypes = {
 	footer: PropTypes.node.isRequired,
 };
 
-Component.defaultProps = {};
+ComponentPage.defaultProps = {};
 
-export default Component;
+export default ComponentPage;

@@ -1,4 +1,4 @@
-import { AUcardList } from '../card';
+import AUcardList from '../card-list';
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
@@ -16,7 +16,7 @@ const ComponentReleased = ({ cardList, _body }) => (
 				appearance={ cardList.appearance }
 				columnSize={ cardList.columnSize }
 				matchHeight={ cardList.matchHeight }
-				centered={ cardList.centered }
+				alignment={ cardList.alignment }
 				/>
 		</div>
 	</Fragment>
@@ -31,35 +31,35 @@ ComponentReleased.propTypes = {
 	 *   matchHeight: true
 	 *   appearance: shadow
 	 *   cards:
-	 *   - rows:
-	 *     - type: image
-	 *       image: http://via.placeholder.com/300x300/f5f5f5/636363
-	 *       description: A 300x300 image
-	 *       fullwidth: true
-	 *     - type: heading
-	 *       headingSize: '3'
-	 *       text: Hello world
+	 *     - rows:
+	 *       - type: image
+	 *         image: http://via.placeholder.com/300x300/f5f5f5/636363
+	 *         description: A 300x300 image
+	 *         fullwidth: true
+	 *       - type: heading
+	 *         headingSize: '3'
+	 *         text: Hello world
+	 *         link: #
 	 *       link: #
-	 *     link: #
-	 *   - rows:
-	 *     - type: image
-	 *       image: http://via.placeholder.com/300x300/f5f5f5/636363
-	 *       description: A 300x300 image
-	 *       fullwidth: true
-	 *     - type: heading
-	 *       headingSize: '3'
-	 *       text: Boop
-	 *       link: #
+	 *     - rows:
+	 *       - type: image
+	 *         image: http://via.placeholder.com/300x300/f5f5f5/636363
+	 *         description: A 300x300 image
+	 *         fullwidth: true
+	 *       - type: heading
+	 *         headingSize: '3'
+	 *         text: Boop
+	 *         link: #
 	 */
 	cardList: PropTypes.shape({
-		apperance: PropTypes.string,
-		centered: PropTypes.string,
+		apperance: PropTypes.oneOf([ 'flat', 'shadow', 'border-left' ]),
+		alignment: PropTypes.oneOf([ 'left', 'center', 'right' ]),
 		columnSize: PropTypes.string,
 		matchHeight: PropTypes.bool,
 		cards: PropTypes.arrayOf(
 			PropTypes.shape({
-				apperance: PropTypes.string,
-				centered: PropTypes.string,
+				apperance: PropTypes.oneOf([ 'flat', 'shadow', 'border-left' ]),
+				alignment: PropTypes.oneOf([ 'left', 'center', 'right' ]),
 				link: PropTypes.string,
 				rows: PropTypes.arrayOf(
 					PropTypes.shape({

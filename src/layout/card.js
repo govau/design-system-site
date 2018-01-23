@@ -20,7 +20,7 @@ import PropTypes from 'prop-types';
  * @param  {string} href             - We add the href so it isn't added to the attributeOptions
  * @param  {string} attributeOptions - All of the other properties that can be added
  */
-export const AUcardHeading = ({ text, headingSize, fullwidth, link, href, ...attributesOptions = {} }) => {
+const AUcardHeading = ({ text, headingSize, fullwidth, link, href, ...attributesOptions = {} }) => {
 
 	const HeadingContainer = `h${ headingSize }`;
 
@@ -61,7 +61,7 @@ AUcardHeading.defaultProps = {
  * @param  {string} href             - We add the href so it isn't added to the attributeOptions
  * @param  {string} attributeOptions - All of the other properties that can be added
  */
-export const AUcardImage = ({ image, description, fullwidth, link, href, ...attributesOptions = {} }) => {
+const AUcardImage = ({ image, description, fullwidth, link, href, ...attributesOptions = {} }) => {
 	let ImageContainer = 'div';
 
 	if( link !== undefined ) {
@@ -93,7 +93,7 @@ AUcardImage.propTypes = {
  * @param  {string} href             - We add the href so it isn't added to the attributeOptions
  * @param  {string} attributeOptions - All of the other properties that can be added
  */
-export const AUcardContent = ({ text, fullwidth, link, href, ...attributesOptions = {} }) => {
+const AUcardContent = ({ text, fullwidth, link, href, ...attributesOptions = {} }) => {
 
 	let ContentContainer = 'p';
 
@@ -128,7 +128,7 @@ AUcardContent.propTypes = {
  * @param  {string} href             - We add the href so it isn't added to the attributeOptions
  * @param  {string} attributeOptions - All of the other properties that can be added
  */
-export const AUcardCTA = ({ text, fullwidth, link, href, ...attributesOptions = {} }) => {
+const AUcardCTA = ({ text, fullwidth, link, href, ...attributesOptions = {} }) => {
 
 	let CTAContainer = 'div';
 
@@ -160,7 +160,7 @@ AUcardCTA.propTypes = {
  * @param  {[type]} html      - The HTML inside the row
  * @param  {string} fullwidth - If the element stretches to the fullwidth of the container
  */
-export const AUcardHTML = ({ html, fullwidth }) => (
+const AUcardHTML = ({ html, fullwidth }) => (
 	<div className={ `au-card__html${ fullwidth ? ' au-card__fullwidth' : '' }` }>
 		{ html }
 	</div>
@@ -177,7 +177,7 @@ AUcardHTML.propTypes = {
  *
  * @param  {string} fullwidth - If the element stretches to the fullwidth of the container
  */
-export const AUcardLine = ({ fullwidth }) => (
+const AUcardLine = ({ fullwidth }) => (
 	<hr className={ `au-card__line${ fullwidth ? ' au-card__fullwidth' : '' }` } />
 );
 
@@ -191,12 +191,12 @@ AUcardLine.propTypes = {
  *
  * @param  {object}  rows             - The rows inside the card
  * @param  {string}  appearance       - The appearance of the card ( shadow border-left etc)
- * @param  {boolean} centered         - If the card has centered text
+ * @param  {boolean} alignment        - If the card has alignment text
  * @param  {string}  link             - The link that the element goes to
  * @param  {string}  href             - We add the href so it isn't added to the attributeOptions
  * @param  {string}  attributeOptions - All of the other properties that can be added
  */
-export const AUcard = ({ rows, appearance, centered, link, href, ...attributesOptions = {} }) => {
+const AUcard = ({ rows, appearance, alignment, link, href, ...attributesOptions = {} }) => {
 
 	let CardContainer = 'div';
 
@@ -218,7 +218,7 @@ export const AUcard = ({ rows, appearance, centered, link, href, ...attributesOp
 	rows.map( row => {
 
 		// If the parent is a link remove link
-		if( CardContainer === 'a' ){
+		if( link !== undefined ){
 			delete row.link;
 		}
 
@@ -232,7 +232,7 @@ export const AUcard = ({ rows, appearance, centered, link, href, ...attributesOp
 	return (
 		<CardContainer { ...attributesOptions } className={
 			`au-card ${ appearance === 'shadow' ? ' au-card--shadow' : '' }` +
-			`${ centered ? ' au-card--centered': '' }`
+			`${ alignment === 'center' ? ' au-card--centered': '' }`
 		}>
 			{
 				items.map( ( item, i ) =>
@@ -247,12 +247,12 @@ AUcard.propTypes = {
 	/**
 	 * appearance: shadow
 	 */
-	apperance: PropTypes.string,
+	apperance: PropTypes.oneOf([ 'flat', 'shadow', 'border-left' ]),
 
 	/**
-	 * centered: true
+	 * alignment: center
 	 */
-	centered: PropTypes.string,
+	alignment: PropTypes.oneOf([ 'left', 'center', 'right' ]),
 
 	/**
 	 * link: #
@@ -266,7 +266,7 @@ AUcard.propTypes = {
 	 *     description: A 300x300 image
 	 *     fullwidth: true
 	 *   - type: heading
-	 *     headingSize: 3
+	 *     headingSize: '3'
 	 *     text: Hello world
 	 *     link: #
 	 */
@@ -284,95 +284,11 @@ AUcard.propTypes = {
 	).isRequired
 };
 
-AUcard.defaultProps = {};
+
+AUcard.defaultProps = {
+	alignment: 'center',
+	appearance: 'flat',
+}
 
 
-/**
- * AUcardList - A list of cards
- *
- * @param  {object}  cards       - The cards and what is inside each row
- * @param  {string}  columnSize  - The column size for each individual card
- * @param  {string}  appearance  - The appearance of all the cards ( shadow border-left etc)
- * @param  {boolean} centered    - If all of the cards have centered text
- * @param  {boolean} matchHeight - (col-xs-6 col-sm-3 etc)
- */
-export const AUcardList = ({ cards, columnSize, matchHeight, centered, appearance }) => (
-	<ul className={ `au-card-list${ matchHeight ? ' au-card-list--matchheight' : '' }` }>
-		{
-			cards.map( ( card, i ) =>
-				<li key={ i } className={ columnSize } >
-					<AUcard
-						rows={ card.rows }
-						link={ card.link }
-						appearance={ card.appearance || appearance }
-						centered={ card.centered || centered }
-					/>
-				</li>
-			)
-		}
-	</ul>
-);
-
-AUcardList.propTypes = {
-	/**
-	 * appearance: shadow
-	 */
-	apperance: PropTypes.string,
-
-	/**
-	 * centered: true
-	 */
-	centered: PropTypes.bool,
-
-	/**
-	 * columnSize: col-xs-6 col-sm-3
-	 */
-	columnSize: PropTypes.string,
-
-	/**
-	 * matchHeight: true
-	 */
-	matchHeight: PropTypes.bool,
-
-	/**
-	 * cards:
-	 * - rows:
-	 *   - type: image
-	 *     image: http://via.placeholder.com/300x300/f5f5f5/636363
-	 *     description: A 300x300 image
-	 *     fullwidth: true
-	 *   - type: heading
-	 *     headingSize: 3
-	 *     text: Hello world
-	 *     link: #
-	 *   link: #
-	 * - rows:
-	 *   - type: image
-	 *     image: http://via.placeholder.com/300x300/f5f5f5/636363
-	 *     description: A 300x300 image
-	 *     fullwidth: true
-	 *   - type: heading
-	 *     headingSize: 3
-	 *     text: Boop
-	 *     link: #
-	 */
-	cards: PropTypes.arrayOf(
-		PropTypes.shape({
-			apperance: PropTypes.string,
-			centered: PropTypes.string,
-			link: PropTypes.string,
-			rows: PropTypes.arrayOf(
-					PropTypes.shape({
-					type: PropTypes.string.isRequired,
-					image: PropTypes.string,
-					description: PropTypes.string,
-					text: PropTypes.string,
-					link: PropTypes.string,
-					fullwidth: PropTypes.bool,
-					headingSize: PropTypes.string,
-					html: PropTypes.node,
-				})
-			).isRequired
-		})
-	).isRequired
-};
+export default AUcard;
