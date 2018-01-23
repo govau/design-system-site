@@ -7,8 +7,10 @@ import Fs from 'fs';
 
 /**
  * The component header component
+ * @disable-docs
  */
 const ComponentHeader = ({ _relativeURL, _parseYaml, _body, _self, _pages, _ID }) => {
+
 	const MODULE = _parseYaml(
 		Fs.readFileSync( Path.normalize(`${ __dirname }/../../../content/${ Path.dirname( _self ) }/_module.yml`), { encoding: 'utf8' } )
 	);
@@ -37,9 +39,7 @@ const ComponentHeader = ({ _relativeURL, _parseYaml, _body, _self, _pages, _ID }
 	);
 };
 
-ComponentHeader.propTypes = {
-//
-};
+ComponentHeader.propTypes = {};
 
 ComponentHeader.defaultProps = {};
 
