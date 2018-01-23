@@ -12,45 +12,51 @@ const Furnace = ({ components, _body }) => (
 
 			<div className="col-xs-12 col-sm-8">
 
-						<div className="furnace--border">
-							<h3>Select components</h3>
-							<a href="#">Clear selections</a>
-						</div>
+				<div className="furnace--border">
+					<h3>Select components</h3>
+					<button>Clear selections</button>
+				</div>
 
+				<fieldset>
+					<legend className="sronly">Components</legend>
 
-							<fieldset>
-								<legend className="sronly">Components</legend>
+					<ul className="furnace--component-list">
+						{
+							components.map( ( components, i ) => (
+								<li key={ i }>
+									<label>
+										<span className="control">
+											<input type="checkbox" name="components" className="au-control-input__input" value={ components.stub }
+												required={ components.required }
+												checked={ components.required }
+												disabled={ components.required }
+												readOnly={ components.required }
+											/>
+											<span className="au-control-input__text">
+												<span className="sronly">Add</span>
+													{ components.name }
+													{ components.required
+														? ' (required)'
+														: ''
+													}
+												</span>
+											</span>
+									</label>
+									<div className="details">
+										<img src={ components.img } alt=""/>
+										<p className="notes">
+											Dependencies: { components.dependencies }
+										</p>
+										<p className="docs">
+											<a href={ components.url }><span className="sronly">{ components.name }</span> Documentation</a>
+										</p>
+									</div>
+								</li>
+							))
+						}
+					</ul>
 
-								<ul className="furnace--component-list">
-
-								{
-									components.map( ( components, i ) => (
-										<li key={ i }>
-							        <label>
-							          <span className="control">
-							            <input type="checkbox" name="components" className="au-control-input__input" value={ components.stub }
-														required={ components.required }
-														defaultChecked={ components.required }
-														disabled={ components.required }
-													/>
-							            <span className="au-control-input__text"><span className="sronly">Add</span> { components.name } {
-														components.required
-															? '(required)'
-															: ''
-													}</span></span>
-							        </label>
-							        <div className="details">
-							          <img src={ components.img } alt=""/>
-							          <p className="notes">Dependencies: { components.dependencies } </p>
-							          <p className="docs"><a href={ components.url }><span className="sronly">{ components.name }</span> Documentation</a></p>
-							        </div>
-							      </li>
-									))
-								}
-
-								</ul>
-
-							</fieldset>
+				</fieldset>
 
 			</div>
 
