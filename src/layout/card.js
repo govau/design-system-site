@@ -286,7 +286,7 @@ AUcard.propTypes = {
 
 
 AUcard.defaultProps = {
-	alignment: 'center',
+	alignment: 'left',
 	appearance: 'flat',
 }
 
