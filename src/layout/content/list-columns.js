@@ -27,23 +27,48 @@ const ListColumns = ({ lists, _body }) => (
 
 ListColumns.propTypes = {
 	/**
-	 * _body: (text)(4)
+	 * lists:
+   *  - heading: Help with design
+   *    links:
+   *      - text: Request a component
+   *        link: /
+   *      - text: Improve documentation
+   *        link: /
+   *      - text: -! Test longer list floating !-
+   *        link: /
+   *  - heading: Help with planning
+   *    links:
+   *      - text: Community discussions
+   *        link: /
+   *      - text: Roadmap discussions
+   *        link: /
+   *  - heading: Help with code
+   *    links:
+   *      - text: Code contribution guide
+   *        link: /
+   *        className: icon icon--github
+   *      - text: Report an issue
+   *        link: /
+   *        className: icon icon--github
+   *  - heading: Help with usability
+   *    links:
+   *      - text: Component discussions
+   *        link: /
+   *      - text: Provide research findings
+   *        link: /
 	 */
-	_body: PropTypes.node.isRequired,
-
-	/**
-	 * button:
-	 *   link: #
-	 *   text: Button text
-	 *   type: secondary
-	 *   icon: github
-	 */
-	button: PropTypes.shape({
-		link: PropTypes.string,
-		text: PropTypes.string,
-		type: PropTypes.string,
-		icon: PropTypes.string,
-	})
+	lists: PropTypes.arrayOf(
+		PropTypes.shape({
+			heading: PropTypes.string,
+			links: PropTypes.arrayOf(
+				PropTypes.shape({
+					text: PropTypes.string,
+					link: PropTypes.string,
+					className: PropTypes.string
+				})
+			)
+		})
+	)
 };
 
 ListColumns.defaultProps = {};
