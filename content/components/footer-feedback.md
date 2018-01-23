@@ -1,5 +1,5 @@
 ---
-layout: structure/feedback
+layout: structure/footer-list
 headline: Feedback
 links:
   - text: Community discussion
