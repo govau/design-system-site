@@ -16,7 +16,15 @@ const ListColumns = ({ lists, _body }) => (
 				lists.map( ( lists, i ) => (
 					<div className="col-xs-12 col-sm-6 col-md-3" key={ i }>
 						<h3>{ lists.heading }</h3>
-						<AUlinkList items={ lists.links }/>
+						<AUlinkList items={
+							lists.links.map( list => {
+								return {
+									text: list.text,
+									link: list.link,
+									className: list.icon ? `icon icon--${ list.icon }` : ''
+								}
+							})
+						}/>
 					</div>
 				))
 			}
@@ -46,16 +54,10 @@ ListColumns.propTypes = {
    *    links:
    *      - text: Code contribution guide
    *        link: /
-   *        className: icon icon--github
+   *        icon: github
    *      - text: Report an issue
    *        link: /
-   *        className: icon icon--github
-   *  - heading: Help with usability
-   *    links:
-   *      - text: Component discussions
-   *        link: /
-   *      - text: Provide research findings
-   *        link: /
+   *        icon: github
 	 */
 	lists: PropTypes.arrayOf(
 		PropTypes.shape({
@@ -64,9 +66,9 @@ ListColumns.propTypes = {
 				PropTypes.shape({
 					text: PropTypes.string,
 					link: PropTypes.string,
-					className: PropTypes.string
+					icon: PropTypes.string,
 				})
-			)
+			),
 		})
 	)
 };
