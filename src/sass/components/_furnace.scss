@@ -1,119 +1,119 @@
 .furnace {
-	fieldset {
-		border: none;
-		padding: 0;
-		margin: 0;
-	}
 
-	// NOTE: This should prob be a global class?
-	.sronly {
-		@include AU-sronly();
-	}
 }
 
-.furnace--border {
-	@include AU-clearfix;
+.furnace__title {
 	@include AU-space( padding-bottom, 1.5unit );
 	@include AU-space( margin-bottom, 1.5unit );
 	@include AU-space( border-bottom, solid 0.25unit $AU-color-Background );
 
-	h3 {
-		float: left;
-	}
-
-	a {
+	.furnace__title__control {
+		@include AU-space( margin-top, -0.5unit );
 		float: right;
 	}
 }
 
-.furnace--component-list {
+
+.furnace__component-list {
 	list-style: none;
 	margin-top: 0;
 	padding: 0;
 
-		li {
-			@include AU-clearfix();
-			display:block;
-			position:relative;
-			background: $AU-color-Background;
-			margin-top: 1rem;
-			padding:1rem;
-
-			a { //docs link
-		    position:relative;
-		    z-index:99;
-
-		    &:hover {
-		      color: $AU-color-Text;
-		      text-decoration:none;
-		    }
-		  }
-			&:hover {
-		   background: $AU-color-Background-dark;
-		  }
-
-			label {
-			  position:absolute;
-			  left: 0;
-			  right: 0;
-			  top: 0;
-			  bottom: 0;
-			  padding: 1rem;
-			  z-index:1;
-			  cursor:pointer;
-
-			  .control{ //label text & input
-					@include AU-space( margin-left, 5unit );
-					@include AU-fontgrid( md );
-					position: relative; //for the UIKIT checkboxes
-			    display:block;
-			    font-weight:bold;
-			  }
-			}
-
-			.notes{
-				@include AU-space( margin, 2unit 0 0 0 );
-				float: left;
-			}
-			.docs{
-				@include AU-fontgrid( xs );
-				@include AU-space( margin-top, 1.25unit );
-				float: right;
-			}
-			img {
-				@include AU-space( width, 4unit );
-				@include AU-space( margin-right, 1unit );
-				float:left;
-			}
-		}
-
-		// Smaller tidier checkboxes (whole element is clickable anyway)
-		.au-control-input__input {
-			@include AU-space( top, 0.25unit );
-		}
-		.au-control-input__text {
-			@include AU-space( margin, 0.25unit 0 0.5unit 2.25unit );
-		}
-		.au-control-input__text:before,
-		.au-control-input__text:after {
-			@include AU-space( width, 2unit );
-			@include AU-space( height, 2unit );
-			top: -6px;
-		}
+	// Smaller tidier checkboxes (whole element is clickable anyway)
+	.au-control-input__input {
+		@include AU-space( top, 0.25unit );
+	}
+	.au-control-input__text {
+		@include AU-space( margin, 0.25unit 0 0.5unit 2.25unit );
+	}
+	.au-control-input__text:before,
+	.au-control-input__text:after {
+		@include AU-space( width, 2unit );
+		@include AU-space( height, 2unit );
+		top: -6px;
+	}
 }
 
-.furnace--code {
+
+
+.furnace__component {
+	@include AU-clearfix();
+	display:block;
+	position:relative;
+	background: $AU-color-Background;
+	margin-top: 1rem;
+	padding:1rem;
+
+	&:hover {
+	 background: $AU-color-Background-dark;
+	}
+}
+
+
+
+.furnace__component__label {
+	position:absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	padding: 1rem;
+	z-index:1;
+	cursor:pointer;
+
+	.furnace__component__control { //label text & input
+		@include AU-space( margin-left, 5unit );
+		@include AU-fontgrid( md );
+		position: relative; //for the UIKIT checkboxes
+		display:block;
+		font-weight:bold;
+	}
+}
+
+
+
+.furnace__component__details {
+	.furnace__component__notes {
+		@include AU-space( margin, 2unit 0 0 0 );
+		float: left;
+	}
+
+	.furnace__component__doclink {
+		@include AU-fontgrid( xs );
+		@include AU-space( margin-top, 1.25unit );
+		float: right;
+
+		a {
+			position:relative;
+			z-index:99;
+
+			&:hover {
+				color: $AU-color-Text;
+				text-decoration:none;
+			}
+		}
+	}
+
+	img {
+		@include AU-space( width, 4unit );
+		@include AU-space( margin-right, 1unit );
+		float:left;
+	}
+}
+
+
+
+.furnace__code {
 	@include AU-fontgrid( xs );
 	font-family: $AU-font-monospace;
 }
 
 
-.furnace--buildbox {
+.furnace__buildbox {
 	@include AU-clearfix();
 	@include AU-space( padding, 1unit );
 	@include AU-space( margin-top, 1unit );
 	background-color: $AU-color-Background;
-
 
 	// Smaller tidier checkboxes on desktop layout
 	@include AU-media( md ) {
@@ -125,6 +125,7 @@
 			@include AU-fontgrid( xs );
 			@include AU-space( margin, 0 0 0 1.75unit );
 		}
+
 		.au-control-input__text:before,
 		.au-control-input__text:after {
 			@include AU-space( width, 1.75unit );
@@ -132,18 +133,11 @@
 			@include AU-space( left, -0.25unit );
 			@include AU-space( top, -0.25unit );
 		}
+
 		.au-control-input__input {
 			left: 0;
 			top: 0;
 		}
-	}
-
-	legend {
-		font-weight: bold;
-	}
-
-	fieldset + fieldset {
-		@include AU-space( margin-top, 2unit );
 	}
 
 	.au-btn.au-btn--size-sm {
@@ -152,8 +146,10 @@
 		@include AU-space( margin-right, -1unit );
 		@include AU-space( margin-bottom, -1unit );
 		@include AU-space( padding, 0.25unit 0.5unit );
-	}
+	} //AU-media
+
 }
+
 
 // Resets for body :'(
 .au-body ul.furnace--component-list > li {

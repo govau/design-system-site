@@ -1,0 +1,17 @@
+.sronly {
+	@include AU-sronly();
+}
+
+.hide-fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
+
+	legend {
+		font-weight: bold;
+	}
+}
+
+.hide-fieldset + .hide-fieldset {
+	@include AU-space( margin-top, 2unit );
+}
