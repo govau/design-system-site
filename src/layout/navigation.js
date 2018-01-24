@@ -40,7 +40,15 @@ const Navigation = ({ navigation, _relativeURL, _ID, _pages }) => {
 			navItems.push( CreateLink( item ) );
 		})
 
-		return <AUlinkList items={ navItems } inline={ inline } className={ section.alignment === 'right' ? 'mainmenu--right' : '' } />
+		const navigation = {
+			menu: <AUlinkList items={ navItems } inline={ inline } className={ section.alignment === 'right' ? 'mainmenu--right' : '' } />
+		};
+
+		if( section.title ){
+			navigation.title = <h3>{section.title}</h3>
+		}
+
+		return navigation;
 	}
 
 	const navMarkup = [];
@@ -53,7 +61,7 @@ const Navigation = ({ navigation, _relativeURL, _ID, _pages }) => {
 		<nav className={ `navigation ${ navigation.theme === 'dark' ? 'navigation--dark ' : '' }` }>
 			{
 				navMarkup.map( ( nav, i ) => (
-					<Fragment key={ i }>{ nav }</Fragment>
+					<Fragment key={ i }>{ nav.title }{ nav.menu }</Fragment>
 				))
 			}
 		</nav>
