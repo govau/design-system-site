@@ -16,18 +16,18 @@ import PropTypes from 'prop-types';
 /**
  * AUcardHeading - A heading row inside a card
  *
- * @param  {string} text             - The text inside the heading
- * @param  {string} headingSize      - The tag level (<h1/> <h2/> etc)
- * @param  {string} fullwidth        - If the element stretches to the fullwidth of the container
- * @param  {string} link             - The link that the element goes to
- * @param  {string} href             - We add the href so it isn't added to the attributeOptions
- * @param  {string} attributeOptions - All of the other properties that can be added
+ * @param  {string}  text             - The text inside the heading
+ * @param  {string}  headingSize      - The tag level (<h1/> <h2/> etc)
+ * @param  {boolean} fullwidth        - If the element stretches to the fullwidth of the container
+ * @param  {string}  link             - The link that the element goes to
+ * @param  {string}  href             - We add the href so it isn't added to the attributeOptions
+ * @param  {object}  attributeOptions - All of the other properties that can be added
  */
 const AUcardHeading = ({ text, headingSize, fullwidth, link, href, ...attributesOptions = {} }) => {
 
 	const HeadingContainer = `h${ headingSize }`;
 
-	if ( link ) {
+	if( link ) {
 		return (
 			<HeadingContainer className={ `au-card__title${ fullwidth ? ' au-card__fullwidth' : '' }` }>
 				<a href={ link } >{ text }</a>
@@ -57,12 +57,12 @@ AUcardHeading.defaultProps = {
 /**
  * AUcardImage - An image row inside a card
  *
- * @param  {string} image            - The image inside the row
- * @param  {string} description      - The text only description for the image
- * @param  {string} fullwidth        - If the element stretches to the fullwidth of the container
- * @param  {string} link             - The link that the element goes to
- * @param  {string} href             - We add the href so it isn't added to the attributeOptions
- * @param  {string} attributeOptions - All of the other properties that can be added
+ * @param  {string}  image            - The image inside the row
+ * @param  {string}  description      - The text only description for the image
+ * @param  {boolean} fullwidth        - If the element stretches to the fullwidth of the container
+ * @param  {string}  link             - The link that the element goes to
+ * @param  {string}  href             - We add the href so it isn't added to the attributeOptions
+ * @param  {object}  attributeOptions - All of the other properties that can be added
  */
 const AUcardImage = ({ image, description, fullwidth, link, href, ...attributesOptions = {} }) => {
 	let ImageContainer = 'div';
@@ -90,11 +90,11 @@ AUcardImage.propTypes = {
 /**
  * AUcardContent - A content row inside a card
  *
- * @param  {string} text             - The text inside the content area
- * @param  {string} fullwidth        - If the element stretches to the fullwidth of the container
- * @param  {string} link             - The link that the element goes to
- * @param  {string} href             - We add the href so it isn't added to the attributeOptions
- * @param  {string} attributeOptions - All of the other properties that can be added
+ * @param  {string}  text             - The text inside the content area
+ * @param  {boolean} fullwidth        - If the element stretches to the fullwidth of the container
+ * @param  {string}  link             - The link that the element goes to
+ * @param  {string}  href             - We add the href so it isn't added to the attributeOptions
+ * @param  {object}  attributeOptions - All of the other properties that can be added
  */
 const AUcardContent = ({ text, fullwidth, link, href, ...attributesOptions = {} }) => {
 
@@ -125,11 +125,11 @@ AUcardContent.propTypes = {
 /**
  * AUcardCTA - A call to action row inside a card
  *
- * @param  {[type]} text             - The text inside the call to action
- * @param  {string} fullwidth        - If the element stretches to the fullwidth of the container
- * @param  {string} link             - The link that the element goes to
- * @param  {string} href             - We add the href so it isn't added to the attributeOptions
- * @param  {string} attributeOptions - All of the other properties that can be added
+ * @param  {string}  text             - The text inside the call to action
+ * @param  {boolean} fullwidth        - If the element stretches to the fullwidth of the container
+ * @param  {string}  link             - The link that the element goes to
+ * @param  {string}  href             - We add the href so it isn't added to the attributeOptions
+ * @param  {object}  attributeOptions - All of the other properties that can be added
  */
 const AUcardCTA = ({ text, fullwidth, link, href, ...attributesOptions = {} }) => {
 
@@ -160,7 +160,7 @@ AUcardCTA.propTypes = {
 /**
  * AUcardHTML - A html row inside a card
  *
- * @param  {[type]} html      - The HTML inside the row
+ * @param  {object} html      - The HTML inside the row
  * @param  {string} fullwidth - If the element stretches to the fullwidth of the container
  */
 const AUcardHTML = ({ html, fullwidth }) => (
@@ -197,7 +197,7 @@ AUcardLine.propTypes = {
  * @param  {boolean} alignment        - If the card has alignment text
  * @param  {string}  link             - The link that the element goes to
  * @param  {string}  href             - We add the href so it isn't added to the attributeOptions
- * @param  {string}  attributeOptions - All of the other properties that can be added
+ * @param  {object}  attributeOptions - All of the other properties that can be added
  */
 const AUcard = ({ rows, appearance, alignment, link, href, ...attributesOptions = {} }) => {
 
@@ -244,7 +244,7 @@ const AUcard = ({ rows, appearance, alignment, link, href, ...attributesOptions 
 			}
 		</CardContainer>
 	);
-}
+};
 
 AUcard.propTypes = {
 	apperance: PropTypes.oneOf([ 'flat', 'shadow', 'border-left' ]),
@@ -261,14 +261,14 @@ AUcard.propTypes = {
 			headingSize: PropTypes.string,
 			html: PropTypes.node,
 		})
-	).isRequired
+	).isRequired,
 };
 
 
 AUcard.defaultProps = {
 	alignment: 'left',
 	appearance: 'flat',
-}
+};
 
 
 export default AUcard;
