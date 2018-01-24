@@ -19,10 +19,10 @@ lists:
     links:
       - text: Code contribution guide
         link: /
-        className: icon icon--github
+        icon: github
       - text: Report an issue
         link: /
-        className: icon icon--github
+        icon: github
 
   - heading: Help with usability
     links:
