@@ -10,20 +10,21 @@ import Fs from 'fs';
  */
 const ComponentHeader = ({ _relativeURL, _parseYaml, _body, _self, _pages, _ID, _isDocs }) => {
 
-	const UIKIT = JSON.parse(
-		Fs.readFileSync( Path.normalize(`${ __dirname }/../../_uikit/uikit.json`), { encoding: 'utf8' } )
-	);
-
 	// Mock data for documentation
 	let MODULE   = { name: 'Buttons' }
 	let moduleID = 'buttons';
 	let version  = '1.0.0';
 
-	// Change the location if we are not making documentation
+	// Not documentation so get the real data
 	if( !_isDocs ){
+		const UIKIT = JSON.parse(
+			Fs.readFileSync( Path.normalize(`${ __dirname }/../../_uikit/uikit.json`), { encoding: 'utf8' } )
+		);
+
 		MODULE = _parseYaml(
 			Fs.readFileSync( Path.normalize(`${ __dirname }/../../../content/${ Path.dirname( _self ) }/_module.yml`), { encoding: 'utf8' } )
 		);
+
 		moduleID = _pages[ _ID ].module;
 		version = UIKIT[`@gov.au/${ moduleID }`].version;
 	}
