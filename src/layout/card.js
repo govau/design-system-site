@@ -238,9 +238,9 @@ const AUcard = ({ rows, appearance, alignment, link, href, ...attributesOptions 
 			`${ alignment === 'center' ? ' au-card--centered': '' }`
 		}>
 			{
-				items.map( ( item, i ) =>
+				items.map( ( item, i ) => (
 					<item.component { ...item.props } key={ i } />
-				)
+				))
 			}
 		</CardContainer>
 	);

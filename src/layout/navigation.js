@@ -1,6 +1,6 @@
-import AUlinkList from '../_uikit/layout/link-list';
+import AUlinkList          from '../_uikit/layout/link-list';
 import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
+import PropTypes           from 'prop-types';
 
 
 /**
@@ -31,33 +31,55 @@ const Navigation = ({ navigation, _relativeURL, _ID, _pages }) => {
 		}
 	};
 
-	const linksLeft = navigation.left ? navigation.left.map( link => CreateLink( link ) ) : false;
-	const linksRight = navigation.right ? navigation.right.map( link => CreateLink( link, true ) ) : false;
+
+	const CreateNavigation = ( section, inline ) => {
+
+		const navItems = [];
+
+		section.items.map( item => {
+			navItems.push( CreateLink( item ) );
+		})
+
+		return <AUlinkList items={ navItems } inline={ inline } className={ section.alignment === 'right' ? 'mainmenu--right' : '' } />
+	}
+
+	const navMarkup = [];
+
+	navigation.sections.map( section => {
+		navMarkup.push( CreateNavigation( section, navigation.inline ) )
+	});
 
 	return (
-		<Fragment>
-			<nav className={ `navigation ${ navigation.dark ? 'navigation--dark ' : '' }` }>
-				{ linksLeft !== false ? <AUlinkList items={ linksLeft } inline /> : null }
-				{ linksRight !== false ? <AUlinkList inline className="mainmenu--right" items={ linksRight } inline /> : null }
-			</nav>
-		</Fragment>
+		<nav className={ `navigation ${ navigation.theme === 'dark' ? 'navigation--dark ' : '' }` }>
+			{
+				navMarkup.map( ( nav, i ) => (
+					<Fragment key={ i }>{ nav }</Fragment>
+				))
+			}
+		</nav>
 	);
 };
+
 
 Navigation.propTypes = {
 	/**
 	 * navigation:
-	 *  dark: true
-	 *  left:
-	 *   - text: Privacy policy
-	 *     link: /
-	 *   - text: Need help?
-	 *     link: /
-	 *  right:
-   *   - text: Github
-   *     link: https://github.com/govau/uikit/
-   *   - text: Download
-   *     link: /furnace
+	 *   inline: true
+	 *   sections:
+	 *     - alignment: left
+	 *       items:
+	 *         - text: Overview
+	 *           link: /components/buttons
+	 *         - text: Rationale
+	 *           link: /components/buttons/rationale
+	 *         - text: Accessibility
+	 *           link: /components/buttons/accessibility
+	 *         - text: Discussion
+	 *           link: /components/buttons/discussion
+	 *     - alignment: right
+	 *       items:
+	 *         - text: Live demo
+	 *           link: /demo
 	 */
 	navigation: PropTypes.shape({
 		dark: PropTypes.boolean,
