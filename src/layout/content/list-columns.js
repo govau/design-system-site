@@ -14,7 +14,7 @@ const ListColumns = ({ lists, _body }) => (
 		<div className="row listcolumns">
 			{
 				lists.map( ( lists, i ) => (
-					<div className="col-sm-6 col-md-3" key={ i }>
+					<div className="col-xs-12 col-sm-6 col-md-3" key={ i }>
 						<h3>{ lists.heading }</h3>
 						<AUlinkList items={ lists.links }/>
 					</div>

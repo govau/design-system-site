@@ -7,8 +7,6 @@ lists:
         link: /
       - text: Improve documentation
         link: /
-      - text: -! Test longer list floating !-
-        link: /
 
   - heading: Help with planning
     links:

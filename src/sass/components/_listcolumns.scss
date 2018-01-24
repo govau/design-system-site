@@ -1,5 +1,14 @@
 // listcolumns
+.listcolumns {
+	display: flex;
+	flex-wrap: wrap;
 
-.listcolumns > div {
-	@include AU-space( margin-top, 2unit );
+	> div {
+		@include AU-space( margin-top, 3unit );
+	}
+}
+
+// Fallback for No flex, set equal height
+.ie8 .listcolumns > div {
+	height: 10em;
 }
