@@ -21,4 +21,4 @@ legallist:
     link: /
 ---
 
-© Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the [MIT licensed](https://github.com/govau/uikit/blob/master/LICENSE.md)
+© Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the [MIT license](https://github.com/govau/uikit/blob/master/LICENSE.md)
