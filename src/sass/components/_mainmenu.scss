@@ -66,6 +66,11 @@
 		color: $AU-colordark-Text;
 		text-decoration: underline;
 		text-decoration-skip: ink;
+
+		.ie8 & {
+			// Odd ie8 bug where background: #FFF !important is being applied
+			background: transparent !important;
+		}
 	}
 
 	.no-js & {
