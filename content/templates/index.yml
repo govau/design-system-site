@@ -1,0 +1,10 @@
+pagetitle: Templates
+
+header:
+  - /_shared/header.md
+
+main:
+  - Coming soon
+
+footer:
+  - /_shared/footer.md
