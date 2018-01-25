@@ -37,7 +37,7 @@ const NavigationAccordion = ({ navAccordion, _relativeURL, _ID, _pages  }) => {
 	});
 
 	return(
-		<nav className={ `navigation ${ accordionMarkup.theme === 'dark' ? 'navigation--dark ' : '' }` }>
+		<nav className={ `navigation navigation--accordion ${ accordionMarkup.theme === 'dark' ? 'navigation--dark ' : '' }` }>
 		{
 			accordionMarkup.map( ( accordion, i ) => (
 				<Fragment key={ i }>{ accordion }</Fragment>

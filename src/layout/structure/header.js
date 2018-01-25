@@ -45,7 +45,7 @@ const Header = ({ title, mainmenu, _relativeURL, _ID, _pages }) => (
 							</a>
 
 							<button id="mainmenu-toggle"
-								className="mainmenu-toggle au-btn au-btn--tertiary au-btn--dark au-btn--block icon js-au-accordion au-accordion--closed"
+								className="mainmenu-toggle au-btn au-btn--tertiary au-btn--dark au-btn--block icon au-accordion--closed"
 								aria-controls="mainmenu"
 								aria-expanded="false"
 								aria-selected="false"
