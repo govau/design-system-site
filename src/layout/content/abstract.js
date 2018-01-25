@@ -6,11 +6,9 @@ import PropTypes from 'prop-types';
  * The partial component
  */
 const Abstract = ({  _body }) => (
-	<Fragment>
-		<div className="abstract">
-			{ _body }
-		</div>
-	</Fragment>
+	<div className="abstract">
+		{ _body }
+	</div>
 );
 
 Abstract.propTypes = {
