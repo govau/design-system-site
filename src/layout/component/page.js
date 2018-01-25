@@ -9,6 +9,7 @@ const ComponentPage = ({
 	_ID,
 	_relativeURL,
 	header,
+	sidebar,
 	pagetitle,
 	module,
 	sections,
@@ -42,7 +43,10 @@ const ComponentPage = ({
 			<div className="content-wrapper">
 				<main id="content" className="main au-body container-fluid">
 					<div className="row">
-						<div className="grids col-md-12">
+						<div className="col-md-3">
+							{ sidebar }
+						</div>
+						<div className="grids col-md-9">
 							{ sections }
 						</div>
 					</div>

@@ -55,7 +55,7 @@
 		@include AU-space( border-bottom, 0.5unit solid $AU-color-Background );
 		padding-bottom: 0;
 
-		.au-link-list {
+		.au-link-list--inline {
 			float: left;
 			@include AU-space( margin-bottom, -0.5unit );
 
