@@ -16,10 +16,9 @@ const DownloadIntro = ({ _body, borderTop, sidebar }) => (
 );
 
 DownloadIntro.propTypes = {
-
-  /**
-   * _body: (text)(4)
-   */
+	/**
+	 * _body: (text)(4)
+	 */
 	_body: PropTypes.node.isRequired,
 
 	/**

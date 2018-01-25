@@ -37,9 +37,10 @@ const Furnace = ({ components, _body }) => (
 											<span className="au-control-input__text">
 												<span className="sronly">Add</span>
 													{ component.name }
-													{ component.required
-														? ' (required)'
-														: ''
+													{
+														component.required
+															? ' (required)'
+															: ''
 													}
 											</span>
 										</span>
@@ -55,7 +56,7 @@ const Furnace = ({ components, _body }) => (
 										</p>
 									</div>
 
-								</li>//furnace__component
+								</li>
 							))
 						}
 					</ul>
@@ -130,9 +131,7 @@ const Furnace = ({ components, _body }) => (
 	</div>
 );
 
-Furnace.propTypes = {
-
-};
+Furnace.propTypes = {};
 
 Furnace.defaultProps = {};
 
