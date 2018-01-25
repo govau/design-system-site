@@ -7,7 +7,7 @@ header:
 
 sidebar: /components/navigation.md
 
-sections:
+main:
   - /components/buttons/header.md
   - /components/buttons/navigation.md
   - 1.md

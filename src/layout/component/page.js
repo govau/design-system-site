@@ -11,8 +11,7 @@ const ComponentPage = ({
 	header,
 	sidebar,
 	pagetitle,
-	module,
-	sections,
+	main,
 	footer
 }) => {
 
@@ -38,8 +37,8 @@ const ComponentPage = ({
 		<head dangerouslySetInnerHTML={{ __html: headContent }} />
 
 		<body className="au-grid is-components">
-			{ header }
 
+			{ header }
 			<div className="content-wrapper">
 				<main id="content" className="main au-body container-fluid">
 					<div className="row">
@@ -47,7 +46,7 @@ const ComponentPage = ({
 							{ sidebar }
 						</div>
 						<div className="grids col-md-9">
-							{ sections }
+							{ main }
 						</div>
 					</div>
 				</main>

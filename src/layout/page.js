@@ -5,7 +5,14 @@ import React from 'react';
 /**
  * The page component
  */
-const Page = ({ _ID, _relativeURL, pagetitle, header, main, footer }) => {
+const Page = ({
+	_ID,
+	_relativeURL,
+	header,
+	pagetitle,
+	main,
+	footer
+}) => {
 
 	const headContent = `
 <meta charset="utf-8">
@@ -27,7 +34,9 @@ const Page = ({ _ID, _relativeURL, pagetitle, header, main, footer }) => {
 	return (
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }} />
+
 		<body className="au-grid">
+
 			{ header }
 			<div className="content-wrapper">
 				<main id="content" className="main au-body container-fluid">
@@ -43,7 +52,7 @@ const Page = ({ _ID, _relativeURL, pagetitle, header, main, footer }) => {
 			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
 		</body>
 		</html>
-	)
+	);
 }
 
 
