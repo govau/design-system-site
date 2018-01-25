@@ -5,6 +5,8 @@ pagetitle: Buttons accessibility
 header:
   - /_shared/header.md
 
+sidebar: /components/navigation.md
+
 sections:
   - /components/buttons/header.md
   - /components/buttons/navigation.md

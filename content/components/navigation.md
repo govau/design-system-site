@@ -1,18 +1,20 @@
 ---
-layout: navigation
-navigation:
+layout: component/navigation-accordion
+navAccordion:
   sections:
     - title: Released
+      headingSize: 3
       items:
-        - text: Overview
+        - text: Core
+          link: /components/core
+        - text: Accordion
+          link: /components/accordion
+        - text: Animate
+          link: /components/animate
+        - text: Buttons
           link: /components/buttons
-        - text: Rationale
-          link: /components/buttons/rationale
-        - text: Accessibility
-          link: /components/buttons/accessibility
-        - text: Discussion
-          link: /components/buttons/discussion
     - title: In progress
+      headingSize: 3
       items:
         - text: Cards
           link: /components/cards
@@ -23,6 +25,7 @@ navigation:
         - text: Tables
           link: /components/tables
     - title: Suggestions
+      headingSize: 3
       items:
         - text: Carousel
           link: /components/carousel
