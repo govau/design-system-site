@@ -1,9 +1,15 @@
+layout: component/page
 pagetitle: Components
+
 header:
   - /_shared/header.md
+
+sidebar: /components/navigation.md
+
 main:
   - released.md
   - inprogress.md
   - suggestions.md
+
 footer:
   - /_shared/footer.md
