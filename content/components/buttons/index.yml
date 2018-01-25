@@ -5,7 +5,9 @@ pagetitle: Buttons overview
 header:
   - /_shared/header.md
 
-sidebar: /components/navigation.md
+sidebar:
+  - ../search.md
+  - /components/navigation.md
 
 main:
   - header.md

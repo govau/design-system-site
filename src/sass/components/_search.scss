@@ -1,0 +1,68 @@
+
+.au-search {
+
+	.au-text-input {
+		width: 100%;
+		border-radius: $AU-border-radius 0 0 $AU-border-radius;
+		border-right: none;
+
+		&::placeholder {
+      color: $AU-color-Muted;
+    }
+	}
+
+	.au-btn {
+		border-radius: 0 $AU-border-radius $AU-border-radius 0;
+		@include AU-space( padding-left, 1unit );
+		@include AU-space( padding-right, 1unit );
+		background-color: $AU-color-Background-light;
+	}
+
+	.au-text-input,
+	.au-btn {
+		@include AU-fontgrid( xs, heading );
+		@include AU-space( height, 3unit );
+		position: relative; // for outline
+
+		&:focus {
+			border-radius: 0;
+			z-index: 1; // for outline
+		}
+	}
+
+}
+
+
+// Full-width with dynamic cols
+// ==========================
+// Table layout for old skool
+// Note. display:table on screenreaders https://goo.gl/TT6Boz
+  .au-streatch_row {
+    display: table;
+    width: 100%;
+  }
+  .au-streatch_col-fill {
+    display: table-cell;
+    width: auto;
+  }
+  .au-streatch_col-fit {
+    display: table-cell;
+    width:1em;
+  }
+
+//  Flex layout for new skool
+@supports (display: flex) {
+  .au-streatch_row {
+    display: flex;
+    width: auto;
+  }
+  .au-streatch_col-fill {
+    display: block; // override
+    width: auto;    // override
+    flex: 1;
+  }
+  .au-streatch_col-fit {
+    display: block; // override
+    width:auto;     // override
+  }
+}

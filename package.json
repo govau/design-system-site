@@ -63,6 +63,7 @@
 		"@gov.au/link-list": "next",
 		"@gov.au/responsive-media": "next",
 		"@gov.au/skip-link": "next",
+		"@gov.au/text-inputs": "next",
 		"autoprefixer": "^7.2.3",
 		"concat-cli": "^4.0.0",
 		"cuttlebelle": "^1.0.0-alpha.46",
