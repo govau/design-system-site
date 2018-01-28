@@ -7,9 +7,9 @@ import React from 'react';
 /**
  * The component header component
  */
-const ComponentHeader = ({ _relativeURL, _parseYaml, _body, _self, _pages, _ID, _isDocs }) => {
+const ComponentHeader = ({ _relativeURL, _parseYaml, _body, _pages, _ID, _isDocs }) => {
 
-	const MODULE = GetData( _pages[ _ID ].module, _parseYaml );
+	const MODULE = GetData({ module: _pages[ _ID ].module, yaml: _parseYaml });
 
 	return (
 		<div className="row componentheader">

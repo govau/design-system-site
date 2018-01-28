@@ -9,15 +9,20 @@ import Fs from 'fs';
  *
  * @disable-docs
  */
-const GetData = ( module, _parseYaml ) => {
-	const COMPONENT = _parseYaml(
+const GetData = ({ module = '', yaml }) => {
+	const COMPONENT = yaml(
 		Fs.readFileSync(
 			Path.normalize(`${ __dirname }/../../content/components/_all.yml`),
 			{ encoding: 'utf8' }
 		)
 	);
 
-	return COMPONENT[ module ];
+	if( module.length > 0 ) {
+		return COMPONENT[ module ];
+	}
+	else {
+		return COMPONENT;
+	}
 };
 
 export default GetData;

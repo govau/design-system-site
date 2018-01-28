@@ -193,11 +193,11 @@ const COMPONENTS = EncodeYAML( Fs.readFileSync( Path.normalize(`${ __dirname }/.
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
 CFonts.say( 'GOLD', {
 	align: 'center',
-	colors: ['yellow', 'white', 'yellow'],
+	colors: [ 'yellow', 'white', 'yellow' ],
 });
 
 if( process.argv.indexOf( 'components' ) !== -1 ) {
-	Headline( 'Generating components YAML file');
+	Headline( 'Generating components YAML file' );
 
 	GenerateComponents( UIKIT, COMPONENTS );
 	CheckComponents( UIKIT, COMPONENTS );
