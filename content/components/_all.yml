@@ -1,0 +1,111 @@
+buttons:
+  name: Buttons
+  version: 1.0.0-next.6 # <-- auto generated, no don't change
+  dependencies: # <-- auto generated, no don't change
+    - core
+  contributors: 'x, x, x, x'
+  state: published
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  hasSass: true # <-- auto generated, no don't change
+  hasJs: false # <-- auto generated, no don't change
+  hasReact: true # <-- auto generated, no don't change
+  ID: buttons # <-- auto generated, no don't change
+accordion:
+  version: 1.0.0-next.6 # <-- auto generated, no don't change
+  dependencies: # <-- auto generated, no don't change
+    - animate
+    - core
+  hasSass: true # <-- auto generated, no don't change
+  hasJs: true # <-- auto generated, no don't change
+  hasReact: true # <-- auto generated, no don't change
+  ID: accordion # <-- auto generated, no don't change
+animate:
+  version: 1.0.0-next.3 # <-- auto generated, no don't change
+  dependencies: [] # <-- auto generated, no don't change
+  hasSass: false # <-- auto generated, no don't change
+  hasJs: true # <-- auto generated, no don't change
+  hasReact: false # <-- auto generated, no don't change
+  ID: animate # <-- auto generated, no don't change
+body:
+  version: 1.0.0-next.4 # <-- auto generated, no don't change
+  dependencies: # <-- auto generated, no don't change
+    - core
+  hasSass: true # <-- auto generated, no don't change
+  hasJs: false # <-- auto generated, no don't change
+  hasReact: false # <-- auto generated, no don't change
+  ID: body # <-- auto generated, no don't change
+control-input:
+  version: 1.0.0-next.5 # <-- auto generated, no don't change
+  dependencies: # <-- auto generated, no don't change
+    - core
+  hasSass: true # <-- auto generated, no don't change
+  hasJs: false # <-- auto generated, no don't change
+  hasReact: true # <-- auto generated, no don't change
+  ID: control-input # <-- auto generated, no don't change
+core:
+  version: 1.0.0-next.5 # <-- auto generated, no don't change
+  dependencies: [] # <-- auto generated, no don't change
+  hasSass: true # <-- auto generated, no don't change
+  hasJs: false # <-- auto generated, no don't change
+  hasReact: false # <-- auto generated, no don't change
+  ID: core # <-- auto generated, no don't change
+footer:
+  version: 1.0.0-next.5 # <-- auto generated, no don't change
+  dependencies: # <-- auto generated, no don't change
+    - core
+  hasSass: true # <-- auto generated, no don't change
+  hasJs: false # <-- auto generated, no don't change
+  hasReact: true # <-- auto generated, no don't change
+  ID: footer # <-- auto generated, no don't change
+grid-12:
+  version: 1.0.0-next.3 # <-- auto generated, no don't change
+  dependencies: # <-- auto generated, no don't change
+    - core
+  hasSass: true # <-- auto generated, no don't change
+  hasJs: false # <-- auto generated, no don't change
+  hasReact: false # <-- auto generated, no don't change
+  ID: grid-12 # <-- auto generated, no don't change
+header:
+  version: 2.0.0-next.5 # <-- auto generated, no don't change
+  dependencies: # <-- auto generated, no don't change
+    - core
+  hasSass: true # <-- auto generated, no don't change
+  hasJs: false # <-- auto generated, no don't change
+  hasReact: true # <-- auto generated, no don't change
+  ID: header # <-- auto generated, no don't change
+headings:
+  version: 1.0.0-next.5 # <-- auto generated, no don't change
+  dependencies: # <-- auto generated, no don't change
+    - core
+  hasSass: true # <-- auto generated, no don't change
+  hasJs: false # <-- auto generated, no don't change
+  hasReact: true # <-- auto generated, no don't change
+  ID: headings # <-- auto generated, no don't change
+link-list:
+  version: 1.0.0-next.7 # <-- auto generated, no don't change
+  dependencies: # <-- auto generated, no don't change
+    - core
+    - body
+  hasSass: true # <-- auto generated, no don't change
+  hasJs: false # <-- auto generated, no don't change
+  hasReact: true # <-- auto generated, no don't change
+  ID: link-list # <-- auto generated, no don't change
+responsive-media:
+  version: 1.0.0-next.3 # <-- auto generated, no don't change
+  dependencies: # <-- auto generated, no don't change
+    - core
+  hasSass: true # <-- auto generated, no don't change
+  hasJs: false # <-- auto generated, no don't change
+  hasReact: false # <-- auto generated, no don't change
+  ID: responsive-media # <-- auto generated, no don't change
+skip-link:
+  version: 1.0.0-next.4 # <-- auto generated, no don't change
+  dependencies: # <-- auto generated, no don't change
+    - core
+  hasSass: true # <-- auto generated, no don't change
+  hasJs: false # <-- auto generated, no don't change
+  hasReact: true # <-- auto generated, no don't change
+  ID: skip-link # <-- auto generated, no don't change

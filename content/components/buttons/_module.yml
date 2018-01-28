@@ -1,8 +1,0 @@
-# this is where we define all sorts of flags like:
-name: Buttons
-contributors: x, x, x, x
-state: published # |draft|suggestion
-discussions:
-  - open: 2
-  - active: 7
-  - something: something
