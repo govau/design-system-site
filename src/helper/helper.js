@@ -93,14 +93,39 @@ const CheckComponents = ( uikit, components ) => {
 		const name = CleanName( uikit[ module ].name );
 
 		if( typeof components[ name ] === 'undefined' ) {
-			failed.push( name );
+			failed.push({ name, reason: 'Missing entirely' });
 		}
+		else {
+			const keys = [
+				'name',
+				'description',
+				'tags',
+				'version',
+				'dependencies',
+				'contributors',
+				'state',
+				'discussions',
+				'hasSass',
+				'hasJs',
+				'hasReact',
+				'ID'
+			];
 
-		// check other keys
+			keys.map( key => {
+				if( typeof components[ name ][ key ] === 'undefined' ) {
+					failed.push({ name, reason: `The key "${ Chalk.yellow( key ) }" is missing` })
+				}
+			});
+		}
 	}
 
 	if( failed.length > 0 ) {
-		Error(`The following modules are missing in your components/_all.yml:\n       ${ failed.join(', ') }\n`);
+		Error(`The following modules are missing in your components/_all.yml:\n       ${
+			failed
+				.map( fail => `${ Chalk.bold( fail.name ) } - ${ fail.reason }\n       `)
+				.join('')
+		}`);
+
 		process.exit( 1 );
 	}
 	else {
@@ -142,7 +167,7 @@ const GenerateComponents = ( uikit, components ) => {
 				line.startsWith('  hasJs: ') ||
 				line.startsWith('  hasReact: ')
 			) {
-				return `${ line } # <-- auto generated, no don't change`;
+				return `${ line }    # <-- auto generated, don't change`;
 			}
 			else {
 				return line;
