@@ -219,3 +219,20 @@ skip-link:
   hasJs: false    # <-- auto generated, don't change
   hasReact: true    # <-- auto generated, don't change
   ID: skip-link    # <-- auto generated, don't change
+text-inputs:
+  name: Text Inputs
+  description: TODO
+  tags: TODO
+  contributors: 'x, x, x, x'
+  state: published
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  ID: text-inputs    # <-- auto generated, don't change
+  version: 1.0.0-next.7    # <-- auto generated, don't change
+  dependencies:    # <-- auto generated, don't change
+    - core
+  hasSass: true    # <-- auto generated, don't change
+  hasJs: false    # <-- auto generated, don't change
+  hasReact: true    # <-- auto generated, don't change
