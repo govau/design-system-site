@@ -14,7 +14,7 @@ const ComponentHeader = ({ _relativeURL, _parseYaml, _body, _pages, _ID, _isDocs
 			return key === _pages[ _ID ].module;
 		},
 		yaml: _parseYaml
-	});
+	})[ 0 ];
 
 	return (
 		<div className="row componentheader">

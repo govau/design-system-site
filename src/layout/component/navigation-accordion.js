@@ -7,12 +7,15 @@ import AUlinkList          from '../../_uikit/layout/link-list';
 import React, { Fragment } from 'react';
 import PropTypes           from 'prop-types';
 
+// Use the sort function from furnace
+// Fix up furnace css
+// Get data sorts the data
+// Shell markdown
+
 
 const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
 
-	const COMPONENTS = GetData({ yaml: _parseYaml });
-
-	const CreateAccordion = ( stateGroup, components, iteration ) => {
+	const CreateAccordion = ( title, components, iteration ) => {
 		const navItems = [];
 
 		components.map( component => {
@@ -27,29 +30,35 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
 
 		return (
 			<Fragment>
-				<AUaccordion header={ stateGroup.charAt( 0 ).toUpperCase() + stateGroup.slice(1) } open={ iteration === 0 ? true : false } >
+				<AUaccordion header={ title } >
 					<AUlinkList items={ navItems } />
 				</AUaccordion>
 			</Fragment>
 		)
-	}
+	};
 
+
+	const componentStates = {
+		published: 'Released',
+		unpublished: 'In progress',
+		alpha: 'Suggestions'
+	};
 
 	const accordionMarkup = [];
 
-	// Group the components by status
-	const componentsState = Object.keys( COMPONENTS ).reduce( ( stateGroup, componentName ) =>{
-		const state = COMPONENTS[ componentName ].state;
+	// For each state create an accordion
+	Object.keys( componentStates ).map( ( state, i  ) => {
 
-		stateGroup[ state ] = stateGroup[ state ] || [];
-		stateGroup[ state ].push( COMPONENTS[ componentName ] );
-		return stateGroup;
-	}, {});
+		const components = GetData({
+			filter: ( key, COMPONENTS ) => {
+				return COMPONENTS[ key ].state === state;
+			},
+			yaml: _parseYaml,
+		})
 
-
-	Object.keys( componentsState ).map( ( stateGroup, i ) => {
-		accordionMarkup.push( CreateAccordion( stateGroup, componentsState[ stateGroup ], i ) );
+		accordionMarkup.push( CreateAccordion( componentStates[ state ], components ) );
 	});
+
 
 	return(
 		<nav className={ `navigation navigation--accordion ${ accordionMarkup.theme === 'dark' ? 'navigation--dark ' : '' }` }>
