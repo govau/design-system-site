@@ -6,8 +6,10 @@
 	.au-link-list > li {
 		border: 0;
 
-		&.mainmenu--active {
+		&.mainmenu--active,
+		&.mainmenu--active-trail {
 			position: relative;
+			font-weight: bold;
 
 			&:after {
 				@include AU-space( margin-top, -0.5unit );

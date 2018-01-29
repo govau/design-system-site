@@ -1,4 +1,5 @@
 import { CreateLink }      from '../navigation';
+import GetData             from './../getData';
 import AUaccordion         from '../../_uikit/layout/accordion';
 import AUlinkList          from '../../_uikit/layout/link-list';
 
@@ -7,23 +8,27 @@ import React, { Fragment } from 'react';
 import PropTypes           from 'prop-types';
 
 
-const NavigationAccordion = ({ navAccordion, _relativeURL, _ID, _pages  }) => {
+const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
 
+	const COMPONENTS = GetData({ yaml: _parseYaml });
 
-	const CreateAccordion = ( section, iteration ) => {
+	const CreateAccordion = ( stateGroup, components, iteration ) => {
 		const navItems = [];
 
-		section.items.map( item => {
-			navItems.push( CreateLink( item, _relativeURL, _ID, _pages ) );
+		components.map( component => {
+
+			const link = {
+				link: '/components/' + component.ID,
+				text: component.name
+			}
+
+			navItems.push( CreateLink( link, _relativeURL, _ID, _pages ) );
 		});
 
 		return (
 			<Fragment>
-				<AUaccordion header={ section.title } open={ iteration === 0 ? true : false } >
-					<AUlinkList
-						items={ navItems }
-						className={ section.alignment === 'right' ? 'mainmenu--right' : '' }
-					/>
+				<AUaccordion header={ stateGroup.charAt( 0 ).toUpperCase() + stateGroup.slice(1) } open={ iteration === 0 ? true : false } >
+					<AUlinkList items={ navItems } />
 				</AUaccordion>
 			</Fragment>
 		)
@@ -32,8 +37,18 @@ const NavigationAccordion = ({ navAccordion, _relativeURL, _ID, _pages  }) => {
 
 	const accordionMarkup = [];
 
-	navAccordion.sections.map( ( section, i ) => {
-		accordionMarkup.push( CreateAccordion( section, i ) );
+	// Group the components by status
+	const componentsState = Object.keys( COMPONENTS ).reduce( ( stateGroup, componentName ) =>{
+		const state = COMPONENTS[ componentName ].state;
+
+		stateGroup[ state ] = stateGroup[ state ] || [];
+		stateGroup[ state ].push( COMPONENTS[ componentName ] );
+		return stateGroup;
+	}, {});
+
+
+	Object.keys( componentsState ).map( ( stateGroup, i ) => {
+		accordionMarkup.push( CreateAccordion( stateGroup, componentsState[ stateGroup ], i ) );
 	});
 
 	return(
