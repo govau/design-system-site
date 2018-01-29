@@ -10,9 +10,7 @@ import React from 'react';
 const ComponentHeader = ({ _relativeURL, _parseYaml, _body, _pages, _ID, _isDocs }) => {
 
 	const MODULE = GetData({
-		filter: ( key, COMPONENTS ) => {
-			return key === _pages[ _ID ].module;
-		},
+		filter: ( key, COMPONENTS ) => key === _pages[ _ID ].module,
 		yaml: _parseYaml
 	})[ 0 ];
 
