@@ -7,15 +7,10 @@ import AUlinkList          from '../../_uikit/layout/link-list';
 import React, { Fragment } from 'react';
 import PropTypes           from 'prop-types';
 
-// Use the sort function from furnace
-// Fix up furnace css
-// Get data sorts the data
-// Shell markdown
-
 
 const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
 
-	const CreateAccordion = ( title, components, iteration ) => {
+	const CreateAccordion = ( title, components, id, state ) => {
 		const navItems = [];
 
 		components.map( component => {
@@ -28,15 +23,36 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
 			navItems.push( CreateLink( link, _relativeURL, _ID, _pages ) );
 		});
 
+
+		let _isOpen = false;
+
+		// Open the released accordion on the component home page
+		if( id === undefined && state === 'published' ) {
+			_isOpen = true;
+		}
+		// Open the accordion based on the current pages module state
+		else if( id && state ) {
+
+			const MODULE = GetData({
+				filter: ( key, COMPONENTS ) => key === _pages[ _ID ].module,
+				yaml: _parseYaml
+			})[ 0 ];
+
+			if ( MODULE.state === state ) {
+				_isOpen = true;
+			}
+		}
+
+
+
 		return (
 			<Fragment>
-				<AUaccordion header={ title } >
+				<AUaccordion header={ title } open={ _isOpen } >
 					<AUlinkList items={ navItems } />
 				</AUaccordion>
 			</Fragment>
 		)
 	};
-
 
 	const componentStates = {
 		published: 'Released',
@@ -50,13 +66,11 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
 	Object.keys( componentStates ).map( ( state, i  ) => {
 
 		const components = GetData({
-			filter: ( key, COMPONENTS ) => {
-				return COMPONENTS[ key ].state === state;
-			},
+			filter: ( key, COMPONENTS ) => COMPONENTS[ key ].state === state,
 			yaml: _parseYaml,
 		})
 
-		accordionMarkup.push( CreateAccordion( componentStates[ state ], components ) );
+		accordionMarkup.push( CreateAccordion( componentStates[ state ], components, _pages[ _ID ].module, state ) );
 	});
 
 
