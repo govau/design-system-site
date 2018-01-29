@@ -8,7 +8,7 @@ import React from 'react';
  */
 const Furnace = ({ components, _body }) => (
 	<div className="au-grid">
-		<form className="row furnace" method="POST" action="https://furnace.apps.y.cld.gov.au/furnace/">
+		<form className="row furnace" method="POST" action="https://gold.service.gov.au/furnace/">
 
 			<div className="col-xs-12 col-sm-8">
 
