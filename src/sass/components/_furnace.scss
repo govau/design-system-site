@@ -1,6 +1,4 @@
-.furnace {
-
-}
+.furnace {}
 
 .furnace__title {
 	@include AU-space( padding-bottom, 1.5unit );
@@ -19,19 +17,21 @@
 	margin-top: 0;
 	padding: 0;
 
-	// Smaller tidier checkboxes (whole element is clickable anyway)
-	.au-control-input__input {
-		@include AU-space( top, 0.25unit );
-	}
-	.au-control-input__text {
-		@include AU-space( margin, 0.25unit 0 0.5unit 2.25unit );
-	}
-	.au-control-input__text:before,
-	.au-control-input__text:after {
-		@include AU-space( width, 2unit );
-		@include AU-space( height, 2unit );
-		top: -6px;
-	}
+	// // Smaller tidier checkboxes (whole element is clickable anyway)
+	// .au-control-input__input {
+	// 	@include AU-space( top, 0.25unit );
+	// }
+
+	// .au-control-input__text {
+	// 	@include AU-space( margin, 0.25unit 0 0.5unit 2.25unit );
+	// }
+
+	// .au-control-input__text:before,
+	// .au-control-input__text:after {
+	// 	@include AU-space( width, 2unit );
+	// 	@include AU-space( height, 2unit );
+	// 	top: -6px;
+	// }
 }
 
 
@@ -70,8 +70,6 @@
 	}
 }
 
-
-
 .furnace__component__details {
 	.furnace__component__notes {
 		@include AU-space( margin, 2unit 0 0 0 );
@@ -101,13 +99,15 @@
 	}
 }
 
-
-
 .furnace__code {
 	@include AU-fontgrid( xs );
 	font-family: $AU-font-monospace;
+	apperance: none;
+	border: none;
+	background-color: transparent;
+	height: 10em;
+	width: 100%;
 }
-
 
 .furnace__buildbox {
 	@include AU-clearfix();
@@ -115,30 +115,30 @@
 	@include AU-space( margin-top, 1unit );
 	background-color: $AU-color-Background;
 
-	// Smaller tidier checkboxes on desktop layout
-	@include AU-media( md ) {
-		.au-control-input.au-control-input--block {
-			@include AU-space( margin-top, 1unit );
-		}
+	// // Smaller tidier checkboxes on desktop layout
+	// @include AU-media( md ) {
+	// 	.au-control-input.au-control-input--block {
+	// 		@include AU-space( margin-top, 1unit );
+	// 	}
 
-		.au-control-input__text {
-			@include AU-fontgrid( xs );
-			@include AU-space( margin, 0 0 0 1.75unit );
-		}
+	// 	.au-control-input__text {
+	// 		@include AU-fontgrid( xs );
+	// 		@include AU-space( margin, 0 0 0 1.75unit );
+	// 	}
 
-		.au-control-input__text:before,
-		.au-control-input__text:after {
-			@include AU-space( width, 1.75unit );
-			@include AU-space( height, 1.75unit );
-			@include AU-space( left, -0.25unit );
-			@include AU-space( top, -0.25unit );
-		}
+	// 	.au-control-input__text:before,
+	// 	.au-control-input__text:after {
+	// 		@include AU-space( width, 1.75unit );
+	// 		@include AU-space( height, 1.75unit );
+	// 		@include AU-space( left, -0.25unit );
+	// 		@include AU-space( top, -0.25unit );
+	// 	}
 
-		.au-control-input__input {
-			left: 0;
-			top: 0;
-		}
-	}
+	// 	.au-control-input__input {
+	// 		left: 0;
+	// 		top: 0;
+	// 	}
+	// }
 
 	.au-btn.au-btn--size-sm {
 		float: right;
@@ -146,7 +146,7 @@
 		@include AU-space( margin-right, -1unit );
 		@include AU-space( margin-bottom, -1unit );
 		@include AU-space( padding, 0.25unit 0.5unit );
-	} //AU-media
+	}
 
 }
 
@@ -155,9 +155,11 @@
 .au-body ul.furnace--component-list > li {
 	margin-top: 0;
 }
+
 .au-body ul.furnace--component-list > li + li {
 	@include AU-space( margin-top, 1unit );
 }
+
 .au-body *+ul.furnace--component-list {
 	margin-top: 0;
 }

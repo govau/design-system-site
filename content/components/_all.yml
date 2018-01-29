@@ -3,7 +3,7 @@ core:
   description: TODO
   tags: TODO
   img: 'http://via.placeholder.com/144x144/ffffff/cccccc'
-  required: false
+  required: true
   contributors: 'x, x, x, x'
   state: published
   order: 0
