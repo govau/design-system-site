@@ -7,7 +7,12 @@ import React from 'react';
  * The Intro component
  */
 const Furnace = ({ components, _body, _parseYaml }) => {
-	const MODULES = GetData({ yaml: _parseYaml });
+	const MODULES = GetData({
+		filter: ( key, COMPONENTS ) => {
+			return COMPONENTS[ key ].state === 'published';
+		},
+		yaml: _parseYaml,
+	});
 
 	return (
 		<div className="au-grid">
@@ -26,8 +31,6 @@ const Furnace = ({ components, _body, _parseYaml }) => {
 						<ul className="furnace__component-list">
 							{
 								Object.keys( MODULES )
-									.filter( ( key ) => MODULES[ key ].state === 'published' )
-									.sort( ( keyA, keyB ) => MODULES[ keyA ].order - MODULES[ keyB ].order )
 									.map( ( module, i ) => (
 										<li className="furnace__component" key={ i }>
 
@@ -82,12 +85,12 @@ const Furnace = ({ components, _body, _parseYaml }) => {
 
 					<h4>NPM</h4>
 					<div className="furnace__buildbox">
-						<textarea className="furnace__code" readOnly>
+						<div className="furnace__code" readOnly>
 							npm install
 							@gov.au/body
 							@gov.au/breadcrumbs 
 							@gov.au/animate 
-						</textarea>
+						</div>
 						<a href="#" className="au-btn au-btn--size-sm">Copy</a>
 					</div>
 

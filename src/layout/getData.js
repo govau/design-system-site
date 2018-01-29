@@ -9,20 +9,18 @@ import Fs from 'fs';
  *
  * @disable-docs
  */
-const GetData = ({ module = '', yaml }) => {
-	const COMPONENT = yaml(
+const GetData = ({ yaml, filter = () => true }) => {
+	const COMPONENTS = yaml(
 		Fs.readFileSync(
 			Path.normalize(`${ __dirname }/../../content/components/_all.yml`),
 			{ encoding: 'utf8' }
 		)
 	);
 
-	if( module.length > 0 ) {
-		return COMPONENT[ module ];
-	}
-	else {
-		return COMPONENT;
-	}
+	return Object.keys( COMPONENTS )
+		.filter( ( key ) => filter( key, COMPONENTS ) )
+		.sort( ( keyA, keyB ) => COMPONENTS[ keyA ].order - COMPONENTS[ keyB ].order )
+		.map( ( key ) => COMPONENTS[ key ] );
 };
 
 export default GetData;

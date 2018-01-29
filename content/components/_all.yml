@@ -85,7 +85,7 @@ body:
   required: false
   contributors: 'x, x, x, x'
   state: published
-  order: 1
+  order: 0
   discussions:
     - open: 2
     - active: 7

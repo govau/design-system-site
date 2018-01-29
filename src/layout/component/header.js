@@ -9,7 +9,12 @@ import React from 'react';
  */
 const ComponentHeader = ({ _relativeURL, _parseYaml, _body, _pages, _ID, _isDocs }) => {
 
-	const MODULE = GetData({ module: _pages[ _ID ].module, yaml: _parseYaml });
+	const MODULE = GetData({
+		filter: ( key, COMPONENTS ) => {
+			return key === _pages[ _ID ].module;
+		},
+		yaml: _parseYaml
+	});
 
 	return (
 		<div className="row componentheader">
