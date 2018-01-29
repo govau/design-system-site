@@ -11,18 +11,6 @@ import PropTypes           from 'prop-types';
 const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
 
 	const CreateAccordion = ( title, components, id, state ) => {
-		const navItems = [];
-
-		components.map( component => {
-
-			const link = {
-				link: '/components/' + component.ID,
-				text: component.name
-			}
-
-			navItems.push( CreateLink( link, _relativeURL, _ID, _pages ) );
-		});
-
 
 		let _isOpen = false;
 
@@ -43,6 +31,17 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
 			}
 		}
 
+		// Create AUlinkList from navigation
+		const navItems = [];
+		components.map( component => {
+
+			const link = {
+				link: '/components/' + component.ID,
+				text: component.name
+			}
+
+			navItems.push( CreateLink( link, _relativeURL, _ID, _pages ) );
+		});
 
 
 		return (
@@ -68,7 +67,7 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
 		const components = GetData({
 			filter: ( key, COMPONENTS ) => COMPONENTS[ key ].state === state,
 			yaml: _parseYaml,
-		})
+		});
 
 		accordionMarkup.push( CreateAccordion( componentStates[ state ], components, _pages[ _ID ].module, state ) );
 	});
