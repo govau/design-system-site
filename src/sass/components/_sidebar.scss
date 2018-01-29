@@ -1,9 +1,18 @@
 // Component page sidebar changes
-.is-components .sidebar {
-	background: $AU-color-Background;
+.is-components {
+
+	.sidebar {
+		@include AU-space( margin-top, -1unit );
+		@include AU-space( margin-bottom, 2unit );
+		// @include AU-space( padding, 2unit 3unit 2unit 3unit );
+	}
+
+	.navigation--accordion {
+		display: none;
+	}
 }
 
-@media screen and ( min-width: $nav_breakpoint ) {
+@include AU-media( md ) {
 	.is-components {
 		background: $AU-color-Background;
 
@@ -44,7 +53,9 @@
 			padding-left: 0;
 
 			.navigation--accordion {
+				@include AU-space( padding-top, 2unit );
 				margin-right: -12px;
+				display: block;
 			}
 		}
 	}
