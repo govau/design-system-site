@@ -4,6 +4,25 @@
 	.au-link-list > li {
 		border: 0;
 
+		&.mainmenu--active {
+			position: relative;
+			// background-color: $AU-color-Background-light;
+
+			&:after {
+				@include AU-space( margin-top, -0.5unit );
+				@include AU-space( right, -0.5unit );
+				@include AU-space( height, 1unit );
+				@include AU-space( width, 1unit );
+				position: absolute;
+				content: " ";
+				box-shadow: -1px -1px 10px -2px rgba( 0, 0, 0, 0.2 );
+				background-color: $AU-color-Background-light;
+				top: 50%;
+				z-index: 100;
+				transform: rotate(45deg);
+			}
+		}
+
 		& > a {
 			@include AU-fontgrid( xs, nospace );
 			@include AU-space( padding, 1unit );
@@ -12,6 +31,7 @@
 
 	.au-accordion__body-wrapper {
 		padding: 0;
+		background-color: $AU-color-Background-dark;
 	}
 
 	.au-accordion {
@@ -26,11 +46,12 @@
 	.au-accordion__title {
 		background: transparent;
 		text-decoration: none;
+		font-weight: bold;
 		@include AU-fontgrid( xs, nospace );
 	}
 
-	.au-accordion--open .au-accordion__title {
-		font-weight: bold;
+	.au-accordion--closed.au-accordion__title {
+		font-weight: normal;
 	}
 }
 
