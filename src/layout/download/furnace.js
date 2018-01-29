@@ -25,48 +25,52 @@ const Furnace = ({ components, _body, _parseYaml }) => {
 
 						<ul className="furnace__component-list">
 							{
-								Object.keys( MODULES ).map( ( module, i ) => (
-									<li className="furnace__component" key={ i }>
+								Object.keys( MODULES )
+									.filter( ( key ) => MODULES[ key ].state === 'published' )
+									.sort( ( keyA, keyB ) => MODULES[ keyA ].order - MODULES[ keyB ].order )
+									.map( ( module, i ) => (
+										<li className="furnace__component" key={ i }>
 
-										<label className="furnace__component__label">
-											<span className="furnace__component__control">
-												<input type="checkbox" name="components" className="au-control-input__input" value={ MODULES[ module ].ID }
-													required={ MODULES[ module ].required }
-													checked={ MODULES[ module ].required }
-													disabled={ MODULES[ module ].required }
-													readOnly={ MODULES[ module ].required }
-												/>
-												<span className="au-control-input__text">
-													<span className="sronly">Add</span>
-														{ MODULES[ module ].name }
-														{
-															MODULES[ module ].required
-																? ' (required)'
-																: ''
-														}
+											<label className="furnace__component__label">
+												<span className="furnace__component__control">
+													<input type="checkbox" name="components" className="au-control-input__input" value={ MODULES[ module ].ID }
+														required={ MODULES[ module ].required }
+														checked={ MODULES[ module ].required }
+														disabled={ MODULES[ module ].required }
+														readOnly={ MODULES[ module ].required }
+													/>
+													<span className="au-control-input__text">
+														<span className="sronly">Add</span>
+															{ MODULES[ module ].name }
+															{
+																MODULES[ module ].required
+																	? ' (required)'
+																	: ''
+															}
+													</span>
 												</span>
-											</span>
-										</label>
+											</label>
 
-										<div className="furnace__component__details">
-											<img src={ MODULES[ module ].img } alt=""/>
-											<p className="furnace__component__notes">
-												{
-													MODULES[ module ].dependencies.length > 0
-														? `Dependencies: ${ MODULES[ module ].dependencies.join(', ') }`
-														: null
-												}
-											</p>
-											<p className="furnace__component__doclink">
-												<a href={`/components/${ MODULES[ module ].ID }`}>
-													<span className="sronly">{ MODULES[ module ].name }</span>
-													Documentation
-												</a>
-											</p>
-										</div>
+											<div className="furnace__component__details">
+												<img src={ MODULES[ module ].img } alt=""/>
+												<p className="furnace__component__notes">
+													{
+														MODULES[ module ].dependencies.length > 0
+															? `Dependencies: ${ MODULES[ module ].dependencies.join(', ') }`
+															: null
+													}
+												</p>
+												<p className="furnace__component__doclink">
+													<a href={`/components/${ MODULES[ module ].ID }`}>
+														<span className="sronly">{ MODULES[ module ].name }</span>
+														Documentation
+													</a>
+												</p>
+											</div>
 
-									</li>
-								))
+										</li>
+									)
+								)
 							}
 						</ul>
 
