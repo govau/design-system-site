@@ -42,7 +42,7 @@ const ComponentPage = ({
 			<div className="page-wrapper">
 				<div className="content-wrapper">
 					<main id="content" className="main au-body container-fluid">
-						<div className="row">
+						<div className="row content-matchheight">
 							<div className="col-md-3 sidebar">
 								{ sidebar }
 							</div>

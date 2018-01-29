@@ -1,5 +1,11 @@
 .header {
 	@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
+
+	@media screen and ( min-width: $nav_breakpoint ) {
+		position: relative;
+		z-index: 100;
+		box-shadow: 0 0 5px 0 $AU-color-Border;
+	}
 }
 
 // Remove padding bottom as we have a menu

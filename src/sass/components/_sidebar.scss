@@ -4,7 +4,6 @@
 	.sidebar {
 		@include AU-space( margin-top, -1unit );
 		@include AU-space( margin-bottom, 2unit );
-		// @include AU-space( padding, 2unit 3unit 2unit 3unit );
 	}
 
 	.navigation--accordion {
@@ -14,7 +13,10 @@
 
 @include AU-media( md ) {
 	.is-components {
-		background: $AU-color-Background;
+
+		.content-matchheight {
+			display: flex;
+		}
 
 		main {
 			background: transparent;
@@ -24,9 +26,9 @@
 			position: relative;
 
 			&:after {
-				background: $AU-color-Background-light;
+				background: $AU-color-Background-dark;
 				content: " ";
-				right: 0;
+				left: 0;
 				position: absolute;
 				width: 50%;
 				top: 0;
@@ -46,14 +48,14 @@
 		.content {
 			@include AU-space( padding-left, 2unit );
 			background: $AU-color-Background-light;
-			box-shadow: -5px 0px 2px -2px rgba( 0, 0, 0, 0.2 );
+			box-shadow: -1px 0 0 0 $AU-color-Border;
 		}
 
 		.sidebar {
 			padding-left: 0;
 
 			.navigation--accordion {
-				@include AU-space( padding-top, 2unit );
+				@include AU-space( margin-top, 2unit );
 				margin-right: -12px;
 				display: block;
 			}

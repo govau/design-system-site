@@ -1,13 +1,27 @@
 .navigation.navigation--accordion {
 	border-bottom: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
 
 	.au-link-list > li {
 		border: 0;
-		border-left: 4px solid $AU-color-Background-dark;
 
 		&.mainmenu--active {
 			position: relative;
-			border-left: 4px solid $AU-color-Action;
+
+			&:after {
+				@include AU-space( margin-top, -0.5unit );
+				@include AU-space( right, -0.5unit );
+				@include AU-space( height, 1unit );
+				@include AU-space( width, 1unit );
+				position: absolute;
+				content: " ";
+				box-shadow: -1px 1px 0 0 $AU-color-Border;
+				background-color: $AU-color-Background-light;
+				top: 50%;
+				z-index: 100;
+				transform: rotate(45deg);
+			}
 		}
 
 		& > a {
@@ -18,10 +32,7 @@
 
 	.au-accordion__body-wrapper {
 		padding: 0;
-		background-color: $AU-color-Background-dark;
-		max-height: 300px;
-		overflow-y: auto;
-		overflow-x: hidden;
+		background-color: $AU-color-Background-darkest;
 	}
 
 	.au-accordion {
