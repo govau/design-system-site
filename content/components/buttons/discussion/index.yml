@@ -5,7 +5,9 @@ pagetitle: Buttons discussion
 header:
   - /_shared/header.md
 
-sidebar: /components/navigation.md
+sidebar:
+  - /components/search.md
+  - /components/navigation.md
 
 main:
   - /components/buttons/header.md
