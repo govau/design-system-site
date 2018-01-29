@@ -34,7 +34,7 @@ function AddEvent( element, event, onEvent ) {
 			if( _isAttachEvent ) {
 				elementArray[ i ].attachEvent( 'on' + event, onEvent );
 			}
-			else{
+			else {
 				elementArray[ i ].addEventListener( event, onEvent, false);
 			}
 		}

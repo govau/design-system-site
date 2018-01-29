@@ -1,0 +1,36 @@
+.navigation.navigation--accordion {
+	border-bottom: 0;
+
+	.au-link-list > li {
+		border: 0;
+
+		& > a {
+			@include AU-fontgrid( xs, nospace );
+			@include AU-space( padding, 1unit );
+		}
+	}
+
+	.au-accordion__body-wrapper {
+		padding: 0;
+	}
+
+	.au-accordion {
+		border: 0;
+		border-top: 1px solid $AU-color-Border;
+
+		&:last-of-type {
+			border-bottom: 1px solid $AU-color-Border;
+		}
+	}
+
+	.au-accordion__title {
+		background: transparent;
+		text-decoration: none;
+		@include AU-fontgrid( xs, nospace );
+	}
+
+	.au-accordion--open .au-accordion__title {
+		font-weight: bold;
+	}
+}
+

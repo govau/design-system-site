@@ -38,15 +38,17 @@ const Page = ({
 		<body className="au-grid">
 
 			{ header }
-			<div className="content-wrapper">
-				<main id="content" className="main au-body container-fluid">
-					<div className="row">
-						<div className="col-md-12">
-							<h1>{ pagetitle }</h1>
-							{ main }
+			<div className="page-wrapper">
+				<div className="content-wrapper">
+					<main id="content" className="main au-body container-fluid">
+						<div className="row">
+							<div className="col-md-12">
+								<h1>{ pagetitle }</h1>
+								{ main }
+							</div>
 						</div>
-					</div>
-				</main>
+					</main>
+				</div>
 				{ footer }
 			</div>
 			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />

@@ -1,0 +1,46 @@
+.is-components {
+	background: $AU-color-Background;
+
+	main {
+		background: transparent;
+	}
+
+	.content-wrapper {
+		position: relative;
+
+		&:after {
+			background: $AU-color-Background-light;
+			content: " ";
+			right: 0;
+			position: absolute;
+			width: 50%;
+			top: 0;
+			bottom: 0;
+			z-index: -1;
+		}
+	}
+
+	.content,
+	.sidebar {
+		@include AU-space( margin-top, -3unit );
+		@include AU-space( margin-bottom, -3unit );
+		@include AU-space( padding-top, 3unit );
+		@include AU-space( padding-bottom, 3unit );
+	}
+
+	.content {
+		@include AU-space( padding-left, 2unit );
+		background: $AU-color-Background-light;
+		box-shadow: -5px 0px 2px -2px rgba( 0, 0, 0, 0.2 );
+	}
+
+	.sidebar {
+		background: $AU-color-Background;
+		padding-left: 0;
+
+		.navigation--accordion {
+			margin-right: -12px;
+		}
+	}
+}
+

@@ -39,17 +39,19 @@ const ComponentPage = ({
 		<body className="au-grid is-components">
 
 			{ header }
-			<div className="content-wrapper">
-				<main id="content" className="main au-body container-fluid">
-					<div className="row">
-						<div className="col-md-3">
-							{ sidebar }
+			<div className="page-wrapper">
+				<div className="content-wrapper">
+					<main id="content" className="main au-body container-fluid">
+						<div className="row">
+							<div className="col-md-3 sidebar">
+								{ sidebar }
+							</div>
+							<div className="col-md-9 content">
+								{ main }
+							</div>
 						</div>
-						<div className="grids col-md-9">
-							{ main }
-						</div>
-					</div>
-				</main>
+					</main>
+				</div>
 
 				{ footer }
 			</div>

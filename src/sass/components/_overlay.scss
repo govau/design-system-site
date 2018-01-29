@@ -18,7 +18,7 @@
 .overlay--open {
 	height: 100%;
 
-	.content-wrapper {
+	.page-wrapper {
 		overflow:hidden;
 	}
 
@@ -36,7 +36,7 @@
 	// Reset the lock when the nav is closed
 	@media screen and ( min-width: $nav_breakpoint ) {
 		.header,
-		.content-wrapper {
+		.page-wrapper {
 			overflow: visible;
 		}
 

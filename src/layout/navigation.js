@@ -50,7 +50,7 @@ const Navigation = ({ navigation, _relativeURL, _ID, _pages }) => {
 	});
 
 	return (
-		<nav className={ `navigation navigation--accordion ${ navigation.theme === 'dark' ? 'navigation--dark ' : '' }` }>
+		<nav className={ `navigation ${ navigation.theme === 'dark' ? 'navigation--dark ' : '' }` }>
 			{
 				navMarkup.map( ( nav, i ) => (
 					<Fragment key={ i }>{ nav }</Fragment>

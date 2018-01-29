@@ -22,7 +22,7 @@ const Footer = ({ headline, legallist, mainlist, _body, _ID, _relativeURL }) => 
 						<AUlinkList items={ legallist } className="footer__legal-links" />
 
 						<AUfooterEnd>
-							<div className="content footer__legal">
+							<div className="footer__content footer__legal">
 								{ _body }
 							</div>
 						</AUfooterEnd>
