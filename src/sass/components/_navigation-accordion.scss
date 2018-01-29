@@ -6,7 +6,8 @@
 	.au-link-list > li {
 		border: 0;
 
-		&.mainmenu--active {
+		&.mainmenu--active,
+		&.mainmenu--active-trail {
 			position: relative;
 
 			&:after {

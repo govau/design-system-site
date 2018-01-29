@@ -18,7 +18,7 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
 		components.map( component => {
 
 			const link = {
-				link: 'components/' + component.ID + '/',
+				link: '/components/' + component.ID,
 				text: component.name
 			}
 
@@ -27,7 +27,7 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
 
 		return (
 			<Fragment>
-				<AUaccordion header={ stateGroup } open={ iteration === 0 ? true : false } >
+				<AUaccordion header={ stateGroup.charAt( 0 ).toUpperCase() + stateGroup.slice(1) } open={ iteration === 0 ? true : false } >
 					<AUlinkList items={ navItems } />
 				</AUaccordion>
 			</Fragment>
