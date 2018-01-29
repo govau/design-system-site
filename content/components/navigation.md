@@ -13,6 +13,62 @@ navAccordion:
           link: /components/animate
         - text: Buttons
           link: /components/buttons
+        - text: Core
+          link: /components/core
+        - text: Accordion
+          link: /components/accordion
+        - text: Animate
+          link: /components/animate
+        - text: Buttons
+          link: /components/buttons
+        - text: Core
+          link: /components/core
+        - text: Accordion
+          link: /components/accordion
+        - text: Animate
+          link: /components/animate
+        - text: Buttons
+          link: /components/buttons
+        - text: Core
+          link: /components/core
+        - text: Accordion
+          link: /components/accordion
+        - text: Animate
+          link: /components/animate
+        - text: Buttons
+          link: /components/buttons
+        - text: Core
+          link: /components/core
+        - text: Accordion
+          link: /components/accordion
+        - text: Animate
+          link: /components/animate
+        - text: Buttons
+          link: /components/buttons
+        - text: Core
+          link: /components/core
+        - text: Accordion
+          link: /components/accordion
+        - text: Animate
+          link: /components/animate
+        - text: Buttons
+          link: /components/buttons
+        - text: Core
+          link: /components/core
+        - text: Accordion
+          link: /components/accordion
+        - text: Animate
+          link: /components/animate
+        - text: Buttons
+          link: /components/buttons
+        - text: Core
+          link: /components/core
+        - text: Accordion
+          link: /components/accordion
+        - text: Animate
+          link: /components/animate
+        - text: Buttons
+          link: /components/buttons
     - title: In progress
       headingSize: 3
       items:

@@ -1,6 +1,9 @@
 // Component page sidebar changes
+.is-components .sidebar {
+	background: $AU-color-Background;
+}
 
-@include AU-media( xs ) {
+@media screen and ( min-width: $nav_breakpoint ) {
 	.is-components {
 		background: $AU-color-Background;
 
@@ -38,7 +41,6 @@
 		}
 
 		.sidebar {
-			background: $AU-color-Background;
 			padding-left: 0;
 
 			.navigation--accordion {
