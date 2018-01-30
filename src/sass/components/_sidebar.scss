@@ -51,14 +51,10 @@
 			box-shadow: -1px 0 0 0 $AU-color-Border;
 		}
 
-		.sidebar {
-			padding-left: 0;
-
-			.navigation--accordion {
-				@include AU-space( margin-top, 2unit );
-				margin-right: -12px;
-				display: block;
-			}
+		.sidebar .navigation--accordion {
+			@include AU-space( margin-top, 2unit );
+			margin-right: -12px;
+			display: block;
 		}
 	}
 }

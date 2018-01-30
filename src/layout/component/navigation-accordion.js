@@ -36,7 +36,7 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
 		components.map( component => {
 
 			const link = {
-				link: '/components/' + component.ID,
+				link: `/components/${ component.ID }`,
 				text: component.name
 			}
 

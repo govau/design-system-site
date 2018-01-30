@@ -1,26 +1,57 @@
-import AUcardList from '../card-list';
+import AUcardList          from '../card-list';
+import GetData             from './../getData';
 import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
+import PropTypes           from 'prop-types';
 
 
 /**
  * The component released listing of cards
  */
-const ComponentReleased = ({ cardList, _body }) => (
-	<Fragment>
-		{ _body }
+const ComponentReleased = ({ cardList, _body, _parseYaml }) => {
 
-		<div className="row">
-			<AUcardList
-				cards={ cardList.cards }
-				appearance={ cardList.appearance }
-				columnSize={ cardList.columnSize }
-				matchHeight={ cardList.matchHeight }
-				alignment={ cardList.alignment }
-				/>
-		</div>
-	</Fragment>
-);
+	const components = GetData({
+		filter: ( key, COMPONENTS ) => COMPONENTS[ key ].state === 'published',
+		yaml: _parseYaml,
+	});
+
+	const cards = [];
+	components.map( component => {
+		cards.push({
+			link: `/components/${ component.ID }`,
+			rows: [{
+				type: 'image',
+				image: component.image,
+				description: component.description,
+				fullwidth: true,
+			},
+			{
+				type: 'content',
+				text: component.version,
+			},
+			{
+				type: 'heading',
+				headingSize: '3',
+				text: component.name,
+			}]
+		})
+	})
+
+	return(
+		<Fragment>
+			{ _body }
+
+			<div className="row">
+				<AUcardList
+					cards={ cards }
+					appearance={ cardList.appearance }
+					columnSize={ cardList.columnSize }
+					matchHeight={ cardList.matchHeight }
+					alignment={ cardList.alignment }
+					/>
+			</div>
+		</Fragment>
+	)
+};
 
 
 ComponentReleased.propTypes = {

@@ -8,9 +8,7 @@ import React from 'react';
  */
 const Furnace = ({ components, _body, _parseYaml }) => {
 	const MODULES = GetData({
-		filter: ( key, COMPONENTS ) => {
-			return COMPONENTS[ key ].state === 'published';
-		},
+		filter: ( key, COMPONENTS ) => COMPONENTS[ key ].state === 'published',
 		yaml: _parseYaml,
 	});
 
@@ -55,7 +53,7 @@ const Furnace = ({ components, _body, _parseYaml }) => {
 											</label>
 
 											<div className="furnace__component__details">
-												<img src={ MODULES[ module ].img } alt=""/>
+												<img src={ MODULES[ module ].image } alt=""/>
 												<p className="furnace__component__notes">
 													{
 														MODULES[ module ].dependencies.length > 0
