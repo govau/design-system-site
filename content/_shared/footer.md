@@ -3,22 +3,22 @@ layout: structure/footer
 headline: Community
 mainlist:
   - text: Forums
-    link: /
+    link: https://community.service.gov.au/c/design-system
   - text: Articles
-    link: /
+    link: /articles
   - text: Roadmap
-    link: /
+    link: /roadmap
   - text: Github
-    link: /
+    link: https://github.com/govau/uikit/
 legallist:
   - text: Privacy policy
-    link: /
+    link: /privacy
   - text: Need help?
-    link: /
+    link: /support
   - text: Accessibility
-    link: /
+    link: /accessibility
   - text: Security
-    link: /
+    link: /security
 ---
 
 © Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the [MIT license](https://github.com/govau/uikit/blob/master/LICENSE.md)

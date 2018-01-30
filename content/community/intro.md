@@ -1,7 +1,7 @@
 ---
 layout: content/text-with-cta
 button:
-  link: https://github.com/govau/uikit#how-to-use
+  link: https://community.service.gov.au/c/design-system
   text: Visit the forums
   type: secondary
   icon: community

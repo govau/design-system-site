@@ -4,32 +4,32 @@ lists:
   - heading: Help with design
     links:
       - text: Request a component
-        link: /
+        link: https://github.com/govau/uikit/issues
       - text: Improve documentation
-        link: /
+        link: https://github.com/govau/uikit/issues
 
   - heading: Help with planning
     links:
       - text: Community discussions
-        link: /
+        link: https://community.service.gov.au/c/design-system
       - text: Roadmap discussions
-        link: /
+        link: https://community.service.gov.au/c/design-system
 
   - heading: Help with code
     links:
       - text: Code contribution guide
-        link: /
+        link: https://github.com/govau/uikit/blob/master/CONTRIBUTING.md
         icon: github
       - text: Report an issue
-        link: /
+        link: https://github.com/govau/uikit/issues
         icon: github
 
   - heading: Help with usability
     links:
       - text: Component discussions
-        link: /
+        link: https://community.service.gov.au/c/design-system/published-components
       - text: Provide research findings
-        link: /
+        link: https://community.service.gov.au/c/design-system/in-progress-components
 ---
 
 ## How you can contribute

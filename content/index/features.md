@@ -2,7 +2,7 @@
 layout: home/features
 title: What makes our components great
 btnURL: /components
-btntext: See an examples
+btntext: See examples
 
 tiles:
   - smltitle: Designed
