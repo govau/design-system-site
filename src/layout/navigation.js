@@ -18,7 +18,7 @@ export const CreateLink = ( link, _relativeURL, _ID, _pages ) => {
 
 	return {
 		text: link.text,
-		link: _relativeURL( link.link, _ID ),
+		link: link.link.startsWith('http') ? link.link : _relativeURL( link.link, _ID ),
 		className: linkClasses,
 		li: {
 			className: `${ active ? 'mainmenu--active' : ''  }${ _isActiveTrail ? ' mainmenu--active-trail' : ''  }`,
