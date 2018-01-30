@@ -7,14 +7,10 @@ btnURL: /community
 btnIcon: community
 tableTH:
   - text: Title
-  - text: Status
+  - text: State
     className: component-table--minwidth
   - text: Version
     className: component-table--minwidth
   - text: Contributors
     className: component-table--minwidth
-components:
-  - module: core
-  - module: buttons
-  - module: accordion
 ---

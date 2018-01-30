@@ -1,20 +1,29 @@
-import AUbutton from '../../_uikit/layout/buttons';
+import AUbutton            from '../../_uikit/layout/buttons';
+import GetData             from './../getData';
+import Table               from './../table';
+
 import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
-import Table from './../table';
+import PropTypes           from 'prop-types';
+
 
 
 /**
  * The table for suggested components
  */
-const TableSuggestions = ({ title, caption, btntext, btnURL, btnIcon, tableTH, components }) => {
+const TableSuggestions = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _parseYaml }) => {
+
+	const components = GetData({
+		filter: ( key, COMPONENTS ) => COMPONENTS[ key ].state === 'alpha',
+		yaml: _parseYaml,
+	});
+
 	const body = components.map( component => {
 			return [
 				{
-					text: <a href={`https://www.npmjs.com/package/@gov.au/${ component.module }/`}>{ component.module }</a>,
+					text: <a href={ `/components/${ component.ID }` }>{ component.name }</a>,
 				},
 				{
-					text: `tbg`,
+					text: `Suggestion`,
 				},
 			];
 		}
@@ -77,18 +86,6 @@ TableSuggestions.propTypes = {
 		PropTypes.shape({
 			text: PropTypes.string.isRequired,
 			className: PropTypes.string,
-		})
-	).isRequired,
-
-	/**
-	 * components:
-	 *   - module: core
-	 *   - module: buttons
-	 *   - module: accordion
-	 */
-	components: PropTypes.arrayOf(
-		PropTypes.shape({
-			module: PropTypes.string.isRequired,
 		})
 	).isRequired,
 };

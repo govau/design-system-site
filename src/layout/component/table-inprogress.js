@@ -1,30 +1,41 @@
-import AUbutton from '../../_uikit/layout/buttons';
+import AUbutton            from '../../_uikit/layout/buttons';
+import Table               from './../table';
+import GetData             from './../getData';
+
 import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
-import Table from './../table';
+import PropTypes           from 'prop-types';
 
 
 /**
  * The table for in progress components
  */
-const TableInProgress = ({ title, caption, btntext, btnURL, btnIcon, tableTH, components }) => {
+const TableInProgress = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _parseYaml }) => {
+
+	const components = GetData({
+		filter: ( key, COMPONENTS ) => COMPONENTS[ key ].state === 'unpublished',
+		yaml: _parseYaml,
+	});
+
+
 	const body = components.map( component => {
-			return [
-				{
-					text: <a href={`https://www.npmjs.com/package/@gov.au/${ component.module }/`}>{ component.module }</a>,
-				},
-				{
-					text: `tbg`,
-				},
-				{
-					text: `tbg`,
-				},
-				{
-					text: `tbg`,
-				},
-			];
-		}
-	);
+
+		return [
+			{
+				text: <a href={ `/components/${ component.ID }` }>{ component.name }</a>,
+			},
+			{
+				text: 'In progress'
+			},
+			{
+				text: component.version,
+			},
+			{
+				text: component.contributors,
+			},
+		];
+	}
+
+);
 
 	return (
 		<Fragment>
@@ -84,19 +95,7 @@ TableInProgress.propTypes = {
 			text: PropTypes.string.isRequired,
 			className: PropTypes.string,
 		})
-	).isRequired,
-
-	/**
-	 * components:
-	 *   - module: core
-	 *   - module: buttons
-	 *   - module: accordion
-	 */
-	components: PropTypes.arrayOf(
-		PropTypes.shape({
-			module: PropTypes.string.isRequired,
-		})
-	).isRequired,
+	).isRequired
 };
 
 export default TableInProgress;
