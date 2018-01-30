@@ -1,7 +1,13 @@
 // component-header
 
 .componentheader {
-	.au-display-lg {
+
+	.componentheader__headling {
 		font-weight: normal;
+		@include AU-fontgrid( xxxl, nospace );
+	}
+
+	.componentheader__body {
+		margin-top: 2rem;
 	}
 }

@@ -1,4 +1,13 @@
 // component-status box
+.componentheader__statusbox {
+	@include AU-space( margin-top, 2unit );
+
+	@include AU-media( md ){
+		margin-top: 0;
+	}
+}
+
+
 .au-body .componentStatus {
 	@include AU-fontgrid( xs );
 	@include AU-clearfix();
@@ -35,9 +44,10 @@
 
 .componentStatus__title {
 	@include AU-space( padding-bottom, 1unit );
+	@include AU-space( border-bottom, solid 0.25unit $AU-color-Action);
 	color: $AU-color-Action;
-	border-bottom: solid 1px $AU-color-Border;
 }
+
 
 .componentStatus__definition__list {
 	@include AU-fontgrid( xs );
@@ -74,4 +84,16 @@
 	&:hover {
 		text-decoration: none;
 	}
+}
+
+// Reset AU-body
+.au-body .componentStatus__definition__list > li {
+	margin-top: 0;
+	margin-left: 0;
+}
+.au-body .componentStatus__definition__list {
+	padding-top: 0;
+}
+.au-body .componentStatus__definition {
+	@include AU-space( margin-top, 1.25unit );
 }

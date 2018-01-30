@@ -10,7 +10,7 @@ import React from 'react';
 const ComponentStatus = ({ module, _ID, _relativeURL, version }) => (
 	<div className="componentStatus">
 
-		<AUheading size="md" level="2" className="componentStatus__title">Released</AUheading>
+		<AUheading size="sm" level="2" className="componentStatus__title">Released <span className="badge">v{ version }</span></AUheading>
 
 		<dl className="componentStatus__definition">
 			<dt>Changelog</dt>

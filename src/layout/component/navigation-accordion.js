@@ -51,7 +51,7 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
 						aria-selected={ _isOpen ? 'true' : 'false' }
 						role="tab"
 						onClick="return UIKIT.accordion.Toggle( this )">
-							{ title } <span className={ `state__number state__number--${ state }` }>{ components.length }</span>
+							{ title } <span className={ `badge badge--${ state }` }>{ components.length }</span>
 					</a>
 					<div
 						class={ `au-accordion__body${ _isOpen ? '' : ' au-accordion--closed' }` }
