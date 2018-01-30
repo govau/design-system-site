@@ -75,7 +75,7 @@ ComponentPage.propTypes = {
 	/**
 	 * sections: (partials)(4)
 	 */
-	sections: PropTypes.node.isRequired,
+	main: PropTypes.node.isRequired,
 
 	/**
 	 * footer: (partials)(2)

@@ -43,9 +43,9 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
 
 		return (
 			<Fragment>
-				<section class="au-accordion">
+				<section className="au-accordion">
 					<a href={ `#nav-accordion-${ state }` }
-						class={ `au-accordion__title js-au-accordion${ _isOpen ? '' : ' au-accordion--closed' }` }
+						className={ `au-accordion__title js-au-accordion${ _isOpen ? '' : ' au-accordion--closed' }` }
 						aria-controls={ `accordion-${ state }` }
 						aria-expanded={ _isOpen ? 'true' : 'false' }
 						aria-selected={ _isOpen ? 'true' : 'false' }
@@ -54,10 +54,10 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
 							{ title } <span className={ `badge badge--${ state }` }>{ components.length }</span>
 					</a>
 					<div
-						class={ `au-accordion__body${ _isOpen ? '' : ' au-accordion--closed' }` }
+						className={ `au-accordion__body${ _isOpen ? '' : ' au-accordion--closed' }` }
 						id={ `accordion-${ state }` }
 						aria-hidden="false">
-						<div class="au-accordion__body-wrapper">
+						<div className="au-accordion__body-wrapper">
 							<AUlinkList items={ navItems } />
 						</div>
 					</div>
