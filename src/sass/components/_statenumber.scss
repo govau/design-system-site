@@ -1,0 +1,10 @@
+.state__number  {
+	@include AU-space( padding, 0.25unit 0.5unit );
+	@include AU-space( border-radius, 0.5unit );
+	font-size: 12px;
+	line-height: 1;
+	background-color: $AU-colordark-Background;
+	color: $AU-colordark-Action;
+	font-weight: normal;
+	float: right;
+}

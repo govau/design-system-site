@@ -1,8 +1,6 @@
 import { CreateLink }      from '../navigation';
 import GetData             from './../getData';
-import AUaccordion         from '../../_uikit/layout/accordion';
 import AUlinkList          from '../../_uikit/layout/link-list';
-
 
 import React, { Fragment } from 'react';
 import PropTypes           from 'prop-types';
@@ -10,7 +8,7 @@ import PropTypes           from 'prop-types';
 
 const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
 
-	const CreateAccordion = ( title, components, id, state ) => {
+	const CreateAccordion = ( title, components, id, state, i ) => {
 
 		let _isOpen = false;
 
@@ -43,12 +41,27 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
 			navItems.push( CreateLink( link, _relativeURL, _ID, _pages ) );
 		});
 
-
 		return (
 			<Fragment>
-				<AUaccordion header={ title } open={ _isOpen } >
-					<AUlinkList items={ navItems } />
-				</AUaccordion>
+				<section class="au-accordion">
+					<a href={ `#nav-accordion-${ state }` }
+						class={ `au-accordion__title js-au-accordion${ _isOpen ? '' : ' au-accordion--closed' }` }
+						aria-controls={ `accordion-${ state }` }
+						aria-expanded={ _isOpen ? 'true' : 'false' }
+						aria-selected={ _isOpen ? 'true' : 'false' }
+						role="tab"
+						onClick="return UIKIT.accordion.Toggle( this )">
+							{ title } <span className={ `state__number state__number--${ state }` }>{ components.length }</span>
+					</a>
+					<div
+						class={ `au-accordion__body${ _isOpen ? '' : ' au-accordion--closed' }` }
+						id={ `accordion-${ state }` }
+						aria-hidden="false">
+						<div class="au-accordion__body-wrapper">
+							<AUlinkList items={ navItems } />
+						</div>
+					</div>
+				</section>
 			</Fragment>
 		)
 	};
@@ -62,14 +75,14 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
 	const accordionMarkup = [];
 
 	// For each state create an accordion
-	Object.keys( componentStates ).map( ( state, i  ) => {
+	Object.keys( componentStates ).map( ( state, i ) => {
 
 		const components = GetData({
 			filter: ( key, COMPONENTS ) => COMPONENTS[ key ].state === state,
 			yaml: _parseYaml,
 		});
 
-		accordionMarkup.push( CreateAccordion( componentStates[ state ], components, _pages[ _ID ].module, state ) );
+		accordionMarkup.push( CreateAccordion( componentStates[ state ], components, _pages[ _ID ].module, state, i ) );
 	});
 
 
