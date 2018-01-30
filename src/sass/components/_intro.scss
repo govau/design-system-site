@@ -1,7 +1,6 @@
 // Intro
 
 .intro {
-	@include AU-space( margin-top, 5unit );
 
 	.content {
 		@include AU-space( margin-top, 2unit );
@@ -41,7 +40,6 @@
 
 .au-body .intro__title { //specific to override AU-body
 	@include AU-fontgrid( xxl, heading );
-	font-weight: normal;
 	text-align: center;
 
 	@include AU-media( md ) {
