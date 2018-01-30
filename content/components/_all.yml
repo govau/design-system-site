@@ -482,3 +482,123 @@ tags:
   hasSass: true    # <-- auto generated, don't change
   hasJs: false    # <-- auto generated, don't change
   hasReact: true    # <-- auto generated, don't change
+cards:
+  name: Cards
+  description: TODO
+  tags: TODO
+  img: 'http://via.placeholder.com/144x144/ffffff/cccccc'
+  required: false
+  contributors: 'x, x, x, x'
+  state: unpublished
+  order: 1
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  ID: cards    # <-- auto generated, don't change
+  version: 0.0.0    # <-- auto generated, don't change
+  dependencies:    # <-- auto generated, don't change
+    - core
+  hasSass: true    # <-- auto generated, don't change
+  hasJs: false    # <-- auto generated, don't change
+  hasReact: true    # <-- auto generated, don't change
+table:
+  name: Table
+  description: TODO
+  tags: TODO
+  img: 'http://via.placeholder.com/144x144/ffffff/cccccc'
+  required: false
+  contributors: 'x, x, x, x'
+  state: unpublished
+  order: 1
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  ID: table    # <-- auto generated, don't change
+  version: 0.0.0    # <-- auto generated, don't change
+  dependencies:    # <-- auto generated, don't change
+    - core
+  hasSass: true    # <-- auto generated, don't change
+  hasJs: false    # <-- auto generated, don't change
+  hasReact: true    # <-- auto generated, don't change
+navigation:
+  name: Navigation
+  description: TODO
+  tags: TODO
+  img: 'http://via.placeholder.com/144x144/ffffff/cccccc'
+  required: false
+  contributors: 'x, x, x, x'
+  state: alpha
+  order: 1
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  ID: navigation    # <-- auto generated, don't change
+  version: 0.0.0    # <-- auto generated, don't change
+  dependencies:    # <-- auto generated, don't change
+    - core
+  hasSass: true    # <-- auto generated, don't change
+  hasJs: false    # <-- auto generated, don't change
+  hasReact: true    # <-- auto generated, don't change
+search:
+  name: Search
+  description: TODO
+  tags: TODO
+  img: 'http://via.placeholder.com/144x144/ffffff/cccccc'
+  required: false
+  contributors: 'x, x, x, x'
+  state: alpha
+  order: 1
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  ID: search    # <-- auto generated, don't change
+  version: 0.0.0    # <-- auto generated, don't change
+  dependencies:    # <-- auto generated, don't change
+    - core
+  hasSass: true    # <-- auto generated, don't change
+  hasJs: false    # <-- auto generated, don't change
+  hasReact: true    # <-- auto generated, don't change
+paginations:
+  name: Pagination
+  description: TODO
+  tags: TODO
+  img: 'http://via.placeholder.com/144x144/ffffff/cccccc'
+  required: false
+  contributors: 'x, x, x, x'
+  state: alpha
+  order: 1
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  ID: pagination    # <-- auto generated, don't change
+  version: 0.0.0    # <-- auto generated, don't change
+  dependencies:    # <-- auto generated, don't change
+    - core
+  hasSass: true    # <-- auto generated, don't change
+  hasJs: false    # <-- auto generated, don't change
+  hasReact: true    # <-- auto generated, don't change
+blockquote:
+  name: Block Quote
+  description: TODO
+  tags: TODO
+  img: 'http://via.placeholder.com/144x144/ffffff/cccccc'
+  required: false
+  contributors: 'x, x, x, x'
+  state: alpha
+  order: 1
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  ID: blockquote    # <-- auto generated, don't change
+  version: 0.0.0    # <-- auto generated, don't change
+  dependencies:    # <-- auto generated, don't change
+    - core
+  hasSass: true    # <-- auto generated, don't change
+  hasJs: false    # <-- auto generated, don't change
+  hasReact: true    # <-- auto generated, don't change
