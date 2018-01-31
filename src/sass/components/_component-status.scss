@@ -84,6 +84,8 @@
 	&:hover {
 		text-decoration: none;
 	}
+
+	@include AU-focus();
 }
 
 // Reset AU-body
