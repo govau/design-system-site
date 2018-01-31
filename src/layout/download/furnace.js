@@ -3,11 +3,38 @@ import GetData from './../getData';
 import Code from './../code';
 
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { Fragment } from 'react';
+
+/**
+ * Print a list of depenedcies
+ */
+const DependencyList = ({ dependencies, MODULES }) => {
+
+	const dependencyNames = [];
+
+	Object.keys( MODULES ).map( ( module ) => {
+		dependencies.map( ( dependency ) => {
+			if ( MODULES[ module ].ID === dependency ) {
+				dependencyNames.push( MODULES[ module ].name );
+			}
+		})
+	})
+
+	return (
+		<Fragment>
+			{
+				dependencyNames.length > 0
+					? `Dependencies: ${ dependencyNames.join(', ') }`
+					: null
+			}
+		</Fragment>
+	);
+};
+
 
 
 /**
- * The Intro component
+ * The Furnace component
  */
 const Furnace = ({ components, _body, _parseYaml }) => {
 	const MODULES = GetData({
@@ -23,10 +50,10 @@ const Furnace = ({ components, _body, _parseYaml }) => {
 
 					<h3 className="furnace__title">
 						Select components
-						<button className="furnace__title__control au-btn au-btn--tertiary">Clear selections</button>
+						<button type="reset" className="js-furnace-clear furnace__clear au-btn au-btn--tertiary icon icon--right icon--close">Clear selections</button>
 					</h3>
 
-					<fieldset className="hide-fieldset">
+					<fieldset className="fieldset--reset">
 						<legend className="sronly">Components</legend>
 
 						<ul className="furnace__component-list">
@@ -37,7 +64,11 @@ const Furnace = ({ components, _body, _parseYaml }) => {
 
 											<label className="furnace__component__label">
 												<span className="furnace__component__control">
-													<input type="checkbox" name="components" className="au-control-input__input js-furnace-selector" value={ MODULES[ module ].ID }
+													<input
+														type="checkbox"
+														name="components"
+														className="au-control-input__input js-furnace-selector"
+														value={ MODULES[ module ].ID }
 														required={ MODULES[ module ].required }
 														checked={ MODULES[ module ].required }
 														disabled={ MODULES[ module ].required }
@@ -56,15 +87,13 @@ const Furnace = ({ components, _body, _parseYaml }) => {
 											</label>
 
 											<div className="furnace__component__details">
-												<img src={ MODULES[ module ].image } alt=""/>
-												<p className="furnace__component__notes">
-													{
-														MODULES[ module ].dependencies.length > 0
-															? `Dependencies: ${ MODULES[ module ].dependencies.join(', ') }`
-															: null
-													}
+												<img className="furnace__image" src={ MODULES[ module ].image } alt=""/>
+
+												<p className="furnace__component__dependencies">
+													<DependencyList dependencies={ MODULES[ module ].dependencies } MODULES={ MODULES } />
 												</p>
-												<p className="furnace__component__doclink">
+
+												<p className="furnace__component__documentation">
 													<a href={`/components/${ MODULES[ module ].ID }`}>
 														<span className="sronly">{ MODULES[ module ].name }</span>
 														Documentation
@@ -87,7 +116,8 @@ const Furnace = ({ components, _body, _parseYaml }) => {
 					<h4>Download Zip</h4>
 
 					<div className="furnace__buildbox">
-						<fieldset className="hide-fieldset">
+						<div className="furnace__buildbox__wrapper">
+						<fieldset className="fieldset--reset">
 							<legend>Stylesheets</legend>
 
 							<AUradio label="CSS minified" block name="styleOutput" value="css" defaultChecked />
@@ -95,15 +125,16 @@ const Furnace = ({ components, _body, _parseYaml }) => {
 							<AUradio label="SASS modules" block name="styleOutput" value="sassModules" />
 						</fieldset>
 
-						<fieldset className="hide-fieldset">
+						<fieldset className="fieldset--reset">
 							<legend>JavaScript</legend>
 
 							<AUradio label="JavaScript minified" block name="jsOutput" value="js" defaultChecked />
 							<AUradio label="JavaScript modules" block name="jsOutput" value="jsModules" />
 							<AUradio label="React modules" block name="jsOutput" value="react" />
 						</fieldset>
+						</div>
+						<button type="submit" className="furnace__buildbox__download au-btn au-btn--block icon icon--dark icon--download">Download</button>
 					</div>
-					<button type="submit" className="au-btn au-btn--block">Download</button>
 
 					<h4>NPM</h4>
 					<Code className="furnace-npm js-furnace-code">npm install</Code>
@@ -113,6 +144,7 @@ const Furnace = ({ components, _body, _parseYaml }) => {
 		</div>
 	);
 };
+
 
 Furnace.propTypes = {};
 
