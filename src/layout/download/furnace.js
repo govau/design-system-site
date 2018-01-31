@@ -109,7 +109,6 @@ const Furnace = ({ components, _body, _parseYaml }) => {
 					<Code className="furnace-npm">npm install</Code>
 
 				</div>
-
 			</form>
 		</div>
 	);

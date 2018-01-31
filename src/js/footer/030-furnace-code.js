@@ -1,5 +1,5 @@
 var furnaceComponents = document.querySelectorAll( '.furnace__component__label' );
-var furnaceNPM        = document.querySelectorAll( '.furnace-npm' )[ 0 ];
+var furnaceNPM        = document.querySelectorAll( '.furnace code' )[ 0 ];
 
 
 AddEvent( furnaceComponents, 'mousedown', function( event, $this ) {
