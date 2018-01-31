@@ -1,6 +1,6 @@
 var accordions = document.querySelectorAll( '.js-au-accordion' );
 
-AddEvent( accordions, 'click', function( event ) {
+AddEvent( accordions, 'click', function( event, $this ) {
 	PreventEvent( event );
-	AU.accordion.Toggle( this );
+	AU.accordion.Toggle( $this );
 });
