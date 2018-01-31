@@ -6,8 +6,8 @@ import PropTypes from 'prop-types';
  * The Code component
  */
 const Code = ({ language, copy, children, className }) => (
-	<pre className={ `codebox language-${ language } ${ className }` }>
-		<code className={ `language-${ language } ${ copy ? ' js-copy' : '' }` }>
+	<pre className={ `codebox language-${ language } ${ className ? className : '' }` }>
+		<code className={ `language-${ language }${ copy ? ' js-copy' : '' }` }>
 			{ children }
 		</code>
 	</pre>

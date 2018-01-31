@@ -15,6 +15,8 @@ const CodeDemo = ({ headline, example, code, _body, _ID, _parseMD }) => {
 	const pathToCode = Path.normalize(`${ SETTINGS.get().folder.content }/${ _ID }/examples/example${ example }/code.md`);
 	const exampleCode = Fs.readFileSync( pathToCode, 'utf8' );
 
+	console.log( code );
+
 	return (
 		<div className="variation" id={ Slugify( headline ).toLowerCase() }>
 			<a className="variation__anchor" href={`#${ Slugify( headline ).toLowerCase() }`}>#</a>
@@ -34,7 +36,10 @@ const CodeDemo = ({ headline, example, code, _body, _ID, _parseMD }) => {
 					{
 						code.map( section => (
 							<div id={ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }>
-								<Code language="js">{ section[ Object.keys( section )[ 0 ] ] }</Code>
+								<Code language={
+									Object.keys( section )[ 0 ] === 'HTML' ? 'html' : '' +
+									Object.keys( section )[ 0 ] === 'React' ? 'javascript' : ''
+								}>{ section[ Object.keys( section )[ 0 ] ] }</Code>
 							</div>
 						))
 					}
