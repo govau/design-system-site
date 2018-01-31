@@ -1,3 +1,4 @@
+import { AUcheckbox, AUradio } from '../../_uikit/layout/control-input.js';
 import PropTypes from 'prop-types';
 import GetData from './../getData';
 import React from 'react';
@@ -83,12 +84,7 @@ const Furnace = ({ components, _body, _parseYaml }) => {
 
 					<h4>NPM</h4>
 					<div className="furnace__buildbox">
-						<div className="furnace__code" readOnly>
-							npm install
-							@gov.au/body
-							@gov.au/breadcrumbs 
-							@gov.au/animate 
-						</div>
+						<div className="furnace__code"></div>
 						<a href="#" className="au-btn au-btn--size-sm">Copy</a>
 					</div>
 
@@ -98,40 +94,17 @@ const Furnace = ({ components, _body, _parseYaml }) => {
 						<fieldset className="hide-fieldset">
 							<legend>Stylesheets</legend>
 
-							<label className="au-control-input au-control-input--block">
-								<input type="radio" name="styleOutput" value="css" className="au-control-input__input" defaultChecked />
-								<span className="au-control-input__text">CSS minified</span>
-							</label>
-
-							<label className="au-control-input au-control-input--block">
-								<input type="radio" name="styleOutput" value="cssModules" className="au-control-input__input" />
-								<span className="au-control-input__text">CSS modules</span>
-							</label>
-
-							<label className="au-control-input au-control-input--block">
-								<input type="radio" name="styleOutput" value="sassModules"  className="au-control-input__input" />
-								<span className="au-control-input__text">SASS modules</span>
-							</label>
+							<AUradio label="CSS minified" block name="styleOutput" value="css" defaultChecked />
+							<AUradio label="CSS modules" block name="styleOutput" value="cssModules" />
+							<AUradio label="SASS modules" block name="styleOutput" value="sassModules" />
 						</fieldset>
 
 						<fieldset className="hide-fieldset">
 							<legend>JavaScript</legend>
 
-							<label className="au-control-input au-control-input--block">
-								<input type="radio" name="jsOutput" value="js" className="au-control-input__input" defaultChecked />
-								<span className="au-control-input__text">JavaScript minified</span>
-							</label>
-
-							<label className="au-control-input au-control-input--block">
-								<input type="radio" name="jsOutput" value="jsModules" className="au-control-input__input" />
-								<span className="au-control-input__text">JavaScript modules</span>
-							</label>
-
-							<label className="au-control-input au-control-input--block">
-								<input type="radio" name="jsOutput" value="react" className="au-control-input__input" />
-								<span className="au-control-input__text">React modules</span>
-							</label>
-
+							<AUradio label="JavaScript minified" block name="jsOutput" value="js" defaultChecked />
+							<AUradio label="JavaScript modules" block name="jsOutput" value="jsModules" />
+							<AUradio label="React modules" block name="jsOutput" value="react" />
 						</fieldset>
 					</div>
 					<button type="submit" className="au-btn au-btn--block">Download</button>
