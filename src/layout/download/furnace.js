@@ -87,7 +87,7 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 											</label>
 
 											<div className="furnace__component__details">
-												<svg className="furnace__image" role="img" title={ MODULES[ module ].name }>
+												<svg className="furnace__component__details__img" role="img" title={ MODULES[ module ].name }>
 													<use xlinkHref={ _relativeURL( `/assets/svg/map.svg#${ MODULES[ module ].ID }`, _ID ) }/>
 												</svg>
 
