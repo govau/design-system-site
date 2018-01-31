@@ -1,46 +1,64 @@
+// Add, Has and Remove class for IE8
 function AddClass( element, elementClass ) {
-	return element.className += ' ' + elementClass;
+	return element.className += " " + elementClass;
 }
 
 function HasClass( element, elementClass ) {
-	return element.className.match( new RegExp( '(\\s|^)' + elementClass + '(\\s|$)') );
+	return element.className.match( new RegExp( "(\\s|^)" + elementClass + "(\\s|$)") );
 }
 
 function RemoveClass( element, elementClass ) {
 	if( HasClass( element, elementClass ) ) {
-		var reg = new RegExp( '(\\s|^)' + elementClass + '(\\s|$)' );
-		element.className = element.className.replace( reg, ' ' );
+		var reg = new RegExp( "(\\s|^)" + elementClass + "(\\s|$)" );
+		element.className = element.className.replace( reg, " " );
 	}
 }
 
-// IE fallback for attachEvent
-function AddEvent( element, event, onEvent ) {
+function Includes( search, start ){
+	if (typeof start !== 'number') {
+		start = 0;
+	}
 
-	if( element ) {
+	if (start + search.length > this.length) {
+		return false;
+	} else {
+		return this.indexOf(search, start) !== -1;
+	}
+}
+
+
+// Change EventListener to attachEvent
+function AddEvent( elements, event, onEvent ) {
+	if( elements ) {
 		// Create an array of elements if a singular or array of elements is passed in
-		var elementArray = [ element ];
-		if( element.constructor.name === 'NodeList' ) {
-			elementArray = Array.prototype.slice.call( element );
-		}
-
-		// Check if we are using attachEvent or addEventListener
-		var _isAttachEvent = false;
-		if( elementArray[0].attachEvent ) {
-			_isAttachEvent = true;
+		if( elements.length === undefined ) {
+			elements = [ elements ];
 		}
 
 		// For each element add the correct event listener
-		for( var i = 0; i < elementArray.length; i++ ) {
-			if( _isAttachEvent ) {
-				elementArray[ i ].attachEvent( 'on' + event, onEvent );
+		for( var i = 0; i < elements.length; i++ ) {
+			if( typeof Element.prototype.addEventListener === "undefined" ) {
+
+				// Make sure that we pass this
+				( function( element, event ) {
+					element.attachEvent( "on" + event, function(){
+						onEvent( "on" + event, element );
+					});
+				})( elements[ i ], event );
 			}
 			else {
-				elementArray[ i ].addEventListener( event, onEvent, false);
+				( function( element, event ) {
+					element.addEventListener( event, function(){
+						onEvent( event, element );
+					});
+				})( elements[ i ], event );
 			}
 		}
 	}
 }
 
+
+// Prevent event for IE8 and modern browsers
 function PreventEvent( event ) {
 	event.preventDefault ? event.preventDefault() : ( event.returnValue = false );
 }

@@ -82,15 +82,9 @@ const Furnace = ({ components, _body, _parseYaml }) => {
 					<h3 className="furnace__title">Your build</h3>
 
 					<h4>NPM</h4>
-					<div className="furnace__buildbox">
-						<div className="furnace__code" readOnly>
-							npm install
-							@gov.au/body
-							@gov.au/breadcrumbs 
-							@gov.au/animate 
-						</div>
-						<a href="#" className="au-btn au-btn--size-sm">Copy</a>
-					</div>
+					<pre className="language-none">
+						<code className="language-none furnace-npm">npm i</code>
+					</pre>
 
 					<h4>Download Zip</h4>
 

@@ -1,5 +1,3 @@
-.furnace {}
-
 .furnace__title {
 	@include AU-space( padding-bottom, 1.5unit );
 	@include AU-space( margin-bottom, 1.5unit );
@@ -11,27 +9,18 @@
 	}
 }
 
+code[class*="language-"].furnace-npm {
+	white-space: pre-wrap;
+	max-height: 100px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
 
 .furnace__component-list {
 	list-style: none;
 	margin-top: 0;
 	padding: 0;
-
-	// // Smaller tidier checkboxes (whole element is clickable anyway)
-	// .au-control-input__input {
-	// 	@include AU-space( top, 0.25unit );
-	// }
-
-	// .au-control-input__text {
-	// 	@include AU-space( margin, 0.25unit 0 0.5unit 2.25unit );
-	// }
-
-	// .au-control-input__text:before,
-	// .au-control-input__text:after {
-	// 	@include AU-space( width, 2unit );
-	// 	@include AU-space( height, 2unit );
-	// 	top: -6px;
-	// }
 }
 
 
@@ -115,31 +104,6 @@
 	@include AU-space( margin-top, 1unit );
 	background-color: $AU-color-Background;
 
-	// // Smaller tidier checkboxes on desktop layout
-	// @include AU-media( md ) {
-	// 	.au-control-input.au-control-input--block {
-	// 		@include AU-space( margin-top, 1unit );
-	// 	}
-
-	// 	.au-control-input__text {
-	// 		@include AU-fontgrid( xs );
-	// 		@include AU-space( margin, 0 0 0 1.75unit );
-	// 	}
-
-	// 	.au-control-input__text:before,
-	// 	.au-control-input__text:after {
-	// 		@include AU-space( width, 1.75unit );
-	// 		@include AU-space( height, 1.75unit );
-	// 		@include AU-space( left, -0.25unit );
-	// 		@include AU-space( top, -0.25unit );
-	// 	}
-
-	// 	.au-control-input__input {
-	// 		left: 0;
-	// 		top: 0;
-	// 	}
-	// }
-
 	.au-btn.au-btn--size-sm {
 		float: right;
 		@include AU-fontgrid( xs );
@@ -152,14 +116,16 @@
 
 
 // Resets for body :'(
-.au-body ul.furnace--component-list > li {
-	margin-top: 0;
-}
+.au-body {
+	.furnace--component-list > li {
+		margin-top: 0;
+	}
 
-.au-body ul.furnace--component-list > li + li {
-	@include AU-space( margin-top, 1unit );
-}
+	.furnace--component-list > li + li {
+		@include AU-space( margin-top, 1unit );
+	}
 
-.au-body *+ul.furnace--component-list {
-	margin-top: 0;
+	* + .furnace--component-list {
+		margin-top: 0;
+	}
 }
