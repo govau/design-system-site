@@ -1,14 +1,14 @@
-var codeComponents = document.getElementsByTagName( "pre" );
+var codeComponents = document.querySelectorAll( '.js-copy' );
 
 for( var i = 0; i < codeComponents.length; i++ ) {
 	codeComponents[ i ].insertAdjacentHTML(
 		'afterend',
-		'<button type="button" class="au-btn js-copy-code">Copy</button>'
+		'<button type="button" class="btn-copy au-btn icon icon--copy js-copy-btn">Copy</button>'
 	);
 }
 
-
-function CopyCode( text ) {
+// Copy a string to the clipboard
+function CopyString( text ) {
 	var input = document.createElement( 'input' );
 	input.setAttribute( 'value', text );
 	document.body.appendChild( input );
@@ -17,10 +17,12 @@ function CopyCode( text ) {
 	document.body.removeChild( input );
 }
 
-
-var copyButtons = document.querySelectorAll( '.js-copy-code' );
-
+// On click of any of the copy code buttons
+var copyButtons = document.querySelectorAll( '.js-copy-btn' );
 AddEvent( copyButtons, 'click', function( event, $this ) {
-	CopyCode( $this.previousSibling.firstChild.innerHTML );
+	CopyString( $this.previousSibling.innerHTML );
+	$this.innerHTML = 'Copied';
+	RemoveClass( $this, 'icon--copy' );
+	AddClass( $this, 'icon--success' );
 });
 
