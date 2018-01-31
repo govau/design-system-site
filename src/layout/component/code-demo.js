@@ -1,4 +1,6 @@
 import { SETTINGS } from 'cuttlebelle/dist/settings.js';
+import Code from '../code';
+
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Slugify from 'slugify';
@@ -7,9 +9,9 @@ import Fs from 'fs';
 
 
 /**
- * The code component
+ * The codedemo component
  */
-const Code = ({ headline, example, code, _body, _ID, _parseMD }) => {
+const CodeDemo = ({ headline, example, code, _body, _ID, _parseMD }) => {
 	const pathToCode = Path.normalize(`${ SETTINGS.get().folder.content }/${ _ID }/examples/example${ example }/code.md`);
 	const exampleCode = Fs.readFileSync( pathToCode, 'utf8' );
 
@@ -32,7 +34,7 @@ const Code = ({ headline, example, code, _body, _ID, _parseMD }) => {
 					{
 						code.map( section => (
 							<div id={ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }>
-								{ _parseMD('```\n' + section[ Object.keys( section )[ 0 ] ] + '\n```') }
+								<Code language="js">{ section[ Object.keys( section )[ 0 ] ] }</Code>
 							</div>
 						))
 					}
@@ -46,7 +48,7 @@ const Code = ({ headline, example, code, _body, _ID, _parseMD }) => {
 	);
 }
 
-Code.propTypes = {
+CodeDemo.propTypes = {
 	/**
 	 * _body: (partials)(4)
 	 */
@@ -72,6 +74,6 @@ Code.propTypes = {
 	code: PropTypes.arrayOf( PropTypes.object ).isRequired,
 };
 
-Code.defaultProps = {};
+CodeDemo.defaultProps = {};
 
-export default Code;
+export default CodeDemo;
