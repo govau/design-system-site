@@ -3,12 +3,10 @@ import PropTypes from 'prop-types';
 
 
 /**
- * The partial component
- *
- * @disable-docs
+ * The Code component
  */
-const Code = ({ language, copy, children }) => (
-	<pre className={ `codebox language-${ language }` }>
+const Code = ({ language, copy, children, className }) => (
+	<pre className={ `codebox language-${ language } ${ className }` }>
 		<code className={ `language-${ language } ${ copy ? ' js-copy' : '' }` }>
 			{ children }
 		</code>
@@ -27,9 +25,9 @@ Code.propTypes = {
 	copy: PropTypes.bool.isRequired,
 
 	/**
-	 * _body: (text)(4)
+	 * children: (text)(4)
 	 */
-	_body: PropTypes.node.isRequired,
+	children: PropTypes.node.isRequired,
 };
 
 Code.defaultProps = {

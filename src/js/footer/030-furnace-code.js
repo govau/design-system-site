@@ -1,13 +1,23 @@
-var furnaceComponents = document.querySelectorAll( '.furnace__component__label' );
-var furnaceNPM        = document.querySelectorAll( '.furnace code' )[ 0 ];
+var furnaceComponents = document.querySelectorAll( '.js-furnace-selector' );
+var furnaceNPM        = document.querySelectorAll( '.js-furnace-code code' )[ 0 ];
 
 
-AddEvent( furnaceComponents, 'mousedown', function( event, $this ) {
-	ToggleNPM( $this.children[ 0 ].children[ 0 ].getAttribute( 'value' ) );
+/**
+ * Adding event handler to each furnace checkbox
+ */
+AddEvent( furnaceComponents, 'change', function( event, $this ) {
+	ToggleNPM( $this );
 });
 
 
-function ToggleNPM( component ) {
+/**
+ * Checkbox click add or remove to code div
+ *
+ * @param {DOM element} $this - The checkbox input field that has changed
+ */
+function ToggleNPM( $this ) {
+	var input = $this;
+	var component = input.getAttribute( 'value' );
 	var content = furnaceNPM.innerHTML;
 	component =  " @gov.au/" + component;
 
@@ -18,5 +28,3 @@ function ToggleNPM( component ) {
 		furnaceNPM.innerHTML = content.replace( component, '' );
 	}
 }
-
-

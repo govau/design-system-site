@@ -37,7 +37,7 @@ const Furnace = ({ components, _body, _parseYaml }) => {
 
 											<label className="furnace__component__label">
 												<span className="furnace__component__control">
-													<input type="checkbox" name="components" className="au-control-input__input" value={ MODULES[ module ].ID }
+													<input type="checkbox" name="components" className="au-control-input__input js-furnace-selector" value={ MODULES[ module ].ID }
 														required={ MODULES[ module ].required }
 														checked={ MODULES[ module ].required }
 														disabled={ MODULES[ module ].required }
@@ -106,7 +106,7 @@ const Furnace = ({ components, _body, _parseYaml }) => {
 					<button type="submit" className="au-btn au-btn--block">Download</button>
 
 					<h4>NPM</h4>
-					<Code className="furnace-npm">npm install</Code>
+					<Code className="furnace-npm js-furnace-code">npm install</Code>
 
 				</div>
 			</form>
