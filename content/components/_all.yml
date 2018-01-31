@@ -17,26 +17,6 @@ core:
   hasJs: false    # <-- auto generated, don't change
   hasReact: false    # <-- auto generated, don't change
   ID: core    # <-- auto generated, don't change
-buttons:
-  name: Buttons
-  description: TODO
-  version: 1.0.0-next.6    # <-- auto generated, don't change
-  dependencies:    # <-- auto generated, don't change
-    - core
-  contributors: 'x, x, x, x'
-  state: published
-  order: 1
-  discussions:
-    - open: 2
-    - active: 7
-    - something: something
-  tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
-  required: false
-  hasSass: true    # <-- auto generated, don't change
-  hasJs: false    # <-- auto generated, don't change
-  hasReact: true    # <-- auto generated, don't change
-  ID: buttons    # <-- auto generated, don't change
 accordion:
   name: Accordion
   description: TODO
@@ -45,7 +25,7 @@ accordion:
   required: false
   contributors: 'x, x, x, x'
   state: published
-  order: 1
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -66,7 +46,7 @@ animate:
   required: false
   contributors: 'x, x, x, x'
   state: published
-  order: 1
+  order: 20
   discussions:
     - open: 2
     - active: 7
@@ -85,7 +65,7 @@ body:
   required: false
   contributors: 'x, x, x, x'
   state: published
-  order: 0
+  order: 30
   discussions:
     - open: 2
     - active: 7
@@ -97,187 +77,6 @@ body:
   hasJs: false    # <-- auto generated, don't change
   hasReact: false    # <-- auto generated, don't change
   ID: body    # <-- auto generated, don't change
-control-input:
-  name: Control Input
-  description: TODO
-  tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
-  required: false
-  contributors: 'x, x, x, x'
-  state: published
-  order: 1
-  discussions:
-    - open: 2
-    - active: 7
-    - something: something
-  version: 1.0.0-next.8    # <-- auto generated, don't change
-  dependencies:    # <-- auto generated, don't change
-    - core
-  hasSass: true    # <-- auto generated, don't change
-  hasJs: false    # <-- auto generated, don't change
-  hasReact: true    # <-- auto generated, don't change
-  ID: control-input    # <-- auto generated, don't change
-footer:
-  name: Footer
-  description: TODO
-  tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
-  required: false
-  contributors: 'x, x, x, x'
-  state: published
-  order: 1
-  discussions:
-    - open: 2
-    - active: 7
-    - something: something
-  version: 1.0.0-next.5    # <-- auto generated, don't change
-  dependencies:    # <-- auto generated, don't change
-    - core
-  hasSass: true    # <-- auto generated, don't change
-  hasJs: false    # <-- auto generated, don't change
-  hasReact: true    # <-- auto generated, don't change
-  ID: footer    # <-- auto generated, don't change
-grid-12:
-  name: Grid 12
-  description: TODO
-  tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
-  required: false
-  contributors: 'x, x, x, x'
-  state: published
-  order: 1
-  discussions:
-    - open: 2
-    - active: 7
-    - something: something
-  version: 1.0.0-next.3    # <-- auto generated, don't change
-  dependencies:    # <-- auto generated, don't change
-    - core
-  hasSass: true    # <-- auto generated, don't change
-  hasJs: false    # <-- auto generated, don't change
-  hasReact: false    # <-- auto generated, don't change
-  ID: grid-12    # <-- auto generated, don't change
-header:
-  name: Header
-  description: TODO
-  tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
-  required: false
-  contributors: 'x, x, x, x'
-  state: published
-  order: 1
-  discussions:
-    - open: 2
-    - active: 7
-    - something: something
-  version: 2.0.0-next.5    # <-- auto generated, don't change
-  dependencies:    # <-- auto generated, don't change
-    - core
-  hasSass: true    # <-- auto generated, don't change
-  hasJs: false    # <-- auto generated, don't change
-  hasReact: true    # <-- auto generated, don't change
-  ID: header    # <-- auto generated, don't change
-headings:
-  name: Headings
-  description: TODO
-  tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
-  required: false
-  contributors: 'x, x, x, x'
-  state: published
-  order: 1
-  discussions:
-    - open: 2
-    - active: 7
-    - something: something
-  version: 1.0.0-next.5    # <-- auto generated, don't change
-  dependencies:    # <-- auto generated, don't change
-    - core
-  hasSass: true    # <-- auto generated, don't change
-  hasJs: false    # <-- auto generated, don't change
-  hasReact: true    # <-- auto generated, don't change
-  ID: headings    # <-- auto generated, don't change
-link-list:
-  name: Link list
-  description: TODO
-  tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
-  required: false
-  contributors: 'x, x, x, x'
-  state: published
-  order: 1
-  discussions:
-    - open: 2
-    - active: 7
-    - something: something
-  version: 1.0.0-next.7    # <-- auto generated, don't change
-  dependencies:    # <-- auto generated, don't change
-    - core
-    - body
-  hasSass: true    # <-- auto generated, don't change
-  hasJs: false    # <-- auto generated, don't change
-  hasReact: true    # <-- auto generated, don't change
-  ID: link-list    # <-- auto generated, don't change
-responsive-media:
-  name: Responsive Media
-  description: TODO
-  tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
-  required: false
-  contributors: 'x, x, x, x'
-  state: published
-  order: 1
-  discussions:
-    - open: 2
-    - active: 7
-    - something: something
-  version: 1.0.0-next.3    # <-- auto generated, don't change
-  dependencies:    # <-- auto generated, don't change
-    - core
-  hasSass: true    # <-- auto generated, don't change
-  hasJs: false    # <-- auto generated, don't change
-  hasReact: false    # <-- auto generated, don't change
-  ID: responsive-media    # <-- auto generated, don't change
-skip-link:
-  name: Skip Link
-  description: TODO
-  tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
-  required: false
-  contributors: 'x, x, x, x'
-  state: published
-  order: 1
-  discussions:
-    - open: 2
-    - active: 7
-    - something: something
-  version: 1.0.0-next.4    # <-- auto generated, don't change
-  dependencies:    # <-- auto generated, don't change
-    - core
-  hasSass: true    # <-- auto generated, don't change
-  hasJs: false    # <-- auto generated, don't change
-  hasReact: true    # <-- auto generated, don't change
-  ID: skip-link    # <-- auto generated, don't change
-text-inputs:
-  name: Text Inputs
-  description: TODO
-  tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
-  required: false
-  contributors: 'x, x, x, x'
-  state: published
-  order: 1
-  discussions:
-    - open: 2
-    - active: 7
-    - something: something
-  ID: text-inputs    # <-- auto generated, don't change
-  version: 1.0.0-next.7    # <-- auto generated, don't change
-  dependencies:    # <-- auto generated, don't change
-    - core
-  hasSass: true    # <-- auto generated, don't change
-  hasJs: false    # <-- auto generated, don't change
-  hasReact: true    # <-- auto generated, don't change
 breadcrumbs:
   name: Breadcrumbs
   description: TODO
@@ -286,7 +85,7 @@ breadcrumbs:
   required: false
   contributors: 'x, x, x, x'
   state: published
-  order: 1
+  order: 40
   discussions:
     - open: 2
     - active: 7
@@ -299,6 +98,26 @@ breadcrumbs:
   hasSass: true    # <-- auto generated, don't change
   hasJs: false    # <-- auto generated, don't change
   hasReact: true    # <-- auto generated, don't change
+buttons:
+  name: Buttons
+  description: TODO
+  version: 1.0.0-next.6    # <-- auto generated, don't change
+  dependencies:    # <-- auto generated, don't change
+    - core
+  contributors: 'x, x, x, x'
+  state: published
+  order: 50
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  tags: TODO
+  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
+  required: false
+  hasSass: true    # <-- auto generated, don't change
+  hasJs: false    # <-- auto generated, don't change
+  hasReact: true    # <-- auto generated, don't change
+  ID: buttons    # <-- auto generated, don't change
 callout:
   name: Callout
   description: TODO
@@ -307,7 +126,7 @@ callout:
   required: false
   contributors: 'x, x, x, x'
   state: published
-  order: 1
+  order: 60
   discussions:
     - open: 2
     - active: 7
@@ -319,6 +138,26 @@ callout:
   hasSass: true    # <-- auto generated, don't change
   hasJs: false    # <-- auto generated, don't change
   hasReact: true    # <-- auto generated, don't change
+control-input:
+  name: Control Input
+  description: TODO
+  tags: TODO
+  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
+  required: false
+  contributors: 'x, x, x, x'
+  state: published
+  order: 70
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  version: 1.0.0-next.8    # <-- auto generated, don't change
+  dependencies:    # <-- auto generated, don't change
+    - core
+  hasSass: true    # <-- auto generated, don't change
+  hasJs: false    # <-- auto generated, don't change
+  hasReact: true    # <-- auto generated, don't change
+  ID: control-input    # <-- auto generated, don't change
 cta-link:
   name: Cta Link
   description: TODO
@@ -327,7 +166,7 @@ cta-link:
   required: false
   contributors: 'x, x, x, x'
   state: published
-  order: 1
+  order: 80
   discussions:
     - open: 2
     - active: 7
@@ -347,7 +186,7 @@ direction-links:
   required: false
   contributors: 'x, x, x, x'
   state: published
-  order: 1
+  order: 90
   discussions:
     - open: 2
     - active: 7
@@ -359,6 +198,86 @@ direction-links:
   hasSass: true    # <-- auto generated, don't change
   hasJs: false    # <-- auto generated, don't change
   hasReact: true    # <-- auto generated, don't change
+footer:
+  name: Footer
+  description: TODO
+  tags: TODO
+  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
+  required: false
+  contributors: 'x, x, x, x'
+  state: published
+  order: 100
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  version: 1.0.0-next.5    # <-- auto generated, don't change
+  dependencies:    # <-- auto generated, don't change
+    - core
+  hasSass: true    # <-- auto generated, don't change
+  hasJs: false    # <-- auto generated, don't change
+  hasReact: true    # <-- auto generated, don't change
+  ID: footer    # <-- auto generated, don't change
+grid-12:
+  name: Grid 12
+  description: TODO
+  tags: TODO
+  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
+  required: false
+  contributors: 'x, x, x, x'
+  state: published
+  order: 110
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  version: 1.0.0-next.3    # <-- auto generated, don't change
+  dependencies:    # <-- auto generated, don't change
+    - core
+  hasSass: true    # <-- auto generated, don't change
+  hasJs: false    # <-- auto generated, don't change
+  hasReact: false    # <-- auto generated, don't change
+  ID: grid-12    # <-- auto generated, don't change
+header:
+  name: Header
+  description: TODO
+  tags: TODO
+  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
+  required: false
+  contributors: 'x, x, x, x'
+  state: published
+  order: 120
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  version: 2.0.0-next.5    # <-- auto generated, don't change
+  dependencies:    # <-- auto generated, don't change
+    - core
+  hasSass: true    # <-- auto generated, don't change
+  hasJs: false    # <-- auto generated, don't change
+  hasReact: true    # <-- auto generated, don't change
+  ID: header    # <-- auto generated, don't change
+headings:
+  name: Headings
+  description: TODO
+  tags: TODO
+  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
+  required: false
+  contributors: 'x, x, x, x'
+  state: published
+  order: 130
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  version: 1.0.0-next.5    # <-- auto generated, don't change
+  dependencies:    # <-- auto generated, don't change
+    - core
+  hasSass: true    # <-- auto generated, don't change
+  hasJs: false    # <-- auto generated, don't change
+  hasReact: true    # <-- auto generated, don't change
+  ID: headings    # <-- auto generated, don't change
 inpage-nav:
   name: Inpage Nav
   description: TODO
@@ -367,7 +286,7 @@ inpage-nav:
   required: false
   contributors: 'x, x, x, x'
   state: published
-  order: 1
+  order: 140
   discussions:
     - open: 2
     - active: 7
@@ -388,7 +307,7 @@ keyword-list:
   required: false
   contributors: 'x, x, x, x'
   state: published
-  order: 1
+  order: 150
   discussions:
     - open: 2
     - active: 7
@@ -401,6 +320,27 @@ keyword-list:
   hasSass: true    # <-- auto generated, don't change
   hasJs: false    # <-- auto generated, don't change
   hasReact: true    # <-- auto generated, don't change
+link-list:
+  name: Link list
+  description: TODO
+  tags: TODO
+  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
+  required: false
+  contributors: 'x, x, x, x'
+  state: published
+  order: 160
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  version: 1.0.0-next.7    # <-- auto generated, don't change
+  dependencies:    # <-- auto generated, don't change
+    - core
+    - body
+  hasSass: true    # <-- auto generated, don't change
+  hasJs: false    # <-- auto generated, don't change
+  hasReact: true    # <-- auto generated, don't change
+  ID: link-list    # <-- auto generated, don't change
 page-alerts:
   name: Page Alerts
   description: TODO
@@ -409,7 +349,7 @@ page-alerts:
   required: false
   contributors: 'x, x, x, x'
   state: published
-  order: 1
+  order: 170
   discussions:
     - open: 2
     - active: 7
@@ -430,7 +370,7 @@ progress-indicator:
   required: false
   contributors: 'x, x, x, x'
   state: published
-  order: 1
+  order: 180
   discussions:
     - open: 2
     - active: 7
@@ -442,6 +382,26 @@ progress-indicator:
   hasSass: true    # <-- auto generated, don't change
   hasJs: false    # <-- auto generated, don't change
   hasReact: true    # <-- auto generated, don't change
+responsive-media:
+  name: Responsive Media
+  description: TODO
+  tags: TODO
+  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
+  required: false
+  contributors: 'x, x, x, x'
+  state: published
+  order: 190
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  version: 1.0.0-next.3    # <-- auto generated, don't change
+  dependencies:    # <-- auto generated, don't change
+    - core
+  hasSass: true    # <-- auto generated, don't change
+  hasJs: false    # <-- auto generated, don't change
+  hasReact: false    # <-- auto generated, don't change
+  ID: responsive-media    # <-- auto generated, don't change
 select:
   name: Select
   description: TODO
@@ -450,7 +410,7 @@ select:
   required: false
   contributors: 'x, x, x, x'
   state: published
-  order: 1
+  order: 200
   discussions:
     - open: 2
     - active: 7
@@ -462,6 +422,26 @@ select:
   hasSass: true    # <-- auto generated, don't change
   hasJs: false    # <-- auto generated, don't change
   hasReact: true    # <-- auto generated, don't change
+skip-link:
+  name: Skip Link
+  description: TODO
+  tags: TODO
+  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
+  required: false
+  contributors: 'x, x, x, x'
+  state: published
+  order: 210
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  version: 1.0.0-next.4    # <-- auto generated, don't change
+  dependencies:    # <-- auto generated, don't change
+    - core
+  hasSass: true    # <-- auto generated, don't change
+  hasJs: false    # <-- auto generated, don't change
+  hasReact: true    # <-- auto generated, don't change
+  ID: skip-link    # <-- auto generated, don't change
 tags:
   name: Tags
   description: TODO
@@ -470,13 +450,33 @@ tags:
   required: false
   contributors: 'x, x, x, x'
   state: published
-  order: 1
+  order: 220
   discussions:
     - open: 2
     - active: 7
     - something: something
   ID: tags    # <-- auto generated, don't change
   version: 1.0.0-next.5    # <-- auto generated, don't change
+  dependencies:    # <-- auto generated, don't change
+    - core
+  hasSass: true    # <-- auto generated, don't change
+  hasJs: false    # <-- auto generated, don't change
+  hasReact: true    # <-- auto generated, don't change
+text-inputs:
+  name: Text Inputs
+  description: TODO
+  tags: TODO
+  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
+  required: false
+  contributors: 'x, x, x, x'
+  state: published
+  order: 230
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  ID: text-inputs    # <-- auto generated, don't change
+  version: 1.0.0-next.7    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -490,7 +490,7 @@ cards:
   required: false
   contributors: 'x, x, x, x'
   state: unpublished
-  order: 1
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -499,9 +499,9 @@ cards:
   version: 0.0.0    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
-  hasSass: true    # <-- auto generated, don't change
+  hasSass: false    # <-- auto generated, don't change
   hasJs: false    # <-- auto generated, don't change
-  hasReact: true    # <-- auto generated, don't change
+  hasReact: false    # <-- auto generated, don't change
 table:
   name: Table
   description: TODO
@@ -510,7 +510,7 @@ table:
   required: false
   contributors: 'x, x, x, x'
   state: unpublished
-  order: 1
+  order: 20
   discussions:
     - open: 2
     - active: 7
@@ -529,73 +529,13 @@ navigation:
   image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
-  state: alpha
-  order: 1
+  state: suggestion
+  order: 10
   discussions:
     - open: 2
     - active: 7
     - something: something
   ID: navigation    # <-- auto generated, don't change
-  version: 0.0.0    # <-- auto generated, don't change
-  dependencies:    # <-- auto generated, don't change
-    - core
-  hasSass: true    # <-- auto generated, don't change
-  hasJs: false    # <-- auto generated, don't change
-  hasReact: true    # <-- auto generated, don't change
-search:
-  name: Search
-  description: TODO
-  tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
-  required: false
-  contributors: 'x, x, x, x'
-  state: alpha
-  order: 1
-  discussions:
-    - open: 2
-    - active: 7
-    - something: something
-  ID: search    # <-- auto generated, don't change
-  version: 0.0.0    # <-- auto generated, don't change
-  dependencies:    # <-- auto generated, don't change
-    - core
-  hasSass: true    # <-- auto generated, don't change
-  hasJs: false    # <-- auto generated, don't change
-  hasReact: true    # <-- auto generated, don't change
-paginations:
-  name: Pagination
-  description: TODO
-  tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
-  required: false
-  contributors: 'x, x, x, x'
-  state: alpha
-  order: 1
-  discussions:
-    - open: 2
-    - active: 7
-    - something: something
-  ID: pagination    # <-- auto generated, don't change
-  version: 0.0.0    # <-- auto generated, don't change
-  dependencies:    # <-- auto generated, don't change
-    - core
-  hasSass: true    # <-- auto generated, don't change
-  hasJs: false    # <-- auto generated, don't change
-  hasReact: true    # <-- auto generated, don't change
-blockquote:
-  name: Block Quote
-  description: TODO
-  tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
-  required: false
-  contributors: 'x, x, x, x'
-  state: alpha
-  order: 1
-  discussions:
-    - open: 2
-    - active: 7
-    - something: something
-  ID: blockquote    # <-- auto generated, don't change
   version: 0.0.0    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
