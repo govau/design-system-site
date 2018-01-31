@@ -54,8 +54,9 @@ pre[class*="language-"] {
 	overflow: auto;
 }
 
+:not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: $AU-color-Background;
+	background: #f5f2f0;
 }
 
 /* Inline code */
@@ -136,3 +137,48 @@ pre[class*="language-"] {
 	cursor: help;
 }
 
+
+
+// Custom styles
+pre[class*="language-"] {
+	@include AU-space( padding, 2.5unit 1unit 1unit );
+	@include AU-space( border-radius, 0.25unit );
+	background: $AU-color-Background;
+	position: relative;
+	background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 14" width="54px" height="14px">' +
+		'<circle fill="#FF5F58" cx="6" cy="6" r="5.5"></circle>' +
+		'<circle fill="#FFBE2D" cx="26" cy="6" r="5.5"></circle>' +
+		'<circle fill="#27CA41" cx="46" cy="6" r="5.5"></circle>' +
+	'</svg>');
+	background-repeat: no-repeat;
+	@include AU-space( background-position, 1unit 0.5unit );
+
+	* + & {
+		@include AU-space( margin-top, 1unit );
+	}
+
+	.btn-copy {
+		@include AU-fontgrid( xs, nospace );
+		@include AU-space( top, 0.5unit );
+		@include AU-space( right, 0.5unit );
+		@include AU-space( padding, 0.25unit 0.5unit );
+		position: absolute;
+		opacity: 0;
+		transition: opacity 0.1s;
+	}
+
+	&:hover,
+	&:focus{
+		.btn-copy {
+			opacity: 1;
+		}
+	}
+
+	code[class*="language-"] {
+		padding: 0;
+	}
+}
+
+.furnace pre[class*="language-"] {
+	white-space: pre-wrap;
+}

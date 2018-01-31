@@ -1,6 +1,8 @@
 import { AUcheckbox, AUradio } from '../../_uikit/layout/control-input.js';
-import PropTypes from 'prop-types';
 import GetData from './../getData';
+import Code from './../code';
+
+import PropTypes from 'prop-types';
 import React from 'react';
 
 
@@ -82,11 +84,6 @@ const Furnace = ({ components, _body, _parseYaml }) => {
 
 					<h3 className="furnace__title">Your build</h3>
 
-					<h4>NPM</h4>
-					<pre className="language-none">
-						<code className="language-none furnace-npm">npm i</code>
-					</pre>
-
 					<h4>Download Zip</h4>
 
 					<div className="furnace__buildbox">
@@ -107,6 +104,9 @@ const Furnace = ({ components, _body, _parseYaml }) => {
 						</fieldset>
 					</div>
 					<button type="submit" className="au-btn au-btn--block">Download</button>
+
+					<h4>NPM</h4>
+					<Code className="furnace-npm">npm install</Code>
 
 				</div>
 
