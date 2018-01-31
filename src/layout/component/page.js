@@ -30,6 +30,10 @@ const ComponentPage = ({
 	<script src="${ _relativeURL( '/assets/js/respond.js', _ID ) }"></script>
 <![endif]-->
 
+<!--[if gt IE 8]>
+	<script src="${ _relativeURL( '/assets/js/prism.js', _ID ) }"></script>
+<![endif]-->
+
 <script src=${ _relativeURL( '/assets/js/header.js', _ID ) }></script>`;
 
 	return (
