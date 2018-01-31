@@ -77,7 +77,7 @@ ComponentPage.propTypes = {
 	header: PropTypes.node.isRequired,
 
 	/**
-	 * sections: (partials)(4)
+	 * main: (partials)(4)
 	 */
 	main: PropTypes.node.isRequired,
 

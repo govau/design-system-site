@@ -6,6 +6,9 @@ import React, { Fragment } from 'react';
 import PropTypes           from 'prop-types';
 
 
+/**
+ * The NavigationAccordion component
+ */
 const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
 
 	const CreateAccordion = ( title, components, id, state, i ) => {
@@ -96,5 +99,9 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
 		</nav>
 	)
 };
+
+NavigationAccordion.propTypes = {};
+
+NavigationAccordion.defaultProps = {};
 
 export default NavigationAccordion;

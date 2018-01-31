@@ -1,7 +1,5 @@
 .navigation.navigation--accordion {
 	border-bottom: 0;
-	overflow-y: auto;
-	overflow-x: hidden;
 
 	.au-link-list > li {
 		border: 0;
@@ -13,7 +11,7 @@
 
 			&:after {
 				@include AU-space( margin-top, -0.5unit );
-				@include AU-space( right, -0.5unit );
+				@include AU-space( right, -0.7unit );
 				@include AU-space( height, 1unit );
 				@include AU-space( width, 1unit );
 				position: absolute;
@@ -22,7 +20,7 @@
 				background-color: $AU-color-Background-light;
 				top: 50%;
 				z-index: 100;
-				transform: rotate(45deg);
+				transform: rotate( 45deg );
 			}
 		}
 
@@ -33,7 +31,7 @@
 	}
 
 	.au-accordion__body-wrapper {
-		padding: 0;
+		padding: 2px 3px;
 		background-color: $AU-color-Background-darkest;
 	}
 
