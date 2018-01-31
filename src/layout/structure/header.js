@@ -8,7 +8,7 @@ import PropTypes           from 'prop-types';
  * The header component
  */
 const Header = ({ title, mainmenu, _relativeURL, _ID, _pages }) => (
-	<Fragment>
+	<div>
 		<AUskipLink links={[
 			{
 				link: '#mainmenu',
@@ -69,7 +69,7 @@ const Header = ({ title, mainmenu, _relativeURL, _ID, _pages }) => (
 			<div id="overlay" className="overlay"></div>
 			<div id="focustrap-bottom"></div>
 		</div>
-		</Fragment>
+	</div>
 );
 
 Header.propTypes = {
