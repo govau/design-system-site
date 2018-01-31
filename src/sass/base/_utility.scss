@@ -2,16 +2,17 @@
 	@include AU-sronly();
 }
 
-.hide-fieldset {
+.fieldset--reset {
 	border: none;
 	padding: 0;
 	margin: 0;
+	width: 100%;
 
 	legend {
 		font-weight: bold;
 	}
 }
 
-.hide-fieldset + .hide-fieldset {
+.fieldset--reset + .fieldset--reset {
 	@include AU-space( margin-top, 2unit );
 }

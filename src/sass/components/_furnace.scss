@@ -3,7 +3,8 @@
 	@include AU-space( margin-bottom, 1.5unit );
 	@include AU-space( border-bottom, solid 0.25unit $AU-color-Background );
 
-	.furnace__title__control {
+	.furnace__clear {
+		@include AU-space( padding, 0.5unit 0 );
 		@include AU-space( margin-top, -0.5unit );
 		float: right;
 	}
@@ -11,56 +12,64 @@
 
 .furnace__component-list {
 	list-style: none;
-	margin-top: 0;
 	padding: 0;
+	margin: 0;
 }
 
 .furnace__component {
 	@include AU-clearfix();
-	display:block;
-	position:relative;
+	@include AU-space( border-radius, 0.25unit );
+	@include AU-space( margin-top, 0.5unit );
+	@include AU-space( padding, 0.25unit 1unit 0.25unit 0.25unit );
+	display: block;
+	position: relative;
 	background: $AU-color-Background;
-	margin-top: 1rem;
-	padding:1rem;
 
 	&:hover {
 	 background: $AU-color-Background-dark;
 	}
 }
 
+// Pull the label to full width and he
 .furnace__component__label {
-	position:absolute;
+	@include AU-space( padding, 0.25unit );
+	position: absolute;
 	left: 0;
 	right: 0;
 	top: 0;
 	bottom: 0;
-	padding: 1rem;
-	z-index:1;
-	cursor:pointer;
+	z-index: 1;
+	cursor: pointer;
 
-	.furnace__component__control { //label text & input
-		@include AU-space( margin-left, 5unit );
-		@include AU-fontgrid( md );
+	//label text & input
+	.furnace__component__control {
+		@include AU-space( margin, 1unit 0 0 5unit );
 		position: relative; //for the UIKIT checkboxes
-		display:block;
-		font-weight:bold;
+		display: block;
+
+		.au-control-input__text {
+			@include AU-fontgrid( xs, nospace );
+			font-weight: bold;
+			padding-top: 0;
+		}
 	}
 }
 
 .furnace__component__details {
-	.furnace__component__notes {
-		@include AU-space( margin, 2unit 0 0 0 );
+	.furnace__component__dependencies {
+		@include AU-fontgrid( xs, nospace );
+		@include AU-space( margin, 2unit 0 0 2.5unit );
 		float: left;
 	}
 
-	.furnace__component__doclink {
+	.furnace__component__documentation {
 		@include AU-fontgrid( xs );
 		@include AU-space( margin-top, 1.25unit );
 		float: right;
 
 		a {
-			position:relative;
-			z-index:99;
+			position: relative;
+			z-index: 100;
 
 			&:hover {
 				color: $AU-color-Text;
@@ -70,50 +79,26 @@
 	}
 }
 
-.furnace__component__details__img {
+.furnace__image {
 	@include AU-space( width, 4unit );
 	@include AU-space( margin-right, 1unit );
 	float: left;
 }
 
-.furnace__code {
-	@include AU-fontgrid( xs );
-	font-family: $AU-font-monospace;
-	apperance: none;
-	border: none;
-	background-color: transparent;
-	height: 10em;
-	width: 100%;
-}
-
 .furnace__buildbox {
-	@include AU-clearfix();
-	@include AU-space( padding, 1unit );
-	@include AU-space( margin-top, 1unit );
+	@include AU-space( border-top-left-radius, 0.25unit );
+	@include AU-space( border-top-right-radius, 0.25unit );
 	background-color: $AU-color-Background;
 
-	.au-btn.au-btn--size-sm {
-		float: right;
-		@include AU-fontgrid( xs );
-		@include AU-space( margin-right, -1unit );
-		@include AU-space( margin-bottom, -1unit );
-		@include AU-space( padding, 0.25unit 0.5unit );
-	}
-
-}
-
-
-// Resets for body :'(
-.au-body {
-	.furnace--component-list > li {
-		margin-top: 0;
-	}
-
-	.furnace--component-list > li + li {
+	.furnace__buildbox__wrapper {
+		@include AU-clearfix();
+		@include AU-space( padding, 1unit );
 		@include AU-space( margin-top, 1unit );
 	}
 
-	* + .furnace--component-list {
-		margin-top: 0;
+	.furnace__buildbox__download {
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
 	}
 }
+
