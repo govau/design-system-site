@@ -32,7 +32,7 @@ Code.propTypes = {
 
 Code.defaultProps = {
 	language: 'none',
-	copy: 'true'
+	copy: true,
 };
 
 export default Code;

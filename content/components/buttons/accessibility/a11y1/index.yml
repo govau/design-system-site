@@ -1,0 +1,5 @@
+layout: code/a11y
+modules:
+  - body
+  - buttons
+example: ../a11y.md
