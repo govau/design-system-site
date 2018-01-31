@@ -72,7 +72,7 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
 	const componentStates = {
 		published: 'Released',
 		unpublished: 'In progress',
-		alpha: 'Suggestions'
+		suggestion: 'Suggestions'
 	};
 
 	const accordionMarkup = [];
