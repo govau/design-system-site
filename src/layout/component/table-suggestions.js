@@ -13,7 +13,7 @@ import PropTypes           from 'prop-types';
 const TableSuggestions = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _parseYaml }) => {
 
 	const components = GetData({
-		filter: ( key, COMPONENTS ) => COMPONENTS[ key ].state === 'alpha',
+		filter: ( key, COMPONENTS ) => COMPONENTS[ key ].state === 'suggestion',
 		yaml: _parseYaml,
 	});
 
