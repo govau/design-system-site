@@ -9,7 +9,7 @@ import Fs from 'fs';
 /**
  * The code component
  */
-const Code = ({ headline, example, code, _body, _ID }) => {
+const Code = ({ headline, example, code, _body, _ID, _parseMD }) => {
 	const pathToCode = Path.normalize(`${ SETTINGS.get().folder.content }/${ _ID }/examples/example${ example }/code.md`);
 	const exampleCode = Fs.readFileSync( pathToCode, 'utf8' );
 
@@ -31,7 +31,9 @@ const Code = ({ headline, example, code, _body, _ID }) => {
 					</ul>
 					{
 						code.map( section => (
-							<div id={ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }>{ section[ Object.keys( section )[ 0 ] ] }</div>
+							<div id={ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }>
+								{ _parseMD('```\n' + section[ Object.keys( section )[ 0 ] ] + '\n```') }
+							</div>
 						))
 					}
 				</div>
