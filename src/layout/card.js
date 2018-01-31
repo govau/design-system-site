@@ -88,6 +88,42 @@ AUcardImage.propTypes = {
 
 
 /**
+ * AUcardSVG - An SVG row inside a card
+ *
+ * @param  {string}  svg              - The image inside the row
+ * @param  {string}  title            - The text only description for the image
+ * @param  {boolean} fullwidth        - If the element stretches to the fullwidth of the container
+ * @param  {string}  link             - The link that the element goes to
+ * @param  {string}  href             - We add the href so it isn't added to the attributeOptions
+ * @param  {object}  attributeOptions - All of the other properties that can be added
+ */
+const AUcardSVG = ({ svg, title, fullwidth, link, href, ...attributesOptions = {} }) => {
+	let ImageContainer = 'div';
+
+	if( link !== undefined ) {
+		ImageContainer = 'a';
+		attributesOptions.href = link;
+	}
+
+	return(
+		<ImageContainer { ...attributesOptions } className={ `au-card__image${ fullwidth ? ' au-card__fullwidth' : '' }` }>
+			<svg role="img" title={ title }>
+				<title>{ title }</title>
+				<use xlinkHref={ svg }/>
+			</svg>
+		</ImageContainer>
+	);
+};
+
+AUcardSVG.propTypes = {
+	svg: PropTypes.string.isRequired,
+	title: PropTypes.string.isRequired,
+	fullwidth: PropTypes.bool,
+	link: PropTypes.string,
+};
+
+
+/**
  * AUcardContent - A content row inside a card
  *
  * @param  {string}  text             - The text inside the content area
@@ -212,6 +248,7 @@ const AUcard = ({ rows, appearance, alignment, link, href, ...attributesOptions 
 		line: AUcardLine,
 		cta: AUcardCTA,
 		image: AUcardImage,
+		svg: AUcardSVG,
 		heading: AUcardHeading,
 		content: AUcardContent,
 		html: AUcardHTML,

@@ -100,7 +100,6 @@ const CheckComponents = ( uikit, components ) => {
 				'name',
 				'description',
 				'tags',
-				'image',
 				'required',
 				'version',
 				'dependencies',

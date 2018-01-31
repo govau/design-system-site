@@ -56,6 +56,7 @@ AUcardList.propTypes = {
 				PropTypes.shape({
 					type: PropTypes.string.isRequired,
 					image: PropTypes.string,
+					svg: PropTypes.string,
 					description: PropTypes.string,
 					text: PropTypes.string,
 					link: PropTypes.string,

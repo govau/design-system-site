@@ -9,14 +9,11 @@
 	}
 }
 
-
 .furnace__component-list {
 	list-style: none;
 	margin-top: 0;
 	padding: 0;
 }
-
-
 
 .furnace__component {
 	@include AU-clearfix();
@@ -30,8 +27,6 @@
 	 background: $AU-color-Background-dark;
 	}
 }
-
-
 
 .furnace__component__label {
 	position:absolute;
@@ -73,12 +68,12 @@
 			}
 		}
 	}
+}
 
-	img {
-		@include AU-space( width, 4unit );
-		@include AU-space( margin-right, 1unit );
-		float:left;
-	}
+.furnace__component__details__img {
+	@include AU-space( width, 4unit );
+	@include AU-space( margin-right, 1unit );
+	float: left;
 }
 
 .furnace__code {

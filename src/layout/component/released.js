@@ -7,7 +7,7 @@ import PropTypes           from 'prop-types';
 /**
  * The component released listing of cards
  */
-const ComponentReleased = ({ cardList, _body, _parseYaml }) => {
+const ComponentReleased = ({ cardList, _ID, _body, _parseYaml, _relativeURL }) => {
 
 	const components = GetData({
 		filter: ( key, COMPONENTS ) => COMPONENTS[ key ].state === 'published',
@@ -19,8 +19,8 @@ const ComponentReleased = ({ cardList, _body, _parseYaml }) => {
 		cards.push({
 			link: `/components/${ component.ID }`,
 			rows: [{
-				type: 'image',
-				image: component.image,
+				type: 'svg',
+				svg: _relativeURL( `/assets/svg/map.svg#${ component.ID }`, _ID ),
 				description: component.description,
 				fullwidth: true,
 			},
@@ -47,7 +47,7 @@ const ComponentReleased = ({ cardList, _body, _parseYaml }) => {
 					columnSize={ cardList.columnSize }
 					matchHeight={ cardList.matchHeight }
 					alignment={ cardList.alignment }
-					/>
+				/>
 			</div>
 		</Fragment>
 	)
@@ -64,7 +64,6 @@ ComponentReleased.propTypes = {
 	 *   cards:
 	 *     - rows:
 	 *       - type: image
-	 *         image: http://via.placeholder.com/300x300/f5f5f5/636363
 	 *         description: A 300x300 image
 	 *         fullwidth: true
 	 *       - type: heading
@@ -74,7 +73,6 @@ ComponentReleased.propTypes = {
 	 *       link: #
 	 *     - rows:
 	 *       - type: image
-	 *         image: http://via.placeholder.com/300x300/f5f5f5/636363
 	 *         description: A 300x300 image
 	 *         fullwidth: true
 	 *       - type: heading

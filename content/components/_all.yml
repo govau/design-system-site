@@ -2,7 +2,6 @@ core:
   name: Core
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: true
   contributors: 'x, x, x, x'
   state: published
@@ -21,7 +20,6 @@ accordion:
   name: Accordion
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
   state: published
@@ -42,7 +40,6 @@ animate:
   name: Animate
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
   state: published
@@ -61,7 +58,6 @@ body:
   name: Body
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
   state: published
@@ -81,7 +77,6 @@ breadcrumbs:
   name: Breadcrumbs
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
   state: published
@@ -112,7 +107,6 @@ buttons:
     - active: 7
     - something: something
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   hasSass: true    # <-- auto generated, don't change
   hasJs: false    # <-- auto generated, don't change
@@ -122,7 +116,6 @@ callout:
   name: Callout
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
   state: published
@@ -142,7 +135,6 @@ control-input:
   name: Control Input
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
   state: published
@@ -162,7 +154,6 @@ cta-link:
   name: Cta Link
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
   state: published
@@ -182,7 +173,6 @@ direction-links:
   name: Direction Links
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
   state: published
@@ -202,7 +192,6 @@ footer:
   name: Footer
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
   state: published
@@ -222,7 +211,6 @@ grid-12:
   name: Grid 12
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
   state: published
@@ -242,7 +230,6 @@ header:
   name: Header
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
   state: published
@@ -262,7 +249,6 @@ headings:
   name: Headings
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
   state: published
@@ -282,7 +268,6 @@ inpage-nav:
   name: Inpage Nav
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
   state: published
@@ -303,7 +288,6 @@ keyword-list:
   name: Keyword List
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
   state: published
@@ -324,7 +308,6 @@ link-list:
   name: Link list
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
   state: published
@@ -345,7 +328,6 @@ page-alerts:
   name: Page Alerts
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
   state: published
@@ -366,7 +348,6 @@ progress-indicator:
   name: Progress Indicator
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
   state: published
@@ -386,7 +367,6 @@ responsive-media:
   name: Responsive Media
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
   state: published
@@ -406,7 +386,6 @@ select:
   name: Select
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
   state: published
@@ -426,7 +405,6 @@ skip-link:
   name: Skip Link
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
   state: published
@@ -446,7 +424,6 @@ tags:
   name: Tags
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
   state: published
@@ -466,7 +443,6 @@ text-inputs:
   name: Text Inputs
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
   state: published
@@ -486,7 +462,6 @@ cards:
   name: Cards
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
   state: unpublished
@@ -506,7 +481,6 @@ table:
   name: Table
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
   state: unpublished
@@ -526,7 +500,6 @@ navigation:
   name: Navigation
   description: TODO
   tags: TODO
-  image: 'http://via.placeholder.com/220x220/ffffff/cccccc'
   required: false
   contributors: 'x, x, x, x'
   state: suggestion

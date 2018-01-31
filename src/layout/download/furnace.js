@@ -9,7 +9,7 @@ import React from 'react';
 /**
  * The Intro component
  */
-const Furnace = ({ components, _body, _parseYaml }) => {
+const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 	const MODULES = GetData({
 		filter: ( key, COMPONENTS ) => COMPONENTS[ key ].state === 'published',
 		yaml: _parseYaml,
@@ -56,7 +56,10 @@ const Furnace = ({ components, _body, _parseYaml }) => {
 											</label>
 
 											<div className="furnace__component__details">
-												<img src={ MODULES[ module ].image } alt=""/>
+												<svg className="furnace__component__details__img" role="img" title={ MODULES[ module ].name }>
+													<use xlinkHref={ _relativeURL( `/assets/svg/map.svg#${ MODULES[ module ].ID }`, _ID ) }/>
+												</svg>
+
 												<p className="furnace__component__notes">
 													{
 														MODULES[ module ].dependencies.length > 0

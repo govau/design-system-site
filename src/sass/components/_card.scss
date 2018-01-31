@@ -2,7 +2,8 @@
 	display:block;
 	max-width: $AU-maxwidth;
 
-	img {
+	img,
+	svg {
 		display: block;
 	}
 
@@ -52,7 +53,8 @@
 	&.au-card--centered {
 		text-align: center;
 
-		img {
+		img,
+		svg {
 			margin: 0 auto;
 		}
 	}
