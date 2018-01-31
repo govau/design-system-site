@@ -1,28 +1,36 @@
+import AUtextInput from '../_uikit/layout/text-inputs.js';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 
 /**
- * The Intro component
+ * The Searchbox component
  */
-const Searchbox = ({ placeholder }) => (
-		<form role="search" className="au-search au-streatch_row">
-		  <label className="sronly" htmlFor="s1">Search</label>
+const Searchbox = ({ label, placeholder }) => (
+	<form role="search" className="au-search au-stretch_row">
+		<label className="sronly" htmlFor="s1">{ label }</label>
 
-		  <div className="au-streatch_col-fill">
-		    <input id="s1" type="search" placeholder={ placeholder } className="au-text-input"/>
-		  </div>
+		<div className="au-stretch_col-fill">
+			<AUtextInput id="s1" type="search" placeholder={ placeholder } />
+		</div>
 
-		  <div className="au-streatch_col-fit">
-		    <button className="au-btn au-btn--secondary">Search</button>
-		  </div>
-
-		</form>
+		<div className="au-stretch_col-fit">
+			<button className="au-btn au-btn--secondary">{ label }</button>
+		</div>
+	</form>
 );
 
 
 Searchbox.propTypes = {
+	/**
+	 * label: Search
+	 */
+	label: PropTypes.string.isRequired,
 
+	/**
+	 * placeholder: e.g. Body
+	 */
+	placeholder: PropTypes.string.isRequired,
 };
 
 Searchbox.defaultProps = {};

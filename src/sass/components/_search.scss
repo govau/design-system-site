@@ -1,4 +1,3 @@
-
 .au-search {
 
 	.au-text-input {
@@ -7,8 +6,8 @@
 		border-right: none;
 
 		&::placeholder {
-      color: $AU-color-Muted;
-    }
+			color: $AU-color-Muted;
+		}
 	}
 
 	.au-btn {
@@ -38,32 +37,32 @@
 // Note. display:table on screenreaders https://goo.gl/TT6Boz
 
 // Table layout for old skool
-  .au-streatch_row {
-    display: table;
-    width: 100%;
-  }
-  .au-streatch_col-fill {
-    display: table-cell;
-    width: auto;
-  }
-  .au-streatch_col-fit {
-    display: table-cell;
-    width:1em; //For fit to content
-  }
+	.au-stretch_row {
+		display: table;
+		width: 100%;
+	}
+	.au-stretch_col-fill {
+		display: table-cell;
+		width: auto;
+	}
+	.au-stretch_col-fit {
+		display: table-cell;
+		width:1em; //For fit to content
+	}
 
 //  Flex layout for new skool
 @supports (display: flex) {
-  .au-streatch_row {
-    display: flex; 	// override table
-    width: auto; 		// override table
-  }
-  .au-streatch_col-fill {
-    display: block; // override table
-    width: auto;    // override table
-    flex: 1;
-  }
-  .au-streatch_col-fit {
-    display: block; // override table
-    width:auto;     // override table
-  }
+	.au-stretch_row {
+		display: flex; // override table
+		width: auto;   // override table
+	}
+	.au-stretch_col-fill {
+		display: block; // override table
+		width: auto;    // override table
+		flex: 1;
+	}
+	.au-stretch_col-fit {
+		display: block; // override table
+		width:auto;     // override table
+	}
 }
