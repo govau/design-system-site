@@ -16,24 +16,24 @@ const CodeDemo = ({ headline, example, code, _body, _ID, _parseMD }) => {
 	const exampleCode = Fs.readFileSync( pathToCode, 'utf8' );
 
 	return (
-		<div className="variation" id={ Slugify( headline ).toLowerCase() }>
-			<a className="variation__anchor" href={`#${ Slugify( headline ).toLowerCase() }`}>#</a>
+		<div className="code-demo" id={ Slugify( headline ).toLowerCase() }>
+			<a className="code-demo__anchor" href={`#${ Slugify( headline ).toLowerCase() }`}>#</a>
 
-			<h2 className="variation__headline">{ headline }</h2>
+			<h2 className="code-demo__headline">{ headline }</h2>
 
-			<div className="variation__example">
-				<iframe className="variation__example__iframe" src={`examples/example${ example }/`}>{ exampleCode }</iframe>
-				<div className="variation__example__code">
+			<div className="code-demo__example">
+				<iframe className="code-demo__example__iframe" src={`examples/example${ example }/`}>{ exampleCode }</iframe>
+				<div className="code-demo__example__code">
 					<ul>
 						{
 							code.map( ( section, i ) => (
-								<li key={ i }><a href={`#${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }`}>{ Object.keys( section )[ 0 ] }</a></li>
+								<li key={ i }><a href={`#${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }-${ headline.toLowerCase() }`}>{ Object.keys( section )[ 0 ] }</a></li>
 							))
 						}
 					</ul>
 					{
 						code.map( section => (
-							<div id={ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }>
+							<div id={ `${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }-${ headline.toLowerCase() }` }>
 								<Code language={
 									Object.keys( section )[ 0 ] === 'HTML' ? 'html' : '' +
 									Object.keys( section )[ 0 ] === 'React' ? 'javascript' : ''
@@ -44,7 +44,7 @@ const CodeDemo = ({ headline, example, code, _body, _ID, _parseMD }) => {
 				</div>
 			</div>
 
-			<div className="variation__text">
+			<div className="code-demo__text">
 				{ _body }
 			</div>
 		</div>
