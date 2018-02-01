@@ -89,13 +89,15 @@
 }
 
 // Reset AU-body
-.au-body .componentStatus__definition__list > li {
-	margin-top: 0;
-	margin-left: 0;
-}
-.au-body .componentStatus__definition__list {
-	padding-top: 0;
-}
-.au-body .componentStatus__definition {
-	@include AU-space( margin-top, 1.25unit );
+.au-body {
+	.componentStatus__definition__list > li {
+		margin-top: 0;
+		margin-left: 0;
+	}
+	.componentStatus__definition__list {
+		padding-top: 0;
+	}
+	.componentStatus__definition {
+		@include AU-space( margin-top, 1.25unit );
+	}
 }

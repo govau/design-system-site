@@ -24,7 +24,7 @@ function CopyString( text ) {
 // On click of any of the copy code buttons
 var copyButtons = document.querySelectorAll( '.js-copy-btn' );
 AddEvent( copyButtons, 'click', function( event, $this ) {
-	CopyString( $this.previousSibling.innerHTML );
+	CopyString( $this.previousSibling.innerText );
 	var oldLabel = $this.innerHTML;
 	$this.innerHTML = 'Copied';
 	RemoveClass( $this, 'icon--copy' );

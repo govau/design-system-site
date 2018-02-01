@@ -46,7 +46,7 @@
 		}
 
 		.content {
-			@include AU-space( padding-left, 2unit );
+			@include AU-space( padding-left, 3unit );
 			background: $AU-color-Background-light;
 			box-shadow: -1px 0 0 0 $AU-color-Border;
 		}

@@ -1,0 +1,43 @@
+.code-demo {
+	@include AU-clearfix();
+	position: relative;
+
+	* + & {
+		@include AU-space( margin-top, 2unit );
+	}
+
+	.code-demo + & {
+		@include AU-space( margin-top, 4unit );
+	}
+
+	.code-demo__anchor {
+		position: absolute;
+		left: -50px;
+	}
+}
+
+
+.code-demo__example__iframe {
+	border: 0;
+}
+
+.au-body * + .code-demo__headline {
+	margin-top: 0;
+}
+
+.code-demo__text {
+	@include AU-space( margin-top, 1unit );
+}
+
+// Layout
+.code-demo__example {
+	float: right;
+	width: 49%;
+}
+
+
+.code-demo__text,
+.code-demo__headline {
+	float: left;
+	width: 49%;
+}
