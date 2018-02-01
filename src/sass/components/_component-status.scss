@@ -8,7 +8,7 @@
 }
 
 .componentStatus__definition {
-	overflow: hidden;
+	@include AU-clearfix();
 }
 
 .au-body .componentStatus {
@@ -27,7 +27,7 @@
 		vertical-align: top;
 		margin: 0; // Reset .AU-body
 		@include AU-space( margin-bottom, 0.75unit );
-		overflow: hidden;
+		@include AU-clearfix();
 	}
 
 	dt {
@@ -60,6 +60,12 @@
 	margin: 0;
 	padding: 0;
 
+	&.is-small {
+		& > .componentStatus__definition__list__item:nth-child( n + 5 ) {
+			display: none;
+		}
+	}
+
 	& > li {
 		display: inline-block;
 
@@ -85,6 +91,10 @@
 	box-shadow: none;
 	cursor: pointer;
 	text-decoration: underline;
+
+	&.is-hidden {
+		display: none;
+	}
 
 	&:hover {
 		text-decoration: none;

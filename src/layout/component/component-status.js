@@ -65,13 +65,13 @@ const ComponentStatus = ({ module, _ID, _relativeURL, version, _parseYaml }) => 
 
 				<dt>Contributors</dt>
 				<dd>
-					<ul className="componentStatus__definition__list componentStatus__definition__list--images">
+					<ul className="componentStatus__definition__list componentStatus__definition__list--images js-more-wrapper">
 						{
 							Object.keys( component[ 0 ].contributors ).map( ( user, i ) => {
 								const contributor = component[ 0 ].contributors[ user ];
 
 								return (
-									<li key={ i }>
+									<li className="componentStatus__definition__list__item" key={ i }>
 										<a href={ contributor.url } className="avatar">
 											<img
 												src={ contributor.email && `https://www.gravatar.com/avatar/${ Crypto.createHash('md5').update( contributor.email ).digest('hex') }` }
@@ -82,11 +82,6 @@ const ComponentStatus = ({ module, _ID, _relativeURL, version, _parseYaml }) => 
 									</li>
 								);
 							})
-						}
-						{
-							Object.keys( component[ 0 ].contributors ).length > 5
-								? <li><button className="componentStatus__definition__list__more js-more">20+</button></li>
-								: null
 						}
 					</ul>
 				</dd>
