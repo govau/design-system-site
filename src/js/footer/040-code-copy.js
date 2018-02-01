@@ -36,6 +36,3 @@ AddEvent( copyButtons, 'click', function( event, $this ) {
 		AddClass( $this, 'icon--copy' );
 	}, 1000 );
 });
-
-
-
