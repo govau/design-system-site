@@ -53,11 +53,11 @@
 
 	@include AU-media( md ) {
 		padding: 0;
-		@include AU-space( padding-top, 5unit);
+		@include AU-space( padding-top, 8unit);
 	}
 
 	@include AU-media( lg ) {
-		@include AU-space( padding-top, 5unit);
+		@include AU-space( padding-top, 2unit);
 	}
 
 }
