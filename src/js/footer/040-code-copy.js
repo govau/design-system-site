@@ -13,12 +13,12 @@ for( var i = 0; i < codeComponents.length; i++ ) {
  * @param {string} text - The string to be copied
  */
 function CopyString( text ) {
-	var input = document.createElement( 'input' );
-	input.setAttribute( 'value', text );
-	document.body.appendChild( input );
-	input.select();
+	var textarea = document.createElement( 'textarea' );
+	textarea.value = text;
+	document.body.appendChild( textarea );
+	textarea.select();
 	document.execCommand( 'copy' );
-	document.body.removeChild( input );
+	document.body.removeChild( textarea );
 }
 
 // On click of any of the copy code buttons
@@ -36,4 +36,6 @@ AddEvent( copyButtons, 'click', function( event, $this ) {
 		AddClass( $this, 'icon--copy' );
 	}, 1000 );
 });
+
+
 
