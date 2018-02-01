@@ -29,10 +29,6 @@ const ComponentReleased = ({ cardList, _ID, _body, _parseYaml, _relativeURL }) =
 				type: 'heading',
 				headingSize: '3',
 				text: component.name,
-			},
-			{
-				type: 'content',
-				text: component.version,
 			}]
 		})
 	})
