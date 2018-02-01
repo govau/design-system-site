@@ -8,7 +8,7 @@ import PropTypes           from 'prop-types';
  * The header component
  */
 const Header = ({ title, mainmenu, _relativeURL, _ID, _pages }) => (
-	<div>
+	<div className="header-wrapper">
 		<AUskipLink links={[
 			{
 				link: '#mainmenu',
