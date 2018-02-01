@@ -22,6 +22,7 @@
 		@include AU-fontgrid( xs, heading );
 		@include AU-space( height, 3unit );
 		position: relative; // for outline
+		border-width: 1px;
 
 		&:focus {
 			border-radius: 0;

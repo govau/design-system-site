@@ -10,7 +10,7 @@ body {
 }
 
 .container-fluid {
-	@include AU-space( max-width, 75unit ); //1200px
+	@include AU-space( max-width, 85unit );
 }
 
 .au-footer {
@@ -19,8 +19,8 @@ body {
 }
 
 main.main {
-	@include AU-space( padding-top, 3unit );
-	@include AU-space( padding-bottom, 3unit );
+	@include AU-space( padding-top, 6unit );
+	@include AU-space( padding-bottom, 6unit );
 }
 
 @include AU-media( xs ) {

@@ -39,20 +39,20 @@
 
 		.content,
 		.sidebar {
-			@include AU-space( margin-top, -3unit );
-			@include AU-space( margin-bottom, -3unit );
-			@include AU-space( padding-top, 3unit );
-			@include AU-space( padding-bottom, 3unit );
+			@include AU-space( margin-top, -6unit );
+			@include AU-space( margin-bottom, -6unit );
+			@include AU-space( padding-top, 6unit );
+			@include AU-space( padding-bottom, 6unit );
 		}
 
 		.content {
 			@include AU-space( padding-left, 3unit );
 			background: $AU-color-Background-light;
-			box-shadow: -1px 0 0 0 $AU-color-Border;
+			box-shadow: -1px 0 0 0 darken($AU-color-Background, 15%);
 		}
 
 		.sidebar .navigation--accordion {
-			@include AU-space( margin-top, 2unit );
+			// @include AU-space( margin-top, 2unit );
 			margin-right: -12px;
 			display: block;
 		}

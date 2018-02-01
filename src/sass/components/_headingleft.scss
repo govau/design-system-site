@@ -2,7 +2,7 @@
 // Block of text with the introduction heading on the left
 
 * + .headingLeft {
-	@include AU-space( margin-top, 2unit );
+	@include AU-space( margin-top, 3unit );
 }
 
 .headingLeft .col-md-9 {

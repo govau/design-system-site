@@ -1,0 +1,44 @@
+// Cards used in released on /components/
+
+.released {
+
+	.au-card__image {
+		background: $AU-color-Background;
+		padding: 30%;
+	}
+
+	.au-card__title {
+		@include AU-fontgrid( sm );
+		font-weight: normal;
+	}
+
+	.au-card__content {
+		@include AU-fontgrid( xs );
+		color: $AU-color-Muted;
+		margin-top: 0.25rem;
+		padding-right: 2rem;
+		position: relative;
+
+		&:after {
+			content: ' ';
+			@include AU-space( width, 0.75unit );
+			@include AU-space( height, 0.75unit );
+			@include AU-space( margin, 0 0.25unit 0 0.2unit );
+			transition: margin 0.2s ease;
+			display: inline-block;
+			position: absolute;
+			right: -3px;
+			bottom: 1px;
+			background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">' +
+					'<path fill="#{ $AU-color-Action }" d="M128 64l-64 64-16-16 64-64"/>' +
+					'<path fill="#{ $AU-color-Action }" d="M128 64l-16 16-64-64L64 0"/>' +
+				'</svg>');
+
+			.ie8 &,
+			.lt-ie8 & {
+				content: ' > ';
+			}
+		}
+	}
+
+}

@@ -11,10 +11,10 @@ const headingLeft = ({ heading, headinglevel, _body }) => {
 
 	return (
 		<div className="row headingLeft">
-			<div className="col-md-3">
+			<div className="col-md-2">
 				<HeadingTag>{ heading }</HeadingTag>
 			</div>
-			<div className="col-md-9">{ _body }</div>
+			<div className="col-md-10">{ _body }</div>
 		</div>
 	);
 

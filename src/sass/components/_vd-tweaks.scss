@@ -1,0 +1,15 @@
+
+.au-display-xxxl, .au-display-xxl, .au-display-xl, .au-display-lg, .au-display-md, .au-display-sm, .au-display-xs, .au-body h1, .au-body h2, .au-body h3, .au-body h4, .au-body h5, .au-body h6 {
+	font-weight: normal;
+}
+.au-display-sm.feature__wrapper__headline {
+	font-weight: bold;
+}
+
+.au-btn, a.au-btn {
+	border-width: 2px;
+}
+
+.au-body *+h2, .au-body *+.au-display-xl {
+	@include AU-space( margin-top, 5unit );
+}

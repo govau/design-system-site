@@ -26,13 +26,13 @@ const ComponentReleased = ({ cardList, _ID, _body, _parseYaml, _relativeURL }) =
 				fullwidth: true,
 			},
 			{
-				type: 'content',
-				text: component.version,
-			},
-			{
 				type: 'heading',
 				headingSize: '3',
 				text: component.name,
+			},
+			{
+				type: 'content',
+				text: component.version,
 			}]
 		})
 	})
@@ -41,7 +41,7 @@ const ComponentReleased = ({ cardList, _ID, _body, _parseYaml, _relativeURL }) =
 		<Fragment>
 			{ _body }
 
-			<div className="row">
+			<div className="row released">
 				<AUcardList
 					cards={ cards }
 					appearance={ cardList.appearance }

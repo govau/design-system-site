@@ -5,23 +5,23 @@ btnURL: /community
 btntext: Community
 
 tiles:
-  - image: http://placehold.it/320x320/f5f5f5/333333
-    alt: Alt Tag
+  - image: assets/img/users-logo-dta.png
+    alt: Digital Transformation Agency
 
-  - image: http://placehold.it/320x320/f5f5f5/333333
-    alt: Alt Tag
+  - image: assets/img/users-logo-mygov.png
+    alt: MyGov
 
-  - image: http://placehold.it/320x320/f5f5f5/333333
-    alt: Alt Tag
+  - image: assets/img/users-logo-marketplace.png
+    alt: Digital Marketplace
 
-  - image: http://placehold.it/320x320/f5f5f5/333333
-    alt: Alt Tag
+  - image: assets/img/users-logo-health.png
+    alt: The Department of Health
 
-  - image: http://placehold.it/320x320/f5f5f5/333333
-    alt: Alt Tag
+  - image: assets/img/users-logo-dashboard.png
+    alt: Performance Dashboard
 
-  - image: http://placehold.it/320x320/f5f5f5/333333
-    alt: Alt Tag
+  - image: assets/img/users-logo-dta.png
+    alt: Department of Veterans' Affairs
 ---
 
 The design system is in its early days but a number of government teams have already jumped on board. Why not join them? Together we‘ll be able to build better, faster, easier.

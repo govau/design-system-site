@@ -80,8 +80,9 @@
 }
 
 .furnace__component__details__img {
-	@include AU-space( width, 4unit );
-	@include AU-space( margin-right, 1unit );
+	@include AU-space( width, 3unit );
+	@include AU-space( margin, 0.5unit 1.5unit 0.5unit 0.5unit);
+	background-color: $AU-color-Background-light;
 	float: left;
 }
 
@@ -101,4 +102,3 @@
 		border-top-right-radius: 0;
 	}
 }
-
