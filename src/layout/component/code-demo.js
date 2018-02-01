@@ -25,23 +25,38 @@ const CodeDemo = ({ headline, example, code, _body, _ID, _parseMD }) => {
 				<div className="code-demo__example">
 					<iframe className="code-demo__example__iframe" src={`examples/example${ example }/`}>{ exampleCode }</iframe>
 					<div className="code-demo__example__code">
-						<ul>
-							{
-								code.map( ( section, i ) => (
-									<li key={ i }><a href={`#${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }-${ Slugify( headline ).toLowerCase() }`}>{ Object.keys( section )[ 0 ] }</a></li>
-								))
-							}
-						</ul>
-						{
-							code.map( ( section, i ) => (
-								<div key={ i } id={ `${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }-${ Slugify( headline ).toLowerCase() }` }>
-									<Code language={
-										Object.keys( section )[ 0 ] === 'HTML' ? 'html' : '' +
-										Object.keys( section )[ 0 ] === 'React' ? 'javascript' : ''
-									}>{ section[ Object.keys( section )] }</Code>
-								</div>
-							))
-						}
+						<div className="tabs">
+							<nav className="tabs-nav">
+								<ul className="au-link-list au-link-list--inline ">
+									{
+										code.map( ( section, i ) => (
+											<li key={ i } className={ i === 0 ? 'tab-item--active' : '' }>
+												<a
+													data
+													href={`#${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }-${ Slugify( headline ).toLowerCase() }`}>
+													{ Object.keys( section )[ 0 ] }
+												</a>
+											</li>
+										))
+									}
+								</ul>
+							</nav>
+							<div className="tab-contents">
+								{
+									code.map( ( section, i ) => (
+										<div
+											className={ `tab-content ${ i === 0 ? 'tab-content--active' : '' }` }
+											key={ i }
+											id={ `${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }-${ Slugify( headline ).toLowerCase() }` }>
+											<Code language={
+												Object.keys( section )[ 0 ] === 'HTML' ? 'html' : '' +
+												Object.keys( section )[ 0 ] === 'React' ? 'javascript' : ''
+											}>{ section[ Object.keys( section )] }</Code>
+										</div>
+									))
+								}
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

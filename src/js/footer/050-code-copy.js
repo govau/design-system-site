@@ -21,7 +21,10 @@ function CopyString( text ) {
 	document.body.removeChild( textarea );
 }
 
-// On click of any of the copy code buttons
+
+/**
+ * On click of any of the copy code buttons
+ */
 var copyButtons = document.querySelectorAll( '.js-copy-btn' );
 AddEvent( copyButtons, 'click', function( event, $this ) {
 	CopyString( $this.previousSibling.innerText );

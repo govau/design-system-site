@@ -14,18 +14,6 @@ function RemoveClass( element, elementClass ) {
 	}
 }
 
-function Includes( search, start ){
-	if (typeof start !== 'number') {
-		start = 0;
-	}
-
-	if (start + search.length > this.length) {
-		return false;
-	} else {
-		return this.indexOf(search, start) !== -1;
-	}
-}
-
 
 // Change EventListener to attachEvent
 function AddEvent( elements, event, onEvent ) {

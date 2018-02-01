@@ -1,0 +1,38 @@
+.tabs {
+
+	.tabs-nav {
+		@include AU-space( border-bottom, 0.25unit solid $AU-color-Background );
+		width: 100%;
+	}
+
+	.au-link-list {
+		@include AU-space( margin-bottom, -0.25unit );
+		padding: 0;
+
+		& > li {
+			margin: 0;
+
+			& > a {
+				@include AU-fontgrid( xs, nospace );
+				@include AU-space( padding, 0.5unit 1unit 0.75unit );
+				@include AU-space( border-bottom, 0.25unit solid $AU-color-Background );
+				text-decoration: none;
+				display: block;
+			}
+
+			&.tab-item--active > a {
+				@include AU-space( border-bottom, 0.25unit solid $AU-color-Action );
+			}
+		}
+	}
+}
+
+.js {
+	.tab-content {
+		display: none;
+	}
+
+	.tab-content--active {
+		display: block;
+	}
+}
