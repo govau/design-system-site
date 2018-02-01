@@ -29,15 +29,15 @@ function AddEvent( elements, event, onEvent ) {
 
 				// Make sure that we pass this
 				( function( element, event ) {
-					element.attachEvent( "on" + event, function(){
-						onEvent( "on" + event, element );
+					element.attachEvent( "on" + event, function( actualEvent ) {
+						onEvent( actualEvent, element );
 					});
 				})( elements[ i ], event );
 			}
 			else {
 				( function( element, event ) {
-					element.addEventListener( event, function(){
-						onEvent( event, element );
+					element.addEventListener( event, function( actualEvent ) {
+						onEvent( actualEvent, element );
 					});
 				})( elements[ i ], event );
 			}
