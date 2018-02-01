@@ -15,8 +15,6 @@ const CodeDemo = ({ headline, example, code, _body, _ID, _parseMD }) => {
 	const pathToCode = Path.normalize(`${ SETTINGS.get().folder.content }/${ _ID }/examples/example${ example }/code.md`);
 	const exampleCode = Fs.readFileSync( pathToCode, 'utf8' );
 
-	console.log( code );
-
 	return (
 		<div className="variation" id={ Slugify( headline ).toLowerCase() }>
 			<a className="variation__anchor" href={`#${ Slugify( headline ).toLowerCase() }`}>#</a>
@@ -39,7 +37,7 @@ const CodeDemo = ({ headline, example, code, _body, _ID, _parseMD }) => {
 								<Code language={
 									Object.keys( section )[ 0 ] === 'HTML' ? 'html' : '' +
 									Object.keys( section )[ 0 ] === 'React' ? 'javascript' : ''
-								}>{ section[ Object.keys( section )[ 0 ] ] }</Code>
+								}>{ section[ Object.keys( section )] }</Code>
 							</div>
 						))
 					}
