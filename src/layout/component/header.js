@@ -1,4 +1,4 @@
-import ComponentStatus from './status';
+import ComponentStatus from './component-status';
 import PropTypes from 'prop-types';
 import GetData from './../getData';
 import React from 'react';
@@ -24,8 +24,8 @@ const ComponentHeader = ({ _relativeURL, _parseYaml, _body, _pages, _ID, _isDocs
 
 				<div className="componentheader__body abstract">{ _body }</div>
 			</div>
-			<div className="componentheader__statusbox col-sm-5 col-lg-4 col-lg-offset-1">
-				<ComponentStatus module={ MODULE.ID } _ID={ _ID } _relativeURL={ _relativeURL } version={ MODULE.version } />
+			<div className="componentheader__statusbox col-sm-5">
+				<ComponentStatus module={ MODULE.ID } _ID={ _ID } _relativeURL={ _relativeURL } _parseYaml={ _parseYaml } version={ MODULE.version } />
 			</div>
 		</div>
 	);

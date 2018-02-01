@@ -3,7 +3,19 @@ core:
   description: TODO
   tags: TODO
   required: true
-  contributors: 'x, x, x, x'
+  contributors:
+    - name: Dominik Wilkowski
+      email: hi@dominik-wilkowski.com
+      url: 'https://dominik-wilkowski.com/'
+    - name: Simon Pascal Klein
+      email: klepas@klepas.org
+      url: 'http://klepas.org/'
+    - name: Trevor Brennan
+      email: t@trevorbrennan.com
+      url: 'http://trevorbrennan.com/'
+    - name: Alex Page
+      email: alex@alexpage.com.au
+      url: 'http://alexpage.com.au/'
   state: published
   order: 0
   discussions:
@@ -21,7 +33,19 @@ accordion:
   description: TODO
   tags: TODO
   required: false
-  contributors: 'x, x, x, x'
+  contributors:
+    - name: Dominik Wilkowski
+      email: hi@dominik-wilkowski.com
+      url: 'https://dominik-wilkowski.com/'
+    - name: Simon Schwartz
+      email: simon.schwartz0@gmail.com
+      url: 'https://simonschwartz.github.io/'
+    - name: Alex Page
+      email: alex@alexpage.com.au
+      url: 'http://alexpage.com.au/'
+    - name: Trevor Brennan
+      email: t@trevorbrennan.com
+      url: 'http://trevorbrennan.com/'
   state: published
   order: 10
   discussions:
@@ -41,7 +65,13 @@ animate:
   description: TODO
   tags: TODO
   required: false
-  contributors: 'x, x, x, x'
+  contributors:
+    - name: Dominik Wilkowski
+      email: hi@dominik-wilkowski.com
+      url: 'https://dominik-wilkowski.com/'
+    - name: Simon Schwartz
+      email: simon.schwartz0@gmail.com
+      url: 'https://simonschwartz.github.io/'
   state: published
   order: 20
   discussions:
@@ -59,7 +89,19 @@ body:
   description: TODO
   tags: TODO
   required: false
-  contributors: 'x, x, x, x'
+  contributors:
+    - name: Dominik Wilkowski
+      email: hi@dominik-wilkowski.com
+      url: 'https://dominik-wilkowski.com/'
+    - name: Simon Pascal Klein
+      email: klepas@klepas.org
+      url: 'http://klepas.org/'
+    - name: Trevor Brennan
+      email: t@trevorbrennan.com
+      url: 'http://trevorbrennan.com/'
+    - name: Alex Page
+      email: alex@alexpage.com.au
+      url: 'http://alexpage.com.au/'
   state: published
   order: 30
   discussions:
@@ -78,7 +120,19 @@ breadcrumbs:
   description: TODO
   tags: TODO
   required: false
-  contributors: 'x, x, x, x'
+  contributors:
+    - name: Dominik Wilkowski
+      email: hi@dominik-wilkowski.com
+      url: 'https://dominik-wilkowski.com/'
+    - name: Simon Pascal Klein
+      email: klepas@klepas.org
+      url: 'http://klepas.org/'
+    - name: Trevor Brennan
+      email: t@trevorbrennan.com
+      url: 'http://trevorbrennan.com/'
+    - name: Alex Page
+      email: alex@alexpage.com.au
+      url: 'http://alexpage.com.au/'
   state: published
   order: 40
   discussions:
@@ -99,7 +153,19 @@ buttons:
   version: 1.0.0-next.6    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
-  contributors: 'x, x, x, x'
+  contributors:
+    - name: Dominik Wilkowski
+      email: hi@dominik-wilkowski.com
+      url: 'https://dominik-wilkowski.com/'
+    - name: Simon Pascal Klein
+      email: klepas@klepas.org
+      url: 'http://klepas.org/'
+    - name: Trevor Brennan
+      email: t@trevorbrennan.com
+      url: 'http://trevorbrennan.com/'
+    - name: Alex Page
+      email: alex@alexpage.com.au
+      url: 'http://alexpage.com.au/'
   state: published
   order: 50
   discussions:
@@ -117,7 +183,19 @@ callout:
   description: TODO
   tags: TODO
   required: false
-  contributors: 'x, x, x, x'
+  contributors:
+    - name: Dominik Wilkowski
+      email: hi@dominik-wilkowski.com
+      url: 'https://dominik-wilkowski.com/'
+    - name: Simon Pascal Klein
+      email: klepas@klepas.org
+      url: 'http://klepas.org/'
+    - name: Trevor Brennan
+      email: t@trevorbrennan.com
+      url: 'http://trevorbrennan.com/'
+    - name: Alex Page
+      email: alex@alexpage.com.au
+      url: 'http://alexpage.com.au/'
   state: published
   order: 60
   discussions:
@@ -136,7 +214,19 @@ control-input:
   description: TODO
   tags: TODO
   required: false
-  contributors: 'x, x, x, x'
+  contributors:
+    - name: Dominik Wilkowski
+      email: hi@dominik-wilkowski.com
+      url: 'https://dominik-wilkowski.com/'
+    - name: Simon Pascal Klein
+      email: klepas@klepas.org
+      url: 'http://klepas.org/'
+    - name: Trevor Brennan
+      email: t@trevorbrennan.com
+      url: 'http://trevorbrennan.com/'
+    - name: Alex Page
+      email: alex@alexpage.com.au
+      url: 'http://alexpage.com.au/'
   state: published
   order: 70
   discussions:
@@ -155,7 +245,19 @@ cta-link:
   description: TODO
   tags: TODO
   required: false
-  contributors: 'x, x, x, x'
+  contributors:
+    - name: Dominik Wilkowski
+      email: hi@dominik-wilkowski.com
+      url: 'https://dominik-wilkowski.com/'
+    - name: Simon Pascal Klein
+      email: klepas@klepas.org
+      url: 'http://klepas.org/'
+    - name: Trevor Brennan
+      email: t@trevorbrennan.com
+      url: 'http://trevorbrennan.com/'
+    - name: Alex Page
+      email: alex@alexpage.com.au
+      url: 'http://alexpage.com.au/'
   state: published
   order: 80
   discussions:
@@ -174,7 +276,19 @@ direction-links:
   description: TODO
   tags: TODO
   required: false
-  contributors: 'x, x, x, x'
+  contributors:
+    - name: Dominik Wilkowski
+      email: hi@dominik-wilkowski.com
+      url: 'https://dominik-wilkowski.com/'
+    - name: Simon Pascal Klein
+      email: klepas@klepas.org
+      url: 'http://klepas.org/'
+    - name: Trevor Brennan
+      email: t@trevorbrennan.com
+      url: 'http://trevorbrennan.com/'
+    - name: Alex Page
+      email: alex@alexpage.com.au
+      url: 'http://alexpage.com.au/'
   state: published
   order: 90
   discussions:
@@ -193,7 +307,19 @@ footer:
   description: TODO
   tags: TODO
   required: false
-  contributors: 'x, x, x, x'
+  contributors:
+    - name: Dominik Wilkowski
+      email: hi@dominik-wilkowski.com
+      url: 'https://dominik-wilkowski.com/'
+    - name: Simon Pascal Klein
+      email: klepas@klepas.org
+      url: 'http://klepas.org/'
+    - name: Trevor Brennan
+      email: t@trevorbrennan.com
+      url: 'http://trevorbrennan.com/'
+    - name: Alex Page
+      email: alex@alexpage.com.au
+      url: 'http://alexpage.com.au/'
   state: published
   order: 100
   discussions:
@@ -212,7 +338,13 @@ grid-12:
   description: TODO
   tags: TODO
   required: false
-  contributors: 'x, x, x, x'
+  contributors:
+    - name: Dominik Wilkowski
+      email: hi@dominik-wilkowski.com
+      url: 'https://dominik-wilkowski.com/'
+    - name: Simon Pascal Klein
+      email: klepas@klepas.org
+      url: 'http://klepas.org/'
   state: published
   order: 110
   discussions:
@@ -231,7 +363,19 @@ header:
   description: TODO
   tags: TODO
   required: false
-  contributors: 'x, x, x, x'
+  contributors:
+    - name: Dominik Wilkowski
+      email: hi@dominik-wilkowski.com
+      url: 'https://dominik-wilkowski.com/'
+    - name: Simon Pascal Klein
+      email: klepas@klepas.org
+      url: 'http://klepas.org/'
+    - name: Trevor Brennan
+      email: t@trevorbrennan.com
+      url: 'http://trevorbrennan.com/'
+    - name: Alex Page
+      email: alex@alexpage.com.au
+      url: 'http://alexpage.com.au/'
   state: published
   order: 120
   discussions:
@@ -250,7 +394,19 @@ headings:
   description: TODO
   tags: TODO
   required: false
-  contributors: 'x, x, x, x'
+  contributors:
+    - name: Dominik Wilkowski
+      email: hi@dominik-wilkowski.com
+      url: 'https://dominik-wilkowski.com/'
+    - name: Simon Pascal Klein
+      email: klepas@klepas.org
+      url: 'http://klepas.org/'
+    - name: Trevor Brennan
+      email: t@trevorbrennan.com
+      url: 'http://trevorbrennan.com/'
+    - name: Alex Page
+      email: alex@alexpage.com.au
+      url: 'http://alexpage.com.au/'
   state: published
   order: 130
   discussions:
@@ -269,7 +425,19 @@ inpage-nav:
   description: TODO
   tags: TODO
   required: false
-  contributors: 'x, x, x, x'
+  contributors:
+    - name: Dominik Wilkowski
+      email: hi@dominik-wilkowski.com
+      url: 'https://dominik-wilkowski.com/'
+    - name: Simon Pascal Klein
+      email: klepas@klepas.org
+      url: 'http://klepas.org/'
+    - name: Trevor Brennan
+      email: t@trevorbrennan.com
+      url: 'http://trevorbrennan.com/'
+    - name: Alex Page
+      email: alex@alexpage.com.au
+      url: 'http://alexpage.com.au/'
   state: published
   order: 140
   discussions:
@@ -289,7 +457,19 @@ keyword-list:
   description: TODO
   tags: TODO
   required: false
-  contributors: 'x, x, x, x'
+  contributors:
+    - name: Dominik Wilkowski
+      email: hi@dominik-wilkowski.com
+      url: 'https://dominik-wilkowski.com/'
+    - name: Simon Pascal Klein
+      email: klepas@klepas.org
+      url: 'http://klepas.org/'
+    - name: Trevor Brennan
+      email: t@trevorbrennan.com
+      url: 'http://trevorbrennan.com/'
+    - name: Alex Page
+      email: alex@alexpage.com.au
+      url: 'http://alexpage.com.au/'
   state: published
   order: 150
   discussions:
@@ -309,7 +489,19 @@ link-list:
   description: TODO
   tags: TODO
   required: false
-  contributors: 'x, x, x, x'
+  contributors:
+    - name: Dominik Wilkowski
+      email: hi@dominik-wilkowski.com
+      url: 'https://dominik-wilkowski.com/'
+    - name: Simon Pascal Klein
+      email: klepas@klepas.org
+      url: 'http://klepas.org/'
+    - name: Trevor Brennan
+      email: t@trevorbrennan.com
+      url: 'http://trevorbrennan.com/'
+    - name: Alex Page
+      email: alex@alexpage.com.au
+      url: 'http://alexpage.com.au/'
   state: published
   order: 160
   discussions:
@@ -329,7 +521,19 @@ page-alerts:
   description: TODO
   tags: TODO
   required: false
-  contributors: 'x, x, x, x'
+  contributors:
+    - name: Dominik Wilkowski
+      email: hi@dominik-wilkowski.com
+      url: 'https://dominik-wilkowski.com/'
+    - name: Simon Pascal Klein
+      email: klepas@klepas.org
+      url: 'http://klepas.org/'
+    - name: Trevor Brennan
+      email: t@trevorbrennan.com
+      url: 'http://trevorbrennan.com/'
+    - name: Alex Page
+      email: alex@alexpage.com.au
+      url: 'http://alexpage.com.au/'
   state: published
   order: 170
   discussions:
@@ -349,7 +553,19 @@ progress-indicator:
   description: TODO
   tags: TODO
   required: false
-  contributors: 'x, x, x, x'
+  contributors:
+    - name: Dominik Wilkowski
+      email: hi@dominik-wilkowski.com
+      url: 'https://dominik-wilkowski.com/'
+    - name: Simon Pascal Klein
+      email: klepas@klepas.org
+      url: 'http://klepas.org/'
+    - name: Trevor Brennan
+      email: t@trevorbrennan.com
+      url: 'http://trevorbrennan.com/'
+    - name: Alex Page
+      email: alex@alexpage.com.au
+      url: 'http://alexpage.com.au/'
   state: published
   order: 180
   discussions:
@@ -368,7 +584,19 @@ responsive-media:
   description: TODO
   tags: TODO
   required: false
-  contributors: 'x, x, x, x'
+  contributors:
+    - name: Dominik Wilkowski
+      email: hi@dominik-wilkowski.com
+      url: 'https://dominik-wilkowski.com/'
+    - name: Simon Pascal Klein
+      email: klepas@klepas.org
+      url: 'http://klepas.org/'
+    - name: Trevor Brennan
+      email: t@trevorbrennan.com
+      url: 'http://trevorbrennan.com/'
+    - name: Alex Page
+      email: alex@alexpage.com.au
+      url: 'http://alexpage.com.au/'
   state: published
   order: 190
   discussions:
@@ -387,7 +615,19 @@ select:
   description: TODO
   tags: TODO
   required: false
-  contributors: 'x, x, x, x'
+  contributors:
+    - name: Dominik Wilkowski
+      email: hi@dominik-wilkowski.com
+      url: 'https://dominik-wilkowski.com/'
+    - name: Simon Schwartz
+      email: simon.schwartz0@gmail.com
+      url: 'https://simonschwartz.github.io/'
+    - name: Trevor Brennan
+      email: t@trevorbrennan.com
+      url: 'http://trevorbrennan.com/'
+    - name: Alex Page
+      email: alex@alexpage.com.au
+      url: 'http://alexpage.com.au/'
   state: published
   order: 200
   discussions:
@@ -406,7 +646,19 @@ skip-link:
   description: TODO
   tags: TODO
   required: false
-  contributors: 'x, x, x, x'
+  contributors:
+    - name: Dominik Wilkowski
+      email: hi@dominik-wilkowski.com
+      url: 'https://dominik-wilkowski.com/'
+    - name: Simon Pascal Klein
+      email: klepas@klepas.org
+      url: 'http://klepas.org/'
+    - name: Trevor Brennan
+      email: t@trevorbrennan.com
+      url: 'http://trevorbrennan.com/'
+    - name: Alex Page
+      email: alex@alexpage.com.au
+      url: 'http://alexpage.com.au/'
   state: published
   order: 210
   discussions:
@@ -425,7 +677,19 @@ tags:
   description: TODO
   tags: TODO
   required: false
-  contributors: 'x, x, x, x'
+  contributors:
+    - name: Dominik Wilkowski
+      email: hi@dominik-wilkowski.com
+      url: 'https://dominik-wilkowski.com/'
+    - name: Simon Pascal Klein
+      email: klepas@klepas.org
+      url: 'http://klepas.org/'
+    - name: Trevor Brennan
+      email: t@trevorbrennan.com
+      url: 'http://trevorbrennan.com/'
+    - name: Alex Page
+      email: alex@alexpage.com.au
+      url: 'http://alexpage.com.au/'
   state: published
   order: 220
   discussions:
@@ -444,7 +708,19 @@ text-inputs:
   description: TODO
   tags: TODO
   required: false
-  contributors: 'x, x, x, x'
+  contributors:
+    - name: Dominik Wilkowski
+      email: hi@dominik-wilkowski.com
+      url: 'https://dominik-wilkowski.com/'
+    - name: Simon Pascal Klein
+      email: klepas@klepas.org
+      url: 'http://klepas.org/'
+    - name: Trevor Brennan
+      email: t@trevorbrennan.com
+      url: 'http://trevorbrennan.com/'
+    - name: Alex Page
+      email: alex@alexpage.com.au
+      url: 'http://alexpage.com.au/'
   state: published
   order: 230
   discussions:

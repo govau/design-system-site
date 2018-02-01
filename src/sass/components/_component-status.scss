@@ -7,6 +7,9 @@
 	}
 }
 
+.componentStatus__definition {
+	overflow: hidden;
+}
 
 .au-body .componentStatus {
 	@include AU-fontgrid( xs );
@@ -19,19 +22,21 @@
 
 	dt,
 	dd {
-		display: inline-block;
+		display: block;
+		float: left;
 		vertical-align: top;
 		margin: 0; // Reset .AU-body
 		@include AU-space( margin-bottom, 0.75unit );
+		overflow: hidden;
 	}
 
 	dt {
-		width: 30%;
-		padding-right: 5%;
+		width: 35%;
+		margin-right: 5%;
 	}
 
 	dd {
-		width: 65%;
+		width: 60%;
 		border-left: none; // Rest au-body
 		padding: 0; // Rest au-body
 	}

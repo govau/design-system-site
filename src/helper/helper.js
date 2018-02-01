@@ -132,7 +132,7 @@ const CheckComponents = ( uikit, components ) => {
 	else {
 		Tick(`All modules are accounted for`);
 	}
-}
+};
 
 
 /**
@@ -143,6 +143,8 @@ const CheckComponents = ( uikit, components ) => {
  */
 const GenerateComponents = ( uikit, components ) => {
 	for( module of Object.keys( UIKIT ) ) {
+		const pathToPgk = Path.normalize(`${ UIKIT[ module ].path }/package.json`);
+		const PGK = JSON.parse( Fs.readFileSync( pathToPgk, 'utf-8') );
 		const name = CleanName( UIKIT[ module ].name );
 
 		if( typeof components[ name ] === 'undefined' ) {
@@ -155,6 +157,7 @@ const GenerateComponents = ( uikit, components ) => {
 		components[ name ].hasSass = UIKIT[ module ].settings.plugins.includes('@gov.au/pancake-sass');
 		components[ name ].hasJs = UIKIT[ module ].settings.plugins.includes('@gov.au/pancake-js');
 		components[ name ].hasReact = UIKIT[ module ].settings.plugins.includes('@gov.au/pancake-react');
+		components[ name ].contributors = PGK.contributors;
 	}
 
 	const componentsString = DecodeYAML( components )
@@ -179,7 +182,7 @@ const GenerateComponents = ( uikit, components ) => {
 	Fs.writeFileSync( Path.normalize(`${ __dirname }/../../content/components/_all.yml`), componentsString, `utf-8` );
 
 	Tick('Generated components/_all.yml file');
-}
+};
 
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
