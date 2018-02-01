@@ -96,7 +96,7 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 												</p>
 
 												<p className="furnace__component__documentation">
-													<a href={`/components/${ MODULES[ module ].ID }`}>
+													<a href={ _relativeURL( `/components/${ MODULES[ module ].ID }`, _ID ) }>
 														<span className="sronly">{ MODULES[ module ].name }</span>
 														Documentation
 													</a>

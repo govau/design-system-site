@@ -17,7 +17,7 @@ const ComponentReleased = ({ cardList, _ID, _body, _parseYaml, _relativeURL }) =
 	const cards = [];
 	components.map( component => {
 		cards.push({
-			link: `/components/${ component.ID }`,
+			link: _relativeURL( `/components/${ component.ID }`, _ID ),
 			rows: [{
 				type: 'svg',
 				svg: _relativeURL( `/assets/svg/map.svg#${ component.ID }`, _ID ),
