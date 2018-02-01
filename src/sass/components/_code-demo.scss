@@ -2,7 +2,9 @@
 	@include AU-clearfix();
 
 	.is-components & .code-demo__example-wrapper {
-		float: right;
+		@include AU-media( sm ){
+			float: right;
+		}
 	}
 
 	* + & {

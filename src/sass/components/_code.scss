@@ -50,7 +50,6 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 /* Code blocks */
 pre[class*="language-"] {
 	padding: 1em;
-	margin: .5em 0;
 	overflow: auto;
 }
 
@@ -144,11 +143,22 @@ pre[class*="language-"] {
 	@include AU-space( padding, 1unit );
 	@include AU-space( border-radius, 0.25unit );
 	background: $AU-color-Background;
-	position: relative;
 
 	* + & {
 		@include AU-space( margin-top, 1unit );
 	}
+
+	code[class*="language-"] {
+		padding: 0;
+	}
+}
+
+.furnace code[class*="language-"] {
+	white-space: pre-wrap;
+}
+
+.codebox {
+	position: relative;
 
 	.btn-copy {
 		@include AU-fontgrid( xs, nospace );
@@ -166,12 +176,5 @@ pre[class*="language-"] {
 			opacity: 1;
 		}
 	}
-
-	code[class*="language-"] {
-		padding: 0;
-	}
 }
 
-.furnace code[class*="language-"] {
-	white-space: pre-wrap;
-}
