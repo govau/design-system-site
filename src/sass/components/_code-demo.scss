@@ -1,6 +1,5 @@
 .code-demo {
 	@include AU-clearfix();
-	position: relative;
 
 	.is-components & .code-demo__example-wrapper {
 		float: right;
@@ -13,10 +12,20 @@
 	.code-demo + & {
 		@include AU-space( margin-top, 4unit );
 	}
+}
+
+.code-demo__headline {
+	position: relative;
+
+	&:hover .code-demo__anchor {
+		display: block;
+	}
 
 	.code-demo__anchor {
+		display: none;
 		position: absolute;
-		left: -50px;
+		z-index: 100;
+		left: -10px;
 	}
 }
 
