@@ -32,8 +32,8 @@ const CodeDemo = ({ headline, example, code, _body, _ID, _parseMD }) => {
 						}
 					</ul>
 					{
-						code.map( section => (
-							<div id={ `${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }-${ headline.toLowerCase() }` }>
+						code.map( ( section, i ) => (
+							<div key={ i } id={ `${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }-${ headline.toLowerCase() }` }>
 								<Code language={
 									Object.keys( section )[ 0 ] === 'HTML' ? 'html' : '' +
 									Object.keys( section )[ 0 ] === 'React' ? 'javascript' : ''
