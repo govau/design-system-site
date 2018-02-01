@@ -2,6 +2,10 @@
 	@include AU-clearfix();
 	position: relative;
 
+	.is-components & .code-demo__example-wrapper {
+		float: right;
+	}
+
 	* + & {
 		@include AU-space( margin-top, 2unit );
 	}
@@ -16,6 +20,9 @@
 	}
 }
 
+.code-demo__example {
+	border: 1px solid $AU-color-Border;
+}
 
 .code-demo__example__iframe {
 	border: 0;
@@ -29,15 +36,3 @@
 	@include AU-space( margin-top, 1unit );
 }
 
-// Layout
-.code-demo__example {
-	float: right;
-	width: 49%;
-}
-
-
-.code-demo__text,
-.code-demo__headline {
-	float: left;
-	width: 49%;
-}
