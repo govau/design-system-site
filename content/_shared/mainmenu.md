@@ -12,8 +12,6 @@ navigation:
           link: /get-started
         - text: Components
           link: /components
-        - text: Templates
-          link: /templates
         - text: Community
           link: /community
         - text: Support

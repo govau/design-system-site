@@ -52,8 +52,8 @@ const Navigation = ({ navigation, uniqueClass, _relativeURL, _ID, _pages }) => {
 	return (
 		<nav className={
 			`navigation`  +
-			`${ uniqueClass === uniqueClass ? ` ${ uniqueClass }` : '' }` +
-			`${ navigation.theme === 'dark' ? 'navigation--dark ' : '' }`
+			`${ uniqueClass ? ` ${ uniqueClass }` : '' }` +
+			`${ navigation.theme === 'dark' ? ' navigation--dark' : '' }`
 		}>
 			{
 				navMarkup.map( ( nav, i ) => (
