@@ -9,4 +9,4 @@ button:
 
 ## Kickstart your project with our Starter Pack
 
-Grab our Starter Pack to get up and running faster. It comes with project folders and is setup ready to build. It includes our modules and some great npm scripts.
+Grab our Starter Pack to get up and running faster. It comes with project folders and a setup ready to build. It includes our modules and some great npm scripts.

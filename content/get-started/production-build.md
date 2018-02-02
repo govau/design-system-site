@@ -9,4 +9,4 @@ button:
 
 ## Use the recommended production build
 
-A production build provides a solid way to set up your project. The build is maintained and is distributed through the [npm](ttps://www.npmjs.com) ecosystem. It’s ideal for ‘go live’ development.
+A production build provides a solid way to set up your project. The build is maintained and distributed through the [npm](ttps://www.npmjs.com) ecosystem. It’s ideal for ‘go live’ development.
