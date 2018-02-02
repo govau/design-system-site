@@ -11,6 +11,8 @@ sidebar:
 
 main:
   - colorblind.md
+  - grayscale.md
+  - keyboard.md
 
 footer:
   - /_shared/footer.md
