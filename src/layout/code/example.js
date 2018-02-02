@@ -19,6 +19,8 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, example }) => (
 		<title>{ pagetitle }</title>
 
 		<link rel="shortcut icon" type="image/x-icon" href={ _relativeURL( '/assets/img/favicon.ico', _ID ) } />
+		<link rel="stylesheet" href={ _relativeURL( `/assets/css/iframe.css`, _ID ) } />
+		<link rel="stylesheet" href={ _relativeURL( `/assets/css/body.css`, _ID ) } />
 		{
 			modules.map( ( module, i ) => {
 				if( Fs.existsSync( Path.normalize(`${ __dirname }/../../assets/css/${ module }.css`) ) ) {
@@ -31,15 +33,10 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, example }) => (
 
 		<script src={ _relativeURL( '/assets/js/header.js', _ID ) } />
 	</head>
-	<body className="au-grid">
-
-		<main className="main au-body container-fluid">
-			<div className="row">
-				<div className="grids col-md-12">
-					{ example }
-				</div>
-			</div>
-		</main>
+	<body className="au-body">
+		<div className="example">
+			{ example }
+		</div>
 
 		<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
 		<script src={ _relativeURL( '/assets/js/iframe-resizer-contentWindow.js', _ID ) } />

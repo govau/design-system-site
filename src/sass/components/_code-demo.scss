@@ -8,15 +8,26 @@
 	}
 
 	* + & {
-		@include AU-space( margin-top, 2unit );
+		@include AU-space( margin-top, 3unit );
 	}
 
 	.code-demo + & {
-		@include AU-space( margin-top, 4unit );
+		@include AU-space( margin-top, 6unit );
 	}
 
 	.codebox pre {
 		margin-top: 0;
+		border-radius: 0;
+		height: 10em;
+	}
+
+	.tabs {
+		border-top: 1px solid #cfcfcf;
+
+		.au-link-list > li > a,
+		.tabs-nav {
+			border-bottom-color: $AU-color-Background-darkest;
+		}
 	}
 }
 
@@ -36,7 +47,7 @@
 }
 
 .code-demo__example {
-	border: 1px solid $AU-color-Border;
+	border: 2px solid #cfcfcf;
 }
 
 .code-demo__example__iframe {

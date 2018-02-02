@@ -15,12 +15,8 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
 
 		let _isOpen = false;
 
-		// Open the released accordion on the component home page
-		if( id === undefined && state === 'published' ) {
-			_isOpen = true;
-		}
 		// Open the accordion based on the current pages module state
-		else if( id && state ) {
+		if( id && state ) {
 
 			const MODULE = GetData({
 				filter: ( key, COMPONENTS ) => key === _pages[ _ID ].module,
