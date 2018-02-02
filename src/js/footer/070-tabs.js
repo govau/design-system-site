@@ -23,7 +23,6 @@ AddEvent( tabItems, 'click', function( event, $this ) {
 	}
 
 	AddClass( content, 'tab-content--active' );
-	console.log(content);
 	content.focus();
 });
 
