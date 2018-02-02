@@ -25,7 +25,13 @@ const ComponentHeader = ({ _relativeURL, _parseYaml, _pages, _ID, _isDocs }) => 
 				<div className="componentheader__body abstract">{ MODULE.description }</div>
 			</div>
 			<div className="componentheader__statusbox col-sm-5">
-				<ComponentStatus module={ MODULE.ID } _ID={ _ID } _relativeURL={ _relativeURL } _parseYaml={ _parseYaml } version={ MODULE.version } />
+				<ComponentStatus
+					module={ MODULE.ID }
+					_ID={ _ID }
+					_relativeURL={ _relativeURL }
+					_parseYaml={ _parseYaml }
+					version={ MODULE.version }
+				/>
 			</div>
 		</div>
 	);
