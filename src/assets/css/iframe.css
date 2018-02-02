@@ -1,0 +1,11 @@
+body {
+	padding: 2em;
+	margin: 0 auto;
+	text-align: center
+}
+
+.example {
+	display: inline-block;
+	text-align: left;
+}
+
