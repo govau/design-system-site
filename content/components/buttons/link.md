@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-example: link
+example: examples/example-link
 headline: Link Buttons
 code:
   - HTML: |

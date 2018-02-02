@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-example: disabled
+example: examples/example-disabled
 headline: Disabled Buttons
 code:
   - HTML: |

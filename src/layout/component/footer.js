@@ -5,6 +5,8 @@ import React from 'react';
 
 /**
  * The component footer component
+ *
+ * @disable-docs
  */
 const ComponentFooter = ({ _ID, _parseYaml, _relativeURL, _pages }) => {
 

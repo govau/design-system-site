@@ -6,6 +6,8 @@ import React from 'react';
 
 /**
  * The component header component
+ *
+ * @disable-docs
  */
 const ComponentHeader = ({ _relativeURL, _parseYaml, _pages, _ID, _isDocs }) => {
 

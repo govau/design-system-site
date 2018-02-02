@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-example: tertiary
+example: examples/example-tertiary
 headline: Tertiary Buttons
 code:
   - HTML: |

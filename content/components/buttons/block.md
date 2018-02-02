@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-example: block
+example: examples/example-block
 headline: Block Buttons
 code:
   - HTML: |

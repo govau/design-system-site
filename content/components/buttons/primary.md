@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-example: primary
+example: examples/example-primary
 headline: Default Buttons
 code:
   - HTML: |

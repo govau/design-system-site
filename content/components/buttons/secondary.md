@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-example: secondary
+example: examples/example-secondary
 headline: Secondary Buttons
 code:
   - HTML: |

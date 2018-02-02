@@ -10,7 +10,7 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - FILL ME
+  - colorblind.md
 
 footer:
   - /_shared/footer.md
