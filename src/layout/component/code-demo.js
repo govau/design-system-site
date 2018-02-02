@@ -12,7 +12,7 @@ import Fs from 'fs';
  * The codedemo component
  */
 const CodeDemo = ({ headline, example, code, _body, _ID, _parseMD }) => {
-	const pathToCode = Path.normalize(`${ SETTINGS.get().folder.content }/${ _ID }/examples/example${ example }/code.md`);
+	const pathToCode = Path.normalize(`${ SETTINGS.get().folder.content }/${ _ID }/examples/example-${ example }/code.md`);
 	const exampleCode = Fs.readFileSync( pathToCode, 'utf8' );
 
 	return (
@@ -22,7 +22,7 @@ const CodeDemo = ({ headline, example, code, _body, _ID, _parseMD }) => {
 
 			<div className="col-md-6 code-demo__example-wrapper">
 				<div className="code-demo__example">
-					<iframe className="code-demo__example__iframe" src={`examples/example${ example }/`}>{ exampleCode }</iframe>
+					<iframe className="code-demo__example__iframe" src={`examples/example-${ example }/`}>{ exampleCode }</iframe>
 					<div className="code-demo__example__code">
 						<div className="tabs">
 							<nav className="tabs-nav">
@@ -79,9 +79,9 @@ CodeDemo.propTypes = {
 	headline: PropTypes.string.isRequired,
 
 	/**
-	 * example: 1
+	 * example: primary
 	 */
-	example: PropTypes.number.isRequired,
+	example: PropTypes.string.isRequired,
 
 	/**
 	 * code:

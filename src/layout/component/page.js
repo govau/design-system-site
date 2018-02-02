@@ -1,5 +1,10 @@
+import React, { Fragment } from 'react';
+import Navigation from './../navigation';
 import PropTypes from 'prop-types';
-import React from 'react';
+import Header from './header';
+import Footer from './footer';
+import Path from 'path';
+import Fs from 'fs';
 
 
 /**
@@ -8,7 +13,11 @@ import React from 'react';
 const ComponentPage = ({
 	_ID,
 	_relativeURL,
+	_parseYaml,
+	_pages,
+	_isDocs,
 	header,
+	headernav,
 	sidebar,
 	pagetitle,
 	main,
@@ -31,6 +40,8 @@ const ComponentPage = ({
 <![endif]-->
 <script src=${ _relativeURL( '/assets/js/header.js', _ID ) }></script>`;
 
+	const tabs = _parseYaml( Fs.readFileSync( Path.normalize(`${ __dirname }/../../../content/components/tabs.yml`), 'utf8' ) );
+
 	return (
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }} />
@@ -46,7 +57,18 @@ const ComponentPage = ({
 								{ sidebar }
 							</div>
 							<div className="col-md-9 content">
+								{
+									headernav !== false &&
+										<Fragment>
+											<Header _relativeURL={ _relativeURL } _parseYaml={ _parseYaml } _pages={ _pages } _ID={ _ID } _isDocs={ _isDocs } />
+											<Navigation navigation={ tabs.navigation } _relativeURL={ _relativeURL } _ID={ _ID } _pages={ _pages } />
+										</Fragment>
+								}
 								{ main }
+								{
+									headernav !== false &&
+										<Footer _ID={ _ID } _parseYaml={ _parseYaml } _relativeURL={ _relativeURL } _pages={ _pages } />
+								}
 							</div>
 						</div>
 					</main>

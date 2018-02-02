@@ -9,7 +9,7 @@ import Fs from 'fs';
  *
  * @disable-docs
  */
-const GetData = ({ yaml, filter = () => true }) => {
+const GetData = ({ yaml, filter = () => true, object = false }) => {
 	const COMPONENTS = yaml(
 		Fs.readFileSync(
 			Path.normalize(`${ __dirname }/../../content/components/_all.yml`),
@@ -17,10 +17,15 @@ const GetData = ({ yaml, filter = () => true }) => {
 		)
 	);
 
-	return Object.keys( COMPONENTS )
-		.filter( ( key ) => filter( key, COMPONENTS ) )
-		.sort( ( keyA, keyB ) => COMPONENTS[ keyA ].order - COMPONENTS[ keyB ].order )
-		.map( ( key ) => COMPONENTS[ key ] );
+	if( object ) {
+		return COMPONENTS;
+	}
+	else {
+		return Object.keys( COMPONENTS )
+			.filter( ( key ) => filter( key, COMPONENTS ) )
+			.sort( ( keyA, keyB ) => COMPONENTS[ keyA ].order - COMPONENTS[ keyB ].order )
+			.map( ( key ) => COMPONENTS[ key ] );
+	}
 };
 
 export default GetData;

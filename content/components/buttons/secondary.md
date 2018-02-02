@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-example: 2
+example: secondary
 headline: Secondary Buttons
 code:
   - HTML: |
@@ -11,4 +11,5 @@ code:
       <AUbutton secondary>Continue</AUbutton>
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium cum corrupti neque repellendus, beatae debitis autem aliquid laborum, delectus optio eaque voluptate quas, dolor magnam eius earum. Voluptatibus, odit non.
+A `standard` button style used to highlight an important action such as a `Save` button on a form. (A secondary button assumes there is already a primary
+button.)

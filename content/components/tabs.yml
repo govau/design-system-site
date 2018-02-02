@@ -1,5 +1,3 @@
----
-layout: navigation
 navigation:
   inline: true
   sections:
@@ -17,4 +15,3 @@ navigation:
       items:
         - text: Live demo
           link: /demo
----

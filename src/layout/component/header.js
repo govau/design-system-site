@@ -7,7 +7,7 @@ import React from 'react';
 /**
  * The component header component
  */
-const ComponentHeader = ({ _relativeURL, _parseYaml, _body, _pages, _ID, _isDocs }) => {
+const ComponentHeader = ({ _relativeURL, _parseYaml, _pages, _ID, _isDocs }) => {
 
 	const MODULE = GetData({
 		filter: ( key, COMPONENTS ) => key === _pages[ _ID ].module,
@@ -22,7 +22,7 @@ const ComponentHeader = ({ _relativeURL, _parseYaml, _body, _pages, _ID, _isDocs
 					{ MODULE.name }
 				</h1>
 
-				<div className="componentheader__body abstract">{ _body }</div>
+				<div className="componentheader__body abstract">{ MODULE.description }</div>
 			</div>
 			<div className="componentheader__statusbox col-sm-5">
 				<ComponentStatus module={ MODULE.ID } _ID={ _ID } _relativeURL={ _relativeURL } _parseYaml={ _parseYaml } version={ MODULE.version } />

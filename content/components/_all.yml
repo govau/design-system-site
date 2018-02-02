@@ -1,7 +1,14 @@
 core:
   name: Core
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: true
   contributors:
     - name: Dominik Wilkowski
@@ -31,7 +38,14 @@ core:
 accordion:
   name: Accordion
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   contributors:
     - name: Dominik Wilkowski
@@ -63,7 +77,14 @@ accordion:
 animate:
   name: Animate
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   contributors:
     - name: Dominik Wilkowski
@@ -87,7 +108,14 @@ animate:
 body:
   name: Body
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   contributors:
     - name: Dominik Wilkowski
@@ -118,7 +146,14 @@ body:
 breadcrumbs:
   name: Breadcrumbs
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   contributors:
     - name: Dominik Wilkowski
@@ -149,7 +184,12 @@ breadcrumbs:
   hasReact: true    # <-- auto generated, don't change
 buttons:
   name: Buttons
-  description: TODO
+  description: >
+    Buttons make common actions more obvious and help users more easily perform
+    them.
+
+    Buttons use labels and sometimes icons to communicate the action that will
+    occur when the user touches them.
   version: 1.0.0-next.6    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
@@ -172,7 +212,17 @@ buttons:
     - open: 2
     - active: 7
     - something: something
-  tags: TODO
+  tags:
+    - inputs
+    - links
+  related:
+    - cta-link
+    - text-inputs
+    - body
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   hasSass: true    # <-- auto generated, don't change
   hasJs: false    # <-- auto generated, don't change
@@ -181,7 +231,14 @@ buttons:
 callout:
   name: Callout
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   contributors:
     - name: Dominik Wilkowski
@@ -212,7 +269,14 @@ callout:
 control-input:
   name: Control Input
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   contributors:
     - name: Dominik Wilkowski
@@ -233,7 +297,7 @@ control-input:
     - open: 2
     - active: 7
     - something: something
-  version: 1.0.0-next.5    # <-- auto generated, don't change
+  version: 1.0.0-next.8    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -243,7 +307,14 @@ control-input:
 cta-link:
   name: Cta Link
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   contributors:
     - name: Dominik Wilkowski
@@ -274,7 +345,14 @@ cta-link:
 direction-links:
   name: Direction Links
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   contributors:
     - name: Dominik Wilkowski
@@ -305,7 +383,14 @@ direction-links:
 footer:
   name: Footer
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   contributors:
     - name: Dominik Wilkowski
@@ -336,7 +421,14 @@ footer:
 grid-12:
   name: Grid 12
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   contributors:
     - name: Dominik Wilkowski
@@ -361,7 +453,14 @@ grid-12:
 header:
   name: Header
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   contributors:
     - name: Dominik Wilkowski
@@ -392,7 +491,14 @@ header:
 headings:
   name: Headings
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   contributors:
     - name: Dominik Wilkowski
@@ -423,7 +529,14 @@ headings:
 inpage-nav:
   name: Inpage Nav
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   contributors:
     - name: Dominik Wilkowski
@@ -455,7 +568,14 @@ inpage-nav:
 keyword-list:
   name: Keyword List
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   contributors:
     - name: Dominik Wilkowski
@@ -487,7 +607,14 @@ keyword-list:
 link-list:
   name: Link list
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   contributors:
     - name: Dominik Wilkowski
@@ -519,7 +646,14 @@ link-list:
 page-alerts:
   name: Page Alerts
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   contributors:
     - name: Dominik Wilkowski
@@ -551,7 +685,14 @@ page-alerts:
 progress-indicator:
   name: Progress Indicator
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   contributors:
     - name: Dominik Wilkowski
@@ -582,7 +723,14 @@ progress-indicator:
 responsive-media:
   name: Responsive Media
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   contributors:
     - name: Dominik Wilkowski
@@ -613,7 +761,14 @@ responsive-media:
 select:
   name: Select
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   contributors:
     - name: Dominik Wilkowski
@@ -644,7 +799,14 @@ select:
 skip-link:
   name: Skip Link
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   contributors:
     - name: Dominik Wilkowski
@@ -675,7 +837,14 @@ skip-link:
 tags:
   name: Tags
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   contributors:
     - name: Dominik Wilkowski
@@ -706,7 +875,14 @@ tags:
 text-inputs:
   name: Text Inputs
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   contributors:
     - name: Dominik Wilkowski
@@ -737,7 +913,14 @@ text-inputs:
 cards:
   name: Cards
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   contributors: 'x, x, x, x'
   state: unpublished
@@ -756,7 +939,14 @@ cards:
 table:
   name: Table
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   contributors: 'x, x, x, x'
   state: unpublished
@@ -775,7 +965,14 @@ table:
 navigation:
   name: Navigation
   description: TODO
-  tags: TODO
+  tags:
+    - TODO
+  related:
+    - TODO
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
   required: false
   contributors: 'x, x, x, x'
   state: suggestion

@@ -6,8 +6,9 @@ header:
 
 sidebar:
   - search.md
-  - /components/navigation.md
+  - /components/sidebar.md
 
+headernav: false
 main:
   - released.md
   - inprogress.md

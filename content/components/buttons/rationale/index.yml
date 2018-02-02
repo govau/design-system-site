@@ -7,14 +7,11 @@ header:
 
 sidebar:
   - /components/search.md
-  - /components/navigation.md
+  - /components/sidebar.md
 
 main:
-  - /components/buttons/header.md
-  - /components/buttons/navigation.md
   - 1.md
   - 2.md
-  - /components/footer.md
 
 footer:
   - /_shared/footer.md
