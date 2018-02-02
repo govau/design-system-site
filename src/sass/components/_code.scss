@@ -141,6 +141,7 @@ pre[class*="language-"] {
 // Custom styles
 pre[class*="language-"] {
 	@include AU-space( padding, 1unit );
+	@include AU-space( margin-top, 1unit );
 	@include AU-space( border-radius, 0.25unit );
 	background: $AU-color-Background;
 
@@ -162,18 +163,18 @@ pre[class*="language-"] {
 
 	.btn-copy {
 		@include AU-fontgrid( xs, nospace );
-		@include AU-space( top, 0.5unit );
+		@include AU-space( top, -2unit );
 		@include AU-space( right, 0.5unit );
-		@include AU-space( padding, 0.25unit 0.5unit );
+		border: 0;
+		padding: 0;
+		background: transparent;
+		color: $AU-color-Text;
 		position: absolute;
-		opacity: 0;
-		transition: opacity 0.1s;
-	}
 
-	&:hover,
-	&:focus{
-		.btn-copy {
-			opacity: 1;
+		&:hover,
+		&:focus {
+			color: $AU-color-Text;
+			background: transparent;
 		}
 	}
 }

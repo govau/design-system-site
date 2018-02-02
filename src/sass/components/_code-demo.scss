@@ -14,6 +14,10 @@
 	.code-demo + & {
 		@include AU-space( margin-top, 4unit );
 	}
+
+	.codebox pre {
+		margin-top: 0;
+	}
 }
 
 .code-demo__headline {
