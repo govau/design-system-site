@@ -103,7 +103,7 @@ CodeDemo.propTypes = {
 	 *   - React: |
 	 *       <AUbutton>Continue</AUbutton>
 	 */
-	code: PropTypes.arrayOf( PropTypes.object ).isRequired,
+	code: PropTypes.arrayOf( PropTypes.object ),
 };
 
 CodeDemo.defaultProps = {};
