@@ -53,7 +53,7 @@ const Navigation = ({ navigation, uniqueClass, _relativeURL, _ID, _pages }) => {
 		<nav className={
 			`navigation`  +
 			`${ uniqueClass ? ` ${ uniqueClass }` : '' }` +
-			`${ navigation.theme === 'dark' ? ' navigation--dark' : '' }`
+			`${ navigation.theme === 'dark' ? ' navigation--dark ' : '' }`
 		}>
 			{
 				navMarkup.map( ( nav, i ) => (

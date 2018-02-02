@@ -5,13 +5,13 @@ tiles:
     imgurl: assets/img/artwork-about-community.png
     imgalt: Community collaboration
     url: /community
-    text: The Design System has been created for designers and developers across government to help them transform their agency’s products and services. The aim is to grow an active and engaged community to share in development of a set of quality tools and designs that can be used by all.
+    text: The Design System has been created for designers and developers across government to help them transform their agency’s products and services. The aim is to grow an active and engaged community to share and develop up a set of quality tools and designs that can be used by all.
 
   - title: Components
     imgurl: assets/img/artwork-about-components.png
     imgalt: Components used in multiple ways
     url: /components
-    text: Components are a collection of interface elements (eg  accordions, buttons, breadcrumbs, lists ) that can be used by teams of designers and developers across government to build products. 
+    text: Components are a collection of interface elements —&nbsp;such as accordions, buttons, breadcrumbs, lists&nbsp;— that can be used by teams of designers and developers across government to build products.
 
   - title: Templates
     imgurl: assets/img/artwork-about-templates.png
