@@ -16,7 +16,7 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, example, fullwidth }) 
 		<meta name="viewport" content="width=device-width" />
 		<meta httpEquiv="x-ua-compatible" content="ie=edge" />
 
-		<title>{ pagetitle }</title>
+		<title>{ pagetitle } - Australian Government Open Language for Design</title>
 
 		<link rel="shortcut icon" type="image/x-icon" href={ _relativeURL( '/assets/img/favicon.ico', _ID ) } />
 		<link rel="stylesheet" href={ _relativeURL( `/assets/css/iframe.css`, _ID ) } />

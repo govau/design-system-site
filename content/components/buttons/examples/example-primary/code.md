@@ -1,1 +1,1 @@
-<button class="au-btn">example button</button>
+<button class="au-btn">Primary button</button>
