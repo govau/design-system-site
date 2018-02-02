@@ -11,8 +11,8 @@ import Fs from 'fs';
 /**
  * The codedemo component
  */
-const CodeDemo = ({ headline, example, code, _body, _ID, _parseMD }) => {
-	const pathToCode = Path.normalize(`${ SETTINGS.get().folder.content }/${ _ID }/examples/example-${ example }/code.md`);
+const CodeDemo = ({ headline, example, iframe, code, _body, _ID, _parseMD, _relativeURL }) => {
+	const pathToCode = Path.normalize(`${ SETTINGS.get().folder.content }/${ _ID }/${ example }/code.md`);
 	const exampleCode = Fs.readFileSync( pathToCode, 'utf8' );
 
 	return (
@@ -28,7 +28,7 @@ const CodeDemo = ({ headline, example, code, _body, _ID, _parseMD }) => {
 					<iframe
 						className="code-demo__example__iframe"
 						scrolling="no"
-						src={`examples/example-${ example }/`}>
+						src={ iframe ? _relativeURL( `/${ _ID }/${ iframe }/`, _ID ) : _relativeURL( `/${ _ID }/${ example }/`, _ID ) }>
 							{ exampleCode }
 					</iframe>
 					<div className="code-demo__example__code">
@@ -36,7 +36,7 @@ const CodeDemo = ({ headline, example, code, _body, _ID, _parseMD }) => {
 							<nav className="tabs-nav">
 								<ul className="au-link-list au-link-list--inline ">
 									{
-										code.map( ( section, i ) => (
+										code && code.map( ( section, i ) => (
 											<li key={ i } className={ i === 0 ? 'tab-item--active' : '' }>
 												<a
 													data={ 'boop' }
@@ -51,7 +51,7 @@ const CodeDemo = ({ headline, example, code, _body, _ID, _parseMD }) => {
 							</nav>
 							<div className="tab-contents">
 								{
-									code.map( ( section, i ) => (
+									code && code.map( ( section, i ) => (
 										<div
 											className={ `tab-content ${ i === 0 ? 'tab-content--active' : '' }` }
 											key={ i }
