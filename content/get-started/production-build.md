@@ -2,11 +2,11 @@
 layout: content/text-with-cta
 button:
   link: https://github.com/govau/uikit#how-to-use
-  text: GitHub Readme
+  text: Setting up for production
   type: secondary
   icon: github
 ---
 
-## Production build
+## Use the recommended production build
 
-The Design System is distributed through the [npm](ttps://www.npmjs.com) ecosystem and can only be installed through the `yarn` or `npm` command.
+A production build provides a solid way to set up your project. The build is maintained and is distributed through the [npm](ttps://www.npmjs.com) ecosystem. It’s ideal for ‘go live’ development.

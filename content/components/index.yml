@@ -10,6 +10,7 @@ sidebar:
 
 headernav: false
 main:
+  - intro.md
   - released.md
   - inprogress.md
   - suggestions.md

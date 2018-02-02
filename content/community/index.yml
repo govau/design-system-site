@@ -6,6 +6,7 @@ header:
 main:
   - abstract.md
   - intro.md
+  - vision.md
   - how-it-works.md
   - headingleft_open-source.md
   - headingleft_maintained.md

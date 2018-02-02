@@ -4,6 +4,7 @@ header:
   - /_shared/header.md
 
 main:
+  - community.md
   - git-issue.md
   - faqs.md
   - email-the-team.md

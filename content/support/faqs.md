@@ -7,6 +7,6 @@ button:
   icon: github
 ---
 
-## Frequently Asked Questions
+## Check out our FAQs
 
-We have collated a list of frequently asked question while we improve our documentation.
+The answer might be in our frequently asked questions. We’ll add to these while we build up our help documentation.

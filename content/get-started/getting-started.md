@@ -2,5 +2,4 @@
 layout: content/abstract
 ---
 
-We have set up different pathways to get you started quickly. Which is best for you? It all depends on your project needs and technical understanding. And
-whether you’re a developer or a designer.
+We've got a range of different tools to get you started. Which is best for you? It all depends on your project needs and technical understanding. And whether you're a developer or a designer.

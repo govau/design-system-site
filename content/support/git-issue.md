@@ -7,6 +7,6 @@ button:
   icon: github
 ---
 
-## Raise a Git Issue
+## Raise an issue in Github
 
-Raising a git issue is a good place to get help from others who are using the design system.
+Raise a Git issue to get help from others who are using the Design System.

@@ -7,6 +7,8 @@ url: /get-started
 cta: Getting Started
 ---
 
-*Our Design System is based on the [Digital Service Standard](#) and provides a framework and a set of tools to help designers and developers create government products and services faster easier better.*
+*A modern design system with high standards in usability and accessibility built by Australian government.*
 
-The system is built on extensive usability research, accessibility conformance to WCAG AA level 2.1 and community engagement. This ensures we can deliver a consistent experience for all users
+The Design System provides a framework and a set of tools to help designers and developers build government products and services more easily.
+
+The system incorporates the highest usability and accessibility standards and helps deliver a consistent experience for all users, in accordance with the [Digital Service Standard.](https://www.dta.gov.au/standard/)
