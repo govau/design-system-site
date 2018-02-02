@@ -29,11 +29,15 @@ const ComponentFooter = ({ _ID, _parseYaml, _relativeURL, _pages }) => {
 					</ul>
 				</div>
 				<div className="col-sm-6 col-md-3">
-					<h3>Used in</h3>
+					<h3>Dependencies</h3>
 					<ul>
-						<li><a href="#">Service form</a></li>
-						<li><a href="#">Search Results page</a></li>
-						<li><a href="#">Chapter or section page</a></li>
+						{
+							MODULES[ _pages[ _ID ].module ].dependencies.map( ( item, i ) => (
+								<li key={ i }>
+									<a href={ _relativeURL( `/components/${ MODULES[ item ].ID }`, _ID) }>{ MODULES[ item ].name }</a>
+								</li>
+							))
+						}
 					</ul>
 				</div>
 				<div className="col-sm-6 col-md-3">
