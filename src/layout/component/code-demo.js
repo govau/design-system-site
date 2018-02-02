@@ -17,9 +17,9 @@ const CodeDemo = ({ headline, example, code, _body, _ID, _parseMD }) => {
 
 	return (
 		<div className="code-demo row" id={ Slugify( headline ).toLowerCase() }>
+			<a className="code-demo__anchor" href={`#${ Slugify( headline ).toLowerCase() }`}>#</a>
 
 			<h2 className="col-sm-6 code-demo__headline">
-				<a className="code-demo__anchor" href={`#${ Slugify( headline ).toLowerCase() }`}>#</a>
 				{ headline }
 			</h2>
 
