@@ -9,7 +9,7 @@ import Fs from 'fs';
  *
  * @disable-docs
  */
-const Example = ({ _ID, _relativeURL, pagetitle, modules, example }) => (
+const Example = ({ _ID, _relativeURL, pagetitle, modules, example, fullwidth }) => (
 	<html>
 	<head>
 		<meta charSet="utf-8" />
@@ -20,7 +20,6 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, example }) => (
 
 		<link rel="shortcut icon" type="image/x-icon" href={ _relativeURL( '/assets/img/favicon.ico', _ID ) } />
 		<link rel="stylesheet" href={ _relativeURL( `/assets/css/iframe.css`, _ID ) } />
-		<link rel="stylesheet" href={ _relativeURL( `/assets/css/body.css`, _ID ) } />
 		{
 			modules.map( ( module, i ) => {
 				if( Fs.existsSync( Path.normalize(`${ __dirname }/../../assets/css/${ module }.css`) ) ) {
@@ -33,8 +32,8 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, example }) => (
 
 		<script src={ _relativeURL( '/assets/js/header.js', _ID ) } />
 	</head>
-	<body className="au-body">
-		<div className="example">
+	<body className={ `au-body${ fullwidth ? '' : ' center'}` }>
+		<div className='container'>
 			{ example }
 		</div>
 

@@ -18,7 +18,10 @@ const CodeDemo = ({ headline, example, code, _body, _ID, _parseMD }) => {
 	return (
 		<div className="code-demo row" id={ Slugify( headline ).toLowerCase() }>
 
-			<h2 className="col-sm-6 code-demo__headline"><a className="code-demo__anchor" href={`#${ Slugify( headline ).toLowerCase() }`}>#</a>{ headline }</h2>
+			<h2 className="col-sm-6 code-demo__headline">
+				<a className="code-demo__anchor" href={`#${ Slugify( headline ).toLowerCase() }`}>#</a>
+				{ headline }
+			</h2>
 
 			<div className="col-sm-6 code-demo__example-wrapper">
 				<div className="code-demo__example">
