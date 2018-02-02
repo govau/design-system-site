@@ -4,21 +4,19 @@ headline: Community
 mainlist:
   - text: Forums
     link: https://community.service.gov.au/c/design-system
-  - text: Articles
-    link: /articles
   - text: Roadmap
-    link: /roadmap
+    link: https://github.com/govau/uikit/projects/
   - text: Github
     link: https://github.com/govau/uikit/
 legallist:
-  - text: Privacy policy
-    link: /privacy
+  - text: Privacy
+    link: https://www.dta.gov.au/privacy-statement/
   - text: Need help?
     link: /support
   - text: Accessibility
-    link: /accessibility
-  - text: Security
-    link: /security
+    link: https://www.dta.gov.au/accessibility/
+  - text: Disclaimer
+    link: https://www.dta.gov.au/disclaimer/
 ---
 
-© Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the [MIT license](https://github.com/govau/uikit/blob/master/LICENSE.md)
+© Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the [MIT license](https://github.com/govau/uikit/blob/master/LICENSE)
