@@ -30,8 +30,8 @@
 	}
 
 	.user__wrapper {
-		@include AU-space( border-top, 0.25unit solid $AU-color-Background-dark );
-		@include AU-space( border-bottom, 0.25unit solid $AU-color-Background-dark );
+		@include AU-space( border-top, 0.25unit solid $AU-color-Background-darkest );
+		@include AU-space( border-bottom, 0.25unit solid $AU-color-Background-darkest );
 
 		img {
 			display: block;

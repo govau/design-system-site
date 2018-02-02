@@ -18,11 +18,16 @@ const CodeDemo = ({ headline, example, code, _body, _ID, _parseMD }) => {
 	return (
 		<div className="code-demo row" id={ Slugify( headline ).toLowerCase() }>
 
-			<h2 className="col-md-6 code-demo__headline"><a className="code-demo__anchor" href={`#${ Slugify( headline ).toLowerCase() }`}>#</a>{ headline }</h2>
+			<h2 className="col-sm-6 code-demo__headline"><a className="code-demo__anchor" href={`#${ Slugify( headline ).toLowerCase() }`}>#</a>{ headline }</h2>
 
-			<div className="col-md-6 code-demo__example-wrapper">
+			<div className="col-sm-6 code-demo__example-wrapper">
 				<div className="code-demo__example">
-					<iframe className="code-demo__example__iframe" src={`examples/example-${ example }/`}>{ exampleCode }</iframe>
+					<iframe
+						className="code-demo__example__iframe"
+						scrolling="no"
+						src={`examples/example-${ example }/`}>
+							{ exampleCode }
+					</iframe>
 					<div className="code-demo__example__code">
 						<div className="tabs">
 							<nav className="tabs-nav">
@@ -31,7 +36,7 @@ const CodeDemo = ({ headline, example, code, _body, _ID, _parseMD }) => {
 										code.map( ( section, i ) => (
 											<li key={ i } className={ i === 0 ? 'tab-item--active' : '' }>
 												<a
-													data
+													data={ 'boop' }
 													href={`#${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }-${ Slugify( headline ).toLowerCase() }`}>
 													{ Object.keys( section )[ 0 ] }
 												</a>
@@ -60,7 +65,7 @@ const CodeDemo = ({ headline, example, code, _body, _ID, _parseMD }) => {
 				</div>
 			</div>
 
-			<div className="col-md-6 code-demo__text">
+			<div className="col-sm-6 code-demo__text">
 				{ _body }
 			</div>
 		</div>

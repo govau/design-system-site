@@ -2,7 +2,9 @@
 	@include AU-clearfix();
 
 	.is-components & .code-demo__example-wrapper {
-		float: right;
+		@include AU-media( sm ){
+			float: right;
+		}
 	}
 
 	* + & {
@@ -11,6 +13,10 @@
 
 	.code-demo + & {
 		@include AU-space( margin-top, 4unit );
+	}
+
+	.codebox pre {
+		margin-top: 0;
 	}
 }
 
@@ -35,6 +41,7 @@
 
 .code-demo__example__iframe {
 	border: 0;
+	min-width: 100%;
 }
 
 .au-body * + .code-demo__headline {

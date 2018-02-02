@@ -76,8 +76,9 @@ const ComponentPage = ({
 
 				{ footer }
 			</div>
-			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
 			<script src={ _relativeURL( '/assets/js/prism.js', _ID ) } />
+			<script src={ _relativeURL( '/assets/js/iframe-resizer.js', _ID ) } />
+			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
 		</body>
 		</html>
 	);

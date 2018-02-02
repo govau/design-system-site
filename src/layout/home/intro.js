@@ -6,18 +6,14 @@ import React from 'react';
 /**
  * The Intro component
  */
-const Intro = ({ title, url, imgalt, imgurl, cta, _body }) => (
+const Intro = ({ title, url, imgalt, imgurl, _relativeURL, _ID, cta, _body }) => (
 	<div className="intro au-grid">
 		<div className="intro-wrapper row">
 
 			<div className="intro__img col-sm-12 col-md-6 col-md-push-6">
 				<div className="intro__imgpadding">
 					<img className="au-responsive-media-img"
-						src={
-							imgurl.startsWith('http')
-								? imgurl
-								: _relativeURL( imgurl, _ID )
-						}
+						src={ _relativeURL( imgurl , _ID ) }
 					alt={ imgalt } />
 				</div>
 			</div>

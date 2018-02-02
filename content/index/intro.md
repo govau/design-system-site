@@ -1,8 +1,8 @@
 ---
 layout: home/intro
 title: About
-imgurl: http://placehold.it/500x400
-imgalt: Intro Alt Tag
+imgurl: assets/img/artwork-about.png
+imgalt: designers and developers working together
 url: /get-started
 cta: Getting Started
 ---

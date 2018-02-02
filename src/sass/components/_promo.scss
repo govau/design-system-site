@@ -1,7 +1,12 @@
 // Promo [img, title+link, text]
 
 .promo {
-	@include AU-space( margin-top, 10unit );
+	@include AU-space( margin-top, 2unit );
+
+	@include AU-media( md ) {
+			@include AU-space( margin-top, 10unit );
+	}
+
 	text-align: center;
 
 	.content {
@@ -12,9 +17,9 @@
 	}
 }
 
-.promo__thumbnail {
+.au-body img.promo__thumbnail {
 	display: inline-block;
-	max-width: 60%;
+	max-width: 300px;
 }
 
 .au-body .promo .promo__title { //specific to override AU-body
