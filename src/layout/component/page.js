@@ -60,8 +60,20 @@ const ComponentPage = ({
 								{
 									headernav !== false &&
 										<Fragment>
-											<Header _relativeURL={ _relativeURL } _parseYaml={ _parseYaml } _pages={ _pages } _ID={ _ID } _isDocs={ _isDocs } />
-											<Navigation navigation={ tabs.navigation } _relativeURL={ _relativeURL } _ID={ _ID } _pages={ _pages } />
+											<Header
+												_relativeURL={ _relativeURL }
+												_parseYaml={ _parseYaml }
+												_pages={ _pages }
+												_ID={ _ID }
+												_isDocs={ _isDocs }
+											/>
+											<Navigation
+												uniqueClass='navigation--component'
+												navigation={ tabs.navigation }
+												_relativeURL={ _relativeURL }
+												_ID={ _ID }
+												_pages={ _pages }
+											/>
 										</Fragment>
 								}
 								{ main }

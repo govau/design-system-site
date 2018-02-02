@@ -3,8 +3,11 @@
 	@include AU-clearfix();
 
 	.is-components & .code-demo__example-wrapper {
+		@include AU-space( margin-top, 1unit );
+
 		@include AU-media( sm ){
 			float: right;
+			margin-top: 0;
 		}
 	}
 

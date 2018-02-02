@@ -29,7 +29,7 @@ export const CreateLink = ( link, _relativeURL, _ID, _pages ) => {
 /**
  * The Navigation component
  */
-const Navigation = ({ navigation, _relativeURL, _ID, _pages }) => {
+const Navigation = ({ navigation, uniqueClass, _relativeURL, _ID, _pages }) => {
 
 
 	const CreateNavigation = ( section, inline ) => {
@@ -50,7 +50,11 @@ const Navigation = ({ navigation, _relativeURL, _ID, _pages }) => {
 	});
 
 	return (
-		<nav className={ `navigation ${ navigation.theme === 'dark' ? 'navigation--dark ' : '' }` }>
+		<nav className={
+			`navigation`  +
+			`${ uniqueClass === uniqueClass ? ` ${ uniqueClass }` : '' }` +
+			`${ navigation.theme === 'dark' ? 'navigation--dark ' : '' }`
+		}>
 			{
 				navMarkup.map( ( nav, i ) => (
 					<Fragment key={ i }>{ nav }</Fragment>
