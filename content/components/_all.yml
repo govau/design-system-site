@@ -305,7 +305,7 @@ control-input:
   hasReact: true    # <-- auto generated, don't change
   ID: control-input    # <-- auto generated, don't change
 cta-link:
-  name: Cta Link
+  name: CTA Link
   description: TODO
   tags:
     - TODO
