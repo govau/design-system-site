@@ -14,13 +14,18 @@
 	@include AU-space( margin-top, 5unit );
 }
 
-
 .au-body :target {
 	outline: none;
-  animation-name: example;
-  animation-duration: 2s;
+	animation-name: example;
+	animation-duration: 2s;
 }
+
 @keyframes example {
-  from {background-color: $AU-color-Background;}
-  to {background-color: $AU-color-Background-light; }
+	from {
+		background-color: $AU-color-Background;
+	}
+
+	to {
+		background-color: $AU-color-Background-light;
+	}
 }
