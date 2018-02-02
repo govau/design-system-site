@@ -3,3 +3,4 @@ modules:
   - body
   - buttons
 example: ../code.md
+filter: grayscale

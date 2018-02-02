@@ -9,7 +9,7 @@ import Fs from 'fs';
  *
  * @disable-docs
  */
-const Example = ({ _ID, _relativeURL, pagetitle, modules, example }) => (
+const Example = ({ _ID, _relativeURL, pagetitle, modules, filter, tabbing, example }) => (
 	<html>
 	<head>
 		<meta charSet="utf-8" />
@@ -28,6 +28,9 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, example }) => (
 				}
 			})
 		}
+		{
+			filter && <link rel="stylesheet" href={ _relativeURL( `/assets/css/a11y/${ filter }.css`, _ID ) } />
+		}
 
 		<script src={ _relativeURL( '/assets/js/header.js', _ID ) } />
 	</head>
@@ -35,13 +38,16 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, example }) => (
 
 		<main className="main au-body container-fluid">
 			<div className="row">
-				<div className="grids col-md-12">
+				<div className="grids col-md-12 js-tabbing">
 					{ example }
 				</div>
 			</div>
 		</main>
 
-		<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
+		<script src={ _relativeURL( '/assets/js/iframe-resizer-contentWindow.js', _ID ) } />
+		{
+			tabbing && <script src={ _relativeURL( '/assets/js/tabbing.js', _ID ) } />
+		}
 	</body>
 	</html>
 );
