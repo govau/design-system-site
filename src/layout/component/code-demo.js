@@ -40,7 +40,8 @@ const CodeDemo = ({ headline, example, code, _body, _ID, _parseMD }) => {
 											<li key={ i } className={ i === 0 ? 'tab-item--active' : '' }>
 												<a
 													data={ 'boop' }
-													href={`#${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }-${ Slugify( headline ).toLowerCase() }`}>
+													href={`#${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }-${ Slugify( headline ).toLowerCase() }`}
+												>
 													{ Object.keys( section )[ 0 ] }
 												</a>
 											</li>
@@ -54,11 +55,15 @@ const CodeDemo = ({ headline, example, code, _body, _ID, _parseMD }) => {
 										<div
 											className={ `tab-content ${ i === 0 ? 'tab-content--active' : '' }` }
 											key={ i }
-											id={ `${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }-${ Slugify( headline ).toLowerCase() }` }>
+											tabIndex="-1"
+											id={ `${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }-${ Slugify( headline ).toLowerCase() }` }
+										>
 											<Code language={
 												Object.keys( section )[ 0 ] === 'HTML' ? 'html' : '' +
-												Object.keys( section )[ 0 ] === 'React' ? 'javascript' : ''
-											}>{ section[ Object.keys( section )] }</Code>
+												Object.keys( section )[ 0 ] === 'React' ? 'jsx' : ''
+											}>
+												{ section[ Object.keys( section )] }
+											</Code>
 										</div>
 									))
 								}
