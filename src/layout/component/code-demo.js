@@ -31,45 +31,50 @@ const CodeDemo = ({ headline, example, iframe, code, _body, _ID, _parseMD, _rela
 						src={ iframe ? _relativeURL( `/${ _ID }/${ iframe }/`, _ID ) : _relativeURL( `/${ _ID }/${ example }/`, _ID ) }>
 							{ exampleCode }
 					</iframe>
-					<div className="code-demo__example__code">
-						<div className="tabs">
-							<nav className="tabs-nav">
-								<ul className="au-link-list au-link-list--inline ">
-									{
-										code && code.map( ( section, i ) => (
-											<li key={ i } className={ i === 0 ? 'tab-item--active' : '' }>
-												<a
-													data={ 'boop' }
-													href={`#${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }-${ Slugify( headline ).toLowerCase() }`}
-												>
-													{ Object.keys( section )[ 0 ] }
-												</a>
-											</li>
-										))
-									}
-								</ul>
-							</nav>
-							<div className="tab-contents">
-								{
-									code && code.map( ( section, i ) => (
-										<div
-											className={ `tab-content ${ i === 0 ? 'tab-content--active' : '' }` }
-											key={ i }
-											tabIndex="-1"
-											id={ `${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }-${ Slugify( headline ).toLowerCase() }` }
-										>
-											<Code language={
-												Object.keys( section )[ 0 ] === 'HTML' ? 'html' : '' +
-												Object.keys( section )[ 0 ] === 'React' ? 'jsx' : ''
-											}>
-												{ section[ Object.keys( section )] }
-											</Code>
+					{
+						code
+							?
+								<div className="code-demo__example__code">
+									<div className="tabs">
+										<nav className="tabs-nav">
+											<ul className="au-link-list au-link-list--inline ">
+												{
+													code && code.map( ( section, i ) => (
+														<li key={ i } className={ i === 0 ? 'tab-item--active' : '' }>
+															<a
+																data={ 'boop' }
+																href={`#${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }-${ Slugify( headline ).toLowerCase() }`}
+															>
+																{ Object.keys( section )[ 0 ] }
+															</a>
+														</li>
+													))
+												}
+											</ul>
+										</nav>
+										<div className="tab-contents">
+											{
+												code && code.map( ( section, i ) => (
+													<div
+														className={ `tab-content ${ i === 0 ? 'tab-content--active' : '' }` }
+														key={ i }
+														tabIndex="-1"
+														id={ `${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }-${ Slugify( headline ).toLowerCase() }` }
+													>
+														<Code language={
+															Object.keys( section )[ 0 ] === 'HTML' ? 'html' : '' +
+															Object.keys( section )[ 0 ] === 'React' ? 'jsx' : ''
+														}>
+															{ section[ Object.keys( section )] }
+														</Code>
+													</div>
+												))
+											}
 										</div>
-									))
-								}
-							</div>
-						</div>
-					</div>
+									</div>
+								</div>
+							: null
+						}
 				</div>
 			</div>
 
