@@ -139,7 +139,7 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 					</div>
 
 					<h4>NPM</h4>
-					<Code className="furnace-npm js-furnace-code">npm install</Code>
+					<Code className="furnace-npm js-furnace-code">npm install @gov.au/core</Code>
 
 				</div>
 			</form>
