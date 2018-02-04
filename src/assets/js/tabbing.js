@@ -64,7 +64,7 @@ AddEvent( document.querySelector( '.js-tabbing-switch' ), 'click', function( eve
 
 	if( _isOn === null ) {
 		AddClass( $this, 'is-on' );
-		$this.innerText = 'Hide tabbing';
+		$this.innerText = 'Stop tabbing';
 		interval = tab();
 	}
 	else {
@@ -88,5 +88,5 @@ function tab() {
 		if( loop >= items.length ) {
 			loop = 0;
 		}
-	}, 2000 );
+	}, 1000 );
 }
