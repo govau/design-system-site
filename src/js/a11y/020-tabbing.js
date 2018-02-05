@@ -25,7 +25,7 @@ AddEvent( document.querySelector( '.js-tabbing-switch' ), 'click', function( eve
 });
 
 function tab() {
-	var items = document.querySelector( '.js-tabbing-area' ).children;
+	var items = document.querySelectorAll( '.js-focus-me' );
 	var loop = 0;
 
 	items[ loop ].focus();
