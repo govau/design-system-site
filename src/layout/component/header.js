@@ -18,7 +18,7 @@ const ComponentHeader = ({ _relativeURL, _parseYaml, _pages, _ID, _isDocs }) => 
 
 	return (
 		<div className="row componentheader">
-			<div className="col-sm-6 col-lg-7">
+			<div className="col-sm-6">
 
 				<h1 className="componentheader__headling">
 					{ MODULE.name }
@@ -26,7 +26,7 @@ const ComponentHeader = ({ _relativeURL, _parseYaml, _pages, _ID, _isDocs }) => 
 
 				<div className="componentheader__body abstract">{ MODULE.description }</div>
 			</div>
-			<div className="componentheader__statusbox col-sm-5">
+			<div className="componentheader__statusbox col-sm-offset-1 col-sm-5">
 				<ComponentStatus
 					module={ MODULE.ID }
 					_ID={ _ID }

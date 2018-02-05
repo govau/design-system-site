@@ -10,4 +10,8 @@
 	.componentheader__body {
 		margin-top: 2rem;
 	}
+
+	.abstract {
+		@include AU-fontgrid( md );
+	}
 }
