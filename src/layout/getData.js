@@ -28,4 +28,20 @@ const GetData = ({ yaml, filter = () => true, object = false }) => {
 	}
 };
 
+/**
+ * GetComponentValue get a value from the component based on the ID
+ *
+ * @param {string}  componentID - The component ID to match for the name
+ * @param {value}   value       - The string of the value to match in the object
+ *
+ * @return {string}             - The data that matches the value and string
+ */
+export const GetComponentValue = ( componentID, value, yaml ) =>  {
+	return GetData({
+		filter: ( key, COMPONENTS ) => COMPONENTS[ key ].ID === componentID,
+		yaml: yaml,
+	})[ 0 ][ value ]
+};
+
+
 export default GetData;
