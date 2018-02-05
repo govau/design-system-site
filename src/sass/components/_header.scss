@@ -36,20 +36,21 @@
 
 		float: left;
 	}
+
+	.header__title {
+		@include AU-space( margin-top, 0.5unit );
+		@include AU-space( margin-left, 4unit );
+		@include AU-space( max-width, 15unit );
+		float: left;
+		font-weight: bold;
+		text-align: left;
+		color: $AU-colordark-Text;
+	}
 }
 
 .header__logo--coa {
 	display: block;
 	@include AU-space( max-width, 6unit );
-}
-
-.header__title {
-	float: left;
-	@include AU-space( margin-top, 0.25unit );
-	@include AU-space( margin-left, 3.25unit );
-	@include AU-space( max-width, 13unit );
-	text-align: left;
-	color: $AU-colordark-Text;
 }
 
 @include AU-media( xs ) {
