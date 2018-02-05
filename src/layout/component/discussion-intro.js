@@ -4,35 +4,35 @@ import React from 'react';
 
 
 /**
- * The partial component
+ * The Discussion Intro component
  */
-const DiscussionIntro = ({ buttons, giturl, _body }) => {
-
-	return (
-		<div className="discussionIntro discussionIntro__text">
-			<div className="col-sm-6 col-md-7">
-				{ _body }
-			</div>
-			<div className="col-sm-6 col-md-offset-1 col-md-4 discussionIntro__buttons">
-				{
-					buttons.map( ( button, i ) => (
-						<AUbutton href={ button.btnurl } as={ button.btntype } className=" au-btn--block" key={ i }>{ button.btntext }</AUbutton>
-					))
-				}
-			</div>
+const DiscussionIntro = ({ communityLabel, issueLabel, _body }) => (
+	<div className="discussionIntro discussionIntro__text">
+		<div className="col-sm-6 col-md-7">
+			{ _body }
 		</div>
-	);
-
-};
+		<div className="col-sm-6 col-md-offset-1 col-md-4 discussionIntro__buttons">
+			<AUbutton href={`https://community.service.gov.au/t/${ module }/`} as="secondary" block>{ communityLabel }</AUbutton>
+			<AUbutton href="https://github.com/govau/uikit/issues/new" as="tertiary" block>{ issueLabel }</AUbutton>
+		</div>
+	</div>
+);
 
 DiscussionIntro.propTypes = {
 	/**
-	 * _body: (text)(4)
+	 * communityLabel: Community
 	 */
-	_body: PropTypes.node.isRequired,
+	communityLabel: PropTypes.string,
 
+	/**
+	 * issueLabel: Report an issue
+	 */
+	issueLabel: PropTypes.string,
 };
 
-DiscussionIntro.defaultProps = {};
+DiscussionIntro.defaultProps = {
+	communityLabel: 'Community',
+	issueLabel: 'Report an issue',
+};
 
 export default DiscussionIntro;
