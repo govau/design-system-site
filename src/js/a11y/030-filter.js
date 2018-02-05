@@ -6,7 +6,7 @@ if( filters !== null ) {
 	filters.insertAdjacentHTML(
 		'beforebegin',
 		'<button type="button" class="a11y-button js-filter' + ( active == 'deuteranopia' ? ' is-active' : '' ) + '" data-filter="deuteranopia">Deuteranopia</button>' +
-		'<button type="button" class="a11y-button js-filter' + ( active == 'protanopia' ? ' is-active' : '' ) + '" data-filter="protanopia">Protanopia</button>'
+		'<button type="button" class="a11y-button js-filter' + ( active == 'tritanopia' ? ' is-active' : '' ) + '" data-filter="tritanopia">Tritanopia</button>'
 	);
 }
 

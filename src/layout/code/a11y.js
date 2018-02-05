@@ -30,8 +30,8 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, filter, tabbing, examp
 		}
 		{
 			filter && <link id="filter-stylesheet" rel="stylesheet"
-				data-protanopia={ _relativeURL( `/assets/css/a11y/protanopia.css`, _ID ) }
 				data-deuteranopia={ _relativeURL( `/assets/css/a11y/deuteranopia.css`, _ID ) }
+				data-tritanopia={ _relativeURL( `/assets/css/a11y/tritanopia.css`, _ID ) }
 				href={ _relativeURL( `/assets/css/a11y/${ filter }.css`, _ID ) }
 			/>
 		}
