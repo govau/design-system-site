@@ -84,7 +84,6 @@ TableInProgress.propTypes = {
 	/**
 	 * tableTH:
 	 *   - text: Title
-	 *   - text: Status
 	 *     tightcol: true
 	 */
 	tableTH: PropTypes.arrayOf(
