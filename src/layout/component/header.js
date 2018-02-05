@@ -1,4 +1,4 @@
-import ComponentStatus from './component-status';
+import ComponentStatus from './status';
 import PropTypes from 'prop-types';
 import GetData from './../getData';
 import React from 'react';
@@ -32,7 +32,6 @@ const ComponentHeader = ({ _relativeURL, _parseYaml, _pages, _ID, _isDocs }) => 
 					_ID={ _ID }
 					_relativeURL={ _relativeURL }
 					_parseYaml={ _parseYaml }
-					version={ MODULE.version }
 				/>
 			</div>
 		</div>

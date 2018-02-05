@@ -9,12 +9,13 @@ import React, { Fragment }                      from 'react';
 /**
  * The Component Status
  */
-const ComponentStatus = ({ module, _ID, _relativeURL, version, _parseYaml }) => {
+const ComponentStatus = ({ module, _ID, _relativeURL, _parseYaml }) => {
 
 	const component = GetData({
 		filter: ( key, COMPONENTS ) => COMPONENTS[ key ].ID === module,
 		yaml: _parseYaml,
 	})[ 0 ];
+
 
 	/**
 	 * NameIdMenu - Create a menu from a value that matches an array
@@ -27,7 +28,7 @@ const ComponentStatus = ({ module, _ID, _relativeURL, version, _parseYaml }) => 
 		component[ value ].map( item => {
 
 			menuItems.push({
-				link: `/components/${ url }${ item }`,
+				link: _relativeURL( `/components/${ url }${ item }`, _ID ),
 				text: GetComponentValue( item, 'name', _parseYaml ) || item.charAt( 0 ).toUpperCase() + item.slice( 1 ).toLowerCase()
 			})
 		})
@@ -35,12 +36,14 @@ const ComponentStatus = ({ module, _ID, _relativeURL, version, _parseYaml }) => 
 		return <AUlinkList className="component-status__definition__list" inline items={ menuItems } inline/>;
 	}
 
+
 	let dependencies;
 	let tags;
 
 	if( component.tags ) {
 		tags = NameIdMenu( 'tags', 'search/?text=' );
 	}
+
 	if( component.dependencies ) {
 		dependencies = NameIdMenu( 'dependencies' );
 	}
@@ -53,7 +56,7 @@ const ComponentStatus = ({ module, _ID, _relativeURL, version, _parseYaml }) => 
 				{ GetState( component.state ) }
 				{
 					component.state === 'published'
-						? <span className="badge">v{ version }</span>
+						? <span className="badge">v{ component.version }</span>
 						: null
 				}
 			</AUheading>
@@ -63,8 +66,8 @@ const ComponentStatus = ({ module, _ID, _relativeURL, version, _parseYaml }) => 
 				<dd>
 					{
 						component.state === 'published'
-							?	<a href={`https://github.com/govau/uikit/commits/master/packages/buttons${ module }/CHANGELOG.md`}>View changes</a>
-							:	<span>Not released</span>
+							? <a href={`https://github.com/govau/uikit/blob/master/packages/${ module }/CHANGELOG.md`}>View changes</a>
+							: <span>Not released</span>
 					}
 				</dd>
 
@@ -73,10 +76,9 @@ const ComponentStatus = ({ module, _ID, _relativeURL, version, _parseYaml }) => 
 					?
 						<Fragment>
 							<dt>Install</dt>
-							<dd><a href="https://www.npmjs.com/package/@gov.au/buttons">{`npm i @gov.au/${ module }`}</a></dd>
+							<dd><a href={`https://www.npmjs.com/package/@gov.au/${ module }`}>{`npm i @gov.au/${ module }`}</a></dd>
 						</Fragment>
-					:
-						null
+					: null
 				}
 
 				{
@@ -135,9 +137,12 @@ const ComponentStatus = ({ module, _ID, _relativeURL, version, _parseYaml }) => 
 						?
 							<Fragment>
 								<dt>Get involved</dt>
-								<dd><a href={ `https://community.service.gov.au/t/${ module } `}>Discussion</a>, <a href={ `https://github.com/govau/uikit/issues?q=is%3Aissue+is%3Aopen+${ module } `}>Issues</a></dd>
+								<dd>
+									<a href={ `https://community.service.gov.au/t/${ module } `}>Discussion</a>,&nbsp;
+									<a href={ `https://github.com/govau/uikit/issues?q=is%3Aissue+is%3Aopen+${ module } `}>Issues</a>
+								</dd>
 							</Fragment>
-						:	null
+						: null
 				}
 
 			</dl>
