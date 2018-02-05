@@ -1,3 +1,5 @@
+---
+layout: navigation
 navigation:
   inline: true
   sections:
