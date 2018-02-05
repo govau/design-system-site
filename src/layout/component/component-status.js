@@ -1,19 +1,40 @@
-import AUlinkList from '../../_uikit/layout/link-list';
-import AUheading from '../../_uikit/layout/headings';
-import PropTypes from 'prop-types';
-import GetData from './../getData';
-import Crypto from 'crypto';
-import React from 'react';
+import AUlinkList                     from '../../_uikit/layout/link-list';
+import AUheading                      from '../../_uikit/layout/headings';
+import PropTypes                      from 'prop-types';
+import GetData, { GetComponentValue } from './../getData';
+import Crypto                         from 'crypto';
+import React                          from 'react';
 
 
 /**
  * The Component Status
  */
 const ComponentStatus = ({ module, _ID, _relativeURL, version, _parseYaml }) => {
+
 	const component = GetData({
 		filter: ( key, COMPONENTS ) => COMPONENTS[ key ].ID === module,
 		yaml: _parseYaml,
-	});
+	})[ 0 ];
+
+	/**
+	 * Create an object of link ( id ) and text ( name ) based off an array of values inside the component
+	 * @param {*} items
+	 */
+	const NameIdMenu = ( value ) => {
+		const menuItems = [];
+
+		component[ value ].map( item => {
+			menuItems.push({
+				link: `/components/${ item }`,
+				text: GetComponentValue( item, 'name', _parseYaml )
+			})
+		})
+
+		return menuItems;
+	}
+
+	const tags = NameIdMenu( 'tags' );
+	const dependencies = NameIdMenu( 'dependencies' );
 
 	return (
 		<div className="componentStatus">
@@ -29,46 +50,20 @@ const ComponentStatus = ({ module, _ID, _relativeURL, version, _parseYaml }) => 
 
 				<dt>Tags</dt>
 				<dd>
-					<AUlinkList className="componentStatus__definition__list" inline items={[
-						{
-							link: _relativeURL( '/components/buttons', _ID ),
-							text: 'Buttons',
-						},
-						{
-							link: _relativeURL( '/components/component', _ID ),
-							text: 'Component',
-						},
-						{
-							link: _relativeURL( '/components/fomrs', _ID ),
-							text: 'Forms',
-						},
-						{
-							link: _relativeURL( '/components/cta', _ID ),
-							text: 'CTA',
-						},
-					]} inline/>
+					<AUlinkList className="componentStatus__definition__list" inline items={ tags } inline/>
 				</dd>
 
 				<dt>Requires</dt>
 				<dd>
-					<AUlinkList className="componentStatus__definition__list" inline items={[
-						{
-							link: _relativeURL( '/components/core', _ID ),
-							text: 'Core',
-						},
-						{
-							link: _relativeURL( '/components/body', _ID ),
-							text: 'Body',
-						},
-					]} inline/>
+					<AUlinkList className="componentStatus__definition__list" inline items={ dependencies } inline/>
 				</dd>
 
 				<dt>Contributors</dt>
 				<dd>
 					<ul className="componentStatus__definition__list componentStatus__definition__list--images js-more-wrapper">
 						{
-							Object.keys( component[ 0 ].contributors ).map( ( user, i ) => {
-								const contributor = component[ 0 ].contributors[ user ];
+							Object.keys( component.contributors ).map( ( user, i ) => {
+								const contributor = component.contributors[ user ];
 
 								return (
 									<li className="componentStatus__definition__list__item" key={ i }>

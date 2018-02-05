@@ -213,8 +213,8 @@ buttons:
     - active: 7
     - something: something
   tags:
-    - inputs
-    - links
+    - text-inputs
+    - body
   related:
     - cta-link
     - text-inputs
