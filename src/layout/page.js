@@ -43,7 +43,10 @@ const Page = ({
 					<main id="content" className="main au-body container-fluid">
 						<div className="row">
 							<div className="col-md-12">
-								<h1 className={ pagetitle === 'Homepage' ? 'sronly' : '' }>{ pagetitle }</h1>
+								<h1 className={
+									pagetitle === 'Homepage' || pagetitle === 'Error'
+										? 'sronly'
+										: '' }>{ pagetitle }</h1>
 								{ main }
 							</div>
 						</div>
