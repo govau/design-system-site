@@ -1,9 +1,9 @@
-import AUlinkList                     from '../../_uikit/layout/link-list';
-import AUheading                      from '../../_uikit/layout/headings';
-import PropTypes                      from 'prop-types';
-import GetData, { GetComponentValue } from './../getData';
-import Crypto                         from 'crypto';
-import React                          from 'react';
+import AUlinkList                               from '../../_uikit/layout/link-list';
+import AUheading                                from '../../_uikit/layout/headings';
+import PropTypes                                from 'prop-types';
+import GetData, { GetComponentValue, GetState } from './../getData';
+import Crypto                                   from 'crypto';
+import React, { Fragment }                      from 'react';
 
 
 /**
@@ -17,69 +17,129 @@ const ComponentStatus = ({ module, _ID, _relativeURL, version, _parseYaml }) => 
 	})[ 0 ];
 
 	/**
-	 * Create an object of link ( id ) and text ( name ) based off an array of values inside the component
-	 * @param {*} items
+	 * NameIdMenu - Create a menu from a value that matches an array
+	 *
+	 * @param {string} value - The value to match
 	 */
-	const NameIdMenu = ( value ) => {
+	const NameIdMenu = ( value, url = '' ) => {
 		const menuItems = [];
 
 		component[ value ].map( item => {
+
 			menuItems.push({
-				link: `/components/${ item }`,
-				text: GetComponentValue( item, 'name', _parseYaml )
+				link: `/components/${ url }${ item }`,
+				text: GetComponentValue( item, 'name', _parseYaml ) || item.charAt( 0 ).toUpperCase() + item.slice( 1 ).toLowerCase()
 			})
 		})
 
-		return menuItems;
+		return <AUlinkList className="component-status__definition__list" inline items={ menuItems } inline/>;
 	}
 
-	const tags = NameIdMenu( 'tags' );
-	const dependencies = NameIdMenu( 'dependencies' );
+	let dependencies;
+	let tags;
+
+	if( component.tags ) {
+		tags = NameIdMenu( 'tags', 'search/?text=' );
+	}
+	if( component.dependencies ) {
+		dependencies = NameIdMenu( 'dependencies' );
+	}
+
 
 	return (
-		<div className="componentStatus">
+		<div className={ `component-status component-status--${ component.state }` }>
 
-			<AUheading size="sm" level="2" className="componentStatus__title">Released <span className="badge">v{ version }</span></AUheading>
+			<AUheading size="sm" level="2" className="component-status__title">
+				{ GetState( component.state ) }
+				{
+					component.state === 'published'
+						? <span className="badge">v{ version }</span>
+						: null
+				}
+			</AUheading>
 
-			<dl className="componentStatus__definition">
-				<dt>Changelog</dt>
-				<dd><a href={`https://github.com/govau/uikit/blob/master/packages/${ module }/CHANGELOG.md`}>{ version }</a></dd>
-
-				<dt>Installed</dt>
-				<dd><a href="https://www.npmjs.com/package/@gov.au/buttons">{`npm i @gov.au/${ module }`}</a></dd>
-
-				<dt>Tags</dt>
+			<dl className="component-status__definition">
+				<dt>History</dt>
 				<dd>
-					<AUlinkList className="componentStatus__definition__list" inline items={ tags } inline/>
+					{
+						component.state === 'published'
+							?	<a href={`https://github.com/govau/uikit/commits/master/packages/buttons${ module }/CHANGELOG.md`}>View changes</a>
+							:	<span>Not released</span>
+					}
 				</dd>
 
-				<dt>Requires</dt>
-				<dd>
-					<AUlinkList className="componentStatus__definition__list" inline items={ dependencies } inline/>
-				</dd>
+				{
+					component.state === 'published'
+					?
+						<Fragment>
+							<dt>Install</dt>
+							<dd><a href="https://www.npmjs.com/package/@gov.au/buttons">{`npm i @gov.au/${ module }`}</a></dd>
+						</Fragment>
+					:
+						null
+				}
 
-				<dt>Contributors</dt>
-				<dd>
-					<ul className="componentStatus__definition__list componentStatus__definition__list--images js-more-wrapper">
-						{
-							Object.keys( component.contributors ).map( ( user, i ) => {
-								const contributor = component.contributors[ user ];
+				{
+					tags
+						?
+							<Fragment>
+								<dt>Tags</dt>
+								<dd>
+									{ tags }
+								</dd>
+							</Fragment>
+						: null
+				}
+				{
+					dependencies && component.state === 'published'
+						?
+							<Fragment>
+								<dt>Required</dt>
+								<dd>
+									{ dependencies }
+								</dd>
+							</Fragment>
+						: null
+				}
+				{
+					component.contributors && component.state === 'published'
+						?
+							<Fragment>
+								<dt>Contributors</dt>
+								<dd>
+									<ul className="component-status__definition__list component-status__definition__list--images js-more-wrapper">
+										{
+											Object.keys( component.contributors ).map( ( user, i ) => {
+												const contributor = component.contributors[ user ];
 
-								return (
-									<li className="componentStatus__definition__list__item" key={ i }>
-										<a href={ contributor.url } className="avatar">
-											<img
-												src={ contributor.email && `https://www.gravatar.com/avatar/${ Crypto.createHash('md5').update( contributor.email ).digest('hex') }` }
-												alt={`${ contributor.name } avatar picture`}
-												title={ contributor.name }
-											/>
-										</a>
-									</li>
-								);
-							})
-						}
-					</ul>
-				</dd>
+												return (
+													<li className="component-status__definition__list__item" key={ i }>
+														<a href={ contributor.url } className="avatar">
+															<img
+																src={ contributor.email && `https://www.gravatar.com/avatar/${ Crypto.createHash('md5').update( contributor.email ).digest('hex') }` }
+																alt={`${ contributor.name } avatar picture`}
+																title={ contributor.name }
+															/>
+														</a>
+													</li>
+												);
+											})
+										}
+									</ul>
+								</dd>
+							</Fragment>
+						: null
+				}
+				{
+					component.state !== 'published'
+						?
+							<Fragment>
+								<dt>Get involved</dt>
+								<dd><a href={ `https://community.service.gov.au/t/${ module } `}>Discussion</a>, <a href={ `https://github.com/govau/uikit/issues?q=is%3Aissue+is%3Aopen+${ module } `}>Issues</a></dd>
+							</Fragment>
+						:	null
+				}
+
 			</dl>
 
 		</div>

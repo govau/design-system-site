@@ -1,8 +1,9 @@
+import Navigation      from './../navigation';
+import ComponentHeader from './header';
+import ComponentFooter from './footer';
+
 import React, { Fragment } from 'react';
-import Navigation from './../navigation';
 import PropTypes from 'prop-types';
-import Header from './header';
-import Footer from './footer';
 import Path from 'path';
 import Fs from 'fs';
 
@@ -17,7 +18,7 @@ const ComponentPage = ({
 	_pages,
 	_isDocs,
 	header,
-	headernav,
+	component_nav,
 	sidebar,
 	pagetitle,
 	main,
@@ -40,8 +41,6 @@ const ComponentPage = ({
 <![endif]-->
 <script src=${ _relativeURL( '/assets/js/header.js', _ID ) }></script>`;
 
-	const tabs = _parseYaml( Fs.readFileSync( Path.normalize(`${ __dirname }/../../../content/components/tabs.yml`), 'utf8' ) );
-
 	return (
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }} />
@@ -58,28 +57,25 @@ const ComponentPage = ({
 							</div>
 							<div className="col-md-9 content">
 								{
-									headernav !== false &&
+									_ID !== 'components'
+									?
 										<Fragment>
-											<Header
+											<ComponentHeader
 												_relativeURL={ _relativeURL }
 												_parseYaml={ _parseYaml }
 												_pages={ _pages }
 												_ID={ _ID }
 												_isDocs={ _isDocs }
 											/>
-											<Navigation
-												uniqueClass='navigation--component'
-												navigation={ tabs.navigation }
-												_relativeURL={ _relativeURL }
-												_ID={ _ID }
-												_pages={ _pages }
-											/>
+											{ component_nav }
 										</Fragment>
+									: null
 								}
 								{ main }
 								{
-									headernav !== false &&
-										<Footer _ID={ _ID } _parseYaml={ _parseYaml } _relativeURL={ _relativeURL } _pages={ _pages } />
+									_ID !== 'components'
+									? <ComponentFooter _ID={ _ID } _parseYaml={ _parseYaml } _relativeURL={ _relativeURL } _pages={ _pages } />
+									: null
 								}
 							</div>
 						</div>
@@ -88,8 +84,16 @@ const ComponentPage = ({
 
 				{ footer }
 			</div>
-			<script src={ _relativeURL( '/assets/js/prism.js', _ID ) } />
-			<script src={ _relativeURL( '/assets/js/iframe-resizer.js', _ID ) } />
+			{
+				_ID !== 'components'
+				?
+					<Fragment>
+						<script src={ _relativeURL( '/assets/js/prism.js', _ID ) } />
+						<script src={ _relativeURL( '/assets/js/iframe-resizer.js', _ID ) } />
+					</Fragment>
+				: null
+			}
+
 			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
 		</body>
 		</html>

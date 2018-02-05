@@ -7,8 +7,6 @@ btnURL: /community
 btnIcon: community
 tableTH:
   - text: Title
-  - text: State
-    className: component-table--minwidth
   - text: Version
     className: component-table--minwidth
   - text: Contributors

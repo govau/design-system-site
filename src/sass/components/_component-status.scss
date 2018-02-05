@@ -7,11 +7,11 @@
 	}
 }
 
-.componentStatus__definition {
+.component-status__definition {
 	@include AU-clearfix();
 }
 
-.au-body .componentStatus {
+.au-body .component-status {
 	@include AU-fontgrid( xs );
 	@include AU-clearfix();
 
@@ -47,21 +47,21 @@
 }
 
 
-.componentStatus__title {
+.component-status__title {
 	@include AU-space( padding-bottom, 1unit );
 	@include AU-space( border-bottom, solid 0.25unit $AU-color-Action);
 	color: $AU-color-Action;
 }
 
 
-.componentStatus__definition__list {
+.component-status__definition__list {
 	@include AU-fontgrid( xs );
 	list-style: none;
 	margin: 0;
 	padding: 0;
 
 	&.is-small {
-		& > .componentStatus__definition__list__item:nth-child( n + 5 ) {
+		& > .component-status__definition__list__item:nth-child( n + 5 ) {
 			display: none;
 		}
 	}
@@ -75,7 +75,7 @@
 	}
 
 	& > li:last-child:after,
-	&.componentStatus__definition__list--images > li:after {
+	&.component-status__definition__list--images > li:after {
 		display: none;
 	}
 
@@ -84,7 +84,7 @@
 	}
 }
 
-.componentStatus__definition__list__more {
+.component-status__definition__list__more {
 	appearance: none;
 	background: transparent;
 	border: none;
@@ -105,14 +105,14 @@
 
 // Reset AU-body
 .au-body {
-	.componentStatus__definition__list > li {
+	.component-status__definition__list > li {
 		margin-top: 0;
 		margin-left: 0;
 	}
-	.componentStatus__definition__list {
+	.component-status__definition__list {
 		padding-top: 0;
 	}
-	.componentStatus__definition {
+	.component-status__definition {
 		@include AU-space( margin-top, 1.25unit );
 	}
 }

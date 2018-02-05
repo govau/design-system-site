@@ -36,12 +36,35 @@ const GetData = ({ yaml, filter = () => true, object = false }) => {
  *
  * @return {string}             - The data that matches the value and string
  */
-export const GetComponentValue = ( componentID, value, yaml ) =>  {
-	return GetData({
+export const GetComponentValue = ( componentID, value, yaml ) => {
+	const data = GetData({
 		filter: ( key, COMPONENTS ) => COMPONENTS[ key ].ID === componentID,
 		yaml: yaml,
-	})[ 0 ][ value ]
+	})[ 0 ];
+
+	if ( data ) {
+		return data[ value ];
+	}
 };
 
+
+/**
+ * GetState - Gets the relevant title based on state
+ *
+ * @param  {string} state - The state of the component
+ *
+ * @return {string}       - The component state title
+ */
+export const GetState = ( state ) => {
+	if( state === 'published' ) {
+		return 'Released';
+	}
+	else if( state === 'unpublished') {
+		return 'In progress';
+	}
+	else if( state === 'suggestion' ) {
+		return 'Suggestions';
+	}
+}
 
 export default GetData;
