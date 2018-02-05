@@ -5,8 +5,10 @@ if( filters !== null ) {
 
 	filters.insertAdjacentHTML(
 		'beforebegin',
+		'<div class="bar">' +
 		'<button type="button" class="a11y-button js-filter' + ( active == 'deuteranopia' ? ' is-active' : '' ) + '" data-filter="deuteranopia">Deuteranopia</button>' +
-		'<button type="button" class="a11y-button js-filter' + ( active == 'tritanopia' ? ' is-active' : '' ) + '" data-filter="tritanopia">Tritanopia</button>'
+		'<button type="button" class="a11y-button js-filter' + ( active == 'tritanopia' ? ' is-active' : '' ) + '" data-filter="tritanopia">Tritanopia</button>' +
+		'</div>'
 	);
 }
 

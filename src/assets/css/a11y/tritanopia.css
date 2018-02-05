@@ -1,1 +1,1 @@
-html body{filter:url("filters.svg#tritanopia")}
+.filter{filter:url("filters.svg#tritanopia")}

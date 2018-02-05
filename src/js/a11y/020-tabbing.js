@@ -2,7 +2,9 @@ var tabs = document.querySelector( '.js-tabbing' );
 if( tabs !== null ) {
 	tabs.insertAdjacentHTML(
 		'beforebegin',
-		'<button type="button" class="a11y-button js-tabbing-switch">Show tabbing</button>'
+		'<div class="bar">' +
+		'<button type="button" class="a11y-button a11y-button--soft js-tabbing-switch">Show tabbing</button>' +
+		'</div>'
 	);
 }
 
@@ -23,7 +25,7 @@ AddEvent( document.querySelector( '.js-tabbing-switch' ), 'click', function( eve
 });
 
 function tab() {
-	var items = document.querySelector( '.js-tabbing' ).children;
+	var items = document.querySelector( '.js-tabbing-area' ).children;
 	var loop = 0;
 
 	items[ loop ].focus();

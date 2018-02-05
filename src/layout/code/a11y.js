@@ -19,6 +19,7 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, filter, tabbing, examp
 		<title>{ pagetitle } - Australian Government Open Language for Design</title>
 
 		<link rel="shortcut icon" type="image/x-icon" href={ _relativeURL( '/assets/img/favicon.ico', _ID ) } />
+		<link rel="stylesheet" href={ _relativeURL( `/assets/css/a11y/a11y.css`, _ID ) } />
 		{
 			modules.map( ( module, i ) => {
 				if( Fs.existsSync( Path.normalize(`${ __dirname }/../../assets/css/${ module }.css`) ) ) {
@@ -44,7 +45,9 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, filter, tabbing, examp
 			<div className="row">
 				<div className="grids col-md-12">
 					<div className={`${ tabbing ? 'js-tabbing' : '' }${ filter === 'protanopia' || filter === 'deuteranopia' ? 'js-filter' : '' }`}>
-						{ example }
+						<div className={`filter${ tabbing ? ' js-tabbing-area' : '' }`}>
+							{ example }
+						</div>
 					</div>
 				</div>
 			</div>
