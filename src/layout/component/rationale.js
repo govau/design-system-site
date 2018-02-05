@@ -3,7 +3,7 @@ import React from 'react';
 
 
 /**
- * The partial component
+ * The Rationale component
  */
 const Rationale = ({ heading, headinglevel, _body }) => {
 
@@ -22,12 +22,18 @@ const Rationale = ({ heading, headinglevel, _body }) => {
 
 Rationale.propTypes = {
 	/**
-	 * _body: (text)(4)
+	 * heading: Round corners
 	 */
-	_body: PropTypes.node.isRequired,
+	heading: PropTypes.string.isRequired,
 
+	/**
+	 * headinglevel: 3
+	 */
+	headinglevel: PropTypes.number,
 };
 
-Rationale.defaultProps = {};
+Rationale.defaultProps = {
+	headinglevel: 3,
+};
 
 export default Rationale;

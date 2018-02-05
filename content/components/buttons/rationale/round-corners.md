@@ -1,7 +1,6 @@
 ---
 layout: component/rationale.js
 heading: Round corners
-headinglevel: 3
 ---
 
 It was discovered during usability observation that the [soft button](/components/buttons/#secondary-buttons) and text inputs could sometimes be mistaken for layout or design elements. The border-radius was added to interactive elements.
