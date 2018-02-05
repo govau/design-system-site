@@ -102,3 +102,11 @@
 		border-top-right-radius: 0;
 	}
 }
+
+.furnace-npm {
+	@include AU-space( margin-top, 1unit );
+
+	.no-js & {
+		display: none;
+	}
+}

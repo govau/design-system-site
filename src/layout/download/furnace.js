@@ -138,8 +138,10 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 						<button type="submit" className="furnace__buildbox__download au-btn au-btn--block icon icon--dark icon--download">Download</button>
 					</div>
 
-					<h4>NPM</h4>
-					<Code className="furnace-npm js-furnace-code">npm install @gov.au/core</Code>
+					<div className="furnace-npm">
+						<h4>NPM</h4>
+						<Code className="js-furnace-code">npm install @gov.au/core</Code>
+					</div>
 
 				</div>
 			</form>
