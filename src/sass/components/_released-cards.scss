@@ -4,12 +4,12 @@
 
 	.au-card__image {
 		background: $AU-color-Background;
-		padding: 15% 40%;
+		@include AU-space( padding, 1.5unit 40%);
 	}
 
 	.au-card__title {
 		@include AU-fontgrid( sm, heading );
-		@include AU-space( padding-right, 1unit )
+		@include AU-space( padding-right, 1unit );
 		position: relative;
 
 		&:after {
