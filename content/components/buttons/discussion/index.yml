@@ -10,7 +10,7 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - FILL ME
+  - intro.md
 
 footer:
   - /_shared/footer.md
