@@ -18,11 +18,19 @@ AddEvent( document.querySelector( '.js-tabbing-switch' ), 'click', function( eve
 		interval = tab();
 	}
 	else {
-		RemoveClass( $this, 'is-on' );
-		$this.innerText = 'Show tabbing';
-		clearInterval( interval );
+		stopTab( interval, $this );
 	}
 });
+
+AddEvent( document.querySelector( 'body' ), 'keypress', function( event, $this ) {
+	stopTab( interval, document.querySelector( '.js-tabbing-switch' ) )
+});
+
+function stopTab( interval, $this ) {
+	RemoveClass( $this, 'is-on' );
+	$this.innerText = 'Show tabbing';
+	clearInterval( interval );
+}
 
 function tab() {
 	var items = document.querySelectorAll( '.js-focus-me' );
