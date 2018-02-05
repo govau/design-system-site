@@ -6,4 +6,4 @@ headline: Grayscale
 ---
 
 
-How the buttons are viewed with various colour blindnesses
+How the buttons are viewed with total colour blindness.
