@@ -1,21 +1,16 @@
 layout: component/page
-module: buttons
-pagetitle: Buttons accessibility
+module: navigation
+pagetitle: Navigation overview
 
 header:
   - /_shared/header.md
-
-component_nav:
-  - /components/buttons/tabs.md
 
 sidebar:
   - /components/search.md
   - /components/sidebar.md
 
 main:
-  - colorblind.md
-  - grayscale.md
-  - keyboard.md
+  - beep boop hello
 
 footer:
   - /_shared/footer.md

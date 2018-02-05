@@ -213,8 +213,8 @@ buttons:
     - active: 7
     - something: something
   tags:
-    - text-inputs
-    - body
+    - inputs
+    - links
   related:
     - cta-link
     - text-inputs
@@ -913,22 +913,24 @@ text-inputs:
 cards:
   name: Cards
   description: TODO
-  tags:
-    - TODO
   related:
-    - TODO
+    - cta-link
+    - text-inputs
+    - body
   related-articles:
     - TODO
   used-in:
     - TODO
   required: false
-  contributors: 'x, x, x, x'
   state: unpublished
   order: 10
   discussions:
     - open: 2
     - active: 7
     - something: something
+  tags:
+    - Action
+    - Box
   ID: cards    # <-- auto generated, don't change
   version: 0.0.0    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
@@ -966,9 +968,10 @@ navigation:
   name: Navigation
   description: TODO
   tags:
-    - TODO
+    - Mobile menu
+    - Nav
   related:
-    - TODO
+    - link-list
   related-articles:
     - TODO
   used-in:

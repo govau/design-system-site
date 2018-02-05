@@ -24,9 +24,6 @@ const TableInProgress = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _p
 				text: <a href={ `/components/${ component.ID }` }>{ component.name }</a>,
 			},
 			{
-				text: 'In progress'
-			},
-			{
 				text: component.version,
 			},
 			{

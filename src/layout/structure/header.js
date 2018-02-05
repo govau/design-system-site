@@ -27,7 +27,7 @@ const Header = ({ title, mainmenu, _relativeURL, _ID, _pages }) => (
 						<div className="col-md-12">
 
 							<a href={ _relativeURL( '/', _ID ) } className="header__logo">
-								<img className="header__logo--coa" src={ _relativeURL( '/assets/img/coa.png', _ID ) } alt="The Australian Government coat of Arms"/>
+								<img className="header__logo--coa" src={ _relativeURL( '/assets/img/header-logo-agov.png', _ID ) } alt="The Australian Government coat of Arms"/>
 
 								<svg role="img" title="GOLD">
 									<title>The Government Open Language for Design logo</title>
