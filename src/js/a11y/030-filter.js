@@ -7,7 +7,7 @@ if( filters !== null ) {
 	);
 }
 
-AddEvent( document.querySelector( '.js-filter' ), 'click', function( event, $this ) {
+AddEvent( document.querySelectorAll( '.js-filter' ), 'click', function( event, $this ) {
 	var sheet = document.getElementById('filter-stylesheet');
 	var filter = $this.getAttribute('data-filter');
 	var url = sheet.getAttribute( 'data-' + filter );
