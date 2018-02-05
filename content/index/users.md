@@ -20,7 +20,7 @@ tiles:
   - image: assets/img/users-logo-dashboard.png
     alt: Performance Dashboard
 
-  - image: assets/img/users-logo-dta.png
+  - image: assets/img/users-logo-dva.png
     alt: Department of Veterans' Affairs
 ---
 
