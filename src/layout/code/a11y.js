@@ -29,7 +29,11 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, filter, tabbing, examp
 			})
 		}
 		{
-			filter && <link rel="stylesheet" href={ _relativeURL( `/assets/css/a11y/${ filter }.css`, _ID ) } />
+			filter && <link id="filter-stylesheet" rel="stylesheet"
+				data-protanopia={ _relativeURL( `/assets/css/a11y/protanopia.css`, _ID ) }
+				data-deuteranopia={ _relativeURL( `/assets/css/a11y/deuteranopia.css`, _ID ) }
+				href={ _relativeURL( `/assets/css/a11y/${ filter }.css`, _ID ) }
+			/>
 		}
 
 		<script src={ _relativeURL( '/assets/js/header.js', _ID ) } />
@@ -39,7 +43,7 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, filter, tabbing, examp
 		<main className="main au-body container-fluid">
 			<div className="row">
 				<div className="grids col-md-12">
-					<div className="js-tabbing">
+					<div className={`${ tabbing ? 'js-tabbing' : '' }${ filter === 'protanopia' || filter === 'deuteranopia' ? 'js-filter' : '' }`}>
 						{ example }
 					</div>
 				</div>
@@ -47,9 +51,7 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, filter, tabbing, examp
 		</main>
 
 		<script src={ _relativeURL( '/assets/js/iframe-resizer-contentWindow.js', _ID ) } />
-		{
-			tabbing && <script src={ _relativeURL( '/assets/js/tabbing.js', _ID ) } />
-		}
+		<script src={ _relativeURL( '/assets/js/a11y.js', _ID ) } />
 	</body>
 	</html>
 );
