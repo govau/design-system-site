@@ -2,7 +2,7 @@
 layout: error
 btnURL: /
 btntext: Visit our home page
-imgurl: assets/img/error-404.png
+imgurl: /assets/img/error-404.png
 imgalt: apple
 ---
 
