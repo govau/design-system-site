@@ -1,9 +1,12 @@
 var filters = document.querySelector( '.js-filter' );
 if( filters !== null ) {
+	var active = document.getElementById('filter-stylesheet').getAttribute('href').split('/');
+	active = active[ active.length - 1 ].replace('.css', '');
+
 	filters.insertAdjacentHTML(
 		'beforebegin',
-		'<button type="button" class="a11y-button js-filter" data-filter="protanopia">Protanopia</button>' +
-		'<button type="button" class="a11y-button js-filter" data-filter="deuteranopia">Deuteranopia</button>'
+		'<button type="button" class="a11y-button js-filter' + ( active == 'deuteranopia' ? ' is-active' : '' ) + '" data-filter="deuteranopia">Deuteranopia</button>' +
+		'<button type="button" class="a11y-button js-filter' + ( active == 'protanopia' ? ' is-active' : '' ) + '" data-filter="protanopia">Protanopia</button>'
 	);
 }
 
@@ -13,4 +16,11 @@ AddEvent( document.querySelectorAll( '.js-filter' ), 'click', function( event, $
 	var url = sheet.getAttribute( 'data-' + filter );
 
 	sheet.setAttribute('href', url);
+
+	var allButtons = document.querySelectorAll( '.js-filter' );
+	for( var i = 0; i < allButtons.length; i++ ) {
+		RemoveClass( allButtons[ i ], 'is-active' );
+	}
+
+	AddClass( $this, 'is-active' );
 });
