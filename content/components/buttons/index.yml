@@ -6,7 +6,7 @@ header:
   - /_shared/header.md
 
 component_nav:
-  - /components/buttons/tabs.md
+  - tabs.md
 
 sidebar:
   - /components/search.md
