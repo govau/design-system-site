@@ -13,9 +13,9 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - usage.md
-  - props.md
-  - exports.md
+  - react-usage.md
+  - react-props.md
+  - react-exports.md
 
 footer:
   - /_shared/footer.md
