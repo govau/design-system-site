@@ -58,6 +58,7 @@
 	@include AU-space( height, 3.75unit ); // ^^^
 	float: left;
 	display: block;
+	box-shadow: 0px 8px 28px rgba(0,0,0,0.6);
 
 	.header--home & {
 		float: none;
