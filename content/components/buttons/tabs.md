@@ -11,9 +11,11 @@ navigation:
           link: /components/buttons/rationale
         - text: Accessibility
           link: /components/buttons/accessibility
+        - text: Code
+          link: /components/buttons/react
         - text: Discussion
           link: /components/buttons/discussion
     - alignment: right
       items:
         - text: Live demo
-          link: /demo
+          link: /components/buttons/examples/example-primary/

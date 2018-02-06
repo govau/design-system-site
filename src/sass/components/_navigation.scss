@@ -74,6 +74,10 @@
 				& > a {
 					@include AU-space( padding, 1unit 1unit );
 					@include AU-space( border-bottom, 0.5unit solid $AU-color-Background );
+
+					&:focus {
+						position: relative; // fix outline overlap
+					}
 				}
 
 				&.mainmenu--active > a {
