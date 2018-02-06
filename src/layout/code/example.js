@@ -9,7 +9,7 @@ import Fs from 'fs';
  *
  * @disable-docs
  */
-const Example = ({ _ID, _relativeURL, pagetitle, modules, example, fullwidth }) => (
+const Example = ({ _ID, _relativeURL, pagetitle, modules, example, alignment }) => (
 	<html>
 	<head>
 		<meta charSet="utf-8" />
@@ -32,7 +32,7 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, example, fullwidth }) 
 
 		<script src={ _relativeURL( '/assets/js/header.js', _ID ) } />
 	</head>
-	<body className={ `au-body${ fullwidth ? '' : ' center'}` }>
+	<body className={ `au-body${ alignment === 'center' ? ' example-center' : '' }` }>
 		<div className='container'>
 			{ example }
 		</div>
@@ -46,6 +46,8 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, example, fullwidth }) 
 Example.propTypes = {
 };
 
-Example.defaultProps = {};
+Example.defaultProps = {
+	alignment: 'left'
+};
 
 export default Example;
