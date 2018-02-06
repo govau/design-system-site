@@ -5,6 +5,15 @@
 	width: 100%;
 	z-index: 200;
 
+
+	&.au-body.au-body--dark {
+		background: $AU-colordark-Background-darkest;
+
+		@media screen and ( min-width: $nav_breakpoint ) {
+			background: transparent;
+		}
+	}
+
 	// No javascript menu styles
 	.no-js & {
 		@include AU-space( margin-top, 1unit ); // Add margin top because the toggle is display: none
