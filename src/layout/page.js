@@ -44,7 +44,7 @@ const Page = ({
 						<div className="row">
 							<div className="col-md-12">
 								<h1 className={
-									pagetitle === 'Homepage' || pagetitle === 'Error'
+									_ID === 'index' || _ID === '404'
 										? 'sronly'
 										: '' }>{ pagetitle }</h1>
 								{ main }

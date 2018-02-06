@@ -1,6 +1,10 @@
 .header {
 	@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
 
+	p {
+		color: $AU-colordark-Muted;
+	}
+
 	@media screen and ( min-width: $nav_breakpoint ) {
 		position: relative;
 		z-index: 100;
@@ -15,70 +19,137 @@
 	z-index: 300;
 }
 
+// Home page center alignment
+.header--home .header__logo-wrapper {
+	text-align: center;
+	@include AU-space( margin, 2unit auto 2unit );
+}
+
+// GOLD Logo with title
 .header__logo {
 	@include AU-clearfix();
 	@include AU-focus( 'dark' );
 	display: inline-block;
+	text-decoration: none;
 
 	&:hover {
-		text-decoration: underline;
-		text-decoration-skip: ink;
+		color: $AU-colordark-Text;
+
+		.header__title {
+			text-decoration: underline;
+			text-decoration-skip: ink;
+		}
 	}
 
 	@include AU-focus( 'dark' );
+}
 
-	svg {
-		@include AU-space( max-width, 3unit );
-		@include AU-space( margin-right, -3unit );
+// GOLD SVG
+.header__logo svg {
+	@include AU-space( max-width, 3unit );
+	@include AU-space( margin-right, -3unit );
+	@include AU-space( width, 2.5unit );   // IE11 needs height and width
+	@include AU-space( height, 3.75unit ); // ^^^
+	float: left;
+	display: block;
 
-		@include AU-space( width, 2.5unit );   // IE11 needs height and width
-		@include AU-space( height, 3.75unit ); // ^^^
+	.header--home & {
+		float: none;
+		margin: 0 auto;
+		@include AU-space( width, 5unit );
+		@include AU-space( max-width, 5unit );
+		@include AU-space( height, 6.25unit );
+	}
+}
 
+// Government Open Language for Design title
+.header__title {
+	@include AU-space( margin-top, 1.5unit );
+	@include AU-space( margin-left, 3.25unit );
+	@include AU-space( max-width, 15unit );
+	text-align: left;
+	display: block;
+	color: $AU-colordark-Text;
+
+	&.au-display-md {
+		font-weight: bold;
+	}
+
+	.header--home & {
+		margin-left: 0;
+		text-align: center;
+	}
+}
+
+// The coat of arms
+.header__logo--coa {
+	display: block;
+	@include AU-space( margin-bottom, 1unit );
+	@include AU-space( max-width, 10unit );
+}
+
+
+// Responsive styles
+
+@include AU-media( xs ) {
+	.header__logo svg {
+		@include AU-space( max-width, 4unit );
+		@include AU-space( width, 4unit );   // IE11 needs height and width
+		@include AU-space( height, 5unit );  // ^^^
+
+		.header--home & {
+			@include AU-space( width, 6unit );
+			@include AU-space( max-width, 6unit );
+			@include AU-space( height, 7.5unit );
+		}
+	}
+
+	.header__logo--coa {
+		@include AU-space( max-width, 16unit );
+	}
+
+	.header__title {
+		@include AU-fontgrid( lg, heading );
+		@include AU-space( margin-top, 1.5unit );
+		@include AU-space( margin-left, 5unit );
+		@include AU-space( max-width, 15unit );
+
+		.header--home & {
+			@include AU-space( max-width, 20unit );
+			@include AU-fontgrid( xl, heading );
+		}
+	}
+
+	.header--home .header__logo-wrapper {
+		@include AU-space( max-width, 34unit );
+		@include AU-space( margin, 6unit auto 9unit );
+	}
+}
+
+
+@include AU-media( md ) {
+	.header__logo svg {
 		float: left;
 	}
 
 	.header__title {
 		@include AU-space( margin-top, 0.5unit );
 		@include AU-space( margin-left, 4unit );
-		@include AU-space( max-width, 15unit );
 		float: left;
-		font-weight: bold;
-		text-align: left;
-		color: $AU-colordark-Text;
-	}
-}
-
-.header__logo--coa {
-	display: block;
-	@include AU-space( max-width, 6unit );
-}
-
-@include AU-media( xs ) {
-
-	.header__logo {
-		margin-top: 0;
-
-		svg {
-			@include AU-space( max-width, 4unit );
-			@include AU-space( width, 4unit );   // IE11 needs height and width
-			@include AU-space( height, 5unit );  // ^^^
-		}
 	}
 
 	.header__logo--coa {
+		@include AU-space( margin-right, 1.5unit );
+		@include AU-space( padding, 0.5unit 1.5unit 0.5unit 0 );
+		border-right: 1px solid #666;
 		float: left;
-		margin: 0;
-		@include AU-space( margin-right, 1unit );
-	}
+		margin-bottom: 0;
 
-	.header__title {
-		@include AU-fontgrid( lg, heading );
-		@include AU-space( margin-top, 0.5unit );
-		@include AU-space( margin-left, 5unit );
-		@include AU-space( max-width, 15unit );
+		.header--home & {
+			border-right: 0;
+			padding-right: 0;
+			float: none;
+		}
 	}
 }
-
-
-
 
