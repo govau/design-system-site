@@ -15,11 +15,25 @@ const ComponentFooter = ({ _ID, _parseYaml, _relativeURL, _pages }) => {
 		object: true,
 	});
 
+	let _hasRelated = true;
+
+	if ( !MODULES[ _pages[ _ID ].module ].related ) {
+		_hasRelated = false;
+	}
+	else {
+		MODULES[ _pages[ _ID ].module ].related.map( ( item, i ) => {
+			if( MODULES[ item ] === undefined ) {
+				_hasRelated = false;
+				console.error( `Could not find a module for ${ item } when creating a list of related modules` );
+			}
+		})
+	}
+
 	return (
 		<div className="componentfooter au-grid">
 			<div className="row">
 				{
-					MODULES[ _pages[ _ID ].module ].related
+					_hasRelated
 						?
 							<div className="col-sm-12 col-md-6">
 								<h3>Related components</h3>

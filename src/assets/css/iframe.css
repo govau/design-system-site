@@ -1,10 +1,13 @@
 body {
 	padding: 2em;
 	margin: 0 auto;
+}
+
+body.example-center {
 	text-align: center
 }
 
-.example {
+body.example-center .example {
 	display: inline-block;
 	text-align: left;
 }

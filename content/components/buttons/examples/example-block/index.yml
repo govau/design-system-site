@@ -2,5 +2,4 @@ layout: code/example
 modules:
   - body
   - buttons
-fullwidth: true
 example: code.md

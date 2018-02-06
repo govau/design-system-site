@@ -2,4 +2,5 @@ layout: code/example
 modules:
   - body
   - buttons
+alignment: center
 example: code.md
