@@ -172,7 +172,8 @@ const GenerateComponents = ( uikit, components ) => {
 				line.startsWith('  dependencies:') ||
 				line.startsWith('  hasSass: ') ||
 				line.startsWith('  hasJs: ') ||
-				line.startsWith('  hasReact: ')
+				line.startsWith('  hasReact: ') ||
+				line.startsWith('  contributors:')
 			) {
 				return `${ line }    # <-- auto generated, don't change`;
 			}

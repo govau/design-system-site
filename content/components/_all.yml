@@ -10,7 +10,7 @@ core:
   used-in:
     - TODO
   required: true
-  contributors:
+  contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
       url: 'https://dominik-wilkowski.com/'
@@ -47,7 +47,7 @@ accordion:
   used-in:
     - TODO
   required: false
-  contributors:
+  contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
       url: 'https://dominik-wilkowski.com/'
@@ -86,7 +86,7 @@ animate:
   used-in:
     - TODO
   required: false
-  contributors:
+  contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
       url: 'https://dominik-wilkowski.com/'
@@ -117,7 +117,7 @@ body:
   used-in:
     - TODO
   required: false
-  contributors:
+  contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
       url: 'https://dominik-wilkowski.com/'
@@ -155,7 +155,7 @@ breadcrumbs:
   used-in:
     - TODO
   required: false
-  contributors:
+  contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
       url: 'https://dominik-wilkowski.com/'
@@ -193,7 +193,7 @@ buttons:
   version: 1.0.0-next.6    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
-  contributors:
+  contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
       url: 'https://dominik-wilkowski.com/'
@@ -240,7 +240,7 @@ callout:
   used-in:
     - TODO
   required: false
-  contributors:
+  contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
       url: 'https://dominik-wilkowski.com/'
@@ -278,7 +278,7 @@ control-input:
   used-in:
     - TODO
   required: false
-  contributors:
+  contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
       url: 'https://dominik-wilkowski.com/'
@@ -316,7 +316,7 @@ cta-link:
   used-in:
     - TODO
   required: false
-  contributors:
+  contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
       url: 'https://dominik-wilkowski.com/'
@@ -354,7 +354,7 @@ direction-links:
   used-in:
     - TODO
   required: false
-  contributors:
+  contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
       url: 'https://dominik-wilkowski.com/'
@@ -392,7 +392,7 @@ footer:
   used-in:
     - TODO
   required: false
-  contributors:
+  contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
       url: 'https://dominik-wilkowski.com/'
@@ -430,7 +430,7 @@ grid-12:
   used-in:
     - TODO
   required: false
-  contributors:
+  contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
       url: 'https://dominik-wilkowski.com/'
@@ -462,7 +462,7 @@ header:
   used-in:
     - TODO
   required: false
-  contributors:
+  contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
       url: 'https://dominik-wilkowski.com/'
@@ -500,7 +500,7 @@ headings:
   used-in:
     - TODO
   required: false
-  contributors:
+  contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
       url: 'https://dominik-wilkowski.com/'
@@ -538,7 +538,7 @@ inpage-nav:
   used-in:
     - TODO
   required: false
-  contributors:
+  contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
       url: 'https://dominik-wilkowski.com/'
@@ -577,7 +577,7 @@ keyword-list:
   used-in:
     - TODO
   required: false
-  contributors:
+  contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
       url: 'https://dominik-wilkowski.com/'
@@ -616,7 +616,7 @@ link-list:
   used-in:
     - TODO
   required: false
-  contributors:
+  contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
       url: 'https://dominik-wilkowski.com/'
@@ -655,7 +655,7 @@ page-alerts:
   used-in:
     - TODO
   required: false
-  contributors:
+  contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
       url: 'https://dominik-wilkowski.com/'
@@ -694,7 +694,7 @@ progress-indicator:
   used-in:
     - TODO
   required: false
-  contributors:
+  contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
       url: 'https://dominik-wilkowski.com/'
@@ -732,7 +732,7 @@ responsive-media:
   used-in:
     - TODO
   required: false
-  contributors:
+  contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
       url: 'https://dominik-wilkowski.com/'
@@ -770,7 +770,7 @@ select:
   used-in:
     - TODO
   required: false
-  contributors:
+  contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
       url: 'https://dominik-wilkowski.com/'
@@ -808,7 +808,7 @@ skip-link:
   used-in:
     - TODO
   required: false
-  contributors:
+  contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
       url: 'https://dominik-wilkowski.com/'
@@ -846,7 +846,7 @@ tags:
   used-in:
     - TODO
   required: false
-  contributors:
+  contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
       url: 'https://dominik-wilkowski.com/'
@@ -884,7 +884,7 @@ text-inputs:
   used-in:
     - TODO
   required: false
-  contributors:
+  contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
       url: 'https://dominik-wilkowski.com/'
@@ -950,7 +950,7 @@ table:
   used-in:
     - TODO
   required: false
-  contributors: 'x, x, x, x'
+  contributors: 'x, x, x, x'    # <-- auto generated, don't change
   state: unpublished
   order: 20
   discussions:
@@ -977,7 +977,7 @@ navigation:
   used-in:
     - TODO
   required: false
-  contributors: 'x, x, x, x'
+  contributors: 'x, x, x, x'    # <-- auto generated, don't change
   state: suggestion
   order: 10
   discussions:
