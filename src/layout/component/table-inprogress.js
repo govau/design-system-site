@@ -1,6 +1,7 @@
 import AUbutton            from '../../_uikit/layout/buttons';
-import Table               from './../table';
-import GetData             from './../getData';
+import Table               from '../table';
+import GetData             from '../getData';
+import Contributors        from './contributors';
 
 import React, { Fragment } from 'react';
 import PropTypes           from 'prop-types';
@@ -27,7 +28,7 @@ const TableInProgress = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _p
 				text: component.version,
 			},
 			{
-				text: component.contributors,
+				text: <Contributors contributors={ component.contributors } />,
 			},
 		];
 	}

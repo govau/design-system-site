@@ -1,10 +1,10 @@
 import AUlinkList                               from '../../_uikit/layout/link-list';
 import AUheading                                from '../../_uikit/layout/headings';
-import PropTypes                                from 'prop-types';
-import GetData, { GetComponentValue, GetState } from './../getData';
-import Crypto                                   from 'crypto';
-import React, { Fragment }                      from 'react';
+import Contributors                             from './contributors';
+import GetData, { GetComponentValue, GetState } from '../getData';
 
+import React, { Fragment }                      from 'react';
+import PropTypes                                from 'prop-types';
 
 /**
  * The Component Status
@@ -109,25 +109,7 @@ const ComponentStatus = ({ module, _ID, _relativeURL, _parseYaml }) => {
 							<Fragment>
 								<dt>Contributors</dt>
 								<dd>
-									<ul className="component-status__definition__list component-status__definition__list--images js-more-wrapper">
-										{
-											Object.keys( component.contributors ).map( ( user, i ) => {
-												const contributor = component.contributors[ user ];
-
-												return (
-													<li className="component-status__definition__list__item" key={ i }>
-														<a href={ contributor.url } className="avatar">
-															<img
-																src={ contributor.email && `https://www.gravatar.com/avatar/${ Crypto.createHash('md5').update( contributor.email ).digest('hex') }` }
-																alt={`${ contributor.name } avatar picture`}
-																title={ contributor.name }
-															/>
-														</a>
-													</li>
-												);
-											})
-										}
-									</ul>
+									<Contributors contributors={ component.contributors } />
 								</dd>
 							</Fragment>
 						: null
