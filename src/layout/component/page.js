@@ -15,6 +15,7 @@ const ComponentPage = ({
 	_ID,
 	_relativeURL,
 	_parseYaml,
+	_parseMD,
 	_pages,
 	_isDocs,
 	header,
@@ -63,6 +64,7 @@ const ComponentPage = ({
 											<ComponentHeader
 												_relativeURL={ _relativeURL }
 												_parseYaml={ _parseYaml }
+												_parseMD={ _parseMD }
 												_pages={ _pages }
 												_ID={ _ID }
 												_isDocs={ _isDocs }

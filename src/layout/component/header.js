@@ -9,7 +9,7 @@ import React from 'react';
  *
  * @disable-docs
  */
-const ComponentHeader = ({ _relativeURL, _parseYaml, _pages, _ID, _isDocs }) => {
+const ComponentHeader = ({ _relativeURL, _parseYaml, _parseMD, _pages, _ID, _isDocs }) => {
 
 	const MODULE = GetData({
 		filter: ( key, COMPONENTS ) => key === _pages[ _ID ].module,
@@ -24,7 +24,7 @@ const ComponentHeader = ({ _relativeURL, _parseYaml, _pages, _ID, _isDocs }) => 
 					{ MODULE.name }
 				</h1>
 
-				<div className="componentheader__body abstract">{ MODULE.description }</div>
+				<div className="componentheader__body abstract">{ _parseMD( MODULE.description ) }</div>
 			</div>
 			<div className="componentheader__statusbox col-sm-offset-1 col-sm-5">
 				<ComponentStatus
