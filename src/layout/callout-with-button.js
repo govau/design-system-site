@@ -18,12 +18,25 @@ const CalloutWithButton = ({ btntext, btnurl, btntype, _body }) => (
 );
 
 CalloutWithButton.propTypes = {
+	/**
+	 * btntext: Read more
+	 */
+	btntext: PropTypes.string,
 
+	/**
+	 * btnurl: http://google.com
+	 */
+	btnurl: PropTypes.string.isRequired,
+
+	/**
+	 * btntype: secondary
+	 */
+	btntype: PropTypes.string,
 };
 
 CalloutWithButton.defaultProps = {
 	btntype: "secondary",
-	btntext: "read more",
+	btntext: "Read more",
 };
 
 export default CalloutWithButton;
