@@ -1,4 +1,4 @@
-.discussionIntro {
+.calloutWithButton {
 	@include AU-clearfix(); //not using .row because of it's -margins
 	@include AU-space( margin-top, 2unit );
 	@include AU-space( padding, 2unit );
@@ -14,11 +14,11 @@
 	}
 }
 
-.discussionIntro__text {
+.calloutWithButton__text {
 	@include AU-fontgrid( md );
 }
 
-.discussionIntro__buttons {
+.calloutWithButton__buttons {
 	@include AU-space( margin-top, 1.5unit );
 
 	@include AU-media( sm ){

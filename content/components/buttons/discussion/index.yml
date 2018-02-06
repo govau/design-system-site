@@ -13,7 +13,8 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - intro.md
+  - community-intro.md
+  - github-intro.md
 
 footer:
   - /_shared/footer.md
