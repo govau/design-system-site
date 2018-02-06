@@ -12,7 +12,7 @@ navigation:
         - text: Accessibility
           link: /components/buttons/accessibility
         - text: Code
-          link: /components/buttons/react
+          link: /components/buttons/code
         - text: Discussion
           link: /components/buttons/discussion
     - alignment: right
