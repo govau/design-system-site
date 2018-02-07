@@ -1,6 +1,7 @@
 layout: code/a11y
 modules:
   - body
-  - buttons
+  - animate
+  - accordion
 example: ../code.md
 tabbing: true

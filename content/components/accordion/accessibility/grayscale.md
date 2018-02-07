@@ -6,4 +6,4 @@ headline: Grayscale
 ---
 
 
-How the buttons are viewed with total colour blindness.
+How the accordion is viewed with total colour blindness.
