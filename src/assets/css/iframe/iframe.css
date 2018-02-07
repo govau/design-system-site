@@ -13,6 +13,6 @@ body.example--center {
 .example .content .au-body.au-body--dark {
 	margin: 16px -32px -32px -32px;
 	margin: 1rem -2rem -2rem -2rem;
-	padding: 16px 32px 32px;
-	padding: 1rem 2rem 2rem;
+	padding: 16px 32px;
+	padding: 1rem 2rem;
 }
