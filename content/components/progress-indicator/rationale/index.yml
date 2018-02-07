@@ -1,12 +1,12 @@
 layout: component/page
-module: buttons
+module: progress-indicator
 pagetitle: Buttons Rationale
 
 header:
   - /_shared/header.md
 
 component_nav:
-  - ../tabs.md
+  - /components/_tabs.md
 
 sidebar:
   - /components/search.md
