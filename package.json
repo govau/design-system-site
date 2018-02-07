@@ -12,7 +12,7 @@
 		"build:css": "npm run build:sass && npm run build:autoprefix",
 		"build:js-a11y": "concat-cli -f src/js/a11y/*.js -o src/assets/js/a11y.js",
 		"build:js-header": "concat-cli -f src/js/header/*.js -o src/assets/js/header.js",
-		"build:js-footer": "concat-cli -f src/js/footer/**/*.js src/js/footer/*.js -o src/assets/js/footer.js",
+		"build:js-footer": "concat-cli -f src/js/footer/*.js -o src/assets/js/footer.js",
 		"build:uglify": "uglifyjs src/assets/js/header.js --compres --output src/assets/js/header.js && uglifyjs src/assets/js/footer.js --compres --output src/assets/js/footer.js",
 		"build:js": "mkdir -p src/assets/js/ && npm run build:js-a11y && npm run build:js-header && npm run build:js-footer && npm run build:uglify",
 		"build:assets": "npm run build:css && npm run build:autoprefix && npm run build:js",
@@ -109,7 +109,7 @@
 		"ignore": [],
 		"css": {
 			"modules": true,
-			"location": "src/assets/css/",
+			"location": "src/assets/css/_uikit",
 			"name": false
 		},
 		"sass": {
@@ -117,10 +117,9 @@
 			"name": "_uikit.scss"
 		},
 		"js": {
-			"modules": false,
-			"location": "src/js/footer/_uikit/",
-			"name": "uikit.js",
-			"minified": false
+			"modules": true,
+			"location": "src/assets/js/_uikit",
+			"minified": true
 		},
 		"react": {
 			"location": "src/_uikit/layout/"
