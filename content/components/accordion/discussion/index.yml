@@ -1,0 +1,20 @@
+layout: component/page
+module: accordion
+pagetitle: Accordion discussion
+
+header:
+  - /_shared/header.md
+
+component_nav:
+  - /components/accordion/tabs.md
+
+sidebar:
+  - /components/search.md
+  - /components/sidebar.md
+
+main:
+  - community-intro.md
+  - github-intro.md
+
+footer:
+  - /_shared/footer.md

@@ -1,0 +1,21 @@
+layout: component/page
+module: accordion
+pagetitle: Accordion accessibility
+
+header:
+  - /_shared/header.md
+
+component_nav:
+  - /components/accordion/tabs.md
+
+sidebar:
+  - /components/search.md
+  - /components/sidebar.md
+
+main:
+  - colorblind.md
+  - grayscale.md
+  - keyboard.md
+
+footer:
+  - /_shared/footer.md

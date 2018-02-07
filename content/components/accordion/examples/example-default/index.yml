@@ -1,0 +1,5 @@
+layout: code/example
+modules:
+  - body
+  - accordion
+example: code.md

@@ -1,0 +1,6 @@
+layout: code/a11y
+modules:
+  - body
+  - buttons
+example: ../code.md
+filter: deuteranopia

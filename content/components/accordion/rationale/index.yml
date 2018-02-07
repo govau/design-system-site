@@ -1,0 +1,20 @@
+layout: component/page
+module: accordion
+pagetitle: Accordion Rationale
+
+header:
+  - /_shared/header.md
+
+component_nav:
+  - /components/accordion/tabs.md
+
+sidebar:
+  - /components/search.md
+  - /components/sidebar.md
+
+main:
+  - underline-on-hover.md
+  - round-corners.md
+
+footer:
+  - /_shared/footer.md
