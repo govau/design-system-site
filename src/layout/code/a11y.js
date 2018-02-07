@@ -9,55 +9,62 @@ import Fs from 'fs';
  *
  * @disable-docs
  */
-const Example = ({ _ID, _relativeURL, pagetitle, modules, filter, tabbing, example }) => (
-	<html>
-	<head>
-		<meta charSet="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta httpEquiv="x-ua-compatible" content="ie=edge" />
+const Example = ({ _ID, _relativeURL, pagetitle, modules, filter, tabbing, example }) => {
 
-		<title>{ pagetitle } - Australian Government Open Language for Design</title>
+	const headContent = `
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
 
-		<link rel="shortcut icon" type="image/x-icon" href={ _relativeURL( '/assets/img/favicon.ico', _ID ) } />
-		<link rel="stylesheet" href={ _relativeURL( `/assets/css/a11y/a11y.css`, _ID ) } />
-		{
-			modules.map( ( module, i ) => {
-				if( Fs.existsSync( Path.normalize(`${ __dirname }/../../assets/css/${ module }.css`) ) ) {
-					return (
-						<link key={ i } rel="stylesheet" href={ _relativeURL( `/assets/css/${ module }.css`, _ID ) } />
-					);
-				}
-			})
-		}
-		{
-			filter && <link id="filter-stylesheet" rel="stylesheet"
-				data-deuteranopia={ _relativeURL( `/assets/css/a11y/deuteranopia.css`, _ID ) }
-				data-tritanopia={ _relativeURL( `/assets/css/a11y/tritanopia.css`, _ID ) }
-				href={ _relativeURL( `/assets/css/a11y/${ filter }.css`, _ID ) }
-			/>
-		}
+	<title>${ pagetitle } - Australian Government Open Language for Design</title>
 
-		<script src={ _relativeURL( '/assets/js/header.js', _ID ) } />
-	</head>
-	<body className="au-grid">
+	<link rel="shortcut icon" type="image/x-icon" href=${ _relativeURL( '/assets/img/favicon.ico', _ID ) }>
+	<link rel="stylesheet" href=${ _relativeURL( '/assets/css/iframe/iframe.css', _ID ) } />
+	<link rel="stylesheet" href=${ _relativeURL( '/assets/css/_uikit/uikit.min.css', _ID ) } />
+	<link rel="stylesheet" href=${ _relativeURL( `/assets/css/a11y/a11y.css`, _ID ) } />
 
-		<main className="main au-body container-fluid">
-			<div className="row">
-				<div className="grids col-md-12">
-					<div className={`${ tabbing ? 'js-tabbing' : '' }${ filter === 'protanopia' || filter === 'deuteranopia' ? 'js-filter' : '' }`}>
-						<div className={`filter${ tabbing ? ' js-tabbing-area' : '' }`}>
-							{ example }
+	${
+		filter !== undefined
+			?
+				`<link id="filter-stylesheet" rel="stylesheet" ` +
+					`data-deuteranopia=${ _relativeURL( `/assets/css/a11y/deuteranopia.css`, _ID ) } ` +
+					`data-tritanopia=${ _relativeURL( `/assets/css/a11y/tritanopia.css`, _ID ) } ` +
+					`href=${ _relativeURL( `/assets/css/a11y/${ filter }.css`, _ID ) }` +
+				` />`
+			: ''
+	}
+
+	<!--[if lte IE 9]>
+		<script src="${ _relativeURL( '/assets/js/html5shiv.js', _ID ) }"></script>
+		<script src="${ _relativeURL( '/assets/js/respond.js', _ID ) }"></script>
+	<![endif]-->
+
+	<script src=${ _relativeURL( '/assets/js/header.js', _ID ) }></script>`;
+
+	return (
+		<html>
+		<head dangerouslySetInnerHTML={{ __html: headContent }}  />
+		<body className="au-grid">
+
+			<main className="main au-body container-fluid">
+				<div className="row">
+					<div className="grids col-md-12">
+						<div className={`${ tabbing ? 'js-tabbing' : '' }${ filter === 'protanopia' || filter === 'deuteranopia' ? 'js-filter' : '' }`}>
+							<div className={`filter${ tabbing ? ' js-tabbing-area' : '' }`}>
+								{ example }
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</main>
+			</main>
 
-		<script src={ _relativeURL( '/assets/js/iframe-resizer-contentWindow.js', _ID ) } />
-		<script src={ _relativeURL( '/assets/js/a11y.js', _ID ) } />
-	</body>
-	</html>
-);
+			<script src={ _relativeURL( '/assets/js/iframe-resizer-contentWindow.js', _ID ) } />
+			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
+			<script src={ _relativeURL( '/assets/js/a11y.js', _ID ) } />
+		</body>
+		</html>
+		)
+};
 
 Example.propTypes = {
 };

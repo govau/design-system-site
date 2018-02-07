@@ -40,7 +40,7 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, example, alignment, th
 				{ example }
 			</div>
 
-			<script src={ _relativeURL( '/assets/js/_uikit/uikit.min.js', _ID ) } />
+			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
 			<script src={ _relativeURL( '/assets/js/iframe-resizer-contentWindow.js', _ID ) } />
 		</body>
 		</html>

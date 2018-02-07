@@ -118,9 +118,9 @@
 		},
 		"js": {
 			"modules": false,
-			"location": "src/assets/js/_uikit",
-			"minified": true,
-			"name": "uikit.min.js"
+			"location": "src/js/footer/",
+			"minified": false,
+			"name": "000-uikit.js"
 		},
 		"react": {
 			"location": "src/_uikit/layout/"
