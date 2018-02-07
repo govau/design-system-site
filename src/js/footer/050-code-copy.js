@@ -2,11 +2,10 @@ var codeComponents = document.querySelectorAll( '.js-copy' );
 
 
 for( var i = 0; i < codeComponents.length; i++ ) {
-	var button = document.createElement( 'button' );
-	button.setAttribute( 'type', 'button' );
-	button.setAttribute( 'class', 'btn-copy au-btn icon icon--copy js-copy-btn' );
-	button.innerHTML = 'Copy';
-	codeComponents[ i ].appendChild( button );
+	codeComponents[ i ].insertAdjacentHTML(
+		'beforeend',
+		'<button type="button" class="btn-copy au-btn icon icon--copy js-copy-btn">Copy</button>'
+	);
 }
 
 /**
