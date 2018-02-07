@@ -14,7 +14,6 @@ sidebar:
 
 main:
   - default.md
-  - dark.md
 
 footer:
   - /_shared/footer.md

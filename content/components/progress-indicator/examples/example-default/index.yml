@@ -1,5 +1,2 @@
 layout: code/example
-modules:
-  - body
-  - progress-indicator
 example: code.md
