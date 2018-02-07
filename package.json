@@ -117,7 +117,7 @@
 			"name": "_uikit.scss"
 		},
 		"js": {
-			"modules": true,
+			"modules": false,
 			"location": "src/assets/js/_uikit",
 			"minified": true,
 			"name": "uikit.min.js"
