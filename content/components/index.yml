@@ -1,4 +1,5 @@
 layout: component/page
+module: buttons
 pagetitle: Components
 
 header:

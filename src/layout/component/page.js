@@ -17,6 +17,7 @@ const ComponentPage = ({
 	_parseYaml,
 	_parseMD,
 	_pages,
+	_parents,
 	_isDocs,
 	header,
 	component_nav,
@@ -65,6 +66,7 @@ const ComponentPage = ({
 												_relativeURL={ _relativeURL }
 												_parseYaml={ _parseYaml }
 												_parseMD={ _parseMD }
+												_parents={ _parents }
 												_pages={ _pages }
 												_ID={ _ID }
 												_isDocs={ _isDocs }
@@ -76,7 +78,7 @@ const ComponentPage = ({
 								{ main }
 								{
 									_ID !== 'components'
-									? <ComponentFooter _ID={ _ID } _parseYaml={ _parseYaml } _relativeURL={ _relativeURL } _pages={ _pages } />
+									? <ComponentFooter _ID={ _ID } _parseYaml={ _parseYaml } _relativeURL={ _relativeURL } _pages={ _pages } _parents= { _parents } />
 									: null
 								}
 							</div>

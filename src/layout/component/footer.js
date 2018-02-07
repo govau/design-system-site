@@ -1,3 +1,4 @@
+import GetModule from './../getModule';
 import PropTypes from 'prop-types';
 import GetData from './../getData';
 import React from 'react';
@@ -8,7 +9,8 @@ import React from 'react';
  *
  * @disable-docs
  */
-const ComponentFooter = ({ _ID, _parseYaml, _relativeURL, _pages }) => {
+const ComponentFooter = ({ _ID, _parseYaml, _relativeURL, _pages, _parents }) => {
+	const module = GetModule( _parents, _pages, _ID );
 
 	const MODULES = GetData({
 		yaml: _parseYaml,
@@ -17,11 +19,11 @@ const ComponentFooter = ({ _ID, _parseYaml, _relativeURL, _pages }) => {
 
 	let _hasRelated = true;
 
-	if ( !MODULES[ _pages[ _ID ].module ].related ) {
+	if ( !MODULES[ module ].related ) {
 		_hasRelated = false;
 	}
 	else {
-		MODULES[ _pages[ _ID ].module ].related.map( ( item, i ) => {
+		MODULES[ module ].related.map( ( item, i ) => {
 			if( MODULES[ item ] === undefined ) {
 				_hasRelated = false;
 				console.error( `Could not find a module for ${ item } when creating a list of related modules` );
@@ -39,7 +41,7 @@ const ComponentFooter = ({ _ID, _parseYaml, _relativeURL, _pages }) => {
 								<h3>Related components</h3>
 								<ul>
 									{
-										MODULES[ _pages[ _ID ].module ].related.map( ( item, i ) => (
+										MODULES[ module ].related.map( ( item, i ) => (
 											<li key={ i }>
 												<a href={ _relativeURL( `/components/${ MODULES[ item ].ID }`, _ID) }>{ MODULES[ item ].name }</a>
 											</li>
@@ -50,13 +52,13 @@ const ComponentFooter = ({ _ID, _parseYaml, _relativeURL, _pages }) => {
 						: null
 				}
 				{
-					MODULES[ _pages[ _ID ].module ].status === 'published'
+					MODULES[ module ].status === 'published'
 						?
 							<div className="col-sm-6 col-md-3">
 								<h3>Dependencies</h3>
 								<ul>
 									{
-										MODULES[ _pages[ _ID ].module ].dependencies.map( ( item, i ) => (
+										MODULES[ module ].dependencies.map( ( item, i ) => (
 											<li key={ i }>
 												<a href={ _relativeURL( `/components/${ MODULES[ item ].ID }`, _ID) }>{ MODULES[ item ].name }</a>
 											</li>
@@ -70,16 +72,16 @@ const ComponentFooter = ({ _ID, _parseYaml, _relativeURL, _pages }) => {
 					<h3>Feedback</h3>
 					<ul>
 						<li>
-							<a className="icon icon--community" href={`TODO-discourse///${ MODULES[ _pages[ _ID ].module ].ID }`}>Community discussion</a>
+							<a className="icon icon--community" href={`TODO-discourse///${ MODULES[ module ].ID }`}>Community discussion</a>
 						</li>
 						<li>
 							<a className="icon icon--github" href="https://github.com/govau/uikit/issues/new">Report an issue</a>
 						</li>
 						{
-							MODULES[ _pages[ _ID ].module ].status === 'published'
+							MODULES[ module ].status === 'published'
 								?
 									<li>
-										<a className="icon icon--github" href={`https://github.com/govau/uikit/tree/master/packages/${ MODULES[ _pages[ _ID ].module ].ID }`}>
+										<a className="icon icon--github" href={`https://github.com/govau/uikit/tree/master/packages/${ MODULES[ module ].ID }`}>
 											Code Contribution
 										</a>
 									</li>

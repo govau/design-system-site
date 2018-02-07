@@ -1,19 +1,22 @@
 import React, { Fragment } from 'react';
 import Navigation from '../navigation';
+import GetModule from './../getModule';
 import PropTypes from 'prop-types';
 
 
 /**
  * The navigation tabs component
  */
-const NavigationTabs = ({ navigation, _body, _relativeURL, _ID, _pages }) => {
+const NavigationTabs = ({ navigation, _body, _relativeURL, _ID, _pages, _parents }) => {
+	const module = GetModule( _parents, _pages, _ID );
+
 	navigation.sections = navigation.sections.map( section => {
 		return {
 			alignment: section.alignment,
 			items: section.items.map( item => {
 				return {
 					text: item.text,
-					link: `/components/${ _pages[ _ID ].module }${ item.link === '/' ? '' : item.link }`,
+					link: `/components/${ module }${ item.link === '/' ? '' : item.link }`,
 				};
 			}),
 		};

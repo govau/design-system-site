@@ -1,5 +1,5 @@
-import Crypto                                   from 'crypto';
-import React, { Fragment }                      from 'react';
+import Crypto              from 'crypto';
+import React, { Fragment } from 'react';
 
 
 /**
@@ -33,6 +33,5 @@ const Contributors = ({ contributors }) => (
 		}
 	</ul>
 );
-
 
 export default Contributors;

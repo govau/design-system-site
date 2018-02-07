@@ -1,4 +1,4 @@
-import { SETTINGS } from 'cuttlebelle/dist/settings.js';
+import { SETTINGS } from 'cuttlebelle/dist/settings';
 import Code from '../code';
 
 import React, { Fragment } from 'react';

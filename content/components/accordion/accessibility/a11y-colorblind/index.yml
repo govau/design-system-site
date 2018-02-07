@@ -1,7 +1,3 @@
 layout: code/a11y
-modules:
-  - body
-  - animate
-  - accordion
 example: ../code.md
 filter: deuteranopia

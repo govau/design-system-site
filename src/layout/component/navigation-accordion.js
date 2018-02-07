@@ -1,6 +1,7 @@
+import AUlinkList          from '../../_uikit/layout/link-list';
+import GetModule           from './../getModule';
 import { CreateLink }      from '../navigation';
 import GetData             from './../getData';
-import AUlinkList          from '../../_uikit/layout/link-list';
 
 import React, { Fragment } from 'react';
 import PropTypes           from 'prop-types';
@@ -9,7 +10,8 @@ import PropTypes           from 'prop-types';
 /**
  * The NavigationAccordion component
  */
-const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
+const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parents, _parseYaml }) => {
+	const module = GetModule( _parents, _pages, _ID );
 
 	const CreateAccordion = ( title, components, id, state, i ) => {
 
@@ -19,7 +21,7 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
 		if( id && state ) {
 
 			const MODULE = GetData({
-				filter: ( key, COMPONENTS ) => key === _pages[ _ID ].module,
+				filter: ( key, COMPONENTS ) => key === module,
 				yaml: _parseYaml
 			})[ 0 ];
 
@@ -81,7 +83,7 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
 			yaml: _parseYaml,
 		});
 
-		accordionMarkup.push( CreateAccordion( componentStates[ state ], components, _pages[ _ID ].module, state, i ) );
+		accordionMarkup.push( CreateAccordion( componentStates[ state ], components, module, state, i ) );
 	});
 
 

@@ -1,6 +1,2 @@
 layout: code/example
-modules:
-  - body
-  - accordion
-  - animate
 example: code.md

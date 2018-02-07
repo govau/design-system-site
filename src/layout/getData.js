@@ -5,7 +5,13 @@ import Fs from 'fs';
 
 
 /**
- * The partial component
+ * Get data from _all.yml
+ *
+ * @param  {Function} yaml   - The _parseYaml function
+ * @param  {Function} filter - A filter function
+ * @param  {Boolean}  object - Whether this is a single object
+ *
+ * @return {object|Array}    - The data from the _all/yml
  *
  * @disable-docs
  */
@@ -27,6 +33,9 @@ const GetData = ({ yaml, filter = () => true, object = false }) => {
 			.map( ( key ) => COMPONENTS[ key ] );
 	}
 };
+
+export default GetData;
+
 
 /**
  * GetComponentValue get a value from the component based on the ID
@@ -66,5 +75,3 @@ export const GetState = ( state ) => {
 		return 'Suggestions';
 	}
 }
-
-export default GetData;
