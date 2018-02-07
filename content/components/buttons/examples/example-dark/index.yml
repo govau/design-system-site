@@ -2,5 +2,6 @@ layout: code/example
 modules:
   - body
   - buttons
+theme: dark
 alignment: center
 example: code.md
