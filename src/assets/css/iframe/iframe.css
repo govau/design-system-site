@@ -1,15 +1,10 @@
-body {
+body.example {
 	padding: 2em;
 	margin: 0 auto;
 	max-width: 800px;
 }
 
-body.example-center {
+body.example--center {
 	text-align: center
-}
-
-body.example-center .example {
-	display: inline-block;
-	text-align: left;
 }
 

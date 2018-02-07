@@ -33,11 +33,11 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, example, alignment, th
 		<script src={ _relativeURL( '/assets/js/header.js', _ID ) } />
 	</head>
 	<body className={
-		`au-body` +
-		`${ alignment === 'center' ? ' example-center' : '' }` +
+		`au-body example` +
+		`${ alignment === 'center' ? ' example--center' : '' }` +
 		`${ theme === 'dark' ? ' au-body--dark' : '' }`
 	}>
-		<div className='container'>
+		<div className='content'>
 			{ example }
 		</div>
 
@@ -45,7 +45,7 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, example, alignment, th
 			modules.map( ( module, i ) => {
 				if( Fs.existsSync( Path.normalize(`${ __dirname }/../../assets/js/_uikit/${ module }.js`) ) ) {
 					return (
-						<link key={ i } rel="stylesheet" href={ _relativeURL( `/assets/js/_uikit/${ module }.js`, _ID ) } />
+						<script key={ i } src={ _relativeURL( `/assets/js/_uikit/${ module }.js`, _ID ) } />
 					);
 				}
 			})
