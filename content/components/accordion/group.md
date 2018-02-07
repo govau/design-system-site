@@ -38,4 +38,4 @@ code:
       </AUaccordion>
 ---
 
-To be added
+A group of accordions that expand and collapse on click. Notice that the accordions only change the one that is clicked.

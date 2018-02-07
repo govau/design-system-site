@@ -6,16 +6,16 @@ layout: section
 
 | name       | type    | description
 |------------|---------|-----------------------------------------------------------------------------
-| `AUbutton` | default | TODO
+| `AUaccordion` | default | The accordion component
 
 ### [md]node_modules import
 
 ```jsx
-import AUbutton from '@gov.au/accordion';
+import AUaccordion from '@gov.au/accordion';
 ```
 
 ### [md]pancake import
 
 ```jsx
-import AUbutton from './accordion.js';
+import AUaccoridon from './accordion.js';
 ```
