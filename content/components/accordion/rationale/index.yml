@@ -13,8 +13,8 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - underline-on-hover.md
-  - round-corners.md
+  - expand-collapse.md
+  - iconography.md
 
 footer:
   - /_shared/footer.md

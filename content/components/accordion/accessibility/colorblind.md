@@ -6,4 +6,4 @@ headline: Colour impairment
 ---
 
 
-How the buttons are viewed with various colour blindnesses
+How the accordion is viewed with various colour blindnesses

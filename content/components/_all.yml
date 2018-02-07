@@ -37,11 +37,15 @@ core:
   ID: core    # <-- auto generated, don't change
 accordion:
   name: Accordion
-  description: TODO
+  description: >-
+    Accordions help users see only the content they need. Accordions expand and
+    collapse sections of content.
   tags:
-    - TODO
+    - Expand
+    - Collapse
   related:
     - body
+    - animate
   related-articles:
     - TODO
   used-in:

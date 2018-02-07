@@ -1,9 +1,29 @@
-<button class="au-btn au-btn--block js-focus-me">primary button</button>
-<button class="au-btn au-btn--block au-btn--secondary js-focus-me">secondary button</button>
-<button class="au-btn au-btn--block au-btn--tertiary js-focus-me">tertiary button</button>
+<section class="au-accordion">
+  <a href="#accordion-default" class="au-accordion__title js-au-accordion" aria-controls="accordion-default" aria-expanded="true" aria-selected="true" role="tab" onclick="return AU.accordion.Toggle( this )">
+    Accordion title
+  </a>
+
+  <div class="au-accordion__body" id="accordion-default" aria-hidden="false">
+    <div class="au-accordion__body-wrapper">
+      <div class="no-a11y-test">
+        Here <a href="#url">is</a> some accordion content
+      </div>
+    </div>
+  </div>
+</section>
 
 <div class="au-body au-body--dark">
-  <button class="au-btn au-btn--block au-btn--dark js-focus-me">primary button</button>
-  <button class="au-btn au-btn--block au-btn--dark au-btn--secondary js-focus-me">secondary button</button>
-  <button class="au-btn au-btn--block au-btn--dark au-btn--tertiary js-focus-me">tertiary button</button>
+  <section class="au-accordion au-accordion--dark">
+    <a href="#accordion-default" class="au-accordion__title js-au-accordion" aria-controls="accordion-default" aria-expanded="true" aria-selected="true" role="tab" onclick="return AU.accordion.Toggle( this )">
+      Accordion title
+    </a>
+
+    <div class="au-accordion__body" id="accordion-default" aria-hidden="false">
+      <div class="au-accordion__body-wrapper">
+        <div class="no-a11y-test">
+          Here <a href="#url">is</a> some accordion content
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
