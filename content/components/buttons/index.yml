@@ -16,7 +16,6 @@ main:
   - primary.md
   - secondary.md
   - tertiary.md
-  - dark.md
   - disabled.md
   - block.md
   - link.md

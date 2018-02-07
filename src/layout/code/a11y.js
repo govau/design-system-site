@@ -44,13 +44,13 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, filter, tabbing, examp
 	return (
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }}  />
-		<body className="au-grid">
+		<body className="au-grid a11y">
 
 			<main className="main au-body container-fluid">
 				<div className="row">
 					<div className="grids col-md-12">
 						<div className={`${ tabbing ? 'js-tabbing' : '' }${ filter === 'protanopia' || filter === 'deuteranopia' ? 'js-filter' : '' }`}>
-							<div className={`filter${ tabbing ? ' js-tabbing-area' : '' }`}>
+							<div className={`content filter${ tabbing ? ' js-tabbing-area' : '' }`}>
 								{ example }
 							</div>
 						</div>

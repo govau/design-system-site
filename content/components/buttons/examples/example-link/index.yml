@@ -1,5 +1,2 @@
 layout: code/example
-modules:
-  - body
-  - buttons
 example: code.md

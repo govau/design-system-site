@@ -9,7 +9,7 @@ import Fs from 'fs';
  *
  * @disable-docs
  */
-const Example = ({ _ID, _relativeURL, pagetitle, modules, example, alignment, theme }) => {
+const Example = ({ _ID, _relativeURL, pagetitle, modules, example, alignment }) => {
 	const headContent = `
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
@@ -31,11 +31,7 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, example, alignment, th
 	return (
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }} />
-		<body className={
-			`au-body example` +
-			`${ alignment === 'center' ? ' example--center' : '' }` +
-			`${ theme === 'dark' ? ' au-body--dark' : '' }`
-		}>
+		<body className={ `au-body example${ alignment === 'center' ? ' example--center' : '' }` }>
 			<div className='content'>
 				{ example }
 			</div>
