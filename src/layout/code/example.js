@@ -9,35 +9,43 @@ import Fs from 'fs';
  *
  * @disable-docs
  */
-const Example = ({ _ID, _relativeURL, pagetitle, modules, example, alignment, theme }) => (
-	<html>
-	<head>
-		<meta charSet="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta httpEquiv="x-ua-compatible" content="ie=edge" />
+const Example = ({ _ID, _relativeURL, pagetitle, modules, example, alignment, theme }) => {
+	const headContent = `
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
 
-		<title>{ pagetitle } - Australian Government Open Language for Design</title>
+	<title>${ pagetitle } - Australian Government Open Language for Design</title>
 
-		<link rel="shortcut icon" type="image/x-icon" href={ _relativeURL( '/assets/img/favicon.ico', _ID ) } />
-		<link rel="stylesheet" href={ _relativeURL( `/assets/css/iframe/iframe.css`, _ID ) } />
-		<link rel="stylesheet" href={ _relativeURL( `/assets/css/_uikit/uikit.min.css`, _ID ) } />
+	<link rel="shortcut icon" type="image/x-icon" href=${ _relativeURL( '/assets/img/favicon.ico', _ID ) }>
+	<link rel="stylesheet" href=${ _relativeURL( '/assets/css/iframe/iframe.css', _ID ) } />
+	<link rel="stylesheet" href=${ _relativeURL( '/assets/css/_uikit/uikit.min.css', _ID ) } />
 
-		<script src={ _relativeURL( '/assets/js/header.js', _ID ) } />
-	</head>
-	<body className={
-		`au-body example` +
-		`${ alignment === 'center' ? ' example--center' : '' }` +
-		`${ theme === 'dark' ? ' au-body--dark' : '' }`
-	}>
-		<div className='content'>
-			{ example }
-		</div>
+	<!--[if lte IE 9]>
+		<script src="${ _relativeURL( '/assets/js/html5shiv.js', _ID ) }"></script>
+		<script src="${ _relativeURL( '/assets/js/respond.js', _ID ) }"></script>
+	<![endif]-->
 
-		<script src={ _relativeURL( '/assets/js/_uikit/uikit.min.js', _ID ) } />
-		<script src={ _relativeURL( '/assets/js/iframe-resizer-contentWindow.js', _ID ) } />
-	</body>
-	</html>
-);
+	<script src=${ _relativeURL( '/assets/js/header.js', _ID ) }></script>`;
+
+	return (
+		<html>
+		<head dangerouslySetInnerHTML={{ __html: headContent }} />
+		<body className={
+			`au-body example` +
+			`${ alignment === 'center' ? ' example--center' : '' }` +
+			`${ theme === 'dark' ? ' au-body--dark' : '' }`
+		}>
+			<div className='content'>
+				{ example }
+			</div>
+
+			<script src={ _relativeURL( '/assets/js/_uikit/uikit.min.js', _ID ) } />
+			<script src={ _relativeURL( '/assets/js/iframe-resizer-contentWindow.js', _ID ) } />
+		</body>
+		</html>
+	)
+};
 
 Example.propTypes = {
 };
