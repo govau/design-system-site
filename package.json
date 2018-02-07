@@ -119,7 +119,8 @@
 		"js": {
 			"modules": true,
 			"location": "src/assets/js/_uikit",
-			"minified": true
+			"minified": true,
+			"name": "uikit.min.js"
 		},
 		"react": {
 			"location": "src/_uikit/layout/"
