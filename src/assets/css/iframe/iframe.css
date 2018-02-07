@@ -1,6 +1,6 @@
 body.example {
-	padding: 32px;
-	padding: 2em;
+	padding: 16px 32px;
+	padding: 1rem 2rem;
 	margin: 0 auto;
 	max-width: 800px;
 }
