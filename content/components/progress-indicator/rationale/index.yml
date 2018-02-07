@@ -1,25 +1,19 @@
 layout: component/page
 module: buttons
-pagetitle: Buttons overview
+pagetitle: Buttons Rationale
 
 header:
   - /_shared/header.md
 
 component_nav:
-  - tabs.md
+  - ../tabs.md
 
 sidebar:
   - /components/search.md
   - /components/sidebar.md
 
 main:
-  - primary.md
-  - secondary.md
-  - tertiary.md
-  - dark.md
-  - disabled.md
-  - block.md
-  - link.md
+  - TODO
 
 footer:
   - /_shared/footer.md

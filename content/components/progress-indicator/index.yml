@@ -1,6 +1,6 @@
 layout: component/page
-module: buttons
-pagetitle: Buttons overview
+module: progress-indicator
+pagetitle: Progress Indicator overview
 
 header:
   - /_shared/header.md
@@ -13,13 +13,8 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - primary.md
-  - secondary.md
-  - tertiary.md
+  - default.md
   - dark.md
-  - disabled.md
-  - block.md
-  - link.md
 
 footer:
   - /_shared/footer.md

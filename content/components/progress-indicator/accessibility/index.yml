@@ -1,25 +1,21 @@
 layout: component/page
-module: buttons
-pagetitle: Buttons overview
+module: progress-indicator
+pagetitle: Buttons accessibility
 
 header:
   - /_shared/header.md
 
 component_nav:
-  - tabs.md
+  - ../tabs.md
 
 sidebar:
   - /components/search.md
   - /components/sidebar.md
 
 main:
-  - primary.md
-  - secondary.md
-  - tertiary.md
-  - dark.md
-  - disabled.md
-  - block.md
-  - link.md
+  - colorblind.md
+  - grayscale.md
+  - keyboard.md
 
 footer:
   - /_shared/footer.md

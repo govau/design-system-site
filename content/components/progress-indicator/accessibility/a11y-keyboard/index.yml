@@ -1,0 +1,6 @@
+layout: code/a11y
+modules:
+  - body
+  - progress-indicator
+example: ../code.md
+tabbing: true

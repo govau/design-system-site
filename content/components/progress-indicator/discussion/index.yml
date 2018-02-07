@@ -1,25 +1,20 @@
 layout: component/page
-module: buttons
-pagetitle: Buttons overview
+module: progress-indicator
+pagetitle: Buttons discussion
 
 header:
   - /_shared/header.md
 
 component_nav:
-  - tabs.md
+  - ../tabs.md
 
 sidebar:
   - /components/search.md
   - /components/sidebar.md
 
 main:
-  - primary.md
-  - secondary.md
-  - tertiary.md
-  - dark.md
-  - disabled.md
-  - block.md
-  - link.md
+  - community-intro.md
+  - github-intro.md
 
 footer:
   - /_shared/footer.md

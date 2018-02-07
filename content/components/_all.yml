@@ -684,11 +684,17 @@ page-alerts:
   hasReact: true    # <-- auto generated, don't change
 progress-indicator:
   name: Progress Indicator
-  description: TODO
+  description: >
+    Progress indicators provide visual feedback to users to let them know and
+    understand their current context at any given time and be assured that they
+    are progressing through the system.
   tags:
-    - TODO
+    - lists
+    - status
+    - indicator
+    - progress
   related:
-    - TODO
+    - link-list
   related-articles:
     - TODO
   used-in:
