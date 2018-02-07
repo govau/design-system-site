@@ -108,9 +108,9 @@
 		"plugins": true,
 		"ignore": [],
 		"css": {
-			"modules": true,
+			"modules": false,
 			"location": "src/assets/css/_uikit",
-			"name": false
+			"name": "uikit.min.css"
 		},
 		"sass": {
 			"location": "src/_uikit/sass/",

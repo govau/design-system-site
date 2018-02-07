@@ -20,15 +20,7 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, example, alignment, th
 
 		<link rel="shortcut icon" type="image/x-icon" href={ _relativeURL( '/assets/img/favicon.ico', _ID ) } />
 		<link rel="stylesheet" href={ _relativeURL( `/assets/css/iframe/iframe.css`, _ID ) } />
-		{
-			modules.map( ( module, i ) => {
-				if( Fs.existsSync( Path.normalize(`${ __dirname }/../../assets/css/_uikit/${ module }.css`) ) ) {
-					return (
-						<link key={ i } rel="stylesheet" href={ _relativeURL( `/assets/css/_uikit/${ module }.css`, _ID ) } />
-					);
-				}
-			})
-		}
+		<link rel="stylesheet" href={ _relativeURL( `/assets/css/_uikit/uikit.min.css`, _ID ) } />
 
 		<script src={ _relativeURL( '/assets/js/header.js', _ID ) } />
 	</head>
@@ -41,15 +33,7 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, example, alignment, th
 			{ example }
 		</div>
 
-		{
-			modules.map( ( module, i ) => {
-				if( Fs.existsSync( Path.normalize(`${ __dirname }/../../assets/js/_uikit/${ module }.js`) ) ) {
-					return (
-						<script key={ i } src={ _relativeURL( `/assets/js/_uikit/${ module }.js`, _ID ) } />
-					);
-				}
-			})
-		}
+		<script src={ _relativeURL( '/assets/js/_uikit/uikit.min.js', _ID ) } />
 		<script src={ _relativeURL( '/assets/js/iframe-resizer-contentWindow.js', _ID ) } />
 	</body>
 	</html>
