@@ -37,7 +37,7 @@ core:
   ID: core    # <-- auto generated, don't change
 accordion:
   name: Accordion
-  description: >-
+  description: >
     Accordions help users see only the content they need. Accordions expand and
     collapse sections of content.
   tags:
@@ -149,11 +149,16 @@ body:
   ID: body    # <-- auto generated, don't change
 breadcrumbs:
   name: Breadcrumbs
-  description: TODO
+  description: >
+    Breadcrumbs are a navigational aid that display a user's location on a
+    website as a row of links, usually located at the top of the page.
+    They show users where they are in the website hierarchy and how to
+    navigate back to previous levels or content.
   tags:
-    - TODO
+    - Trail
+    - Navigation
   related:
-    - TODO
+    - link-list
   related-articles:
     - TODO
   used-in:
@@ -724,7 +729,7 @@ progress-indicator:
     - active: 7
     - something: something
   ID: progress-indicator    # <-- auto generated, don't change
-  version: 2.0.0-next.5    # <-- auto generated, don't change
+  version: 2.0.0-next.7    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
