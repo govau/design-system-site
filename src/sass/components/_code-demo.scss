@@ -19,10 +19,13 @@
 		@include AU-space( margin-top, 6unit );
 	}
 
+	.code-demo__example__code {
+		@include AU-space( margin-top, 2unit );
+	}
+
 	.codebox pre {
 		margin-top: 0;
 		border-radius: 0;
-		height: 10em;
 	}
 
 	.tabs {

@@ -16,24 +16,33 @@ const CodeDemo = ({ headline, example, iframe, code, _body, _ID, _parseMD, _rela
 	const exampleCode = Fs.readFileSync( pathToCode, 'utf8' );
 
 	return (
-		<div className="code-demo row" id={ Slugify( headline ).toLowerCase() }>
-			<a className="code-demo__anchor" href={`#${ Slugify( headline ).toLowerCase() }`}>#</a>
+		<div className="code-demo">
+			<div className="row" id={ Slugify( headline ).toLowerCase() }>
+				<a className="code-demo__anchor" href={`#${ Slugify( headline ).toLowerCase() }`}>#</a>
 
-			<h2 className="col-sm-6 code-demo__headline">
-				{ headline }
-			</h2>
+				<h2 className="col-sm-6 code-demo__headline">
+					{ headline }
+				</h2>
 
-			<div className="col-sm-6 code-demo__example-wrapper">
-				<div className="code-demo__example">
-					<iframe
-						className="code-demo__example__iframe"
-						scrolling="no"
-						src={ iframe ? _relativeURL( `/${ _ID }/${ iframe }/`, _ID ) : _relativeURL( `/${ _ID }/${ example }/`, _ID ) }>
-							{ exampleCode }
-					</iframe>
-					{
-						code
-							?
+				<div className="col-sm-6 code-demo__example-wrapper">
+					<div className="code-demo__example">
+						<iframe
+							className="code-demo__example__iframe"
+							scrolling="no"
+							src={ iframe ? _relativeURL( `/${ _ID }/${ iframe }/`, _ID ) : _relativeURL( `/${ _ID }/${ example }/`, _ID ) }>
+								{ exampleCode }
+						</iframe>
+					</div>
+				</div>
+				<div className="col-sm-6 code-demo__text">
+					{ _body }
+				</div>
+			</div>
+			{
+				code
+					?
+						<div className="row">
+							<div className="col-sm-12">
 								<div className="code-demo__example__code">
 									<div className="tabs">
 										<nav className="tabs-nav">
@@ -73,14 +82,10 @@ const CodeDemo = ({ headline, example, iframe, code, _body, _ID, _parseMD, _rela
 										</div>
 									</div>
 								</div>
-							: null
-						}
-				</div>
-			</div>
-
-			<div className="col-sm-6 code-demo__text">
-				{ _body }
-			</div>
+							</div>
+						</div>
+				: null
+			}
 		</div>
 	);
 }
