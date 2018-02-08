@@ -1,3 +1,4 @@
+import AUheading from '../../_uikit/layout/headings';
 import React, { Fragment } from 'react';
 import AUcardList from '../card-list';
 import PropTypes from 'prop-types';
@@ -8,44 +9,70 @@ import PropTypes from 'prop-types';
  *
  * @disable-docs
  */
-const Search = ({ _parseReact }) => {
+const Search = ({ headline, link, _parseReact }) => {
 	const output = {};
-	output.moduleStart = ``;
-	output.moduleMiddle = _parseReact(
-		<AUcardList cards={ [{
-			link: '##url##',
-			rows: [{
-				type: 'svg',
-				title: '##name##',
-				svg: '##svg##',
-				description: '##description##',
-				fullwidth: true,
-			},
-			{
-				type: 'heading',
-				headingSize: '3',
-				text: '##name##',
-			}]
-		}] } appearance="shadow" columnSize="col-xs-6 col-sm-3" matchHeight={ true } />
-	);
-	output.moduleEnd = ``;
+	output.moduleStart = `
+		<section class="searchpage__section">
+			<h2 class="searchpage__section__headline au-display-md">Released</h2>
+			<ul class="searchpage__section__listing">
+	`;
+	output.moduleMiddle = `
+		<li>
+		${ _parseReact(
+			<AUcardList cards={ [{
+				link: '##url##',
+				rows: [{
+					type: 'svg',
+					title: '##name##',
+					svg: '##svg##',
+					description: '##description##',
+					fullwidth: true,
+				},
+				{
+					type: 'heading',
+					headingSize: '3',
+					text: '##name##',
+				}]
+			}] } appearance="shadow" columnSize="col-xs-6 col-sm-3" matchHeight={ true } />
+		) }
+		</li>`;
+	output.moduleEnd = `
+			</ul>
+		</section>
+	`;
 
-	output.progressStart = ``;
+	output.progressStart = `
+		<section class="searchpage__section">
+			<h2 class="searchpage__section__headline au-display-md">In progress</h2>
+			<ul class="searchpage__section__listing">
+	`;
 	output.progressMiddle = ``;
-	output.progressEnd = ``;
+	output.progressEnd = `
+			</ul>
+		</section>
+	`;
 
-	output.suggestionStart = ``;
+	output.suggestionStart = `
+		<section class="searchpage__section">
+			<h2 class="searchpage__section__headline au-display-md">Suggestion</h2>
+			<ul class="searchpage__section__listing">
+	`;
 	output.suggestionMiddle = ``;
-	output.suggestionEnd = ``;
+	output.suggestionEnd = `
+			</ul>
+		</section>
+	`;
 
 	return (
-		<Fragment>
-			*************
+		<div className="searchpage">
+			<div className="searchpage__headline">
+				<AUheading className="searchpage__headline__heading" size="lg" level="1">{ headline } ##searchstring##</AUheading>
+				<a className="searchpage__headline__link" href={ link.link }>{ link.text }</a>
+			</div>
 			{
-				JSON.stringify( output )
+				<div dangerouslySetInnerHTML={ { __html: `*************${ JSON.stringify( output ) }*************` } } />
 			}
-			*************
-		</Fragment>
+		</div>
 	);
 };
 

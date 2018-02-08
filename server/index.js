@@ -1,10 +1,9 @@
+const DisplaySearch = require('./search.js');
 const Express = require('express');
 const Path = require('path');
-const Fs = require('fs');
 
 // GLOBALS
 const Server = Express();
-const SEARCH = Fs.readFileSync( Path.normalize(`${ __dirname }/../site/components/search/index.html`), 'utf-8' )
 
 
 /**
@@ -76,10 +75,7 @@ Server
 
 	// Then we add dynamic routes that overwrite static ones
 	.get( '/components/search/', ( request, response ) => {
-		console.log(request.query.s);
-		const searchResponse = SEARCH.replace( '*************', '#' );
-
-		response.send( searchResponse );
+		response.send( DisplaySearch( request.query.s ) );
 	})
 
 	// Now static assets
