@@ -73,6 +73,7 @@
 	.au-link-list {
 		float: right;
 		margin: 2px 0 0 0;
+		padding: 0;
 		line-height: 1;
 		font-size: 12px;
 		font-size: 0.75rem;
@@ -80,8 +81,8 @@
 		& > li {
 			margin: 0;
 
-			@include AU-space( margin-right, 0.25unit );
-			@include AU-space( padding-right, 0.25unit );
+			@include AU-space( margin-right, 0.5unit );
+			@include AU-space( padding-right, 0.5unit );
 			border-right: 1px solid $AU-colordark-Border;
 
 			&:last-of-type {
