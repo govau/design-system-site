@@ -21,4 +21,4 @@ code:
       />
 ---
 
-A singular method of expanding and collapsing a peice of content with a title. These are best used for transcripts of videos.
+Use a calendar callout to notify and alert users of important dates and events.

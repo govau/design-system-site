@@ -15,4 +15,4 @@ code:
       </Callout>
 ---
 
-A singular method of expanding and collapsing a peice of content with a title. These are best used for transcripts of videos.
+Use callout to notify and alert users of important snippets of information.
