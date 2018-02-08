@@ -1,0 +1,115 @@
+// HeaderGovAU
+.headergovau {
+	@include AU-fontgrid( xs, nospace );
+	@include AU-space( padding, 0.25unit 0 );
+	background-color: $AU-colordark-Background-darkest;
+	color: $AU-colordark-Text;
+	font-family: $AU-font;
+	position: relative;
+	z-index: 150;
+}
+
+// The content inside the accordion
+.headergovau__content {
+
+	&.au-accordion__body {
+		@include AU-fontgrid( xs );
+	}
+
+	.au-accordion__body-wrapper {
+		@include AU-space( padding, 1unit 0 0 0 );
+		border: 0;
+	}
+
+	.headergovau__icon-content {
+		@include AU-space( padding-left, 6unit );
+		@include AU-space( max-width, 25unit );
+		position: relative;
+
+		&:before {
+			@include AU-space( width, 5unit );
+			@include AU-space( height, 5unit );
+			@include AU-space( margin-right, -5unit );
+			content: " ";
+			left: 0;
+			position: absolute;
+			display: block;
+			float: left;
+		}
+
+		&.icon--govau:before {
+			background: #111;
+		}
+
+		&.icon--secure:before {
+			background: #111;
+		}
+	}
+}
+
+// The top bar that doesn't include content
+.headergovau__bar {
+	@include AU-space( padding, 0.25unit 0 );
+
+	a {
+		color: $AU-colordark-Text;
+		text-decoration: none;
+
+		@include AU-focus( 'dark' );
+
+		.headergovau__official {
+			text-decoration: underline;
+		}
+
+		&:hover .headergovau__official {
+			text-decoration: none;
+		}
+	}
+}
+
+.headergovau__button {
+	@include AU-space( padding-right, 1.25unit );
+	position: relative;
+
+	&:after {
+		@include AU-space( width, 0.75unit );
+		@include AU-space( height, 0.75unit );
+		content: " ";
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 2px;
+
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">' +
+			'	<path fill="#{ $AU-colordark-Text }" d="M64 0l64 64-16 16-64-64"/>' +
+			'	<path fill="#{ $AU-colordark-Text }" d="M64 0l16 16-64 64L0 64"/>' +
+			'</svg>');
+		transition: transform 0.25s ease-in;
+	}
+
+	&.au-accordion--closed:after {
+		transform: rotate( -180deg );
+	}
+}
+
+// * GOV.AU - logo
+.headergovau__logo {
+	@include AU-space( margin-right, 0.75unit );
+	@include AU-space( padding-right, 0.75unit );
+	border-right: 1px solid $AU-colordark-Border;
+
+	.headergovau__logo__text {
+		font-weight: bold;
+	}
+
+	.headergovau__logo__svg {
+		@include AU-space( width, 1unit );
+		@include AU-space( height, 1unit );
+		@include AU-space( margin-right, 0.25unit );
+		position: relative;
+		top: 1px;
+	}
+}
+

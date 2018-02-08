@@ -2,7 +2,7 @@
 	<symbol id="star" viewBox="0 0 24 24">
 		<polyline id="Shape" fill="currentColor" fill-rule="evenodd" points="14 2 11.553 8.36 5.178 6.356 8.5 12.286 3 16.146 9.59 17.181 9.103 24 14 19.36 18.895
 			24 18.412 17.18 25 16.148 19.5 12.286 22.822 6.358 16.448 8.36"></polyline>
-		<rect id="Rectangle" fill-opacity="0" fill="#D8D8D8" x="0.494356952" y="0.416408297" width="27.0112861" height="26.1671834"></rect>
+		<rect id="Rectangle" fill-opacity="0" fill="#D8D8D8" x="0.494356952" y="0.416408297"></rect>
 	</symbol>
 	<symbol id="govau_logo" viewBox="0 0 223.46 41.46">
 		<path

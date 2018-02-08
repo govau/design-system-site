@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Accordion Rationale
+pagetitle: Breadcrumbs rationale
 
 header:
   - /_shared/header.md

@@ -4,18 +4,18 @@ layout: section
 
 ### Exports
 
-| name       | type    | description
+| Name       | Type    | Description
 |------------|---------|-----------------------------------------------------------------------------
-| `AUbutton` | default | The button component
+| `AUbuttons` | default | The button component
 
 ### [md]node_modules import
 
 ```jsx
-import AUbutton from '@gov.au/buttons';
+import AUbuttons from '@gov.au/buttons';
 ```
 
 ### [md]pancake import
 
 ```jsx
-import AUbutton from './buttons.js';
+import AUbuttons from './buttons.js';
 ```

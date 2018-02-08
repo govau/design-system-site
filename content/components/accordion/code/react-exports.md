@@ -4,7 +4,7 @@ layout: section
 
 ### Exports
 
-| name       | type    | description
+| Name       | Type    | Description
 |------------|---------|-----------------------------------------------------------------------------
 | `AUaccordion` | default | The accordion component
 

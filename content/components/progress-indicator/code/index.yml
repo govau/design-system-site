@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Progress Indicator Rationale
+pagetitle: Progress Indicator rationale
 
 header:
   - /_shared/header.md

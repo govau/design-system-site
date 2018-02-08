@@ -151,9 +151,9 @@ breadcrumbs:
   name: Breadcrumbs
   description: >
     Breadcrumbs are a navigational aid that display a user's location on a
-    website as a row of links, usually located at the top of the page.
-    They show users where they are in the website hierarchy and how to
-    navigate back to previous levels or content.
+    website as a row of links, usually located at the top of the page. They show
+    users where they are in the website hierarchy and how to navigate back to
+    previous levels or content.
   tags:
     - Trail
     - Navigation
@@ -239,11 +239,15 @@ buttons:
   ID: buttons    # <-- auto generated, don't change
 callout:
   name: Callout
-  description: TODO
+  description: >
+    Callouts are an excerpt of text or an article that has been pulled out and
+    used as a visual clue to draw the eye to the text. They are used to help
+    direct a user's attention to important pieces of information.
   tags:
-    - TODO
+    - Notification
+    - Alert
   related:
-    - TODO
+    - body
   related-articles:
     - TODO
   used-in:
@@ -277,11 +281,16 @@ callout:
   hasReact: true    # <-- auto generated, don't change
 control-input:
   name: Control Input
-  description: TODO
+  description: >
+    Control inputs help users input one or more selections from multiple
+    options. Our control inputs consist of checkboxes and radio buttons.
   tags:
-    - TODO
+    - Checkbox
+    - Radio
+    - Form
   related:
-    - TODO
+    - text-inputs
+    - select
   related-articles:
     - TODO
   used-in:
@@ -315,11 +324,15 @@ control-input:
   ID: control-input    # <-- auto generated, don't change
 cta-link:
   name: CTA Link
-  description: TODO
+  description: >
+      Call to action links are visually distinct instructions to users designed to
+      provoke an immediate response using verbs such as 'call now' or 'find out more'.
   tags:
-    - TODO
+    - Links
+    - Call to action
+    - CTA
   related:
-    - TODO
+    - body
   related-articles:
     - TODO
   used-in:

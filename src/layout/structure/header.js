@@ -7,7 +7,7 @@ import PropTypes           from 'prop-types';
 /**
  * The header component
  */
-const Header = ({ title, mainmenu, _relativeURL, _ID, _pages, _body }) => (
+const Header = ({ title, mainmenu, header_govau, _relativeURL, _ID, _pages, _body }) => (
 	<div className="header-wrapper">
 		<AUskipLink links={[
 			{
@@ -19,6 +19,7 @@ const Header = ({ title, mainmenu, _relativeURL, _ID, _pages, _body }) => (
 				text: 'Skip to content',
 			},
 		]} />
+		{ header_govau }
 		<div className={ `header${ _ID === 'index' ? ' header--home' : '' }` }>
 			<div id="focustrap-top"></div>
 			<AUheader dark>

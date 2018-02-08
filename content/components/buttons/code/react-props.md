@@ -4,7 +4,7 @@ layout: section
 
 ### Props
 
-| prop name | type    | description
+| Prop name | Type    | Description
 |-----------|---------------------------------------------------------------------------------------
 | href      | string  | If an `href` is set the button will render as a link
 | as        | string  | The kind of button, `secondary`,`tertiary`
