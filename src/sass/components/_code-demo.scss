@@ -49,7 +49,7 @@
 .code-demo__anchor {
 	display: none;
 	position: absolute;
-	left: 0;
+	@include AU-space( left, -1unit );
 	@include AU-space( top, 0.8unit );
 	@include AU-fontgrid( sm, nospace );
 	z-index: 100;
