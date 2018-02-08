@@ -324,11 +324,15 @@ control-input:
   ID: control-input    # <-- auto generated, don't change
 cta-link:
   name: CTA Link
-  description: TODO
+  description: >
+      Call to action links are visually distinct instructions to users designed to
+      provoke an immediate response using verbs such as 'call now' or 'find out more'.
   tags:
-    - TODO
+    - Links
+    - Call to action
+    - CTA
   related:
-    - TODO
+    - body
   related-articles:
     - TODO
   used-in:
