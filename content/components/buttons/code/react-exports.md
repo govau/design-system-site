@@ -6,16 +6,16 @@ layout: section
 
 | name       | type    | description
 |------------|---------|-----------------------------------------------------------------------------
-| `AUbutton` | default | The button component
+| `AUcallout` | default | The button component
 
 ### [md]node_modules import
 
 ```jsx
-import AUbutton from '@gov.au/buttons';
+import AUcallout from '@gov.au/callout';
 ```
 
 ### [md]pancake import
 
 ```jsx
-import AUbutton from './buttons.js';
+import AUcallout from './callout.js';
 ```
