@@ -13,6 +13,6 @@ layout: section
 | afterOpen   | function | A function executed after the accordion opened, optional
 | onClose     | function | A function executed when the accordion closes, optional
 | afterClose  | function | A function executed when the accordion closes, optional
-| dark        | boolean  | A dark variation of the component
+| dark        | boolean  | A function executed after the accordion opened, optional
 
 All other props are spread into the component

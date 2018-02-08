@@ -6,16 +6,16 @@ layout: section
 
 | name       | type    | description
 |------------|---------|-----------------------------------------------------------------------------
-| `AUaccordion` | default | The accordion component
+| `AUbreadcrumbs` | default | The breadcrumbs component
 
 ### [md]node_modules import
 
 ```jsx
-import AUaccordion from '@gov.au/accordion';
+import AUbreadcrumbs from '@gov.au/breadcrumbs';
 ```
 
 ### [md]pancake import
 
 ```jsx
-import AUaccordion from './accordion.js';
+import AUbreadcrumbs from './breadcrumbs.js';
 ```
