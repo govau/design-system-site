@@ -239,11 +239,15 @@ buttons:
   ID: buttons    # <-- auto generated, don't change
 callout:
   name: Callout
-  description: TODO
+  description: >
+    Callouts are an excerpt of text or an article that has been pulled out and
+    used as a visual clue to draw the eye to the text. They are used to help
+    direct a user's attention to important pieces of information.
   tags:
-    - TODO
+    - Quote
+    - Alert
   related:
-    - TODO
+    - body
   related-articles:
     - TODO
   used-in:

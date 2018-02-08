@@ -23,6 +23,7 @@
 
 	.headergovau__icon-content {
 		@include AU-space( padding-left, 6unit );
+		@include AU-space( max-width, 25unit );
 		position: relative;
 
 		&:before {
