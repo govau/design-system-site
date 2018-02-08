@@ -1,19 +1,23 @@
 // HeaderGovAU
 .headergovau {
-	@include AU-fontgrid( xs, nospace );
 	@include AU-space( padding, 0.25unit 0 );
 	background-color: $AU-colordark-Background-darkest;
 	color: $AU-colordark-Text;
 	font-family: $AU-font;
 	position: relative;
 	z-index: 150;
+	font-size: 12px;
+	font-size: 0.75rem;
+	line-height: 1;
 }
 
 // The content inside the accordion
 .headergovau__content {
 
 	&.au-accordion__body {
-		@include AU-fontgrid( xs );
+		font-size: 12px;
+		font-size: 0.75rem;
+		line-height: 1.5;
 	}
 
 	.au-accordion__body-wrapper {
@@ -68,13 +72,16 @@
 
 	.au-link-list {
 		float: right;
-		margin: 0;
+		margin: 2px 0 0 0;
+		line-height: 1;
+		font-size: 12px;
+		font-size: 0.75rem;
 
 		& > li {
 			margin: 0;
-			@include AU-fontgrid( xs, nospace );
-			@include AU-space( margin-right, 0.5unit );
-			@include AU-space( padding-right, 0.5unit );
+
+			@include AU-space( margin-right, 0.25unit );
+			@include AU-space( padding-right, 0.25unit );
 			border-right: 1px solid $AU-colordark-Border;
 
 			&:last-of-type {
@@ -95,8 +102,10 @@
 }
 
 .headergovau__button {
-	@include AU-space( padding-right, 1.25unit );
+	@include AU-space( padding-right, 1unit );
 	position: relative;
+	display: block;
+	float: left;
 
 	&:after {
 		@include AU-space( width, 0.75unit );
@@ -105,7 +114,7 @@
 		display: block;
 		position: absolute;
 		right: 0;
-		top: 2px;
+		top: 0;
 
 		background-position: center;
 		background-repeat: no-repeat;
@@ -123,8 +132,8 @@
 
 // * GOV.AU - logo
 .headergovau__logo {
-	@include AU-space( margin-right, 0.75unit );
-	@include AU-space( padding-right, 0.75unit );
+	@include AU-space( margin-right, 0.5unit );
+	@include AU-space( padding-right, 0.5unit );
 	border-right: 1px solid $AU-colordark-Border;
 
 	.headergovau__logo__text {
@@ -132,8 +141,8 @@
 	}
 
 	.headergovau__logo__svg {
-		@include AU-space( width, 1unit );
-		@include AU-space( height, 1unit );
+		@include AU-space( width, 0.75unit );
+		@include AU-space( height, 0.75unit );
 		@include AU-space( margin-right, 0.25unit );
 		position: relative;
 		top: 1px;
