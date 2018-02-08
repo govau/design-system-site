@@ -98,7 +98,6 @@ const ComponentPage = ({
 				: null
 			}
 
-			<script src={ _relativeURL( '/assets/js/_uikit/uikit.min.js', _ID ) } />
 			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
 		</body>
 		</html>
