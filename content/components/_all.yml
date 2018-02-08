@@ -244,7 +244,7 @@ callout:
     used as a visual clue to draw the eye to the text. They are used to help
     direct a user's attention to important pieces of information.
   tags:
-    - Quote
+    - Notification
     - Alert
   related:
     - body
@@ -281,11 +281,16 @@ callout:
   hasReact: true    # <-- auto generated, don't change
 control-input:
   name: Control Input
-  description: TODO
+  description: >
+    Control inputs help users input one or more selections from multiple
+    options. Our control inputs consist of checkboxes and radio buttons.
   tags:
-    - TODO
+    - Checkbox
+    - Radio
+    - Form
   related:
-    - TODO
+    - text-inputs
+    - select
   related-articles:
     - TODO
   used-in:
