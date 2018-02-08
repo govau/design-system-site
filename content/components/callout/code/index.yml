@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Callout Rationale
+pagetitle: Callout rationale
 
 header:
   - /_shared/header.md
