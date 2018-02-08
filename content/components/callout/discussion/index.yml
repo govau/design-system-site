@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Accordion discussion
+pagetitle: Callout discussion
 
 header:
   - /_shared/header.md
