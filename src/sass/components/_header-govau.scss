@@ -12,13 +12,37 @@
 // The content inside the accordion
 .headergovau__content {
 
-	.au-accordion__body {
-		@include AU-fontgrid( xs, nospace );
+	&.au-accordion__body {
+		@include AU-fontgrid( xs );
 	}
 
 	.au-accordion__body-wrapper {
 		@include AU-space( padding, 1unit 0 0 0 );
 		border: 0;
+	}
+
+	.headergovau__icon-content {
+		@include AU-space( padding-left, 6unit );
+		position: relative;
+
+		&:before {
+			@include AU-space( width, 5unit );
+			@include AU-space( height, 5unit );
+			@include AU-space( margin-right, -5unit );
+			content: " ";
+			left: 0;
+			position: absolute;
+			display: block;
+			float: left;
+		}
+
+		&.icon--govau:before {
+			background: #111;
+		}
+
+		&.icon--secure:before {
+			background: #111;
+		}
 	}
 }
 

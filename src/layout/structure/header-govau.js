@@ -35,12 +35,16 @@ const HeaderGovAU = ( page ) => (
 				>
 				<div className="au-accordion__body-wrapper">
 					<div className="col-sm-6">
-						<p className="au-display-md">{ page.left_title }</p>
-						<p>{ page.left_content }</p>
+						<div className="headergovau__icon-content icon--govau">
+							<p className="au-display-md">{ page.left_title }</p>
+							<p>{ page.left_content }</p>
+						</div>
 					</div>
 					<div className="col-sm-6">
-						<p className="au-display-md">{ page.right_title }</p>
-						<p>{ page.right_content }</p>
+						<div className="headergovau__icon-content icon--secure">
+							<p className="au-display-md">{ page.right_title }</p>
+							<p>{ page.right_content }</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -51,34 +55,24 @@ const HeaderGovAU = ( page ) => (
 
 HeaderGovAU.propTypes = {
 	/**
-	 * text: This is totally official
+	 * left_title: The .gov.au means its official
 	 */
-	text: PropTypes.string,
+	left_title: PropTypes.string.isRequired,
 
 	/**
-	 * button: An official website
+	 * left_content: Lorem ipsum dolor sit amet, vix civibus deserunt te, sit eu nulla discere consulatu, ei graeci consectetuer has.
 	 */
-	button: PropTypes.string.isRequired,
+	left_content: PropTypes.string.isRequired,
 
 	/**
-	 * title1: The .gov.au means its official
+	 * right_title: This site is also protected by SSL
 	 */
-	title1: PropTypes.string.isRequired,
+	right_title: PropTypes.string.isRequired,
 
 	/**
-	 * content1: Lorem ipsum dolor sit amet, vix civibus deserunt te, sit eu nulla discere consulatu, ei graeci consectetuer has.
+	 * right_content: Lorem ipsum dolor sit amet, vix civibus deserunt te, sit eu nulla discere consulatu, ei graeci consectetuer has.
 	 */
-	content1: PropTypes.string.isRequired,
-
-	/**
-	 * title2: This site is also protected by SSL
-	 */
-	title2: PropTypes.string.isRequired,
-
-	/**
-	 * content2: Lorem ipsum dolor sit amet, vix civibus deserunt te, sit eu nulla discere consulatu, ei graeci consectetuer has.
-	 */
-	content2: PropTypes.string.isRequired,
+	right_content: PropTypes.string.isRequired,
 };
 
 
