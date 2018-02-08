@@ -325,8 +325,9 @@ control-input:
 cta-link:
   name: CTA Link
   description: >
-      Call to action links are visually distinct instructions to users designed to
-      provoke an immediate response using verbs such as 'call now' or 'find out more'.
+    Call to action links are visually distinct instructions to users designed to
+    provoke an immediate response using verbs such as 'call now' or 'find out
+    more'.
   tags:
     - Links
     - Call to action
@@ -742,7 +743,7 @@ progress-indicator:
     - active: 7
     - something: something
   ID: progress-indicator    # <-- auto generated, don't change
-  version: 2.0.0-next.7    # <-- auto generated, don't change
+  version: 2.0.0-next.5    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
