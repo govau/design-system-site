@@ -4,7 +4,7 @@ layout: section
 
 ### Props
 
-| prop name | type    | description
+| Prop name | Type    | Description
 |-----------|---------------------------------------------------------------------------------------
 | label       | string  | Provide the aria label
 | items       | object  | The link, text and props for each of the breadcrumbs

@@ -4,7 +4,7 @@ layout: section
 
 ### Props
 
-| prop name | type    | description
+| Prop name | Type    | Description
 |-----------|---------------------------------------------------------------------------------------
 | header      | string   | The headline of the accordion
 | open        | boolean  | Open state, optional
