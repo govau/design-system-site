@@ -20,6 +20,7 @@ const ComponentPage = ({
 	_parents,
 	_isDocs,
 	header,
+	showheader = true,
 	component_nav,
 	sidebar,
 	pagetitle,
@@ -59,27 +60,22 @@ const ComponentPage = ({
 							</div>
 							<div className="col-md-9 content">
 								{
-									_ID !== 'components'
-									?
-										<Fragment>
-											<ComponentHeader
-												_relativeURL={ _relativeURL }
-												_parseYaml={ _parseYaml }
-												_parseMD={ _parseMD }
-												_parents={ _parents }
-												_pages={ _pages }
-												_ID={ _ID }
-												_isDocs={ _isDocs }
-											/>
-											{ component_nav }
-										</Fragment>
-									: null
+									showheader && <Fragment>
+										<ComponentHeader
+											_relativeURL={ _relativeURL }
+											_parseYaml={ _parseYaml }
+											_parseMD={ _parseMD }
+											_parents={ _parents }
+											_pages={ _pages }
+											_ID={ _ID }
+											_isDocs={ _isDocs }
+										/>
+										{ component_nav }
+									</Fragment>
 								}
 								{ main }
 								{
-									_ID !== 'components'
-									? <ComponentFooter _ID={ _ID } _parseYaml={ _parseYaml } _relativeURL={ _relativeURL } _pages={ _pages } _parents= { _parents } />
-									: null
+									showheader && <ComponentFooter _ID={ _ID } _parseYaml={ _parseYaml } _relativeURL={ _relativeURL } _pages={ _pages } _parents= { _parents } />
 								}
 							</div>
 						</div>

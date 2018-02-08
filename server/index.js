@@ -1,7 +1,10 @@
 const Express = require('express');
 const Path = require('path');
+const Fs = require('fs');
 
+// GLOBALS
 const Server = Express();
+const SEARCH = Fs.readFileSync( Path.normalize(`${ __dirname }/../site/components/search/index.html`), 'utf-8' )
 
 
 /**
@@ -66,14 +69,17 @@ const AddFakePassword = ( request, response, next ) => {
  */
 Server
 	// First we make sure all requests come through HTTPS
-	.all( '*', ForwardSSL )
+	// .all( '*', ForwardSSL )
 
 	// Let's make sure we had the password passed in
 	.get( '*', AddFakePassword )
 
 	// Then we add dynamic routes that overwrite static ones
-	.get( '/dynamic/', ( request, response ) => {
-		response.send(' 🔥 Dynamic routing works 🎈🚀😍 ');
+	.get( '/components/search/', ( request, response ) => {
+		console.log(request.query.s);
+		const searchResponse = SEARCH.replace( '*************', '#' );
+
+		response.send( searchResponse );
 	})
 
 	// Now static assets

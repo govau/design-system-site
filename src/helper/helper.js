@@ -147,7 +147,7 @@ const CheckComponents = ( uikit, components ) => {
 const GenerateComponents = ( uikit, components ) => {
 	for( module of Object.keys( UIKIT ) ) {
 		const pathToPgk = Path.normalize(`${ UIKIT[ module ].path }/package.json`);
-		const PGK = JSON.parse( Fs.readFileSync( pathToPgk, 'utf-8') );
+		const PGK = JSON.parse( Fs.readFileSync( pathToPgk, 'utf-8' ) );
 		const name = CleanName( UIKIT[ module ].name );
 
 		if( typeof components[ name ] === 'undefined' ) {

@@ -29,12 +29,14 @@ const ComponentHeader = ({ _relativeURL, _parseYaml, _parseMD, _pages, _parents,
 				<div className="componentheader__body abstract">{ _parseMD( MODULE.description ) }</div>
 			</div>
 			<div className="componentheader__statusbox col-sm-offset-1 col-sm-5">
-				<ComponentStatus
-					module={ MODULE.ID }
-					_ID={ _ID }
-					_relativeURL={ _relativeURL }
-					_parseYaml={ _parseYaml }
-				/>
+				{
+					module && <ComponentStatus
+						module={ MODULE.ID }
+						_ID={ _ID }
+						_relativeURL={ _relativeURL }
+						_parseYaml={ _parseYaml }
+					/>
+				}
 			</div>
 		</div>
 	);
