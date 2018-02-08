@@ -65,6 +65,33 @@
 			text-decoration: none;
 		}
 	}
+
+	.au-link-list {
+		float: right;
+		margin: 0;
+
+		& > li {
+			margin: 0;
+			@include AU-fontgrid( xs, nospace );
+			@include AU-space( margin-right, 0.5unit );
+			@include AU-space( padding-right, 0.5unit );
+			border-right: 1px solid $AU-colordark-Border;
+
+			&:last-of-type {
+				border-right: 0;
+				margin-right: 0;
+				padding-right: 0;
+			}
+
+			& > a {
+				color: $AU-colordark-Muted;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
 }
 
 .headergovau__button {

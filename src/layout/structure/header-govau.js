@@ -1,10 +1,12 @@
+import AUlinkList          from '../../_uikit/layout/link-list';
+
 import PropTypes           from 'prop-types';
 import React, { Fragment } from 'react';
 
 /**
  * The headergovau component
  */
-const HeaderGovAU = ( page ) => (
+const HeaderGovAU = ({ menu, left_title, left_content, right_title, right_content }) => (
 	<div className="headergovau">
 		<div className="container-fluid">
 			<div className="row headergovau__bar">
@@ -26,6 +28,7 @@ const HeaderGovAU = ( page ) => (
 						</span>
 						<span className="headergovau__official">An official site</span>
 					</a>
+					<AUlinkList inline items={ menu } />
 				</div>
 			</div>
 			<div
@@ -36,14 +39,14 @@ const HeaderGovAU = ( page ) => (
 				<div className="au-accordion__body-wrapper">
 					<div className="col-sm-6">
 						<div className="headergovau__icon-content icon--govau">
-							<p className="au-display-md">{ page.left_title }</p>
-							<p>{ page.left_content }</p>
+							<p className="au-display-md">{ left_title }</p>
+							<p>{ left_content }</p>
 						</div>
 					</div>
 					<div className="col-sm-6">
 						<div className="headergovau__icon-content icon--secure">
-							<p className="au-display-md">{ page.right_title }</p>
-							<p>{ page.right_content }</p>
+							<p className="au-display-md">{ right_title }</p>
+							<p>{ right_content }</p>
 						</div>
 					</div>
 				</div>
