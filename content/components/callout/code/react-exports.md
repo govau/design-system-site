@@ -18,5 +18,5 @@ import { AUcallout, AUcalloutCalendar } from '@gov.au/callout';
 ### [md]pancake import
 
 ```jsx
-import { AUcallout, AUcalloutCalendar } from './callout.js';
+import { AUcallout, AUcalloutCalendar } from './callout';
 ```

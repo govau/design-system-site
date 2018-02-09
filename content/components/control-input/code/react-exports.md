@@ -18,5 +18,5 @@ import { Checkbox, Radio } from '@gov.au/control-input';
 ### [md]pancake import
 
 ```jsx
-import { Checkbox, Radio } from './control-input.js';
+import { Checkbox, Radio } from './control-input';
 ```

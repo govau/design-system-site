@@ -17,5 +17,5 @@ import AUbuttons from '@gov.au/buttons';
 ### [md]pancake import
 
 ```jsx
-import AUbuttons from './buttons.js';
+import AUbuttons from './buttons';
 ```

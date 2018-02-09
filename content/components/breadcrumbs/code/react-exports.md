@@ -17,5 +17,5 @@ import AUbreadcrumbs from '@gov.au/breadcrumbs';
 ### [md]pancake import
 
 ```jsx
-import AUbreadcrumbs from './breadcrumbs.js';
+import AUbreadcrumbs from './breadcrumbs';
 ```

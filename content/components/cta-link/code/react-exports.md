@@ -17,5 +17,5 @@ import AUctaLink from '@gov.au/cta-link';
 ### [md]pancake import
 
 ```jsx
-import AUctaLink from './cta-link.js';
+import AUctaLink from './cta-link';
 ```

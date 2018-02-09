@@ -17,5 +17,5 @@ import AUaccordion from '@gov.au/accordion';
 ### [md]pancake import
 
 ```jsx
-import AUaccordion from './accordion.js';
+import AUaccordion from './accordion';
 ```
