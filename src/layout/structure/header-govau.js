@@ -39,13 +39,13 @@ const HeaderGovAU = ({ menu, left_title, left_content, right_title, right_conten
 				<div className="au-accordion__body-wrapper">
 					<div className="col-sm-6">
 						<div className="headergovau__icon-content icon--govau">
-							<p className="au-display-md">{ left_title }</p>
+							<p className="headergovau__title">{ left_title }</p>
 							<p>{ left_content }</p>
 						</div>
 					</div>
 					<div className="col-sm-6">
 						<div className="headergovau__icon-content icon--secure">
-							<p className="au-display-md">{ right_title }</p>
+							<p className="headergovau__title">{ right_title }</p>
 							<p>{ right_content }</p>
 						</div>
 					</div>

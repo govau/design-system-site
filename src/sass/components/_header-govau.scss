@@ -11,6 +11,11 @@
 	line-height: 1;
 }
 
+.headergovau__title {
+	font-weight: bold;
+	margin-top: 0;
+}
+
 // The content inside the accordion
 .headergovau__content {
 
@@ -26,14 +31,18 @@
 	}
 
 	.headergovau__icon-content {
-		@include AU-space( padding-left, 6unit );
+		@include AU-space( padding-top, 1.5unit );
+		@include AU-space( padding-bottom, 1.5unit );
+		@include AU-space( padding-left, 5unit );
 		@include AU-space( max-width, 25unit );
 		position: relative;
 
 		&:before {
-			@include AU-space( width, 5unit );
-			@include AU-space( height, 5unit );
-			@include AU-space( margin-right, -5unit );
+			@include AU-space( width, 2unit );
+			@include AU-space( height, 2unit );
+			@include AU-space( margin-left, 1unit );
+			@include AU-space( margin-right, -3.5unit );
+
 			content: " ";
 			left: 0;
 			position: absolute;
@@ -42,11 +51,15 @@
 		}
 
 		&.icon--govau:before {
-			background: #111;
+			background: AU-svguri( '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+			  <path fill="#{ $AU-colordark-Muted }" d="M28 2H4a2 2 0 0 0-2 2v24a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM6 6h4v2H6zm20 20H6V16h20zm0-18H12V6h14z"/>
+			</svg>' );
 		}
 
 		&.icon--secure:before {
-			background: #111;
+			background: AU-svguri( '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+			<path fill="#{ $AU-colordark-Muted }" d="M26 14h-2v-4a8 8 0 0 0-16 0v4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V16a2 2 0 0 0-2-2zm-14-4a4 4 0 0 1 8 0v4h-8z"/>
+			</svg>' );
 		}
 	}
 }
@@ -96,6 +109,7 @@
 
 				&:hover {
 					text-decoration: underline;
+					color: $AU-colordark-Text;
 				}
 			}
 		}
@@ -149,4 +163,3 @@
 		top: 1px;
 	}
 }
-
