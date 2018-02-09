@@ -1,6 +1,8 @@
 core:
   name: Core
   description: TODO
+  metatags:
+    - TODO
   tags:
     - TODO
   related:
@@ -40,6 +42,8 @@ accordion:
   description: >
     Accordions help users see only the content they need. Accordions expand and
     collapse sections of content.
+  metatags:
+    - TODO
   tags:
     - Expand
     - Collapse
@@ -81,6 +85,8 @@ accordion:
 animate:
   name: Animate
   description: TODO
+  metatags:
+    - TODO
   tags:
     - TODO
   related:
@@ -112,6 +118,8 @@ animate:
 body:
   name: Body
   description: TODO
+  metatags:
+    - TODO
   tags:
     - TODO
   related:
@@ -154,6 +162,8 @@ breadcrumbs:
     website as a row of links, usually located at the top of the page. They show
     users where they are in the website hierarchy and how to navigate back to
     previous levels or content.
+  metatags:
+    - TODO
   tags:
     - Trail
     - Navigation
@@ -221,6 +231,8 @@ buttons:
     - open: 2
     - active: 7
     - something: something
+  metatags:
+    - TODO
   tags:
     - inputs
     - links
@@ -243,6 +255,8 @@ callout:
     Callouts are an excerpt of text or an article that has been pulled out and
     used as a visual clue to draw the eye to the text. They are used to help
     direct a user's attention to important pieces of information.
+  metatags:
+    - TODO
   tags:
     - Notification
     - Alert
@@ -284,6 +298,8 @@ control-input:
   description: >
     Control inputs help users input one or more selections from multiple
     options. Our control inputs consist of checkboxes and radio buttons.
+  metatags:
+    - TODO
   tags:
     - Checkbox
     - Radio
@@ -328,6 +344,8 @@ cta-link:
     Call to action links are visually distinct instructions to users designed to
     provoke an immediate response using verbs such as 'call now' or 'find out
     more'.
+  metatags:
+    - TODO
   tags:
     - Links
     - Call to action
@@ -374,6 +392,8 @@ direction-links:
     Direction links are text accompanied by arrows that link up and down within
     a page or back to a parent page. They help users move quickly to other parts
     of the page or to a parent page, or through a process.
+  metatags:
+    - TODO
   tags:
     - TODO
   related:
@@ -415,6 +435,8 @@ direction-links:
 footer:
   name: Footer
   description: TODO
+  metatags:
+    - TODO
   tags:
     - TODO
   related:
@@ -453,6 +475,8 @@ footer:
 grid-12:
   name: Grid 12
   description: TODO
+  metatags:
+    - TODO
   tags:
     - TODO
   related:
@@ -485,6 +509,8 @@ grid-12:
 header:
   name: Header
   description: TODO
+  metatags:
+    - TODO
   tags:
     - TODO
   related:
@@ -523,6 +549,8 @@ header:
 headings:
   name: Headings
   description: TODO
+  metatags:
+    - TODO
   tags:
     - TODO
   related:
@@ -561,6 +589,8 @@ headings:
 inpage-nav:
   name: Inpage Nav
   description: TODO
+  metatags:
+    - TODO
   tags:
     - TODO
   related:
@@ -600,6 +630,8 @@ inpage-nav:
 keyword-list:
   name: Keyword List
   description: TODO
+  metatags:
+    - TODO
   tags:
     - TODO
   related:
@@ -639,6 +671,8 @@ keyword-list:
 link-list:
   name: Link list
   description: TODO
+  metatags:
+    - TODO
   tags:
     - TODO
   related:
@@ -678,6 +712,8 @@ link-list:
 page-alerts:
   name: Page Alerts
   description: TODO
+  metatags:
+    - TODO
   tags:
     - TODO
   related:
@@ -720,6 +756,8 @@ progress-indicator:
     Progress indicators provide visual feedback to users to let them know and
     understand their current context at any given time and be assured that they
     are progressing through the system.
+  metatags:
+    - TODO
   tags:
     - lists
     - status
@@ -752,7 +790,7 @@ progress-indicator:
     - active: 7
     - something: something
   ID: progress-indicator    # <-- auto generated, don't change
-  version: 2.0.0-next.7    # <-- auto generated, don't change
+  version: 2.0.0-next.5    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -761,6 +799,8 @@ progress-indicator:
 responsive-media:
   name: Responsive Media
   description: TODO
+  metatags:
+    - TODO
   tags:
     - TODO
   related:
@@ -799,6 +839,8 @@ responsive-media:
 select:
   name: Select
   description: TODO
+  metatags:
+    - TODO
   tags:
     - TODO
   related:
@@ -837,6 +879,8 @@ select:
 skip-link:
   name: Skip Link
   description: TODO
+  metatags:
+    - TODO
   tags:
     - TODO
   related:
@@ -872,9 +916,13 @@ skip-link:
   hasJs: false    # <-- auto generated, don't change
   hasReact: true    # <-- auto generated, don't change
   ID: skip-link    # <-- auto generated, don't change
+metatags:
+  - TODO
 tags:
   name: Tags
   description: TODO
+  metatags:
+    - TODO
   tags:
     - TODO
   related:
@@ -913,6 +961,8 @@ tags:
 text-inputs:
   name: Text Inputs
   description: TODO
+  metatags:
+    - TODO
   tags:
     - TODO
   related:
@@ -966,6 +1016,8 @@ cards:
     - open: 2
     - active: 7
     - something: something
+  metatags:
+    - TODO
   tags:
     - Action
     - Box
@@ -989,6 +1041,8 @@ cards:
 table:
   name: Table
   description: TODO
+  metatags:
+    - TODO
   tags:
     - TODO
   related:
@@ -1024,6 +1078,8 @@ table:
 navigation:
   name: Navigation
   description: TODO
+  metatags:
+    - TODO
   tags:
     - Mobile menu
     - Nav
