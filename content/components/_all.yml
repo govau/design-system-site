@@ -916,8 +916,6 @@ skip-link:
   hasJs: false    # <-- auto generated, don't change
   hasReact: true    # <-- auto generated, don't change
   ID: skip-link    # <-- auto generated, don't change
-metatags:
-  - TODO
 tags:
   name: Tags
   description: TODO
