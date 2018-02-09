@@ -13,7 +13,7 @@ const HeaderGovAU = ({ menu, left_title, left_content, right_title, right_conten
 				<div className="col-md-12">
 					<a
 						href="#headergovau-accordion"
-						className="headergovau__button js-accordion au-accordion--closed"
+						className="headergovau__button js-header-accordion au-accordion--closed"
 						aria-controls="headergovau-accordion"
 						aria-expanded="false"
 						aria-selected="false"
