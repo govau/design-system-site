@@ -41,7 +41,7 @@ const ComponentStatus = ({ module, _ID, _relativeURL, _parseYaml }) => {
 	let tags;
 
 	if( component.tags ) {
-		tags = NameIdMenu( 'tags', 'search/?text=' );
+		tags = NameIdMenu( 'tags', 'search/?s=' );
 	}
 
 	if( component.dependencies ) {
