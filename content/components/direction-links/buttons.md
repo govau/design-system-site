@@ -1,14 +1,14 @@
 ---
 layout: component/code-demo
-example: examples/example-default
+example: examples/example-buttons
 headline: Buttons
 code:
   - HTML: |
-
+      <button class="au-direction-link">Next</button>
   - React: |
-      import Breadcrumbs from './breadcrumbs.js';
+      import AUdirectionLink from './direction-links';
 
-
+      <AUdirectionLink text="Next" onClick={ () => console.log('This function will be called on click') } />
 ---
 
-A singular method of expanding and collapsing a peice of content with a title. These are best used for transcripts of videos.
+Sometimes direction is needed inside a form. Buttons offer a way to direct users to the next or previous section inside a form.
