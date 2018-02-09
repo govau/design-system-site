@@ -6,4 +6,4 @@ headline: Grayscale
 ---
 
 
-How the breadcrumbs are viewed with total colour blindness.
+How the direction links are viewed with total colour blindness.

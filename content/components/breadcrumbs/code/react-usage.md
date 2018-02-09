@@ -5,9 +5,9 @@ layout: section
 ## React Usage
 
 ```jsx
-import Breadcrumbs from './breadcrumbs.js';
+import AUbreadcrumbs from './breadcrumbs.js';
 
-<Breadcrumbs label="Breadcrumb for this page" items={[
+<AUbreadcrumbs label="Breadcrumb for this page" items={[
   {
     link: 'breadcrumb/one/',
     text: 'breadcrumb 1',

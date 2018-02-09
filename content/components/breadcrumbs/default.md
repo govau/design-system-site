@@ -12,9 +12,9 @@ code:
         </ul>
       </nav>
   - React: |
-      import Breadcrumbs from './breadcrumbs.js';
+      import AUbreadcrumbs from './breadcrumbs.js';
 
-      <Breadcrumbs label="Breadcrumb for this page" 
+      <AUbreadcrumbs label="Breadcrumb for this page" 
         items={[
           {
             link: '#',
