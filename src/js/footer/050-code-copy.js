@@ -1,11 +1,15 @@
-var codeComponents = document.querySelectorAll( '.js-copy' );
-
+var codeComponents = document.getElementsByTagName( 'pre' );
 
 for( var i = 0; i < codeComponents.length; i++ ) {
-	codeComponents[ i ].insertAdjacentHTML(
-		'beforeend',
-		'<button type="button" class="btn-copy au-btn icon icon--copy js-copy-btn">Copy</button>'
-	);
+
+	if( HasClass( codeComponents[ i ], 'js-no-copy' ) === null ){
+		codeComponents[ i ].insertAdjacentHTML(
+			'beforeend',
+			'<button type="button" class="btn-copy au-btn icon icon--copy js-copy-btn">Copy</button>'
+		);
+
+		codeComponents[ i ].outerHTML = '<div class="codebox">' + codeComponents[ i ].outerHTML + '</div>';
+	}
 }
 
 /**
@@ -28,7 +32,7 @@ function CopyString( text ) {
  */
 var copyButtons = document.querySelectorAll( '.js-copy-btn' );
 AddEvent( copyButtons, 'click', function( event, $this ) {
-	CopyString( $this.previousSibling.firstChild.innerText );
+	CopyString( $this.previousSibling.innerText );
 	var oldLabel = $this.innerHTML;
 	$this.innerHTML = 'Copied';
 	RemoveClass( $this, 'icon--copy' );

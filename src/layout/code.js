@@ -6,13 +6,11 @@ import PropTypes from 'prop-types';
  * The Code component
  */
 const Code = ({ language, copy, children, className }) => (
-	<div className={ `codebox${ copy ? ' js-copy' : '' }` }>
-		<pre className={ `language-${ language } ${ className ? className : '' }` }>
+		<pre className={ `language-${ language }${ copy === false ? ' js-no-copy' : '' } ${ className ? className : '' }` }>
 			<code className={ `language-${ language }` }>
 				{ children }
 			</code>
 		</pre>
-	</div>
 );
 
 Code.propTypes = {
