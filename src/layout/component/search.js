@@ -1,6 +1,6 @@
 import AUheading from '../../_uikit/layout/headings';
 import React, { Fragment } from 'react';
-import AUcardList from '../card-list';
+import AUcard from '../card';
 import PropTypes from 'prop-types';
 
 
@@ -11,55 +11,110 @@ import PropTypes from 'prop-types';
  */
 const Search = ({ headline, link, _parseReact }) => {
 	const output = {};
-	output.moduleStart = `
-		<section class="searchpage__section">
+	output.publishedStart = `
+		<section class="searchpage__section released">
 			<h2 class="searchpage__section__headline au-display-md">Released</h2>
-			<ul class="searchpage__section__listing">
+			<ul class="searchpage__section__listing au-card-list au-card-list--matchheight">
 	`;
-	output.moduleMiddle = `
-		<li>
-		${ _parseReact(
-			<AUcardList cards={ [{
-				link: '##url##',
-				rows: [{
-					type: 'svg',
-					title: '##name##',
-					svg: '##svg##',
-					description: '##description##',
-					fullwidth: true,
-				},
-				{
-					type: 'heading',
-					headingSize: '3',
-					text: '##name##',
-				}]
-			}] } appearance="shadow" columnSize="col-xs-6 col-sm-3" matchHeight={ true } />
+	output.publishedMiddle = `
+		<li class="col-xs-6 col-sm-3">
+			${ _parseReact(
+			<AUcard
+				rows={[
+					{
+						type: 'svg',
+						title: '##name##',
+						svg: '##svg##',
+						description: '##description##',
+						fullwidth: true,
+					},
+					{
+						type: 'heading',
+						headingSize: '3',
+						text: '##name##',
+					}
+				]}
+				link="##url##"
+				appearance="shadow"
+			/>
 		) }
 		</li>`;
-	output.moduleEnd = `
+	output.publishedEnd = `
 			</ul>
 		</section>
 	`;
 
-	output.progressStart = `
-		<section class="searchpage__section">
+	output.inprogressStart = `
+		<section class="searchpage__section released">
 			<h2 class="searchpage__section__headline au-display-md">In progress</h2>
-			<ul class="searchpage__section__listing">
+			<div class="au-responsive-table component-table">
+				<table>
+					<caption class="au-responsive-table__caption">
+						A table of components that are in progress of development.
+					</caption>
+					<thead>
+						<tr class="au-responsive-table__header">
+							<th scope="col">Title</th>
+							<th scope="col" class="component-table--minwidth">Version</th>
+							<th scope="col" class="component-table--minwidth">Contributors</th>
+						</tr>
+					</thead>
+					<tbody>
 	`;
-	output.progressMiddle = ``;
-	output.progressEnd = `
-			</ul>
+	output.inprogressMiddle = `
+		<tr class="au-responsive-table__body">
+			<td scope="col"><a href="##url##">##name##</a></td>
+			<td scope="col">##version##</td>
+			<td scope="col">##contributors##</td>
+		</tr>
+	`;
+	output.inprogressEnd = `
+					</tbody>
+				</table>
+			</div>
 		</section>
+	`;
+
+	output.avatarStart = `
+		<ul class="component-status__definition__list component-status__definition__list--images js-more-wrapper">
+	`;
+	output.avatarMiddle = `
+		<li class="component-status__definition__list__item">
+			<a href="##avatarurl##" class="avatar">
+				<img src="##avatarimg##" alt="##avatarname## avatar picture" title="##avatarname##">
+			</a>
+		</li>
+	`;
+	output.avatarEnd = `
+		</ul>
 	`;
 
 	output.suggestionStart = `
-		<section class="searchpage__section">
+		<section class="searchpage__section released">
 			<h2 class="searchpage__section__headline au-display-md">Suggestion</h2>
-			<ul class="searchpage__section__listing">
+			<div class="au-responsive-table component-table">
+				<table>
+					<caption class="au-responsive-table__caption">
+						A table of components that have been suggested, including their status.
+					</caption>
+					<thead>
+						<tr class="au-responsive-table__header">
+							<th scope="col">Title</th>
+							<th scope="col" class="component-table--minwidth">Status</th>
+						</tr>
+					</thead>
+					<tbody>
 	`;
-	output.suggestionMiddle = ``;
+	output.suggestionMiddle = `
+		<tr class="au-responsive-table__body">
+			<td scope="col"><a href="##url##">##name##</a></td>
+			<td scope="col">Suggestion</td>
+		</tr>
+	`;
 	output.suggestionEnd = `
-			</ul>
+					</tbody>
+				</table>
+			</div>
 		</section>
 	`;
 
