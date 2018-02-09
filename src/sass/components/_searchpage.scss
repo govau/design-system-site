@@ -1,0 +1,30 @@
+.searchpage__headline {
+	overflow: hidden;
+	@include AU-space( border-bottom, 0.25unit solid $AU-color-Background-darkest );
+	@include AU-space( padding-bottom, 1unit );
+}
+
+.searchpage__headline__heading__searchstring {
+	color: $AU-color-Action;
+}
+
+.searchpage__headline__heading {
+	float: left;
+}
+
+.searchpage__headline__link {
+	float: right;
+}
+
+.searchpage__section {
+	@include AU-space( margin-top, 4unit );
+}
+
+.searchpage .searchpage__section__listing {
+	margin-top: 0;
+}
+
+.searchpage__section__headline__found {
+	@include AU-space( font-size, 0.8unit );
+	color: $AU-color-Muted;
+}

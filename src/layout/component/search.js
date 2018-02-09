@@ -13,7 +13,10 @@ const Search = ({ headline, link, _parseReact }) => {
 	const output = {};
 	output.publishedStart = `
 		<section class="searchpage__section released">
-			<h2 class="searchpage__section__headline au-display-md">Released</h2>
+			<h2 class="searchpage__section__headline au-display-md">
+				Released
+				<span class="searchpage__section__headline__found">(##found##)</span>
+			</h2>
 			<ul class="searchpage__section__listing au-card-list au-card-list--matchheight">
 	`;
 	output.publishedMiddle = `
@@ -46,7 +49,10 @@ const Search = ({ headline, link, _parseReact }) => {
 
 	output.inprogressStart = `
 		<section class="searchpage__section released">
-			<h2 class="searchpage__section__headline au-display-md">In progress</h2>
+			<h2 class="searchpage__section__headline au-display-md">
+				In progress
+				<span class="searchpage__section__headline__found">(##found##)</span>
+			</h2>
 			<div class="au-responsive-table component-table">
 				<table>
 					<caption class="au-responsive-table__caption">
@@ -91,7 +97,10 @@ const Search = ({ headline, link, _parseReact }) => {
 
 	output.suggestionStart = `
 		<section class="searchpage__section released">
-			<h2 class="searchpage__section__headline au-display-md">Suggestion</h2>
+			<h2 class="searchpage__section__headline au-display-md">
+				Suggestion
+				<span class="searchpage__section__headline__found">(##found##)</span>
+			</h2>
 			<div class="au-responsive-table component-table">
 				<table>
 					<caption class="au-responsive-table__caption">
@@ -121,7 +130,10 @@ const Search = ({ headline, link, _parseReact }) => {
 	return (
 		<div className="searchpage">
 			<div className="searchpage__headline">
-				<AUheading className="searchpage__headline__heading" size="lg" level="1">{ headline } ##searchstring##</AUheading>
+				<AUheading className="searchpage__headline__heading" size="lg" level="1">
+					{ headline }&nbsp;
+					<span className="searchpage__headline__heading__searchstring">##searchstring##</span>
+				</AUheading>
 				<a className="searchpage__headline__link" href={ link.link }>{ link.text }</a>
 			</div>
 			{

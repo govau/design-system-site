@@ -112,8 +112,11 @@ const MakeAvatar = ( contributors, HTML ) => {
 const MakeResultHTML = ( result, HTML ) => {
 	const html = {
 		published: HTML[`publishedStart`],
+		publishedfound : 0,
 		inprogress: HTML[`inprogressStart`],
+		inprogressfound: 0,
 		suggestion: HTML[`suggestionStart`],
+		suggestionfound: 0,
 	};
 	const _has = {
 		published: false,
@@ -136,14 +139,15 @@ const MakeResultHTML = ( result, HTML ) => {
 				.replace( /##svg##/g, `/assets/svg/map.svg#${ item.ID }` )
 				.replace( /##description##/g, item.description );
 
+			html[`${ item.state }found`] ++;
 			_has[ item.state ] = true;
 			state = item.state;
 			html[ item.state ] += thisBit;
 	});
 
-	html['published'] += HTML[`publishedEnd`];
-	html['inprogress'] += HTML[`inprogressEnd`];
-	html['suggestion'] += HTML[`suggestionEnd`];
+	html['published'] = html['published'].replace( /##found##/g, html[`publishedfound`] ) + HTML[`publishedEnd`];
+	html['inprogress'] = html['inprogress'].replace( /##found##/g, html[`inprogressfound`] ) + HTML[`inprogressEnd`];
+	html['suggestion'] = html['suggestion'].replace( /##found##/g, html[`suggestionfound`] ) + HTML[`suggestionEnd`];
 
 	return ( _has['published'] ? html.published : '' ) +
 		( _has['inprogress'] ? html.inprogress : '' ) +
