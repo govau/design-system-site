@@ -54,11 +54,6 @@ const ComponentStatus = ({ module, _ID, _relativeURL, _parseYaml }) => {
 
 			<AUheading size="sm" level="2" className="component-status__title">
 				{ GetState( component.state ) }
-				{
-					component.state === 'published'
-						? <span className="badge">v{ component.version }</span>
-						: null
-				}
 			</AUheading>
 
 			<dl className="component-status__definition">
