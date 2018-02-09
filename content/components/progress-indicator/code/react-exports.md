@@ -18,5 +18,5 @@ import AUbutton from '@gov.au/progress-indicator';
 ### [md]pancake import
 
 ```jsx
-import AUbutton from './progress-indicator.js';
+import AUbutton from './progress-indicator';
 ```
