@@ -68,7 +68,7 @@ export const GetState = ( state ) => {
 	if( state === 'published' ) {
 		return 'Released';
 	}
-	else if( state === 'unpublished') {
+	else if( state === 'inprogress') {
 		return 'In progress';
 	}
 	else if( state === 'suggestion' ) {

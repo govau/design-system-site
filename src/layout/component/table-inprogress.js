@@ -13,7 +13,7 @@ import PropTypes           from 'prop-types';
 const TableInProgress = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _parseYaml }) => {
 
 	const components = GetData({
-		filter: ( key, COMPONENTS ) => COMPONENTS[ key ].state === 'unpublished',
+		filter: ( key, COMPONENTS ) => COMPONENTS[ key ].state === 'inprogress',
 		yaml: _parseYaml,
 	});
 
