@@ -2,6 +2,7 @@ layout: component/page
 pagetitle: Search
 headernav: false
 showheader: false
+searchvalue: '##searchstring##'
 
 header:
   - /_shared/header.md

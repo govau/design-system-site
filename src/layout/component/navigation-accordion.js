@@ -69,7 +69,7 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parents, _parseYaml }
 
 	const componentStates = {
 		published: 'Released',
-		unpublished: 'In progress',
+		inprogress: 'In progress',
 		suggestion: 'Suggestions'
 	};
 

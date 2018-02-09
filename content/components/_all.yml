@@ -1008,7 +1008,7 @@ cards:
   used-in:
     - TODO
   required: false
-  state: unpublished
+  state: inprogress
   order: 10
   discussions:
     - open: 2
@@ -1050,7 +1050,7 @@ table:
   used-in:
     - TODO
   required: false
-  state: unpublished
+  state: inprogress
   order: 20
   discussions:
     - open: 2

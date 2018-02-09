@@ -6,12 +6,12 @@ import React from 'react';
 /**
  * The Searchbox component
  */
-const Searchbox = ({ label, placeholder, _relativeURL, _ID }) => (
-	<form role="search" className="au-search au-stretch_row" method="get" action={ _relativeURL( '/components/search/', _ID ) }>
+const Searchbox = ({ label, placeholder, _relativeURL, _ID, _pages }) => (
+	<form role="search" className="au-search au-stretch_row" method="get" action={`${ _relativeURL( '/components/search/', _ID ) }/`}>
 		<label className="sronly" htmlFor="s1">{ label }</label>
 
 		<div className="au-stretch_col-fill">
-			<AUtextInput name="s" id="s1" type="search" placeholder={ placeholder } />
+			<AUtextInput name="s" id="s1" type="search" placeholder={ placeholder } defaultValue={ _pages[ _ID ].searchvalue && _pages[ _ID ].searchvalue } />
 		</div>
 
 		<div className="au-stretch_col-fit">
