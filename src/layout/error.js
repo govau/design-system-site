@@ -15,9 +15,9 @@ const ResponseError = ({ btnURL, imgalt, imgurl, btntext, _relativeURL, _ID, _bo
 		</div>
 
 		<div className="error__extra col-xs-12 col-md-7 col-md-offset-1">
-			<img className="au-responsive-media-img"
-				src={ _relativeURL( imgurl, _ID ) }
-				alt={ _relativeURL( imgalt, _ID ) } />
+			<img className="au-responsive-media-img" src={ _relativeURL( imgurl, _ID ) }
+				alt={ imgalt }
+			/>
 		</div>
 
 	</div>

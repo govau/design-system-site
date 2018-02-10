@@ -1,4 +1,5 @@
 const DisplaySearch = require('./search.js');
+const Display404 = require('./404.js');
 const Express = require('express');
 const Path = require('path');
 
@@ -84,7 +85,8 @@ Server
 	// In the end we catch all missing requests
 	.get( '*', ( request, response ) => {
 		response.status( 404 );
-		response.sendFile( Path.normalize(`${ __dirname }/../site/404/index.html`) );
+
+		response.send( Display404( request.url ) );
 	})
 
 	// Now let’s start this thing!
