@@ -84,13 +84,15 @@ accordion:
   ID: accordion    # <-- auto generated, don't change
 animate:
   name: Animate
-  description: TODO
+  description: Animations add visual effects to page elements and help users
+    understand what buttons to click or what to do next in a website.
   metatags:
     - TODO
   tags:
     - TODO
   related:
-    - TODO
+    - accordion
+    - core
   related-articles:
     - TODO
   used-in:
@@ -794,7 +796,7 @@ progress-indicator:
     - active: 7
     - something: something
   ID: progress-indicator    # <-- auto generated, don't change
-  version: 2.0.0-next.5    # <-- auto generated, don't change
+  version: 2.0.0-next.7    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
