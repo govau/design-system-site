@@ -7,5 +7,5 @@ layout: section
 ```jsx
 import AUTODO from './TODO.js';
 
-<AUTODO />
+Get from https://github.com/govau/uikit
 ```

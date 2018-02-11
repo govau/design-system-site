@@ -1,5 +1,5 @@
 layout: component/page
-module: breadcrumbs # Replace with module name
+module: breadcrumbs # Replace with module name, go to /components/_all.yml and add relative files
 pagetitle: TODO overview
 
 header:
