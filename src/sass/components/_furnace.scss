@@ -1,7 +1,7 @@
 .furnace__title {
 	@include AU-space( padding-bottom, 1.5unit );
 	@include AU-space( margin-bottom, 1.5unit );
-	@include AU-space( border-bottom, solid 0.25unit $AU-color-Background );
+	@include AU-space( border-bottom, solid 0.25unit $AU-color-background-shade );
 
 	.furnace__clear {
 		@include AU-space( padding, 0.5unit 0 );
@@ -23,10 +23,10 @@
 	@include AU-space( padding, 0.25unit 1unit 0.25unit 0.25unit );
 	display: block;
 	position: relative;
-	background: $AU-color-Background;
+	background: $AU-color-background-shade;
 
 	&:hover {
-	 background: $AU-color-Background-dark;
+	 background: $AU-color-background-alt;
 	}
 }
 
@@ -82,14 +82,14 @@
 .furnace__component__details__img {
 	@include AU-space( width, 3unit );
 	@include AU-space( margin, 0.5unit 1.5unit 0.5unit 0.5unit);
-	background-color: $AU-color-Background-light;
+	background-color: $AU-color-background;
 	float: left;
 }
 
 .furnace__buildbox {
 	@include AU-space( border-top-left-radius, 0.25unit );
 	@include AU-space( border-top-right-radius, 0.25unit );
-	background-color: $AU-color-Background;
+	background-color: $AU-color-background-shade;
 
 	.furnace__buildbox__wrapper {
 		@include AU-clearfix();

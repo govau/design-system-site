@@ -1,8 +1,8 @@
 .au-card {
 	&.au-card--border {
 		@include AU-space( padding, 1unit 0 );
-		@include AU-space( border-top, 0.5unit solid $AU-color-Border );
-		@include AU-space( border-bottom, 0.5unit solid $AU-color-Border );
+		@include AU-space( border-top, 0.5unit solid $AU-color-foreground-border );
+		@include AU-space( border-bottom, 0.5unit solid $AU-color-foreground-border );
 
 		img:first-child {
 			@include AU-space( margin-top, -1unit );
@@ -15,7 +15,7 @@
 
 	&.au-card--border-left {
 		@include AU-space( padding, 0 0 0 1unit );
-		@include AU-space( border-left, 0.5unit solid $AU-color-Border );
+		@include AU-space( border-left, 0.5unit solid $AU-color-foreground-border );
 	}
 }
 
@@ -29,6 +29,6 @@
 
 	.card__version {
 		@include AU-fontgrid( xs );
-		color: $AU-color-Muted;
+		color: $AU-color-foreground-muted;
 	}
 }

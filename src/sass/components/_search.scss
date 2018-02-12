@@ -6,7 +6,7 @@
 		border-right: none;
 
 		&::placeholder {
-			color: $AU-color-Muted;
+			color: $AU-color-foreground-muted;
 		}
 	}
 
@@ -14,7 +14,7 @@
 		border-radius: 0 $AU-border-radius $AU-border-radius 0;
 		@include AU-space( padding-left, 1unit );
 		@include AU-space( padding-right, 1unit );
-		background-color: $AU-color-Background-light;
+		background-color: $AU-color-background;
 	}
 
 	.au-text-input,

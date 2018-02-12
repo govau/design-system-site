@@ -3,7 +3,7 @@
 .released {
 
 	.au-card__image {
-		background: $AU-color-Background;
+		background: $AU-color-background-shade;
 		@include AU-space( padding, 1.5unit 40%);
 	}
 
@@ -24,8 +24,8 @@
 			top: 50%;
 			margin-top: -6px;
 			background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">' +
-					'<path fill="#{ $AU-color-Action }" d="M128 64l-64 64-16-16 64-64"/>' +
-					'<path fill="#{ $AU-color-Action }" d="M128 64l-16 16-64-64L64 0"/>' +
+					'<path fill="#{ $AU-color-foreground-action }" d="M128 64l-64 64-16-16 64-64"/>' +
+					'<path fill="#{ $AU-color-foreground-action }" d="M128 64l-16 16-64-64L64 0"/>' +
 				'</svg>');
 
 			.ie8 &,
@@ -37,7 +37,7 @@
 
 	.au-card__content {
 		@include AU-fontgrid( xs );
-		color: $AU-color-Muted;
+		color: $AU-color-foreground-muted;
 	}
 
 }

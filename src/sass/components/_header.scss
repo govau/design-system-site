@@ -1,16 +1,16 @@
 .header {
-	@include AU-space( border-bottom, 0.5unit solid $AU-colordark-Action );
-	background-color: $AU-colordark-Background-darkest;
-	background-image: radial-gradient( farthest-corner at 50% 0, $AU-colordark-Background-light 0%, $AU-colordark-Background-darkest 100%);
+	@include AU-space( border-bottom, 0.5unit solid $AU-colordark-foreground-action );
+	background-color: $AU-colordark-background-alt-shade;
+	background-image: radial-gradient( farthest-corner at 50% 0, $AU-colordark-background 0%, $AU-colordark-background-alt-shade 100%);
 
 	p {
-		color: $AU-colordark-Muted;
+		color: $AU-colordark-foreground-muted;
 	}
 
 	@media screen and ( min-width: $nav_breakpoint ) {
 		position: relative;
 		z-index: 100;
-		box-shadow: 0 0 5px 0 $AU-color-Border;
+		box-shadow: 0 0 5px 0 $AU-color-foreground-border;
 	}
 
 	.au-header.au-header--dark {

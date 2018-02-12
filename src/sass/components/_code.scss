@@ -143,7 +143,7 @@ pre[class*="language-"] {
 	@include AU-space( padding, 1unit );
 	@include AU-space( margin-top, 1unit );
 	@include AU-space( border-radius, 0.25unit );
-	background: $AU-color-Background;
+	background: $AU-color-background-shade;
 
 	* + & {
 		@include AU-space( margin-top, 1unit );

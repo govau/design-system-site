@@ -26,7 +26,7 @@
 			position: relative;
 
 			&:after {
-				background: $AU-color-Background-dark;
+				background: $AU-color-background-alt;
 				content: " ";
 				left: 0;
 				position: absolute;
@@ -47,8 +47,8 @@
 
 		.content {
 			@include AU-space( padding-left, 3unit );
-			background: $AU-color-Background-light;
-			box-shadow: -1px 0 0 0 darken($AU-color-Background, 15%);
+			background: $AU-color-background;
+			box-shadow: -1px 0 0 0 darken($AU-color-background-shade, 15%);
 		}
 
 		.sidebar .navigation--accordion {

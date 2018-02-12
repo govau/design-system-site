@@ -16,8 +16,8 @@
 				@include AU-space( width, 1unit );
 				position: absolute;
 				content: " ";
-				box-shadow: -1px 1px 0 0 darken($AU-color-Background, 15%);
-				background-color: $AU-color-Background-light;
+				box-shadow: -1px 1px 0 0 darken($AU-color-background-shade, 15%);
+				background-color: $AU-color-background;
 				top: 50%;
 				z-index: 100;
 				transform: rotate( 45deg );
@@ -32,16 +32,16 @@
 
 	.au-accordion__body-wrapper {
 		padding: 2px 3px;
-		background-color: $AU-color-Background-darkest;
-		border-top: 1px solid darken($AU-color-Background, 15%);
+		background-color: $AU-color-background-alt-shade;
+		border-top: 1px solid darken($AU-color-background-shade, 15%);
 	}
 
 	.au-accordion {
 		border: 0;
-		border-top: 1px solid darken($AU-color-Background, 15%);
+		border-top: 1px solid darken($AU-color-background-shade, 15%);
 
 		&:last-of-type {
-			border-bottom: 1px solid darken($AU-color-Background, 15%);
+			border-bottom: 1px solid darken($AU-color-background-shade, 15%);
 		}
 	}
 

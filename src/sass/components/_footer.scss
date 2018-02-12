@@ -37,8 +37,8 @@
 
 
 .footer__legal-links {
-	border-top: solid 1px $AU-colordark-Border;
-	border-bottom: solid 1px $AU-colordark-Border;
+	border-top: solid 1px $AU-colordark-foreground-border;
+	border-bottom: solid 1px $AU-colordark-foreground-border;
 
 	li {
 		@include AU-media( md ) {

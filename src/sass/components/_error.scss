@@ -2,7 +2,7 @@
 
 .error {
 	@include AU-space( padding, 2unit 1unit );
-	background-color: $AU-color-Background;
+	background-color: $AU-color-background-shade;
 
 	@include AU-media( sm ){
 		@include AU-space( padding, 5unit 4unit );

@@ -4,5 +4,5 @@
 }
 
 .download-intro--border {
-	@include AU-space( border-top, solid 0.25unit $AU-color-Background );
+	@include AU-space( border-top, solid 0.25unit $AU-color-background-shade );
 }

@@ -2,29 +2,29 @@
  * Colors light theme
  */
 $AU-color-Text:                              #313131;
-$AU-color-Action:                            #815D00;
-$AU-color-Focus:                             #ea4200;
-$AU-color-Background-light:                  #ffffff;
+$AU-color-foreground-action:                            #815D00;
+$AU-color-foreground-focus:                             #ea4200;
+$AU-color-background:                  #ffffff;
 
 // Non-user definable pallet colors
-$AU-color-Background-suggestion:             #f5f5f5;
-$AU-color-Background-dark-suggestion:        #f2f2f2;
-$AU-color-Background-darkest-suggestion:     #ebebeb;
-$AU-color-Muted-suggestion:                  #636363;
-$AU-color-Border-suggestion:                 #7F7F7F;
+$AU-color-background-shade-suggestion:             #f5f5f5;
+$AU-color-background-alt-suggestion:        #f2f2f2;
+$AU-color-background-alt-shade-suggestion:     #ebebeb;
+$AU-color-foreground-muted-suggestion:                  #636363;
+$AU-color-foreground-border-suggestion:                 #7F7F7F;
 
 
 /**
  * Colors dark theme
  */
 $AU-colordark-Text:                          #ffffff;
-$AU-colordark-Background-light:              #3C3C3C;
-$AU-colordark-Action:                        #EBCA79;
-$AU-colordark-Focus:                         #ff8629;
+$AU-colordark-background:              #3C3C3C;
+$AU-colordark-foreground-action:                        #EBCA79;
+$AU-colordark-foreground-focus:                         #ff8629;
 
 // non user definable pallet colors
-$AU-colordark-Background-suggestion:         #323232;
-$AU-colordark-Background-dark-suggestion:    #282828;
-$AU-colordark-Background-darkest-suggestion: #1D1D1D;
-$AU-colordark-Muted-suggestion:              #a6a6a6;
-$AU-colordark-Border-suggestion:             #868686;
+$AU-colordark-background-shade-suggestion:         #323232;
+$AU-colordark-background-alt-suggestion:    #282828;
+$AU-colordark-background-alt-shade-suggestion: #1D1D1D;
+$AU-colordark-foreground-muted-suggestion:              #a6a6a6;
+$AU-colordark-foreground-border-suggestion:             #868686;

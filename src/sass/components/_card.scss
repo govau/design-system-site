@@ -30,10 +30,10 @@
 		border-radius: 4px;
 		overflow:hidden;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-		background: $AU-color-Background-light;
+		background: $AU-color-background;
 
 		.lt-ie9 & {
-			border: solid 1px $AU-color-Border;
+			border: solid 1px $AU-color-foreground-border;
 		}
 
 		.au-card__fullwidth,
@@ -62,7 +62,7 @@
 
 	.au-card__bg {
 		@include AU-space( padding, 1unit );
-		background-color: $AU-color-Background-dark;
+		background-color: $AU-color-background-alt;
 
 		&:not(:first-child) {
 			@include AU-space( margin-top, 1unit );
@@ -90,7 +90,7 @@ a.au-card {
 
 	.au-card__link,
 	.au-card__cta {
-		color: $AU-color-Action;
+		color: $AU-color-foreground-action;
 		text-decoration: underline;
 		text-decoration-skip: ink;
 	}

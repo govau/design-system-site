@@ -11,11 +11,11 @@
 
 	th {
 		text-align: left;
-		@include AU-space( border-bottom, 0.25unit solid $AU-color-Background-darkest );
+		@include AU-space( border-bottom, 0.25unit solid $AU-color-background-alt-shade );
 	}
 
 	td {
-		border-bottom: solid 1px $AU-color-Background-darkest;
+		border-bottom: solid 1px $AU-color-background-alt-shade;
 	}
 }
 
@@ -26,7 +26,7 @@
 }
 
 .au-responsive-table__body:nth-child( even ) {
-	background: $AU-color-Background;
+	background: $AU-color-background-shade;
 }
 
 .au-responsive-table {

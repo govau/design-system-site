@@ -22,10 +22,10 @@
 
 @keyframes example {
 	from {
-		background-color: $AU-color-Background;
+		background-color: $AU-color-background-shade;
 	}
 
 	to {
-		background-color: $AU-color-Background-light;
+		background-color: $AU-color-background;
 	}
 }

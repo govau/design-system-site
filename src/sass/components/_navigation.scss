@@ -26,15 +26,15 @@
 	.au-link-list > li {
 		display: block;
 		margin: 0;
-		border-top: 1px solid $AU-color-Border;
+		border-top: 1px solid $AU-color-foreground-border;
 
 		&:last-of-type {
-			border-bottom: 1px solid $AU-color-Border;
+			border-bottom: 1px solid $AU-color-foreground-border;
 		}
 
 		&.mainmenu--active > a {
-			color: $AU-color-Action;
-			border-color: $AU-color-Action;
+			color: $AU-color-foreground-action;
+			border-color: $AU-color-foreground-action;
 			font-weight: bold;
 
 			&:hover {
@@ -52,7 +52,7 @@
 
 	@media screen and ( min-width: $nav_breakpoint ) {
 		@include AU-space( padding-top, 2unit );
-		@include AU-space( border-bottom, 0.5unit solid $AU-color-Background );
+		@include AU-space( border-bottom, 0.5unit solid $AU-color-background-shade );
 		padding-bottom: 0;
 
 		.au-link-list--inline {
@@ -73,7 +73,7 @@
 
 				& > a {
 					@include AU-space( padding, 1unit 1unit );
-					@include AU-space( border-bottom, 0.5unit solid $AU-color-Background );
+					@include AU-space( border-bottom, 0.5unit solid $AU-color-background-shade );
 
 					&:focus {
 						position: relative; // fix outline overlap
@@ -87,10 +87,10 @@
 		}
 
 		&.navigation--dark {
-			border-color: $AU-colordark-Action;
+			border-color: $AU-colordark-foreground-action;
 
 			.au-link-list > li > a {
-				border-color: $AU-colordark-Action;
+				border-color: $AU-colordark-foreground-action;
 			}
 		}
 	}
