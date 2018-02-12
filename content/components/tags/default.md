@@ -1,7 +1,7 @@
 ---
 layout: component/code-demo
 example: examples/example-default
-headline: Default Buttons
+headline: Tags using definition list
 code:
   - HTML: |
       <dl class="au-tags">
@@ -16,11 +16,7 @@ code:
           <dd><a href="#">pear ice cream</a></dd>
       </dl>
   - React: |
-      import AUbutton from '@gov.au/buttons';
-
-      <AUbutton>
-        Primary button
-      </AUbutton>
+      TODO
 ---
 
 TODO

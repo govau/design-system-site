@@ -1,7 +1,7 @@
 ---
 layout: component/code-demo
 example: examples/example-unordered
-headline: Using unordered list
+headline: Tags using unordered list
 code:
   - HTML: |
       <span>Tags:</span>
