@@ -84,8 +84,9 @@ accordion:
   ID: accordion    # <-- auto generated, don't change
 animate:
   name: Animate
-  description: Animations add visual effects to page elements and help users
-    understand what buttons to click or what to do next in a website.
+  description: >-
+    Animations add visual effects to page elements and help users understand
+    what buttons to click or what to do next in a website.
   metatags:
     - TODO
   tags:
@@ -119,8 +120,9 @@ animate:
   ID: animate    # <-- auto generated, don't change
 body:
   name: Body
-  description: Body is a collection of styles that apply to common content
-    elements, these styles help users read page body content more easily.
+  description: >-
+    Body is a collection of styles that apply to common content elements, these
+    styles help users read page body content more easily.
   metatags:
     - TODO
   tags:
@@ -490,7 +492,7 @@ grid-12:
     - TODO
   tags:
     - TODO
-  related:
+  related: null
   related-articles:
     - TODO
   used-in:
@@ -518,9 +520,10 @@ grid-12:
   ID: grid-12    # <-- auto generated, don't change
 header:
   name: Header
-  description: Headers help users understand what the content of the page is
-    about. They appear at the top of a page, above the main body text. They are
-    usually styled as level (H1) headings.
+  description: >-
+    Headers help users understand what the content of the page is about. They
+    appear at the top of a page, above the main body text. They are usually
+    styled as level (H1) headings.
   metatags:
     - TODO
   tags:
@@ -600,13 +603,16 @@ headings:
   ID: headings    # <-- auto generated, don't change
 inpage-nav:
   name: Inpage Nav
-  description: TODO
+  description: In-page-nav links helps users scan the contents of a page and
+    navigate to different sections of the page. They are placed above sections
+    of a page and provide navigation to individual anchor links located in those
+    sections.
   metatags:
     - TODO
   tags:
     - TODO
   related:
-    - TODO
+    - direction-links
   related-articles:
     - TODO
   used-in:
