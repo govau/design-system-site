@@ -516,13 +516,15 @@ grid-12:
   ID: grid-12    # <-- auto generated, don't change
 header:
   name: Header
-  description: TODO
+  description: Headers help users understand what the content of the page is
+    about. They appear at the top of a page, above the main body text. They are
+    usually styled as level (H1) headings.
   metatags:
     - TODO
   tags:
     - TODO
   related:
-    - TODO
+    - footer
   related-articles:
     - TODO
   used-in:
