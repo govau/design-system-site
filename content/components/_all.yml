@@ -827,13 +827,17 @@ progress-indicator:
   hasReact: true    # <-- auto generated, don't change
 responsive-media:
   name: Responsive Media
-  description: TODO
+  description: >
+    Responsive-media helps create a responsive experience for users viewing
+    images and video on different size devices. Specifically it manages video
+    and slideshow dimensions and aspect ratios for various viewports and widths;
+    that is, small screens, large screens and anything in between.
   metatags:
     - TODO
   tags:
     - TODO
   related:
-    - TODO
+    - grid-12
   related-articles:
     - TODO
   used-in:
