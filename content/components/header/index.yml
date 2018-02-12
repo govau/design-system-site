@@ -14,6 +14,7 @@ sidebar:
 
 main:
   - default.md
+  - hero.md
 
 footer:
   - /_shared/footer.md
