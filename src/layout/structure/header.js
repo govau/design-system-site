@@ -28,11 +28,7 @@ const Header = ({ title, mainmenu, header_govau, _relativeURL, _ID, _pages, _bod
 						<div className="col-md-12">
 							{
 								_ID === 'index'
-									? <img
-											className="header__logo--coa"
-											src={ _relativeURL( '/assets/img/header-logo-agov.png', _ID ) }
-											alt="The Australian Government coat of Arms"
-										/>
+									? <p className="header__logo--coa">The Australian Government coat of Arms</p>
 									: null
 							}
 							<div className="header__logo-wrapper">
@@ -40,11 +36,7 @@ const Header = ({ title, mainmenu, header_govau, _relativeURL, _ID, _pages, _bod
 									{
 										_ID === 'index'
 											? null
-											: <img
-													className="header__logo--coa"
-													src={ _relativeURL( '/assets/img/header-logo-agov.png', _ID ) }
-													alt="The Australian Government coat of Arms"
-												/>
+											: <p className="header__logo--coa">The Australian Government coat of Arms</p>
 									}
 									<svg role="img" title="GOLD">
 										<title>The Government Open Language for Design logo</title>

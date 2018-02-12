@@ -90,9 +90,16 @@
 
 // The coat of arms
 .header__logo--coa {
+	@include AU-space( width, 15unit );
+	@include AU-space( height, 4unit );
+	@include AU-space( margin, 0 0 1unit 0 );
+	background-size: 100%;
+	background-position: left center;
 	display: block;
-	@include AU-space( margin-bottom, 1unit );
-	@include AU-space( max-width, 10unit );
+	text-indent: -999px;
+	overflow: hidden;
+	background-image: url( '/assets/img/header-logo-agov.png' );
+	background-repeat: no-repeat;
 }
 
 
@@ -129,7 +136,7 @@
 
 	.header--home .header__logo-wrapper {
 		@include AU-space( max-width, 34unit );
-		@include AU-space( margin, 6unit auto 9unit );
+		@include AU-space( margin, 5unit auto 9unit );
 	}
 }
 
@@ -146,15 +153,17 @@
 	}
 
 	.header__logo--coa {
+		@include AU-space( width, 10unit );
+		@include AU-space( height, 5unit );
 		@include AU-space( margin-right, 1.5unit );
-		@include AU-space( padding, 0.5unit 1.5unit 0.5unit 0 );
+		background-size: 85%;
 		border-right: 1px solid #666;
 		float: left;
 		margin-bottom: 0;
+		background-image: url( '/assets/img/header-logo-agov-stack.png' );
 
 		.header--home & {
 			border-right: 0;
-			padding-right: 0;
 			float: none;
 		}
 	}
