@@ -1,4 +1,4 @@
-<div class="au-body au-page-alerts au-page-alerts--info" role="alert">
+<div class="au-body au-page-alerts au-page-alerts--warning" role="alert">
   <h3>Info: Accessibility reading</h3>
   <ol>
     <li>The <a href="https://www.legislation.gov.au/Latest/C2016C00763">Disability Discrimination Act (1992)</a></li>
@@ -7,7 +7,7 @@
 </div>
 
 <div class="au-body au-body--dark">
-  <div class="au-page-alerts au-page-alerts--info au-page-alerts--dark" role="alert">
+  <div class="au-page-alerts au-page-alerts--warning au-page-alerts--dark" role="alert">
   	<h3>Info: Accessibility reading</h3>
   	<ol>
   		<li>The <a href="https://www.legislation.gov.au/Latest/C2016C00763">Disability Discrimination Act (1992)</a></li>
