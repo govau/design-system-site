@@ -1,6 +1,5 @@
 // HeaderGovAU
 .headergovau {
-	@include AU-space( padding, 0.25unit 0 );
 	background-color: $AU-colordark-background-alt-shade;
 	color: $AU-colordark-Text;
 	font-family: $AU-font;
@@ -66,7 +65,7 @@
 
 // The top bar that doesn't include content
 .headergovau__bar {
-	@include AU-space( padding, 0.25unit 0 );
+	@include AU-space( padding, 0.5unit 0 );
 
 	a {
 		color: $AU-colordark-Text;
