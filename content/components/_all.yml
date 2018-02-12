@@ -952,7 +952,10 @@ skip-link:
   ID: skip-link    # <-- auto generated, don't change
 tags:
   name: Tags
-  description: TODO
+  description: >
+    Tags are a means of classifying content, typically using keywords or labels.
+    They are added to a web page, an asset or other content to help users search
+    for and find related content quickly and easily.
   metatags:
     - TODO
   tags:
@@ -992,7 +995,10 @@ tags:
   hasReact: true    # <-- auto generated, don't change
 text-inputs:
   name: Text Inputs
-  description: TODO
+  description: >
+    Text inputs are input fields typically used in forms that allow
+    the user to enter text data in a structured format. Text inputs should be
+    accompanied by labels.
   metatags:
     - TODO
   tags:
