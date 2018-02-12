@@ -996,9 +996,9 @@ tags:
 text-inputs:
   name: Text Inputs
   description: >
-    Text inputs are input fields typically used in forms that allow
-    the user to enter text data in a structured format. Text inputs should be
-    accompanied by labels.
+    Text inputs are input fields typically used in forms that allow the user to
+    enter text data in a structured format. Text inputs should be accompanied by
+    labels.
   metatags:
     - TODO
   tags:
