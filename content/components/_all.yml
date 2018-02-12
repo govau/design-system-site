@@ -871,13 +871,22 @@ responsive-media:
   ID: responsive-media    # <-- auto generated, don't change
 select:
   name: Select
-  description: TODO
+  description: >
+    Select provides a means to select a single tem from a collapsible list. Use of select helps to reduce input errors and screen space. It is commonly used to help users enter a value into a form field.
+
+    Select comprises the following options:
+     - normal select
+     - default
+     - select disabled
+     - select valid and invalid
+     - block select
+
   metatags:
     - TODO
   tags:
     - TODO
   related:
-    - TODO
+    - control-input
   related-articles:
     - TODO
   used-in:
