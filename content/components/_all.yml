@@ -119,13 +119,14 @@ animate:
   ID: animate    # <-- auto generated, don't change
 body:
   name: Body
-  description: TODO
+  description: Body is a collection of styles that apply to common content
+    elements, these styles help users read page body content more easily.
   metatags:
     - TODO
   tags:
     - TODO
   related:
-    - TODO
+    - headings
   related-articles:
     - TODO
   used-in:
