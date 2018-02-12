@@ -654,8 +654,7 @@ keyword-list:
     - TODO
   tags:
     - TODO
-  related:
-    - null
+  related: null
   related-articles:
     - TODO
   used-in:
@@ -738,13 +737,16 @@ link-list:
   ID: link-list    # <-- auto generated, don't change
 page-alerts:
   name: Page Alerts
-  description: TODO
+  description: >
+    Page alerts are used to notify users of important information or changes on
+    a page, in a way that attracts the user's attention without interrupting the
+    user's task. Typically they appear at the top of a page following a submit
+    action.
   metatags:
     - TODO
   tags:
     - TODO
-  related:
-    - TODO
+  related: null
   related-articles:
     - TODO
   used-in:
