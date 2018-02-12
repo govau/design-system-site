@@ -41,7 +41,7 @@ const Live = ({ _ID, _parents, _pages, _relativeURL, _parseYaml, pagetitle, exam
 				<div className="container-fluid">
 					<div className="row">
 						<div className="col-md-12">
-							<a className="au-direction-link au-direction-link--left" href={ `/components/${ module }` }>
+							<a className="au-direction-link au-direction-link--left" href={ _relativeURL( `/components/${ module }`, _ID ) }>
 								View { GetComponentValue( module, 'name', _parseYaml ) } overview
 							</a>
 						</div>

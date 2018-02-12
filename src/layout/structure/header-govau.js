@@ -55,7 +55,6 @@ const HeaderGovAU = ({ menu, left_title, left_content, right_title, right_conten
 	</div>
 );
 
-
 HeaderGovAU.propTypes = {
 	/**
 	 * left_title: The .gov.au means its official
@@ -78,8 +77,6 @@ HeaderGovAU.propTypes = {
 	right_content: PropTypes.string.isRequired,
 };
 
-
 HeaderGovAU.defaultProps = {};
-
 
 export default HeaderGovAU;
