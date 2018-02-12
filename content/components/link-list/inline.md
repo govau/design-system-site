@@ -1,10 +1,10 @@
 ---
 layout: component/code-demo
-example: examples/example-default
-headline: Default
+example: examples/example-inline
+headline: Inline
 code:
   - HTML: |
-      <ul class="au-link-list">
+      <ul class="au-link-list au-link-list--inline">
         <li><a href="#">Options</a></li>
         <li><a href="#">Help</a></li>
         <li><a href="#">Sign Out</a></li>
@@ -14,4 +14,4 @@ code:
       Get from https://github.com/govau/uikit
 ---
 
-Default link list
+Inline link list
