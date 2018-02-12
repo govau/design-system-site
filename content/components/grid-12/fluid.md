@@ -1,11 +1,11 @@
 ---
 layout: component/code-demo
-example: examples/example-default
-headline: Default
+example: examples/example-fluid
+headline: Fluid
 code:
   - HTML: |
       <main class="au-grid">
-        <div class="container">
+        <div class="container-fluid">
           <div class="row">
             <div class="grids col-sm-4"><span>4</span></div>
             <div class="grids col-sm-4"><span>4</span></div>
