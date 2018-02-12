@@ -4,11 +4,14 @@ example: examples/example-default
 headline: Default
 code:
   - HTML: |
-      TODO HTML
-      Get from https://github.com/govau/uikit
+      <ul class="au-link-list">
+        <li><a href="#">Options</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Sign Out</a></li>
+      </ul>
   - React: |
       TODO React
       Get from https://github.com/govau/uikit
 ---
 
-TODO
+Default link list

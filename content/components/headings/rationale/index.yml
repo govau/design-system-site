@@ -1,0 +1,18 @@
+layout: component/page
+pagetitle: TODO rationale
+
+header:
+  - /_shared/header.md
+
+component_nav:
+  - /components/_tabs.md
+
+sidebar:
+  - /components/search.md
+  - /components/sidebar.md
+
+main:
+  - todo.md
+
+footer:
+  - /_shared/footer.md

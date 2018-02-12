@@ -19,7 +19,7 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, filter, tabbing, examp
 	<title>${ pagetitle } - Australian Government Open Language for Design</title>
 
 	<link rel="shortcut icon" type="image/x-icon" href=${ _relativeURL( '/assets/img/favicon.ico', _ID ) }>
-	<link rel="stylesheet" href=${ _relativeURL( '/assets/css/iframe/iframe.css', _ID ) } />
+	<link rel="stylesheet" href=${ _relativeURL( '/assets/css/example/example.css', _ID ) } />
 	<link rel="stylesheet" href=${ _relativeURL( '/assets/css/_uikit/uikit.min.css', _ID ) } />
 	<link rel="stylesheet" href=${ _relativeURL( `/assets/css/a11y/a11y.css`, _ID ) } />
 

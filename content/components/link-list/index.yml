@@ -14,6 +14,7 @@ sidebar:
 
 main:
   - default.md
+  - inline.md
 
 footer:
   - /_shared/footer.md

@@ -18,4 +18,4 @@ navigation:
     - alignment: right
       items:
         - text: Live demo
-          link: /examples/example-default/
+          link: /live

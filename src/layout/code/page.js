@@ -9,7 +9,7 @@ import Fs from 'fs';
  *
  * @disable-docs
  */
-const Example = ({ _ID, _relativeURL, pagetitle, modules, example, alignment }) => {
+const Example = ({ _ID, _relativeURL, pagetitle, example, alignment }) => {
 	const headContent = `
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
@@ -18,7 +18,7 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, example, alignment }) 
 	<title>${ pagetitle } - Australian Government Open Language for Design</title>
 
 	<link rel="shortcut icon" type="image/x-icon" href=${ _relativeURL( '/assets/img/favicon.ico', _ID ) }>
-	<link rel="stylesheet" href=${ _relativeURL( '/assets/css/iframe/iframe.css', _ID ) } />
+	<link rel="stylesheet" href=${ _relativeURL( '/assets/css/example/example.css', _ID ) } />
 	<link rel="stylesheet" href=${ _relativeURL( '/assets/css/_uikit/uikit.min.css', _ID ) } />
 
 	<!--[if lte IE 9]>
@@ -31,9 +31,12 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, example, alignment }) 
 	return (
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }} />
-		<body className={ `au-body example${ alignment === 'center' ? ' example--center' : '' }` }>
-			<div className='content'>
-				{ example }
+		<body className="au-body">
+
+			<div className={ `example${ alignment === 'center' ? ' example--center' : '' }` }>
+				<div className='content'>
+					{ example }
+				</div>
 			</div>
 
 			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
