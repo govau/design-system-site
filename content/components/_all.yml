@@ -647,13 +647,14 @@ inpage-nav:
   hasReact: true    # <-- auto generated, don't change
 keyword-list:
   name: Keyword List
-  description: TODO
+  description: The keyword list style helps to emphasise and draw the user's
+    eye to phrases that are repeated in a list.
   metatags:
     - TODO
   tags:
     - TODO
   related:
-    - TODO
+    - null
   related-articles:
     - TODO
   used-in:
