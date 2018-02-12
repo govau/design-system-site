@@ -692,10 +692,6 @@ link-list:
   description: >
     The link list style is a simple list of vertical or horizontal links used
     for site navigation. It is used to order information for users.
-
-    The link-list style comprises 2 variants:
-      - default (vertical)
-      - inline (horizontal)
   metatags:
     - TODO
   tags:
@@ -873,14 +869,6 @@ select:
   name: Select
   description: >
     Select provides a means to select a single tem from a collapsible list. Use of select helps to reduce input errors and screen space. It is commonly used to help users enter a value into a form field.
-
-    Select comprises the following options:
-     - normal select
-     - default
-     - select disabled
-     - select valid and invalid
-     - block select
-
   metatags:
     - TODO
   tags:
@@ -920,13 +908,16 @@ select:
   hasReact: true    # <-- auto generated, don't change
 skip-link:
   name: Skip Link
-  description: TODO
+  description: >
+    Skip links are internal page links that aid navigation around a page. They
+    are detected by screen readers and help users quickly jump to and over
+    content on the page.
   metatags:
     - TODO
   tags:
     - TODO
   related:
-    - TODO
+    - inpage-nav
   related-articles:
     - TODO
   used-in:
