@@ -603,10 +603,10 @@ headings:
   ID: headings    # <-- auto generated, don't change
 inpage-nav:
   name: Inpage Nav
-  description: In-page-nav links helps users scan the contents of a page and
-    navigate to different sections of the page. They are placed above sections
-    of a page and provide navigation to individual anchor links located in those
-    sections.
+  description: >-
+    In-page-nav links helps users scan the contents of a page and navigate to
+    different sections of the page. They are placed above sections of a page and
+    provide navigation to individual anchor links located in those sections.
   metatags:
     - TODO
   tags:
@@ -647,8 +647,9 @@ inpage-nav:
   hasReact: true    # <-- auto generated, don't change
 keyword-list:
   name: Keyword List
-  description: The keyword list style helps to emphasise and draw the user's
-    eye to phrases that are repeated in a list.
+  description: >-
+    The keyword list style helps to emphasise and draw the user's eye to phrases
+    that are repeated in a list.
   metatags:
     - TODO
   tags:
@@ -689,13 +690,20 @@ keyword-list:
   hasReact: true    # <-- auto generated, don't change
 link-list:
   name: Link list
-  description: TODO
+  description: >
+    The link list style is a simple list of vertical or horizontal links used
+    for site navigation. It is used to order information for users.
+
+    The link-list style comprises 2 variants:
+      - default (vertical)
+      - inline (horizontal)
   metatags:
     - TODO
   tags:
     - TODO
   related:
-    - TODO
+    - direction-links
+    - inpage-nav
   related-articles:
     - TODO
   used-in:
