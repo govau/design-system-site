@@ -5,8 +5,7 @@ core:
     - TODO
   tags:
     - TODO
-  related:
-    - TODO
+  related: null
   related-articles:
     - TODO
   used-in:
@@ -15,23 +14,23 @@ core:
   contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
+      url: 'https://github.com/dominikwilkowski'
     - name: Simon Pascal Klein
       email: klepas@klepas.org
-      url: 'http://klepas.org/'
+      url: 'https://github.com/klepas'
     - name: Trevor Brennan
       email: t@trevorbrennan.com
-      url: 'http://trevorbrennan.com/'
+      url: 'https://github.com/TrebBrennan'
     - name: Alex Page
       email: alex@alexpage.com.au
-      url: 'http://alexpage.com.au/'
+      url: 'https://github.com/alex-page'
   state: published
   order: 0
   discussions:
     - open: 2
     - active: 7
     - something: something
-  version: 1.0.0-next.5    # <-- auto generated, don't change
+  version: 1.0.0-next.6    # <-- auto generated, don't change
   dependencies: []    # <-- auto generated, don't change
   hasSass: true    # <-- auto generated, don't change
   hasJs: false    # <-- auto generated, don't change
@@ -58,23 +57,23 @@ accordion:
   contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
+      url: 'https://github.com/dominikwilkowski'
     - name: Simon Schwartz
       email: simon.schwartz0@gmail.com
-      url: 'https://simonschwartz.github.io/'
+      url: 'https://github.com/simonschwartz'
     - name: Alex Page
       email: alex@alexpage.com.au
-      url: 'http://alexpage.com.au/'
+      url: 'https://github.com/alex-page'
     - name: Trevor Brennan
       email: t@trevorbrennan.com
-      url: 'http://trevorbrennan.com/'
+      url: 'https://github.com/TrebBrennan'
   state: published
   order: 10
   discussions:
     - open: 2
     - active: 7
     - something: something
-  version: 1.0.0-next.6    # <-- auto generated, don't change
+  version: 1.0.0-next.7    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - animate
     - core
@@ -84,7 +83,7 @@ accordion:
   ID: accordion    # <-- auto generated, don't change
 animate:
   name: Animate
-  description: >-
+  description: >
     Animations add visual effects to page elements and help users understand
     what buttons to click or what to do next in a website.
   metatags:
@@ -102,17 +101,17 @@ animate:
   contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
+      url: 'https://github.com/dominikwilkowski'
     - name: Simon Schwartz
       email: simon.schwartz0@gmail.com
-      url: 'https://simonschwartz.github.io/'
+      url: 'https://github.com/simonschwartz'
   state: published
   order: 20
   discussions:
     - open: 2
     - active: 7
     - something: something
-  version: 1.0.0-next.3    # <-- auto generated, don't change
+  version: 1.0.0-next.4    # <-- auto generated, don't change
   dependencies: []    # <-- auto generated, don't change
   hasSass: false    # <-- auto generated, don't change
   hasJs: true    # <-- auto generated, don't change
@@ -120,7 +119,7 @@ animate:
   ID: animate    # <-- auto generated, don't change
 body:
   name: Body
-  description: >-
+  description: >
     Body is a collection of styles that apply to common content elements, these
     styles help users read page body content more easily.
   metatags:
@@ -137,23 +136,23 @@ body:
   contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
+      url: 'https://github.com/dominikwilkowski'
     - name: Simon Pascal Klein
       email: klepas@klepas.org
-      url: 'http://klepas.org/'
+      url: 'https://github.com/klepas'
     - name: Trevor Brennan
       email: t@trevorbrennan.com
-      url: 'http://trevorbrennan.com/'
+      url: 'https://github.com/TrebBrennan'
     - name: Alex Page
       email: alex@alexpage.com.au
-      url: 'http://alexpage.com.au/'
+      url: 'https://github.com/alex-page'
   state: published
   order: 30
   discussions:
     - open: 2
     - active: 7
     - something: something
-  version: 1.0.0-next.4    # <-- auto generated, don't change
+  version: 1.0.0-next.5    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -182,16 +181,16 @@ breadcrumbs:
   contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
+      url: 'https://github.com/dominikwilkowski'
     - name: Simon Pascal Klein
       email: klepas@klepas.org
-      url: 'http://klepas.org/'
+      url: 'https://github.com/klepas'
     - name: Trevor Brennan
       email: t@trevorbrennan.com
-      url: 'http://trevorbrennan.com/'
+      url: 'https://github.com/TrebBrennan'
     - name: Alex Page
       email: alex@alexpage.com.au
-      url: 'http://alexpage.com.au/'
+      url: 'https://github.com/alex-page'
   state: published
   order: 40
   discussions:
@@ -199,7 +198,7 @@ breadcrumbs:
     - active: 7
     - something: something
   ID: breadcrumbs    # <-- auto generated, don't change
-  version: 1.0.0-next.4    # <-- auto generated, don't change
+  version: 1.0.0-next.5    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
     - link-list
@@ -214,22 +213,22 @@ buttons:
 
     Buttons use labels and sometimes icons to communicate the action that will
     occur when the user touches them.
-  version: 1.0.0-next.6    # <-- auto generated, don't change
+  version: 1.0.0-next.7    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
+      url: 'https://github.com/dominikwilkowski'
     - name: Simon Pascal Klein
       email: klepas@klepas.org
-      url: 'http://klepas.org/'
+      url: 'https://github.com/klepas'
     - name: Trevor Brennan
       email: t@trevorbrennan.com
-      url: 'http://trevorbrennan.com/'
+      url: 'https://github.com/TrebBrennan'
     - name: Alex Page
       email: alex@alexpage.com.au
-      url: 'http://alexpage.com.au/'
+      url: 'https://github.com/alex-page'
   state: published
   order: 50
   discussions:
@@ -275,16 +274,16 @@ callout:
   contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
+      url: 'https://github.com/dominikwilkowski'
     - name: Simon Pascal Klein
       email: klepas@klepas.org
-      url: 'http://klepas.org/'
+      url: 'https://github.com/klepas'
     - name: Trevor Brennan
       email: t@trevorbrennan.com
-      url: 'http://trevorbrennan.com/'
+      url: 'https://github.com/TrebBrennan'
     - name: Alex Page
       email: alex@alexpage.com.au
-      url: 'http://alexpage.com.au/'
+      url: 'https://github.com/alex-page'
   state: published
   order: 60
   discussions:
@@ -292,7 +291,7 @@ callout:
     - active: 7
     - something: something
   ID: callout    # <-- auto generated, don't change
-  version: 1.0.0-next.4    # <-- auto generated, don't change
+  version: 1.0.0-next.5    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -320,23 +319,23 @@ control-input:
   contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
+      url: 'https://github.com/dominikwilkowski'
     - name: Simon Pascal Klein
       email: klepas@klepas.org
-      url: 'http://klepas.org/'
+      url: 'https://github.com/klepas'
     - name: Trevor Brennan
       email: t@trevorbrennan.com
-      url: 'http://trevorbrennan.com/'
+      url: 'https://github.com/TrebBrennan'
     - name: Alex Page
       email: alex@alexpage.com.au
-      url: 'http://alexpage.com.au/'
+      url: 'https://github.com/alex-page'
   state: published
   order: 70
   discussions:
     - open: 2
     - active: 7
     - something: something
-  version: 1.0.0-next.8    # <-- auto generated, don't change
+  version: 1.0.0-next.9    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -368,16 +367,16 @@ cta-link:
   contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
+      url: 'https://github.com/dominikwilkowski'
     - name: Simon Pascal Klein
       email: klepas@klepas.org
-      url: 'http://klepas.org/'
+      url: 'https://github.com/klepas'
     - name: Trevor Brennan
       email: t@trevorbrennan.com
-      url: 'http://trevorbrennan.com/'
+      url: 'https://github.com/TrebBrennan'
     - name: Alex Page
       email: alex@alexpage.com.au
-      url: 'http://alexpage.com.au/'
+      url: 'https://github.com/alex-page'
   state: published
   order: 80
   discussions:
@@ -385,7 +384,7 @@ cta-link:
     - active: 7
     - something: something
   ID: cta-link    # <-- auto generated, don't change
-  version: 1.0.0-next.4    # <-- auto generated, don't change
+  version: 1.0.0-next.5    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -393,7 +392,7 @@ cta-link:
   hasReact: true    # <-- auto generated, don't change
 direction-links:
   name: Direction Links
-  description: >-
+  description: >
     Direction links are text accompanied by arrows that link up and down within
     a page or back to a parent page. They help users move quickly to other parts
     of the page or to a parent page, or through a process.
@@ -414,16 +413,16 @@ direction-links:
   contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
+      url: 'https://github.com/dominikwilkowski'
     - name: Simon Pascal Klein
       email: klepas@klepas.org
-      url: 'http://klepas.org/'
+      url: 'https://github.com/klepas'
     - name: Trevor Brennan
       email: t@trevorbrennan.com
-      url: 'http://trevorbrennan.com/'
+      url: 'https://github.com/TrebBrennan'
     - name: Alex Page
       email: alex@alexpage.com.au
-      url: 'http://alexpage.com.au/'
+      url: 'https://github.com/alex-page'
   state: published
   order: 90
   discussions:
@@ -431,7 +430,7 @@ direction-links:
     - active: 7
     - something: something
   ID: direction-links    # <-- auto generated, don't change
-  version: 1.0.0-next.3    # <-- auto generated, don't change
+  version: 1.0.0-next.5    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -439,7 +438,7 @@ direction-links:
   hasReact: true    # <-- auto generated, don't change
 footer:
   name: Footer
-  description: >-
+  description: >
     Footers help users find what they need after scrolling to the bottom of a
     page. They provide supplementary information such as copyright, ABN details,
     contact information, links to other pages within the website, and email and
@@ -458,23 +457,23 @@ footer:
   contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
+      url: 'https://github.com/dominikwilkowski'
     - name: Simon Pascal Klein
       email: klepas@klepas.org
-      url: 'http://klepas.org/'
+      url: 'https://github.com/klepas'
     - name: Trevor Brennan
       email: t@trevorbrennan.com
-      url: 'http://trevorbrennan.com/'
+      url: 'https://github.com/TrebBrennan'
     - name: Alex Page
       email: alex@alexpage.com.au
-      url: 'http://alexpage.com.au/'
+      url: 'https://github.com/alex-page'
   state: published
   order: 100
   discussions:
     - open: 2
     - active: 7
     - something: something
-  version: 1.0.0-next.5    # <-- auto generated, don't change
+  version: 1.0.0-next.6    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -483,7 +482,7 @@ footer:
   ID: footer    # <-- auto generated, don't change
 grid-12:
   name: Grid 12
-  description: >-
+  description: >
     A grid consists of a framework of cells laid out and aligned vertically and
     horizontally.  A grid helps users read and visually navigate website content
     more easily, and uses a column structure that is both responsive and
@@ -501,17 +500,17 @@ grid-12:
   contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
+      url: 'https://github.com/dominikwilkowski'
     - name: Simon Pascal Klein
       email: klepas@klepas.org
-      url: 'http://klepas.org/'
+      url: 'https://github.com/klepas'
   state: published
   order: 110
   discussions:
     - open: 2
     - active: 7
     - something: something
-  version: 1.0.0-next.3    # <-- auto generated, don't change
+  version: 1.0.0-next.4    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -520,7 +519,7 @@ grid-12:
   ID: grid-12    # <-- auto generated, don't change
 header:
   name: Header
-  description: >-
+  description: >
     Headers help users understand what the content of the page is about. They
     appear at the top of a page, above the main body text. They are usually
     styled as level (H1) headings.
@@ -538,23 +537,23 @@ header:
   contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
+      url: 'https://github.com/dominikwilkowski'
     - name: Simon Pascal Klein
       email: klepas@klepas.org
-      url: 'http://klepas.org/'
+      url: 'https://github.com/klepas'
     - name: Trevor Brennan
       email: t@trevorbrennan.com
-      url: 'http://trevorbrennan.com/'
+      url: 'https://github.com/TrebBrennan'
     - name: Alex Page
       email: alex@alexpage.com.au
-      url: 'http://alexpage.com.au/'
+      url: 'https://github.com/alex-page'
   state: published
   order: 120
   discussions:
     - open: 2
     - active: 7
     - something: something
-  version: 2.0.0-next.5    # <-- auto generated, don't change
+  version: 2.0.0-next.7    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -569,7 +568,7 @@ headings:
   tags:
     - TODO
   related:
-    - TODO
+    - body
   related-articles:
     - TODO
   used-in:
@@ -578,23 +577,23 @@ headings:
   contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
+      url: 'https://github.com/dominikwilkowski'
     - name: Simon Pascal Klein
       email: klepas@klepas.org
-      url: 'http://klepas.org/'
+      url: 'https://github.com/klepas'
     - name: Trevor Brennan
       email: t@trevorbrennan.com
-      url: 'http://trevorbrennan.com/'
+      url: 'https://github.com/TrebBrennan'
     - name: Alex Page
       email: alex@alexpage.com.au
-      url: 'http://alexpage.com.au/'
+      url: 'https://github.com/alex-page'
   state: published
   order: 130
   discussions:
     - open: 2
     - active: 7
     - something: something
-  version: 1.0.0-next.5    # <-- auto generated, don't change
+  version: 1.0.0-next.6    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -603,7 +602,7 @@ headings:
   ID: headings    # <-- auto generated, don't change
 inpage-nav:
   name: Inpage Nav
-  description: >-
+  description: >
     In-page-nav links helps users scan the contents of a page and navigate to
     different sections of the page. They are placed above sections of a page and
     provide navigation to individual anchor links located in those sections.
@@ -621,16 +620,16 @@ inpage-nav:
   contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
+      url: 'https://github.com/dominikwilkowski'
     - name: Simon Pascal Klein
       email: klepas@klepas.org
-      url: 'http://klepas.org/'
+      url: 'https://github.com/klepas'
     - name: Trevor Brennan
       email: t@trevorbrennan.com
-      url: 'http://trevorbrennan.com/'
+      url: 'https://github.com/TrebBrennan'
     - name: Alex Page
       email: alex@alexpage.com.au
-      url: 'http://alexpage.com.au/'
+      url: 'https://github.com/alex-page'
   state: published
   order: 140
   discussions:
@@ -638,7 +637,7 @@ inpage-nav:
     - active: 7
     - something: something
   ID: inpage-nav    # <-- auto generated, don't change
-  version: 1.0.0-next.5    # <-- auto generated, don't change
+  version: 1.0.0-next.6    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
     - link-list
@@ -647,7 +646,7 @@ inpage-nav:
   hasReact: true    # <-- auto generated, don't change
 keyword-list:
   name: Keyword List
-  description: >-
+  description: >
     The keyword list style helps to emphasise and draw the user's eye to phrases
     that are repeated in a list.
   metatags:
@@ -663,16 +662,16 @@ keyword-list:
   contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
+      url: 'https://github.com/dominikwilkowski'
     - name: Simon Pascal Klein
       email: klepas@klepas.org
-      url: 'http://klepas.org/'
+      url: 'https://github.com/klepas'
     - name: Trevor Brennan
       email: t@trevorbrennan.com
-      url: 'http://trevorbrennan.com/'
+      url: 'https://github.com/TrebBrennan'
     - name: Alex Page
       email: alex@alexpage.com.au
-      url: 'http://alexpage.com.au/'
+      url: 'https://github.com/alex-page'
   state: published
   order: 150
   discussions:
@@ -680,7 +679,7 @@ keyword-list:
     - active: 7
     - something: something
   ID: keyword-list    # <-- auto generated, don't change
-  version: 1.0.0-next.5    # <-- auto generated, don't change
+  version: 1.0.0-next.6    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
     - link-list
@@ -707,23 +706,23 @@ link-list:
   contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
+      url: 'https://github.com/dominikwilkowski'
     - name: Simon Pascal Klein
       email: klepas@klepas.org
-      url: 'http://klepas.org/'
+      url: 'https://github.com/klepas'
     - name: Trevor Brennan
       email: t@trevorbrennan.com
-      url: 'http://trevorbrennan.com/'
+      url: 'https://github.com/TrebBrennan'
     - name: Alex Page
       email: alex@alexpage.com.au
-      url: 'http://alexpage.com.au/'
+      url: 'https://github.com/alex-page'
   state: published
   order: 160
   discussions:
     - open: 2
     - active: 7
     - something: something
-  version: 1.0.0-next.7    # <-- auto generated, don't change
+  version: 1.0.0-next.8    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
     - body
@@ -751,16 +750,16 @@ page-alerts:
   contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
+      url: 'https://github.com/dominikwilkowski'
     - name: Simon Pascal Klein
       email: klepas@klepas.org
-      url: 'http://klepas.org/'
+      url: 'https://github.com/klepas'
     - name: Trevor Brennan
       email: t@trevorbrennan.com
-      url: 'http://trevorbrennan.com/'
+      url: 'https://github.com/TrebBrennan'
     - name: Alex Page
       email: alex@alexpage.com.au
-      url: 'http://alexpage.com.au/'
+      url: 'https://github.com/alex-page'
   state: published
   order: 170
   discussions:
@@ -768,7 +767,7 @@ page-alerts:
     - active: 7
     - something: something
   ID: page-alerts    # <-- auto generated, don't change
-  version: 1.0.0-next.4    # <-- auto generated, don't change
+  version: 1.0.0-next.5    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
     - body
@@ -798,16 +797,16 @@ progress-indicator:
   contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
+      url: 'https://github.com/dominikwilkowski'
     - name: Simon Pascal Klein
       email: klepas@klepas.org
-      url: 'http://klepas.org/'
+      url: 'https://github.com/klepas'
     - name: Trevor Brennan
       email: t@trevorbrennan.com
-      url: 'http://trevorbrennan.com/'
+      url: 'https://github.com/TrebBrennan'
     - name: Alex Page
       email: alex@alexpage.com.au
-      url: 'http://alexpage.com.au/'
+      url: 'https://github.com/alex-page'
   state: published
   order: 180
   discussions:
@@ -815,7 +814,7 @@ progress-indicator:
     - active: 7
     - something: something
   ID: progress-indicator    # <-- auto generated, don't change
-  version: 2.0.0-next.7    # <-- auto generated, don't change
+  version: 2.0.0-next.8    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -842,23 +841,23 @@ responsive-media:
   contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
+      url: 'https://github.com/dominikwilkowski'
     - name: Simon Pascal Klein
       email: klepas@klepas.org
-      url: 'http://klepas.org/'
+      url: 'https://github.com/klepas'
     - name: Trevor Brennan
       email: t@trevorbrennan.com
-      url: 'http://trevorbrennan.com/'
+      url: 'https://github.com/TrebBrennan'
     - name: Alex Page
       email: alex@alexpage.com.au
-      url: 'http://alexpage.com.au/'
+      url: 'https://github.com/alex-page'
   state: published
   order: 190
   discussions:
     - open: 2
     - active: 7
     - something: something
-  version: 1.0.0-next.3    # <-- auto generated, don't change
+  version: 1.0.0-next.4    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -868,7 +867,9 @@ responsive-media:
 select:
   name: Select
   description: >
-    Select provides a means to select a single tem from a collapsible list. Use of select helps to reduce input errors and screen space. It is commonly used to help users enter a value into a form field.
+    Select provides a means to select a single tem from a collapsible list. Use
+    of select helps to reduce input errors and screen space. It is commonly used
+    to help users enter a value into a form field.
   metatags:
     - TODO
   tags:
@@ -883,16 +884,16 @@ select:
   contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
+      url: 'https://github.com/dominikwilkowski'
     - name: Simon Schwartz
       email: simon.schwartz0@gmail.com
-      url: 'https://simonschwartz.github.io/'
+      url: 'https://github.com/simonschwartz'
     - name: Trevor Brennan
       email: t@trevorbrennan.com
-      url: 'http://trevorbrennan.com/'
+      url: 'https://github.com/TrebBrennan'
     - name: Alex Page
       email: alex@alexpage.com.au
-      url: 'http://alexpage.com.au/'
+      url: 'https://github.com/alex-page'
   state: published
   order: 200
   discussions:
@@ -900,7 +901,7 @@ select:
     - active: 7
     - something: something
   ID: select    # <-- auto generated, don't change
-  version: 1.0.0-next.5    # <-- auto generated, don't change
+  version: 1.0.0-next.6    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -926,23 +927,23 @@ skip-link:
   contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
+      url: 'https://github.com/dominikwilkowski'
     - name: Simon Pascal Klein
       email: klepas@klepas.org
-      url: 'http://klepas.org/'
+      url: 'https://github.com/klepas'
     - name: Trevor Brennan
       email: t@trevorbrennan.com
-      url: 'http://trevorbrennan.com/'
+      url: 'https://github.com/TrebBrennan'
     - name: Alex Page
       email: alex@alexpage.com.au
-      url: 'http://alexpage.com.au/'
+      url: 'https://github.com/alex-page'
   state: published
   order: 210
   discussions:
     - open: 2
     - active: 7
     - something: something
-  version: 1.0.0-next.4    # <-- auto generated, don't change
+  version: 1.0.0-next.5    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -957,7 +958,7 @@ tags:
   tags:
     - TODO
   related:
-    - TODO
+    - link-list
   related-articles:
     - TODO
   used-in:
@@ -966,16 +967,16 @@ tags:
   contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
+      url: 'https://github.com/dominikwilkowski'
     - name: Simon Pascal Klein
       email: klepas@klepas.org
-      url: 'http://klepas.org/'
+      url: 'https://github.com/klepas'
     - name: Trevor Brennan
       email: t@trevorbrennan.com
-      url: 'http://trevorbrennan.com/'
+      url: 'https://github.com/TrebBrennan'
     - name: Alex Page
       email: alex@alexpage.com.au
-      url: 'http://alexpage.com.au/'
+      url: 'https://github.com/alex-page'
   state: published
   order: 220
   discussions:
@@ -983,7 +984,7 @@ tags:
     - active: 7
     - something: something
   ID: tags    # <-- auto generated, don't change
-  version: 1.0.0-next.5    # <-- auto generated, don't change
+  version: 1.0.0-next.6    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -997,7 +998,8 @@ text-inputs:
   tags:
     - TODO
   related:
-    - TODO
+    - select
+    - control-input
   related-articles:
     - TODO
   used-in:
@@ -1006,16 +1008,16 @@ text-inputs:
   contributors:    # <-- auto generated, don't change
     - name: Dominik Wilkowski
       email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
+      url: 'https://github.com/dominikwilkowski'
     - name: Simon Pascal Klein
       email: klepas@klepas.org
-      url: 'http://klepas.org/'
+      url: 'https://github.com/klepas'
     - name: Trevor Brennan
       email: t@trevorbrennan.com
-      url: 'http://trevorbrennan.com/'
+      url: 'https://github.com/TrebBrennan'
     - name: Alex Page
       email: alex@alexpage.com.au
-      url: 'http://alexpage.com.au/'
+      url: 'https://github.com/alex-page'
   state: published
   order: 230
   discussions:
@@ -1023,7 +1025,7 @@ text-inputs:
     - active: 7
     - something: something
   ID: text-inputs    # <-- auto generated, don't change
-  version: 1.0.0-next.7    # <-- auto generated, don't change
+  version: 1.0.0-next.8    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -1077,7 +1079,7 @@ table:
   tags:
     - TODO
   related:
-    - TODO
+    - body
   related-articles:
     - TODO
   used-in:
