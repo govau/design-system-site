@@ -9,6 +9,6 @@ tableTH:
   - text: Title
   - text: Version
     className: component-table--minwidth
-  - text: Contributors
-    className: component-table--minwidth
+#  - text: Contributors
+#    className: component-table--minwidth
 ---

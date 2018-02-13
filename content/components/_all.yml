@@ -1065,16 +1065,7 @@ cards:
   tags:
     - Action
     - Box
-  contributors:    # <-- auto generated, don't change
-    - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
-    - name: Alex Page
-      email: alex@alexpage.com.au
-      url: 'http://alexpage.com.au/'
-    - name: Trevor Brennan
-      email: t@trevorbrennan.com
-      url: 'http://trevorbrennan.com/'
+  contributors:
   ID: cards    # <-- auto generated, don't change
   version: 0.0.0    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
@@ -1102,16 +1093,6 @@ table:
     - open: 2
     - active: 7
     - something: something
-  contributors:    # <-- auto generated, don't change
-    - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
-      url: 'https://dominik-wilkowski.com/'
-    - name: Alex Page
-      email: alex@alexpage.com.au
-      url: 'http://alexpage.com.au/'
-    - name: Trevor Brennan
-      email: t@trevorbrennan.com
-      url: 'http://trevorbrennan.com/'
   ID: table    # <-- auto generated, don't change
   version: 0.0.0    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
