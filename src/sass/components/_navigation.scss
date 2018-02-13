@@ -45,8 +45,8 @@
 
 	&.navigation--dark {
 		.au-link-list > li.mainmenu--active > a {
-			color: $AU-colordark-Text;
-			border-color: $AU-colordark-Text;
+			color: $AU-colordark-foreground-Text;
+			border-color: $AU-colordark-foreground-Text;
 		}
 	}
 

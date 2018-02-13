@@ -1,7 +1,7 @@
 // HeaderGovAU
 .headergovau {
 	background-color: $AU-colordark-background-alt-shade;
-	color: $AU-colordark-Text;
+	color: $AU-colordark-foreground-Text;
 	font-family: $AU-font;
 	position: relative;
 	z-index: 150;
@@ -68,7 +68,7 @@
 	@include AU-space( padding, 0.5unit 0 );
 
 	a {
-		color: $AU-colordark-Text;
+		color: $AU-colordark-foreground-Text;
 		text-decoration: none;
 
 		@include AU-focus( 'dark' );
@@ -108,7 +108,7 @@
 
 				&:hover {
 					text-decoration: underline;
-					color: $AU-colordark-Text;
+					color: $AU-colordark-foreground-Text;
 				}
 			}
 		}
@@ -133,8 +133,8 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">' +
-			'	<path fill="#{ $AU-colordark-Text }" d="M64 0l64 64-16 16-64-64"/>' +
-			'	<path fill="#{ $AU-colordark-Text }" d="M64 0l16 16-64 64L0 64"/>' +
+			'	<path fill="#{ $AU-colordark-foreground-Text }" d="M64 0l64 64-16 16-64-64"/>' +
+			'	<path fill="#{ $AU-colordark-foreground-Text }" d="M64 0l16 16-64 64L0 64"/>' +
 			'</svg>');
 		transition: transform 0.25s ease-in;
 	}

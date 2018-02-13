@@ -168,12 +168,12 @@ pre[class*="language-"] {
 		border: 0;
 		padding: 0;
 		background: transparent;
-		color: $AU-color-Text;
+		color: $AU-color-foreground-Text;
 		position: absolute;
 
 		&:hover,
 		&:focus {
-			color: $AU-color-Text;
+			color: $AU-color-foreground-Text;
 			background: transparent;
 		}
 	}
