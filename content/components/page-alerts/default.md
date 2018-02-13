@@ -1,11 +1,13 @@
 ---
 layout: component/code-demo
 example: examples/example-default
-headline: Default
+headline: Default / Info
 code:
   - HTML: |
-      TODO HTML
-      Get from https://github.com/govau/uikit
+      <div role="alert" class="au-body au-page-alerts au-page-alerts--info">
+        <h3>Alert title</h3>
+        <p>Alert Content</p>
+      </div>
   - React: |
       TODO React
       Get from https://github.com/govau/uikit
