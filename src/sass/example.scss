@@ -11,11 +11,16 @@
 	padding: 1rem 2rem;
 	margin: 0 auto;
 	max-width: 800px;
+
+	&.example--fullwidth {
+		padding: 0;
+	}
+
+	&.example--center {
+		text-align: center
+	}
 }
 
-.example--center {
-	text-align: center
-}
 
 .a11y .content .au-body.au-body--dark,
 .example .content .au-body.au-body--dark {
@@ -56,19 +61,47 @@
 }
 
 
+// Core typography
+.fontgrid-xxxl {
+	@include AU-fontgrid( xxxl );
+}
+.fontgrid-xxl {
+	@include AU-fontgrid( xxl );
+}
+.fontgrid-xl {
+	@include AU-fontgrid( xl );
+}
+.fontgrid-lg {
+	@include AU-fontgrid( lg );
+}
+.fontgrid-md {
+	@include AU-fontgrid( md );
+}
+.fontgrid-sm {
+	@include AU-fontgrid( sm );
+}
+.fontgrid-xs {
+	@include AU-fontgrid( xs );
+}
+
+
 // Core color palettes
 .palette {
+	@include AU-space( height, 2unit );
 	display: block;
+	height: 34px;
 	text-align: center;
 
 	span {
+		@include AU-space( padding, 0.25unit );
+		@include AU-space( margin, 0.5unit auto );
+		line-height: 1;
+		font-size: 12px;
+		font-size: 0.75rem;
 		background: #000;
 		background: rgba( 0, 0, 0, 0.8 );
 		color: #fff;
-		margin: 5px auto;
 		display: inline-block;
-		padding: 2px 5px;
-		font-size: 12px;
 
 		&.hidehex:after {
 			display: none;
@@ -78,55 +111,55 @@
 	&.palette--foreground-action {
 		background: $AU-color-foreground-action;
 		span:after {
-			content: "#{ $AU-color-foreground-action }";
+			content: ": #{ $AU-color-foreground-action }";
 		}
 	}
 	&.palette--foreground-focus {
 		background: $AU-color-foreground-focus;
 		span:after {
-			content: "#{ $AU-color-foreground-focus }";
+			content: ": #{ $AU-color-foreground-focus }";
 		}
 	}
 	&.palette--foreground-text {
 		background: $AU-color-foreground-text;
 		span:after {
-			content: "#{ $AU-color-foreground-text }";
+			content: ": #{ $AU-color-foreground-text }";
 		}
 	}
 	&.palette--foreground-muted {
 		background: $AU-color-foreground-muted;
 		span:after {
-			content: "#{ $AU-color-foreground-muted }";
+			content: ": #{ $AU-color-foreground-muted }";
 		}
 	}
 	&.palette--foreground-border {
 		background: $AU-color-foreground-border;
 		span:after {
-			content: "#{ $AU-color-foreground-border }";
+			content: ": #{ $AU-color-foreground-border }";
 		}
 	}
 	&.palette--background {
 		background: $AU-color-background;
 		span:after {
-			content: "#{ $AU-color-background }";
+			content: ": #{ $AU-color-background }";
 		}
 	}
 	&.palette--background-shade {
 		background: $AU-color-background-shade;
 		span:after {
-			content: "#{ $AU-color-background-shade }";
+			content: ": #{ $AU-color-background-shade }";
 		}
 	}
 	&.palette--background-alt {
 		background: $AU-color-background-alt;
 		span:after {
-			content: "#{ $AU-color-background-alt }";
+			content: ": #{ $AU-color-background-alt }";
 		}
 	}
 	&.palette--background-alt-shade {
 		background: $AU-color-background-alt-shade;
 		span:after {
-			content: "#{ $AU-color-background-alt-shade }";
+			content: ": #{ $AU-color-background-alt-shade }";
 		}
 	}
 
@@ -134,59 +167,56 @@
 		&.palette--dark--foreground-action {
 			background: $AU-colordark-foreground-action;
 			span:after {
-				content: "#{ $AU-colordark-foreground-action }";
+				content: ": #{ $AU-colordark-foreground-action }";
 			}
 		}
 		&.palette--dark--foreground-focus {
 			background: $AU-colordark-foreground-focus;
 			span:after {
-				content: "#{ $AU-colordark-foreground-focus }";
+				content: ": #{ $AU-colordark-foreground-focus }";
 			}
 		}
 		&.palette--dark--foreground-text {
 			background: $AU-colordark-foreground-text;
 			span:after {
-				content: "#{ $AU-colordark-foreground-text }";
+				content: ": #{ $AU-colordark-foreground-text }";
 			}
 		}
 		&.palette--dark--foreground-muted {
 			background: $AU-colordark-foreground-muted;
 			span:after {
-				content: "#{ $AU-colordark-foreground-muted }";
+				content: ": #{ $AU-colordark-foreground-muted }";
 			}
 		}
 		&.palette--dark--foreground-border {
 			background: $AU-colordark-foreground-border;
 			span:after {
-				content: "#{ $AU-colordark-foreground-border }";
+				content: ": #{ $AU-colordark-foreground-border }";
 			}
 		}
 		&.palette--dark--background {
 			background: $AU-colordark-background;
 			span:after {
-				content: "#{ $AU-colordark-background }";
+				content: ": #{ $AU-colordark-background }";
 			}
 		}
 		&.palette--dark--background-shade {
 			background: $AU-colordark-background-shade;
 			span:after {
-				content: "#{ $AU-colordark-background-shade }";
+				content: ": #{ $AU-colordark-background-shade }";
 			}
 		}
 		&.palette--dark--background-alt {
 			background: $AU-colordark-background-alt;
 			span:after {
-				content: "#{ $AU-colordark-background-alt }";
+				content: ": #{ $AU-colordark-background-alt }";
 			}
 		}
 		&.palette--dark--background-alt-shade {
 			background: $AU-colordark-background-alt-shade;
 			span:after {
-				content: "#{ $AU-colordark-background-alt-shade }";
+				content: ": #{ $AU-colordark-background-alt-shade }";
 			}
 		}
 	}
 }
-
-
-
