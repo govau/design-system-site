@@ -47,7 +47,7 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, filter, tabbing, examp
 
 			<main className="main au-body container-fluid">
 				<div className="row">
-					<div className="grids col-md-12">
+					<div className="col-md-12">
 						<div className={`${ tabbing ? 'js-tabbing' : '' }${ filter === 'protanopia' || filter === 'deuteranopia' ? 'js-filter' : '' }`}>
 							<div className={`content filter${ tabbing ? ' js-tabbing-area' : '' }`}>
 								{ example }

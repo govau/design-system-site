@@ -9,7 +9,7 @@ import Fs from 'fs';
  *
  * @disable-docs
  */
-const Example = ({ _ID, _relativeURL, pagetitle, example, alignment }) => {
+const Example = ({ _ID, _relativeURL, pagetitle, example, alignment, fullwidth }) => {
 	const headContent = `
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
@@ -32,7 +32,7 @@ const Example = ({ _ID, _relativeURL, pagetitle, example, alignment }) => {
 		<head dangerouslySetInnerHTML={{ __html: headContent }} />
 		<body className="au-body">
 
-			<div className={ `example${ alignment === 'center' ? ' example--center' : '' }` }>
+			<div className={ `example${ alignment === 'center' ? ' example--center' : '' }${ fullwidth === true ? ' example--fullwidth' : '' }` }>
 				<div className='content'>
 					{ example }
 				</div>
@@ -49,7 +49,8 @@ Example.propTypes = {
 };
 
 Example.defaultProps = {
-	alignment: 'left'
+	alignment: 'left',
+	fullwidth: false
 };
 
 export default Example;
