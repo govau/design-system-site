@@ -1,0 +1,192 @@
+// This is used for our example iframes and live demo pages
+
+
+// UI-Kit
+@import '../_uikit/sass/uikit';
+
+
+// Example wrapper
+.example {
+	padding: 16px 32px;
+	padding: 1rem 2rem;
+	margin: 0 auto;
+	max-width: 800px;
+}
+
+.example--center {
+	text-align: center
+}
+
+.a11y .content .au-body.au-body--dark,
+.example .content .au-body.au-body--dark {
+	margin: 16px -32px -32px -32px;
+	margin: 1rem -2rem -2rem -2rem;
+	padding: 16px 32px;
+	padding: 1rem 2rem;
+}
+
+
+// Live demo header bar
+.live-demo header {
+	margin-bottom: 16px;
+	margin-bottom: 1rem;
+	background-color: #1D1D1D;
+	padding: 16px 0;
+	padding: 1rem 0;
+
+	.container-fluid {
+		max-width: 1360px;
+		max-width: 85rem;
+		padding-left: 48px;
+		padding-left: 3rem;
+		padding-right: 48px;
+		padding-right: 3rem;
+	}
+
+	a {
+		color: #EBCA79;
+		display: block;
+		float: left;
+
+		&:hover {
+			text-decoration: none;
+			color: #fff;
+		}
+	}
+}
+
+
+// Core color palettes
+.palette {
+	display: block;
+	text-align: center;
+
+	span {
+		background: #000;
+		background: rgba( 0, 0, 0, 0.8 );
+		color: #fff;
+		margin: 5px auto;
+		display: inline-block;
+		padding: 2px 5px;
+		font-size: 12px;
+
+		&.hidehex:after {
+			display: none;
+		}
+	}
+
+	&.palette--foreground-action {
+		background: $AU-color-foreground-action;
+		span:after {
+			content: "#{ $AU-color-foreground-action }";
+		}
+	}
+	&.palette--foreground-focus {
+		background: $AU-color-foreground-focus;
+		span:after {
+			content: "#{ $AU-color-foreground-focus }";
+		}
+	}
+	&.palette--foreground-text {
+		background: $AU-color-foreground-text;
+		span:after {
+			content: "#{ $AU-color-foreground-text }";
+		}
+	}
+	&.palette--foreground-muted {
+		background: $AU-color-foreground-muted;
+		span:after {
+			content: "#{ $AU-color-foreground-muted }";
+		}
+	}
+	&.palette--foreground-border {
+		background: $AU-color-foreground-border;
+		span:after {
+			content: "#{ $AU-color-foreground-border }";
+		}
+	}
+	&.palette--background {
+		background: $AU-color-background;
+		span:after {
+			content: "#{ $AU-color-background }";
+		}
+	}
+	&.palette--background-shade {
+		background: $AU-color-background-shade;
+		span:after {
+			content: "#{ $AU-color-background-shade }";
+		}
+	}
+	&.palette--background-alt {
+		background: $AU-color-background-alt;
+		span:after {
+			content: "#{ $AU-color-background-alt }";
+		}
+	}
+	&.palette--background-alt-shade {
+		background: $AU-color-background-alt-shade;
+		span:after {
+			content: "#{ $AU-color-background-alt-shade }";
+		}
+	}
+
+	&.palette--dark {
+		&.palette--dark--foreground-action {
+			background: $AU-colordark-foreground-action;
+			span:after {
+				content: "#{ $AU-colordark-foreground-action }";
+			}
+		}
+		&.palette--dark--foreground-focus {
+			background: $AU-colordark-foreground-focus;
+			span:after {
+				content: "#{ $AU-colordark-foreground-focus }";
+			}
+		}
+		&.palette--dark--foreground-text {
+			background: $AU-colordark-foreground-text;
+			span:after {
+				content: "#{ $AU-colordark-foreground-text }";
+			}
+		}
+		&.palette--dark--foreground-muted {
+			background: $AU-colordark-foreground-muted;
+			span:after {
+				content: "#{ $AU-colordark-foreground-muted }";
+			}
+		}
+		&.palette--dark--foreground-border {
+			background: $AU-colordark-foreground-border;
+			span:after {
+				content: "#{ $AU-colordark-foreground-border }";
+			}
+		}
+		&.palette--dark--background {
+			background: $AU-colordark-background;
+			span:after {
+				content: "#{ $AU-colordark-background }";
+			}
+		}
+		&.palette--dark--background-shade {
+			background: $AU-colordark-background-shade;
+			span:after {
+				content: "#{ $AU-colordark-background-shade }";
+			}
+		}
+		&.palette--dark--background-alt {
+			background: $AU-colordark-background-alt;
+			span:after {
+				content: "#{ $AU-colordark-background-alt }";
+			}
+		}
+		&.palette--dark--background-alt-shade {
+			background: $AU-colordark-background-alt-shade;
+			span:after {
+				content: "#{ $AU-colordark-background-alt-shade }";
+			}
+		}
+	}
+}
+
+
+
