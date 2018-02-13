@@ -14,33 +14,14 @@ code:
       <div class="palette--background-alt">$AU-color-background-alt-shade</div>
       <div class="palette--background-alt-shade">$AU-color-foreground-action</div>
   - SCSS: |
-      .palette--foreground-action {
-        background: $AU-color-foreground-action;
-      }
-      .palette--foreground-focus {
-        background: $AU-color-foreground-focus;
-      }
-      .palette--foreground-text {
-        background: $AU-color-foreground-text;
-      }
-      .palette--foreground-muted {
-        background: $AU-color-foreground-muted;
-      }
-      .palette--foreground-border {
-        background: $AU-color-foreground-border;
-      }
-      .palette--background {
-        background: $AU-color-background;
-      }
-      .palette--background-shade {
-        background: $AU-color-background-shade;
-      }
-      .palette--background-alt {
-        background: $AU-color-background-alt;
-      }
-      .palette--background-alt-shade {
-        background: $AU-color-background-alt-shade;
-      }
+      $AU-color-foreground-action:     #00698f;
+      $AU-color-foreground-focus:      #ea4200;
+      $AU-color-foreground-text:       #313131;
+      $AU-color-background:            #fff;
+      $AU-colordark-foreground-action: #61daff;
+      $AU-colordark-foreground-focus:  #ff8629;
+      $AU-colordark-foreground-text:   #fff;
+      $AU-colordark-background:        #135E70;
 ---
 
 Our design system uses colour in a range of meaningful and intentional ways to create patterns and visual cues. We provide two colour palettes.
