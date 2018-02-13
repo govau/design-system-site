@@ -60,6 +60,15 @@
 	}
 }
 
+// Grids
+.grids {
+	background: $AU-colordark-foreground-action;
+	text-align: center;
+	font-size: 12px;
+	font-size: 0.75rem;
+	border: 2px solid $AU-colordark-foreground-text;
+}
+
 
 // Core typography
 .fontgrid-xxxl {
