@@ -15,4 +15,8 @@ code:
       Get from https://github.com/govau/uikit
 ---
 
-TODO
+- [Delete](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del)
+- [Strikethrough](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/s)
+- [Insert](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Ins)
+- [Highlight/mark](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark)
+- [Keyboard input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd)

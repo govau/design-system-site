@@ -16,4 +16,10 @@ code:
       Get from https://github.com/govau/uikit
 ---
 
-TODO
+The body component also provides styling for mathematical and code related HTML elements.
+
+- [Variable](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/var)
+- [Superscript](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sup)
+- [Subscript](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub)
+- [Code](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code)
+- [Pre](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre)

@@ -5,7 +5,8 @@
   <h4>Heading level 4</h4>
   <h5>Heading level 5</h5>
   <h6>Heading level 6</h6>
-  <p>Example paragraph. <a href="#">Internal link</a> a seven-point gold Commonwealth Star sits above the shield. Six of the star’s points represent the Australian states and the seventh point represents the territories. <a href="#" rel="external">External link</a></p>
+  <p>Example paragraph. <a href="#">Internal link</a> a seven-point gold Commonwealth Star sits above the shield. Six of the star’s points represent the Australian states and the seventh point represents the territories. <a href="#" rel="external">External link</a> See <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> for more details.</p>
+  <hr>
 </div>
 
 <div class="au-body au-body--dark">
@@ -15,5 +16,6 @@
   <h4>Heading level 4</h4>
   <h5>Heading level 5</h5>
   <h6>Heading level 6</h6>
-  <p>Example paragraph. <a href="#">Internal link</a> a seven-point gold Commonwealth Star sits above the shield. Six of the star’s points represent the Australian states and the seventh point represents the territories. <a href="#" rel="external">External link</a></p>
+  <p>Example paragraph. <a href="#">Internal link</a> a seven-point gold Commonwealth Star sits above the shield. Six of the star’s points represent the Australian states and the seventh point represents the territories. <a href="#" rel="external">External link</a> See <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> for more details.</p>
+  <hr>
 </div>
