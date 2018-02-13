@@ -21,8 +21,7 @@ const Live = ({ _ID, _parents, _pages, _relativeURL, _parseYaml, pagetitle, exam
 	<title>${ pagetitle } - Australian Government Open Language for Design</title>
 
 	<link rel="shortcut icon" type="image/x-icon" href=${ _relativeURL( '/assets/img/favicon.ico', _ID ) }>
-	<link rel="stylesheet" href=${ _relativeURL( '/assets/css/example/example.css', _ID ) } />
-	<link rel="stylesheet" href=${ _relativeURL( '/assets/css/_uikit/uikit.min.css', _ID ) } />
+	<link rel="stylesheet" href=${ _relativeURL( '/assets/css/example.css', _ID ) } />
 
 	<!--[if lte IE 9]>
 		<script src="${ _relativeURL( '/assets/js/html5shiv.js', _ID ) }"></script>
