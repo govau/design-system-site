@@ -1,7 +1,7 @@
 ---
-layout: callout-with-button
+layout: component/discussion-callout
 btntext: Community
-btnurl: /
+btnurl: https://community.service.gov.au/t/
 btntype: secondary
 ---
 

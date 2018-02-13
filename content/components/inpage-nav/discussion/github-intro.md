@@ -1,7 +1,7 @@
 ---
-layout: callout-with-button
+layout: component/discussion-callout
 btntext: Github
-btnurl: https://github.com/govau/uikit
+btnurl: https://github.com/govau/uikit/tree/develop/packages/
 btntype: secondary
 ---
 
