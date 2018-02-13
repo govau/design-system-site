@@ -13,7 +13,10 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - default.md
+  - type.md
+  - lists.md
+  - math-code.md
+  - content-management.md
 
 footer:
   - /_shared/footer.md
