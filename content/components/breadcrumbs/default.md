@@ -14,7 +14,7 @@ code:
   - React: |
       import AUbreadcrumbs from './breadcrumbs.js';
 
-      <AUbreadcrumbs label="Breadcrumb for this page" 
+      <AUbreadcrumbs label="Breadcrumb for this page"
         items={[
           {
             link: '#',
@@ -31,4 +31,4 @@ code:
       />
 ---
 
-A singular method of expanding and collapsing a peice of content with a title. These are best used for transcripts of videos.
+TODO
