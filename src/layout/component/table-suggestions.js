@@ -22,9 +22,9 @@ const TableSuggestions = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _
 				{
 					text: <a href={ `/components/${ component.ID }` }>{ component.name }</a>,
 				},
-				{
-					text: `Suggestion`,
-				},
+				// {
+				// 	text: `Suggestion`,
+				// },
 			];
 		}
 	);

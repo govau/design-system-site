@@ -6,10 +6,6 @@ btntext: Make a Suggestion
 btnURL: /community
 tableTH:
   - text: Title
-  - text: Status
-    className: component-table--minwidth
-components:
-  - module: core
-  - module: buttons
-  - module: accordion
+  # - text: Status
+  #   className: component-table--minwidth
 ---

@@ -24,9 +24,9 @@ const TableInProgress = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _p
 			{
 				text: <a href={ `/components/${ component.ID }` }>{ component.name }</a>,
 			},
-			{
-				text: component.version,
-			},
+			// {
+			// 	text: component.version,
+			// },
 			// {
 			// 	text: <Contributors contributors={ component.contributors } />,
 			// },
