@@ -28,6 +28,11 @@ export const CreateLink = ( link, _relativeURL, _ID, _pages ) => {
 			}
 		}
 	}
+
+	// I was getting link.text is undefined, this seems to help
+	else {
+		return null;
+	}
 };
 
 /**
