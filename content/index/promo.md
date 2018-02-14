@@ -11,12 +11,11 @@ tiles:
     imgurl: assets/img/artwork-about-components.png
     imgalt: Components used in multiple ways
     url: /components
-    text: Components are a collection of interface elements —&nbsp;such as accordions, buttons, breadcrumbs, lists&nbsp;— that can be used by teams of designers and developers across government to build products.
+    text: Components are a collection of interface elements —&nbsp;such as accordions, buttons, breadcrumbs, lists&nbsp;— that can be used by teams of designers and developers across government to build products and rapidly prototype.
 
   - title: Templates
     imgurl: assets/img/artwork-about-templates.png
     imgalt: Templates
     url: /templates
     text: Templates include high value core elements like icons, typography, colours, and sometimes complex UI patterns like grids, cards and navigation. They are a great way to kickstart a project and are designed to save on time and resources and get value to users sooner.
-
 ---
