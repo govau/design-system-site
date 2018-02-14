@@ -6,4 +6,4 @@ headline: Grayscale
 ---
 
 
-How the  breadcrumbs are viewed with total colour blindness.
+How the callouts are viewed with total colour blindness.

@@ -6,4 +6,4 @@ headline: Colour impairment
 ---
 
 
-How the breadcrumbs are viewed with various colour blindnesses
+How the callouts are viewed with various colour blindnesses
