@@ -692,7 +692,7 @@ keyword-list:
   hasJs: false    # <-- auto generated, don't change
   hasReact: true    # <-- auto generated, don't change
 link-list:
-  name: Link list
+  name: Link List
   description: >
     The link list style is a simple list of vertical or horizontal links used
     for site navigation. It is used to order information for users.
