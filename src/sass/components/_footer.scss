@@ -58,7 +58,7 @@
 }
 
 .footer__image {
+	@include AU-space( max-width, 5unit );
 	display: block;
 	width: 100%;
-	max-width: 250px;
 }
