@@ -12,7 +12,8 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - todo.md
+  - heading-sizes.md
+  - classes.md
 
 footer:
   - /_shared/footer.md

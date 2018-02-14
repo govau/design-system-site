@@ -1,7 +1,8 @@
 ---
-layout: component/rationale.js
-heading: TODO
+layout: component/discussion-callout
+btntext: Community
+btnurl: https://community.service.gov.au/t/
+btntype: secondary
 ---
 
-TODO
-
+**Let's talk!**  If you have a question about this component we welcome open conversation in our community forums.

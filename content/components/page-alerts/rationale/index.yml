@@ -12,7 +12,8 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - todo.md
+  - aria-alert.md
+  - icons.md
 
 footer:
   - /_shared/footer.md
