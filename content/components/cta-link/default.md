@@ -11,4 +11,4 @@ code:
       <AUctaLink link="/signup" text="Sign up" />
 ---
 
-A simple and clear link to direct users to a service.
+A simple and clear link to direct users to a preferred action.

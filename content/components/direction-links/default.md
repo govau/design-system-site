@@ -17,4 +17,7 @@ code:
       <AUdirectionLink link="#url" text="Skip to footer" direction="down" />
 ---
 
-Use direction links to link up and down within the DOM or back to a parent page.
+Use direction links to indicate a physical direction, such as:
+- Linking 'up' or 'down' within the page.
+- Going 'back' to a parent page.
+- Showing the 'next' or 'previous' pages.

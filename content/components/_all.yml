@@ -346,7 +346,7 @@ control-input:
   hasReact: true    # <-- auto generated, don't change
   ID: control-input    # <-- auto generated, don't change
 cta-link:
-  name: CTA Link
+  name: Call to action
   description: >
     Call to action links are visually distinct instructions to users designed to
     provoke an immediate response using verbs such as 'call now' or 'find out
@@ -396,9 +396,8 @@ cta-link:
 direction-links:
   name: Direction Links
   description: >
-    Direction links are text accompanied by arrows that link up and down within
-    a page or back to a parent page. They help users move quickly to other parts
-    of the page or to a parent page, or through a process.
+    Direction links are accompanied by arrows to help users move quickly to
+    other parts of the page or through a process.
   metatags:
     - TODO
   tags:
