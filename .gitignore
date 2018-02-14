@@ -18,6 +18,7 @@ site/
 docs/
 **/_uikit/**
 src/assets/css/style.css
+src/assets/css/example.css
 src/assets/js/footer.js
 src/assets/js/header.js
 src/assets/js/a11y.js

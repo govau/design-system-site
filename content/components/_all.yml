@@ -92,7 +92,8 @@ animate:
   metatags:
     - TODO
   tags:
-    - TODO
+    - Movement
+    - Speed
   related:
     - accordion
     - core
@@ -128,7 +129,8 @@ body:
   metatags:
     - TODO
   tags:
-    - TODO
+    - Typography
+    - Base
   related:
     - headings
   related-articles:
@@ -402,7 +404,8 @@ direction-links:
   metatags:
     - TODO
   tags:
-    - TODO
+    - Next
+    - Previous
   related:
     - body
     - cta-link
@@ -448,8 +451,7 @@ footer:
     social media links.
   metatags:
     - TODO
-  tags:
-    - TODO
+  tags: null
   related:
     - header
   related-articles:

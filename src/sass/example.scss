@@ -24,28 +24,22 @@
 
 .a11y .content .au-body.au-body--dark,
 .example .content .au-body.au-body--dark {
-	margin: 16px -32px -32px -32px;
-	margin: 1rem -2rem -2rem -2rem;
-	padding: 16px 32px;
-	padding: 1rem 2rem;
+	@include AU-space( margin, 1unit -2unit -2unit -2unit );
+	@include AU-space( padding, 1unit 2unit );
 }
 
 
 // Live demo header bar
 .live-demo header {
-	margin-bottom: 16px;
-	margin-bottom: 1rem;
+	@include AU-space( margin-bottom, 1unit );
+	@include AU-space( padding, 1unit );
 	background-color: #1D1D1D;
-	padding: 16px 0;
-	padding: 1rem 0;
 
 	.container-fluid {
 		max-width: 1360px;
 		max-width: 85rem;
-		padding-left: 48px;
-		padding-left: 3rem;
-		padding-right: 48px;
-		padding-right: 3rem;
+		@include AU-space( padding-left, 3unit );
+		@include AU-space( padding-right, 3unit );
 	}
 
 	a {
@@ -62,12 +56,10 @@
 
 // Grids
 .grids {
+	@include AU-space( padding-top, 0.75unit );
+	@include AU-space( padding-bottom, 0.75unit );
 	background: $AU-colordark-foreground-text;
 	text-align: center;
-	padding-top: 12px;
-	padding-top: 0.75rem;
-	padding-bottom: 12px;
-	padding-bottom: 0.75rem;
 
 	span {
 		display: block;
@@ -75,6 +67,13 @@
 		font-size: 0.75rem;
 		background: $AU-colordark-foreground-action;
 	}
+}
+
+
+// Animation
+.animate-example {
+	@include AU-space( margin-top, 1unit );
+	background-color: rebeccapurple;
 }
 
 
