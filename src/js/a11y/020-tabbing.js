@@ -30,11 +30,6 @@ AddEvent( document.querySelector( '.js-tabbing-switch' ), 'click', function( eve
 });
 
 
-AddEvent( window, 'keydown', function( event, $this ) {
-	stopTab( interval, document.querySelector( '.js-tabbing-switch' ) )
-});
-
-
 /**
  * Event listener for when the user scrolls or uses the tab key to stop Tab() function
  */
