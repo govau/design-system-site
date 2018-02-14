@@ -31,4 +31,5 @@ code:
       />
 ---
 
-TODO
+Breadcrumbs show users where they are in the website hierarchy and how to navigate back to
+previous levels or content.
