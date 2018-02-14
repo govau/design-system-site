@@ -62,11 +62,19 @@
 
 // Grids
 .grids {
-	background: $AU-colordark-foreground-action;
+	background: $AU-colordark-foreground-text;
 	text-align: center;
-	font-size: 12px;
-	font-size: 0.75rem;
-	border: 2px solid $AU-colordark-foreground-text;
+	padding-top: 12px;
+	padding-top: 0.75rem;
+	padding-bottom: 12px;
+	padding-bottom: 0.75rem;
+
+	span {
+		display: block;
+		font-size: 12px;
+		font-size: 0.75rem;
+		background: $AU-colordark-foreground-action;
+	}
 }
 
 
