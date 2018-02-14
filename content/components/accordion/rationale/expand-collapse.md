@@ -1,7 +1,8 @@
 ---
 layout: component/rationale.js
-heading: No expand and collapse accordion
+heading: Single action accordions
 ---
 
-We chose not to implement an expand/collapse accordion style that collapses the open accordion when another accordion is clicked as this causes unpredictable behaviour. We wanted to make sure that users have full control over what content remains visible to minimise possible confusion when content suddenly ‘disappears’ from view.
+As the name implies, accordion elements traditionally collapse any open panels when another accordion is opened, like the musical instrument. This behaviour can often seem unpredictable for some users which is why our accordion component does not behave in that way.
 
+The intent is to make sure that users have full control over what content remains visible to minimise possible confusion when content suddenly ‘disappears’ from view.

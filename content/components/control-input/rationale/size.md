@@ -3,6 +3,6 @@ layout: component/rationale.js
 heading: Size of inputs
 ---
 
-We created small and large variants of the inputs — the small variant for desktops and the larger one for touchscreen devices to produce a larger hit/target area. 
+Our checkbox and radio inputs are much larger than default browser inputs in order to provide larger hit/target areas for touchscreen devices or mobility impaired users. This was largely inspired by the work on [radios and checkboxes done by gov.uk](https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-radios-and-checkboxes-on-gov-uk/).
 
-We married these to a range of colours to make the inputs more accessible.
+However we also supply a small version of the inputs for use when the large inputs are impractical.
