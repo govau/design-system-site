@@ -1,3 +1,6 @@
+/**
+ * Add the tab button to each tab section
+ */
 var tabs = document.querySelector( '.js-tabbing' );
 if( tabs !== null ) {
 	tabs.insertAdjacentHTML(
@@ -8,6 +11,10 @@ if( tabs !== null ) {
 	);
 }
 
+
+/**
+ * Toggle the tabs on the button click
+ */
 var interval = 0;
 AddEvent( document.querySelector( '.js-tabbing-switch' ), 'click', function( event, $this ) {
 	var _isOn = HasClass( $this, 'is-on' );
@@ -15,24 +22,31 @@ AddEvent( document.querySelector( '.js-tabbing-switch' ), 'click', function( eve
 	if( _isOn === null ) {
 		AddClass( $this, 'is-on' );
 		$this.innerText = 'Stop tabbing';
-		interval = tab();
+		interval = Tab();
 	}
 	else {
-		stopTab( interval, $this );
+		StopTab( interval, $this );
 	}
 });
 
-AddEvent( document.querySelector( 'body' ), 'keypress', function( event, $this ) {
+
+AddEvent( window, 'keydown', function( event, $this ) {
 	stopTab( interval, document.querySelector( '.js-tabbing-switch' ) )
 });
 
-function stopTab( interval, $this ) {
-	RemoveClass( $this, 'is-on' );
-	$this.innerText = 'Show tabbing';
-	clearInterval( interval );
-}
 
-function tab() {
+/**
+ * Event listener for when the user scrolls or uses the tab key to stop Tab() function
+ */
+AddEvent( document.querySelector( 'body' ), 'keydown', function( event, $this ) {
+	StopTab( interval, document.querySelector( '.js-tabbing-switch' ) )
+});
+
+
+/**
+ * Move the tab through each element with the .js-focus-me class
+ */
+function Tab() {
 	var items = document.querySelectorAll( '.js-focus-me' );
 	var loop = 0;
 
@@ -47,4 +61,14 @@ function tab() {
 			loop = 0;
 		}
 	}, 1000 );
+}
+
+
+/**
+ * Stop the Tab() function
+ */
+function StopTab( interval, $this ) {
+	RemoveClass( $this, 'is-on' );
+	$this.innerText = 'Show tabbing';
+	clearInterval( interval );
 }
