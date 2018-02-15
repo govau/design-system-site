@@ -6,16 +6,16 @@ layout: section
 
 | Name       | Type    | Description
 |------------|---------|-----------------------------------------------------------------------------
-| `AUTODO` | default | The TODO component Get from https://github.com/govau/uikit
+| `AUheading` | default | The heading component
 
 ### [md]node_modules import
 
 ```jsx
-import AUTODO from '@gov.au/TODO';
+import AUheading from '@gov.au/heading';
 ```
 
 ### [md]pancake import
 
 ```jsx
-import AUTODO from './TODO';
+import AUheading from './heading';
 ```
