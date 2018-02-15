@@ -5,17 +5,16 @@ headline: Error
 code:
   - HTML: |
       <div role="alert" class="au-body au-page-alerts au-page-alerts--error">
-        <h3>Alert</h3>
-        <p>There were 3 errors found in the information you submitted</p>
-        <ol>
-        	<li><a href="#">Please enter a valid licence number <span class="au-page-alerts__sronly">- Error 1 of 3</span></a></li>
-        	<li><a href="#">Please enter a valid email address <span class="au-page-alerts__sronly">- Error 2 of 3</span></a></li>
-        	<li><a href="#">First name is required <span class="au-page-alerts__sronly">- Error 3 of 3</span></a></li>
-        </ol>
+        <h3>Alert title</h3>
+        <p>Alert Content</p>
       </div>
   - React: |
-      TODO React
-      Get from https://github.com/govau/uikit
+      import AUpageAlert from './page-alerts';
+
+      <AUpageAlert as='error'>
+        <h3>Alert title</h3>
+        <p>Alert Content</p>
+      </AUpageAlert>
 ---
 
-TODO
+The error page alert should be used with form validation errors or other errors which will block the user from completing their task.

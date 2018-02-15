@@ -6,16 +6,16 @@ layout: section
 
 | Name       | Type    | Description
 |------------|---------|-----------------------------------------------------------------------------
-| `AUTODO` | default | The TODO component Get from https://github.com/govau/uikit
+| `AUpageAlert` | default | The page alerts component
 
 ### [md]node_modules import
 
 ```jsx
-import AUTODO from '@gov.au/TODO';
+import AUpageAlert from '@gov.au/page-alerts';
 ```
 
 ### [md]pancake import
 
 ```jsx
-import AUTODO from './TODO';
+import AUpageAlert from './page-alerts';
 ```
