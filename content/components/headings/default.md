@@ -12,8 +12,15 @@ code:
       <h3 class="au-display-sm">Display sm</h3>
       <h1 class="au-display-xs">Display xs</h1>
   - React: |
-      TODO React
-      Get from https://github.com/govau/uikit
+      import AUheading from './headings';
+
+      <AUheading size="xxxl" level="4">Display xxxl</AUheading>
+      <AUheading size="xxl"  level="6">Display xxl</AUheading>
+      <AUheading size="xl"   level="4">Display xl</AUheading>
+      <AUheading size="lg"   level="5">Display lg</AUheading>
+      <AUheading size="md"   level="2">Display md</AUheading>
+      <AUheading size="sm"   level="3">Display sm</AUheading>
+      <AUheading size="xs"   level="1">Display xs</AUheading>
 ---
 
 Our range of supported headings. These use the <a href="http://localhost:8080/components/core/#typography">AU-fontgrid</a> function to make the font size and lineheight snap to grid.
