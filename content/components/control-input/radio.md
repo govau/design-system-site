@@ -13,7 +13,7 @@ code:
         <span class="au-control-input__text">Phone</span>
       </label>
   - React: |
-      import { AUradio } from './control-input.js';
+      import { AUradio } from './control-input';
 
       <AUradio label="Phone" name="radio-ex" />
       <AUradio label="Phone" name="radio-ex" checked />

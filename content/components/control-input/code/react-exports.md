@@ -6,8 +6,8 @@ layout: section
 
 | Name       | Type    | Description
 |------------|---------|-----------------------------------------------------------------------------
-| `Checkbox` | default | The checkbox component
-| `Radio`    | default | The radio component
+| `Checkbox` | constant | The checkbox component
+| `Radio`    | constant | The radio component
 
 ### [md]node_modules import
 

@@ -16,7 +16,7 @@ code:
         </footer>
       </div>
   - React: |
-      import AUfooter, { AUfooterNav, AUfooterEnd } from './footer.js';
+      import AUfooter, { AUfooterNav, AUfooterEnd } from './footer';
 
       <AUfooter>
         <AUfooterNav>

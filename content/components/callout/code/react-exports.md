@@ -6,8 +6,8 @@ layout: section
 
 | Name       | Type    | Description
 |------------|---------|-----------------------------------------------------------------------------
-| `AUcallout` | default | The callout component
-| `AUcalloutCalender` | default | The callout calendar component
+| `AUcallout` | constant | The callout component
+| `AUcalloutCalender` | constant | The callout calendar component
 
 ### [md]node_modules import
 

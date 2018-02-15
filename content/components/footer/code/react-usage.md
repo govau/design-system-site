@@ -5,7 +5,7 @@ layout: section
 ## React Usage
 
 ```jsx
-import AUfooter, { AUfooterNav, AUfooterEnd } from './footer.js';
+import AUfooter, { AUfooterNav, AUfooterEnd } from './footer';
 
 <AUfooter>
   <AUfooterNav>

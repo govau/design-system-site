@@ -5,7 +5,7 @@ layout: section
 ## React Usage
 
 ```jsx
-import { Callout, CalloutCalendar } from './callout.js';
+import { Callout, CalloutCalendar } from './callout';
 
 <Callout description="Description for this callout">
 	Callout content

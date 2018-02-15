@@ -10,7 +10,7 @@ code:
         <span class="au-callout--calendar-event__name">New Year’s Day</span>
       </section>
   - React: |
-      import { CalloutCalendar } from './callout.js';
+      import { CalloutCalendar } from './callout';
 
       <CalloutCalendar
         description="Callout calendar"

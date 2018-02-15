@@ -19,5 +19,5 @@ import AUfooter, { AUfooterNav, AUfooterEnd } from '@gov.au/footer';
 ### [md]pancake import
 
 ```jsx
-import AUfooter, { AUfooterNav, AUfooterEnd } from './footer.js';
+import AUfooter, { AUfooterNav, AUfooterEnd } from './footer';
 ```

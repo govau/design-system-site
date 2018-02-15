@@ -8,7 +8,7 @@ code:
         A callout.
       </p>
   - React: |
-      import { Callout } from './callout.js';
+      import { Callout } from './callout';
 
       <Callout description="description for first callout">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam cupiditate ratione iste blanditiis, asperiores, recusandae, sed natus voluptate.

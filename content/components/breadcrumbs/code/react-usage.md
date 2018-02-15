@@ -5,7 +5,7 @@ layout: section
 ## React Usage
 
 ```jsx
-import AUbreadcrumbs from './breadcrumbs.js';
+import AUbreadcrumbs from './breadcrumbs';
 
 <AUbreadcrumbs label="Breadcrumb for this page" items={[
   {
