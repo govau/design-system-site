@@ -608,8 +608,7 @@ inpage-nav:
   name: Inpage Nav
   description: >
     In-page-nav links helps users scan the contents of a page and navigate to
-    different sections of the page. They are placed above sections of a page and
-    provide navigation to individual anchor links located in those sections.
+    different sections of the page.
   metatags:
     - TODO
   tags:

@@ -46,4 +46,5 @@ code:
       </AUinpageNavSection>
 ---
 
-Jump from one section to another on the same page.
+The Inpage Nav (or page contents) is placed above sections of a page and
+provides navigation to individual anchor links located in those sections.
