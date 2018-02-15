@@ -18,9 +18,6 @@ code:
         </p>
         <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>
       </div>
-  - React: |
-      TODO React
-      Get from https://github.com/govau/uikit
 ---
 
 Body includes a range of styles for basic content elements.

@@ -11,9 +11,6 @@ code:
         <code>inline code</code>
         <pre><code>code block</code></pre>
       </div>
-  - React: |
-      TODO React
-      Get from https://github.com/govau/uikit
 ---
 
 The body component also provides styling for mathematical and code related HTML elements.

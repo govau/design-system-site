@@ -10,9 +10,6 @@ code:
         <mark>Marked</mark>
         <kbd>Keyboard Input</kbd>
       </div>
-  - React: |
-      TODO React
-      Get from https://github.com/govau/uikit
 ---
 
 - [Delete](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del)

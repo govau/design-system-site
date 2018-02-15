@@ -21,9 +21,6 @@ code:
             <dd>Definition Definition</dd>
         </dl>
       </div>
-  - React: |
-      TODO React
-      Get from https://github.com/govau/uikit
 ---
 
 Common HTML lists receive styling from the body component.
