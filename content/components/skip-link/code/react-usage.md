@@ -5,7 +5,16 @@ layout: section
 ## React Usage
 
 ```jsx
-import AUTODO from './TODO';
+import AUskipLink from './skip-link';
 
-Get from https://github.com/govau/uikit
+<AUskipLink links={[
+  {
+    link: '#nav',
+    text: 'Skip to navigation',
+  },
+  {
+    link: '#content',
+    text: 'Skip to content',
+  },
+]} />
 ```

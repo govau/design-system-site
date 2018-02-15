@@ -6,16 +6,16 @@ layout: section
 
 | Name       | Type    | Description
 |------------|---------|-----------------------------------------------------------------------------
-| `AUTODO` | default | The TODO component Get from https://github.com/govau/uikit
+| `AUskipLink` | default | The skip link component
 
 ### [md]node_modules import
 
 ```jsx
-import AUTODO from '@gov.au/TODO';
+import AUskipLink from '@gov.au/skip-link';
 ```
 
 ### [md]pancake import
 
 ```jsx
-import AUTODO from './TODO';
+import AUskipLink from './skip-link';
 ```

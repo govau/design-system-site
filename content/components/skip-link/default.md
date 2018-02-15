@@ -9,8 +9,18 @@ code:
       	<a class="au-skip-link__link" href="#nav">Skip to main navigation</a>
       </nav>
   - React: |
-      TODO React
-      Get from https://github.com/govau/uikit
+      import AUskipLink from './skip-link';
+
+      <AUskipLink links={[
+        {
+          link: '#content',
+          text: 'Skip to main content',
+        },
+        {
+          link: '#nav',
+          text: 'Skip to main navigation',
+        },
+      ]} />
 ---
 
 Skip links are not visual until they receive focus.
