@@ -11,11 +11,11 @@ layout: section
 ### [md]node_modules import
 
 ```jsx
-import AUkeywordList from '@gov.au/keywordList';
+import AUkeywordList from '@gov.au/keyword-list';
 ```
 
 ### [md]pancake import
 
 ```jsx
-import AUkeywordList from './keywordList';
+import AUkeywordList from './keyword-list';
 ```
