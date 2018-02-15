@@ -25,7 +25,6 @@ export const CreateLink = ( link, _relativeURL, _ID, _pages ) => {
 			className: `${ active ? 'mainmenu--active' : ''  }${ _isActiveTrail ? ' mainmenu--active-trail' : ''  }`,
 		}
 	}
-
 };
 
 
