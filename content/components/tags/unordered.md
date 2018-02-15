@@ -19,4 +19,4 @@ code:
       TODO
 ---
 
-TODO
+An [unordered list](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul) `<ul>` can also be used to list tags.

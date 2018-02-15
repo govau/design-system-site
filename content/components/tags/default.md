@@ -19,4 +19,7 @@ code:
       TODO
 ---
 
-TODO
+
+The Tags component supports use with the [`<dl>` HTML element]( https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl). This is particularly useful when there are multiple lists of tags.
+
+In a list of tags, each tags can be described by the `<dd>` (Description Detail) and titled with a `<dt>` (description term).

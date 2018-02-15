@@ -4,9 +4,10 @@ example: examples/example-block
 headline: Block Text Inputs
 code:
   - HTML: |
-      TODO
+      <label for="textin-b1">label text</label>
+      <input class="au-text-input au-text-input--block" name="textin-b1" id="textin-b1" type="text" value="">
   - React: |
       TODO
 ---
 
-TODO
+The 'block' text inputs use an `.au-text-input--block` class to make them fill the available space.
