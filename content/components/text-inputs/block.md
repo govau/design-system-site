@@ -5,7 +5,7 @@ headline: Block Text Inputs
 code:
   - HTML: |
       <label for="textin-b1">label text</label>
-      <input class="au-text-input au-text-input--block" name="textin-b1" id="textin-b1" type="text" value="">
+      <input class="au-text-input au-text-input--block" name="textin-b1" id="textin-b1" type="text" value="value">
   - React: |
       TODO
 ---

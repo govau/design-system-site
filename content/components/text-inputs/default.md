@@ -5,7 +5,7 @@ headline: Default
 code:
   - HTML: |
       <label for="textin-a1">label text</label>
-      <input class="au-text-input" name="textin-a1" id="textin-a1" type="text" value="">
+      <input class="au-text-input" name="textin-a1" id="textin-a1" type="text" value="value">
   - React: |
       TODO
 ---
