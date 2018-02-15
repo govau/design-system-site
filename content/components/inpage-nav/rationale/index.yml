@@ -12,7 +12,7 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - boader.md
+  - border.md
 
 footer:
   - /_shared/footer.md
