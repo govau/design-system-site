@@ -9,8 +9,12 @@ code:
         <p>Alert Content</p>
       </div>
   - React: |
-      TODO React
-      Get from https://github.com/govau/uikit
+      import AUpageAlert from './page-alerts';
+
+      <AUpageAlert as='warning'>
+        <h3>Alert title</h3>
+        <p>Alert Content</p>
+      </AUpageAlert>
 ---
 
-TODO
+Warning page alerts can be used to notify the user of something which is time-sensitive and likely to be detrimental if not seen.

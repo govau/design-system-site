@@ -1,7 +1,7 @@
 ---
 layout: component/code-demo
 example: examples/example-default
-headline: Default / Info
+headline: Info
 code:
   - HTML: |
       <div role="alert" class="au-body au-page-alerts au-page-alerts--info">
@@ -9,8 +9,12 @@ code:
         <p>Alert Content</p>
       </div>
   - React: |
-      TODO React
-      Get from https://github.com/govau/uikit
+      import AUpageAlert from './page-alerts';
+
+      <AUpageAlert as='info'>
+        <h3>Alert title</h3>
+        <p>Alert Content</p>
+      </AUpageAlert>
 ---
 
-TODO
+Page alerts are intended for important time-sensitive information only and should be used sparingly.

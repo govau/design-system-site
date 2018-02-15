@@ -5,7 +5,9 @@ layout: section
 ## React Usage
 
 ```jsx
-import AUTODO from './TODO';
+import AUpageAlert from './page-alerts';
 
-Get from https://github.com/govau/uikit
+<AUpageAlert as='info'>
+  Content of alert
+</AUpageAlert>
 ```

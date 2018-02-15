@@ -15,16 +15,3 @@ layout: section
 | dark             | boolean  | A dark variation of the component
 
 All other props are spread into the component
-
-
-<AUlinkList
-  inline={ false }            {/* The inline option to make the list inline, optional */}
-  items={[                    {/* All links in a neat array */}
-    {
-      link: 'link/to/',       {/* The link for this item, optional */}
-      text: 'Link title',     {/* The text for this item */}
-      li: {},                 {/* An object that will be spread onto the <li> tag, optional */}
-      onClick={ () => {} }    {/* A function to execute when this link is clicked, optional */}
-    },
-  ]},
-/>

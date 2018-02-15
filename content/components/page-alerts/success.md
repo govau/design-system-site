@@ -9,8 +9,12 @@ code:
         <p>Alert Content</p>
       </div>
   - React: |
-      TODO React
-      Get from https://github.com/govau/uikit
+      import AUpageAlert from './page-alerts';
+
+      <AUpageAlert as='success'>
+        <h3>Alert title</h3>
+        <p>Alert Content</p>
+      </AUpageAlert>
 ---
 
-TODO
+The success page alert is used for notifying the user that a task is fully completed.
