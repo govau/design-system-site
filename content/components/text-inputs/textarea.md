@@ -5,11 +5,14 @@ headline: Textarea
 code:
   - HTML: |
       <label for="textc1">label text</label>
-      <textarea class="au-text-input au-text-input--block" name="texta1" id="texta1">
+      <textarea class="au-text-input au-text-input--block" name="textc1" id="textc1">
         Value
       </textarea>
   - React: |
-      TODO
+      import AUtextInput from './text-inputs';
+
+      <label htmlFor="textin-c1" block >label text</label>
+      <AUtextInput type="textarea" id="textin-c1" block />
 ---
 
 Also known as a multiline input.
