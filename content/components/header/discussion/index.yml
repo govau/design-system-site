@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: TODO discussion
+pagetitle: Header discussion
 
 header:
   - /_shared/header.md

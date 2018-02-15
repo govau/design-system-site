@@ -16,4 +16,4 @@ code:
       Get from https://github.com/govau/uikit
 ---
 
-TODO
+Our range of supported headings. These use the <a href="http://localhost:8080/components/core/#typography">AU-fontgrid</a> function to make the font size and lineheight snap to grid.

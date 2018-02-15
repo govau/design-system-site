@@ -6,12 +6,11 @@ layout: section
 
 | Prop name | Type    | Description
 |-----------|---------------------------------------------------------------------------------------
-| TODO      | TODO    | TODO Get from https://github.com/govau/uikit
-<!-- | label       | string  | Provide the aria label
-| items       | object  | The link, text and props for each of the breadcrumbs
-| items.link  | string  | The link of the breadcrumb, optional
-| items.text  | string  | The text of the breadcrumb
-| items.li    | object  | An object that will be spread onto the `<li>` tag, optional
-| dark        | boolean | A dark variation of the component -->
+| title       | string  | The headline content
+| level       | number  | The headline tag level, h1-h6
+| subline     | string  | The subline content
+| hero        | boolean | The hero option that provides larger whitespace
+| alt         | boolean | An alternate variation of the component
+| dark        | boolean | A dark variation of the component
 
 All other props are spread into the component

@@ -9,8 +9,9 @@ code:
         <span class="au-header-subline">Service sub-title that could be a little longer</span>
       </header>
   - React: |
-      TODO React
-      Get from https://github.com/govau/uikit
+      import AUheader from './header';
+      
+      <AUheader title="Page title" subline="Service sub-title that could be a little longer" />
 ---
 
-TODO
+The header at the top of the page. Usually contains an Australian Government Crest, logo and navigation.

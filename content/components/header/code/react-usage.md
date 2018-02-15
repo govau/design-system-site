@@ -5,7 +5,7 @@ layout: section
 ## React Usage
 
 ```jsx
-import AUTODO from './TODO';
+import AUheader from './header';
 
-Get from https://github.com/govau/uikit
+<AUheader title="Page title" />
 ```

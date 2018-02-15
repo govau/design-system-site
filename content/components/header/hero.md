@@ -9,8 +9,9 @@ code:
         <span class="au-header-subline">Service sub-title that could be a little longer</span>
       </header>
   - React: |
-      TODO React
-      Get from https://github.com/govau/uikit
+      import AUheader from './header';
+      
+      <AUheader title="Page title" hero subline="Service sub-title that could be a little longer" />
 ---
 
-TODO
+A hero version of the header. This version has larger spacing to help users focus on the content.
