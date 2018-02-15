@@ -33,4 +33,4 @@ code:
       ]} />
 ---
 
-The version with a link to some location.
+The keyword list also supports links which span both the key and value pair in the text.
