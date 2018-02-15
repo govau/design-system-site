@@ -3,21 +3,14 @@ layout: component/code-demo
 example: examples/example-color
 headline: Color
 code:
-  - HTML: |
-      <div class="palette--foreground-action">$AU-color-foreground-action</div>
-      <div class="palette--foreground-focus">$AU-color-foreground-focus</div>
-      <div class="palette--foreground-text">$AU-color-foreground-text</div>
-      <div class="palette--foreground-muted">$AU-color-foreground-muted</div>
-      <div class="palette--foreground-border">$AU-color-foreground-border</div>
-      <div class="palette--background">$AU-color-background</div>
-      <div class="palette--background-shade">$AU-color-background-shade</div>
-      <div class="palette--background-alt">$AU-color-background-alt-shade</div>
-      <div class="palette--background-alt-shade">$AU-color-foreground-action</div>
   - SCSS: |
+      // Light palette
       $AU-color-foreground-action:     #00698f;
       $AU-color-foreground-focus:      #ea4200;
       $AU-color-foreground-text:       #313131;
       $AU-color-background:            #fff;
+
+      // Dark palette
       $AU-colordark-foreground-action: #61daff;
       $AU-colordark-foreground-focus:  #ff8629;
       $AU-colordark-foreground-text:   #fff;

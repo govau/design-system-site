@@ -5,6 +5,10 @@
 		width: 100%;
 	}
 
+	.tab-content:focus {
+		outline: none;
+	}
+
 	.au-link-list {
 		@include AU-space( margin-bottom, -0.25unit );
 		padding: 0;
