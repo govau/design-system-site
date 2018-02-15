@@ -9,4 +9,4 @@ code:
       </div>
 ---
 
-TODO
+Use the `.au-responsive-media-vid--16x9` and `au-responsive-media-vid__item` classes to have an embedded video scale to fit the available space while maintaining a 'widescreen' format.

@@ -7,4 +7,4 @@ code:
       <img class="au-responsive-media-img" src="#" alt="">
 ---
 
-TODO
+Use the `.au-responsive-media-img` class to make an image fill the available space while not exceeding the actual image dimensions.

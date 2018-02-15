@@ -9,4 +9,4 @@ code:
       </div>
 ---
 
-TODO
+The 4:3 responsive video classes work in the same way as the 16:9 but are made for the 4:3 aspect ratio videos.
