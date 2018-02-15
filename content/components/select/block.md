@@ -16,4 +16,4 @@ code:
       Get from https://github.com/govau/uikit
 ---
 
-TODO
+Use an `.au-text-input--block` class to make a select box fill the available space.
