@@ -5,6 +5,8 @@ layout: section
 ## React Usage
 
 ```jsx
+import AUaccordion from './accordion';
+
 <Accordion header="Closed">
   Some content of the accordion <a href="#url">here</a>
 </Accordion>

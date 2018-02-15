@@ -1,22 +1,29 @@
 ---
 layout: component/code-demo
-example: examples/example-unordered
-headline: Tags using unordered list
+example: examples/example-nolink
+headline: Tags without links
 code:
   - HTML: |
       <span>Tags:</span>
       <ul class="au-tags">
-        <li><a href="#">foo</a></li>
-        <li><a href="#">bar</a></li>
-        <li><a href="#">baz</a></li>
-        <li><a href="#">bloop</a></li>
-        <li><a href="#">blip</a></li>
-        <li><a href="#">wallop</a></li>
-        <li><a href="#">doodle</a></li>
-        <li><a href="#">pear ice cream</a></li>
+        <li>foo</li>
+        <li>bar</li>
+        <li>baz</li>
       </ul>
   - React: |
-      TODO
+      import AUtags from './tags.js';
+
+      <AUtags tags={[
+        {
+          text: 'foo',
+        },
+        {
+          text: 'bar',
+        },
+        {
+          text: 'baz',
+        },
+      ]} />
 ---
 
-An [unordered list](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul) `<ul>` can also be used to list tags.
+A list of tags showing there relation without links.

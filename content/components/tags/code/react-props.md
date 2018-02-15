@@ -8,13 +8,11 @@ TODO
 
 | Prop name | Type    | Description
 |-----------|---------------------------------------------------------------------------------------
-| header      | string   | The headline of the accordion
-| open        | boolean  | Open state, optional
-| speed       | number   | Speed of the animation in ms, optional
-| onOpen      | function | A function executed when the accordion opens, optional
-| afterOpen   | function | A function executed after the accordion opened, optional
-| onClose     | function | A function executed when the accordion closes, optional
-| afterClose  | function | A function executed when the accordion closes, optional
-| dark        | boolean  | A dark variation of the component
+| dark         | boolean | A dark variation of the component
+| tags         | array   | All tags inside a neat array
+| tags[0].link | string  | The href link of this tag
+| tags[0].text | string  | The text of the tag
+| tags[0].li   | object  | An object that will be spread onto the `<li>` tag
+
 
 All other props are spread into the component

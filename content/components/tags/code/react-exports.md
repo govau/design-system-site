@@ -8,16 +8,16 @@ TODO
 
 | Name       | Type    | Description
 |------------|---------|-----------------------------------------------------------------------------
-| `AUaccordion` | default | The accordion component
+| `AUtags` | default | The tags component
 
 ### [md]node_modules import
 
 ```jsx
-import AUaccordion from '@gov.au/text-input';
+import AUtags from '@gov.au/tags';
 ```
 
 ### [md]pancake import
 
 ```jsx
-import AUaccordion from './text-input';
+import AUtags from './tags';
 ```

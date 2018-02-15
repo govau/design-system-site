@@ -7,32 +7,23 @@ layout: section
 TODO
 
 ```jsx
-<Accordion header="Closed">
-  Some content of the accordion <a href="#url">here</a>
-</Accordion>
+import AUtags from './tags';
 
-<Accordion open header="Open">
-  Some content of the accordion <a href="#url">here</a>
-</Accordion>
-
-<Accordion header="Slow accordion" speed={ 1000 }>
-  Some content of the accordion <a href="#url">here</a>
-</Accordion>
-
-<Accordion
-  header="With custom function"
-  onOpen={ () => { console.log('This function will run when the accordion opens'); } }
-  afterOpen={ () => { console.log('This function will run after the accordion has opened'); } }
-  onClose={ () => { console.log('This function will run when the accordion closes'); } }
-  afterClose={ () => { console.log('This function will run after the accordion has closed'); } }
->
-  Some content of the accordion <a href="#url">here</a>
-</Accordion>
-
-<Accordion open={ this.state.accordionOpen } header="State controlled accordion open">
-  Some content of the accordion <a href="#url">here</a>
-</Accordion>
-<button type="button" onClick={ () => { this.changeAccordion('accordionOpen') } }>
-  Toggle accordion via state
-</button>
+<AUtags tags={[
+  {
+    link: 'link/to/tag1',
+    text: 'tag1',
+  },
+  {
+    link: 'link/to/tag2',
+    text: 'tag2',
+  },
+  {
+    link: 'link/to/tag3',
+    text: 'tag3',
+    li: {
+      className: 'li-wrapping-class',
+    },
+  },
+]} />
 ```
