@@ -42,4 +42,4 @@ tiles:
     text: Empowered and driven by the community
 ---
 
-When you install a Design System component you benefit from the shared efforts of a community dedicated to making government products and services better, faster, easier. This means that all our components are...
+When you install a Design System component you benefit from the shared efforts of a community dedicated to making government products and services better, faster, easier.

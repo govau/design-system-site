@@ -5,17 +5,18 @@ tiles:
     imgurl: assets/img/artwork-about-community.png
     imgalt: Community collaboration
     url: /community
-    text: The Design System has been created for designers and developers across government to help them transform their agency’s products and services. The aim is to grow an active and engaged community to share and develop up a set of quality tools and designs that can be used by all.
+    text: GOLD has been created for designers and developers across government to share and create a set of quality tools and designs that can be used by everyone.
 
   - title: Components
     imgurl: assets/img/artwork-about-components.png
     imgalt: Components used in multiple ways
     url: /components
-    text: Components are a collection of interface elements —&nbsp;such as accordions, buttons, breadcrumbs, lists&nbsp;— that can be used by teams of designers and developers across government to build products and rapidly prototype.
+    text: Are our collection of interface elements, the components can be used and improved by any team to help kickstart the design and development process or even build production-ready interfaces.
+
 
   - title: Templates
     imgurl: assets/img/artwork-about-templates.png
     imgalt: Templates
     url: /templates
-    text: Templates include high value core elements like icons, typography, colours, and sometimes complex UI patterns like grids, cards and navigation. They are a great way to kickstart a project and are designed to save on time and resources and get value to users sooner.
+    text: Templates aren’t ready yet. But the intent is that they will be a great way to kickstart a project, and be designed to save on time and resources to get value to users sooner.
 ---
