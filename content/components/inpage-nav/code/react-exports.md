@@ -6,16 +6,17 @@ layout: section
 
 | Name       | Type    | Description
 |------------|---------|-----------------------------------------------------------------------------
-| `AUTODO` | default | The TODO component Get from https://github.com/govau/uikit
+| `AUinpageNavLinks`   | constant | The AUinpageNavLinks component
+| `AUinpageNavSection` | constant | The AUinpageNavSection component
 
 ### [md]node_modules import
 
 ```jsx
-import AUTODO from '@gov.au/TODO';
+import { AUinpageNavLinks, AUinpageNavSection } from '@gov.au/inpage-nav';
 ```
 
 ### [md]pancake import
 
 ```jsx
-import AUTODO from './TODO';
+import { AUinpageNavLinks, AUinpageNavSection } from './inpage-nav';
 ```
