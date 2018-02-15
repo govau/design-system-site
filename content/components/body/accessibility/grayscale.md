@@ -6,4 +6,4 @@ headline: Grayscale
 ---
 
 
-How the TODO are viewed with total colour blindness.
+How the body is viewed with total colour blindness.

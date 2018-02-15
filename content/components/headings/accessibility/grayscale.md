@@ -5,5 +5,4 @@ iframe: a11y-grayscale
 headline: Grayscale
 ---
 
-
-How the TODO are viewed with total colour blindness.
+How the headings are viewed with total colour blindness.

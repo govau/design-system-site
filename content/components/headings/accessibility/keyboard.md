@@ -5,5 +5,4 @@ iframe: a11y-keyboard
 headline: Keyboard accessibility
 ---
 
-
-How the TODO are viewed with various colour blindnesses
+How the headings are viewed with various colour blindnesses

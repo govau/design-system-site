@@ -6,4 +6,4 @@ headline: Grayscale
 ---
 
 
-How the TODO are viewed with total colour blindness.
+How the keyword list are viewed with total colour blindness.
