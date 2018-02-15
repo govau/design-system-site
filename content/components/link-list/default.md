@@ -14,4 +14,4 @@ code:
       Get from https://github.com/govau/uikit
 ---
 
-Default link list
+The default link list component removes the normal bullets and spacing associated with a list.

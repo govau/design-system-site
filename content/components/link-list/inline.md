@@ -14,4 +14,4 @@ code:
       Get from https://github.com/govau/uikit
 ---
 
-Inline link list
+The Inline link list is simply a modifier to the default link list which makes the links run inline/horizontally.
