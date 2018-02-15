@@ -72,6 +72,7 @@ const CodeDemo = ({ headline, example, iframe, code, _body, _ID, _parseMD, _rela
 													>
 														<Code language={
 															Object.keys( section )[ 0 ] === 'HTML' ? 'html' : '' +
+															Object.keys( section )[ 0 ] === 'SCSS' ? 'scss' : '' +
 															Object.keys( section )[ 0 ] === 'React' ? 'jsx' : ''
 														}>
 															{ section[ Object.keys( section )] }
