@@ -11,22 +11,22 @@ const Promo = ({ tiles, _relativeURL, _ID, _parseMD }) => (
 			{
 				tiles.map( ( tile, i ) => (
 					<div className="promo col-sm-12 col-md-4" key={ i }>
+						<div className="promo-group">
+							<a href={ _relativeURL( tile.url, _ID ) }>
+								<img className="promo__thumbnail au-responsive-media-img"
+									src={
+										tile.imgurl.startsWith('http')
+											? tile.imgurl
+											: _relativeURL( tile.imgurl, _ID )
+									}
+									alt={ tile.imgalt } />
+								<h2 className="promo__title">{ tile.title }</h2>
+							</a>
 
-						<a href={ _relativeURL( tile.url, _ID ) }>
-							<img className="promo__thumbnail au-responsive-media-img"
-								src={
-									tile.imgurl.startsWith('http')
-										? tile.imgurl
-										: _relativeURL( tile.imgurl, _ID )
-								}
-								alt={ tile.imgalt } />
-							<h2 className="promo__title">{ tile.title }</h2>
-						</a>
-
-						<div className="content">
-							{ _parseMD( tile.text ) }
+							<div className="content">
+								{ _parseMD( tile.text ) }
+							</div>
 						</div>
-
 					</div>
 				))
 			}
