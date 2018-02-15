@@ -10,8 +10,22 @@ code:
         <li><a href="#">Sign Out</a></li>
       </ul>
   - React: |
-      TODO React
-      Get from https://github.com/govau/uikit
+      import AUlinkList from './link-list';
+
+      <AUlinkList items={[
+        {
+          link: '#',
+          text: 'Options',
+        },
+        {
+          link: '#',
+          text: 'Help',
+        },
+        {
+          link: '#',
+          text: 'Sign Out',
+        },
+      ]} />
 ---
 
 The default link list component removes the normal bullets and spacing associated with a list.

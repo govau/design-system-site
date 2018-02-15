@@ -6,16 +6,16 @@ layout: section
 
 | Name       | Type    | Description
 |------------|---------|-----------------------------------------------------------------------------
-| `AUTODO` | default | The TODO component Get from https://github.com/govau/uikit
+| `AUlinkList` | default | The link list component
 
 ### [md]node_modules import
 
 ```jsx
-import AUTODO from '@gov.au/TODO';
+import AUlinkList from '@gov.au/link-list';
 ```
 
 ### [md]pancake import
 
 ```jsx
-import AUTODO from './TODO';
+import AUlinkList from './link-list';
 ```

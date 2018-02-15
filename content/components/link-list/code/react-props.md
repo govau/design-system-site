@@ -6,12 +6,25 @@ layout: section
 
 | Prop name | Type    | Description
 |-----------|---------------------------------------------------------------------------------------
-| TODO      | TODO    | TODO Get from https://github.com/govau/uikit
-<!-- | label       | string  | Provide the aria label
-| items       | object  | The link, text and props for each of the breadcrumbs
-| items[0].link  | string  | The link of the breadcrumb, optional
-| items[0].text  | string  | The text of the breadcrumb
-| items[0].li    | object  | An object that will be spread onto the `<li>` tag, optional
-| dark        | boolean | A dark variation of the component -->
+| inline           | boolean  | The inline option to make the list inline
+| items            | object   | The link, text and props for each of the breadcrumbs
+| items[0].link    | string   | The link of the breadcrumb, optional
+| items[0].text    | string   | The text of the breadcrumb
+| items[0].li      | object   | An object that will be spread onto the `<li>` tag, optional
+| items[0].onClick | function | A function to execute when this link is clicked
+| dark             | boolean  | A dark variation of the component
 
 All other props are spread into the component
+
+
+<AUlinkList
+  inline={ false }            {/* The inline option to make the list inline, optional */}
+  items={[                    {/* All links in a neat array */}
+    {
+      link: 'link/to/',       {/* The link for this item, optional */}
+      text: 'Link title',     {/* The text for this item */}
+      li: {},                 {/* An object that will be spread onto the <li> tag, optional */}
+      onClick={ () => {} }    {/* A function to execute when this link is clicked, optional */}
+    },
+  ]},
+/>

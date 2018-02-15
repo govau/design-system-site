@@ -10,8 +10,22 @@ code:
         <li><a href="#">Sign Out</a></li>
       </ul>
   - React: |
-      TODO React
-      Get from https://github.com/govau/uikit
+      import AUlinkList from './link-list';
+
+      <AUlinkList items={[
+        {
+          link: '#',
+          text: 'Options',
+        },
+        {
+          link: '#',
+          text: 'Help',
+        },
+        {
+          link: '#',
+          text: 'Sign Out',
+        },
+      ]} />
 ---
 
 The Inline link list is simply a modifier to the default link list which makes the links run inline/horizontally.

@@ -5,7 +5,24 @@ layout: section
 ## React Usage
 
 ```jsx
-import AUTODO from './TODO';
+import AUlinkList from './link-list';
 
-Get from https://github.com/govau/uikit
+<AUlinkList items={[
+  {
+    link: 'link/one/',
+    text: 'Link 1',
+  },
+  {
+    link: 'link/two/',
+    text: 'Link 2',
+    className: 'is-active',
+    li: {
+      className: 'li-wrapping-class',
+    },
+  },
+  {
+    text: 'Link 3',
+    onClick: () => console.log('You clicked me!'),
+  },
+]} />
 ```
