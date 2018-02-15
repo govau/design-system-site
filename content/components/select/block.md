@@ -12,8 +12,26 @@ code:
         <option value="3">Option 3</option>
       </select>
   - React: |
-      TODO React
-      Get from https://github.com/govau/uikit
+      import AUselect from './select';
+
+      <AUselect block id="select1" options={[
+        {
+          value: '',
+          text: 'Please select',
+        },
+        {
+          value: '1',
+          text: 'Option 1',
+        },
+        {
+          value: '2',
+          text: 'Option 2',
+        },
+        {
+          value: '3',
+          text: 'Option 3',
+        },
+      ]} />
 ---
 
 Use an `.au-text-input--block` class to make a select box fill the available space.

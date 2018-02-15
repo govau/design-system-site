@@ -6,16 +6,16 @@ layout: section
 
 | Name       | Type    | Description
 |------------|---------|-----------------------------------------------------------------------------
-| `AUTODO` | default | The TODO component Get from https://github.com/govau/uikit
+| `AUselect` | default | The select component
 
 ### [md]node_modules import
 
 ```jsx
-import AUTODO from '@gov.au/TODO';
+import AUselect from '@gov.au/select';
 ```
 
 ### [md]pancake import
 
 ```jsx
-import AUTODO from './TODO';
+import AUselect from './select';
 ```

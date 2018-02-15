@@ -7,6 +7,8 @@
 
 // Example wrapper
 .example {
+	@include AU-clearfix();
+	@include AU-space( padding, 1unit 2unit );
 	padding: 16px 32px;
 	padding: 1rem 2rem;
 	margin: 0 auto;
