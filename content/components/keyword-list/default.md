@@ -13,14 +13,18 @@ code:
           <small class="au-keyword-list__small">Department of </small>
           Communications and the Arts
         </li>
-        <li>
-          <small class="au-keyword-list__small">Department of</small>
-          Communications
-        </li>
       </ul>
   - React: |
-      TODO React
-      Get from https://github.com/govau/uikit
+      import AUkeywordList from './keyword-list';
+
+      <AUkeywordList repeatedName='Department of' items={[
+        {
+          name: 'Agriculture and Water Resources',
+        },
+        {
+          name: 'Communications and the Arts',
+        },
+      ]} />
 ---
 
-TODO
+A key and value pair used to display a small subtitle above a larger title.

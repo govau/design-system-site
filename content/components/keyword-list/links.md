@@ -17,16 +17,20 @@ code:
             Communications and the Arts
           </a>
         </li>
-        <li>
-          <a href="#">
-            <small class="au-keyword-list__small">Department of </small>
-            Communications
-          </a>
-        </li>
       </ul>
   - React: |
-      TODO React
-      Get from https://github.com/govau/uikit
+      import AUkeywordList from './keyword-list';
+
+      <AUkeywordList repeatedName='Department of' items={[
+        {
+          link: '#url',
+          name: 'Agriculture and Water Resources',
+        },
+        {
+          link: '#url',
+          name: 'Communications and the Arts',
+        },
+      ]} />
 ---
 
-TODO
+The version with a link to some location.

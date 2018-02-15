@@ -9,11 +9,6 @@
 			<small class="au-keyword-list__small">Department of </small>Communications and the Arts
 		</a>
 	</li>
-	<li>
-		<a href="#">
-			<small class="au-keyword-list__small">Department of </small>Communications
-		</a>
-	</li>
 </ul>
 
 
@@ -27,11 +22,6 @@
   	<li>
   		<a href="#">
   			<small class="au-keyword-list__small">Department of </small>Communications and the Arts
-  		</a>
-  	</li>
-  	<li>
-  		<a href="#">
-  			<small class="au-keyword-list__small">Department of </small>Communications
   		</a>
   	</li>
   </ul>

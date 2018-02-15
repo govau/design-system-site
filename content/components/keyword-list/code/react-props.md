@@ -6,12 +6,11 @@ layout: section
 
 | Prop name | Type    | Description
 |-----------|---------------------------------------------------------------------------------------
-| TODO      | TODO    | TODO Get from https://github.com/govau/uikit
-<!-- | label       | string  | Provide the aria label
-| items       | object  | The link, text and props for each of the breadcrumbs
-| items.link  | string  | The link of the breadcrumb, optional
-| items.text  | string  | The text of the breadcrumb
-| items.li    | object  | An object that will be spread onto the `<li>` tag, optional
-| dark        | boolean | A dark variation of the component -->
+| repeatedName | string  | Provide the aria label
+| items        | object  | The text That is repeated in each item
+| items.link   | string  | The link of this item
+| items.name   | string  | The name of the item
+| items.li     | object  | An object that will be spread onto the `<li>` tag, optional
+| dark         | boolean | A dark variation of the component
 
 All other props are spread into the component
