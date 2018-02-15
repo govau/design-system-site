@@ -8,7 +8,7 @@ code:
   - React: |
       import AUdirectionLink from './direction-links';
 
-      <AUdirectionLink text="Next" onClick={ () => console.log('This function will be called on click') } />
+      <AUdirectionLink text="Next" />
 ---
 
 Sometimes direction is needed inside a form. Buttons offer a way to direct users to the next or previous section inside a form.
