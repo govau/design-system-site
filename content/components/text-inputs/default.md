@@ -7,7 +7,10 @@ code:
       <label for="textin-a1">label text</label>
       <input class="au-text-input" name="textin-a1" id="textin-a1" type="text" value="value">
   - React: |
-      TODO
+      import AUtextInput from './text-inputs';
+
+      <label htmlFor="textin-a1" >label text</label>
+      <AUtextInput id="textin-a1" />
 ---
 
 The default text inputs do not have a width applied to them.

@@ -4,8 +4,6 @@ layout: section
 
 ### Props
 
-TODO
-
 | Prop name | Type    | Description
 |-----------|---------------------------------------------------------------------------------------
 | dark         | boolean | A dark variation of the component
