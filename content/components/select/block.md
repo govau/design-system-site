@@ -4,8 +4,8 @@ example: examples/example-block
 headline: Block
 code:
   - HTML: |
-      <label for="select1">What option?</label>
-      <select id="select1" class="au-select au-select--block">
+      <label for="select1block">What option?</label>
+      <select id="select1block" class="au-select au-select--block">
         <option value="">Please select</option>
         <option value="1">Option 1</option>
         <option value="2">Option 2</option>
@@ -14,7 +14,7 @@ code:
   - React: |
       import AUselect from './select';
 
-      <AUselect block id="select1" options={[
+      <AUselect block id="select1block" options={[
         {
           value: '',
           text: 'Please select',
