@@ -13,22 +13,20 @@ const NavigationTabs = ({ navigation, _body, _relativeURL, _ID, _pages, _parents
 
 	navigation.sections = navigation.sections.map( section => {
 
+		const navItems = [];
+
+		section.items.map( item => {
+			if ( Fs.existsSync( `content/components/${ module }${ item.link }` ) ) {
+				navItems.push({
+					text: item.text,
+					link: `/components/${ module }${ item.link === '/' ? '' : item.link }`,
+				});
+			}
+		});
+
 		return {
 			alignment: section.alignment,
-			items: section.items.map( item => {
-
-				if ( Fs.existsSync( `content/components/${ module }${ item.link }` ) ) {
-					return {
-						text: item.text,
-						link: `/components/${ module }${ item.link === '/' ? '' : item.link }`,
-					};
-				}
-
-				else {
-					return {};
-				}
-
-			}),
+			items: navItems,
 		};
 	});
 

@@ -5,35 +5,29 @@ import PropTypes           from 'prop-types';
 
 export const CreateLink = ( link, _relativeURL, _ID, _pages ) => {
 
-	if( Object.keys( link ).length > 0 ) {
+	const linkClasses = `${ link.text == 'Github' ? 'icon icon--dark icon--github icon--action' : '' }` +
+		`${ link.text == 'Download' ? 'icon icon--dark icon--download icon--action' : '' }` +
+		`${ link.text == 'Live demo' ? 'icon icon--right icon--demo icon--action' : '' }`;
 
-		const linkClasses = `${ link.text == 'Github' ? 'icon icon--dark icon--github icon--action' : '' }` +
-			`${ link.text == 'Download' ? 'icon icon--dark icon--download icon--action' : '' }` +
-			`${ link.text == 'Live demo' ? 'icon icon--right icon--demo icon--action' : '' }`;
+	const active = _pages[ _ID ]._url === link.link;
 
-		const active = _pages[ _ID ]._url === link.link;
-
-		const _isActiveTrail =
-			_pages[ _ID ]._url.startsWith( link.link ) &&
-			link.link !== '/' &&
-			_pages[ _ID ]._url.split('/').length > link.link.split('/').length;
+	const _isActiveTrail =
+		_pages[ _ID ]._url.startsWith( link.link ) &&
+		link.link !== '/' &&
+		_pages[ _ID ]._url.split('/').length > link.link.split('/').length;
 
 
-		return {
-			text: link.text,
-			link: link.link.startsWith('http') ? link.link : _relativeURL( link.link, _ID ),
-			className: linkClasses,
-			li: {
-				className: `${ active ? 'mainmenu--active' : ''  }${ _isActiveTrail ? ' mainmenu--active-trail' : ''  }`,
-			}
+	return {
+		text: link.text,
+		link: link.link.startsWith('http') ? link.link : _relativeURL( link.link, _ID ),
+		className: linkClasses,
+		li: {
+			className: `${ active ? 'mainmenu--active' : ''  }${ _isActiveTrail ? ' mainmenu--active-trail' : ''  }`,
 		}
 	}
 
-	// I was getting link.text is undefined, this seems to help
-	else {
-		return null;
-	}
 };
+
 
 /**
  * The Navigation component
@@ -48,6 +42,12 @@ const Navigation = ({ navigation, uniqueClass, _relativeURL, _ID, _pages }) => {
 		section.items.map( item => {
 			navItems.push( CreateLink( item, _relativeURL, _ID, _pages ) );
 		});
+
+		navItems.map( item => {
+			if( item === null ) {
+				console.log( item );
+			}
+		})
 
 		return <AUlinkList items={ navItems } inline={ inline } className={ section.alignment === 'right' ? 'mainmenu--right' : '' } />;
 	}
