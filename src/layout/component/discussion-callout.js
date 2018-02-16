@@ -18,7 +18,7 @@ const CalloutWithButton = ({ btntext, btnurl, btntype, _body, _parents, _pages, 
 				{ _body }
 			</div>
 			<div className="col-sm-6 col-md-offset-1 col-md-4 calloutWithButton__buttons">
-				<AUbutton href={ btnurl + module } as={ btntype } block>{ btntext }</AUbutton>
+				<AUbutton href={ `${ btnurl }${ module ? module : '' }` } as={ btntype } block>{ btntext }</AUbutton>
 			</div>
 		</div>
 	);

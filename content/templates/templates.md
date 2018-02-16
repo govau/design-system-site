@@ -1,7 +1,7 @@
 ---
 layout: component/discussion-callout
 btntext: Community
-btnurl: https://community.service.gov.au/t/
+btnurl: https://community.service.gov.au/c/gold
 btntype: secondary
 ---
 
