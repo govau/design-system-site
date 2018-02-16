@@ -72,7 +72,7 @@
 
 // When the box is a link
 a.au-card {
-	color: $AU-color-foreground-Text;
+	color: $AU-color-foreground-text;
 
 	.au-body & {
 		text-decoration: none;
@@ -97,7 +97,7 @@ a.au-card {
 
 	&:hover .au-card__link {
 		text-decoration: none;
-		color: $AU-color-foreground-Text;
+		color: $AU-color-foreground-text;
 	}
 }
 

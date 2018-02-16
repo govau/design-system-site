@@ -107,7 +107,8 @@
 .palette {
 	@include AU-space( height, 2unit );
 	display: block;
-	height: 34px;
+	width: 20%;
+	float: left;
 	text-align: center;
 
 	span {

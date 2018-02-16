@@ -39,7 +39,7 @@
 	text-decoration: none;
 
 	&:hover {
-		color: $AU-colordark-foreground-Text;
+		color: $AU-colordark-foreground-text;
 
 		.header__title {
 			text-decoration: underline;
@@ -76,7 +76,7 @@
 	@include AU-space( max-width, 15unit );
 	text-align: left;
 	display: block;
-	color: $AU-colordark-foreground-Text;
+	color: $AU-colordark-foreground-text;
 
 	&.au-display-md {
 		font-weight: bold;
