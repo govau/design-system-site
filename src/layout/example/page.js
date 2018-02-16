@@ -32,11 +32,12 @@ const Example = ({ _ID, _relativeURL, pagetitle, example, alignment, fullwidth }
 		<head dangerouslySetInnerHTML={{ __html: headContent }} />
 		<body className="au-body">
 
-			<div className={ `example${ alignment === 'center' ? ' example--center' : '' }${ fullwidth === true ? ' example--fullwidth' : '' }` }>
+			<main className={ `example${ alignment === 'center' ? ' example--center' : '' }${ fullwidth === true ? ' example--fullwidth' : '' }` }>
+				<h2 className='example__title'>Example</h2>
 				<div className='content'>
 					{ example }
 				</div>
-			</div>
+			</main>
 
 			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
 			<script src={ _relativeURL( '/assets/js/iframe-resizer-contentWindow.js', _ID ) } />

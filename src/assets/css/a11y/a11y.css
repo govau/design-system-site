@@ -11,8 +11,6 @@ body {
 .bar {
 	border-bottom: 4px solid #f5f5f5;
 	border-bottom: .25rem solid #f5f5f5;
-	margin: -8px -8px 16px -8px;
-	margin: -1rem -1rem 1rem -1rem;
 }
 
 .a11y-button {
@@ -43,9 +41,4 @@ body {
 
 .a11y-button.a11y-button--soft {
 	color: #313131;
-}
-
-.au-body {
-	padding: 16px 16px 0 16px;
-	padding: 1rem 1rem 0 1rem;
 }

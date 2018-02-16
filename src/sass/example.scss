@@ -7,12 +7,26 @@
 
 // Example wrapper
 .example {
+	position: relative;
 	@include AU-clearfix();
 	@include AU-space( padding, 1unit 2unit );
 	padding: 16px 32px;
 	padding: 1rem 2rem;
 	margin: 0 auto;
 	max-width: 800px;
+
+	.example__title {
+		@include AU-space( padding, 0.25unit );
+		position: absolute;
+		left: 0;
+		top: 0;
+		font-size: 12px;
+		font-size: 0.75rem;
+		background: $AU-color-background-shade;
+		display: inline-block;
+		text-transform: uppercase;
+		z-index: 10;
+	}
 
 	&.example--fullwidth {
 		padding: 0;

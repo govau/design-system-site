@@ -43,20 +43,13 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, filter, tabbing, examp
 	return (
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }}  />
-		<body className="au-grid a11y">
-
-			<main className="main au-body container-fluid">
-				<div className="row">
-					<div className="col-md-12">
-						<div className={`${ tabbing ? 'js-tabbing' : '' }${ filter === 'protanopia' || filter === 'deuteranopia' ? 'js-filter' : '' }`}>
-							<div className={`content filter${ tabbing ? ' js-tabbing-area' : '' }`}>
-								{ example }
-							</div>
-						</div>
-					</div>
+		<body className="a11y au-body">
+			<main className={`example${ tabbing ? ' js-tabbing' : '' }${ filter === 'protanopia' || filter === 'deuteranopia' ? ' js-filter' : '' }`}>
+				<h2 className='example__title'>Example</h2>
+				<div className={`content filter${ tabbing ? ' js-tabbing-area' : '' }`}>
+					{ example }
 				</div>
 			</main>
-
 			<script src={ _relativeURL( '/assets/js/iframe-resizer-contentWindow.js', _ID ) } />
 			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
 			<script src={ _relativeURL( '/assets/js/a11y.js', _ID ) } />
