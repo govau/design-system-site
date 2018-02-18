@@ -35,4 +35,4 @@ code:
       <script type="text/javascript" src="script.js"></script>
 ---
 
-Toggle multiple items between two values. This can apply for any css style.
+Toggle a property between two values across multiple items.

@@ -29,4 +29,5 @@ code:
       <script type="text/javascript" src="script.js"></script>
 ---
 
-Fluid animation from left to right and up and down.
+Toggle a property between two values across one item.
+
