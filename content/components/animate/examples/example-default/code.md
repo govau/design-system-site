@@ -15,6 +15,5 @@
     property: 'width',
     speed: 500,
   })">Toggle</button>
-<button aria-controls="stop" onclick="AU.animate.Stop( document.getElementById('dropdown-1') )">Stop</button>
 
 <div class="animate-example" id="dropdown-1">&nbsp;<br /><br /><br /></div>
