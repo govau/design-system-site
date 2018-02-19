@@ -44,3 +44,25 @@ body {
 .a11y-button.a11y-button--soft {
 	color: #313131;
 }
+
+
+
+.a11y .example .bar,
+.a11y .example .content,
+.a11y .example .bar,
+.a11y .example .content {
+	display: none;
+}
+
+@supports ( filter: url( "filters.svg#deuteranopia" ) ){
+	.filter-fail {
+		display: none;
+	}
+
+	.a11y .example .bar,
+	.a11y .example .content,
+	.a11y .example .bar,
+	.a11y .example .content {
+		display: block;
+	}
+}

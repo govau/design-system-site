@@ -50,6 +50,7 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, filter, tabbing, examp
 					<div className={`content filter${ tabbing ? ' js-tabbing-area' : '' }`}>
 						{ example }
 					</div>
+					<p className="filter-fail">Unfortunately this feature is only available in modern browsers.</p>
 				</main>
 			</div>
 			<script src={ _relativeURL( '/assets/js/iframe-resizer-contentWindow.js', _ID ) } />
