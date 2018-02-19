@@ -4,20 +4,14 @@ example: examples/example-type
 headline: Basic Typography
 code:
   - HTML: |
-      <div class="au-body">
-        <h1>Heading level 1</h1>
-        <h2>Heading level 2</h2>
-        <h3>Heading level 3</h3>
-        <h4>Heading level 4</h4>
-        <h5>Heading level 5</h5>
-        <h6>Heading level 6</h6>
-        <hr>
-        <p>Example paragraph.
-          <a href="#">Internal link</a>
-          <a href="#" rel="external">External link</a>
-        </p>
-        <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>
-      </div>
+      <h2>Heading level 2</h2>
+      <p>
+        Example paragraph.<a href="#">Internal link</a> and an <a href="#" rel="external">external link</a>.
+      </p>
+      <hr />
+      <p>
+        Lorem, <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> ipsum dolor sit amet consectetur adipisicing elit.
+      </p>
 ---
 
 Body includes a range of styles for basic content elements.
