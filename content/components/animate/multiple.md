@@ -21,15 +21,9 @@ code:
           property: 'width',
       })">Toggle all</button>
 
-      <div class="animate-example">
-        &nbsp;<br><br><br>
-      </div>
-      <div class="animate-example" style="width:0;">
-        &nbsp;<br><br><br>
-      </div>
-      <div class="animate-example">
-        &nbsp;<br><br><br>
-      </div>
+      <div class="animate-example">&nbsp;<br><br><br></div>
+      <div class="animate-example" style="width:0;">&nbsp;<br><br><br></div>
+      <div class="animate-example">&nbsp;<br><br><br></div>
 
       <!-- Make sure you include the uikit javascript file -->
       <script type="text/javascript" src="script.js"></script>

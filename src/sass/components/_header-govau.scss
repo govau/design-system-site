@@ -50,15 +50,15 @@
 		}
 
 		&.icon--govau:before {
-			background: AU-svguri( '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-			  <path fill="#{ $AU-colordark-foreground-muted }" d="M28 2H4a2 2 0 0 0-2 2v24a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM6 6h4v2H6zm20 20H6V16h20zm0-18H12V6h14z"/>
-			</svg>' );
+			background: AU-svguri( '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">' +
+				'<path fill="#{ $AU-colordark-foreground-muted }" d="M28 2H4a2 2 0 0 0-2 2v24a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM6 6h4v2H6zm20 20H6V16h20zm0-18H12V6h14z"/>' +
+			'</svg>' );
 		}
 
 		&.icon--secure:before {
-			background: AU-svguri( '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-			<path fill="#{ $AU-colordark-foreground-muted }" d="M26 14h-2v-4a8 8 0 0 0-16 0v4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V16a2 2 0 0 0-2-2zm-14-4a4 4 0 0 1 8 0v4h-8z"/>
-			</svg>' );
+			background: AU-svguri( '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">' +
+			'<path fill="#{ $AU-colordark-foreground-muted }" d="M26 14h-2v-4a8 8 0 0 0-16 0v4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V16a2 2 0 0 0-2-2zm-14-4a4 4 0 0 1 8 0v4h-8z"/>' +
+			'</svg>' );
 		}
 	}
 }
