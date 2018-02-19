@@ -42,12 +42,6 @@ const Navigation = ({ navigation, uniqueClass, _relativeURL, _ID, _pages }) => {
 			navItems.push( CreateLink( item, _relativeURL, _ID, _pages ) );
 		});
 
-		navItems.map( item => {
-			if( item === null ) {
-				console.log( item );
-			}
-		})
-
 		return <AUlinkList items={ navItems } inline={ inline } className={ section.alignment === 'right' ? 'mainmenu--right' : '' } />;
 	}
 

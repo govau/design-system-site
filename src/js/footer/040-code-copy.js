@@ -2,7 +2,7 @@ var codeComponents = document.getElementsByTagName( 'pre' );
 
 for( var i = 0; i < codeComponents.length; i++ ) {
 
-	if( HasClass( codeComponents[ i ], 'js-no-copy' ) === null ){
+	if( HasClass( codeComponents[ i ], 'js-nocopy' ) === null ){
 		codeComponents[ i ].insertAdjacentHTML(
 			'beforeend',
 			'<button type="button" class="btn-copy au-btn icon icon--copy js-copy-btn">Copy</button>'

@@ -27,6 +27,7 @@ AddEvent( furnaceClear, 'click', function( event ){
 function ToggleNPM( $this ) {
 	var input = $this;
 	var component = input.getAttribute( 'value' );
+
 	var content = furnaceNPM.innerHTML;
 	component =  " @gov.au/" + component;
 

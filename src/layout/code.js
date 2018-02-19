@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 /**
  * The Code component
  */
-const Code = ({ language, copy, children, className }) => (
-		<pre className={ `language-${ language }${ copy === false ? ' js-no-copy' : '' } ${ className ? className : '' }` }>
+const Code = ({ language, nocopy, children, className }) => (
+		<pre className={ `language-${ language }${ nocopy ? ' js-nocopy' : '' } ${ className ? className : '' }` }>
 			<code className={ `language-${ language }` }>
 				{ children }
 			</code>
@@ -22,7 +22,7 @@ Code.propTypes = {
 	/**
 	 * copy: true
 	 */
-	copy: PropTypes.bool.isRequired,
+	nocopy: PropTypes.bool.isRequired,
 
 	/**
 	 * children: (text)(4)
@@ -32,7 +32,7 @@ Code.propTypes = {
 
 Code.defaultProps = {
 	language: 'none',
-	copy: true,
+	nocopy: false,
 };
 
 export default Code;

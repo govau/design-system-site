@@ -3,7 +3,7 @@
 
   <p>How to use the <code>code</code> element.</p>
   <p>
-    <pre class="js-no-copy"><code>var i: Integer;
+    <pre class="js-nocopy"><code>var i: Integer;
   	begin
   		i := 1.1;
   	end.</code></pre>
@@ -15,7 +15,7 @@
 
   <p>How to use the <code>code</code> element.</p>
   <p>
-    <pre class="js-no-copy"><code>var i: Integer;
+    <pre class="js-nocopy"><code>var i: Integer;
   	begin
   		i := 1.1;
   	end.</code></pre>
