@@ -256,6 +256,54 @@ buttons:
   hasJs: false    # <-- auto generated, don't change
   hasReact: true    # <-- auto generated, don't change
   ID: buttons    # <-- auto generated, don't change
+cta-link:
+  name: Call to action
+  description: >
+    Call to action links are visually distinct instructions to users designed to
+    provoke an immediate response using verbs such as 'call now' or 'find out
+    more'.
+  metatags:
+    - TODO
+  tags:
+    - Links
+    - Call to action
+    - CTA
+  related:
+    - body
+    - direction-links
+    - inpage-nav
+    - skip-link
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
+  required: false
+  contributors:    # <-- auto generated, don't change
+    - name: Dominik Wilkowski
+      email: hi@dominik-wilkowski.com
+      url: 'https://github.com/dominikwilkowski'
+    - name: Simon Pascal Klein
+      email: klepas@klepas.org
+      url: 'https://github.com/klepas'
+    - name: Trevor Brennan
+      email: t@trevorbrennan.com
+      url: 'https://github.com/TrebBrennan'
+    - name: Alex Page
+      email: alex@alexpage.com.au
+      url: 'https://github.com/alex-page'
+  state: published
+  order: 60
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  ID: cta-link    # <-- auto generated, don't change
+  version: 1.0.0-next.5    # <-- auto generated, don't change
+  dependencies:    # <-- auto generated, don't change
+    - core
+  hasSass: true    # <-- auto generated, don't change
+  hasJs: false    # <-- auto generated, don't change
+  hasReact: true    # <-- auto generated, don't change
 callout:
   name: Callout
   description: >
@@ -288,7 +336,7 @@ callout:
       email: alex@alexpage.com.au
       url: 'https://github.com/alex-page'
   state: published
-  order: 60
+  order: 70
   discussions:
     - open: 2
     - active: 7
@@ -333,7 +381,7 @@ control-input:
       email: alex@alexpage.com.au
       url: 'https://github.com/alex-page'
   state: published
-  order: 70
+  order: 80
   discussions:
     - open: 2
     - active: 7
@@ -345,54 +393,6 @@ control-input:
   hasJs: false    # <-- auto generated, don't change
   hasReact: true    # <-- auto generated, don't change
   ID: control-input    # <-- auto generated, don't change
-cta-link:
-  name: Call to action
-  description: >
-    Call to action links are visually distinct instructions to users designed to
-    provoke an immediate response using verbs such as 'call now' or 'find out
-    more'.
-  metatags:
-    - TODO
-  tags:
-    - Links
-    - Call to action
-    - CTA
-  related:
-    - body
-    - direction-links
-    - inpage-nav
-    - skip-link
-  related-articles:
-    - TODO
-  used-in:
-    - TODO
-  required: false
-  contributors:    # <-- auto generated, don't change
-    - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
-      url: 'https://github.com/dominikwilkowski'
-    - name: Simon Pascal Klein
-      email: klepas@klepas.org
-      url: 'https://github.com/klepas'
-    - name: Trevor Brennan
-      email: t@trevorbrennan.com
-      url: 'https://github.com/TrebBrennan'
-    - name: Alex Page
-      email: alex@alexpage.com.au
-      url: 'https://github.com/alex-page'
-  state: published
-  order: 80
-  discussions:
-    - open: 2
-    - active: 7
-    - something: something
-  ID: cta-link    # <-- auto generated, don't change
-  version: 1.0.0-next.5    # <-- auto generated, don't change
-  dependencies:    # <-- auto generated, don't change
-    - core
-  hasSass: true    # <-- auto generated, don't change
-  hasJs: false    # <-- auto generated, don't change
-  hasReact: true    # <-- auto generated, don't change
 direction-links:
   name: Direction Links
   description: >
