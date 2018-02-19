@@ -1042,7 +1042,12 @@ text-inputs:
   hasReact: true    # <-- auto generated, don't change
 cards:
   name: Cards
-  description: TODO
+  description: Cards group related content together.
+  metatags:
+    - TODO
+  tags:
+    - Action
+    - Box
   related:
     - cta-link
     - text-inputs
@@ -1058,11 +1063,6 @@ cards:
     - open: 2
     - active: 7
     - something: something
-  metatags:
-    - TODO
-  tags:
-    - Action
-    - Box
   contributors: null    # <-- auto generated, don't change
   ID: cards    # <-- auto generated, don't change
   version: 0.0.0    # <-- auto generated, don't change
@@ -1073,11 +1073,13 @@ cards:
   hasReact: false    # <-- auto generated, don't change
 table:
   name: Table
-  description: TODO
+  description: Used to display tabular data.
   metatags:
     - TODO
   tags:
-    - TODO
+    - data
+    - row
+    - column
   related:
     - body
   related-articles:
@@ -1100,12 +1102,13 @@ table:
   hasReact: true    # <-- auto generated, don't change
 navigation:
   name: Navigation
-  description: TODO
+  description: A list of links that can be used to access different sections of the website
   metatags:
     - TODO
   tags:
-    - Mobile menu
-    - Nav
+    - mobile menu
+    - nav
+    - links
   related:
     - link-list
   related-articles:
