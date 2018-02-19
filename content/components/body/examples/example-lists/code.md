@@ -14,7 +14,6 @@
   <dl>
     <dt>Definition title</dt>
       <dd>Definition Definition</dd>
-      <dd>Definition Definition</dd>
   </dl>
 </div>
 
@@ -34,9 +33,6 @@
 
   <dl>
     <dt>Definition title</dt>
-      <dd>Definition Definition</dd>
-    <dt>Definition title</dt>
-      <dd>Definition Definition</dd>
       <dd>Definition Definition</dd>
   </dl>
 </div>
