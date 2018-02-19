@@ -18,7 +18,7 @@ const HeaderGovAU = ({ menu, left_title, left_content, right_title, right_conten
 						aria-expanded="false"
 						aria-selected="false"
 						role="tab"
-						onClick="return UIKIT.accordion.Toggle( this )"
+						onClick="return AU.accordion.Toggle( this )"
 					>
 						<span className="headergovau__logo">
 							<svg className="headergovau__logo__svg" role="img" title="The Commonwealth Star">
