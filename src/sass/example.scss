@@ -13,8 +13,6 @@
 	border: 2px solid #cfcfcf;
 	padding: 16px 32px;
 	padding: 1rem 2rem;
-	margin: 0 auto;
-	max-width: 800px;
 
 	&.example--fullwidth {
 		padding: 0;
@@ -22,6 +20,13 @@
 
 	&.example--center {
 		text-align: center
+	}
+
+	.live-demo & {
+		border: 0;
+		margin: 0 auto;
+		max-width: 800px;
+		padding: 0;
 	}
 }
 
