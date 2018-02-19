@@ -6,6 +6,7 @@ header:
 main:
   - getting-started.md
   - intro.md
+  - components.md
   - production-build.md
   - starter-pack.md
   - custom-build.md
