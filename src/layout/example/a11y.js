@@ -44,12 +44,14 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, filter, tabbing, examp
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }}  />
 		<body className="a11y au-body">
-			<main className={`example${ tabbing ? ' js-tabbing' : '' }${ filter === 'protanopia' || filter === 'deuteranopia' ? ' js-filter' : '' }`}>
+			<div className="example__wrapper">
 				<h2 className='example__title'>Example</h2>
-				<div className={`content filter${ tabbing ? ' js-tabbing-area' : '' }`}>
-					{ example }
-				</div>
-			</main>
+				<main className={`example${ tabbing ? ' js-tabbing' : '' }${ filter === 'protanopia' || filter === 'deuteranopia' ? ' js-filter' : '' }`}>
+					<div className={`content filter${ tabbing ? ' js-tabbing-area' : '' }`}>
+						{ example }
+					</div>
+				</main>
+			</div>
 			<script src={ _relativeURL( '/assets/js/iframe-resizer-contentWindow.js', _ID ) } />
 			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
 			<script src={ _relativeURL( '/assets/js/a11y.js', _ID ) } />

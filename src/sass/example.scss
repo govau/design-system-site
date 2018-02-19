@@ -9,25 +9,12 @@
 .example {
 	position: relative;
 	@include AU-clearfix();
-	@include AU-space( padding, 2unit );
+	@include AU-space( padding, 1unit 2unit );
+	border: 2px solid #cfcfcf;
+	padding: 16px 32px;
+	padding: 1rem 2rem;
 	margin: 0 auto;
 	max-width: 800px;
-
-	.example__title {
-		@include AU-space( padding, 0.25unit 0.5unit );
-		position: absolute;
-		left: 0;
-		top: 0;
-		font-size: 12px;
-		font-size: 0.75rem;
-		background: $AU-color-background-shade;
-		color: $AU-color-foreground-muted;
-		border-right: 2px solid #cfcfcf;
-		border-bottom: 2px solid #cfcfcf;
-		display: inline-block;
-		font-weight: normal;
-		z-index: 10;
-	}
 
 	&.example--fullwidth {
 		padding: 0;
@@ -39,10 +26,24 @@
 }
 
 
+.example__wrapper .example__title {
+	@include AU-space( padding, 0.25unit );
+	font-size: 12px;
+	font-size: 0.75rem;
+	background: $AU-color-background-shade;
+	color: $AU-color-foreground-muted;
+	font-weight: normal;
+	border: 2px solid #cfcfcf;
+	border-bottom: 0;
+	display: inline-block;
+	z-index: 10;
+}
+
+
 .a11y .content .au-body.au-body--dark,
 .example .content .au-body.au-body--dark {
-	@include AU-space( margin, 1unit -2unit -2unit );
-	@include AU-space( padding, 1unit 2unit 2unit );
+	@include AU-space( margin, 1unit -2unit -2unit -2unit );
+	@include AU-space( padding, 1unit 2unit );
 }
 
 

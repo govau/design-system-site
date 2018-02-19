@@ -55,10 +55,6 @@
 	z-index: 100;
 }
 
-.code-demo__example {
-	border: 2px solid #cfcfcf;
-}
-
 .code-demo__example--screenreader {
 	@include AU-space( padding, 3unit );
 	position: relative;

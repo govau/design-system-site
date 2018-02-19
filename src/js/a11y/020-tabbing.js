@@ -4,7 +4,7 @@
 var tabs = document.querySelector( '.js-tabbing' );
 if( tabs !== null ) {
 	tabs.insertAdjacentHTML(
-		'beforebegin',
+		'afterbegin',
 		'<div class="bar">' +
 		'<button type="button" class="a11y-button a11y-button--soft js-tabbing-switch">Show tabbing</button>' +
 		'</div>'

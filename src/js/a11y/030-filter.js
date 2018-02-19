@@ -4,7 +4,7 @@ if( filters !== null ) {
 	active = active[ active.length - 1 ].replace( '.css', '' );
 
 	filters.insertAdjacentHTML(
-		'beforebegin',
+		'afterbegin',
 		'<div class="bar">' +
 		'<button type="button" class="a11y-button js-filter-btn' + ( active == 'deuteranopia' ? ' is-active' : '' ) + '" data-filter="deuteranopia">Deuteranopia</button>' +
 		'<button type="button" class="a11y-button js-filter-btn' + ( active == 'tritanopia' ? ' is-active' : '' ) + '" data-filter="tritanopia">Tritanopia</button>' +
