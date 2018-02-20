@@ -81,6 +81,7 @@
 
 .furnace__component__details__img {
 	@include AU-space( width, 3unit );
+	@include AU-space( height, 3unit );
 	@include AU-space( margin, 0.5unit 1.5unit 0.5unit 0.5unit);
 	background-color: $AU-color-background;
 	float: left;
