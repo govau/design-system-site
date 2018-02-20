@@ -106,27 +106,47 @@
 
 
 // Core typography
-.fontgrid-xxxl {
-	@include AU-fontgrid( xxxl );
+.fontgrid {
+	.col-xs-4 {
+		overflow: hidden;
+		@include AU-space( margin-bottom, 1unit );
+	}
+
+	p {
+		@include AU-space( padding, 0.5unit 0 0.25unit );
+		@include AU-space( margin, 1unit 0 2unit );
+		font-weight: bold;
+	}
+
+	.fontgrid-xxxl { @include AU-fontgrid( xxxl ); }
+	.fontgrid-xxl { @include AU-fontgrid( xxl ); }
+	.fontgrid-xl { @include AU-fontgrid( xl ); }
+	.fontgrid-lg { @include AU-fontgrid( lg ); }
+	.fontgrid-md { @include AU-fontgrid( md ); }
+	.fontgrid-sm { @include AU-fontgrid( sm ); }
+	.fontgrid-xs { @include AU-fontgrid( xs ); }
+
+	.fontgrid--nospace {
+		.fontgrid-xxxl { @include AU-fontgrid( xxxl, nospace ); }
+		.fontgrid-xxl { @include AU-fontgrid( xxl, nospace ); }
+		.fontgrid-xl { @include AU-fontgrid( xl, nospace ); }
+		.fontgrid-lg { @include AU-fontgrid( lg, nospace ); }
+		.fontgrid-md { @include AU-fontgrid( md, nospace ); }
+		.fontgrid-sm { @include AU-fontgrid( sm, nospace ); }
+		.fontgrid-xs { @include AU-fontgrid( xs, nospace ); }
+	}
+
+	.fontgrid--heading {
+		.fontgrid-xxxl { @include AU-fontgrid( xxxl, heading ); }
+		.fontgrid-xxl { @include AU-fontgrid( xxl, heading ); }
+		.fontgrid-xl { @include AU-fontgrid( xl, heading ); }
+		.fontgrid-lg { @include AU-fontgrid( lg, heading ); }
+		.fontgrid-md { @include AU-fontgrid( md, heading ); }
+		.fontgrid-sm { @include AU-fontgrid( sm, heading ); }
+		.fontgrid-xs { @include AU-fontgrid( xs, heading ); }
+	}
 }
-.fontgrid-xxl {
-	@include AU-fontgrid( xxl );
-}
-.fontgrid-xl {
-	@include AU-fontgrid( xl );
-}
-.fontgrid-lg {
-	@include AU-fontgrid( lg );
-}
-.fontgrid-md {
-	@include AU-fontgrid( md );
-}
-.fontgrid-sm {
-	@include AU-fontgrid( sm );
-}
-.fontgrid-xs {
-	@include AU-fontgrid( xs );
-}
+
 
 
 // Core color palettes
@@ -134,9 +154,6 @@
 	@include AU-clearfix();
 
 	.palette__bg {
-		width: 13%;
-		padding: 0 6%;
-		float: left;
 		background: $AU-color-background;
 
 		p {
