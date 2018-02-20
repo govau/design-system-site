@@ -4,8 +4,6 @@ layout: section
 
 ### Exports
 
-TODO
-
 | Name       | Type    | Description
 |------------|---------|-----------------------------------------------------------------------------
 | `AUtextInput` | default | The textInput component
