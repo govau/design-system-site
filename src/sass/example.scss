@@ -16,6 +16,11 @@
 
 	&.example--fullwidth {
 		padding: 0;
+
+		.content .au-body.au-body--dark {
+			margin: 0;
+			padding: 0;
+		}
 	}
 
 	&.example--center {
@@ -126,137 +131,64 @@
 
 // Core color palettes
 .palette {
-	@include AU-space( height, 2unit );
-	display: block;
-	width: 20%;
-	float: left;
-	text-align: center;
+	@include AU-clearfix();
 
-	span {
-		@include AU-space( padding, 0.25unit );
-		@include AU-space( margin, 0.5unit auto );
-		line-height: 1;
-		font-size: 12px;
-		font-size: 0.75rem;
-		background: #000;
-		background: rgba( 0, 0, 0, 0.8 );
-		color: #fff;
-		display: inline-block;
-
-		&.hidehex:after {
-			display: none;
-		}
-	}
-
-	&.palette--foreground-action {
-		background: $AU-color-foreground-action;
-		span:after {
-			content: ": #{ $AU-color-foreground-action }";
-		}
-	}
-	&.palette--foreground-focus {
-		background: $AU-color-foreground-focus;
-		span:after {
-			content: ": #{ $AU-color-foreground-focus }";
-		}
-	}
-	&.palette--foreground-text {
-		background: $AU-color-foreground-text;
-		span:after {
-			content: ": #{ $AU-color-foreground-text }";
-		}
-	}
-	&.palette--foreground-muted {
-		background: $AU-color-foreground-muted;
-		span:after {
-			content: ": #{ $AU-color-foreground-muted }";
-		}
-	}
-	&.palette--foreground-border {
-		background: $AU-color-foreground-border;
-		span:after {
-			content: ": #{ $AU-color-foreground-border }";
-		}
-	}
-	&.palette--background {
+	.palette__bg {
+		width: 13%;
+		padding: 0 6%;
+		float: left;
 		background: $AU-color-background;
-		span:after {
-			content: ": #{ $AU-color-background }";
+
+		p {
+			@include AU-space( padding, 0.5unit 0 );
+			margin: 0;
 		}
-	}
-	&.palette--background-shade {
-		background: $AU-color-background-shade;
-		span:after {
-			content: ": #{ $AU-color-background-shade }";
+
+		hr {
+			@include AU-space( border-width, 0.25unit );
+			@include AU-space( margin-top, 0.75unit );
 		}
-	}
-	&.palette--background-alt {
-		background: $AU-color-background-alt;
-		span:after {
-			content: ": #{ $AU-color-background-alt }";
+
+		.palette__text--focus {
+			border-color: $AU-color-foreground-focus;
 		}
-	}
-	&.palette--background-alt-shade {
-		background: $AU-color-background-alt-shade;
-		span:after {
-			content: ": #{ $AU-color-background-alt-shade }";
+
+		.palette__text--muted {
+			color: $AU-color-foreground-muted;
+		}
+
+		&.palette__bg--shade {
+			background: $AU-color-background-shade;
+		}
+		&.palette__bg--alt {
+			background: $AU-color-background-alt;
+		}
+		&.palette__bg--alt-shade {
+			background: $AU-color-background-alt-shade;
 		}
 	}
 
 	&.palette--dark {
-		&.palette--dark--foreground-action {
-			background: $AU-colordark-foreground-action;
-			span:after {
-				content: ": #{ $AU-colordark-foreground-action }";
-			}
-		}
-		&.palette--dark--foreground-focus {
-			background: $AU-colordark-foreground-focus;
-			span:after {
-				content: ": #{ $AU-colordark-foreground-focus }";
-			}
-		}
-		&.palette--dark--foreground-text {
-			background: $AU-colordark-foreground-text;
-			span:after {
-				content: ": #{ $AU-colordark-foreground-text }";
-			}
-		}
-		&.palette--dark--foreground-muted {
-			background: $AU-colordark-foreground-muted;
-			span:after {
-				content: ": #{ $AU-colordark-foreground-muted }";
-			}
-		}
-		&.palette--dark--foreground-border {
-			background: $AU-colordark-foreground-border;
-			span:after {
-				content: ": #{ $AU-colordark-foreground-border }";
-			}
-		}
-		&.palette--dark--background {
+		.palette__bg {
 			background: $AU-colordark-background;
-			span:after {
-				content: ": #{ $AU-colordark-background }";
+
+			&.palette__bg--shade {
+				background: $AU-colordark-background-shade;
+			}
+			&.palette__bg--alt {
+				background: $AU-colordark-background-alt;
+			}
+			&.palette__bg--alt-shade {
+				background: $AU-colordark-background-alt-shade;
 			}
 		}
-		&.palette--dark--background-shade {
-			background: $AU-colordark-background-shade;
-			span:after {
-				content: ": #{ $AU-colordark-background-shade }";
-			}
+
+		.palette__text--focus {
+			border-color: $AU-colordark-foreground-focus;
 		}
-		&.palette--dark--background-alt {
-			background: $AU-colordark-background-alt;
-			span:after {
-				content: ": #{ $AU-colordark-background-alt }";
-			}
-		}
-		&.palette--dark--background-alt-shade {
-			background: $AU-colordark-background-alt-shade;
-			span:after {
-				content: ": #{ $AU-colordark-background-alt-shade }";
-			}
+
+		.palette__text--muted {
+			color: $AU-colordark-foreground-muted;
 		}
 	}
 }
