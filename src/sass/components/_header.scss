@@ -131,12 +131,13 @@
 		.header--home & {
 			@include AU-space( max-width, 20unit );
 			@include AU-fontgrid( xl, heading );
+			@include AU-space( margin-top, 1unit );
 		}
 	}
 
 	.header--home .header__logo-wrapper {
 		@include AU-space( max-width, 34unit );
-		@include AU-space( margin, 5unit auto 9unit );
+		@include AU-space( margin, 2unit auto 4unit );
 	}
 }
 
