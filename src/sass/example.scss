@@ -8,16 +8,17 @@
 // Example wrapper
 .example {
 	position: relative;
-	@include AU-clearfix();
-	@include AU-space( padding, 1unit 2unit );
 	border: 2px solid #cfcfcf;
-	padding: 16px 32px;
-	padding: 1rem 2rem;
 
-	&.example--fullwidth {
+	.content {
+		@include AU-space( padding, 1unit 2unit );
+		@include AU-clearfix();
+	}
+
+	&.example--fullwidth .content {
 		padding: 0;
 
-		.content .au-body.au-body--dark {
+		.au-body.au-body--dark {
 			margin: 0;
 			padding: 0;
 		}
@@ -52,7 +53,7 @@
 
 .a11y .content .au-body.au-body--dark,
 .example .content .au-body.au-body--dark {
-	@include AU-space( margin, 1unit -2unit -2unit -2unit );
+	@include AU-space( margin, 1unit -2unit -1unit );
 	@include AU-space( padding, 1unit 2unit );
 }
 
@@ -149,6 +150,33 @@
 		.fontgrid-md { @include AU-fontgrid( md, heading ); }
 		.fontgrid-sm { @include AU-fontgrid( sm, heading ); }
 		.fontgrid-xs { @include AU-fontgrid( xs, heading ); }
+	}
+}
+
+
+.spacing {
+	.au-progress-indicator__link:before,
+	.au-accordion__title:before,
+	.au-accordion__body-wrapper:before {
+		@include AU-space( border, solid rgba(255,0,0,0.15) 1unit );
+		content: " ";
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background-image: url('/assets/img/spacing-example-grid.png');
+	}
+	.au-accordion__body-wrapper {
+		position: relative;
+	}
+
+	.au-progress-indicator__link:before {
+		@include AU-space( border-left, solid rgba(255,0,0,0.15) 0.5unit );
+	}
+
+	.au-progress-indicator__link:after {
+		@include AU-space( border-right, solid rgba(255,0,0,0.15) 0.75rem );
 	}
 }
 
