@@ -9,7 +9,7 @@ import Fs from 'fs';
  *
  * @disable-docs
  */
-const Example = ({ _ID, _relativeURL, pagetitle, modules, filter, tabbing, example }) => {
+const Example = ({ _ID, _relativeURL, pagetitle, modules, filter, tabbing, example, fullwidth }) => {
 
 	const headContent = `
 	<meta charset="utf-8">
@@ -46,7 +46,7 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, filter, tabbing, examp
 		<body className="a11y au-body">
 			<div className="example__wrapper">
 				<h2 className='example__title'>Example</h2>
-				<main className={`example${ tabbing ? ' js-tabbing' : '' }${ filter === 'protanopia' || filter === 'deuteranopia' ? ' js-filter' : '' }`}>
+				<main className={`example${ fullwidth === true ? ' example--fullwidth' : '' }${ tabbing ? ' js-tabbing' : '' }${ filter === 'protanopia' || filter === 'deuteranopia' ? ' js-filter' : '' }`}>
 					<div className={`content filter${ tabbing ? ' js-tabbing-area' : '' }`}>
 						{ example }
 					</div>

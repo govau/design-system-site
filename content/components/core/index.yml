@@ -15,6 +15,7 @@ sidebar:
 main:
   - color.md
   - typography.md
+  - spacing.md
 
 footer:
   - /_shared/footer.md
