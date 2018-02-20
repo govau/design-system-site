@@ -35,9 +35,12 @@ code:
       }
 ---
 
-System fonts have come a long way in recent times. Manufacturers are now shipping some very elegant fonts as default in their operating systems.
+A typographic scale was used to create a set of font-sizes and line-heights which have been designed for legibility and can be easily be implemented by designers or developers with a predictable output.
 
-During research we met many Australians who live in rural and remote areas where Internet access is limited but government services are still required. Using system fonts makes the load times a whole lot faster for such users with only a slight compromise on aesthetics. 
+Using GOLD's typography values means any object containing text is more likely to align with another element. This appearance of a baseline grid is created by automatically rounding the line-heights to the nearest grid value `4px`, then converting them back to a unit-less value.
 
-Our typography also aligns to our spacing grid. Based on the fontsize and the lineheight we calculate the closest values that will align the typography to other items on the page.
+To insure consistency with other components in the system:
+- Designers can use font-size and line-height values from the typographic scale.
+- Developers can use the `AU-fontgrid` function in SCSS.
 
+**[Why does GOLD use system fonts?](/components/core/rationale/)**
