@@ -1,6 +1,6 @@
 layout: component/page
 module: progress-indicator
-pagetitle: Progress Indicator overview
+pagetitle: Progress indicator overview
 
 header:
   - /_shared/header.md

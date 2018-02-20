@@ -1,7 +1,7 @@
 ---
 layout: component/code-demo
 example: examples/example-block
-headline: Block Text Inputs
+headline: Block text inputs
 code:
   - HTML: |
       <label for="textin-b1">label text</label>

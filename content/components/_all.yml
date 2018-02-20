@@ -349,7 +349,7 @@ callout:
   hasJs: false    # <-- auto generated, don't change
   hasReact: true    # <-- auto generated, don't change
 control-input:
-  name: Control Input
+  name: Control input
   description: >
     Control inputs help users input one or more selections from multiple
     options. Our control inputs consist of checkboxes and radio buttons.
@@ -394,7 +394,7 @@ control-input:
   hasReact: true    # <-- auto generated, don't change
   ID: control-input    # <-- auto generated, don't change
 direction-links:
-  name: Direction Links
+  name: Direction links
   description: >
     Direction links are accompanied by arrows to help users move quickly to
     other parts of the page or through a process.
@@ -605,7 +605,7 @@ headings:
   hasReact: true    # <-- auto generated, don't change
   ID: headings    # <-- auto generated, don't change
 inpage-nav:
-  name: Inpage Nav
+  name: Inpage nav
   description: >
     In-page-nav links helps users scan the contents of a page and navigate to
     different sections of the page.
@@ -648,7 +648,7 @@ inpage-nav:
   hasJs: false    # <-- auto generated, don't change
   hasReact: true    # <-- auto generated, don't change
 keyword-list:
-  name: Keyword List
+  name: Keyword list
   description: >
     The keyword list style helps to emphasise and draw the user's eye to phrases
     that are repeated in a list.
@@ -690,7 +690,7 @@ keyword-list:
   hasJs: false    # <-- auto generated, don't change
   hasReact: true    # <-- auto generated, don't change
 link-list:
-  name: Link List
+  name: Link list
   description: >
     The link list style is a simple list of vertical or horizontal links used
     for site navigation. It is used to order information for users.
@@ -734,7 +734,7 @@ link-list:
   hasReact: true    # <-- auto generated, don't change
   ID: link-list    # <-- auto generated, don't change
 page-alerts:
-  name: Page Alerts
+  name: Page alerts
   description: >
     Page alerts are used to notify users of important information or changes on
     a page, in a way that attracts the user's attention without interrupting the
@@ -778,7 +778,7 @@ page-alerts:
   hasJs: false    # <-- auto generated, don't change
   hasReact: true    # <-- auto generated, don't change
 progress-indicator:
-  name: Progress Indicator
+  name: Progress indicator
   description: >
     Progress indicators provide visual feedback to users to let them know and
     understand their current context at any given time and be assured that they
@@ -824,7 +824,7 @@ progress-indicator:
   hasJs: false    # <-- auto generated, don't change
   hasReact: true    # <-- auto generated, don't change
 responsive-media:
-  name: Responsive Media
+  name: Responsive media
   description: >
     Responsive-media helps create a responsive experience for users viewing
     images and video on different size devices. Specifically it manages video
@@ -911,7 +911,7 @@ select:
   hasJs: false    # <-- auto generated, don't change
   hasReact: true    # <-- auto generated, don't change
 skip-link:
-  name: Skip Link
+  name: Skip link
   description: >
     Skip links are internal page links that aid navigation around a page. They
     are detected by screen readers and help users quickly jump to and over
@@ -997,7 +997,7 @@ tags:
   hasJs: false    # <-- auto generated, don't change
   hasReact: true    # <-- auto generated, don't change
 text-inputs:
-  name: Text Inputs
+  name: Text inputs
   description: >
     Text inputs are input fields typically used in forms that allow the user to
     enter text data in a structured format. Text inputs should be accompanied by

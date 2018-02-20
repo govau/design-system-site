@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Text Inputs discussion
+pagetitle: Text inputs discussion
 
 header:
   - /_shared/header.md

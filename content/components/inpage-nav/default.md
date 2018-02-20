@@ -46,5 +46,5 @@ code:
       </AUinpageNavSection>
 ---
 
-The Inpage Nav (or page contents) is placed above sections of a page and
+The inpage nav (or page contents) is placed above sections of a page and
 provides navigation to individual anchor links located in those sections.

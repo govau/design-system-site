@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Text Inputs accessibility
+pagetitle: Text inputs accessibility
 
 header:
   - /_shared/header.md
