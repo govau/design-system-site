@@ -6,12 +6,12 @@ code:
   - SCSS: |
       // SCSS Example:
 
-      @include AU-space( padding, 10unit );
+      @include AU-space( padding, 1unit );
 
       // CSS Output:
 
-      // padding: 160px;
-      // padding: 10rem;
+      // padding: 16px;
+      // padding: 1rem;
 
 ---
 
@@ -20,9 +20,9 @@ The consistent alignment of elements is paramount for good UI design. GOLD provi
 The base-unit `1unit` of spacing in GOLD is derived from `1rem` which in most browsers equates to `16px`.
 
 ### Design software
-Layouts should use pixel values which are divisible by 4.
+For doing mockups in software like Sketch or Photoshop, use pixel values which are divisible by 4.
 
 ### Development
 Developers should use `AU-fontgrid` and `AU-space` SCSS functions.
 
-The `AU-space` accepts a default un-named unit `1unit` and outputs a scalable / accessible value `1rem` as well as a fallback for older browsers `16px`.
+The `AU-space` accepts a default unnamed unit `1unit` and outputs a scalable / accessible value `1rem` as well as a fallback for older browsers `16px`.
