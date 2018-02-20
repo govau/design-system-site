@@ -39,7 +39,7 @@ A typographic scale was used to create a set of font-sizes and line-heights whic
 
 Using GOLD's typography values means any object containing text is more likely to align with another element. This appearance of a baseline grid is created by automatically rounding the line-heights to the nearest grid value `4px`, then converting them back to a unit-less value.
 
-To insure consistency with other components in the system:
+To ensure consistency with other components in the system:
 - Designers can use font-size and line-height values from the typographic scale.
 - Developers can use the `AU-fontgrid` function in SCSS.
 
