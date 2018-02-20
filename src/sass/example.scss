@@ -108,7 +108,6 @@
 // Core typography
 .fontgrid {
 	.col-xs-4 {
-		overflow: hidden;
 		@include AU-space( margin-bottom, 1unit );
 	}
 
@@ -116,6 +115,12 @@
 		@include AU-space( padding, 0.5unit 0 0.25unit );
 		@include AU-space( margin, 1unit 0 2unit );
 		font-weight: bold;
+	}
+
+	.col-xs-4 div {
+		@include AU-space( margin-bottom, 0.25unit );
+		background-color: $AU-color-background-shade;
+		overflow: hidden;
 	}
 
 	.fontgrid-xxxl { @include AU-fontgrid( xxxl ); }
