@@ -37,9 +37,22 @@ code:
 
 ---
 
-Our design system uses colour in a range of meaningful and intentional ways to create patterns and visual cues. We provide two colour palettes.
+The colour palette is designed and tested to provide colour pairings that pass accessibility contrast ratios while still being easy to implement. This means that designers and developers using the system do not need to be concerned about if a colour will pass WCAG requirements  in a particular circumstance.
 
-These palettes work together to support a variety of uses cases and provide a consistent look for action or link colours and focus states regardless of the palette combination.
+### Colour names imply their use
 
-Our colour palettes have also been designed to be implemented in a themeable manner. The universal colour variables are determined by common roles and usage; they are not based singularly on a unique colour value (hex code). The same colour value may be assigned to multiple variables in a theme's palette when the values have distinctly different roles.
+We use use semantic naming so that all colours labeled as `foreground` colours in a theme, are automatically tested to pass accessibility contrast ratios when used with all `background` colours within a theme and vice versa.
 
+#### For example
+
+**Do** - pair foreground and background colours.
+```
+color:      $AU-color-background;
+background: $AU-color-foreground-action;
+```
+
+**Don't** - Mix light and dark variables.
+```
+color:      $AU-colordark-foreground-action;
+background: $AU-color-background;
+```
