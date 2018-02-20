@@ -5,4 +5,4 @@ iframe: a11y-keyboard
 headline: Keyboard accessibility
 ---
 
-TODO
+How keyboard navigation works with progress indicators.

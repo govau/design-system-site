@@ -6,4 +6,4 @@ headline: Keyboard accessibility
 ---
 
 
-How the accordion is viewed with various colour blindnesses
+How keyboard navigation works with accordions.

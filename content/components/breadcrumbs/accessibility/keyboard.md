@@ -6,4 +6,4 @@ headline: Keyboard accessibility
 ---
 
 
-How the breadcrumbs are viewed with various colour blindnesses
+How keyboard navigation works with breadcrumbs.

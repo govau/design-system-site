@@ -6,4 +6,4 @@ headline: Keyboard accessibility
 ---
 
 
-How the call to action links are viewed with various colour blindnesses
+How keyboard navigation works with call to action links.

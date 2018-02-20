@@ -6,4 +6,4 @@ headline: Keyboard accessibility
 ---
 
 
-How the page alerts are viewed with various colour blindnesses
+How keyboard navigation works with page alerts.
