@@ -3,7 +3,7 @@ core:
   description: >
     Core includes a range of styles, variables and code that form the foundation
     of how the GOLD design system works, including colour, typography and
-    spacing
+    spacing.
   metatags:
     - TODO
   tags:
