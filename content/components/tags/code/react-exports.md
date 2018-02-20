@@ -4,8 +4,6 @@ layout: section
 
 ### Exports
 
-TODO
-
 | Name       | Type    | Description
 |------------|---------|-----------------------------------------------------------------------------
 | `AUtags` | default | The tags component

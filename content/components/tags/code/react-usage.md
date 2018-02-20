@@ -4,8 +4,6 @@ layout: section
 
 ## React Usage
 
-TODO
-
 ```jsx
 import AUtags from './tags';
 

@@ -9,6 +9,7 @@
 .example {
 	position: relative;
 	border: 2px solid #cfcfcf;
+	display: block;
 
 	.content {
 		@include AU-space( padding, 1unit 2unit );
