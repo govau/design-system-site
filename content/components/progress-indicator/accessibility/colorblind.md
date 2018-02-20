@@ -6,4 +6,4 @@ headline: Colour impairment
 ---
 
 
-How the buttons are viewed with various colour blindnesses
+How the progress indicators are viewed with various colour blindnesses

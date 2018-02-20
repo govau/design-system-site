@@ -6,4 +6,4 @@ headline: Grayscale
 ---
 
 
-How the buttons are viewed with total colour blindness.
+How the progress indicators are viewed with total colour blindness.
