@@ -2,7 +2,7 @@
 layout: content/text-with-cta
 button:
   link: https://github.com/govau/uikit-starter#govau-ui-kit-starter-pack
-  text: Using our starter pack on GitHub
+  text: Use our starter pack on GitHub
   type: secondary
   icon: github
 ---

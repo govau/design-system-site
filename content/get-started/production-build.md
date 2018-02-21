@@ -2,7 +2,7 @@
 layout: content/text-with-cta
 button:
   link: https://github.com/govau/uikit#how-to-use
-  text: Setting up for production
+  text: Set up for production
   type: secondary
   icon: github
 ---

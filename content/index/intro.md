@@ -4,7 +4,7 @@ title: About
 imgurl: assets/img/artwork-about.png
 imgalt: designers and developers working together
 url: /get-started
-cta: Getting started
+cta: Get started
 ---
 
 *The GOLD design system provides a framework and a set of tools to help designers and developers build government products and services more easily.*
