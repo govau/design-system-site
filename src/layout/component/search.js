@@ -61,8 +61,6 @@ const Search = ({ headline, link, _parseReact }) => {
 					<thead>
 						<tr class="au-responsive-table__header">
 							<th scope="col">Title</th>
-							<th scope="col" class="component-table--minwidth">Version</th>
-							<th scope="col" class="component-table--minwidth">Contributors</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -70,8 +68,6 @@ const Search = ({ headline, link, _parseReact }) => {
 	output.inprogressMiddle = `
 		<tr class="au-responsive-table__body">
 			<td scope="col"><a href="##url##">##name##</a></td>
-			<td scope="col">##version##</td>
-			<td scope="col">##contributors##</td>
 		</tr>
 	`;
 	output.inprogressEnd = `
@@ -109,7 +105,6 @@ const Search = ({ headline, link, _parseReact }) => {
 					<thead>
 						<tr class="au-responsive-table__header">
 							<th scope="col">Title</th>
-							<th scope="col" class="component-table--minwidth">Status</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -117,7 +112,6 @@ const Search = ({ headline, link, _parseReact }) => {
 	output.suggestionMiddle = `
 		<tr class="au-responsive-table__body">
 			<td scope="col"><a href="##url##">##name##</a></td>
-			<td scope="col">Suggestion</td>
 		</tr>
 	`;
 	output.suggestionEnd = `

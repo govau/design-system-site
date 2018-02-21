@@ -135,7 +135,7 @@ const MakeResultHTML = ( result, HTML ) => {
 				.replace( /##url##/g, item.url )
 				.replace( /##name##/g, item.name )
 				.replace( /##version##/g, item.version )
-				.replace( /##contributors##/g, MakeAvatar( item.contributors, HTML ) )
+				// .replace( /##contributors##/g, MakeAvatar( item.contributors, HTML ) )
 				.replace( /##svg##/g, `/assets/svg/map.svg#${ item.ID }` )
 				.replace( /##description##/g, item.description );
 
