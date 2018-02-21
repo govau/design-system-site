@@ -12,7 +12,7 @@ code:
         </ul>
       </nav>
   - React: |
-      import AUbreadcrumbs from './breadcrumbs';
+      import AUbreadcrumbs from '@gov.au/breadcrumbs';
 
       <AUbreadcrumbs label="Breadcrumb for this page"
         items={[

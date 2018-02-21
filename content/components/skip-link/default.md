@@ -9,7 +9,7 @@ code:
       	<a class="au-skip-link__link" href="#nav">Skip to main navigation</a>
       </nav>
   - React: |
-      import AUskipLink from './skip-link';
+      import AUskipLink from '@gov.au/skip-link';
 
       <AUskipLink links={[
         {

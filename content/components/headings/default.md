@@ -12,7 +12,7 @@ code:
       <h3 class="au-display-sm">Display sm</h3>
       <h1 class="au-display-xs">Display xs</h1>
   - React: |
-      import AUheading from './headings';
+      import AUheading from '@gov.au/headings';
 
       <AUheading size="xxxl" level="4">Display xxxl</AUheading>
       <AUheading size="xxl"  level="6">Display xxl</AUheading>

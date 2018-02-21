@@ -19,7 +19,7 @@ code:
         </li>
       </ul>
   - React: |
-      import AUkeywordList from './keyword-list';
+      import AUkeywordList from '@gov.au/keyword-list';
 
       <AUkeywordList repeatedName='Department of' items={[
         {

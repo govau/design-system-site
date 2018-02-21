@@ -10,7 +10,7 @@ code:
         <li><a href="#">Sign Out</a></li>
       </ul>
   - React: |
-      import AUlinkList from './link-list';
+      import AUlinkList from '@gov.au/link-list';
 
       <AUlinkList items={[
         {

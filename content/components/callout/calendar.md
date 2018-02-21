@@ -10,9 +10,9 @@ code:
         <span class="au-callout--calendar-event__name">New Year’s Day</span>
       </section>
   - React: |
-      import { CalloutCalendar } from './callout';
+      import { AUcalloutCalendar } from '@gov.au/callout';
 
-      <CalloutCalendar
+      <AUcalloutCalendar
         description="Callout calendar"
         datetime="2017-01-01T00:00:00+00:00"
         time="Sunday 1 Jan"

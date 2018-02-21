@@ -9,7 +9,7 @@ code:
         <span class="au-header-subline">Service sub-title that could be a little longer</span>
       </header>
   - React: |
-      import AUheader from './header';
+      import AUheader from '@gov.au/header';
       
       <AUheader title="Page title" subline="Service sub-title that could be a little longer" />
 ---

@@ -5,7 +5,7 @@ layout: section
 ## React Usage
 
 ```jsx
-import AUtags from './tags';
+import AUtags from '@gov.au/tags';
 
 <AUtags tags={[
   {

@@ -9,7 +9,7 @@ code:
         Value
       </textarea>
   - React: |
-      import AUtextInput from './text-inputs';
+      import AUtextInput from '@gov.au/text-inputs';
 
       <label htmlFor="textin-c1" block >label text</label>
       <AUtextInput type="textarea" id="textin-c1" block />

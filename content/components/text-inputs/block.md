@@ -7,7 +7,7 @@ code:
       <label for="textin-b1">label text</label>
       <input class="au-text-input au-text-input--block" name="textin-b1" id="textin-b1" type="text" value="value">
   - React: |
-      import AUtextInput from './text-inputs';
+      import AUtextInput from '@gov.au/text-inputs';
 
       <label htmlFor="textin-b1">label text</label>
       <AUtextInput id="textin-b1" block />

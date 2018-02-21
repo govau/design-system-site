@@ -5,13 +5,13 @@ layout: section
 ## React Usage
 
 ```jsx
-import { Callout, CalloutCalendar } from './callout';
+import { AUcallout, AUcalloutCalendar } from '@gov.au/callout';
 
-<Callout description="Description for this callout">
+<AUcallout description="Description for this callout">
 	Callout content
-</Callout>
+</AUcallout>
 
-<CalloutCalendar
+<AUcalloutCalendar
 	description="description for this callout"
 	datetime="2017-01-01T00:00:00+00:00"
 	time="Sunday 32 Jun"

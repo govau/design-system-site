@@ -5,7 +5,7 @@ layout: section
 ## React Usage
 
 ```jsx
-import AUskipLink from './skip-link';
+import AUskipLink from '@gov.au/skip-link';
 
 <AUskipLink links={[
   {
