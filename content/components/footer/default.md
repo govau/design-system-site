@@ -28,4 +28,4 @@ code:
       </AUfooter>
 ---
 
-A singular method of expanding and collapsing a peice of content with a title. These are best used for transcripts of videos.
+The footer at the bottom of a page. Usually contains copyright information and links to other sections of the site.
