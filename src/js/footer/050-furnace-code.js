@@ -44,5 +44,5 @@ function ToggleNPM( $this ) {
  * Clear button resets the npm install box
  */
 function ClearNPM() {
-	furnaceNPM.innerHTML = 'npm install @gov.au/core';
+	furnaceNPM.innerHTML = 'npm install --save @gov.au/core';
 }
