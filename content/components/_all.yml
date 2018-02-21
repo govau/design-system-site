@@ -844,7 +844,7 @@ progress-indicator:
 responsive-media:
   name: Responsive media
   description: >
-    Responsive-media helps create a responsive experience for users viewing
+    Responsive media helps create a responsive experience for users viewing
     images and video on different size devices. Specifically it manages video
     and slideshow dimensions and aspect ratios for various viewports and widths;
     that is, small screens, large screens and anything in between.
