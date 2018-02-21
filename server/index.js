@@ -69,7 +69,7 @@ const AddFakePassword = ( request, response, next ) => {
  */
 Server
 	// First we make sure all requests come through HTTPS
-	// .all( '*', ForwardSSL )
+	.all( '*', ForwardSSL )
 
 	// Let's make sure we had the password passed in
 	.get( '*', AddFakePassword )
