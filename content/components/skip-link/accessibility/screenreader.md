@@ -3,11 +3,10 @@ layout: component/screenreader
 headline: Screen readers
 speak: |
 
-  Accordion title _selected expanded tab._
+  [Link] skip to main content.
 
-  here, _link_ is, some accordion content.
+  [Link] skip to main navigation.
 
-  Accordion title _collapsed tab._
 
 ---
 

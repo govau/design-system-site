@@ -3,11 +3,19 @@ layout: component/screenreader
 headline: Screen readers
 speak: |
 
-  Accordion title _selected expanded tab._
+  [Heading level 4] Display x, x, x, l.
 
-  here, _link_ is, some accordion content.
+  [Heading level 6] Display x, x, l.
 
-  Accordion title _collapsed tab._
+  [Heading level 4] Display x, l.
+
+  [Heading level 5] Display l, g.
+
+  [Heading level 2] Display m, d.
+
+  [Heading level 3] Display s, m.
+  
+  [Heading level 1] Display x, s.
 
 ---
 

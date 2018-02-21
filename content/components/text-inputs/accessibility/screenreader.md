@@ -3,11 +3,13 @@ layout: component/screenreader
 headline: Screen readers
 speak: |
 
-  Accordion title _selected expanded tab._
+  A text input field.
 
-  here, _link_ is, some accordion content.
+  A text input field [edit text].
 
-  Accordion title _collapsed tab._
+  A disabled input field.
+
+  A disabled input field [dimmed edit text, _placeholder_].
 
 ---
 

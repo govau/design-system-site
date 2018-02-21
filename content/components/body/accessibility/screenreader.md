@@ -3,11 +3,25 @@ layout: component/screenreader
 headline: Screen readers
 speak: |
 
-  Accordion title _selected expanded tab._
+  [Heading level 1] Example heading.
 
-  here, _link_ is, some accordion content.
+  Example paragraph with an, [link] internal link, and an, [link] external link, and [abbreviation group] abbreviation.
 
-  Accordion title _collapsed tab._
+  [horizontal splitter].
+
+  Example formula, E equals m c, two, f, x, n, equals log, four, x n.
+
+  The, _code_, element.
+
+  The delete or strike elements.
+
+  The insert element.
+
+  The, _mark_, element.
+
+  The, _keyboard input_, element.
+
+  _Var i integer. begin i equals 1.1 end_
 
 ---
 

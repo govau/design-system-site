@@ -3,11 +3,36 @@ layout: component/screenreader
 headline: Screen readers
 speak: |
 
-  Accordion title _selected expanded tab._
+  What option?
 
-  here, _link_ is, some accordion content.
+  Please select.
 
-  Accordion title _collapsed tab._
+  [What option? collapsed pop up button].
+
+  Please select [menu item].
+
+  Option 1 [menu item].
+
+  Option 2 [menu item].
+
+  Option 3 [menu item].
+
+
+  Example of a disabled select.
+
+  Please select.
+
+  [Example of a disabled select, dimmed collapsed pop up button].
+
+  please select [menu item].
+
+  Option 1 [menu item].
+
+  Option 2 [menu item].
+
+  Option 3 [menu item].
+
+
 
 ---
 

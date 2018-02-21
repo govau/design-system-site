@@ -3,11 +3,9 @@ layout: component/screenreader
 headline: Screen readers
 speak: |
 
-  Accordion title _selected expanded tab._
+  [Heading level 3] Alert title.
 
-  here, _link_ is, some accordion content.
-
-  Accordion title _collapsed tab._
+  Alert Content [link] link.
 
 ---
 

@@ -3,11 +3,12 @@ layout: component/screenreader
 headline: Screen readers
 speak: |
 
-  Accordion title _selected expanded tab._
+  [List two items].
 
-  here, _link_ is, some accordion content.
+  Department of, Agriculture and Water Resources.
 
-  Accordion title _collapsed tab._
+  [Link] Department of Communications and the Arts
+
 
 ---
 

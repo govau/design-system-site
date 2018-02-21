@@ -3,11 +3,9 @@ layout: component/screenreader
 headline: Screen readers
 speak: |
 
-  Accordion title _selected expanded tab._
+  [Breadcrumb navigation, list three items].
 
-  here, _link_ is, some accordion content.
-
-  Accordion title _collapsed tab._
+  [link] home, [link] parent, current page.
 
 ---
 

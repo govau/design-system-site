@@ -3,11 +3,14 @@ layout: component/screenreader
 headline: Screen readers
 speak: |
 
-  Accordion title _selected expanded tab._
+  Phone [unchecked tickbox].
 
-  here, _link_ is, some accordion content.
+  Tablet [checked tickbox].
 
-  Accordion title _collapsed tab._
+  Phone [Radio button one of two].
+
+  Tablet [selected radio button two of two].
+
 
 ---
 

@@ -3,11 +3,13 @@ layout: component/screenreader
 headline: Screen readers
 speak: |
 
-  Accordion title _selected expanded tab._
+  [List 3 items].
 
-  here, _link_ is, some accordion content.
+  [Link] doing introduction.
 
-  Accordion title _collapsed tab._
+  [Link] to do business contracts.
+
+  [Link] done case studies.
 
 ---
 
