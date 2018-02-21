@@ -107,6 +107,7 @@
 // Animation
 .animate-example {
 	@include AU-space( margin-top, 1unit );
+	background-color: hotpink;
 	background-color: rebeccapurple;
 }
 
