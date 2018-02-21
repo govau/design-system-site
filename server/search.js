@@ -169,6 +169,7 @@ const INDEX = MakeIndex( COMPONENTS );
 const DisplaySearch = ( search = '' ) => {
 	const HTML = GetHTML( SEARCH, search );
 	const FuseSearch = new Fuse( INDEX, {
+		threshold: 0.2,
 		keys: [
 			{
 				name: 'ID',
@@ -180,12 +181,12 @@ const DisplaySearch = ( search = '' ) => {
 			},
 			{
 				name: 'metatags',
-				weight: 0.1,
+				weight: 0.2,
 			},
 			{
 				name: 'description',
-				weight: 0.2,
-			}
+				weight: 0.1,
+			},
 		],
 	});
 

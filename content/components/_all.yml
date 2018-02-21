@@ -502,6 +502,7 @@ grid-12:
   metatags:
     - 12 col
     - grid
+    - layout
   tags:
     - structure
   related: null
