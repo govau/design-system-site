@@ -17,6 +17,7 @@ npm-debug.log
 site/
 docs/
 **/_uikit/**
+00-uikit.js
 src/assets/css/style.css
 src/assets/css/example.css
 src/assets/js/footer.js
