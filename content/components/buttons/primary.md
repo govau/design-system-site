@@ -1,7 +1,7 @@
 ---
 layout: component/code-demo
 example: examples/example-default
-headline: Default Buttons
+headline: Default
 code:
   - HTML: |
       <button class="au-btn">

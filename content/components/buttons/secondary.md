@@ -1,7 +1,7 @@
 ---
 layout: component/code-demo
 example: examples/example-secondary
-headline: Secondary Buttons
+headline: Secondary
 code:
   - HTML: |
       <button class="au-btn au-btn--secondary">

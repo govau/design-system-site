@@ -1,7 +1,7 @@
 ---
 layout: component/code-demo
 example: examples/example-disabled
-headline: Disabled Buttons
+headline: Disabled
 code:
   - HTML: |
       <button class="au-btn" disabled>

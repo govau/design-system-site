@@ -1,7 +1,7 @@
 ---
 layout: component/code-demo
 example: examples/example-tertiary
-headline: Tertiary Buttons
+headline: Tertiary
 code:
   - HTML: |
       <button class="au-btn au-btn--tertiary">

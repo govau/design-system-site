@@ -1,7 +1,7 @@
 ---
 layout: component/code-demo
 example: examples/example-block
-headline: Block Buttons
+headline: Block
 code:
   - HTML: |
       <button class="au-btn au-btn--block">

@@ -1,7 +1,7 @@
 ---
 layout: component/code-demo
 example: examples/example-link
-headline: Link Buttons
+headline: Links as buttons
 code:
   - HTML: |
       <a href="/buy-now" class="au-btn">
