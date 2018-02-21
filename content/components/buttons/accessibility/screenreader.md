@@ -2,13 +2,14 @@
 layout: component/screenreader
 headline: Screen readers
 speak: |
-  Primary button [button]
+  Primary button [button].
 
-  Secondary button [button]
+  Secondary button [button].
 
-  Tertiary button [button]
+  Tertiary button [button].
 ---
 
 
-How buttons are described by assistive technology.
-As read with JAWS 1.6 on IE11
+How the buttons demo is described by assistive technology.
+
+As read with macOS High Sierra VoiceOver.

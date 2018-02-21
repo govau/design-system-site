@@ -5,5 +5,6 @@ speak: aria-pressed, selected, toggle button
 ---
 
 
-How buttons are described by assistive technology. 
-As read with JAWS 1.6 on IE11
+How the {breadcrumbs} demo is described by assistive technology.
+
+As read with macOS High Sierra VoiceOver.
