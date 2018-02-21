@@ -17,7 +17,7 @@ const Screenreader = ({ headline, speak, _body, _ID, _parseMD, _relativeURL }) =
 
 			<div className="col-sm-6 code-demo__example-wrapper">
 				<div className="code-demo__example code-demo__example--screenreader">
-					{ speak }
+					{ _parseMD( speak ) }
 				</div>
 			</div>
 			<div className="col-sm-6 code-demo__text">
