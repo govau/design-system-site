@@ -8,34 +8,34 @@ code:
       // ==============
 
       // Default values - can be overridden with your own colours
-      $AU-color-foreground-action:            #00698f !default;
-      $AU-color-foreground-focus:             #ea4200 !default;
-      $AU-color-foreground-text:              #313131 !default;
-      $AU-color-background:                   #ffffff !default;
+      $AU-color-foreground-action:     #00698f !default;
+      $AU-color-foreground-focus:      #ea4200 !default;
+      $AU-color-foreground-text:       #313131 !default;
+      $AU-color-background:            #ffffff !default;
 
       // Generated values - automatically created from default values
-      // $AU-color-foreground-muted:          #636363;
-      // $AU-color-foreground-border:         #7f7f7f;
-      // $AU-color-background-shade:          #f5f5f5;
-      // $AU-color-background-alt:            #ebebeb;
-      // $AU-color-background-alt-shade:      #e0e0e0;
+      // $AU-color-foreground-muted (#636363)
+      // $AU-color-foreground-border (#7f7f7f)
+      // $AU-color-background-shade (#f5f5f5)
+      // $AU-color-background-alt (#ebebeb)
+      // $AU-color-background-alt-shade (#e0e0e0)
 
 
       // Dark palette
       // ==============
 
       // Default values - can be overridden with your own colours
-      $AU-colordark-foreground-action:        #61daff !default;
-      $AU-colordark-foreground-focus:         #ff8629 !default;
-      $AU-colordark-foreground-text:          #ffffff !default;
-      $AU-colordark-background:               #135E70 !default;
+      $AU-colordark-foreground-action: #61daff !default;
+      $AU-colordark-foreground-focus:  #ff8629 !default;
+      $AU-colordark-foreground-text:   #ffffff !default;
+      $AU-colordark-background:        #135E70 !default;
 
       // Generated values - automatically created from default values
-      // $AU-colordark-foreground-muted:      #b7cfd5;
-      // $AU-colordark-foreground-border:     #8bacb3;
-      // $AU-colordark-background-shade:      #104f5f;
-      // $AU-colordark-background-alt:        #0d414d;
-      // $AU-colordark-background-alt-shade:  #0a323c;
+      // $AU-colordark-foreground-muted (#b7cfd5)
+      // $AU-colordark-foreground-border (#8bacb3)
+      // $AU-colordark-background-shade (#104f5f)
+      // $AU-colordark-background-alt (#0d414d)
+      // $AU-colordark-background-alt-shade (#0a323c)
 
 ---
 
