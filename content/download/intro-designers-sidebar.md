@@ -2,7 +2,7 @@
 layout: download/intro-sidebar
 ---
 
-### Resources
+<!-- ### Resources
 
 - [Phototshop design files ](#)
-- [Sketch design files](#)
+- [Sketch design files](#) -->
