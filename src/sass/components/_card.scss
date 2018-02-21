@@ -26,11 +26,14 @@
 	}
 
 	&.au-card--shadow {
-		@include AU-space( padding, 1unit );
 		border-radius: 4px;
 		overflow:hidden;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 		background: $AU-color-background;
+
+		.au-card__inner {
+			@include AU-space( padding, 1unit );
+		}
 
 		.lt-ie9 & {
 			border: solid 1px $AU-color-foreground-border;
@@ -104,6 +107,7 @@ a.au-card {
 
 // Card listing match height
 .au-card-list {
+	@include AU-clearfix();
 	list-style: none;
 	padding: 0;
 

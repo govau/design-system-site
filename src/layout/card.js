@@ -274,11 +274,13 @@ const AUcard = ({ rows, appearance, alignment, link, href, ...attributesOptions 
 			`au-card ${ appearance === 'shadow' ? ' au-card--shadow' : '' }` +
 			`${ alignment === 'center' ? ' au-card--centered': '' }`
 		}>
-			{
-				items.map( ( item, i ) => (
-					<item.component { ...item.props } key={ i } />
-				))
-			}
+			<div className='au-card__inner'>
+				{
+					items.map( ( item, i ) => (
+						<item.component { ...item.props } key={ i } />
+					))
+				}
+			</div>
 		</CardContainer>
 	);
 };
