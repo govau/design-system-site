@@ -6,4 +6,4 @@ headline: Grayscale
 ---
 
 
-How the inpage nav are viewed with total colour blindness.
+How the inpage navs are viewed with total colour blindness.

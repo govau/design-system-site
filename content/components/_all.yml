@@ -617,7 +617,7 @@ headings:
 inpage-nav:
   name: Inpage nav
   description: >
-    In-page-nav links helps users scan the contents of a page and navigate to
+    Inpage nav links helps users scan the contents of a page and navigate to
     different sections of the page.
   metatags:
     - TODO

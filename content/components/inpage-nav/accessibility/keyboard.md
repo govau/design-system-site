@@ -6,4 +6,4 @@ headline: Keyboard accessibility
 ---
 
 
-How keyboard navigation works with inpage nav.
+How keyboard navigation works with inpage navs.
