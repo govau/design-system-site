@@ -7,7 +7,7 @@ code:
       <div class="au-body">
         <footer class="au-footer" role="contentinfo">
           <nav class="au-footer__navigation">
-            <p><a href="#>Link</a></p>
+            <p><a href="#">Link</a></p>
           </nav>
 
           <section class="au-footer__end">

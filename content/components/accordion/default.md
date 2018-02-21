@@ -11,9 +11,7 @@ code:
 
         <div class="au-accordion__body" id="accordion-default" aria-hidden="false">
           <div class="au-accordion__body-wrapper">
-            <div class="no-a11y-test">
-              Here <a href="#url">is</a> some accordion content
-            </div>
+            Here <a href="#url">is</a> some accordion content
           </div>
         </div>
       </section>
