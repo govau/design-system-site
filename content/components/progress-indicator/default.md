@@ -25,7 +25,7 @@ code:
         </li>
       </ul>
   - React: |
-      import AUbutton from '@gov.au/progress-indicator';
+      import AUprogressIndicator from '@gov.au/progress-indicator';
 
       <AUprogressIndicator items={[
         {

@@ -12,7 +12,7 @@ code:
   - React: |
       import AUlinkList from '@gov.au/link-list';
 
-      <AUlinkList items={[
+      <AUlinkList inline items={[
         {
           link: '#',
           text: 'Options',
