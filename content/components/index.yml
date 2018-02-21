@@ -1,0 +1,20 @@
+layout: component/page
+pagetitle: Components
+headernav: false
+showheader: false
+
+header:
+  - /_shared/header.md
+
+sidebar:
+  - search.md
+  - /components/sidebar.md
+
+main:
+  - intro.md
+  - released.md
+  - inprogress.md
+  - suggestions.md
+
+footer:
+  - /_shared/footer.md

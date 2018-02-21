@@ -1,0 +1,17 @@
+// component-header
+
+.componentheader {
+
+	.componentheader__headling {
+		font-weight: normal;
+		@include AU-fontgrid( xxxl, nospace );
+	}
+
+	.componentheader__body {
+		margin-top: 2rem;
+	}
+
+	.abstract {
+		@include AU-fontgrid( md );
+	}
+}

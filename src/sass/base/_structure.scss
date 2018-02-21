@@ -1,0 +1,31 @@
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: 1fr auto;
+	grid-template-columns: minmax( 100%, 0 );
+}
+
+.container-fluid {
+	@include AU-space( max-width, 85unit );
+}
+
+.au-footer {
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+
+main.main {
+	@include AU-space( padding-top, 6unit );
+	@include AU-space( padding-bottom, 6unit );
+}
+
+@include AU-media( xs ) {
+	.au-grid .container-fluid {
+		@include AU-space( padding-left, 3unit );
+		@include AU-space( padding-right, 3unit );
+	}
+}

@@ -1,11 +1,55 @@
-// Our vars
+// Variable overides
+@import 'base/colors';
 
 
 // UI-Kit
 @import '../_uikit/sass/uikit';
 
 
-// Our custom components and overrides
+// Our reset
 @import 'base/reset';
+@import 'base/breakpoints';
+@import 'base/structure';
+@import 'base/utility';
 
-@import 'components/headergovau/module';
+// Our component styles
+@import 'components/footer';
+@import 'components/header';
+@import 'components/header-govau';
+@import 'components/mainmenu';
+@import 'components/navigation';
+@import 'components/navigation-accordion';
+@import 'components/icons';
+@import 'components/intro';
+@import 'components/promo';
+@import 'components/features';
+@import 'components/component-footer';
+@import 'components/avatar';
+@import 'components/component-status';
+@import 'components/table';
+@import 'components/component-table';
+@import 'components/overlay';
+@import 'components/component-header';
+@import 'components/card';
+@import 'components/card--gold';
+@import 'components/download-intro';
+@import 'components/furnace';
+@import 'components/abstract';
+@import 'components/headingleft';
+@import 'components/listcolumns';
+@import 'components/badge';
+@import 'components/search';
+@import 'components/sidebar';
+@import 'components/users';
+@import 'components/error';
+@import 'components/code';
+@import 'components/code-demo';
+@import 'components/tabs';
+@import 'components/variation';
+@import 'components/released-cards';
+@import 'components/callout-with-button';
+@import 'components/section';
+@import 'components/searchpage';
+
+//Possible Visual Design Tweaks to UIKit
+@import 'components/vd-tweaks';

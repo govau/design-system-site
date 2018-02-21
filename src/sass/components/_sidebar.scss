@@ -1,0 +1,60 @@
+// Component page sidebar changes
+.is-components {
+
+	.sidebar {
+		@include AU-space( margin-top, -1unit );
+		@include AU-space( margin-bottom, 2unit );
+	}
+
+	.navigation--accordion {
+		display: none;
+	}
+}
+
+@include AU-media( md ) {
+	.is-components {
+
+		.content-matchheight {
+			display: flex;
+		}
+
+		main {
+			background: transparent;
+		}
+
+		.content-wrapper {
+			position: relative;
+
+			&:after {
+				background: $AU-color-background-alt;
+				content: " ";
+				left: 0;
+				position: absolute;
+				width: 50%;
+				top: 0;
+				bottom: 0;
+				z-index: -1;
+			}
+		}
+
+		.content,
+		.sidebar {
+			@include AU-space( margin-top, -6unit );
+			@include AU-space( margin-bottom, -6unit );
+			@include AU-space( padding-top, 6unit );
+			@include AU-space( padding-bottom, 6unit );
+		}
+
+		.content {
+			@include AU-space( padding-left, 3unit );
+			background: $AU-color-background;
+			box-shadow: -1px 0 0 0 darken($AU-color-background-shade, 15%);
+		}
+
+		.sidebar .navigation--accordion {
+			// @include AU-space( margin-top, 2unit );
+			margin-right: -12px;
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,48 @@
+// Features
+
+.features {
+	@include AU-space( margin-top, 10unit );
+}
+
+.features__intro {
+	text-align: center;
+
+	.content {
+		@include AU-space( margin-top, 2unit );
+	}
+}
+
+.au-body .features__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	@include AU-fontgrid( sm );
+	@include AU-space( margin-top, 3unit );
+
+	.feature {
+		@include AU-space( margin-top, -0.25unit );
+	}
+}
+
+.feature__wrapper {
+	@include AU-space( border-top, 0.25unit solid $AU-color-background-alt );
+	@include AU-space( border-bottom, 0.25unit solid $AU-color-background-alt );
+	@include AU-space( padding, 2unit 0 );
+	min-height: 8em;
+}
+
+.feature__wrapper__headline {
+	@include AU-fontgrid( md );
+	font-weight: bold;
+}
+
+.features__cta {
+	text-align: center;
+	@include AU-space( margin-top, 3unit );
+}
+
+.au-body *+h2,
+.au-body *+.au-display-xl {
+    margin-top: 48px;
+    margin-top: 4rem;
+}

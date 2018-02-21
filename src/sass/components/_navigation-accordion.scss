@@ -1,0 +1,58 @@
+.navigation.navigation--accordion {
+	border-bottom: 0;
+
+	.au-link-list > li {
+		border: 0;
+
+		&.mainmenu--active,
+		&.mainmenu--active-trail {
+			position: relative;
+			font-weight: bold;
+
+			&:after {
+				@include AU-space( margin-top, -0.5unit );
+				@include AU-space( right, -0.7unit );
+				@include AU-space( height, 1unit );
+				@include AU-space( width, 1unit );
+				position: absolute;
+				content: " ";
+				box-shadow: -1px 1px 0 0 darken($AU-color-background-shade, 15%);
+				background-color: $AU-color-background;
+				top: 50%;
+				z-index: 100;
+				transform: rotate( 45deg );
+			}
+		}
+
+		& > a {
+			@include AU-fontgrid( xs, nospace );
+			@include AU-space( padding, 0.75unit 1unit );
+		}
+	}
+
+	.au-accordion__body-wrapper {
+		padding: 2px 3px;
+		background-color: $AU-color-background-alt-shade;
+		border-top: 1px solid darken($AU-color-background-shade, 15%);
+	}
+
+	.au-accordion {
+		border: 0;
+		border-top: 1px solid darken($AU-color-background-shade, 15%);
+
+		&:last-of-type {
+			border-bottom: 1px solid darken($AU-color-background-shade, 15%);
+		}
+	}
+
+	.au-accordion__title {
+		background: transparent;
+		text-decoration: none;
+		font-weight: bold;
+		@include AU-fontgrid( xs, nospace );
+	}
+
+	.au-accordion--closed.au-accordion__title {
+		font-weight: normal;
+	}
+}

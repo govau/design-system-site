@@ -1,0 +1,17 @@
+.avatar {
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	width: 2em;
+	height: 2em;
+	border-radius: 100%;
+	background-color: $AU-color-background-alt; // image loading placeholder
+
+	img {
+		max-width: 100%;
+	}
+
+	&:hover {
+		opacity: 0.5;
+	}
+}

@@ -1,0 +1,113 @@
+.furnace__title {
+	@include AU-space( padding-bottom, 1.5unit );
+	@include AU-space( margin-bottom, 1.5unit );
+	@include AU-space( border-bottom, solid 0.25unit $AU-color-background-shade );
+
+	.furnace__clear {
+		@include AU-space( padding, 0.5unit 0 );
+		@include AU-space( margin-top, -0.5unit );
+		float: right;
+	}
+}
+
+.furnace__component-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.furnace__component {
+	@include AU-clearfix();
+	@include AU-space( border-radius, 0.25unit );
+	@include AU-space( margin-top, 0.5unit );
+	@include AU-space( padding, 0.25unit 1unit 0.25unit 0.25unit );
+	display: block;
+	position: relative;
+	background: $AU-color-background-shade;
+
+	&:hover {
+	 background: $AU-color-background-alt;
+	}
+}
+
+// Pull the label to full width and he
+.furnace__component__label {
+	@include AU-space( padding, 0.25unit );
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 1;
+	cursor: pointer;
+
+	//label text & input
+	.furnace__component__control {
+		@include AU-space( margin, 1unit 0 0 5unit );
+		position: relative; //for the UIKIT checkboxes
+		display: block;
+
+		.au-control-input__text {
+			@include AU-fontgrid( xs, nospace );
+			font-weight: bold;
+			padding-top: 0;
+		}
+	}
+}
+
+.furnace__component__details {
+	.furnace__component__dependencies {
+		@include AU-fontgrid( xs, nospace );
+		@include AU-space( margin, 2unit 0 0 2.5unit );
+		float: left;
+	}
+
+	.furnace__component__documentation {
+		@include AU-fontgrid( xs );
+		@include AU-space( margin-top, 1.25unit );
+		float: right;
+
+		a {
+			position: relative;
+			z-index: 100;
+
+			&:hover {
+				color: $AU-color-foreground-text;
+				text-decoration:none;
+			}
+		}
+	}
+}
+
+.furnace__component__details__img {
+	@include AU-space( width, 3unit );
+	@include AU-space( height, 3unit );
+	@include AU-space( margin, 0.5unit 1.5unit 0.5unit 0.5unit);
+	background-color: $AU-color-background;
+	float: left;
+}
+
+.furnace__buildbox {
+	@include AU-space( border-top-left-radius, 0.25unit );
+	@include AU-space( border-top-right-radius, 0.25unit );
+	background-color: $AU-color-background-shade;
+
+	.furnace__buildbox__wrapper {
+		@include AU-clearfix();
+		@include AU-space( padding, 1unit );
+		@include AU-space( margin-top, 1unit );
+	}
+
+	.furnace__buildbox__download {
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+}
+
+.furnace-npm {
+	@include AU-space( margin-top, 1unit );
+
+	.no-js & {
+		display: none;
+	}
+}

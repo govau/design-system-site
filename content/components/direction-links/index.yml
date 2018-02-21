@@ -1,0 +1,20 @@
+layout: component/page
+module: direction-links
+pagetitle: Direction links overview
+
+header:
+  - /_shared/header.md
+
+component_nav:
+  - /components/_tabs.md
+
+sidebar:
+  - /components/search.md
+  - /components/sidebar.md
+
+main:
+  - default.md
+  - buttons.md
+
+footer:
+  - /_shared/footer.md

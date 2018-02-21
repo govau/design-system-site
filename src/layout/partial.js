@@ -1,5 +1,5 @@
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import React from 'react';
 
 
 /**
@@ -8,19 +8,16 @@ import React from 'react';
  * @disable-docs
  */
 const Partial = ({ _body }) => (
-	<div className="uikit-partial">{ _body }</div>
+	<Fragment>{ _body }</Fragment>
 );
-
 
 Partial.propTypes = {
 	/**
-	 * _body: (partials)(4)
+	 * _body: (text)(4)
 	 */
 	_body: PropTypes.node.isRequired,
 };
 
-
 Partial.defaultProps = {};
-
 
 export default Partial;

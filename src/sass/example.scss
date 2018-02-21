@@ -1,0 +1,250 @@
+// This is used for our example iframes and live demo pages
+
+
+// UI-Kit
+@import '../_uikit/sass/uikit';
+
+
+// Example wrapper
+.example {
+	position: relative;
+	border: 2px solid #cfcfcf;
+	display: block;
+
+	.content {
+		@include AU-space( padding, 1unit 2unit );
+		@include AU-clearfix();
+	}
+
+	&.example--fullwidth .content {
+		padding: 0;
+
+		.au-body.au-body--dark {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	&.example--center {
+		text-align: center
+	}
+
+	.live-demo & {
+		border: 0;
+		margin: 0 auto;
+		max-width: 800px;
+		padding: 0;
+
+		.container {
+			max-width: 100%;
+		}
+	}
+}
+
+
+.example__wrapper .example__title {
+	@include AU-space( padding, 0.25unit );
+	font-size: 12px;
+	font-size: 0.75rem;
+	background: $AU-color-background-shade;
+	color: $AU-color-foreground-muted;
+	font-weight: normal;
+	border: 2px solid #cfcfcf;
+	border-bottom: 0;
+	display: inline-block;
+	z-index: 10;
+}
+
+
+.a11y .content .au-body.au-body--dark,
+.example .content .au-body.au-body--dark {
+	@include AU-space( margin, 1unit -2unit -1unit );
+	@include AU-space( padding, 1unit 2unit );
+}
+
+
+// Live demo header bar
+.live-demo header {
+	@include AU-space( margin-bottom, 1unit );
+	@include AU-space( padding, 1unit );
+	background-color: #1D1D1D;
+
+	.container-fluid {
+		max-width: 1360px;
+		max-width: 85rem;
+		@include AU-space( padding-left, 3unit );
+		@include AU-space( padding-right, 3unit );
+	}
+
+	a {
+		color: #EBCA79;
+		display: block;
+		float: left;
+
+		&:hover {
+			text-decoration: none;
+			color: #fff;
+		}
+	}
+}
+
+// Grids
+.grids {
+	@include AU-space( padding-top, 0.75unit );
+	@include AU-space( padding-bottom, 0.75unit );
+	background: $AU-colordark-foreground-text;
+	text-align: center;
+
+	span {
+		display: block;
+		font-size: 12px;
+		font-size: 0.75rem;
+		background: $AU-colordark-foreground-action;
+	}
+}
+
+
+// Animation
+.animate-example {
+	@include AU-space( margin-top, 1unit );
+	background-color: hotpink;
+	background-color: rebeccapurple; // Not supported by IE
+}
+
+
+// Core typography
+.fontgrid {
+	.col-xs-4 {
+		@include AU-space( margin-bottom, 1unit );
+	}
+
+	p {
+		@include AU-space( padding, 0.5unit 0 0.25unit );
+		@include AU-space( margin, 1unit 0 2unit );
+		font-weight: bold;
+	}
+
+	.col-xs-4 div {
+		@include AU-space( margin-bottom, 0.25unit );
+		background-color: $AU-color-background-shade;
+		overflow: hidden;
+	}
+
+	.fontgrid-xxxl { @include AU-fontgrid( xxxl ); }
+	.fontgrid-xxl { @include AU-fontgrid( xxl ); }
+	.fontgrid-xl { @include AU-fontgrid( xl ); }
+	.fontgrid-lg { @include AU-fontgrid( lg ); }
+	.fontgrid-md { @include AU-fontgrid( md ); }
+	.fontgrid-sm { @include AU-fontgrid( sm ); }
+	.fontgrid-xs { @include AU-fontgrid( xs ); }
+
+	.fontgrid--nospace {
+		.fontgrid-xxxl { @include AU-fontgrid( xxxl, nospace ); }
+		.fontgrid-xxl { @include AU-fontgrid( xxl, nospace ); }
+		.fontgrid-xl { @include AU-fontgrid( xl, nospace ); }
+		.fontgrid-lg { @include AU-fontgrid( lg, nospace ); }
+		.fontgrid-md { @include AU-fontgrid( md, nospace ); }
+		.fontgrid-sm { @include AU-fontgrid( sm, nospace ); }
+		.fontgrid-xs { @include AU-fontgrid( xs, nospace ); }
+	}
+
+	.fontgrid--heading {
+		.fontgrid-xxxl { @include AU-fontgrid( xxxl, heading ); }
+		.fontgrid-xxl { @include AU-fontgrid( xxl, heading ); }
+		.fontgrid-xl { @include AU-fontgrid( xl, heading ); }
+		.fontgrid-lg { @include AU-fontgrid( lg, heading ); }
+		.fontgrid-md { @include AU-fontgrid( md, heading ); }
+		.fontgrid-sm { @include AU-fontgrid( sm, heading ); }
+		.fontgrid-xs { @include AU-fontgrid( xs, heading ); }
+	}
+}
+
+
+.spacing {
+	.au-progress-indicator__link:before,
+	.au-accordion__title:before,
+	.au-accordion__body-wrapper:before {
+		@include AU-space( border, solid rgba(255,0,0,0.15) 1unit );
+		content: " ";
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background-image: url('/assets/img/spacing-example-grid.png');
+	}
+	.au-accordion__body-wrapper {
+		position: relative;
+	}
+
+	.au-progress-indicator__link:before {
+		@include AU-space( border-left, solid rgba(255,0,0,0.15) 0.5unit );
+	}
+
+	.au-progress-indicator__link:after {
+		@include AU-space( border-right, solid rgba(255,0,0,0.15) 0.75rem );
+	}
+}
+
+
+
+// Core color palettes
+.palette {
+	@include AU-clearfix();
+
+	.palette__bg {
+		background: $AU-color-background;
+
+		p {
+			@include AU-space( padding, 0.5unit 0 );
+			margin: 0;
+		}
+
+		hr {
+			@include AU-space( border-width, 0.25unit );
+			@include AU-space( margin-top, 0.75unit );
+		}
+
+		.palette__text--focus {
+			border-color: $AU-color-foreground-focus;
+		}
+
+		.palette__text--muted {
+			color: $AU-color-foreground-muted;
+		}
+
+		&.palette__bg--shade {
+			background: $AU-color-background-shade;
+		}
+		&.palette__bg--alt {
+			background: $AU-color-background-alt;
+		}
+		&.palette__bg--alt-shade {
+			background: $AU-color-background-alt-shade;
+		}
+	}
+
+	&.palette--dark {
+		.palette__bg {
+			background: $AU-colordark-background;
+
+			&.palette__bg--shade {
+				background: $AU-colordark-background-shade;
+			}
+			&.palette__bg--alt {
+				background: $AU-colordark-background-alt;
+			}
+			&.palette__bg--alt-shade {
+				background: $AU-colordark-background-alt-shade;
+			}
+		}
+
+		.palette__text--focus {
+			border-color: $AU-colordark-foreground-focus;
+		}
+
+		.palette__text--muted {
+			color: $AU-colordark-foreground-muted;
+		}
+	}
+}

@@ -1,0 +1,19 @@
+layout: component/page
+pagetitle: Control input discussion
+
+header:
+  - /_shared/header.md
+
+component_nav:
+  - /components/_tabs.md
+
+sidebar:
+  - /components/search.md
+  - /components/sidebar.md
+
+main:
+  - community-intro.md
+  - github-intro.md
+
+footer:
+  - /_shared/footer.md

@@ -1,0 +1,206 @@
+// Unique Status Colors
+$color-status--published-text:            $AU-color-foreground-action;
+$color-status--published-gradient-start:  #BD952D;
+$color-status--published-gradient-end:    #FFE9B2;
+
+$color-status--inprogress-text:           #4e6062;
+$color-status--inprogress-gradient-start: #88A2A7;
+$color-status--inprogress-gradient-end:   #DAE3E5;
+
+$color-status--suggestion-text:           #ad4b27;
+$color-status--suggestion-gradient-start: #cd8466;
+$color-status--suggestion-gradient-end:   #fdd0bd;
+
+
+// component-status box
+.componentheader__statusbox {
+	@include AU-space( margin-top, 2unit );
+
+	@include AU-media( md ){
+		margin-top: 0;
+	}
+}
+
+.component-status__definition {
+	@include AU-clearfix();
+}
+
+.au-body .component-status {
+	@include AU-fontgrid( xs );
+	@include AU-clearfix();
+
+	a {
+		// Links in this component are quieter
+		color: $AU-color-foreground-text;
+	}
+
+	dt,
+	dd {
+		display: block;
+		float: left;
+		vertical-align: top;
+		margin: 0; // Reset .AU-body
+		@include AU-space( margin-bottom, 0.75unit );
+		@include AU-clearfix();
+	}
+
+	dt {
+		width: 35%;
+		margin-right: 5%;
+	}
+
+	dd {
+		width: 60%;
+		border-left: none; // Rest au-body
+		padding: 0; // Rest au-body
+	}
+
+	.avatar {
+		@include AU-space( margin-right, 0.25unit );
+	}
+
+	.component-status__title {
+		@include AU-clearfix();
+		@include AU-space( padding-bottom, 1unit );
+		position: relative;
+		display: block;
+		font-weight: bold;
+		color: $color-status--published-text;
+
+		&:after {
+			@include AU-space( height, 1.5unit );
+			@include AU-space( width, 1.5unit );
+			content: "";
+			display: block;
+			float: right;
+			background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 24 24">' +
+				'<path fill="none" d="M0 0h24v24H0z"/>' +
+				'<path fill=" #{ $color-status--published-gradient-start } " d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>' +
+			'</svg>');
+			background-position: center right;
+			background-repeat: no-repeat;
+			background-size: 100%;
+		}
+
+		&:before {
+			@include AU-space( height, 0.25unit );
+			@include AU-space( margin-top, 1unit );
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			content: "";
+			display: block;
+			background: $color-status--published-gradient-start;
+			background: linear-gradient(to right, $color-status--published-gradient-start 0%, $color-status--published-gradient-end 100%);
+		}
+	}
+}
+
+.componentheader__headling {
+	.version {
+		display: inline-block;
+		@include AU-fontgrid( md );
+		@include AU-space( margin-left, 1unit );
+		color: $color-status--published-text;
+	}
+}
+
+.component-status {
+	&.component-status--inprogress  {
+		.component-status__title {
+			color: $color-status--inprogress-text;
+
+			&:before {
+				background: $color-status--inprogress-gradient-start;
+				background: linear-gradient(to right, $color-status--inprogress-gradient-start 0%, $color-status--inprogress-gradient-end 100%);
+			}
+
+			&:after {
+				background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792">' +
+					'<path fill=" #{ $color-status--inprogress-gradient-start } " d="M704 384q-153 0-286 52T206.5 577 128 768q0 82 53 158t149 132l97 56-35 84q34-20 62-39l44-31 53 10q78 14 153 14 153 0 286-52t211.5-141 78.5-191-78.5-191T990 436t-286-52zm0-128q191 0 353.5 68.5T1314 511t94 257-94 257-256.5 186.5T704 1280q-86 0-176-16-124 88-278 128-36 9-86 16h-3q-11 0-20.5-8t-11.5-21q-1-3-1-6.5t.5-6.5 2-6l2.5-5 3.5-5.5 4-5 4.5-5 4-4.5q5-6 23-25t26-29.5 22.5-29 25-38.5 20.5-44q-124-72-195-177T0 768q0-139 94-257t256.5-186.5T704 256zm822 1169q10 24 20.5 44t25 38.5 22.5 29 26 29.5 23 25q1 1 4 4.5t4.5 5 4 5 3.5 5.5l2.5 5 2 6 .5 6.5-1 6.5q-3 14-13 22t-22 7q-50-7-86-16-154-40-278-128-90 16-176 16-271 0-472-132 58 4 88 4 161 0 309-45t264-129q125-92 192-212t67-254q0-77-23-152 129 71 204 178t75 230q0 120-71 224.5T1526 1425z"/>' +
+				'</svg>');
+			}
+		}
+	}
+	&.component-status--suggestion  {
+		.component-status__title {
+			color: $color-status--suggestion-text;
+
+			&:before {
+				background: $color-status--suggestion-gradient-start;
+				background: linear-gradient(to right, $color-status--suggestion-gradient-start 0%, $color-status--suggestion-gradient-end 100%);
+			}
+
+			&:after {
+				background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill=" #{ $color-status--suggestion-text } "><defs><path id="a" d="M0 0h24v24H0V0z"/></defs><clipPath id="b"><use overflow="visible" xlink:href="#a"/></clipPath><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z" clip-path="url(#b)"/></svg>');
+			}
+		}
+	}
+}
+
+
+.component-status__definition__list {
+	@include AU-fontgrid( xs );
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	&.is-small {
+		& > .component-status__definition__list__item:nth-child( n + 5 ) {
+			display: none;
+		}
+	}
+
+	& > li {
+		display: inline-block;
+
+		&:after {
+			content: ',';
+		}
+	}
+
+	& > li:last-child:after,
+	&.component-status__definition__list--images > li:after {
+		display: none;
+	}
+
+	& > li:first-child {
+		margin-left: 0;
+	}
+}
+
+
+
+.component-status__definition__list__more {
+	appearance: none;
+	background: transparent;
+	border: none;
+	box-shadow: none;
+	cursor: pointer;
+	text-decoration: underline;
+
+	&.is-hidden {
+		display: none;
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	@include AU-focus();
+}
+
+// Reset AU-body
+.au-body {
+	.component-status__definition__list > li {
+		margin-top: 0;
+		margin-left: 0;
+	}
+	.component-status__definition__list {
+		padding-top: 0;
+	}
+	.component-status__definition {
+		@include AU-space( margin-top, 1.25unit );
+	}
+}

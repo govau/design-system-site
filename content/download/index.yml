@@ -1,0 +1,12 @@
+pagetitle: Download
+
+header:
+  - /_shared/header.md
+
+main:
+  # - intro-designers.md
+  - intro-developers.md
+  - custom-build.md
+
+footer:
+  - /_shared/footer.md

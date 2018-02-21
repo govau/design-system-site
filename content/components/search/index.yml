@@ -1,0 +1,18 @@
+layout: component/page
+pagetitle: Search
+headernav: false
+showheader: false
+searchvalue: '##searchstring##'
+
+header:
+  - /_shared/header.md
+
+sidebar:
+  - /components/search.md
+  - /components/sidebar.md
+
+main:
+  - search.md
+
+footer:
+  - /_shared/footer.md

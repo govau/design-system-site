@@ -1,26 +1,252 @@
 <svg xmlns="http://www.w3.org/2000/svg">
 	<symbol id="star" viewBox="0 0 24 24">
-		<title>The Commonwealth Star</title>
 		<polyline id="Shape" fill="currentColor" fill-rule="evenodd" points="14 2 11.553 8.36 5.178 6.356 8.5 12.286 3 16.146 9.59 17.181 9.103 24 14 19.36 18.895
 			24 18.412 17.18 25 16.148 19.5 12.286 22.822 6.358 16.448 8.36"></polyline>
-		<rect id="Rectangle" fill-opacity="0" fill="#D8D8D8" x="0.494356952" y="0.416408297" width="27.0112861" height="26.1671834"></rect>
+		<rect id="Rectangle" fill-opacity="0" fill="#D8D8D8" x="0.494356952" y="0.416408297"></rect>
 	</symbol>
-	<symbol id="govau_logo" viewBox="0 0 223.46 41.46">
-		<title>Gov au logo</title>
-		<path
-			fill="#fff"
-			d="M21.95 34.17a16.9 16.9 0 0 0 6.43-1.22v-6.14h-2.72c-1.22 0-2.27 0-2.78-.6s-.52-1.61-.52-3.16v-3.07h14.73v17.08c-5.45 3.89-12.87 5-19.42 4.08A20.62
-			20.62 0 0 1 2.6 30.91a22 22 0 0 1-.77-19.18A19.89 19.89 0 0 1 16.03.64C23.26-.93 31.81.29 37.38 5.48c-1 1.44-1.85 3-3 4.36-1.7 2.07-3.81.35-5.62-.54a15.1
-			15.1 0 0 0-6.32-1.5c-4.38-.14-8.51 1.49-10.78 5.41a16.38 16.38 0 0 0-1 12.92 11.59 11.59 0 0 0 11.26
-			8zm53.71-13.44c0-5.16-2.11-10.46-7.34-12.25-4.83-1.66-11-.46-13.9 4-2.78 4.2-2.91 10.57-.83 15.08 2.29 5 7.68 6.77 12.83 5.92 6.34-1 9.23-6.75
-			9.23-12.72m9.85 0a20.31 20.31 0 0 1-14.11 19.55c-8.29 2.63-18.4.68-24.18-6.08a21.49 21.49 0 0 1-1.73-24.67C50.23 1.91 59.66-1.05 68.27.38a20.94 20.94 0 0
-			1 12.22 6.58 20.7 20.7 0 0 1 5 13.74M87.79.04h7.74a3.51 3.51 0 0 1 2.05.56 3.07 3.07 0 0 1 1.14 1.47s9.84 27 10.16 28.25c.26-1.22 9.93-28.25
-			9.93-28.25a3.14 3.14 0 0 1 1.11-1.4 3.25 3.25 0 0 1 2-.62h7.8l-16.57 40.46h-8.71L87.81.04z"/>
-		<path fill="transparent" d="M156.1 25.03h11.33s-5.34-15.55-5.66-16.66c-.31 1.13-5.67 16.66-5.67 16.66z"/>
-		<path fill="#44c2ef" d="M223.35 14.73V.04h-9.62v16.32c0 6.5 1.16 16.73-8.2 16.73s-8.2-10.25-8.2-16.75V.04h-9.62v17.09c0 6.75-.55 13.9 4.75 19.07 7.95 7.75
-			23.94 6.13 29.06-4.07 2.61-5.19 1.83-11.71 1.83-17.4zM156.84.04l-16 40.47h7.51a3.26 3.26 0 0 0 2-.62 3.15 3.15 0 0 0 1.11-1.4l2.45-7.06h15.77l2.45
-			7.06a3 3 0 0 0 1.13 1.46 3.51 3.51 0 0 0 2.06.57h7.45L166.69.04h-9.85zm-.74 25s5.36-15.53 5.67-16.66c.32 1.11 5.66 16.66 5.66 16.66H156.1zm26.64
-			15.46h.01-.01"/>
-		<circle fill="#44c2ef" cx="130.73" cy="35.82" r="4.83"/>
- 	</symbol>
+	<symbol id="gold" viewBox="0 0 102 128">
+		<path fill="url(#GOLD-gradient)" fill-rule="evenodd" d="M7.955 120.047h86.09V7.953H7.955v112.094zM0 128h102V0H0v128zm40.642-60.462h-9.595l4.862-14.739 4.733
+			14.739zM18.19 81.69h8.188l2.54-7.699h13.796l2.472 7.7h8.49L40.42 44.235h-8.858L18.19 81.69zM52.343 99.85c.463.61.694 1.48.694 2.61 0 1.131-.231
+			2.003-.694 2.616-.463.614-1.126.92-1.989.92-.863 0-1.527-.306-1.994-.92-.465-.613-.699-1.485-.699-2.616 0-1.13.234-2 .7-2.61.466-.61 1.13-.915
+			1.993-.915.863 0 1.526.304 1.989.915zm-6.318-1.621c-.953 1.193-1.43 2.604-1.43 4.231 0 1.656.477 3.072 1.43 4.248.953 1.176 2.4 1.764 4.34
+			1.764s3.386-.588 4.34-1.764c.952-1.176 1.429-2.592 1.429-4.248 0-1.627-.477-3.038-1.43-4.231s-2.399-1.79-4.34-1.79c-1.94 0-3.386.597-4.34
+			1.79zm19-15.926c1.419 0 2.656-.187 3.713-.56 1.056-.372 2.15-1.066
+			3.282-2.083.372-.322.693-.695.963-1.118.27-.424.44-.678.507-.762v3.912h7.04V53.993h-7.345v15.07c0 1.778-.236 3.21-.708 4.294-.91 1.999-2.597
+			2.998-5.059 2.998-1.922 0-3.211-.703-3.869-2.109-.37-.796-.556-1.982-.556-3.558V53.993h-7.422v16.695c0 3.169.397 5.566 1.191 7.192 1.42 2.947 4.174
+			4.422 8.263 4.422zm-6.716 25.786h2.952V92.824H58.31v15.264zm12.543-3.066c-.435.622-1.07.932-1.906.932-.835
+			0-1.459-.312-1.87-.937-.41-.625-.616-1.458-.616-2.5 0-.967.202-1.776.606-2.429.404-.652 1.038-.979 1.9-.979.567 0 1.064.18 1.492.539.698.594 1.046 1.58
+			1.046 2.962 0 .987-.217 1.791-.652 2.412zm.57-6.793a3.587 3.587 0 0 0-1.295-1.247c-.532-.3-1.14-.451-1.823-.451-1.484 0-2.67.552-3.558 1.657-.887
+			1.104-1.33 2.62-1.33 4.546 0 1.67.45 3.04 1.35 4.106.902 1.066 2.012 1.6 3.33 1.6.802 0 1.472-.152 2.01-.456.539-.303 1.019-.79
+			1.44-1.46v1.564h2.869V92.845h-2.993v5.384zm-35.299 4.215h3.532c-.159.995-.58 1.8-1.264 2.414-.683.614-1.56.92-2.63.92-1.091
+			0-2.065-.389-2.921-1.168-.857-.778-1.285-2.104-1.285-3.978 0-1.86.395-3.255 1.186-4.181.791-.927 1.8-1.39 3.03-1.39a4.35 4.35 0 0 1 1.75.341c.94.414
+			1.53 1.143 1.772 2.185h3.138c-.173-1.47-.848-2.697-2.025-3.681-1.178-.984-2.736-1.476-4.677-1.476-2.237 0-4.036.746-5.396 2.236-1.36 1.49-2.04
+			3.47-2.04 5.94 0 2.442.673 4.367 2.02 5.774 1.29 1.4 2.948 2.101 4.97 2.101 1.23 0 2.266-.257 3.108-.773.49-.295 1.043-.804 1.658-1.526l.32
+			1.906h2.113v-8.191h-6.359v2.547zM21.467 28.639l-.493 6.75 4.971-4.594 4.972 4.593-.493-6.75 6.692-1.021-5.585-3.824 3.372-5.867-6.472
+			1.981-2.486-6.295-2.485 6.295-6.472-1.981 3.372 5.867-5.585 3.824 6.692 1.022z"/>
+	</symbol>
+	<symbol id="accordion" viewBox="0 0 72 72">
+		<path d="M8,8V24H64V8ZM57.9,20.18l-3.78-3.77-3.77,3.77-2.3-2.29,6.07-6.07,6.07,6.07Z" fill="#ce9436" />
+		<path d="M8,64H64V48H8ZM50.55,51.9l3.7,3.7,3.69-3.7,2.25,2.25-5.94,6-6-6Z" fill="#ccc" />
+		<polygon points="60 24 60 39.85 12.05 39.85 12.05 24 8.05 24 8.05 43.85 64 43.85 64 24 60 24" fill="#ccc" />
+	</symbol>
+	<symbol id="animate" viewBox="0 0 72 72">
+		<polygon points="38 10 36 10 36 36 62 36 62 34 38 34 38 10" fill="#ce9436" />
+		<rect x="40" y="8" width="24" height="24" fill="#ce9436" />
+		<polygon points="32 54 18 54 18 40 18 40 18 28 16 28 16 40 8 40 8 64 32 64 32 56 44 56 44 54 32 54 32 54" fill="#ccc" />
+		<polygon points="22 26 20 26 20 52 46 52 46 50 22 50 22 26" fill="#ccc" />
+		<polygon points="48 38 48 38 34 38 34 24 34 24 34 12 32 12 32 24 24 24 24 48 48 48 48 40 60 40 60 38 48 38" fill="#ccc" />
+	</symbol>
+	<symbol id="body" viewBox="0 0 72 72">
+		<path d="M8,8V64H64V8ZM58,58H14V14H58Z" fill="#ccc" />
+		<rect x="18" y="26" width="36" height="4" fill="#ce9436" />
+		<rect x="18" y="18" width="36" height="4" fill="#ce9436" />
+		<rect x="18" y="50" width="30" height="4" fill="#ce9436" />
+		<rect x="18" y="34" width="30" height="4" fill="#ce9436" />
+		<rect x="18" y="42" width="36" height="4" fill="#ce9436" />
+	</symbol>
+	<symbol id="breadcrumbs" viewBox="0 0 72 72">
+		<rect x="33" y="-17" width="6" height="56" transform="translate(25 47) rotate(-90)" fill="#ccc" />
+		<rect x="33" y="9" width="6" height="56" transform="translate(-1 73) rotate(-90)" fill="#ccc" />
+		<rect x="33" y="21" width="6" height="56" transform="translate(-13 85) rotate(-90)" fill="#ccc" />
+		<rect x="31" y="20" width="10" height="8" fill="#ce9436" />
+		<rect x="8" y="20" width="10" height="8" fill="#ce9436" />
+		<rect x="54" y="20" width="10" height="8" fill="#ce9436" />
+		<polygon points="22.95 19 21.05 20.89 24.16 24 21.05 27.11 22.95 29 27.95 24 22.95 19" fill="#ccc" />
+		<polygon points="46 19 44.11 20.89 47.22 24 44.11 27.11 46 29 51 24 46 19" fill="#ccc" />
+		<rect x="33" y="33" width="6" height="56" transform="translate(-25 97) rotate(-90)" fill="#ccc" />
+	</symbol>
+	<symbol id="buttons" viewBox="0 0 72 72">
+		<polygon points="55 51.5 49 48 49 55 55 51.5" fill="#ce9436" />
+		<path d="M58,8H14a6,6,0,0,0-6,6V27a6,6,0,0,0,6,6H58a6,6,0,0,0,6-6V14A6,6,0,0,0,58,8Zm0,19H14V14H58Z" fill="#ccc" />
+		<path d="M58.05,39H45a6,6,0,0,0-6,6V58a6,6,0,0,0,6,6h13.1a6,6,0,0,0,6-6V45A6,6,0,0,0,58.05,39Zm0,19H45V45H58Z" fill="#ce9436" />
+		<path d="M45,64a6,6,0,0,1-6-6H14.08V45H39a6,6,0,0,1,6-6H14a6,6,0,0,0-6,6V58H8a6,6,0,0,0,6,6H45Z" fill="#ccc" />
+	</symbol>
+	<symbol id="callout" viewBox="0 0 72 72">
+		<rect x="18" y="26" width="30" height="4" fill="#ccc" />
+		<rect x="18" y="18" width="36" height="4" fill="#ccc" />
+		<rect x="18" y="50" width="36" height="4" fill="#ccc" />
+		<path d="M18,34V46H54V34Zm4,6H20V36h2Zm4,0H24V36h2Z" fill="#ce9436" />
+		<path d="M8,8V64H64V8ZM58,58H14V14H58Z" fill="#ccc" />
+	</symbol>
+	<symbol id="control-input" viewBox="0 0 72 72">
+		<path d="M8,8V34H34V8ZM29.67,29.67H12.33V12.33H29.67Z" fill="#ccc" />
+		<path d="M8,38V64H34V38ZM29.67,59.67H12.33V42.33H29.67Z" fill="#ccc" />
+		<path d="M51,8A13,13,0,1,0,64,21,13,13,0,0,0,51,8Zm0,21.67A8.67,8.67,0,1,1,59.67,21,8.67,8.67,0,0,1,51,29.67Z" fill="#ccc" />
+		<circle cx="51" cy="21" r="5.42" fill="#ce9436" />
+		<polygon points="27.58 48.65 24.51 45.58 19.82 50.27 17.56 48.01 14.5 51.08 19.73 56.31 19.82 56.22 19.92 56.31 27.58 48.65" fill="#ce9436" />
+		<path d="M51,38A13,13,0,1,0,64,51,13,13,0,0,0,51,38Zm0,21.67A8.67,8.67,0,1,1,59.67,51,8.67,8.67,0,0,1,51,59.67Z" fill="#ccc" />
+	</symbol>
+	<symbol id="core" viewBox="0 0 72 72">
+		<path d="M8,8V64H64V8ZM58,58H14V14H58Z" fill="#ccc" />
+		<path d="M24,24H48V48H24Z" fill="none" />
+		<path d="M47.68,43.64,37.75,33.7a7,7,0,0,0-1.64-7.53A7.23,7.23,0,0,0,28,24.75l4.7,4.69-3.28,3.28L24.65,28a7.13,7.13,0,0,0,9,9.71l9.94,9.94a1.06,1.06,0,0,0,
+			1.52,0l2.52-2.51A1,1,0,0,0,47.68,43.64Z" fill="#ce9436" />
+	</symbol>
+	<symbol id="cta-link" viewBox="0 0 72 72">
+		<path d="M24,24H48V48H24Z" fill="none" />
+		<path d="M23.83,24h24V48h-24Z" fill="none" />
+		<path d="M8,8V64H64V8ZM58,58H14V14H58Z" fill="#ccc" />
+		<rect x="18" y="26" width="36" height="4" fill="#ccc" />
+		<rect x="18" y="18" width="36" height="4" fill="#ccc" />
+		<rect x="18" y="46" width="26" height="4" fill="#ce9436" />
+		<rect x="18" y="34" width="30" height="4" fill="#ccc" />
+		<polygon points="48 42 45.73 44.27 49.47 48 45.73 51.73 48 54 54 48 48 42" fill="#ce9436" />
+	</symbol>
+	<symbol id="direction-links" viewBox="0 0 72 72">
+		<rect x="8" y="8" width="6" height="56" fill="#ccc" />
+		<rect x="58" y="8" width="6" height="56" fill="#ccc" />
+		<rect x="33" y="-17" width="6" height="56" transform="translate(25 47) rotate(-90)" fill="#ccc" />
+		<rect x="33" y="33" width="6" height="56" transform="translate(-25 97) rotate(-90)" fill="#ccc" />
+		<rect x="18" y="18" width="36" height="4" fill="#ccc" />
+		<rect x="18" y="34" width="30" height="4" fill="#ccc" />
+		<rect x="48.26" y="45.62" width="3.21" height="8.49" transform="translate(49.87 -20.66) rotate(45)" fill="#ce9436" />
+		<rect x="48.26" y="41.89" width="3.21" height="8.49" transform="translate(-18.02 48.77) rotate(-45)" fill="#ce9436" />
+		<path d="M8,8V64H64V8ZM58,58H14V14H58Z" fill="#ccc" />
+		<rect x="18" y="26" width="30" height="4" fill="#ccc" />
+		<rect x="18" y="18" width="36" height="4" fill="#ccc" />
+		<rect x="18" y="34" width="36" height="4" fill="#ccc" />
+		<polygon points="47.5 41.5 45.23 43.77 47.47 46 38 46 38 50 47.47 50 45.23 52.23 47.5 54.5 54 48 47.5 41.5" fill="#ce9436" />
+		<polygon points="26.77 43.77 24.5 41.5 18 48 24.5 54.5 26.77 52.23 24.54 50 34 50 34 46 24.54 46 26.77 43.77" fill="#ce9436" />
+	</symbol>
+	<symbol id="footer" viewBox="0 0 72 72">
+		<path d="M24,24H48V48H24Z" fill="none" />
+		<path d="M23.83,24h24V48h-24Z" fill="none" />
+		<rect x="8" y="28" width="16" height="16" fill="#ccc" />
+		<rect x="28" y="28" width="36" height="16" fill="#ccc" />
+		<rect x="8" y="48" width="56" height="16" fill="#ce9436" />
+		<path d="M24,24H48V48H24Z" fill="none" />
+		<path d="M23.83,24h24V48h-24Z" fill="none" />
+		<path d="M24,24H48V48H24Z" fill="none" />
+		<path d="M23.83,24h24V48h-24Z" fill="none" />
+		<path d="M24,24H48V48H24Z" fill="none" />
+		<path d="M8,8V24H64V8Zm8,12a4,4,0,1,1,4-4A4,4,0,0,1,16,20Z" fill="#ccc" />
+	</symbol>
+	<symbol id="grid-12" viewBox="0 0 72 72">
+		<rect x="30" y="8" width="32" height="16" fill="#ccc" />
+		<rect x="30" y="28" width="32" height="36" fill="#ccc" />
+		<rect x="10" y="8" width="12" height="56" fill="#ccc" />
+		<rect x="22" y="8" width="2" height="56" fill="#ce9436" />
+		<rect x="8" y="8" width="2" height="56" fill="#ce9436" />
+		<rect x="42" y="8" width="2" height="56" fill="#ce9436" />
+		<rect x="28" y="8" width="2" height="56" fill="#ce9436" />
+		<rect x="62" y="8" width="2" height="56" fill="#ce9436" />
+		<rect x="48" y="8" width="2" height="56" fill="#ce9436" />
+	</symbol>
+	<symbol id="header" viewBox="0 0 72 72">
+		<rect x="8" y="28" width="16" height="16" fill="#ccc" />
+		<rect x="28" y="28" width="36" height="16" fill="#ccc" />
+		<rect x="8" y="48" width="56" height="16" fill="#ccc" />
+		<path d="M8,8V24H64V8Zm8,12a4,4,0,1,1,4-4A4,4,0,0,1,16,20Z" fill="#ce9436" />
+	</symbol>
+	<symbol id="headings" viewBox="0 0 72 72">
+		<path d="M8,8V64H64V8ZM58,58H14V14H58Z" fill="#ccc" />
+		<rect x="18" y="50" width="36" height="4" fill="#ccc" />
+		<rect x="18" y="34" width="36" height="4" fill="#ccc" />
+		<rect x="18" y="42" width="30" height="4" fill="#ccc" />
+		<rect x="18" y="25" width="36" height="5" fill="#ce9436" />
+		<rect x="18" y="18" width="36" height="5" fill="#ce9436" />
+	</symbol>
+	<symbol id="inpage-nav" viewBox="0 0 72 72">
+		<path d="M8,8V64H64V8ZM58,58H14V14H58Z" fill="#ccc" />
+		<rect x="18" y="24" width="16" height="2" fill="#ce9436" />
+		<rect x="18" y="28" width="16" height="2" fill="#ce9436" />
+		<rect x="18" y="32" width="16" height="2" fill="#ce9436" />
+		<rect x="18" y="36" width="16" height="2" fill="#ce9436" />
+		<rect x="18" y="18" width="16" height="4" fill="#ce9436" />
+		<rect x="18" y="50" width="30" height="4" fill="#ccc" />
+		<rect x="18" y="42" width="36" height="4" fill="#ccc" />
+		<rect x="38" y="34" width="16" height="4" fill="#ccc" />
+		<rect x="38" y="26" width="10" height="4" fill="#ccc" />
+		<rect x="38" y="18" width="16" height="4" fill="#ccc" />
+	</symbol>
+	<symbol id="keyword-list" viewBox="0 0 72 72">
+		<rect x="18" y="50" width="30" height="4" fill="#ccc" />
+		<rect x="18" y="44" width="12" height="4" fill="#ce9436" />
+		<rect x="18" y="24" width="30" height="4" fill="#ccc" />
+		<rect x="18" y="18" width="12" height="4" fill="#ce9436" />
+		<rect x="18" y="37" width="36" height="4" fill="#ccc" />
+		<rect x="18" y="31" width="12" height="4" fill="#ce9436" />
+		<path d="M8,8V64H64V8ZM58,58H14V14H58Z" fill="#ccc" />
+	</symbol>
+	<symbol id="link-list" viewBox="0 0 72 72">
+		<rect x="8" y="33" width="16" height="6" fill="#ce9436" />
+		<rect x="28" y="33" width="16" height="6" fill="#ce9436" />
+		<rect x="48" y="33" width="16" height="6" fill="#ce9436" />
+		<rect x="33" y="-17" width="6" height="56" transform="translate(25 47) rotate(-90)" fill="#ccc" />
+		<rect x="25" y="41" width="6" height="40" transform="translate(-33 89) rotate(-90)" fill="#ccc" />
+		<rect x="33" y="21" width="6" height="56" transform="translate(-13 85) rotate(-90)" fill="#ccc" />
+		<rect x="25" y="4" width="6" height="40" transform="translate(4 52) rotate(-90)" fill="#ccc" />
+	</symbol>
+	<symbol id="page-alerts" viewBox="0 0 72 72">
+		<rect x="8" y="28" width="16" height="16" fill="#ccc" />
+		<rect x="8" y="48" width="56" height="16" fill="#ccc" />
+		<path d="M8,8V24H64V8Zm8,12a4,4,0,1,1,4-4A4,4,0,0,1,16,20Z" fill="#ccc" />
+		<path d="M28,28V44H64V28ZM41.38,40,46,32l4.62,8Z" fill="#ce9436" />
+	</symbol>
+	<symbol id="progress-indicator" viewBox="0 0 72 72">
+		<rect x="24" y="12.97" width="40" height="6" fill="#ccc" />
+		<circle cx="14" cy="56" r="5" fill="#ce9436" />
+		<rect x="24" y="33" width="40" height="6" fill="#ccc" />
+		<polygon points="22.07 33.2 19.01 30.14 13.32 35.82 10.28 32.78 7.22 35.85 13.23 41.86 13.32 41.77 13.42 41.86 22.07 33.2" fill="#ce9436" />
+		<rect x="24" y="53" width="40" height="6" fill="#ccc" />
+		<polygon points="22.07 13.06 19.01 10 13.32 15.68 10.28 12.64 7.22 15.71 13.23 21.72 13.32 21.63 13.42 21.72 22.07 13.06" fill="#ce9436" />
+	</symbol>
+	<symbol id="responsive-media" viewBox="0 0 72 72">
+		<path d="M12,8V33.43L22.76,24v8H49.48V24L60,33.22V8ZM50,22a6,6,0,1,1,6-6A6,6,0,0,1,50,22Z" fill="#ccc" />
+		<path d="M49.48,40H22.76v8L12,38.57V64H60V38.78L49.48,48ZM56,57.33V60.1H16V54.73L28.38,44,39.46,55.78l8.42-6.32Z" fill="#ccc" />
+		<polygon points="60.12 36 51 28 51 34 21.12 34 21.12 28 12 36 21.12 44 21.12 38 51 38 51 44 60.12 36" fill="#ce9436" />
+		<rect x="8" y="8" width="2" height="56" fill="#ce9436" />
+		<rect x="62" y="8" width="2" height="56" fill="#ce9436" />
+	</symbol>
+	<symbol id="select" viewBox="0 0 72 72">
+		<polygon points="51 23 54 18 48 18 51 23" fill="#ce9436" />
+		<rect x="18" y="50" width="36" height="4" fill="#ccc" />
+		<rect x="18" y="43" width="36" height="4" fill="#ccc" />
+		<rect x="18" y="36" width="36" height="4" fill="#ccc" />
+		<rect x="18" y="19" width="26" height="3" fill="#ce9436" />
+		<path d="M58,8H13.91a6,6,0,0,0-6,6V27a6,6,0,0,0,6,6H58a6,6,0,0,0,6-6V14A6,6,0,0,0,58,8Zm0,19H14V14H58Z" fill="#ce9436" />
+		<path d="M64,58V27h0a6,6,0,0,1-6,6V58H14V33h-.09A6,6,0,0,1,8,28V58a6,6,0,0,0,6,6H58.09a6,6,0,0,0,6-6Z" fill="#ccc" />
+	</symbol>
+	<symbol id="skip-link" viewBox="0 0 72 72">
+		<rect x="30" y="26" width="24" height="4" fill="#ccc" />
+		<rect x="18" y="17" width="16" height="5" fill="#ce9436" />
+		<rect x="30" y="34" width="18" height="4" fill="#ccc" />
+		<rect x="18" y="42" width="4" height="4" fill="#ccc" />
+		<rect x="18" y="34" width="4" height="4" fill="#ccc" />
+		<rect x="18" y="26" width="4" height="4" fill="#ccc" />
+		<rect x="30" y="42" width="24" height="4" fill="#ccc" />
+		<polygon points="28 48 28 24 24 24 24 48 19.14 48 26 56 32.86 48 28 48" fill="#ce9436" />
+		<polygon points="18.57 50 18 50 18 54 22 54 18.57 50" fill="#ccc" />
+		<polygon points="33.43 50 30 54 48 54 48 50 33.43 50" fill="#ccc" />
+		<path d="M8,8V64H64V8ZM58,58H14V14H58Z" fill="#ccc" />
+	</symbol>
+	<symbol id="tags" viewBox="0 0 72 72">
+		<rect x="33" y="33" width="6" height="56" transform="translate(-25 97) rotate(-90)" fill="#ccc" />
+		<rect x="33" y="33" width="6" height="56" transform="translate(-25 97) rotate(-90)" fill="#ccc" />
+		<rect x="18" y="26" width="36" height="4" fill="#ccc" />
+		<rect x="18" y="18" width="6" height="4" fill="#ce9436" />
+		<rect x="27" y="18" width="9" height="4" fill="#ce9436" />
+		<rect x="46" y="18" width="8" height="4" fill="#ce9436" />
+		<rect x="39" y="18" width="4" height="4" fill="#ce9436" />
+		<rect x="18" y="50" width="30" height="4" fill="#ccc" />
+		<rect x="18" y="34" width="30" height="4" fill="#ccc" />
+		<rect x="18" y="42" width="36" height="4" fill="#ccc" />
+		<rect x="33" y="33" width="6" height="56" transform="translate(-25 97) rotate(-90)" fill="#ccc" />
+		<path d="M8,8V64H64V8ZM58,58H14V14H58Z" fill="#ccc" />
+	</symbol>
+	<symbol id="text-inputs" viewBox="0 0 72 72">
+		<polygon points="55 51.5 49 48 49 55 55 51.5" fill="#ccc" />
+		<path d="M58.05,39H13.91a6,6,0,0,0-6,6V58a6,6,0,0,0,6,6H58.05a6,6,0,0,0,6-6V45A6,6,0,0,0,58.05,39ZM14,45H39V58H14ZM45,58V45H58V58Z" fill="#ccc" />
+		<path d="M21.46,16.5,24.26,24H22.55L22,22.32h-2.8L18.59,24H16.94l2.83-7.49Zm.09,4.59-.94-2.74h0l-1,2.74Z" fill="#ce9436" />
+		<path d="M26.24,16.5v2.73h0a1.6,1.6,0,0,1,.74-.62,2.5,2.5,0,0,1,1-.19,2.14,2.14,0,0,1,.81.17,2.16,2.16,0,0,1,.72.51A2.83,2.83,0,0,1,30,20a4.23,4.23,0,0,1,0,
+			2.57,2.77,2.77,0,0,1-.52.88,2.2,2.2,0,0,1-.72.52,2.13,2.13,0,0,1-.81.16,3,3,0,0,1-1.07-.18,1.39,1.39,0,0,1-.71-.64h0V24H24.75V16.5Zm2.41,4.12a1.6,1.6,0,0,
+			0-.23-.55,1.21,1.21,0,0,0-.39-.39,1.23,1.23,0,0,0-1.14,0,1.35,1.35,0,0,0-.4.39,1.82,1.82,0,0,0-.23.55,2.84,2.84,0,0,0-.07.66,2.76,2.76,0,0,0,.07.65,1.88,
+			1.88,0,0,0,.23.56,1.21,1.21,0,0,0,.4.38,1.23,1.23,0,0,0,1.14,0,1.09,1.09,0,0,0,.39-.38,1.65,1.65,0,0,0,.23-.56,2.75,2.75,0,0,0,.08-.65A2.84,2.84,0,0,0,
+			28.65,20.62Z" fill="#ce9436" />
+		<path d="M33.75,19.54a1.11,1.11,0,0,0-.6.16,1.31,1.31,0,0,0-.39.42,2,2,0,0,0-.22.57,3.23,3.23,0,0,0-.06.61,3.05,3.05,0,0,0,.06.6,2.25,2.25,0,0,0,.21.55,
+			1.15,1.15,0,0,0,.38.41,1.1,1.1,0,0,0,.59.15,1.07,1.07,0,0,0,.82-.3,1.27,1.27,0,0,0,.36-.8h1.44a2.49,2.49,0,0,1-.84,1.65,2.68,2.68,0,0,1-1.77.56,2.9,2.9,
+			0,0,1-1.12-.2,2.5,2.5,0,0,1-1.42-1.45,3.08,3.08,0,0,1-.2-1.11,3.42,3.42,0,0,1,.19-1.17,2.66,2.66,0,0,1,.54-.94,2.4,2.4,0,0,1,.87-.61,2.87,2.87,0,0,1,
+			1.17-.22,3.59,3.59,0,0,1,.93.12,2.71,2.71,0,0,1,.8.39,2.07,2.07,0,0,1,.57.64,2,2,0,0,1,.25.91H34.85A1,1,0,0,0,33.75,19.54Z" fill="#ce9436" />
+		<path d="M58,8H13.91a6,6,0,0,0-6,6V27a6,6,0,0,0,6,6H58a6,6,0,0,0,6-6V14A6,6,0,0,0,58,8Zm0,19H14V14H58Z" fill="#ce9436" />
+	</symbol>
 </svg>

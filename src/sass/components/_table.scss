@@ -1,0 +1,35 @@
+// Table. Just a typical one.
+
+.au-table,
+.au-body table {
+	width: 100%;
+	border-collapse: collapse;
+
+	th, td {
+		@include AU-space( padding, 1unit );
+	}
+
+	th {
+		text-align: left;
+		@include AU-space( border-bottom, 0.25unit solid $AU-color-background-alt-shade );
+	}
+
+	td {
+		border-bottom: solid 1px $AU-color-background-alt-shade;
+	}
+}
+
+.au-responsive-table__caption {
+	display: table-caption;
+	text-align: left;
+	@include AU-space( margin-bottom, 1unit );
+}
+
+.au-responsive-table__body:nth-child( even ) {
+	background: $AU-color-background-shade;
+}
+
+.au-responsive-table {
+	overflow:auto;
+	@include AU-space( margin-top, 1unit );
+}

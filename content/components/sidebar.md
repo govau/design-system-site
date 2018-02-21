@@ -1,0 +1,3 @@
+---
+layout: component/navigation-accordion
+---

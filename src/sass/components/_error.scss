@@ -1,0 +1,29 @@
+// Users
+
+.error {
+	@include AU-space( padding, 2unit 1unit );
+	background-color: $AU-color-background-shade;
+
+	@include AU-media( sm ){
+		@include AU-space( padding, 5unit 4unit );
+		display: flex;
+		align-items: center;
+	}
+}
+
+.error__intro {
+	text-align: center;
+
+	@include AU-media( sm ){
+		text-align: left;
+	}
+}
+
+.error__extra {
+	@include AU-space( margin-top, 2unit );
+	text-align: center;
+
+	@include AU-media( sm ){
+		margin-top: 0;
+	}
+}

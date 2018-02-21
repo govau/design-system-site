@@ -1,0 +1,102 @@
+.navigation {
+	@include AU-clearfix();
+	@include AU-space( padding-bottom, 1unit );
+
+	a {
+		@include AU-fontgrid( sm );
+		@include AU-space( padding, 0.5unit 0 );
+		display: block;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+			text-decoration-skip: ink;
+		}
+	}
+
+	.au-link-list {
+		display: block;
+		padding: 0;
+
+		& + .au-link-list  > li:first-of-type {
+			border-top: 0;
+		}
+	}
+
+	.au-link-list > li {
+		display: block;
+		margin: 0;
+		border-top: 1px solid $AU-color-foreground-border;
+
+		&:last-of-type {
+			border-bottom: 1px solid $AU-color-foreground-border;
+		}
+
+		&.mainmenu--active > a {
+			color: $AU-color-foreground-action;
+			border-color: $AU-color-foreground-action;
+			font-weight: bold;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	&.navigation--dark {
+		.au-link-list > li.mainmenu--active > a {
+			color: $AU-colordark-foreground-text;
+			border-color: $AU-colordark-foreground-text;
+		}
+	}
+
+	@media screen and ( min-width: $nav_breakpoint ) {
+		@include AU-space( padding-top, 2unit );
+		@include AU-space( border-bottom, 0.5unit solid $AU-color-background-shade );
+		padding-bottom: 0;
+
+		.au-link-list--inline {
+			float: left;
+			@include AU-space( margin-bottom, -0.5unit );
+
+			&.mainmenu--right {
+				float: right;
+			}
+
+			& > li {
+				display: inline-block;
+				border-top: 0;
+
+				&:last-of-type {
+					border-bottom: 0;
+				}
+
+				& > a {
+					@include AU-space( padding, 1unit 1unit );
+					@include AU-space( border-bottom, 0.5unit solid $AU-color-background-shade );
+
+					&:focus {
+						position: relative; // fix outline overlap
+					}
+				}
+
+				&.mainmenu--active > a {
+					font-weight: normal;
+				}
+			}
+		}
+
+		&.navigation--dark {
+			border-color: $AU-colordark-foreground-action;
+
+			.au-link-list > li > a {
+				border-color: $AU-colordark-foreground-action;
+			}
+		}
+	}
+}
+
+
+.navigation--component {
+	@include AU-space( margin-top, 2unit );
+}

@@ -1,104 +1,95 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-
-import HeaderGovAU from './header-govau';
-
-
-/**
- * All theme options
- *
- * @type {Object}
- */
-const themes = {
-	light: 'uikit-header--light',
-	dark: 'uikit-header--dark',
-};
+import AUheader            from '../../_uikit/layout/header';
+import AUskipLink          from '../../_uikit/layout/skip-link';
+import React, { Fragment } from 'react';
+import PropTypes           from 'prop-types';
 
 
 /**
  * The header component
- *
- * Use for: thing thing thing
  */
-const Header = ({
-	_ID,
-	_relativeURL,
-	level,
-	hero,
-	theme,
-	title,
-	subline,
-	children
-}) => {
-	const HeadingTag = `h${ level }`;
-
-	return (
-		<header>
-			<HeaderGovAU _ID={ _ID } _relativeURL={ _relativeURL } />
-
-			<div className={`uikit-header${
-				hero
-					? ' uikit-header--hero'
-					: ''
-			}${
-				theme
-					? ` ${ themes[ theme ] }`
-					: ''
-			}`} role="banner">
-				<div className="container">
+const Header = ({ title, mainmenu, header_govau, _relativeURL, _ID, _pages, _body }) => (
+	<div className="header-wrapper">
+		<AUskipLink links={[
+			{
+				link: '#mainmenu',
+				text: 'Skip to navigation',
+			},
+			{
+				link: '#content',
+				text: 'Skip to content',
+			},
+		]} />
+		{ header_govau }
+		<div className={ `header${ _ID === 'index' ? ' header--home' : '' }` }>
+			<div id="focustrap-top"></div>
+			<AUheader dark>
+				<div className="container-fluid">
 					<div className="row">
 						<div className="col-md-12">
-							<HeadingTag className="uikit-header-heading">{ title }</HeadingTag>
 							{
-								subline
-									&& <span className="uikit-header-subline">{ subline }</span>
+								_ID === 'index'
+									? <p className="header__logo--coa">The Australian Government coat of Arms</p>
+									: null
 							}
-							{ children }
+							<div className="header__logo-wrapper">
+								<a href={ _relativeURL( '/', _ID ) } className="header__logo">
+									{
+										_ID === 'index'
+											? null
+											: <p className="header__logo--coa">The Australian Government coat of Arms</p>
+									}
+									<svg role="img" title="GOLD">
+										<title>The Government Open Language for Design logo</title>
+										<defs>
+											<linearGradient id="GOLD-gradient" x1="100%" x2="0%" y1="0%" y2="100%">
+												<stop offset="0%" stopColor="#FFE9B2" stopOpacity="1"/>
+												<stop offset="100%" stopColor="#BD952D"/>
+											</linearGradient>
+										</defs>
+
+										<use xlinkHref={ _relativeURL( '/assets/svg/map.svg#gold', _ID ) }/>
+									</svg>
+
+									<h1 className="header__title au-display-md">{ title }</h1>
+								</a>
+								{ _body }
+							</div>
+
+							<button id="mainmenu-toggle"
+								className="mainmenu-toggle au-btn au-btn--tertiary au-btn--dark au-btn--block icon au-accordion--closed"
+								aria-controls="mainmenu"
+								aria-expanded="false"
+								aria-selected="false"
+								role="tab">Open menu</button>
+						</div>
+					</div>
+				</div>
+			</AUheader>
+			<div
+				aria-hidden="true"
+				id="mainmenu"
+				className="mainmenu au-body au-body--dark au-accordion__body au-accordion--closed">
+				<div className="container-fluid">
+					<div className="row">
+						<div className="col-md-12">
+							{ mainmenu }
 						</div>
 					</div>
 				</div>
 			</div>
-
-		</header>
-	);
-};
+			<div id="overlay" className="overlay"></div>
+			<div id="focustrap-bottom"></div>
+		</div>
+	</div>
+);
 
 Header.propTypes = {
 	/**
-	 * title: Hello world
+	 * title: Government Open Language for Design
 	 */
 	title: PropTypes.node.isRequired,
-
-	/**
-	 * level: 2
-	 */
-	level: PropTypes.oneOf([ 1, 2, 3, 4, 5, 6 ]).isRequired,
-
-	/**
-	 * subline: Potato and tomato having the best time
-	 */
-	subline: PropTypes.node,
-
-	/**
-	 * hero: true
-	 */
-	hero: PropTypes.bool,
-
-	/**
-	 * theme: dark
-	 */
-	theme: PropTypes.oneOf([ 'light', 'dark' ]),
-
-	/**
-	 * children: (text)(1)
-	 */
-	children: PropTypes.node,
 };
 
-
-Header.defaultProps = {
-	level: 1,
-};
-
+Header.defaultProps = {};
 
 export default Header;

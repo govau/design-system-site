@@ -1,0 +1,172 @@
+.header {
+	@include AU-space( border-bottom, 0.5unit solid $AU-colordark-foreground-action );
+	background-color: $AU-colordark-background-alt-shade;
+	background-image: radial-gradient( farthest-corner at 50% 0, $AU-colordark-background 0%, $AU-colordark-background-alt-shade 100%);
+
+	p {
+		color: $AU-colordark-foreground-muted;
+	}
+
+	@media screen and ( min-width: $nav_breakpoint ) {
+		position: relative;
+		z-index: 100;
+		box-shadow: 0 0 5px 0 $AU-color-foreground-border;
+	}
+
+	.au-header.au-header--dark {
+		background: transparent;
+	}
+}
+
+// Remove padding bottom as we have a menu
+.au-header {
+	padding-bottom: 0;
+	position: relative;
+	z-index: 300;
+}
+
+// Home page center alignment
+.header--home .header__logo-wrapper {
+	text-align: center;
+	@include AU-space( margin, 2unit auto 2unit );
+}
+
+// GOLD Logo with title
+.header__logo {
+	@include AU-clearfix();
+	@include AU-focus( 'dark' );
+	display: inline-block;
+	text-decoration: none;
+
+	&:hover {
+		color: $AU-colordark-foreground-text;
+
+		.header__title {
+			text-decoration: underline;
+			text-decoration-skip: ink;
+		}
+	}
+
+	@include AU-focus( 'dark' );
+}
+
+// GOLD SVG
+.header__logo svg {
+	@include AU-space( max-width, 3unit );
+	@include AU-space( margin-right, -3unit );
+	@include AU-space( width, 2.5unit );   // IE11 needs height and width
+	@include AU-space( height, 3.75unit ); // ^^^
+	float: left;
+	display: block;
+	box-shadow: 0px 8px 28px rgba(0,0,0,0.6);
+
+	.header--home & {
+		float: none;
+		margin: 0 auto;
+		@include AU-space( width, 5unit );
+		@include AU-space( max-width, 5unit );
+		@include AU-space( height, 6.25unit );
+	}
+}
+
+// Government Open Language for Design title
+.header__title {
+	@include AU-space( margin-top, 1.5unit );
+	@include AU-space( margin-left, 3.25unit );
+	@include AU-space( max-width, 15unit );
+	text-align: left;
+	display: block;
+	color: $AU-colordark-foreground-text;
+
+	&.au-display-md {
+		font-weight: bold;
+	}
+
+	.header--home & {
+		margin-left: 0;
+		text-align: center;
+	}
+}
+
+// The coat of arms
+.header__logo--coa {
+	@include AU-space( width, 15unit );
+	@include AU-space( height, 4unit );
+	@include AU-space( margin, 0 0 1unit 0 );
+	background-size: 100%;
+	background-position: left center;
+	display: block;
+	text-indent: -999px;
+	overflow: hidden;
+	background-image: url( '/assets/img/header-logo-agov.png' );
+	background-repeat: no-repeat;
+}
+
+
+// Responsive styles
+
+@include AU-media( xs ) {
+	.header__logo svg {
+		@include AU-space( max-width, 4unit );
+		@include AU-space( width, 4unit );   // IE11 needs height and width
+		@include AU-space( height, 5unit );  // ^^^
+
+		.header--home & {
+			@include AU-space( width, 6unit );
+			@include AU-space( max-width, 6unit );
+			@include AU-space( height, 7.5unit );
+		}
+	}
+
+	.header__logo--coa {
+		@include AU-space( max-width, 16unit );
+	}
+
+	.header__title {
+		@include AU-fontgrid( lg, heading );
+		@include AU-space( margin-top, 1.5unit );
+		@include AU-space( margin-left, 5unit );
+		@include AU-space( max-width, 15unit );
+
+		.header--home & {
+			@include AU-space( max-width, 20unit );
+			@include AU-fontgrid( xl, heading );
+			@include AU-space( margin-top, 1unit );
+		}
+	}
+
+	.header--home .header__logo-wrapper {
+		@include AU-space( max-width, 34unit );
+		@include AU-space( margin, 2unit auto 4unit );
+	}
+}
+
+
+@include AU-media( md ) {
+	.header__logo svg {
+		float: left;
+	}
+
+	.header__title {
+		@include AU-space( margin-top, 0.5unit );
+		@include AU-space( margin-left, 4unit );
+		float: left;
+	}
+
+	.header__logo--coa {
+		@include AU-space( width, 10unit );
+		@include AU-space( height, 5unit );
+		@include AU-space( margin-right, 1.5unit );
+		background-size: 85%;
+		border-right: 1px solid #666;
+		float: left;
+		margin-bottom: 0;
+		background-image: url( '/assets/img/header-logo-agov-stack.png' );
+
+		.header--home & {
+			border-right: 0;
+			float: none;
+		}
+	}
+}
+

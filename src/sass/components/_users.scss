@@ -1,0 +1,48 @@
+// Users
+
+.users {
+	@include AU-space( margin-top, 10unit );
+	@include AU-space( padding, 2unit 1unit );
+	background-color: $AU-color-background-shade;
+
+	@include AU-media( sm ){
+		@include AU-space( padding, 5unit 4unit );
+		display: flex;
+		align-items: center;
+	}
+}
+
+.users__intro {
+	text-align: center;
+
+	@include AU-media( sm ){
+		text-align: left;
+	}
+}
+
+.users__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	.user {
+		@include AU-space( margin-top, -0.25unit );
+	}
+
+	.user__wrapper {
+		@include AU-space( border-top, 0.25unit solid $AU-color-background-alt-shade );
+		@include AU-space( border-bottom, 0.25unit solid $AU-color-background-alt-shade );
+
+		img {
+			display: block;
+		}
+	}
+}
+
+.au-body .users__list{
+	@include AU-space( margin-top, 3unit );
+
+	@include AU-media( sm ){
+		margin-top: 0;
+	}
+}

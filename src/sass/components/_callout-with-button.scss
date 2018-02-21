@@ -1,0 +1,27 @@
+.calloutWithButton {
+	@include AU-clearfix(); //not using .row because of it's -margins
+	@include AU-space( margin-top, 2unit );
+	@include AU-space( padding, 2unit );
+	background: $AU-color-background-shade;
+
+	@include AU-media( sm ){
+		display: flex;
+		align-items: center;
+	}
+
+	@include AU-media( lg ){
+		@include AU-space( padding, 4unit );
+	}
+}
+
+.calloutWithButton__text {
+	@include AU-fontgrid( md );
+}
+
+.calloutWithButton__buttons {
+	@include AU-space( margin-top, 1.5unit );
+
+	@include AU-media( sm ){
+		margin-top: 0;
+	}
+}
