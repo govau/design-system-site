@@ -891,7 +891,7 @@ select:
   name: Select
   description: >
     Select provides a means to select a single tem from a collapsible list. Use
-    of select helps to reduce input errors and screen space. It is commonly used
+    of select helps to reduce input errors and screen space. It's commonly used
     to help users enter a value into a form field.
   metatags:
     - TODO
