@@ -16,7 +16,7 @@ code:
         </footer>
       </div>
   - React: |
-      import AUfooter, { AUfooterNav, AUfooterEnd } from './footer';
+      import AUfooter, { AUfooterNav, AUfooterEnd } from '@gov.au/footer';
 
       <AUfooter>
         <AUfooterNav>

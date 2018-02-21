@@ -11,7 +11,7 @@ code:
         <li>baz</li>
       </ul>
   - React: |
-      import AUtags from './tags.js';
+      import AUtags from '@gov.au/tags';
 
       <AUtags tags={[
         {

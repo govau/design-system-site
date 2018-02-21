@@ -9,7 +9,7 @@ code:
         <p>Alert Content</p>
       </div>
   - React: |
-      import AUpageAlert from './page-alerts';
+      import AUpageAlert from '@gov.au/page-alerts';
 
       <AUpageAlert as='success'>
         <h3>Alert title</h3>

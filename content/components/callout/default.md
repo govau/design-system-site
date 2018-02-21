@@ -8,11 +8,11 @@ code:
         A callout.
       </p>
   - React: |
-      import { Callout } from './callout';
+      import { AUcallout } from '@gov.au/callout';
 
-      <Callout description="description for first callout">
+      <AUcallout description="description for first callout">
         A callout.
-      </Callout>
+      </AUcallout>
 ---
 
 Use callout to notify and alert users of important snippets of information.

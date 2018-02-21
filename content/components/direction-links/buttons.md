@@ -6,7 +6,7 @@ code:
   - HTML: |
       <button class="au-direction-link">Next</button>
   - React: |
-      import AUdirectionLink from './direction-links';
+      import AUdirectionLink from '@gov.au/direction-links';
 
       <AUdirectionLink text="Next" />
 ---

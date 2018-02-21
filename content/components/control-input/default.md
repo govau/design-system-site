@@ -13,7 +13,7 @@ code:
         <span class="au-control-input__text">Tablet</span>
       </label>
   - React: |
-      import { AUcheckbox } from './control-input';
+      import { AUcheckbox } from '@gov.au/control-input';
 
       <AUcheckbox label="Phone" name="checkbox-ex" />
       <AUcheckbox label="Tablet" name="checkbox-ex" checked />

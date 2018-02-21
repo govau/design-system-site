@@ -5,7 +5,7 @@ layout: section
 ## React Usage
 
 ```jsx
-import { AUcheckbox, AUradio } from './control-input';
+import { AUcheckbox, AUradio } from '@gov.au/control-input';
 
 <AUradio label="Yes" name="has_email" value="yes" />
 <AUradio label="No" name="has_email" value="no" />

@@ -24,7 +24,7 @@ code:
       </h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
   - React: |
-      import { AUinpageNavLinks, AUinpageNavSection } from './inpage-nav.js';
+      import { AUinpageNavLinks, AUinpageNavSection } from '@gov.au/inpage-nav';
 
       <AUinpageNavLinks sections={[
         {

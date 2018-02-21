@@ -10,7 +10,7 @@ code:
   - React: |
       import AUbutton from '@gov.au/buttons';
 
-      <AUbutton secondary>
+      <AUbutton as='secondary'>
         Secondary button
       </AUbutton>
 ---

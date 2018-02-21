@@ -9,7 +9,7 @@ code:
       <a class="au-direction-link au-direction-link--up" href="#">Top</a>
       <a class="au-direction-link au-direction-link--down" href="#">Skip to footer</a>
   - React: |
-      import AUdirectionLinks from './direction-links';
+      import AUdirectionLink from '@gov.au/direction-links';
 
       <AUdirectionLink link="#url" text="Back" direction="left" />
       <AUdirectionLink link="#url" text="Next" />

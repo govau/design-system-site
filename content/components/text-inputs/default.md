@@ -4,13 +4,13 @@ example: examples/example-default
 headline: Default
 code:
   - HTML: |
-      <label for="textin-a1">label text</label>
-      <input class="au-text-input" name="textin-a1" id="textin-a1" type="text" value="value">
+      <label for="text-input">label text</label>
+      <input class="au-text-input" name="text-input" id="text-input" type="text" value="value">
   - React: |
-      import AUtextInput from './text-inputs';
+      import AUtextInput from '@gov.au/text-inputs';
 
-      <label htmlFor="textin-a1" >label text</label>
-      <AUtextInput id="textin-a1" />
+      <label htmlFor="text-input" >label text</label>
+      <AUtextInput id="text-input" />
 ---
 
 The default text inputs do not have a width applied to them.

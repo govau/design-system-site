@@ -1,4 +1,4 @@
-import { AUcheckbox, AUradio } from '../../_uikit/layout/control-input.js';
+import { AUcheckbox, AUradio } from '../../_uikit/layout/control-input';
 import GetData from './../getData';
 import Code from './../code';
 

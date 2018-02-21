@@ -5,7 +5,7 @@ layout: section
 ## React Usage
 
 ```jsx
-import AUkeywordList from './keyword-list';
+import AUkeywordList from '@gov.au/keyword-list';
 
 <AUkeywordList
   repeatedName='Department of'

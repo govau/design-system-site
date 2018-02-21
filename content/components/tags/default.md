@@ -11,7 +11,7 @@ code:
           <dd><a href="#">baz</a></dd>
       </dl>
   - React: |
-      import AUtags from './tags.js';
+      import AUtags from '@gov.au/tags';
 
       <AUtags tags={[
         {

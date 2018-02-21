@@ -5,7 +5,7 @@ layout: section
 ## React Usage
 
 ```jsx
-import AUTODO from './TODO';
+import AUTODO from '@gov.au/TODO';
 
 Get from https://github.com/govau/uikit
 ```

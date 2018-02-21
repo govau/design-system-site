@@ -4,13 +4,13 @@ example: examples/example-block
 headline: Block text inputs
 code:
   - HTML: |
-      <label for="textin-b1">label text</label>
-      <input class="au-text-input au-text-input--block" name="textin-b1" id="textin-b1" type="text" value="value">
+      <label for="text-input-block">label text</label>
+      <input class="au-text-input au-text-input--block" name="text-input-block" id="text-input-block" type="text" value="value">
   - React: |
-      import AUtextInput from './text-inputs';
+      import AUtextInput from '@gov.au/text-inputs';
 
-      <label htmlFor="textin-b1">label text</label>
-      <AUtextInput id="textin-b1" block />
+      <label htmlFor="text-input-block">label text</label>
+      <AUtextInput id="text-input-block" block />
 ---
 
 The 'block' text inputs use an `.au-text-input--block` class to make them fill the available space.

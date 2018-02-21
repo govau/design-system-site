@@ -6,8 +6,8 @@ layout: section
 
 | Name       | Type    | Description
 |------------|---------|-----------------------------------------------------------------------------
-| `AUinpageNavLinks`   | constant | The AUinpageNavLinks component
-| `AUinpageNavSection` | constant | The AUinpageNavSection component
+| `AUinpageNavLinks`   | named | The AUinpageNavLinks component
+| `AUinpageNavSection` | named | The AUinpageNavSection component
 
 ### [md]node_modules import
 

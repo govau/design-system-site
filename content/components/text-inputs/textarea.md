@@ -4,15 +4,15 @@ example: examples/example-textarea
 headline: Text area
 code:
   - HTML: |
-      <label for="textc1">label text</label>
-      <textarea class="au-text-input au-text-input--block" name="textc1" id="textc1">
+      <label for="textarea">label text</label>
+      <textarea class="au-text-input au-text-input--block" name="textarea" id="textarea">
         Value
       </textarea>
   - React: |
-      import AUtextInput from './text-inputs';
+      import AUtextInput from '@gov.au/text-inputs';
 
-      <label htmlFor="textin-c1" block >label text</label>
-      <AUtextInput type="textarea" id="textin-c1" block />
+      <label htmlFor="textarea" block >label text</label>
+      <AUtextInput as="textarea" id="textarea" block />
 ---
 
 Also known as a multiline input.

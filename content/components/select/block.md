@@ -12,7 +12,7 @@ code:
         <option value="3">Option 3</option>
       </select>
   - React: |
-      import AUselect from './select';
+      import AUselect from '@gov.au/select';
 
       <AUselect block id="select1block" options={[
         {

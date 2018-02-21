@@ -9,9 +9,7 @@ code:
 
         <div class="au-accordion__body au-accordion--closed" id="accordion-group-1" aria-hidden="false">
           <div class="au-accordion__body-wrapper">
-            <div class="no-a11y-test">
-              Here <a href="#url">is</a> some accordion content
-            </div>
+            Here <a href="#url">is</a> some accordion content
           </div>
         </div>
       </section>
@@ -21,9 +19,7 @@ code:
 
         <div class="au-accordion__body au-accordion--closed" id="accordion-group-2" aria-hidden="false">
           <div class="au-accordion__body-wrapper">
-            <div class="no-a11y-test">
-              Here <a href="#url">is</a> some accordion content
-            </div>
+            Here <a href="#url">is</a> some accordion content
           </div>
         </div>
       </section>

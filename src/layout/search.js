@@ -1,4 +1,4 @@
-import AUtextInput from '../_uikit/layout/text-inputs.js';
+import AUtextInput from '../_uikit/layout/text-inputs';
 import PropTypes from 'prop-types';
 import React from 'react';
 
