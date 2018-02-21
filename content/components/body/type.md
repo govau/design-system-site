@@ -6,7 +6,7 @@ code:
   - HTML: |
       <h2>Heading level 2</h2>
       <p>
-        Example paragraph.<a href="#">Internal link</a> and an <a href="#" rel="external">external link</a>.
+        Example paragraph. <a href="#">Internal link</a> and an <a href="#" rel="external">external link</a>.
       </p>
       <hr />
       <p>

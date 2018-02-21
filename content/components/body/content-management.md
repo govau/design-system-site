@@ -1,7 +1,7 @@
 ---
 layout: component/code-demo
 example: examples/example-content-management
-headline: Content Management
+headline: Content management
 code:
   - HTML: |
       <div class="au-body">
