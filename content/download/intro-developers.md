@@ -1,6 +1,5 @@
 ---
 layout: download/intro
-borderTop: true
 ---
 
 ## Developers
