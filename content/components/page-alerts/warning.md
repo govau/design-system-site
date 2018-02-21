@@ -17,4 +17,4 @@ code:
       </AUpageAlert>
 ---
 
-Warning page alerts can be used to notify the user of something which is time-sensitive and likely to be detrimental if not seen.
+Warning page alerts can be used to notify the user of something which is urgent and likely to be harmful if not seen.
