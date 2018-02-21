@@ -5,11 +5,14 @@ core:
     of how the GOLD design system works, including colour, typography and
     spacing.
   metatags:
-    - TODO
-  tags:
     - color
-    - typography
     - spacing
+    - typography
+    - mixins
+    - variables
+  tags:
+    - typography
+    - accessibility
   related: null
   related-articles:
     - TODO
@@ -47,10 +50,10 @@ accordion:
     Accordions help users see only the content they need. Accordions expand and
     collapse sections of content.
   metatags:
-    - TODO
-  tags:
     - expand
     - collapse
+  tags:
+    - interactive
   related:
     - body
     - animate
@@ -92,12 +95,12 @@ animate:
     Animations add visual effects to page elements and help users understand
     what buttons to click or what to do next in a website.
   metatags:
-    - TODO
-  tags:
     - movement
     - speed
     - transition
     - transform
+  tags:
+    - interactive
   related:
     - accordion
     - core
@@ -131,10 +134,10 @@ body:
     Body is a collection of styles that apply to common content elements, these
     styles help users read page body content more easily.
   metatags:
-    - TODO
-  tags:
     - typography
     - base
+  tags:
+    - typography
   related:
     - headings
   related-articles:
@@ -174,9 +177,9 @@ breadcrumbs:
     Breadcrumbs are a navigational aid that display a user's location on a
     website as a row of links, usually located at the top of the page.
   metatags:
-    - TODO
-  tags:
     - trail
+  tags:
+    - interactive
     - navigation
   related:
     - link-list
@@ -243,10 +246,10 @@ buttons:
     - active: 7
     - something: something
   metatags:
-    - TODO
+    - submit
   tags:
-    - inputs
-    - links
+    - forms
+    - interactive
   related:
     - cta-link
     - text-inputs
@@ -267,11 +270,11 @@ cta-link:
     provoke an immediate response using verbs such as 'call now' or 'find out
     more'.
   metatags:
-    - TODO
-  tags:
-    - links
     - call to action
     - cta
+  tags:
+    - interactive
+    - navigation
   related:
     - body
     - direction-links
@@ -315,9 +318,9 @@ callout:
     used as a visual clue to draw the eye to the text. They are used to help
     direct a user's attention to important pieces of information.
   metatags:
-    - TODO
-  tags:
     - notification
+    - alert
+  tags:
     - alert
   related:
     - body
@@ -358,11 +361,11 @@ control-input:
     Control inputs help users input one or more selections from multiple
     options. Our control inputs consist of checkboxes and radio buttons.
   metatags:
-    - TODO
-  tags:
     - checkbox
     - radio
-    - form
+  tags:
+    - forms
+    - interactive
   related:
     - text-inputs
     - select
@@ -403,10 +406,11 @@ direction-links:
     Direction links are accompanied by arrows to help users move quickly to
     other parts of the page or through a process.
   metatags:
-    - TODO
-  tags:
     - next
     - previous
+    - back to top
+  tags:
+    - interactive
   related:
     - body
     - cta-link
@@ -451,7 +455,8 @@ footer:
     contact information, links to other pages within the website, and email and
     social media links.
   metatags:
-    - TODO
+    - page end
+    - bottom
   tags:
     - structure
   related:
@@ -495,12 +500,10 @@ grid-12:
     more easily, and uses a column structure that is both responsive and
     scrollable.
   metatags:
-    - TODO
-  tags:
-    - grid
-    - spacing
-    - alignment
     - 12 col
+    - grid
+  tags:
+    - structure
   related: null
   related-articles:
     - TODO
@@ -534,10 +537,9 @@ header:
     appear at the top of a page, above the main body text. They are usually
     styled as level (H1) headings.
   metatags:
-    - TODO
-  tags:
     - crest
     - logo
+  tags:
     - structure
   related:
     - footer
@@ -578,7 +580,13 @@ headings:
     Headings help to structure content on a page using relative visual
     prominence.
   metatags:
-    - TODO
+    - typography
+    - h1
+    - h2
+    - h3
+    - h4
+    - h5
+    - h6
   tags:
     - typography
   related:
@@ -620,10 +628,10 @@ inpage-nav:
     Inpage nav links helps users scan the contents of a page and navigate to
     different sections of the page.
   metatags:
-    - TODO
+    - anchors
   tags:
     - navigation
-    - anchors
+    - interactive
   related:
     - direction-links
   related-articles:
@@ -664,11 +672,10 @@ keyword-list:
     The keyword list style helps to emphasise and draw the user's eye to phrases
     that are repeated in a list.
   metatags:
-    - TODO
-  tags:
-    - department
     - key
     - value
+  tags:
+    - typography
   related: null
   related-articles:
     - TODO
@@ -708,11 +715,11 @@ link-list:
     The link list style is a simple list of vertical or horizontal links used
     for site navigation. It is used to order information for users.
   metatags:
-    - TODO
+    - inline list
+    - horizontal list
   tags:
     - navigation
-    - inline
-    - horizontal
+    - interactive
   related:
     - direction-links
     - inpage-nav
@@ -756,11 +763,11 @@ page-alerts:
     user's task. Typically they appear at the top of a page following a submit
     action.
   metatags:
-    - TODO
-  tags:
     - warning
     - error
     - status
+    - alert
+  tags:
     - alert
   related: null
   related-articles:
@@ -802,12 +809,11 @@ progress-indicator:
     understand their current context at any given time and be assured that they
     are progressing through the system.
   metatags:
-    - TODO
-  tags:
-    - lists
     - status
     - indicator
     - progress
+  tags:
+    - interactive
   related:
     - link-list
   related-articles:
@@ -849,11 +855,10 @@ responsive-media:
     and slideshow dimensions and aspect ratios for various viewports and widths;
     that is, small screens, large screens and anything in between.
   metatags:
-    - TODO
-  tags:
-    - responsive
     - video
     - image
+  tags:
+    - interactive
   related:
     - grid-12
   related-articles:
@@ -894,9 +899,11 @@ select:
     of select helps to reduce input errors and screen space. It's commonly used
     to help users enter a value into a form field.
   metatags:
-    - TODO
+    - dropdown
+    - picker
   tags:
-    - form
+    - forms
+    - interactive
   related:
     - control-input
   related-articles:
@@ -937,10 +944,11 @@ skip-link:
     are detected by screen readers and help users quickly jump to and over
     content on the page.
   metatags:
-    - TODO
+    - anchor
   tags:
     - accessibility
-    - anchor
+    - navigation
+    - interactive
   related:
     - inpage-nav
   related-articles:
@@ -981,10 +989,10 @@ tags:
     They are added to a web page, an asset or other content to help users search
     for and find related content quickly and easily.
   metatags:
-    - TODO
-  tags:
     - related
     - badges
+  tags:
+    - interactive
   related:
     - link-list
   related-articles:
@@ -1025,9 +1033,11 @@ text-inputs:
     enter text data in a structured format. Text inputs should be accompanied by
     labels.
   metatags:
-    - TODO
+    - textarea
+    - input
   tags:
-    - form
+    - forms
+    - interactive
   related:
     - select
     - control-input
@@ -1066,10 +1076,11 @@ cards:
   name: Cards
   description: Cards group related content together.
   metatags:
-    - TODO
-  tags:
-    - action
     - box
+    - shadow
+  tags:
+    - interactive
+    - grouping
   related:
     - cta-link
     - text-inputs
@@ -1097,11 +1108,11 @@ table:
   name: Table
   description: Used to display tabular data.
   metatags:
-    - TODO
-  tags:
     - data
     - row
     - column
+  tags:
+    - grouping
   related:
     - body
   related-articles:
@@ -1126,11 +1137,12 @@ navigation:
   name: Navigation
   description: A list of links that can be used to access different sections of the website
   metatags:
-    - TODO
-  tags:
     - mobile menu
     - nav
     - links
+  tags:
+    - navigation
+    - interactive
   related:
     - link-list
   related-articles:
