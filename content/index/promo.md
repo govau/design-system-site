@@ -11,7 +11,7 @@ tiles:
     imgurl: assets/img/artwork-about-components.png
     imgalt: Components used in multiple ways
     url: /components
-    text: Are our collection of interface elements, the components can be used and improved by any team to help kickstart the design and development process or even build production-ready interfaces.
+    text: Components can be used and extended by anyone to help kickstart the design and development process or even build production-ready interfaces.
 
 
   - title: Templates
