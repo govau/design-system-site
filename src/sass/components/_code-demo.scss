@@ -57,8 +57,12 @@
 
 .code-demo__example--screenreader {
 	@include AU-space( padding, 3unit );
+	@include AU-fontgrid( sm );
 	position: relative;
-	text-align: center;
+
+	p {
+		@include AU-space( margin-top, 1unit );
+	}
 
 	&:before,
 	&:after {
@@ -115,4 +119,3 @@
 .code-demo__text {
 	@include AU-space( margin-top, 1unit );
 }
-
