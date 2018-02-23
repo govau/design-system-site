@@ -1,6 +1,6 @@
 .header {
 	@include AU-space( border-bottom, 0.5unit solid $AU-colordark-foreground-action );
-	background-color: $AU-colordark-background-alt-shade;
+	background-color: $AU-colordark-background-alt;
 	background-image: radial-gradient( farthest-corner at 50% 0, $AU-colordark-background 0%, $AU-colordark-background-alt-shade 100%);
 
 	p {

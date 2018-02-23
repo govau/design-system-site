@@ -231,7 +231,7 @@ buttons:
 
     Buttons use labels and sometimes icons to communicate the action that will
     occur when the user touches them.
-  version: 1.0.0    # <-- auto generated, don't change
+  version: 1.0.1    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   contributors:    # <-- auto generated, don't change
