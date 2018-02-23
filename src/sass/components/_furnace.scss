@@ -1,4 +1,5 @@
-.furnace__title {
+.au-body .furnace__title {
+	@include AU-space( margin-top, 2unit );
 	@include AU-space( padding-bottom, 1.5unit );
 	@include AU-space( margin-bottom, 1.5unit );
 	@include AU-space( border-bottom, solid 0.25unit $AU-color-background-shade );
