@@ -4,7 +4,7 @@
 		width: 100%;
 		border-radius: $AU-border-radius 0 0 $AU-border-radius;
 		border-right: none;
-		appearance: none; // Safari applying rounded borders
+		-webkit-appearance: none; // Safari applying rounded borders
 
 		&::placeholder {
 			color: $AU-color-foreground-muted;
