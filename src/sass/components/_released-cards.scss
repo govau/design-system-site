@@ -5,6 +5,11 @@
 	.au-card__image {
 		background: $AU-color-background-shade;
 		@include AU-space( padding, 1.5unit 40%);
+
+		svg {
+			@include AU-space( width, 4unit );
+			@include AU-space( height, 4unit );
+		}
 	}
 
 	.au-card__title {

@@ -10,6 +10,7 @@ core:
     - typography
     - mixins
     - variables
+    - functions
   tags:
     - typography
     - accessibility
@@ -50,6 +51,8 @@ accordion:
     Accordions help users see only the content they need. Accordions expand and
     collapse sections of content.
   metatags:
+    - show
+    - hide
     - expand
     - collapse
   tags:
@@ -95,6 +98,7 @@ animate:
     Animations add visual effects to page elements and help users understand
     what buttons to click or what to do next in a website.
   metatags:
+    - animation
     - movement
     - speed
     - transition
@@ -134,6 +138,8 @@ body:
     Body is a collection of styles that apply to common content elements, these
     styles help users read page body content more easily.
   metatags:
+    - tags
+    - no classes
     - typography
     - base
   tags:
@@ -177,6 +183,8 @@ breadcrumbs:
     Breadcrumbs are a navigational aid that display a user's location on a
     website as a row of links, usually located at the top of the page.
   metatags:
+    - previous page
+    - next page
     - trail
   tags:
     - interactive
@@ -246,6 +254,8 @@ buttons:
     - active: 7
     - something: something
   metatags:
+    - links
+    - cta
     - submit
   tags:
     - forms
@@ -270,6 +280,7 @@ cta-link:
     provoke an immediate response using verbs such as 'call now' or 'find out
     more'.
   metatags:
+    - buttons
     - call to action
     - cta
   tags:
@@ -318,8 +329,9 @@ callout:
     used as a visual clue to draw the eye to the text. They are used to help
     direct a user's attention to important pieces of information.
   metatags:
+    - error
+    - success
     - notification
-    - alert
   tags:
     - alert
   related:
@@ -361,8 +373,10 @@ control-input:
     Control inputs help users input one or more selections from multiple
     options. Our control inputs consist of checkboxes and radio buttons.
   metatags:
+    - checkboxes
     - checkbox
     - radio
+    - radios
   tags:
     - forms
     - interactive
@@ -500,6 +514,7 @@ grid-12:
     more easily, and uses a column structure that is both responsive and
     scrollable.
   metatags:
+    - bootstrap
     - 12 col
     - grid
     - layout
@@ -538,6 +553,8 @@ header:
     appear at the top of a page, above the main body text. They are usually
     styled as level (H1) headings.
   metatags:
+    - banner
+    - hero
     - crest
     - logo
   tags:
@@ -582,6 +599,7 @@ headings:
     prominence.
   metatags:
     - typography
+    - headline
     - h1
     - h2
     - h3
@@ -629,6 +647,9 @@ inpage-nav:
     Inpage nav links helps users scan the contents of a page and navigate to
     different sections of the page.
   metatags:
+    - inpage
+    - to this section
+    - share
     - anchors
   tags:
     - navigation
@@ -673,6 +694,7 @@ keyword-list:
     The keyword list style helps to emphasise and draw the user's eye to phrases
     that are repeated in a list.
   metatags:
+    - departments
     - key
     - value
   tags:
@@ -764,6 +786,7 @@ page-alerts:
     user's task. Typically they appear at the top of a page following a submit
     action.
   metatags:
+    - success
     - warning
     - error
     - status
@@ -810,6 +833,9 @@ progress-indicator:
     understand their current context at any given time and be assured that they
     are progressing through the system.
   metatags:
+    - TODO
+    - done
+    - in progress
     - status
     - indicator
     - progress
@@ -856,6 +882,8 @@ responsive-media:
     and slideshow dimensions and aspect ratios for various viewports and widths;
     that is, small screens, large screens and anything in between.
   metatags:
+    - ration
+    - black bars
     - video
     - image
   tags:
@@ -900,6 +928,7 @@ select:
     of select helps to reduce input errors and screen space. It's commonly used
     to help users enter a value into a form field.
   metatags:
+    - choice
     - dropdown
     - picker
   tags:
@@ -945,6 +974,8 @@ skip-link:
     are detected by screen readers and help users quickly jump to and over
     content on the page.
   metatags:
+    - a11y
+    - skip to content
     - anchor
   tags:
     - accessibility
@@ -992,6 +1023,7 @@ tags:
   metatags:
     - related
     - badges
+    - badge
   tags:
     - interactive
   related:
@@ -1034,6 +1066,7 @@ text-inputs:
     enter text data in a structured format. Text inputs should be accompanied by
     labels.
   metatags:
+    - text
     - textarea
     - input
   tags:
@@ -1109,6 +1142,7 @@ table:
   name: Table
   description: Used to display tabular data.
   metatags:
+    - tabular
     - data
     - row
     - column

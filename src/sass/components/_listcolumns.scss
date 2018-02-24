@@ -5,6 +5,7 @@
 
 	> div {
 		@include AU-space( margin-top, 3unit );
+		display: block;
 	}
 }
 

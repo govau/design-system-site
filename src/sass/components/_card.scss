@@ -123,15 +123,15 @@ a.au-card {
 	}
 
 	&.au-card-list--matchheight {
-		display:flex;
+		display: flex;
 		flex-wrap: wrap;
 
 		li {
-			display:flex;
+			display: block;
 		}
 
 		.au-card {
-			display: flex;
+			display: block;
 			flex-direction: column;
 		}
 
