@@ -154,11 +154,14 @@
 		font-weight: bold;
 	}
 
-	.headergovau__logo__svg {
+	.headergovau__logo__svg,
+	img {
+		display: block;
+		float: left;
 		@include AU-space( width, 0.75unit );
 		@include AU-space( height, 0.75unit );
 		@include AU-space( margin-right, 0.25unit );
 		position: relative;
-		top: 1px;
+		top: -1px;
 	}
 }

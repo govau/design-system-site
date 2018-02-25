@@ -94,12 +94,16 @@
 	@include AU-space( height, 4unit );
 	@include AU-space( margin, 0 0 1unit 0 );
 	background-size: 100%;
-	background-position: left center;
 	display: block;
 	text-indent: -999px;
 	overflow: hidden;
 	background-image: url( '/assets/img/header-logo-agov.png' );
 	background-repeat: no-repeat;
+
+
+	.lt-ie9 & {
+		background-image: url( '/assets/img/header-logo-agov-ie8.png' );
+	}
 }
 
 
@@ -157,8 +161,8 @@
 		@include AU-space( width, 10unit );
 		@include AU-space( height, 5unit );
 		@include AU-space( margin-right, 1.5unit );
-		background-size: 85%;
 		border-right: 1px solid #666;
+		background-size: 85%;
 		float: left;
 		margin-bottom: 0;
 		background-image: url( '/assets/img/header-logo-agov-stack.png' );
@@ -166,6 +170,10 @@
 		.header--home & {
 			border-right: 0;
 			float: none;
+		}
+
+		.lt-ie9 & {
+			background-image: url( '/assets/img/header-logo-agov-stack-ie8.png' );
 		}
 	}
 }
