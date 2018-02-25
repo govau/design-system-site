@@ -21,7 +21,7 @@ const ComponentReleased = ({ cardList, _ID, _body, _parseYaml, _relativeURL }) =
 			rows: [{
 				type: 'svg',
 				title: component.name,
-				svg: _relativeURL( `/assets/svg/map.svg#${ component.ID }`, _ID ),
+				svg: `/assets/svg/map.svg#${ component.ID }`,
 				description: component.description,
 				fullwidth: true,
 			},
