@@ -139,6 +139,17 @@
 		transition: transform 0.25s ease-in;
 	}
 
+	.ie8 &,
+	.lt-ie8 & {
+		&:after {
+			content: ' ▼ ';
+		}
+
+		&.au-accordion--open:after {
+			content: ' ▲ ';
+		}
+	}
+
 	&.au-accordion--closed:after {
 		transform: rotate( -180deg );
 	}
