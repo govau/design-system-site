@@ -16,7 +16,7 @@
 
 // When the overlay is open, lock scrolling
 .overlay--open {
-	height: 100%;
+	// height: 100%; //disabled as it jumps the scroll position #25
 
 	.page-wrapper {
 		overflow:hidden;
