@@ -34,7 +34,7 @@ const Page = ({
 <meta name="twitter:title" content="GOLD">
 <meta name="twitter:description" content="Government open language for design design system">
 <meta name="twitter:name" content="GOLD">
-<meta name="twitter:image" content="https://gold.service.gov.au/assets/favicons/img/gold.png">
+<meta name="twitter:image" content="https://gold.service.gov.au/assets/favicons/gold.jpg">
 <meta property="og:type" content="website">
 <meta property="og:title" content="GOLD">
 <meta property="og:site_name" content="GOLD">
