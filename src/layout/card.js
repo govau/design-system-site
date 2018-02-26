@@ -108,6 +108,7 @@ const AUcardSVG = ({ svg, title, fullwidth, link, href, ...attributesOptions = {
 	return(
 		<ImageContainer { ...attributesOptions } className={ `au-card__image${ fullwidth ? ' au-card__fullwidth' : '' }` }>
 			<svg role="img" title={ title }>
+				<title>{ title }</title>
 				<use xlinkHref={ svg }/>
 			</svg>
 		</ImageContainer>
