@@ -127,16 +127,12 @@ a.au-card {
 		flex-wrap: wrap;
 
 		li {
-			display: block;
+			display: flex;
 		}
 
 		.au-card {
 			display: block;
 			flex-direction: column;
-		}
-
-		.au-card__stretch {
-			flex: 1 0 auto;
 		}
 	}
 }

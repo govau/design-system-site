@@ -139,6 +139,17 @@
 		transition: transform 0.25s ease-in;
 	}
 
+	.ie8 &,
+	.lt-ie8 & {
+		&:after {
+			content: ' ▼ ';
+		}
+
+		&.au-accordion--open:after {
+			content: ' ▲ ';
+		}
+	}
+
 	&.au-accordion--closed:after {
 		transform: rotate( -180deg );
 	}
@@ -154,11 +165,14 @@
 		font-weight: bold;
 	}
 
-	.headergovau__logo__svg {
+	.headergovau__logo__svg,
+	img {
+		display: block;
+		float: left;
 		@include AU-space( width, 0.75unit );
 		@include AU-space( height, 0.75unit );
 		@include AU-space( margin-right, 0.25unit );
 		position: relative;
-		top: 1px;
+		top: -1px;
 	}
 }

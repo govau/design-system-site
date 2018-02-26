@@ -18,8 +18,7 @@ const Promo = ({ tiles, _relativeURL, _ID, _parseMD }) => (
 										tile.imgurl.startsWith('http')
 											? tile.imgurl
 											: _relativeURL( tile.imgurl, _ID )
-									}
-									alt={ tile.imgalt } />
+									} />
 								<h2 className="promo__title">{ tile.title }</h2>
 							</a>
 

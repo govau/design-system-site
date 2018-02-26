@@ -27,6 +27,7 @@ const CodeDemo = ({ headline, example, iframe, code, _body, _ID, _parseMD, _rela
 				<div className="col-sm-6 code-demo__example-wrapper">
 					<div className="code-demo__example">
 						<iframe
+							frameBorder="0"
 							className="code-demo__example__iframe"
 							scrolling="no"
 							src={ iframe ? _relativeURL( `/${ _ID }/${ iframe }/`, _ID ) : _relativeURL( `/${ _ID }/${ example }/`, _ID ) }>

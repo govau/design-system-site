@@ -47,7 +47,7 @@ const Header = ({ title, mainmenu, header_govau, _relativeURL, _ID, _pages, _bod
 											</linearGradient>
 										</defs>
 
-										<use xlinkHref={ _relativeURL( '/assets/svg/map.svg#gold', _ID ) }/>
+										<use xlinkHref="/assets/svg/map.svg#gold" />
 									</svg>
 
 									<h1 className="header__title au-display-md">{ title }</h1>
