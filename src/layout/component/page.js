@@ -4,6 +4,7 @@ import ComponentFooter from './footer';
 
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import GetData from './../getData';
 import Path from 'path';
 import Fs from 'fs';
 
@@ -25,8 +26,14 @@ const ComponentPage = ({
 	sidebar,
 	pagetitle,
 	main,
-	footer
+	footer,
+	module = ''
 }) => {
+
+	const MODULE = GetData({
+		filter: ( key, COMPONENTS ) => key === module,
+		yaml: _parseYaml
+	})[ 0 ];
 
 	const headContent = `
 <meta charset="utf-8">
@@ -46,13 +53,13 @@ const ComponentPage = ({
 <meta name="author" content="GOLD team">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="GOLD">
-<meta name="twitter:description" content="Government open language for design design system">
+<meta name="twitter:description" content="${ module !== '' ? `${ MODULE.description } - ` : '' }Government open language for design - Design system">
 <meta name="twitter:name" content="GOLD">
 <meta name="twitter:image" content="https://gold.service.gov.au/assets/favicons/gold.jpg">
 <meta property="og:type" content="website">
 <meta property="og:title" content="GOLD">
 <meta property="og:site_name" content="GOLD">
-<meta property="og:description" content="Government open language for design design system">
+<meta property="og:description" content="${ module !== '' ? `${ MODULE.description } - ` : '' }Government open language for design - Design system">
 <meta property="og:image" content="https://gold.service.gov.au/assets/favicons/gold.jpg">
 <meta property="og:url" content="https://gold.service.gov.au">
 
