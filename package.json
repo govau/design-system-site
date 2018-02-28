@@ -85,7 +85,7 @@
 		"autoprefixer": "^7.2.3",
 		"cfonts": "^1.1.3",
 		"concat-cli": "^4.0.0",
-		"cuttlebelle": "^1.0.0-alpha.53",
+		"cuttlebelle": "^1.0.0-alpha.56",
 		"express": "^4.16.2",
 		"node-sass": "^4.7.2",
 		"postcss-cli": "^4.1.1",
