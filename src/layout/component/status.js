@@ -104,7 +104,7 @@ const ComponentStatus = ({ module, _ID, _relativeURL, _parseYaml }) => {
 							<Fragment>
 								<dt>Contributors</dt>
 								<dd>
-									<Contributors contributors={ component.contributors } />
+									<Contributors contributors={ component.contributors } _relativeURL={ _relativeURL } _ID={ _ID } />
 								</dd>
 							</Fragment>
 						: null

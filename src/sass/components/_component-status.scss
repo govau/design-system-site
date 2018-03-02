@@ -57,6 +57,7 @@ $color-status--suggestion-gradient-end:   #fdd0bd;
 
 	.avatar {
 		@include AU-space( margin-right, 0.25unit );
+		@include AU-space( margin-bottom, 0.25unit );
 	}
 
 	.component-status__title {

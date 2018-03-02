@@ -22,17 +22,35 @@ core:
   required: true
   contributors:
     - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
+      img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
-    - name: Simon Pascal Klein
-      email: klepas@klepas.org
-      url: 'https://github.com/klepas'
     - name: Trevor Brennan
-      email: t@trevorbrennan.com
+      img: trevor-brennan.jpg
       url: 'https://github.com/TrebBrennan'
     - name: Alex Page
-      email: alex@alexpage.com.au
+      img: alex-page.jpg
       url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.png
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
+    - name: Simon Pascal Klein
+      img: simon-pascal-klein.jpg
+      url: 'https://github.com/klepas'
+    - name: Alexander Sadleir
+      img: alexander-sadleir.jpg
+      url: 'https://github.com/maxious'
+    - name: Julian Fleetwood
+      img: julian-fleetwood.jpg
+      url: 'https://github.com/joolswood'
+    - name: Hannah J. Nicdao
+      img: hannah-j-nicdao.jpg
+      url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
+    - name: Petra Gulicher
+      img: petra-gulicher.jpg
+      url: 'https://github.com/petronbot'
   state: published
   order: 0
   discussions:
@@ -67,17 +85,29 @@ accordion:
   required: false
   contributors:
     - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
+      img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
     - name: Simon Schwartz
-      email: simon.schwartz0@gmail.com
+      img: simon-schwartz.jpg
       url: 'https://github.com/simonschwartz'
     - name: Alex Page
-      email: alex@alexpage.com.au
+      img: alex-page.jpg
       url: 'https://github.com/alex-page'
     - name: Trevor Brennan
-      email: t@trevorbrennan.com
+      img: trevor-brennan.jpg
       url: 'https://github.com/TrebBrennan'
+    - name: Patrick De Young
+      img: patrick-de-young.png
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
+    - name: Alexander Sadleir
+      img: alexander-sadleir.jpg
+      url: 'https://github.com/maxious'
+    - name: Julian Fleetwood
+      img: julian-fleetwood.jpg
+      url: 'https://github.com/joolswood'
   state: published
   order: 10
   discussions:
@@ -115,10 +145,10 @@ animate:
   required: false
   contributors:
     - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
+      img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
     - name: Simon Schwartz
-      email: simon.schwartz0@gmail.com
+      img: simon-schwartz.jpg
       url: 'https://github.com/simonschwartz'
   state: published
   order: 20
@@ -153,17 +183,35 @@ body:
   required: false
   contributors:
     - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
+      img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
-    - name: Simon Pascal Klein
-      email: klepas@klepas.org
-      url: 'https://github.com/klepas'
     - name: Trevor Brennan
-      email: t@trevorbrennan.com
+      img: trevor-brennan.jpg
       url: 'https://github.com/TrebBrennan'
     - name: Alex Page
-      email: alex@alexpage.com.au
+      img: alex-page.jpg
       url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.png
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
+    - name: Simon Pascal Klein
+      img: simon-pascal-klein.jpg
+      url: 'https://github.com/klepas'
+    - name: Alexander Sadleir
+      img: alexander-sadleir.jpg
+      url: 'https://github.com/maxious'
+    - name: Julian Fleetwood
+      img: julian-fleetwood.jpg
+      url: 'https://github.com/joolswood'
+    - name: Hannah J. Nicdao
+      img: hannah-j-nicdao.jpg
+      url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
+    - name: Petra Gulicher
+      img: petra-gulicher.jpg
+      url: 'https://github.com/petronbot'
   state: published
   order: 30
   discussions:
@@ -198,17 +246,35 @@ breadcrumbs:
   required: false
   contributors:
     - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
+      img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
-    - name: Simon Pascal Klein
-      email: klepas@klepas.org
-      url: 'https://github.com/klepas'
     - name: Trevor Brennan
-      email: t@trevorbrennan.com
+      img: trevor-brennan.jpg
       url: 'https://github.com/TrebBrennan'
     - name: Alex Page
-      email: alex@alexpage.com.au
+      img: alex-page.jpg
       url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.png
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
+    - name: Simon Pascal Klein
+      img: simon-pascal-klein.jpg
+      url: 'https://github.com/klepas'
+    - name: Alexander Sadleir
+      img: alexander-sadleir.jpg
+      url: 'https://github.com/maxious'
+    - name: Julian Fleetwood
+      img: julian-fleetwood.jpg
+      url: 'https://github.com/joolswood'
+    - name: Petra Gulicher
+      img: petra-gulicher.jpg
+      url: 'https://github.com/petronbot'
+    - name: Hannah J. Nicdao
+      img: hannah-j-nicdao.jpg
+      url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
   order: 40
   discussions:
@@ -236,17 +302,35 @@ buttons:
     - core
   contributors:
     - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
+      img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
-    - name: Simon Pascal Klein
-      email: klepas@klepas.org
-      url: 'https://github.com/klepas'
     - name: Trevor Brennan
-      email: t@trevorbrennan.com
+      img: trevor-brennan.jpg
       url: 'https://github.com/TrebBrennan'
     - name: Alex Page
-      email: alex@alexpage.com.au
+      img: alex-page.jpg
       url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.png
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
+    - name: Simon Pascal Klein
+      img: simon-pascal-klein.jpg
+      url: 'https://github.com/klepas'
+    - name: Alexander Sadleir
+      img: alexander-sadleir.jpg
+      url: 'https://github.com/maxious'
+    - name: Julian Fleetwood
+      img: julian-fleetwood.jpg
+      url: 'https://github.com/joolswood'
+    - name: Petra Gulicher
+      img: petra-gulicher.jpg
+      url: 'https://github.com/petronbot'
+    - name: Hannah J. Nicdao
+      img: hannah-j-nicdao.jpg
+      url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
   order: 50
   discussions:
@@ -298,17 +382,26 @@ cta-link:
   required: false
   contributors:
     - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
+      img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
-    - name: Simon Pascal Klein
-      email: klepas@klepas.org
-      url: 'https://github.com/klepas'
     - name: Trevor Brennan
-      email: t@trevorbrennan.com
+      img: trevor-brennan.jpg
       url: 'https://github.com/TrebBrennan'
     - name: Alex Page
-      email: alex@alexpage.com.au
+      img: alex-page.jpg
       url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.png
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
+    - name: Simon Pascal Klein
+      img: simon-pascal-klein.jpg
+      url: 'https://github.com/klepas'
+    - name: Julian Fleetwood
+      img: julian-fleetwood.jpg
+      url: 'https://github.com/joolswood'
   state: published
   order: 60
   discussions:
@@ -343,17 +436,26 @@ callout:
   required: false
   contributors:
     - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
+      img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
-    - name: Simon Pascal Klein
-      email: klepas@klepas.org
-      url: 'https://github.com/klepas'
     - name: Trevor Brennan
-      email: t@trevorbrennan.com
+      img: trevor-brennan.jpg
       url: 'https://github.com/TrebBrennan'
     - name: Alex Page
-      email: alex@alexpage.com.au
+      img: alex-page.jpg
       url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.png
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
+    - name: Simon Pascal Klein
+      img: simon-pascal-klein.jpg
+      url: 'https://github.com/klepas'
+    - name: Julian Fleetwood
+      img: julian-fleetwood.jpg
+      url: 'https://github.com/joolswood'
   state: published
   order: 70
   discussions:
@@ -390,17 +492,35 @@ control-input:
   required: false
   contributors:
     - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
+      img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
-    - name: Simon Pascal Klein
-      email: klepas@klepas.org
-      url: 'https://github.com/klepas'
     - name: Trevor Brennan
-      email: t@trevorbrennan.com
+      img: trevor-brennan.jpg
       url: 'https://github.com/TrebBrennan'
     - name: Alex Page
-      email: alex@alexpage.com.au
+      img: alex-page.jpg
       url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.png
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
+    - name: Simon Pascal Klein
+      img: simon-pascal-klein.jpg
+      url: 'https://github.com/klepas'
+    - name: Julian Fleetwood
+      img: julian-fleetwood.jpg
+      url: 'https://github.com/joolswood'
+    - name: Alexander Sadleir
+      img: alexander-sadleir.jpg
+      url: 'https://github.com/maxious'
+    - name: Petra Gulicher
+      img: petra-gulicher.jpg
+      url: 'https://github.com/petronbot'
+    - name: Hannah J. Nicdao
+      img: hannah-j-nicdao.jpg
+      url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
   order: 80
   discussions:
@@ -437,17 +557,35 @@ direction-links:
   required: false
   contributors:
     - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
+      img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
-    - name: Simon Pascal Klein
-      email: klepas@klepas.org
-      url: 'https://github.com/klepas'
     - name: Trevor Brennan
-      email: t@trevorbrennan.com
+      img: trevor-brennan.jpg
       url: 'https://github.com/TrebBrennan'
     - name: Alex Page
-      email: alex@alexpage.com.au
+      img: alex-page.jpg
       url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.png
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
+    - name: Simon Pascal Klein
+      img: simon-pascal-klein.jpg
+      url: 'https://github.com/klepas'
+    - name: Julian Fleetwood
+      img: julian-fleetwood.jpg
+      url: 'https://github.com/joolswood'
+    - name: Alexander Sadleir
+      img: alexander-sadleir.jpg
+      url: 'https://github.com/maxious'
+    - name: Petra Gulicher
+      img: petra-gulicher.jpg
+      url: 'https://github.com/petronbot'
+    - name: Hannah J. Nicdao
+      img: hannah-j-nicdao.jpg
+      url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
   order: 90
   discussions:
@@ -482,17 +620,35 @@ footer:
   required: false
   contributors:
     - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
+      img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
-    - name: Simon Pascal Klein
-      email: klepas@klepas.org
-      url: 'https://github.com/klepas'
     - name: Trevor Brennan
-      email: t@trevorbrennan.com
+      img: trevor-brennan.jpg
       url: 'https://github.com/TrebBrennan'
     - name: Alex Page
-      email: alex@alexpage.com.au
+      img: alex-page.jpg
       url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.png
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
+    - name: Simon Pascal Klein
+      img: simon-pascal-klein.jpg
+      url: 'https://github.com/klepas'
+    - name: Julian Fleetwood
+      img: julian-fleetwood.jpg
+      url: 'https://github.com/joolswood'
+    - name: Alexander Sadleir
+      img: alexander-sadleir.jpg
+      url: 'https://github.com/maxious'
+    - name: Petra Gulicher
+      img: petra-gulicher.jpg
+      url: 'https://github.com/petronbot'
+    - name: Hannah J. Nicdao
+      img: hannah-j-nicdao.jpg
+      url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
   order: 100
   discussions:
@@ -528,11 +684,14 @@ grid-12:
   required: false
   contributors:
     - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
+      img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
     - name: Simon Pascal Klein
-      email: klepas@klepas.org
+      img: simon-pascal-klein.jpg
       url: 'https://github.com/klepas'
+    - name: Julian Fleetwood
+      img: julian-fleetwood.jpg
+      url: 'https://github.com/joolswood'
   state: published
   order: 110
   discussions:
@@ -568,17 +727,32 @@ header:
   required: false
   contributors:
     - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
+      img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
-    - name: Simon Pascal Klein
-      email: klepas@klepas.org
-      url: 'https://github.com/klepas'
     - name: Trevor Brennan
-      email: t@trevorbrennan.com
+      img: trevor-brennan.jpg
       url: 'https://github.com/TrebBrennan'
     - name: Alex Page
-      email: alex@alexpage.com.au
+      img: alex-page.jpg
       url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.png
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
+    - name: Simon Pascal Klein
+      img: simon-pascal-klein.jpg
+      url: 'https://github.com/klepas'
+    - name: Julian Fleetwood
+      img: julian-fleetwood.jpg
+      url: 'https://github.com/joolswood'
+    - name: Petra Gulicher
+      img: petra-gulicher.jpg
+      url: 'https://github.com/petronbot'
+    - name: Hannah J. Nicdao
+      img: hannah-j-nicdao.jpg
+      url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
   order: 120
   discussions:
@@ -617,17 +791,26 @@ headings:
   required: false
   contributors:
     - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
+      img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
-    - name: Simon Pascal Klein
-      email: klepas@klepas.org
-      url: 'https://github.com/klepas'
     - name: Trevor Brennan
-      email: t@trevorbrennan.com
+      img: trevor-brennan.jpg
       url: 'https://github.com/TrebBrennan'
     - name: Alex Page
-      email: alex@alexpage.com.au
+      img: alex-page.jpg
       url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.png
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
+    - name: Simon Pascal Klein
+      img: simon-pascal-klein.jpg
+      url: 'https://github.com/klepas'
+    - name: Julian Fleetwood
+      img: julian-fleetwood.jpg
+      url: 'https://github.com/joolswood'
   state: published
   order: 130
   discussions:
@@ -663,17 +846,35 @@ inpage-nav:
   required: false
   contributors:
     - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
+      img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
-    - name: Simon Pascal Klein
-      email: klepas@klepas.org
-      url: 'https://github.com/klepas'
     - name: Trevor Brennan
-      email: t@trevorbrennan.com
+      img: trevor-brennan.jpg
       url: 'https://github.com/TrebBrennan'
     - name: Alex Page
-      email: alex@alexpage.com.au
+      img: alex-page.jpg
       url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.png
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
+    - name: Simon Pascal Klein
+      img: simon-pascal-klein.jpg
+      url: 'https://github.com/klepas'
+    - name: Julian Fleetwood
+      img: julian-fleetwood.jpg
+      url: 'https://github.com/joolswood'
+    - name: Alexander Sadleir
+      img: alexander-sadleir.jpg
+      url: 'https://github.com/maxious'
+    - name: Petra Gulicher
+      img: petra-gulicher.jpg
+      url: 'https://github.com/petronbot'
+    - name: Hannah J. Nicdao
+      img: hannah-j-nicdao.jpg
+      url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
   order: 140
   discussions:
@@ -707,17 +908,35 @@ keyword-list:
   required: false
   contributors:
     - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
+      img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
-    - name: Simon Pascal Klein
-      email: klepas@klepas.org
-      url: 'https://github.com/klepas'
     - name: Trevor Brennan
-      email: t@trevorbrennan.com
+      img: trevor-brennan.jpg
       url: 'https://github.com/TrebBrennan'
     - name: Alex Page
-      email: alex@alexpage.com.au
+      img: alex-page.jpg
       url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.png
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
+    - name: Simon Pascal Klein
+      img: simon-pascal-klein.jpg
+      url: 'https://github.com/klepas'
+    - name: Julian Fleetwood
+      img: julian-fleetwood.jpg
+      url: 'https://github.com/joolswood'
+    - name: Alexander Sadleir
+      img: alexander-sadleir.jpg
+      url: 'https://github.com/maxious'
+    - name: Petra Gulicher
+      img: petra-gulicher.jpg
+      url: 'https://github.com/petronbot'
+    - name: Hannah J. Nicdao
+      img: hannah-j-nicdao.jpg
+      url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
   order: 150
   discussions:
@@ -753,17 +972,32 @@ link-list:
   required: false
   contributors:
     - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
+      img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
-    - name: Simon Pascal Klein
-      email: klepas@klepas.org
-      url: 'https://github.com/klepas'
     - name: Trevor Brennan
-      email: t@trevorbrennan.com
+      img: trevor-brennan.jpg
       url: 'https://github.com/TrebBrennan'
     - name: Alex Page
-      email: alex@alexpage.com.au
+      img: alex-page.jpg
       url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.png
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
+    - name: Simon Pascal Klein
+      img: simon-pascal-klein.jpg
+      url: 'https://github.com/klepas'
+    - name: Julian Fleetwood
+      img: julian-fleetwood.jpg
+      url: 'https://github.com/joolswood'
+    - name: Petra Gulicher
+      img: petra-gulicher.jpg
+      url: 'https://github.com/petronbot'
+    - name: Hannah J. Nicdao
+      img: hannah-j-nicdao.jpg
+      url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
   order: 160
   discussions:
@@ -801,17 +1035,26 @@ page-alerts:
   required: false
   contributors:
     - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
+      img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
-    - name: Simon Pascal Klein
-      email: klepas@klepas.org
-      url: 'https://github.com/klepas'
     - name: Trevor Brennan
-      email: t@trevorbrennan.com
+      img: trevor-brennan.jpg
       url: 'https://github.com/TrebBrennan'
     - name: Alex Page
-      email: alex@alexpage.com.au
+      img: alex-page.jpg
       url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.png
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
+    - name: Simon Pascal Klein
+      img: simon-pascal-klein.jpg
+      url: 'https://github.com/klepas'
+    - name: Julian Fleetwood
+      img: julian-fleetwood.jpg
+      url: 'https://github.com/joolswood'
   state: published
   order: 170
   discussions:
@@ -850,17 +1093,23 @@ progress-indicator:
   required: false
   contributors:
     - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
+      img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
-    - name: Simon Pascal Klein
-      email: klepas@klepas.org
-      url: 'https://github.com/klepas'
     - name: Trevor Brennan
-      email: t@trevorbrennan.com
+      img: trevor-brennan.jpg
       url: 'https://github.com/TrebBrennan'
     - name: Alex Page
-      email: alex@alexpage.com.au
+      img: alex-page.jpg
       url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.png
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
+    - name: Alexander Sadleir
+      img: alexander-sadleir.jpg
+      url: 'https://github.com/maxious'
   state: published
   order: 180
   discussions:
@@ -897,17 +1146,26 @@ responsive-media:
   required: false
   contributors:
     - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
+      img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
-    - name: Simon Pascal Klein
-      email: klepas@klepas.org
-      url: 'https://github.com/klepas'
     - name: Trevor Brennan
-      email: t@trevorbrennan.com
+      img: trevor-brennan.jpg
       url: 'https://github.com/TrebBrennan'
     - name: Alex Page
-      email: alex@alexpage.com.au
+      img: alex-page.jpg
       url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.png
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
+    - name: Simon Pascal Klein
+      img: simon-pascal-klein.jpg
+      url: 'https://github.com/klepas'
+    - name: Julian Fleetwood
+      img: julian-fleetwood.jpg
+      url: 'https://github.com/joolswood'
   state: published
   order: 190
   discussions:
@@ -943,17 +1201,23 @@ select:
   required: false
   contributors:
     - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
+      img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
     - name: Simon Schwartz
-      email: simon.schwartz0@gmail.com
+      img: simon-schwartz.jpg
       url: 'https://github.com/simonschwartz'
     - name: Trevor Brennan
-      email: t@trevorbrennan.com
+      img: trevor-brennan.jpg
       url: 'https://github.com/TrebBrennan'
     - name: Alex Page
-      email: alex@alexpage.com.au
+      img: alex-page.jpg
       url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.png
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
   state: published
   order: 200
   discussions:
@@ -990,17 +1254,32 @@ skip-link:
   required: false
   contributors:
     - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
+      img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
-    - name: Simon Pascal Klein
-      email: klepas@klepas.org
-      url: 'https://github.com/klepas'
     - name: Trevor Brennan
-      email: t@trevorbrennan.com
+      img: trevor-brennan.jpg
       url: 'https://github.com/TrebBrennan'
     - name: Alex Page
-      email: alex@alexpage.com.au
+      img: alex-page.jpg
       url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.png
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
+    - name: Simon Pascal Klein
+      img: simon-pascal-klein.jpg
+      url: 'https://github.com/klepas'
+    - name: Julian Fleetwood
+      img: julian-fleetwood.jpg
+      url: 'https://github.com/joolswood'
+    - name: Petra Gulicher
+      img: petra-gulicher.jpg
+      url: 'https://github.com/petronbot'
+    - name: Hannah J. Nicdao
+      img: hannah-j-nicdao.jpg
+      url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
   order: 210
   discussions:
@@ -1035,17 +1314,35 @@ tags:
   required: false
   contributors:
     - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
+      img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
-    - name: Simon Pascal Klein
-      email: klepas@klepas.org
-      url: 'https://github.com/klepas'
     - name: Trevor Brennan
-      email: t@trevorbrennan.com
+      img: trevor-brennan.jpg
       url: 'https://github.com/TrebBrennan'
     - name: Alex Page
-      email: alex@alexpage.com.au
+      img: alex-page.jpg
       url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.png
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
+    - name: Simon Pascal Klein
+      img: simon-pascal-klein.jpg
+      url: 'https://github.com/klepas'
+    - name: Julian Fleetwood
+      img: julian-fleetwood.jpg
+      url: 'https://github.com/joolswood'
+    - name: Alexander Sadleir
+      img: alexander-sadleir.jpg
+      url: 'https://github.com/maxious'
+    - name: Petra Gulicher
+      img: petra-gulicher.jpg
+      url: 'https://github.com/petronbot'
+    - name: Hannah J. Nicdao
+      img: hannah-j-nicdao.jpg
+      url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
   order: 220
   discussions:
@@ -1082,17 +1379,35 @@ text-inputs:
   required: false
   contributors:
     - name: Dominik Wilkowski
-      email: hi@dominik-wilkowski.com
+      img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
-    - name: Simon Pascal Klein
-      email: klepas@klepas.org
-      url: 'https://github.com/klepas'
     - name: Trevor Brennan
-      email: t@trevorbrennan.com
+      img: trevor-brennan.jpg
       url: 'https://github.com/TrebBrennan'
     - name: Alex Page
-      email: alex@alexpage.com.au
+      img: alex-page.jpg
       url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.png
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
+    - name: Simon Pascal Klein
+      img: simon-pascal-klein.jpg
+      url: 'https://github.com/klepas'
+    - name: Julian Fleetwood
+      img: julian-fleetwood.jpg
+      url: 'https://github.com/joolswood'
+    - name: Alexander Sadleir
+      img: alexander-sadleir.jpg
+      url: 'https://github.com/maxious'
+    - name: Petra Gulicher
+      img: petra-gulicher.jpg
+      url: 'https://github.com/petronbot'
+    - name: Hannah J. Nicdao
+      img: hannah-j-nicdao.jpg
+      url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
   order: 230
   discussions:
@@ -1130,7 +1445,22 @@ cards:
     - open: 2
     - active: 7
     - something: something
-  contributors: null    # <-- auto generated, don't change
+  contributors:
+    - name: Dominik Wilkowski
+      img: dominik-wilkowski.jpg
+      url: 'https://github.com/dominikwilkowski'
+    - name: Trevor Brennan
+      img: trevor-brennan.jpg
+      url: 'https://github.com/TrebBrennan'
+    - name: Alex Page
+      img: alex-page.jpg
+      url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.png
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
   ID: cards    # <-- auto generated, don't change
   version: 0.0.0    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
@@ -1155,6 +1485,22 @@ table:
   used-in:
     - TODO
   required: false
+  contributors:
+    - name: Dominik Wilkowski
+      img: dominik-wilkowski.jpg
+      url: 'https://github.com/dominikwilkowski'
+    - name: Trevor Brennan
+      img: trevor-brennan.jpg
+      url: 'https://github.com/TrebBrennan'
+    - name: Alex Page
+      img: alex-page.jpg
+      url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.png
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
   state: inprogress
   order: 20
   discussions:
@@ -1185,7 +1531,22 @@ navigation:
   used-in:
     - TODO
   required: false
-  contributors: 'x, x, x, x'    # <-- auto generated, don't change
+  contributors:
+    - name: Dominik Wilkowski
+      img: dominik-wilkowski.jpg
+      url: 'https://github.com/dominikwilkowski'
+    - name: Trevor Brennan
+      img: trevor-brennan.jpg
+      url: 'https://github.com/TrebBrennan'
+    - name: Alex Page
+      img: alex-page.jpg
+      url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.png
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
   state: suggestion
   order: 10
   discussions:

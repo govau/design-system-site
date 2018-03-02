@@ -160,7 +160,7 @@ const GenerateComponents = ( uikit, components ) => {
 		components[ name ].hasSass = UIKIT[ module ].settings.plugins.includes('@gov.au/pancake-sass');
 		components[ name ].hasJs = UIKIT[ module ].settings.plugins.includes('@gov.au/pancake-js');
 		components[ name ].hasReact = UIKIT[ module ].settings.plugins.includes('@gov.au/pancake-react');
-		components[ name ].contributors = PGK.contributors;
+		// components[ name ].contributors = PGK.contributors;
 	}
 
 	const componentsString = DecodeYAML( components )
