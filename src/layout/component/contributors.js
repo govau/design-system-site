@@ -5,33 +5,30 @@ import React, { Fragment } from 'react';
 /**
  * A list of contributors
  */
-const Contributors = ({ contributors }) => (
+const Contributors = ({ contributors, _relativeURL, _ID }) => {
 
-	<ul className="component-status__definition__list component-status__definition__list--images js-more-wrapper">
-		{
-			Object.keys( contributors ).map( ( user, i ) => {
-				const contributor = contributors[ user ];
+	const Shuffle = array => array
+		.map( item => [ Math.random(), item ] )
+		.sort( ( a, b ) => a[ 0 ] - b[ 0 ] )
+		.map( item => item[ 1 ] )
 
-				return (
+	return (
+		<ul className="component-status__definition__list component-status__definition__list--images js-more-wrapper">
+			{
+				Shuffle( contributors ).map( ( contributor, i ) => (
 					<li className="component-status__definition__list__item" key={ i }>
 						<a href={ contributor.url } className="avatar">
 							<img
-								src={
-									contributor.email
-									&&
-									`https://www.gravatar.com/avatar/${
-										Crypto.createHash('md5').update( contributor.email ).digest('hex')
-									}`
-								}
+								src={`${ _relativeURL(`/assets/img/contributors/${ contributor.img }`, _ID ) }`}
 								alt={`${ contributor.name } avatar picture`}
 								title={ contributor.name }
 							/>
 						</a>
 					</li>
-				);
-			})
-		}
-	</ul>
-);
+				))
+			}
+		</ul>
+	);
+};
 
 export default Contributors;
