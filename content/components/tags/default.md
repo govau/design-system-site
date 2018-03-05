@@ -30,6 +30,6 @@ code:
 ---
 
 
-The tags component supports use with the [`<dl>` HTML element]( https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl). This is particularly useful when there are multiple lists of tags.
+Tags support use of the [`<dl>` HTML element]( https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl). This is particularly useful when there are multiple lists of tags.
 
-In a list of tags, each tags can be described by the `<dd>` (description detail) and titled with a `<dt>` (description term).
+In a list of tags, each tag can be described by the `<dd>` (description detail) and titled with a `<dt>` (description term).
