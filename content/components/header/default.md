@@ -10,8 +10,8 @@ code:
       </header>
   - React: |
       import AUheader from '@gov.au/header';
-      
+
       <AUheader title="Page title" subline="Service sub-title that could be a little longer" />
 ---
 
-The header at the top of the page. Usually contains an Australian Government Crest, logo and navigation.
+The header at the top of the page. Usually contains a Commonwealth Coat of Arms, branding and navigation.
