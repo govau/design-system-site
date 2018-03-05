@@ -26,4 +26,4 @@ code:
       ]} />
 ---
 
-A list of tags showing there relation without links.
+A list of related tags without links.
