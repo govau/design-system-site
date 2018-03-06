@@ -35,7 +35,7 @@ const ForwardSSL = ( request, response, next ) => {
  * @return {object}            - Express object
  */
 const AddFakePassword = ( request, response, next ) => {
-	if( process.argv.indexOf( 'staging' ) !== -1 ) {
+	// if( process.argv.indexOf( 'staging' ) !== -1 ) {
 		const auth = {        // Alright don’t freak out. This is not to keep anything protected.
 			login: 'gold',      // We’re using this to help Google with indexing and to keep people
 			password: 'gold',   // from getting confused between staging and prod.
@@ -57,10 +57,10 @@ const AddFakePassword = ( request, response, next ) => {
 		else {
 			return next();
 		}
-	}
-	else {
-		return next();
-	}
+	// }
+	// else {
+	// 	return next();
+	// }
 };
 
 
