@@ -2,8 +2,8 @@ core:
   name: Core
   description: >
     Core includes a range of styles, variables and code that form the foundation
-    of how the GOLD design system works, including colour, typography and
-    spacing.
+    of how the Australian government's design system works, including colour,
+    typography and spacing.
   metatags:
     - color
     - spacing

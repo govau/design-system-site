@@ -5,7 +5,7 @@ tiles:
     imgurl: assets/img/artwork-about-community.png
     imgalt: Community collaboration
     url: /community
-    text: GOLD has been created for designers and developers across government to share and create a set of quality tools and designs that can be used by everyone.
+    text: The design system has been created for designers and developers across government to share and create a set of quality tools and designs that can be used by everyone.
 
   - title: Components
     imgurl: assets/img/artwork-about-components.png
