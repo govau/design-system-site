@@ -37,8 +37,8 @@ const ForwardSSL = ( request, response, next ) => {
 const AddFakePassword = ( request, response, next ) => {
 	// if( process.argv.indexOf( 'staging' ) !== -1 ) {
 		const auth = {        // Alright don’t freak out. This is not to keep anything protected.
-			login: 'gold',      // We’re using this to help Google with indexing and to keep people
-			password: 'gold',   // from getting confused between staging and prod.
+			login: 'totallynotlive',      // We’re using this to help Google with indexing and to keep people
+			password: 'totallynotlive',   // from getting confused between staging and prod.
 		};                    // By all means please share this username:password :)
 
 		const b64auth = ( request.headers.authorization || '' ).split(' ')[ 1 ] || '';
@@ -52,7 +52,16 @@ const AddFakePassword = ( request, response, next ) => {
 			password !== auth.password
 		) {
 			response.set('WWW-Authenticate', 'Basic realm="Please authenticate"');
-			response.status( 401 ).send(`I'm sorry. The Guides staging pages require a password to access them to avoid confusion.`);
+			response.status( 401 ).send(`
+We’ve recently placed the Design System documentation site back behind a password-protection mechanism - thanks for all of the early responses and retweets
+we’ve received to date.
+
+The internal and external feedback has been enormously useful - we’ve got some more work to do to prepare for our approach to a public launch. We look forward
+to sharing the next release as publicly as possible, as soon as possible.
+
+In the meantime, we’ll be reading and responding (when possible) to posts in this forum, and the <a href="https://github.com/govau/uikit">UI-Kit v2 GitHub
+repo</a> is as active as ever.
+`);
 		}
 		else {
 			return next();
