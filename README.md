@@ -1,12 +1,10 @@
-GOLD
+Australian Government Design System
 ====
-
-> **G**overnment **O**pen **L**anguage for **D**esign
 
 | Production                  | Staging                        |
 |-----------------------------|--------------------------------|
-| https://gold.service.gov.au | https://gold.apps.y.cld.gov.au |
-|                             | user: `gold`, pass: `gold`     |
+| https://designsystem.gov.au | https://ds.apps.y.cld.gov.au   |
+|                             | user: `ds`, pass: `ds`         |
 
 
 ## Install

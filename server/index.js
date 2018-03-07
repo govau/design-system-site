@@ -37,8 +37,8 @@ const ForwardSSL = ( request, response, next ) => {
 const AddFakePassword = ( request, response, next ) => {
 	// if( process.argv.indexOf( 'staging' ) !== -1 ) {
 		const auth = {        // Alright don’t freak out. This is not to keep anything protected.
-			login: 'gold',      // We’re using this to help Google with indexing and to keep people
-			password: 'gold',   // from getting confused between staging and prod.
+			login: 'ds',        // We’re using this to help Google with indexing and to keep people
+			password: 'ds',     // from getting confused between staging and prod.
 		};                    // By all means please share this username:password :)
 
 		const b64auth = ( request.headers.authorization || '' ).split(' ')[ 1 ] || '';
