@@ -38,18 +38,6 @@ const Header = ({ title, mainmenu, header_govau, _relativeURL, _ID, _pages, _bod
 											? null
 											: <p className="header__logo--coa">The Australian Government coat of Arms</p>
 									}
-									<svg role="img" title="GOLD">
-										<title>The Government Open Language for Design logo</title>
-										<defs>
-											<linearGradient id="GOLD-gradient" x1="100%" x2="0%" y1="0%" y2="100%">
-												<stop offset="0%" stopColor="#FFE9B2" stopOpacity="1"/>
-												<stop offset="100%" stopColor="#BD952D"/>
-											</linearGradient>
-										</defs>
-
-										<use xlinkHref="/assets/svg/map.svg#gold" />
-									</svg>
-
 									<h1 className="header__title au-display-md">{ title }</h1>
 								</a>
 								{ _body }

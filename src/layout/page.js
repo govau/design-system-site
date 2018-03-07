@@ -26,7 +26,7 @@ const Page = ({
 <link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#06262d">
 <link rel="shortcut icon" href="/assets/favicons/favicon.ico">
 <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml">
-<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <meta name="robots" content="index, follow">
 <meta name="author" content="GOLD team">

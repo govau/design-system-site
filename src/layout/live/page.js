@@ -25,7 +25,7 @@ const Live = ({ _ID, _parents, _pages, _relativeURL, _parseYaml, pagetitle, exam
 <link rel="mask-icon" href=${ _relativeURL('/assets/favicons/safari-pinned-tab.svg', _ID ) } color="#06262d">
 <link rel="shortcut icon" href=${ _relativeURL('/assets/favicons/favicon.ico', _ID ) }>
 <meta name="msapplication-config" content=${ _relativeURL('/assets/favicons/browserconfig.xml', _ID ) }>
-<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <meta name="robots" content="index, follow">
 <meta name="author" content="GOLD team">

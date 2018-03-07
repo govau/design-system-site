@@ -1,15 +1,15 @@
 // Unique Status Colors
 $color-status--published-text:            $AU-color-foreground-action;
-$color-status--published-gradient-start:  #BD952D;
-$color-status--published-gradient-end:    #FFE9B2;
+$color-status--published-gradient-start:  $AU-color-foreground-action;
+$color-status--published-gradient-end:    $AU-colordark-foreground-action;
 
-$color-status--inprogress-text:           #4e6062;
-$color-status--inprogress-gradient-start: #88A2A7;
-$color-status--inprogress-gradient-end:   #DAE3E5;
+$color-status--inprogress-text:           $AU-color-foreground-muted;
+$color-status--inprogress-gradient-start: $AU-color-foreground-border;
+$color-status--inprogress-gradient-end:   $AU-color-background-alt-shade;
 
-$color-status--suggestion-text:           #ad4b27;
-$color-status--suggestion-gradient-start: #cd8466;
-$color-status--suggestion-gradient-end:   #fdd0bd;
+$color-status--suggestion-text:           $AU-color-foreground-muted;
+$color-status--suggestion-gradient-start: $AU-color-foreground-border;
+$color-status--suggestion-gradient-end:   $AU-color-background-alt-shade;
 
 
 // component-status box
