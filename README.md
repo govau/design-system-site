@@ -1,10 +1,10 @@
 Australian Government Design System
 ====
 
-| Production                  | Staging                        |
-|-----------------------------|--------------------------------|
-| https://designsystem.gov.au | https://ds.apps.y.cld.gov.au   |
-|                             | user: `ds`, pass: `ds`         |
+| Production                  | Staging                                |
+|-----------------------------|----------------------------------------|
+| https://designsystem.gov.au | https://designsystem.apps.y.cld.gov.au |
+|                             | user: `ds`, pass: `ds`                 |
 
 
 ## Install
