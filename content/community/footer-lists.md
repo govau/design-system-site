@@ -6,7 +6,7 @@ lists:
       - text: Suggest a component
         link: https://community.service.gov.au/c/designsystem/suggest-a-component
       - text: Improve documentation
-        link: https://github.com/govau/GOLD/tree/master/content
+        link: https://github.com/govau/designsystem/tree/master/content
 
   - heading: Help with planning
     links:
