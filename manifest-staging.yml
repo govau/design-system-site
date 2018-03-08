@@ -8,4 +8,4 @@ path: ./
 command: node server/index.js staging
 
 applications:
-- name: gold
+- name: designsystem
