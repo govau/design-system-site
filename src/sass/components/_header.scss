@@ -1,7 +1,6 @@
 .header {
 	@include AU-space( border-bottom, 0.5unit solid $AU-colordark-foreground-action );
-	background-color: $AU-colordark-background-shade;
-	// background-image: radial-gradient( farthest-corner at 50% 0, $AU-colordark-background 0%, $AU-colordark-background-alt-shade 100%);
+	background-color: $AU-colordark-background;
 
 	p {
 		color: $AU-colordark-foreground-muted;
@@ -87,6 +86,7 @@
 
 	.header--home & {
 		margin-left: 0;
+		margin-top: 0;
 		text-align: center;
 		color: $AU-colordark-foreground-action;
 	}
@@ -156,7 +156,7 @@
 	}
 
 	.header__title {
-		@include AU-space( margin-top, 0unit );
+		@include AU-space( margin-top, 0.5unit );
 		@include AU-space( margin-left, 0unit );
 		float: left;
 	}
