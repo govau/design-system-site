@@ -37,8 +37,8 @@ const ForwardSSL = ( request, response, next ) => {
 const AddFakePassword = ( request, response, next ) => {
 	if( process.argv.indexOf( 'staging' ) !== -1 ) {
 		const auth = {        // Alright don’t freak out. This is not to keep anything protected.
-			login: 'gold',      // We’re using this to help Google with indexing and to keep people
-			password: 'gold',   // from getting confused between staging and prod.
+			login: 'ds',        // We’re using this to help Google with indexing and to keep people
+			password: 'ds',     // from getting confused between staging and prod.
 		};                    // By all means please share this username:password :)
 
 		const b64auth = ( request.headers.authorization || '' ).split(' ')[ 1 ] || '';
@@ -52,7 +52,7 @@ const AddFakePassword = ( request, response, next ) => {
 			password !== auth.password
 		) {
 			response.set('WWW-Authenticate', 'Basic realm="Please authenticate"');
-			response.status( 401 ).send(`I'm sorry. The Guides staging pages require a password to access them to avoid confusion.`);
+			response.status( 401 ).send(`This is just the staging site. Please check out the real deal at <a href="https://designsystem.gov.au/">designsystem.gov.au</a>`);
 		}
 		else {
 			return next();

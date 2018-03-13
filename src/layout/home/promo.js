@@ -40,7 +40,7 @@ Promo.propTypes = {
 	 *     imgurl: http://placehold.it/320x320
 	 *     imgalt: Community Alt tag
 	 *     url: /community
-	 *     text: The GOLD community has been created for designers and developers to help them transform their agency’s products and services.
+	 *     text: The community has been created for designers and developers to help them transform their agency’s products and services.
 	 *   - title: Components
 	 *     imgurl: http://placehold.it/320x320
 	 *     imgalt: Components Alt tag

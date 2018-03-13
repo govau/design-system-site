@@ -47,23 +47,23 @@ const ComponentPage = ({
 <link rel="mask-icon" href=${ _relativeURL('/assets/favicons/safari-pinned-tab.svg', _ID ) } color="#06262d">
 <link rel="shortcut icon" href=${ _relativeURL('/assets/favicons/favicon.ico', _ID ) }>
 <meta name="msapplication-config" content=${ _relativeURL('/assets/favicons/browserconfig.xml', _ID ) }>
-<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <meta name="robots" content="index, follow">
-<meta name="author" content="GOLD team">
+<meta name="author" content="Digital Transformation Agency">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="GOLD">
-<meta name="twitter:description" content="${ module !== '' ? `${ MODULE.description } - ` : '' }Government Open Language for Design - design system">
-<meta name="twitter:name" content="GOLD">
-<meta name="twitter:image" content="https://gold.service.gov.au/assets/favicons/gold.jpg">
+<meta name="twitter:title" content="Australian Government Design System">
+<meta name="twitter:description" content="${ module !== '' ? `${ MODULE.description } - ` : '' }Australian Government Design System">
+<meta name="twitter:name" content="Australian Government Design System">
+<meta name="twitter:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:type" content="website">
-<meta property="og:title" content="GOLD">
-<meta property="og:site_name" content="GOLD">
-<meta property="og:description" content="${ module !== '' ? `${ MODULE.description } - ` : '' }Government Open Language for Design - design system">
-<meta property="og:image" content="https://gold.service.gov.au/assets/favicons/gold.jpg">
-<meta property="og:url" content="https://gold.service.gov.au">
+<meta property="og:title" content="Australian Government Design System">
+<meta property="og:site_name" content="Australian Government Design System">
+<meta property="og:description" content="${ module !== '' ? `${ MODULE.description } - ` : '' }Australian Government Design System">
+<meta property="og:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
+<meta property="og:url" content="https://designsystem.gov.au">
 
-<title>${ pagetitle } - Australian Government Open Language for Design</title>
+<title>${ pagetitle } - Australian Government Design System</title>
 
 <link rel="stylesheet" href=${ _relativeURL( '/assets/css/style.css', _ID ) }>
 

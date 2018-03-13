@@ -1,7 +1,6 @@
 .header {
 	@include AU-space( border-bottom, 0.5unit solid $AU-colordark-foreground-action );
-	background-color: $AU-colordark-background-alt;
-	background-image: radial-gradient( farthest-corner at 50% 0, $AU-colordark-background 0%, $AU-colordark-background-alt-shade 100%);
+	background-color: $AU-colordark-background;
 
 	p {
 		color: $AU-colordark-foreground-muted;
@@ -26,12 +25,13 @@
 }
 
 // Home page center alignment
-.header--home .header__logo-wrapper {
-	text-align: center;
-	@include AU-space( margin, 2unit auto 2unit );
-}
+// FIXME
+// .header--home .header__logo-wrapper {
+	// text-align: center;
+	// @include AU-space( margin, 2unit auto 2unit );
+// }
 
-// GOLD Logo with title
+// Logo with title
 .header__logo {
 	@include AU-clearfix();
 	@include AU-focus( 'dark' );
@@ -50,7 +50,7 @@
 	@include AU-focus( 'dark' );
 }
 
-// GOLD SVG
+// SVG
 .header__logo svg {
 	@include AU-space( max-width, 3unit );
 	@include AU-space( margin-right, -3unit );
@@ -59,6 +59,8 @@
 	float: left;
 	display: block;
 	box-shadow: 0px 8px 28px rgba(0,0,0,0.6);
+
+	display: none; //FIXME
 
 	.header--home & {
 		float: none;
@@ -69,10 +71,10 @@
 	}
 }
 
-// Government Open Language for Design title
+// Design System title
 .header__title {
-	@include AU-space( margin-top, 1.5unit );
-	@include AU-space( margin-left, 3.25unit );
+	@include AU-space( margin-top, 0unit );
+	@include AU-space( margin-left, 0unit );
 	@include AU-space( max-width, 15unit );
 	text-align: left;
 	display: block;
@@ -84,7 +86,9 @@
 
 	.header--home & {
 		margin-left: 0;
+		margin-top: 0;
 		text-align: center;
+		color: $AU-colordark-foreground-action;
 	}
 }
 
@@ -127,21 +131,21 @@
 	}
 
 	.header__title {
-		@include AU-fontgrid( lg, heading );
-		@include AU-space( margin-top, 1.5unit );
-		@include AU-space( margin-left, 5unit );
-		@include AU-space( max-width, 15unit );
+		@include AU-fontgrid( xl, nospace );
+		@include AU-space( margin-top, 0unit );
+		@include AU-space( margin-left, 0unit );
+		@include AU-space( max-width, 10unit );
 
 		.header--home & {
-			@include AU-space( max-width, 20unit );
-			@include AU-fontgrid( xl, heading );
+			max-width: none;
+			@include AU-fontgrid( xxxl, heading );
 			@include AU-space( margin-top, 1unit );
 		}
 	}
 
 	.header--home .header__logo-wrapper {
 		@include AU-space( max-width, 34unit );
-		@include AU-space( margin, 2unit auto 4unit );
+		@include AU-space( margin, 2.5unit 0 );
 	}
 }
 
@@ -153,7 +157,7 @@
 
 	.header__title {
 		@include AU-space( margin-top, 0.5unit );
-		@include AU-space( margin-left, 4unit );
+		@include AU-space( margin-left, 0unit );
 		float: left;
 	}
 
@@ -177,4 +181,3 @@
 		}
 	}
 }
-

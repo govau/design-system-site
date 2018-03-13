@@ -1,6 +1,6 @@
 // HeaderGovAU
 .headergovau {
-	background-color: $AU-colordark-background-alt-shade;
+	background-color: $AU-colordark-background-shade;
 	color: $AU-colordark-foreground-text;
 	font-family: $AU-font;
 	position: relative;
@@ -104,11 +104,11 @@
 			}
 
 			& > a {
-				color: $AU-colordark-foreground-muted;
+				color: $AU-colordark-foreground-text;
+				text-decoration: underline;
 
 				&:hover {
-					text-decoration: underline;
-					color: $AU-colordark-foreground-text;
+					text-decoration: none;
 				}
 			}
 		}
