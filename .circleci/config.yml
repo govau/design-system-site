@@ -68,24 +68,48 @@ jobs:
       - run: cf zero-downtime-push designsystem -f manifest-prod.yml
 
 
+  # DEPLOY-TEST JOB
+  # installing dependencies, building assets and deploying to test branches
+  deploy-test:
+    docker:
+      - image: circleci/node:8.9.1
+
+    steps:
+      - checkout
+      - run: rm -rf node_modules
+      - run: npm install
+      - run: npm run build
+      - run: rm -rf node_modules
+      - run: sudo apt-get install apt-transport-https
+      - run: wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+      - run: echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+      - run: sudo apt-get update
+      - run: sudo apt-get install tree
+      - run: sudo apt-get install cf-cli
+      - run: cf install-plugin https://github.com/govau/autopilot/releases/download/0.0.5-venapp/autopilot-linux -f
+      - run: cf version
+      - run: cf login -a api.system.y.cld.gov.au -o $CF_ORG_STAGING -s $CF_SPACE_STAGING -u $CF_USER_STAGING -p $CF_PASSWORD_STAGING
+      - run: tree -C
+      - run: cf zero-downtime-push designsystem-$CIRCLE_BRANCH -f manifest-testing.yml
+
+
 # OUR WORKFLOW
 # this is where we orchestrate our jobs
 workflows:
   version: 2
   testing-deploying:
     jobs:
-      # - test                # run tests first
-
-      - deploy-staging:     # run deploy staging
-          # requires:
-          #   - test          # but make sure `test` has finished
+      - deploy-staging:       # run deploy staging
           filters:
             branches:
-              only: develop # and only on the `develop` branch
+              only: develop   # and only on the `develop` branch
 
-      - deploy-prod:        # run deploy production
-          # requires:
-          #   - test          # but make sure `test` has finished
+      - deploy-prod:          # run deploy production
           filters:
             branches:
-              only: master  # and only on the `master` branch
+              only: master    # and only on the `master` branch
+
+      - deploy-test:          # run test branches
+          filters:
+            branches:
+              only: /.*-test/ # and only on the branches that end with `-test`
