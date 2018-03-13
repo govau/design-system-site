@@ -17,11 +17,16 @@ const Server = Express();
  * @return {object}            - Express object
  */
 const ForwardSSL = ( request, response, next ) => {
-	if( request.headers['x-forwarded-proto'] === 'https' ) {
+	if( process.argv.indexOf( 'local' ) === -1 ) {
+		if( request.headers['x-forwarded-proto'] === 'https' ) {
+			return next();
+		}
+
+		response.redirect(`https://${ request.headers.host }${ request.originalUrl }`);
+	}
+	else {
 		return next();
 	}
-
-	response.redirect(`https://${ request.headers.host }${ request.originalUrl }`);
 };
 
 

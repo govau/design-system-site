@@ -21,6 +21,9 @@
 		"watch:js": "onchange 'src/js/**/*.js' -- npm run build:js",
 		"watch:site": "cuttlebelle -w -n",
 		"watch": "npm run build && npm run watch:sass | npm run watch:js | npm run watch:site",
+		"start:local": "node server/index.js local",
+		"start:staging": "node server/index.js staging",
+		"start": "node server/index.js",
 		"test": "echo 'Error: no test specified' && exit 0"
 	},
 	"repository": {
