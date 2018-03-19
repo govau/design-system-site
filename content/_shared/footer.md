@@ -3,7 +3,7 @@ layout: structure/footer
 headline: Community
 mainlist:
   - text: Forums
-    link: https://community.service.gov.au/c/gold
+    link: https://community.service.gov.au/c/designsystem
   - text: Roadmap
     link: https://github.com/govau/uikit/projects/
   - text: Github

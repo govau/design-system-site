@@ -6,6 +6,3 @@ env:
   NODE_MODULES_CACHE: false
 path: ./
 command: node server/index.js staging
-
-applications:
-- name: designsystem

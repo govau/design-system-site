@@ -34,7 +34,7 @@ const Headline = ( text ) => {
 		font: 'chrome',
 		space: false,
 		align: 'center',
-		colors: ['yellow', 'white', 'yellow'],
+		colors: ['cyan', 'white', 'cyan'],
 	});
 	console.log(`\n`);
 };
@@ -199,9 +199,9 @@ const COMPONENTS = EncodeYAML( Fs.readFileSync( Path.normalize(`${ __dirname }/.
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
 // CLI
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
-CFonts.say( 'GOLD', {
+CFonts.say( 'Design System', {
 	align: 'center',
-	colors: [ 'yellow', 'white', 'yellow' ],
+	colors: [ 'cyan', 'blue', 'cyan' ],
 });
 
 if( process.argv.indexOf( 'components' ) !== -1 ) {

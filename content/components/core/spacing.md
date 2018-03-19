@@ -15,9 +15,9 @@ code:
 
 ---
 
-The consistent alignment of elements is paramount for good UI design. GOLD provides functions in SCSS so that designers and developers can work together with predictable outcomes.
+The consistent alignment of elements is paramount for good UI design. The design system provides functions in SCSS so that designers and developers can work together with predictable outcomes.
 
-The base-unit `1unit` of spacing in GOLD is derived from `1rem` which in most browsers equates to `16px`.
+The base-unit `1unit` of spacing in the design system is derived from `1rem` which in most browsers equates to `16px`.
 
 ### Design software
 For doing mockups in software like Sketch or Photoshop, use pixel values which are divisible by 4.

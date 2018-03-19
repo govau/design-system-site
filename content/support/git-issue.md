@@ -9,4 +9,4 @@ button:
 
 ## Raise an issue in Github
 
-Raise a Git issue to get help from others who are using GOLD.
+Raise a Git issue to get help from others who are using the design system.
