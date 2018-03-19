@@ -54,6 +54,7 @@ const Example = ({ _ID, _relativeURL, pagetitle, example, alignment, fullwidth }
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }} />
 		<body className="au-body">
+			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Z7S8GB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 			<div className="example__wrapper">
 				<h2 className='example__title'>Example</h2>
