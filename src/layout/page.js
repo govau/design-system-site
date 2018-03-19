@@ -58,8 +58,7 @@ const Page = ({
 		<head dangerouslySetInnerHTML={{ __html: headContent }} />
 
 		<body className="au-grid">
-			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Z7S8GB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
+			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Z7S8GB" height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe></noscript>
 			{ header }
 			<div className="page-wrapper">
 				<div className="content-wrapper">

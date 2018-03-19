@@ -26,7 +26,6 @@ function CopyString( text ) {
 	document.body.removeChild( textarea );
 }
 
-
 /**
  * On click of any of the copy code buttons
  */
@@ -37,6 +36,9 @@ AddEvent( copyButtons, 'click', function( event, $this ) {
 	$this.innerHTML = 'Copied';
 	RemoveClass( $this, 'icon--copy' );
 	AddClass( $this, 'icon--success' );
+	dataLayer.push({
+		'event': 'copy'
+	});
 
 	setTimeout( function() {
 		$this.innerHTML = oldLabel;
