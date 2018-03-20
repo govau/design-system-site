@@ -7,6 +7,10 @@ Australian Government Design System
 |                             | user: `ds`, pass: `ds`                 |
 
 
+## Branches
+
+All branches ending with `-test` will go live automatically to `https://designsystem[your-branch-name]-test.apps.y.cld.gov.au`.
+
 ## Install
 
 To run this repository please install [`node`](https://nodejs.org) 6 or higher.

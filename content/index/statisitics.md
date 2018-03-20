@@ -6,11 +6,11 @@ btntext: See our Performance Dashboard
 
 tiles:
   - description: Live projects
-    number: XX
+    number: 27
 
   - description: Github stars
-    number: 145
+    number: stars
 
   - description: Downloads
-    number: XX
+    number: downloads
 ---
