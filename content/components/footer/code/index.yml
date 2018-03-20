@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Footer rationale
+pagetitle: Footer code
 
 header:
   - /_shared/header.md

@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Buttons rationale
+pagetitle: Buttons code
 
 header:
   - /_shared/header.md
