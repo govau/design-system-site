@@ -166,7 +166,7 @@ a.header__logo-wrapper {
 		@include AU-space( margin-top, 2unit );
 	}
 	.header__blurb--content {
-		@include AU-fontgrid( lg, heading );
+		@include AU-fontgrid( md, heading );
 	}
 
 }

@@ -43,11 +43,6 @@ const Header = ({ title, title_badge, mainmenu, header_govau, _relativeURL, _ID,
 											</div>
 											<div className="header__blurb au-body au-body--dark">
 												<div className="header__blurb--content">{ _body }</div>
-												{/*
-												<p className="header__affiliate">
-													<a href="https://www.dta.gov.au/"><img src={ _relativeURL( '/assets/img/footer-logo-dta.png', _ID ) } alt="Digital Transformation Agency"/> initiative</a>
-												</p>
-												*/}
 											</div>
 										</Fragment>
 
