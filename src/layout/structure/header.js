@@ -33,10 +33,9 @@ const Header = ({ title, title_badge, mainmenu, header_govau, _relativeURL, _ID,
 									? <Fragment>
 											<div className="header__logo-wrapper">
 												<img className="header--logo-coa" src={ _relativeURL( '/assets/img/header-logo-agov.png', _ID ) } alt="The Australian Government coat of Arms"/>
-												<h1 className="header__title">{ title }
-													{
+												<h1 className="header__title">{ title } {/* <- Space here is intentional */
 														title_badge
-															? <span className="header__badge">{ title_badge }</span>
+															? <span className="header__badge"> { title_badge }</span>
 															: null
 													}
 												</h1>
@@ -49,8 +48,7 @@ const Header = ({ title, title_badge, mainmenu, header_govau, _relativeURL, _ID,
 									: <Fragment>
 											<a href={ _relativeURL( '/', _ID ) } className="header__logo-wrapper">
 												<img className="header--logo-coa" src={ _relativeURL( '/assets/img/header-logo-agov.png', _ID ) } alt="The Australian Government coat of Arms"/>
-												<h1 className="header__title">{ title }
-													{
+												<h1 className="header__title">{ title } {/* <- Space here is intentional */
 														title_badge
 															? <span className="header__badge">{ title_badge }</span>
 															: null
