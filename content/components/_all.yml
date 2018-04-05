@@ -56,7 +56,7 @@ core:
     - open: 2
     - active: 7
     - something: something
-  version: 1.0.1    # <-- auto generated, don't change
+  version: 2.0.0    # <-- auto generated, don't change
   dependencies: []    # <-- auto generated, don't change
   hasSass: true    # <-- auto generated, don't change
   hasJs: false    # <-- auto generated, don't change
@@ -113,7 +113,7 @@ accordion:
     - open: 2
     - active: 7
     - something: something
-  version: 1.0.1    # <-- auto generated, don't change
+  version: 2.0.1    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - animate
     - core
@@ -217,7 +217,7 @@ body:
     - open: 2
     - active: 7
     - something: something
-  version: 1.0.0    # <-- auto generated, don't change
+  version: 2.0.1    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -281,7 +281,7 @@ breadcrumbs:
     - active: 7
     - something: something
   ID: breadcrumbs    # <-- auto generated, don't change
-  version: 1.0.0    # <-- auto generated, don't change
+  version: 2.0.1    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
     - link-list
@@ -296,7 +296,7 @@ buttons:
 
     Buttons use labels and sometimes icons to communicate the action that will
     occur when the user touches them.
-  version: 1.0.2    # <-- auto generated, don't change
+  version: 2.0.1    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   contributors:
@@ -408,7 +408,7 @@ cta-link:
     - active: 7
     - something: something
   ID: cta-link    # <-- auto generated, don't change
-  version: 1.0.0    # <-- auto generated, don't change
+  version: 2.0.1    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -462,7 +462,7 @@ callout:
     - active: 7
     - something: something
   ID: callout    # <-- auto generated, don't change
-  version: 1.0.0    # <-- auto generated, don't change
+  version: 2.0.1    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -526,7 +526,7 @@ control-input:
     - open: 2
     - active: 7
     - something: something
-  version: 1.0.0    # <-- auto generated, don't change
+  version: 2.0.1    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -592,7 +592,7 @@ direction-links:
     - active: 7
     - something: something
   ID: direction-links    # <-- auto generated, don't change
-  version: 1.0.0    # <-- auto generated, don't change
+  version: 2.0.1    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -654,7 +654,7 @@ footer:
     - open: 2
     - active: 7
     - something: something
-  version: 1.0.0    # <-- auto generated, don't change
+  version: 2.0.1    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -697,7 +697,7 @@ grid-12:
     - open: 2
     - active: 7
     - something: something
-  version: 1.0.0    # <-- auto generated, don't change
+  version: 2.0.1    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -758,7 +758,7 @@ header:
     - open: 2
     - active: 7
     - something: something
-  version: 2.0.0    # <-- auto generated, don't change
+  version: 3.0.1    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -816,7 +816,7 @@ headings:
     - open: 2
     - active: 7
     - something: something
-  version: 1.0.0    # <-- auto generated, don't change
+  version: 2.0.1    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -881,7 +881,7 @@ inpage-nav:
     - active: 7
     - something: something
   ID: inpage-nav    # <-- auto generated, don't change
-  version: 1.0.0    # <-- auto generated, don't change
+  version: 2.0.1    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
     - link-list
@@ -943,7 +943,7 @@ keyword-list:
     - active: 7
     - something: something
   ID: keyword-list    # <-- auto generated, don't change
-  version: 1.0.0    # <-- auto generated, don't change
+  version: 2.0.1    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
     - link-list
@@ -1003,7 +1003,7 @@ link-list:
     - open: 2
     - active: 7
     - something: something
-  version: 1.0.0    # <-- auto generated, don't change
+  version: 2.0.1    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
     - body
@@ -1061,7 +1061,7 @@ page-alerts:
     - active: 7
     - something: something
   ID: page-alerts    # <-- auto generated, don't change
-  version: 1.0.0    # <-- auto generated, don't change
+  version: 2.0.1    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
     - body
@@ -1116,7 +1116,7 @@ progress-indicator:
     - active: 7
     - something: something
   ID: progress-indicator    # <-- auto generated, don't change
-  version: 2.0.0    # <-- auto generated, don't change
+  version: 3.0.1    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -1171,7 +1171,7 @@ responsive-media:
     - open: 2
     - active: 7
     - something: something
-  version: 1.0.0    # <-- auto generated, don't change
+  version: 2.0.1    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -1224,7 +1224,7 @@ select:
     - active: 7
     - something: something
   ID: select    # <-- auto generated, don't change
-  version: 1.0.0    # <-- auto generated, don't change
+  version: 2.0.1    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -1285,7 +1285,7 @@ skip-link:
     - open: 2
     - active: 7
     - something: something
-  version: 1.0.0    # <-- auto generated, don't change
+  version: 2.0.1    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -1349,7 +1349,7 @@ tags:
     - active: 7
     - something: something
   ID: tags    # <-- auto generated, don't change
-  version: 1.0.0    # <-- auto generated, don't change
+  version: 2.0.1    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -1414,7 +1414,7 @@ text-inputs:
     - active: 7
     - something: something
   ID: text-inputs    # <-- auto generated, don't change
-  version: 1.0.0    # <-- auto generated, don't change
+  version: 2.0.1    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change

@@ -20,8 +20,8 @@ const Statistics = ({ title, btnURL, btntext, tiles, _parseYaml }) => {
 	);
 
 	const OPTIONS = {
-		stars: DATA.uikit.stars + DATA.pancake.stars,
-		downloads: DATA.uikit.download + DATA.pancake.download,
+		stars: DATA.uikit.stars,
+		downloads: DATA.uikit.download,
 	};
 
 	return (
