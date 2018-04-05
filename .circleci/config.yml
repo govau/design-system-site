@@ -97,7 +97,7 @@ jobs:
 # this is where we orchestrate our jobs
 workflows:
   version: 2
-  testing-deploying:
+  deploying:
     jobs:
       - deploy-staging:       # run deploy staging
           filters:
@@ -113,3 +113,13 @@ workflows:
           filters:
             branches:
               only: /.*-test/ # and only on the branches that end with `-test`
+
+  # nightly-rebuild:            # rerun a task via scheduling, all times are UTC https://circleci.com/docs/2.0/workflows/#scheduling-a-workflow
+  #   triggers:
+  #     - schedule:
+  #         cron: "0 14 * * *"  # 2PM utc => 1am or midnight (daylight saving)
+  #         filters:
+  #           branches:
+  #             only: master    # we only run the master branch
+  #   jobs:
+  #     - deploy-prod           # and only the production deploy
