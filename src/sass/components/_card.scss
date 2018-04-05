@@ -111,6 +111,12 @@ a.au-card {
 	list-style: none;
 	padding: 0;
 
+	// Odd issue with safari
+	// https://stackoverflow.com/questions/34250282/flexbox-safari-bug-flex-wrap
+	&:before {
+		display: none;
+	}
+
 	li {
 		list-style: none;
 		padding: 0;
