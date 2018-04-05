@@ -52,7 +52,6 @@
 
 // Home CoA
 .header--logo-coa {
-	width: 100%;
 	@include AU-space( max-width, 14unit );
 
 	.header--home & {
