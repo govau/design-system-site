@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Header rationale
+pagetitle: Header code
 
 header:
   - /_shared/header.md

@@ -58,6 +58,7 @@ const Live = ({ _ID, _parents, _pages, _relativeURL, _parseYaml, pagetitle, exam
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }} />
 		<body className="live-demo au-body au-grid">
+			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Z7S8GB" height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe></noscript>
 			<header className="au-header">
 				<div className="container-fluid">
 					<div className="row">

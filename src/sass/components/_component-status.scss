@@ -98,15 +98,6 @@ $color-status--suggestion-gradient-end:   $AU-color-background-alt-shade;
 	}
 }
 
-.componentheader__headling {
-	.version {
-		display: inline-block;
-		@include AU-fontgrid( md );
-		@include AU-space( margin-left, 1unit );
-		color: $color-status--published-text;
-	}
-}
-
 .component-status {
 	&.component-status--inprogress  {
 		.component-status__title {

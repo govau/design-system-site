@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Breadcrumbs rationale
+pagetitle: Breadcrumbs code
 
 header:
   - /_shared/header.md
