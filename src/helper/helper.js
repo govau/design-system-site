@@ -25,22 +25,6 @@ const Fs = require(`fs`);
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
 // FUNCTIONS
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
-/**
- * Display headline
- *
- * @param  {string} text - The text to be displayed
- */
-const Headline = ( text ) => {
-	CFonts.say( text, {
-		font: 'chrome',
-		space: false,
-		align: 'center',
-		colors: ['cyan', 'white', 'cyan'],
-	});
-	console.log(`\n`);
-};
-
-
 const Tick = ( text ) => {
 	console.log( Chalk.green(`    ✔ ︎ ${ text }`) );
 };
@@ -350,7 +334,7 @@ const WriteStats = async ( DATA ) => {
 
 		Fs.writeFileSync( Path.normalize(`${ __dirname }/../../content/_data.yml`), DATAstring, `utf-8` );
 
-		Tick('Written _data.yml file');
+		Tick( 'Generated /content/_data.yml file' );
 	}
 	catch( error ) {
 		Error( error );
@@ -369,14 +353,17 @@ const DATA = EncodeYAML( Fs.readFileSync( Path.normalize(`${ __dirname }/../../c
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
 // CLI
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
-CFonts.say( 'Design System', {
+CFonts.say( 'AU : DS', {
 	align: 'center',
-	colors: [ 'cyan', 'blue', 'cyan' ],
+	colors: [ 'cyan', 'yellow' ],
+});
+CFonts.say( 'Australian Government Design System', {
+	font: 'console',
+	align: 'center',
+	colors: [ 'cyan' ],
 });
 
 if( process.argv.indexOf( 'components' ) !== -1 ) {
-	Headline( 'Generating components YAML file' );
-
 	GenerateComponents( UIKIT, COMPONENTS );
 	CheckComponents( UIKIT, COMPONENTS );
 	WriteStats( DATA );
