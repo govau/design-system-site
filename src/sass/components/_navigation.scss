@@ -93,6 +93,10 @@
 				border-color: $AU-colordark-foreground-action;
 			}
 		}
+
+		.header--home & {
+			@include AU-space( padding-top, 4unit );
+		}
 	}
 }
 

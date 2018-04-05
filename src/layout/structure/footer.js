@@ -9,12 +9,12 @@ import React from 'react';
  * The gov.au footer
  */
 const Footer = ({ headline, legallist, mainlist, _body, _ID, _relativeURL }) => (
-	<AUfooter dark className="footer">
+	<AUfooter dark className="footer au-body au-body--dark">
 
 		<div className="container-fluid">
 
 				<div className="row">
-					<div className="col-md-offset-1 col-md-8 col-md-push-3 au-body au-body--dark">
+					<div className="col-md-offset-1 col-md-8 col-md-push-3">
 						<AUheading size="md" level="2">{ headline }</AUheading>
 
 						<AUlinkList items={ mainlist } inline/>
@@ -31,7 +31,14 @@ const Footer = ({ headline, legallist, mainlist, _body, _ID, _relativeURL }) => 
 
 
 					<div className="col-md-3 col-md-pull-9 footer__logo">
-						<a href="http://dta.gov.au"><img className="footer__image" src={ _relativeURL( '/assets/img/footer-logo-dta.png', _ID ) } alt="Digital Transformation Agency" title="Digital Transformation Agency"/></a>
+						<p className="footer__affiliate">
+							<span>An initiative of the </span>
+							<span>Digital Transformation Agency </span>
+							<span className="footer__affiliate-link">
+								<a href="https://www.dta.gov.au/">More projects</a>
+							</span>
+						</p>
+						{/* <a href="http://dta.gov.au"><img className="footer__image" src={ _relativeURL( '/assets/img/footer-logo-dta.png', _ID ) } alt="Digital Transformation Agency" title="Digital Transformation Agency"/></a> */}
 					</div>
 
 				</div>

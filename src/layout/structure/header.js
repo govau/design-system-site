@@ -7,7 +7,7 @@ import PropTypes           from 'prop-types';
 /**
  * The header component
  */
-const Header = ({ title, mainmenu, header_govau, _relativeURL, _ID, _pages, _body }) => (
+const Header = ({ title, title_badge, mainmenu, header_govau, _relativeURL, _ID, _pages, _body }) => (
 	<div className="header-wrapper">
 		<AUskipLink links={[
 			{
@@ -26,22 +26,37 @@ const Header = ({ title, mainmenu, header_govau, _relativeURL, _ID, _pages, _bod
 				<div className="container-fluid">
 					<div className="row">
 						<div className="col-md-12">
+
+							{/* If statement for Home / Content Page */}
 							{
 								_ID === 'index'
-									? <p className="header__logo--coa">The Australian Government coat of Arms</p>
-									: null
+									? <Fragment>
+											<div className="header__logo-wrapper">
+												<img className="header--logo-coa" src={ _relativeURL( '/assets/img/header-logo-agov.png', _ID ) } alt="The Australian Government coat of Arms"/>
+												<h1 className="header__title">{ title } {/* <- Space here is intentional */
+														title_badge
+															? <span className="header__badge"> { title_badge }</span>
+															: null
+													}
+												</h1>
+											</div>
+											<div className="header__blurb au-body au-body--dark">
+												<div className="header__blurb--content">{ _body }</div>
+											</div>
+										</Fragment>
+
+									: <Fragment>
+											<a href={ _relativeURL( '/', _ID ) } className="header__logo-wrapper">
+												<img className="header--logo-coa" src={ _relativeURL( '/assets/img/header-logo-agov.png', _ID ) } alt="The Australian Government coat of Arms"/>
+												<h1 className="header__title">{ title } {/* <- Space here is intentional */
+														title_badge
+															? <span className="header__badge">{ title_badge }</span>
+															: null
+													}
+												</h1>
+											</a>
+										</Fragment>
 							}
-							<div className="header__logo-wrapper">
-								<a href={ _relativeURL( '/', _ID ) } className="header__logo">
-									{
-										_ID === 'index'
-											? null
-											: <p className="header__logo--coa">The Australian Government coat of Arms</p>
-									}
-									<h1 className="header__title au-display-md">{ title }</h1>
-								</a>
-								{ _body }
-							</div>
 
 							<button id="mainmenu-toggle"
 								className="mainmenu-toggle au-btn au-btn--tertiary au-btn--dark au-btn--block icon au-accordion--closed"
@@ -49,6 +64,7 @@ const Header = ({ title, mainmenu, header_govau, _relativeURL, _ID, _pages, _bod
 								aria-expanded="false"
 								aria-selected="false"
 								role="tab">Open menu</button>
+
 						</div>
 					</div>
 				</div>
@@ -73,9 +89,13 @@ const Header = ({ title, mainmenu, header_govau, _relativeURL, _ID, _pages, _bod
 
 Header.propTypes = {
 	/**
-	 * title: Government Open Language for Design
+	 * title: Design System
 	 */
 	title: PropTypes.node.isRequired,
+	/**
+	 * title_badge: Beta
+	 */
+	title_badge: PropTypes.node,
 };
 
 Header.defaultProps = {};
