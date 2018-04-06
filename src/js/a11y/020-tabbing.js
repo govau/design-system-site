@@ -45,15 +45,12 @@ function Tab() {
 	var items = document.querySelectorAll( '.js-focus-me' );
 	var loop = 0;
 
-	items[ loop ].focus();
-	loop ++;
-
 	return setInterval( function() {
 		items[ loop ].focus();
 		loop ++;
 
 		if( loop >= items.length ) {
-			loop = 0;
+			StopTab( interval, document.querySelector( '.js-tabbing-switch' ) );
 		}
 	}, 1000 );
 }
@@ -66,4 +63,5 @@ function StopTab( interval, $this ) {
 	RemoveClass( $this, 'is-on' );
 	$this.innerText = 'Show tabbing';
 	clearInterval( interval );
+	$this.focus();
 }

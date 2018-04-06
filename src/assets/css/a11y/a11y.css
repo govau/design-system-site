@@ -19,7 +19,7 @@ body {
 	-moz-appearance: none;
 	appearance: none;
 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
-	color: #815d00;
+	color: #007099;
 	background-color: #fff;
 	cursor: pointer;
 	vertical-align: middle;
@@ -35,8 +35,13 @@ body {
 	margin-bottom: -0.25rem;
 }
 
+.a11y-button:focus {
+	outline: 3px solid #9263DE;
+	outline-offset: 2px;
+}
+
 .a11y-button.is-active {
-	border-color: #815D00;
+	border-color: #007099;
 }
 
 .a11y-button.a11y-button--soft {
