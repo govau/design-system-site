@@ -72,6 +72,7 @@ const Header = ({ title, title_badge, mainmenu, header_govau, _relativeURL, _ID,
 			<div
 				aria-hidden="true"
 				id="mainmenu"
+				tabIndex="0"
 				className="mainmenu au-body au-body--dark au-accordion__body au-accordion--closed">
 				<div className="container-fluid">
 					<div className="row">
