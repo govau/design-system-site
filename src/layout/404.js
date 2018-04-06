@@ -64,7 +64,7 @@ const Page = ({
 			{ header }
 			<div className="page-wrapper">
 				<div className="content-wrapper">
-					<main id="content" className="main au-body container-fluid">
+					<main tabIndex="0" id="content" className="main au-body container-fluid">
 						<div className="row">
 							<div className="col-md-12">
 								<h1 className={
