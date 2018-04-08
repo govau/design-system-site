@@ -56,8 +56,8 @@ $color-status--suggestion-gradient-end:   $AU-color-background-alt-shade;
 	}
 
 	.avatar {
-		@include AU-space( margin-right, 0.25unit );
-		@include AU-space( margin-bottom, 0.25unit );
+		@include AU-space( margin-left, -0.25unit );
+		@include AU-space( margin-right, -0.25unit );
 	}
 
 	.component-status__title {
@@ -160,17 +160,40 @@ $color-status--suggestion-gradient-end:   $AU-color-background-alt-shade;
 	& > li:first-child {
 		margin-left: 0;
 	}
+
+	&.component-status__definition__list--images {
+		@include AU-clearfix;
+
+		& > li {
+			position: relative;
+			float: left;
+
+			&:hover {
+				z-index: 10;
+			}
+		}
+	}
 }
 
 
 
 .component-status__definition__list__more {
+	margin-left: 1em;
+	width: 2.4em;
+	height: 2.4em;
+	padding: 0;
+	position: relative;
+	top: 2px;
+	border-radius: 100%;
 	appearance: none;
+	text-align: center;
 	background: transparent;
-	border: none;
+	color: $AU-color-foreground-action;
+	border: 2px solid $AU-color-foreground-action;
 	box-shadow: none;
 	cursor: pointer;
-	text-decoration: underline;
+	font-size: 12px;
+	display: block;
 
 	&.is-hidden {
 		display: none;
@@ -178,6 +201,9 @@ $color-status--suggestion-gradient-end:   $AU-color-background-alt-shade;
 
 	&:hover {
 		text-decoration: none;
+		text-decoration: underline;
+		color: $AU-color-foreground-text;
+		border-color: $AU-color-foreground-border;
 	}
 
 	@include AU-focus();

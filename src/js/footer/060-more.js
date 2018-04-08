@@ -6,7 +6,11 @@ for( var i = 0; i < wrapper.length; i++ ) {
 	if( contributors > 4 ) {
 		wrapper[ i ].insertAdjacentHTML(
 			'beforeend',
-			'<li><button type="button" class="component-status__definition__list__more js-more">+' + ( contributors - 4 ) + '</button></li>'
+			'<li>' +
+				'<button type="button" class="component-status__definition__list__more js-more">' +
+					'<span class="sronly">View </span> +' + ( contributors - 4 ) + '<span class="sronly"> more contributors</span>' +
+				'</button>' +
+			'</li>'
 		);
 		AddClass( wrapper[ i ], 'is-small' );
 	}
