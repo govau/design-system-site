@@ -1,17 +1,20 @@
 .avatar {
+	border: 2px solid #fff;
 	overflow: hidden;
 	display: inline-block;
 	vertical-align: middle;
-	width: 2em;
-	height: 2em;
 	border-radius: 100%;
-	background-color: $AU-color-background-alt; // image loading placeholder
+	background-color: $AU-color-background-alt;
+	position: relative;
+	display: block;
 
 	img {
-		max-width: 100%;
+		max-width: 2em;
+		display: block;
 	}
 
-	&:hover {
-		opacity: 0.5;
+	&:hover img {
+		opacity: 0.8;
+		z-index: 10;
 	}
 }

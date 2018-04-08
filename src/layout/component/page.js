@@ -1,6 +1,8 @@
 import Navigation      from './../navigation';
 import ComponentHeader from './header';
 import ComponentFooter from './footer';
+import AUskipLink      from '../../_uikit/layout/skip-link';
+
 
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
@@ -88,9 +90,16 @@ const ComponentPage = ({
 							<div className="col-md-3 sidebar">
 								{ sidebar }
 							</div>
-							<div id="content" className="col-md-9 content">
+							<div id="content" tabIndex="-1" className="col-md-9 content">
 								{
-									showheader && <Fragment>
+									showheader &&
+									<Fragment>
+										<AUskipLink links={[
+											{
+												link: '#component-documentation',
+												text: `Skip to ${ pagetitle }`,
+											},
+										]} />
 										<ComponentHeader
 											_relativeURL={ _relativeURL }
 											_parseYaml={ _parseYaml }
@@ -103,7 +112,9 @@ const ComponentPage = ({
 										{ component_nav }
 									</Fragment>
 								}
-								{ main }
+								<div tabIndex="-1" className="componentdocumentation" id="component-documentation">
+									{ main }
+								</div>
 								{
 									showheader && <ComponentFooter _ID={ _ID } _parseYaml={ _parseYaml } _relativeURL={ _relativeURL } _pages={ _pages } _parents= { _parents } />
 								}
