@@ -91,14 +91,15 @@ const ComponentPage = ({
 								{ sidebar }
 							</div>
 							<div id="content" tabIndex="0" className="col-md-9 content">
-								<AUskipLink links={[
-									{
-										link: '#component-documentation',
-										text: `Skip to ${ pagetitle }`,
-									},
-								]} />
 								{
-									showheader && <Fragment>
+									showheader &&
+									<Fragment>
+										<AUskipLink links={[
+											{
+												link: '#component-documentation',
+												text: `Skip to ${ pagetitle }`,
+											},
+										]} />
 										<ComponentHeader
 											_relativeURL={ _relativeURL }
 											_parseYaml={ _parseYaml }
