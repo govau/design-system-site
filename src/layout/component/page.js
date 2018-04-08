@@ -90,7 +90,7 @@ const ComponentPage = ({
 							<div className="col-md-3 sidebar">
 								{ sidebar }
 							</div>
-							<div id="content" tabIndex="0" className="col-md-9 content">
+							<div id="content" tabIndex="-1" className="col-md-9 content">
 								{
 									showheader &&
 									<Fragment>
@@ -112,7 +112,7 @@ const ComponentPage = ({
 										{ component_nav }
 									</Fragment>
 								}
-								<div tabIndex="0" className="componentdocumentation" id="component-documentation">
+								<div tabIndex="-1" className="componentdocumentation" id="component-documentation">
 									{ main }
 								</div>
 								{
