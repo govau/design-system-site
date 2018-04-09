@@ -302,7 +302,6 @@ const WriteStats = async ( DATA ) => {
 		Tick('Got pancake download data');
 
 		let downloadAllPancake = 0;
-
 		downloadPancakes.map( module => {
 			DATA.pancake.modules[ module.name ] = module.download;
 			downloadAllPancake += module.download;
