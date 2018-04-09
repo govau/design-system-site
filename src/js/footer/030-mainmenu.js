@@ -3,7 +3,7 @@ var overlay         = document.getElementById( 'overlay' );
 
 var focustrapTop    = document.getElementById( 'focustrap-top' );
 var focustrapBottom = document.getElementById( 'focustrap-bottom' );
-var mainmenuLinks   = document.querySelectorAll( '.header a' );
+var mainmenuLinks   = document.querySelectorAll( '.header a, .header button' );
 
 
 function ToggleMenu() {
