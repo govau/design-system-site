@@ -1,3 +1,4 @@
+var mainmenu        = document.getElementById( 'mainmenu' );
 var mainmenuToggle  = document.getElementById( 'mainmenu-toggle' );
 var overlay         = document.getElementById( 'overlay' );
 
@@ -48,3 +49,29 @@ AddEvent( focustrapBottom, 'focus', function( event ) {
 	PreventEvent( event );
 	mainmenuLinks[ 0 ].focus();
 });
+
+
+var MenuAriaHiddenCheck = function() {
+	var currentMenuDisplay = window.getComputedStyle( mainmenu, null ).getPropertyValue( 'display' );
+
+	if( currentMenuDisplay === 'none' ){
+		mainmenu.setAttribute( "aria-hidden", "true" );
+	}
+	else {
+		mainmenu.setAttribute( "aria-hidden", "false" );
+	}
+};
+
+// Run on page load
+MenuAriaHiddenCheck();
+
+
+// Run functions after a debounced resize
+var PageResize = Debounce(function() {
+	MenuAriaHiddenCheck();
+}, 250);
+
+// Run PageResize function on resize
+window.onresize = function() {
+	PageResize();
+}
