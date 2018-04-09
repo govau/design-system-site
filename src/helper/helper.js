@@ -222,7 +222,20 @@ const FetchDownloads = ( modules ) => {
 
 		Promise.all( promises )
 			.catch( error => reject( error ) )
-			.then( allDownloads => resolve( data ) );
+			.then( unsortedDownloads => {
+				// Sort the downloads before returning
+				const sortedDownloads = data.sort( ( a, b ) => {
+					if( a.name < b.name ) {
+						return -1
+					}
+					else if( a.name > b.name ) {
+						return 1
+					};
+					return 0;
+				});
+
+				resolve( sortedDownloads )
+			});
 	});
 };
 
@@ -293,7 +306,8 @@ const WriteStats = async ( DATA ) => {
 		Tick('Got pancake download data');
 
 		let downloadAllPancake = 0;
-		downloadPancakes.map( module => {
+
+		downloadPancakes.sort().map( module => {
 			DATA.pancake.modules[ module.name ] = module.download;
 			downloadAllPancake += module.download;
 		});
@@ -368,3 +382,6 @@ if( process.argv.indexOf( 'components' ) !== -1 ) {
 	CheckComponents( UIKIT, COMPONENTS );
 	WriteStats( DATA );
 }
+
+WriteStats( DATA );
+
