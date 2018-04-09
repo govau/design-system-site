@@ -303,7 +303,7 @@ const WriteStats = async ( DATA ) => {
 
 		let downloadAllPancake = 0;
 
-		downloadPancakes.sort().map( module => {
+		downloadPancakes.map( module => {
 			DATA.pancake.modules[ module.name ] = module.download;
 			downloadAllPancake += module.download;
 		});
@@ -378,6 +378,3 @@ if( process.argv.indexOf( 'components' ) !== -1 ) {
 	CheckComponents( UIKIT, COMPONENTS );
 	WriteStats( DATA );
 }
-
-WriteStats( DATA );
-
