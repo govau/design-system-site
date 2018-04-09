@@ -222,7 +222,16 @@ const FetchDownloads = ( modules ) => {
 
 		Promise.all( promises )
 			.catch( error => reject( error ) )
-			.then( allDownloads => resolve( data ) );
+			.then( unsortedDownloads => {
+				// Sort the downloads before returning
+				const sortedDownloads = data.sort( ( a, b ) => {
+					if( a.name < b.name ) return -1;
+					if( a.name > b.name ) return 1;
+					return 0;
+				});
+
+				resolve( sortedDownloads )
+			});
 	});
 };
 
