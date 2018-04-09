@@ -51,27 +51,30 @@ AddEvent( focustrapBottom, 'focus', function( event ) {
 });
 
 
-var MenuAriaHiddenCheck = function() {
-	var currentMenuDisplay = window.getComputedStyle( mainmenu, null ).getPropertyValue( 'display' );
+if ( mainmenu ){
+	var MenuAriaHiddenCheck = function() {
+		var currentMenuDisplay = window.getComputedStyle( mainmenu, '' ).getPropertyValue( 'display' );
 
-	if( currentMenuDisplay === 'none' ){
-		mainmenu.setAttribute( "aria-hidden", "true" );
-	}
-	else {
-		mainmenu.setAttribute( "aria-hidden", "false" );
-	}
-};
+		if( currentMenuDisplay === 'none' ){
+			mainmenu.setAttribute( "aria-hidden", "true" );
+		}
+		else {
+			mainmenu.setAttribute( "aria-hidden", "false" );
+		}
+	};
 
-// Run on page load
-MenuAriaHiddenCheck();
-
-
-// Run functions after a debounced resize
-var PageResize = Debounce(function() {
+	// Run on page load
 	MenuAriaHiddenCheck();
-}, 250);
 
-// Run PageResize function on resize
-window.onresize = function() {
-	PageResize();
+
+	// Run functions after a debounced resize
+	var PageResize = Debounce(function() {
+		MenuAriaHiddenCheck();
+	}, 250);
+
+	// Run PageResize function on resize
+	window.onresize = function() {
+		PageResize();
+	}
 }
+
