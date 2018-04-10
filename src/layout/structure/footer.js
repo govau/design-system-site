@@ -1,4 +1,4 @@
-import AUfooter, { AUfooterEnd } from '../../_uikit/layout/footer';
+import AUfooter from '../../_uikit/layout/footer';
 import AUlinkList from '../../_uikit/layout/link-list';
 import AUheading from '../../_uikit/layout/headings';
 import PropTypes from 'prop-types';
@@ -21,11 +21,11 @@ const Footer = ({ headline, legallist, mainlist, _body, _ID, _relativeURL }) => 
 
 						<AUlinkList items={ legallist } className="footer__legal-links" />
 
-						<AUfooterEnd>
+						<div className="au-footer__end">
 							<div className="footer__content footer__legal">
 								{ _body }
 							</div>
-						</AUfooterEnd>
+						</div>
 
 					</div>
 
