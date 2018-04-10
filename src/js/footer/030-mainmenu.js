@@ -5,6 +5,7 @@ var overlay         = document.getElementById( 'overlay' );
 var focustrapTop    = document.getElementById( 'focustrap-top' );
 var focustrapBottom = document.getElementById( 'focustrap-bottom' );
 var mainmenuLinks   = document.querySelectorAll( '.header a, .header button' );
+var navSkipLink     = document.querySelectorAll( '.au-skip-link__link[href="#mainmenu"]' )[ 0 ];
 
 
 function ToggleMenu() {
@@ -52,7 +53,7 @@ AddEvent( focustrapBottom, 'focus', function( event ) {
 
 
 if ( mainmenu ){
-	var MenuAriaHiddenCheck = function() {
+	var MenuCheck = function() {
 		var currentMenuDisplay = window.getComputedStyle( mainmenu, '' ).getPropertyValue( 'display' );
 
 		if( currentMenuDisplay === 'none' ){
@@ -63,13 +64,26 @@ if ( mainmenu ){
 		}
 	};
 
+	var SkipLinkCheck = function() {
+		var mobileMenuDisplay = window.getComputedStyle( mainmenuToggle, '' ).getPropertyValue( 'display' );
+
+		if( mobileMenuDisplay === 'none' ){
+			navSkipLink.setAttribute( "href", "#mainmenu" );
+		}
+		else {
+			navSkipLink.setAttribute( "href", "#mainmenu-toggle" );
+		}
+	}
+
 	// Run on page load
-	MenuAriaHiddenCheck();
+	MenuCheck();
+	SkipLinkCheck();
 
 
 	// Run functions after a debounced resize
 	var PageResize = Debounce(function() {
-		MenuAriaHiddenCheck();
+		MenuCheck();
+		SkipLinkCheck();
 	}, 250);
 
 	// Run PageResize function on resize
