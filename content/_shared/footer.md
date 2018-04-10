@@ -5,7 +5,7 @@ mainlist:
   - text: Forums
     link: https://community.service.gov.au/c/designsystem
   - text: Roadmap
-    link: https://github.com/govau/uikit/projects/
+    link: https://github.com/orgs/govau/projects/7?fullscreen=true
   - text: Github
     link: https://github.com/govau/uikit/
 legallist:
