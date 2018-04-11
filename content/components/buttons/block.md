@@ -4,6 +4,11 @@ example: examples/example-block
 headline: Block
 code:
   - HTML: |
+      <!--
+        Light:  <div class="au-btn au-btn--block">
+        Dark:   <div class="au-btn au-btn--block au-btn--dark">
+      -->
+
       <button class="au-btn au-btn--block">
         Primary block button
       </button>
@@ -16,6 +21,11 @@ code:
         Tertiary block button
       </button>
   - React: |
+      /*
+        Light:  <AUbutton disabled block>
+        Dark:   <AUbutton disabled block dark>
+      */
+
       import AUbutton from '@gov.au/buttons';
 
       <AUbutton secondary>

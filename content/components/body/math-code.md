@@ -4,6 +4,13 @@ example: examples/example-math-code
 headline: Mathematics and code
 code:
   - HTML: |
+      <!--
+        Light:      <div class="au-body">
+        Light Alt:  <div class="au-body au-body--alt">
+        Dark:       <div class="au-body au-body--dark">
+        Dark Alt:   <div class="au-body au-body--dark au-body--alt">
+      -->
+
       <div class="au-body">
         <var>Variable</var>
         <sup>Superscript</sup>

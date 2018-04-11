@@ -4,6 +4,11 @@ example: examples/example-default
 headline: Default
 code:
   - HTML: |
+      <!--
+        Light:  <footer class="au-footer">
+        Dark:   <footer class="au-footer au-footer--dark">
+      -->
+
       <div class="au-body">
         <footer class="au-footer" role="contentinfo">
           <nav class="au-footer__navigation">
@@ -16,6 +21,11 @@ code:
         </footer>
       </div>
   - React: |
+      /*
+        Light:  <AUfooter>
+        Dark:   <AUfooter dark>
+      */
+
       import AUfooter, { AUfooterNav, AUfooterEnd } from '@gov.au/footer';
 
       <AUfooter>

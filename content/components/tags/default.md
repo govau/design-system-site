@@ -4,6 +4,11 @@ example: examples/example-default
 headline: Tags using definition list
 code:
   - HTML: |
+      <!--
+        Light:  <dl class="au-tags">
+        Dark:   <dl class="au-tags au-tags--dark">
+      -->
+
       <dl class="au-tags">
         <dt>Tags:</dt>
           <dd><a href="#">foo</a></dd>
@@ -11,6 +16,11 @@ code:
           <dd><a href="#">baz</a></dd>
       </dl>
   - React: |
+      /*
+        Light:  <AUtags tags={[
+        Dark:   <AUtags dark tags={[
+      */
+
       import AUtags from '@gov.au/tags';
 
       <AUtags tags={[

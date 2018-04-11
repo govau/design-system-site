@@ -4,6 +4,11 @@ example: examples/example-default
 headline: Default
 code:
   - HTML: |
+      <!--
+        Light:  <nav class="au-breadcrumbs" aria-label="breadcrumb">
+        Dark:   <nav class="au-breadcrumbs au-breadcrumbs--dark" aria-label="breadcrumb">
+      -->
+
       <nav class="au-breadcrumbs" aria-label="breadcrumb">
         <ul class="au-link-list au-link-list--inline">
           <li><a href="#">Home</a></li>
@@ -12,6 +17,11 @@ code:
         </ul>
       </nav>
   - React: |
+      /*
+        Light:  <AUbreadcrumbs>
+        Dark:   <AUbreadcrumbs dark>
+      */
+
       import AUbreadcrumbs from '@gov.au/breadcrumbs';
 
       <AUbreadcrumbs label="Breadcrumb for this page"
