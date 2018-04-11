@@ -4,6 +4,11 @@ example: examples/example-disabled
 headline: Disabled
 code:
   - HTML: |
+      <!--
+        Light:  <div class="au-btn" disabled>
+        Dark:   <div class="au-btn au-btn--dark" disabled>
+      -->
+
       <button class="au-btn" disabled>
         Disabled button
       </button>
@@ -16,6 +21,11 @@ code:
         Disabled tertiary button
       </button>
   - React: |
+      /*
+        Light:  <AUbutton disabled>
+        Dark:   <AUbutton disabled dark>
+      */
+
       import AUbutton from '@gov.au/buttons';
 
       <AUbutton disabled>

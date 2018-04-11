@@ -4,6 +4,11 @@ example: examples/example-default
 headline: Default
 code:
   - HTML: |
+      <!--
+        Light:  Inherited from .au-body
+        Dark:   Inherited from .au-body.au-body--dark
+      -->
+
       <ul class="au-link-list">
         <li><a href="#">Options</a></li>
         <li><a href="#">Help</a></li>

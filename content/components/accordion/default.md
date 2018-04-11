@@ -4,6 +4,11 @@ example: examples/example-default
 headline: Default
 code:
   - HTML: |
+      <!--
+        Light:  <section class="au-accordion">
+        Dark:   <section class="au-accordion au-accordion--dark">
+      -->
+
       <section class="au-accordion">
         <a href="#accordion-default" class="au-accordion__title js-au-accordion" aria-controls="accordion-default" aria-expanded="true" aria-selected="true" role="tab" onclick="return AU.accordion.Toggle( this )">
           Accordion title
@@ -16,6 +21,11 @@ code:
         </div>
       </section>
   - React: |
+      /*
+        Light:  <Accordion header="Accordion title">
+        Dark:   <Accordion header="Accordion title" dark>
+      */
+
       import AUaccordion from '@gov.au/accordion';
 
       <AUaccordion header="Accordion title">

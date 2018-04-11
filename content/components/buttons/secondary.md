@@ -4,10 +4,20 @@ example: examples/example-secondary
 headline: Secondary
 code:
   - HTML: |
+      <!--
+        Light:  <div class="au-btn au-btn--secondary">
+        Dark:   <div class="au-btn au-btn--secondary au-btn--dark">
+      -->
+
       <button class="au-btn au-btn--secondary">
         Secondary button
       </button>
   - React: |
+      /*
+        Light:  <AUbutton as='secondary'>
+        Dark:   <AUbutton as='secondary' dark>
+      */
+
       import AUbutton from '@gov.au/buttons';
 
       <AUbutton as='secondary'>
