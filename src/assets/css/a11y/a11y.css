@@ -69,3 +69,8 @@ body {
 		display: block;
 	}
 }
+
+
+.svg-filter {
+	display: none;
+}
