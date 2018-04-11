@@ -76,3 +76,13 @@ function Debounce( runThisFunction, wait, immediate ) {
 function PreventEvent( event ) {
 	event.preventDefault ? event.preventDefault() : ( event.returnValue = false );
 }
+
+
+// Get elements style
+function GetStyle( element, property ) {
+	return (
+		typeof getComputedStyle !== 'undefined'
+			? getComputedStyle( element, null)
+			: element.currentStyle
+	)[ property ]; // avoid getPropertyValue altogether
+}

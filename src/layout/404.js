@@ -78,9 +78,6 @@ const Page = ({
 				</div>
 				{ footer }
 			</div>
-			{
-				_ID === 'download' ? <script src="/assets/js/prism.js" /> : null
-			}
 			<script src="/assets/js/footer.js" />
 		</body>
 		</html>

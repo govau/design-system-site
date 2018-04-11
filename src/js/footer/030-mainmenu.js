@@ -54,7 +54,8 @@ AddEvent( focustrapBottom, 'focus', function( event ) {
 
 if ( mainmenu ){
 	var MenuCheck = function() {
-		var currentMenuDisplay = window.getComputedStyle( mainmenu, '' ).getPropertyValue( 'display' );
+		var currentMenuDisplay = GetStyle( mainmenu, 'display' );
+		var mobileMenuDisplay  = GetStyle( mainmenuToggle, 'display' );
 
 		if( currentMenuDisplay === 'none' ){
 			mainmenu.setAttribute( "aria-hidden", "true" );
@@ -62,10 +63,6 @@ if ( mainmenu ){
 		else {
 			mainmenu.setAttribute( "aria-hidden", "false" );
 		}
-	};
-
-	var SkipLinkCheck = function() {
-		var mobileMenuDisplay = window.getComputedStyle( mainmenuToggle, '' ).getPropertyValue( 'display' );
 
 		if( mobileMenuDisplay === 'none' ){
 			navSkipLink.setAttribute( "href", "#mainmenu" );
@@ -73,17 +70,14 @@ if ( mainmenu ){
 		else {
 			navSkipLink.setAttribute( "href", "#mainmenu-toggle" );
 		}
-	}
+	};
 
 	// Run on page load
 	MenuCheck();
-	SkipLinkCheck();
-
 
 	// Run functions after a debounced resize
 	var PageResize = Debounce(function() {
 		MenuCheck();
-		SkipLinkCheck();
 	}, 250);
 
 	// Run PageResize function on resize
