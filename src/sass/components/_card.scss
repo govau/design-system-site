@@ -91,6 +91,7 @@ a.au-card {
 		}
 	}
 
+	.au-card__title,
 	.au-card__link,
 	.au-card__cta {
 		color: $AU-color-foreground-action;
@@ -98,9 +99,12 @@ a.au-card {
 		text-decoration-skip: ink;
 	}
 
-	&:hover .au-card__link {
-		text-decoration: none;
-		color: $AU-color-foreground-text;
+	&:hover {
+		.au-card__title,
+		.au-card__link {
+			text-decoration: none;
+			color: $AU-color-foreground-text;
+		}
 	}
 }
 
