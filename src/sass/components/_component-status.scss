@@ -58,6 +58,10 @@ $color-status--suggestion-gradient-end:   $AU-color-background-alt-shade;
 	.avatar {
 		@include AU-space( margin-left, -0.25unit );
 		@include AU-space( margin-right, -0.25unit );
+
+		.lt-ie9 & {
+			margin: 0;
+		}
 	}
 
 	.component-status__title {

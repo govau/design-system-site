@@ -52,8 +52,9 @@ const CodeDemo = ({ headline, example, iframe, code, _body, _ID, _parseMD, _rela
 													code && code.map( ( section, i ) => (
 														<li key={ i } className={ i === 0 ? 'tab-item--active' : '' }>
 															<a
-																data={ 'boop' }
 																href={`#${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }-${ Slugify( headline ).toLowerCase() }`}
+																aria-controls={`${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }-${ Slugify( headline ).toLowerCase() }`}
+																role="tab"
 															>
 																{ Object.keys( section )[ 0 ] }
 															</a>
@@ -69,6 +70,7 @@ const CodeDemo = ({ headline, example, iframe, code, _body, _ID, _parseMD, _rela
 														className={ `tab-content ${ i === 0 ? 'tab-content--active' : '' }` }
 														key={ i }
 														tabIndex="-1"
+														role="tabpanel"
 														id={ `${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }-${ Slugify( headline ).toLowerCase() }` }
 													>
 														<Code language={

@@ -6,10 +6,10 @@
 	border-radius: 100%;
 	background-color: $AU-color-background-alt;
 	position: relative;
-	display: block;
+	width: 2em;
 
 	img {
-		max-width: 2em;
+		max-width: 100%;
 		display: block;
 	}
 

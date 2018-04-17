@@ -6,8 +6,12 @@ if( filters !== null ) {
 	filters.insertAdjacentHTML(
 		'afterbegin',
 		'<div class="bar">' +
-		'<button type="button" class="a11y-button js-filter-btn' + ( active == 'deuteranopia' ? ' is-active' : '' ) + '" data-filter="deuteranopia">Deuteranopia</button>' +
-		'<button type="button" class="a11y-button js-filter-btn' + ( active == 'tritanopia' ? ' is-active' : '' ) + '" data-filter="tritanopia">Tritanopia</button>' +
+		'<button type="button" class="a11y-button js-filter-btn' + ( active == 'deuteranopia' ? ' is-active' : '' ) + '" data-filter="deuteranopia">' +
+			'<span class="sronly">Apply </span>Deuteranopia<span class="sronly"> color filter</span>' +
+		'</button>' +
+		'<button type="button" class="a11y-button js-filter-btn' + ( active == 'tritanopia' ? ' is-active' : '' ) + '" data-filter="tritanopia">' +
+			'<span class="sronly">Apply </span>Tritanopia<span class="sronly"> color filter</span>' +
+		'</button>' +
 		'</div>'
 	);
 }
