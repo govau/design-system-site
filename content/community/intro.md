@@ -1,7 +1,7 @@
 ---
 layout: content/text-with-cta
 button:
-  link: https://community.service.gov.au/c/designsystem
+  link: https://community.digital.gov.au/c/designsystem
   text: Visit the forums
   type: secondary
   icon: community
