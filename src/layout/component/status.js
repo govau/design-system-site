@@ -115,7 +115,7 @@ const ComponentStatus = ({ module, _ID, _relativeURL, _parseYaml }) => {
 							<Fragment>
 								<dt>Get involved</dt>
 								<dd>
-									<a href={ `https://community.service.gov.au/t/${ module } `}>Discussion</a>,&nbsp;
+									<a href={ `https://community.digital.gov.au/t/${ module } `}>Discussion</a>,&nbsp;
 									<a href={ `https://github.com/govau/uikit/issues?q=is%3Aissue+is%3Aopen+${ module } `}>Issues</a>
 								</dd>
 							</Fragment>

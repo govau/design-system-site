@@ -3,7 +3,7 @@ layout: structure/footer
 headline: Community
 mainlist:
   - text: Forums
-    link: https://community.service.gov.au/c/designsystem
+    link: https://community.digital.gov.au/c/designsystem
   - text: Roadmap
     link: https://github.com/orgs/govau/projects/7?fullscreen=true
   - text: Github
