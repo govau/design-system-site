@@ -4,6 +4,11 @@ example: examples/example-default
 headline: Default
 code:
   - HTML: |
+      <!--
+        Light:  <nav class="au-inpage-nav-links">
+        Dark:   <nav class="au-inpage-nav-links au-inpage-nav-links--dark">
+      -->
+
       <nav class="au-inpage-nav-links">
         <h2 class="au-inpage-nav-links__heading">Contents</h2>
         <ul class="au-link-list">
@@ -24,6 +29,11 @@ code:
       </h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
   - React: |
+      /*
+        Light:  <AUinpageNavLinks>
+        Dark:   <AUinpageNavLinks dark>
+      */
+
       import { AUinpageNavLinks, AUinpageNavSection } from '@gov.au/inpage-nav';
 
       <AUinpageNavLinks sections={[

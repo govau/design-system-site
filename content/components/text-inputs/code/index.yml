@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Text inputs rationale
+pagetitle: Text inputs code
 
 header:
   - /_shared/header.md

@@ -4,6 +4,11 @@ example: examples/example-links
 headline: With links
 code:
   - HTML: |
+      <!--
+        Light:  <ul class="au-link-list au-keyword-list">
+        Dark:   <ul class="au-link-list au-keyword-list au-keyword-list--dark">
+      -->
+
       <ul class="au-keyword-list au-link-list">
         <li>
           <a href="#">
@@ -19,6 +24,11 @@ code:
         </li>
       </ul>
   - React: |
+      /*
+        Light:  <AUkeywordList repeatedName='repeated text'
+        Dark:   <AUkeywordList dark repeatedName='repeated text'
+      */
+
       import AUkeywordList from '@gov.au/keyword-list';
 
       <AUkeywordList repeatedName='Department of' items={[

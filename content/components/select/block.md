@@ -4,6 +4,11 @@ example: examples/example-block
 headline: Block
 code:
   - HTML: |
+      <!--
+        Light:  <select class="au-select au-select--block">
+        Dark:   <select class="au-select au-select--block au-select--dark">
+      -->
+
       <label for="select1block">What option?</label>
       <select id="select1block" class="au-select au-select--block">
         <option value="">Please select</option>
@@ -12,6 +17,11 @@ code:
         <option value="3">Option 3</option>
       </select>
   - React: |
+      /*
+        Light:  <AUselect block options={[
+        Dark:   <AUselect block dark options={[
+      */
+
       import AUselect from '@gov.au/select';
 
       <AUselect block id="select1block" options={[

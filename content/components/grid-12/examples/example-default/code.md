@@ -43,7 +43,7 @@
   	</div>
 
   	<div class="row">
-  		<div class="grids col-xs-12"><span>1</span></div>
+  		<div class="grids col-xs-12"><span>12</span></div>
   	</div>
   </div>
 </main>

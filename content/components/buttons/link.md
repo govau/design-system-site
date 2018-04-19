@@ -4,6 +4,11 @@ example: examples/example-link
 headline: Links as buttons
 code:
   - HTML: |
+      <!--
+        Light:  <a href="#" class="au-btn">
+        Dark:   <a href="#" class="au-btn au-btn--dark">
+      -->
+
       <a href="/buy-now" class="au-btn">
         Primary link button
       </a>
@@ -16,6 +21,11 @@ code:
         Tertiary link button
       </a>
   - React: |
+      /*
+        Light:  <AUbutton href="#">
+        Dark:   <AUbutton href="#" dark>
+      */
+
       import AUbutton from '@gov.au/buttons';
 
       <AUbutton href="buy-now">

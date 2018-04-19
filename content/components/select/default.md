@@ -4,6 +4,11 @@ example: examples/example-default
 headline: Default
 code:
   - HTML: |
+      <!--
+        Light:  <select class="au-select au-select--block">
+        Dark:   <select class="au-select au-select--block au-select--dark">
+      -->
+
       <label for="select1">What option?</label>
       <select id="select1" class="au-select">
         <option value="">Please select</option>
@@ -12,6 +17,11 @@ code:
         <option value="3">Option 3</option>
       </select>
   - React: |
+      /*
+        Light:  <AUselect options={[
+        Dark:   <AUselect dark options={[
+      */
+
       import AUselect from '@gov.au/select';
 
       <AUselect id="select1" options={[

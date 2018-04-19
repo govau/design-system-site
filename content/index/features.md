@@ -42,4 +42,4 @@ tiles:
     text: Empowered and driven by the community
 ---
 
-When you install a GOLD component you benefit from the shared efforts of a community dedicated to making government products and services better, faster, easier.
+When you install a design system component you benefit from the shared efforts of a community dedicated to making government products and services better, faster, easier.

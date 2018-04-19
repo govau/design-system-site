@@ -6,7 +6,7 @@ import React, { Fragment } from 'react';
 /**
  * The headergovau component
  */
-const HeaderGovAU = ({ menu, left_title, left_content, right_title, right_content }) => (
+const HeaderGovAU = ({ publisher, publisher_url, left_title, left_content, right_title, right_content }) => (
 	<div className="headergovau">
 		<div className="container-fluid">
 			<div className="row headergovau__bar">
@@ -20,17 +20,17 @@ const HeaderGovAU = ({ menu, left_title, left_content, right_title, right_conten
 						role="tab"
 						onClick="return AU.accordion.Toggle( this )"
 					>
-						<span className="headergovau__logo">
-							<svg className="headergovau__logo__svg" role="img" title="The Commonwealth Star">
-								<use xlinkHref="/assets/svg/map.svg#star" />
-							</svg>
-							<span className="headergovau__logo__text">GOV.AU</span>
+						<span className="headergovau__text">
+							<span className="headergovau__title">Australian Government&nbsp;</span>
+							<span className="headergovau__official">official website</span>
 						</span>
-						<span className="headergovau__official">An official site</span>
 					</a>
-					<AUlinkList inline items={ menu } />
+					<a href={ publisher_url } className="headergovau__publisher">
+						{ publisher }
+					</a>
 				</div>
 			</div>
+
 			<div
 				id="headergovau-accordion"
 				className="headergovau__content row au-accordion--closed au-accordion__body"
@@ -39,13 +39,13 @@ const HeaderGovAU = ({ menu, left_title, left_content, right_title, right_conten
 				<div className="au-accordion__body-wrapper">
 					<div className="col-sm-6">
 						<div className="headergovau__icon-content icon--govau">
-							<p className="headergovau__title">{ left_title }</p>
+							<p className="headergovau__content__title">{ left_title }</p>
 							<p>{ left_content }</p>
 						</div>
 					</div>
 					<div className="col-sm-6">
 						<div className="headergovau__icon-content icon--secure">
-							<p className="headergovau__title">{ right_title }</p>
+							<p className="headergovau__content__title">{ right_title }</p>
 							<p>{ right_content }</p>
 						</div>
 					</div>
@@ -56,6 +56,16 @@ const HeaderGovAU = ({ menu, left_title, left_content, right_title, right_conten
 );
 
 HeaderGovAU.propTypes = {
+	/**
+	 * publisher: dta.gov.au
+	 */
+	publisher: PropTypes.string.isRequired,
+
+	/**
+	 * publisher_url: https://dta.gov.au
+	 */
+	publisher_url: PropTypes.string.isRequired,
+
 	/**
 	 * left_title: The .gov.au means its official
 	 */

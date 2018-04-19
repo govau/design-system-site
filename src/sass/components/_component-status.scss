@@ -1,15 +1,15 @@
 // Unique Status Colors
 $color-status--published-text:            $AU-color-foreground-action;
-$color-status--published-gradient-start:  #BD952D;
-$color-status--published-gradient-end:    #FFE9B2;
+$color-status--published-gradient-start:  $AU-color-foreground-action;
+$color-status--published-gradient-end:    $AU-colordark-foreground-action;
 
-$color-status--inprogress-text:           #4e6062;
-$color-status--inprogress-gradient-start: #88A2A7;
-$color-status--inprogress-gradient-end:   #DAE3E5;
+$color-status--inprogress-text:           $AU-color-foreground-muted;
+$color-status--inprogress-gradient-start: $AU-color-foreground-border;
+$color-status--inprogress-gradient-end:   $AU-color-background-alt-shade;
 
-$color-status--suggestion-text:           #ad4b27;
-$color-status--suggestion-gradient-start: #cd8466;
-$color-status--suggestion-gradient-end:   #fdd0bd;
+$color-status--suggestion-text:           $AU-color-foreground-muted;
+$color-status--suggestion-gradient-start: $AU-color-foreground-border;
+$color-status--suggestion-gradient-end:   $AU-color-background-alt-shade;
 
 
 // component-status box
@@ -56,8 +56,12 @@ $color-status--suggestion-gradient-end:   #fdd0bd;
 	}
 
 	.avatar {
-		@include AU-space( margin-right, 0.25unit );
-		@include AU-space( margin-bottom, 0.25unit );
+		@include AU-space( margin-left, -0.25unit );
+		@include AU-space( margin-right, -0.25unit );
+
+		.lt-ie9 & {
+			margin: 0;
+		}
 	}
 
 	.component-status__title {
@@ -95,15 +99,6 @@ $color-status--suggestion-gradient-end:   #fdd0bd;
 			background: $color-status--published-gradient-start;
 			background: linear-gradient(to right, $color-status--published-gradient-start 0%, $color-status--published-gradient-end 100%);
 		}
-	}
-}
-
-.componentheader__headling {
-	.version {
-		display: inline-block;
-		@include AU-fontgrid( md );
-		@include AU-space( margin-left, 1unit );
-		color: $color-status--published-text;
 	}
 }
 
@@ -169,17 +164,40 @@ $color-status--suggestion-gradient-end:   #fdd0bd;
 	& > li:first-child {
 		margin-left: 0;
 	}
+
+	&.component-status__definition__list--images {
+		@include AU-clearfix;
+
+		& > li {
+			position: relative;
+			float: left;
+
+			&:hover {
+				z-index: 10;
+			}
+		}
+	}
 }
 
 
 
 .component-status__definition__list__more {
+	margin-left: 1em;
+	width: 2.4em;
+	height: 2.4em;
+	padding: 0;
+	position: relative;
+	top: 2px;
+	border-radius: 100%;
 	appearance: none;
+	text-align: center;
 	background: transparent;
-	border: none;
+	color: $AU-color-foreground-action;
+	border: 2px solid $AU-color-foreground-action;
 	box-shadow: none;
 	cursor: pointer;
-	text-decoration: underline;
+	font-size: 12px;
+	display: block;
 
 	&.is-hidden {
 		display: none;
@@ -187,6 +205,9 @@ $color-status--suggestion-gradient-end:   #fdd0bd;
 
 	&:hover {
 		text-decoration: none;
+		text-decoration: underline;
+		color: $AU-color-foreground-text;
+		border-color: $AU-color-foreground-border;
 	}
 
 	@include AU-focus();

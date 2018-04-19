@@ -88,7 +88,7 @@ const ComponentFooter = ({ _ID, _parseYaml, _relativeURL, _pages, _parents }) =>
 								: null
 						}
 						<li>
-							<a className="icon icon--email" href="mailto:gold@digital.gov.au">Email the team</a>
+							<a className="icon icon--email" href="mailto:designsystem@digital.gov.au">Email the team</a>
 						</li>
 					</ul>
 				</div>

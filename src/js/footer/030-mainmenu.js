@@ -1,9 +1,11 @@
+var mainmenu        = document.getElementById( 'mainmenu' );
 var mainmenuToggle  = document.getElementById( 'mainmenu-toggle' );
 var overlay         = document.getElementById( 'overlay' );
 
 var focustrapTop    = document.getElementById( 'focustrap-top' );
 var focustrapBottom = document.getElementById( 'focustrap-bottom' );
-var mainmenuLinks   = document.querySelectorAll( '.header a' );
+var mainmenuLinks   = document.querySelectorAll( '.header a, .header button' );
+var navSkipLink     = document.querySelectorAll( '.au-skip-link__link[href="#mainmenu"]' )[ 0 ];
 
 
 function ToggleMenu() {
@@ -48,3 +50,39 @@ AddEvent( focustrapBottom, 'focus', function( event ) {
 	PreventEvent( event );
 	mainmenuLinks[ 0 ].focus();
 });
+
+
+if ( mainmenu ){
+	var MenuCheck = function() {
+		var currentMenuDisplay = GetStyle( mainmenu, 'display' );
+		var mobileMenuDisplay  = GetStyle( mainmenuToggle, 'display' );
+
+		if( currentMenuDisplay === 'none' ){
+			mainmenu.setAttribute( "aria-hidden", "true" );
+		}
+		else {
+			mainmenu.setAttribute( "aria-hidden", "false" );
+		}
+
+		if( mobileMenuDisplay === 'none' ){
+			navSkipLink.setAttribute( "href", "#mainmenu" );
+		}
+		else {
+			navSkipLink.setAttribute( "href", "#mainmenu-toggle" );
+		}
+	};
+
+	// Run on page load
+	MenuCheck();
+
+	// Run functions after a debounced resize
+	var PageResize = Debounce(function() {
+		MenuCheck();
+	}, 250);
+
+	// Run PageResize function on resize
+	window.onresize = function() {
+		PageResize();
+	}
+}
+

@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Direction links rationale
+pagetitle: Direction links code
 
 header:
   - /_shared/header.md

@@ -44,7 +44,7 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 
 	return (
 		<div className="au-grid">
-			<form className="row furnace" method="POST" action="https://gold.service.gov.au/furnace/">
+			<form className="row furnace" method="POST" action="https://designsystem.gov.au/furnace/">
 
 				<div className="col-xs-12 col-sm-8">
 
@@ -87,7 +87,7 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 											</label>
 
 											<div className="furnace__component__details">
-												<svg className="furnace__component__details__img" role="img" title={ MODULES[ module ].name }>
+												<svg className="furnace__component__details__img" aria-hidden="true" title={ MODULES[ module ].name }>
 													<use xlinkHref={ `/assets/svg/map.svg#${ MODULES[ module ].ID }` } />
 												</svg>
 

@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Call to action link rationale
+pagetitle: Call to action link code
 
 header:
   - /_shared/header.md

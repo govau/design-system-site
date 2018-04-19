@@ -6,16 +6,16 @@ layout: section
 
 | Name       | Type    | Description
 |------------|---------|-----------------------------------------------------------------------------
-| `AUbreadcrumbs` | default | The breadcrumbs component
+| `AUdirectionLink` | default | The direction link component
 
 ### [md]node_modules import
 
 ```jsx
-import AUbreadcrumbs from '@gov.au/breadcrumbs';
+import AUdirectionLink from '@gov.au/direction-links';
 ```
 
 ### [md]pancake import
 
 ```jsx
-import AUbreadcrumbs from './breadcrumbs';
+import AUdirectionLink from './direction-links';
 ```

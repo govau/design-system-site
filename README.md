@@ -1,13 +1,15 @@
-GOLD
+Australian Government Design System
 ====
 
-> **G**overnment **O**pen **L**anguage for **D**esign
+| Production                  | Staging                                |
+|-----------------------------|----------------------------------------|
+| https://designsystem.gov.au | https://designsystem.apps.y.cld.gov.au |
+|                             | user: `ds`, pass: `ds`                 |
 
-| Production                  | Staging                        |
-|-----------------------------|--------------------------------|
-| https://gold.service.gov.au | https://gold.apps.y.cld.gov.au |
-|                             | user: `gold`, pass: `gold`     |
 
+## Branches
+
+All branches ending with `-test` will go live automatically to `https://designsystem[your-branch-name]-test.apps.y.cld.gov.au`.
 
 ## Install
 

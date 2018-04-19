@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Link list rationale
+pagetitle: Link list code
 
 header:
   - /_shared/header.md

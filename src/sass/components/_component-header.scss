@@ -1,17 +1,28 @@
 // component-header
 
 .componentheader {
+	position: relative;
 
 	.componentheader__headling {
 		font-weight: normal;
 		@include AU-fontgrid( xxxl, nospace );
+		margin-top: 0;
 	}
 
 	.componentheader__body {
-		margin-top: 2rem;
+		@include AU-space( margin-top, 2unit );
 	}
 
 	.abstract {
 		@include AU-fontgrid( md );
 	}
+}
+
+
+.componentheader__version {
+	@include AU-space( top, -1.75unit );
+	position: absolute;
+	display: block;
+	@include AU-fontgrid( sm );
+	color: $color-status--published-text;
 }

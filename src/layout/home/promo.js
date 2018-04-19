@@ -13,7 +13,7 @@ const Promo = ({ tiles, _relativeURL, _ID, _parseMD }) => (
 					<div className="promo col-sm-12 col-md-4" key={ i }>
 						<div className="promo-group">
 							<a href={ _relativeURL( tile.url, _ID ) }>
-								<img className="promo__thumbnail au-responsive-media-img"
+								<img className="promo__thumbnail au-responsive-media-img" alt=""
 									src={
 										tile.imgurl.startsWith('http')
 											? tile.imgurl
@@ -40,7 +40,7 @@ Promo.propTypes = {
 	 *     imgurl: http://placehold.it/320x320
 	 *     imgalt: Community Alt tag
 	 *     url: /community
-	 *     text: The GOLD community has been created for designers and developers to help them transform their agency’s products and services.
+	 *     text: The community has been created for designers and developers to help them transform their agency’s products and services.
 	 *   - title: Components
 	 *     imgurl: http://placehold.it/320x320
 	 *     imgalt: Components Alt tag
