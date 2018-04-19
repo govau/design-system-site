@@ -5,9 +5,8 @@
 	width: 100%;
 	z-index: 200;
 
-
 	&.au-body.au-body--dark {
-		background: $AU-colordark-background-alt-shade;
+		background: $AU-colordark-background;
 
 		@media screen and ( min-width: $nav_breakpoint ) {
 			background: transparent;
@@ -26,7 +25,7 @@
 	}
 
 	&.au-accordion__body.au-accordion--closed {
-		display: block;
+		display: none;
 	}
 
 	.navigation.navigation--dark .au-link-list > li.mainmenu--active-trail > a {
@@ -70,6 +69,11 @@
 	background-color: transparent;
 	border: none;
 	text-align: left;
+
+	// Homepage overrides
+	.header--home & {
+		@include AU-space( margin-top, 2unit );
+	}
 
 	&:hover {
 		color: $AU-colordark-foreground-text;
@@ -121,4 +125,3 @@
 		}
 	}
 }
-

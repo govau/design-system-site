@@ -1,7 +1,7 @@
 ---
 layout: content/text-with-cta
 button:
-  link: https://community.service.gov.au/c/gold
+  link: https://community.digital.gov.au/c/designsystem
   text: Join our community
   type: secondary
   icon: community

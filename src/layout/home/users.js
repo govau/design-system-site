@@ -22,7 +22,7 @@ const Users = ({ title, btnURL, btntext, tiles, _relativeURL, _ID, _parseMD, _bo
 					tiles.map( ( tile, i ) => (
 						<li className="user col-xs-6 col-md-4" key={ i }>
 							<div className="user__wrapper">
-								<img src={ _relativeURL( tile.image , _ID ) } alt={ tile.alt } title={ tile.alt }/>
+								<img src={ _relativeURL( tile.image , _ID ) } alt={ tile.alt }/>
 							</div>
 						</li>
 					))

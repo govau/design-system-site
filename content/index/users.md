@@ -24,4 +24,4 @@ tiles:
     alt: Department of Veterans' Affairs
 ---
 
-GOLD is in its early days but a number of government teams have already jumped on board. Why not join them? Together we‘ll be able to build better, faster, easier.
+The design system is in its early days but a number of government teams have already jumped on board. Why not join them? Together we‘ll be able to build better, faster, easier.

@@ -23,23 +23,23 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, filter, tabbing, examp
 <link rel="mask-icon" href=${ _relativeURL('/assets/favicons/safari-pinned-tab.svg', _ID ) } color="#06262d">
 <link rel="shortcut icon" href=${ _relativeURL('/assets/favicons/favicon.ico', _ID ) }>
 <meta name="msapplication-config" content=${ _relativeURL('/assets/favicons/browserconfig.xml', _ID ) }>
-<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <meta name="robots" content="index, follow">
-<meta name="author" content="GOLD team">
+<meta name="author" content="Digital Transformation Agency">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="GOLD">
-<meta name="twitter:description" content="Government Open Language for Design - design system">
-<meta name="twitter:name" content="GOLD">
-<meta name="twitter:image" content="https://gold.service.gov.au/assets/favicons/gold.jpg">
+<meta name="twitter:title" content="Australian Government Design System">
+<meta name="twitter:description" content="Inclusive design, open-source code and shared insights">
+<meta name="twitter:name" content="Australian Government Design System">
+<meta name="twitter:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:type" content="website">
-<meta property="og:title" content="GOLD">
-<meta property="og:site_name" content="GOLD">
-<meta property="og:description" content="Government Open Language for Design - design system">
-<meta property="og:image" content="https://gold.service.gov.au/assets/favicons/gold.jpg">
-<meta property="og:url" content="https://gold.service.gov.au">
+<meta property="og:title" content="Australian Government Design System">
+<meta property="og:site_name" content="Australian Government Design System">
+<meta property="og:description" content="Inclusive design, open-source code and shared insights">
+<meta property="og:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
+<meta property="og:url" content="https://designsystem.gov.au">
 
-<title>${ pagetitle } - Australian Government Open Language for Design</title>
+<title>${ pagetitle } - Australian Government Design System</title>
 
 <link rel="stylesheet" href=${ _relativeURL( '/assets/css/example.css', _ID ) } />
 <link rel="stylesheet" href=${ _relativeURL( `/assets/css/a11y/a11y.css`, _ID ) } />
@@ -66,7 +66,87 @@ ${
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }}  />
 		<body className="a11y au-body">
+			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Z7S8GB" height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe></noscript>
 			<div className="example__wrapper">
+			<svg
+				className="svg-filter"
+				xmlns="http://www.w3.org/2000/svg"
+				version="1.1">
+				<defs>
+					<filter id="protanopia">
+						<feColorMatrix
+							in="SourceGraphic"
+							type="matrix"
+							values="0.567, 0.433, 0,     0, 0
+											0.558, 0.442, 0,     0, 0
+											0,     0.242, 0.758, 0, 0
+											0,     0,     0,     1, 0"/>
+					</filter>
+					<filter id="protanomaly">
+						<feColorMatrix
+							in="SourceGraphic"
+							type="matrix"
+							values="0.817, 0.183, 0,     0, 0
+											0.333, 0.667, 0,     0, 0
+											0,     0.125, 0.875, 0, 0
+											0,     0,     0,     1, 0"/>
+					</filter>
+					<filter id="deuteranopia">
+						<feColorMatrix
+							in="SourceGraphic"
+							type="matrix"
+							values="0.625, 0.375, 0,   0, 0
+											0.7,   0.3,   0,   0, 0
+											0,     0.3,   0.7, 0, 0
+											0,     0,     0,   1, 0"/>
+					</filter>
+					<filter id="deuteranomaly">
+						<feColorMatrix
+							in="SourceGraphic"
+							type="matrix"
+							values="0.8,   0.2,   0,     0, 0
+											0.258, 0.742, 0,     0, 0
+											0,     0.142, 0.858, 0, 0
+											0,     0,     0,     1, 0"/>
+					</filter>
+					<filter id="tritanopia">
+						<feColorMatrix
+							in="SourceGraphic"
+							type="matrix"
+							values="0.95, 0.05,  0,     0, 0
+											0,    0.433, 0.567, 0, 0
+											0,    0.475, 0.525, 0, 0
+											0,    0,     0,     1, 0"/>
+					</filter>
+					<filter id="tritanomaly">
+						<feColorMatrix
+							in="SourceGraphic"
+							type="matrix"
+							values="0.967, 0.033, 0,     0, 0
+											0,     0.733, 0.267, 0, 0
+											0,     0.183, 0.817, 0, 0
+											0,     0,     0,     1, 0"/>
+					</filter>
+					<filter id="achromatopsia">
+						<feColorMatrix
+							in="SourceGraphic"
+							type="matrix"
+							values="0.299, 0.587, 0.114, 0, 0
+											0.299, 0.587, 0.114, 0, 0
+											0.299, 0.587, 0.114, 0, 0
+											0,     0,     0,     1, 0"/>
+					</filter>
+					<filter id="achromatomaly">
+						<feColorMatrix
+							in="SourceGraphic"
+							type="matrix"
+							values="0.618, 0.320, 0.062, 0, 0
+											0.163, 0.775, 0.062, 0, 0
+											0.163, 0.320, 0.516, 0, 0
+											0,     0,     0,     1, 0"/>
+					</filter>
+				</defs>
+			</svg>
 				<h2 className='example__title'>Example</h2>
 				<main className={`example${ fullwidth === true ? ' example--fullwidth' : '' }${ tabbing ? ' js-tabbing' : '' }${ filter === 'protanopia' || filter === 'deuteranopia' ? ' js-filter' : '' }`}>
 					<div className={`content filter${ tabbing ? ' js-tabbing-area' : '' }`}>

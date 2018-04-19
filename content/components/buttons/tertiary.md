@@ -4,10 +4,20 @@ example: examples/example-tertiary
 headline: Tertiary
 code:
   - HTML: |
+      <!--
+        Light:  <div class="au-btn au-btn--tertiary">
+        Dark:   <div class="au-btn au-btn--tertiary au-btn--dark">
+      -->
+
       <button class="au-btn au-btn--tertiary">
         Tertiary button
       </button>
   - React: |
+      /*
+        Light:  <AUbutton as='tertiary'>
+        Dark:   <AUbutton as='tertiary' dark>
+      */
+
       import AUbutton from '@gov.au/buttons';
 
       <AUbutton as='tertiary'>

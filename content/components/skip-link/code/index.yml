@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Skip link rationale
+pagetitle: Skip link code
 
 header:
   - /_shared/header.md

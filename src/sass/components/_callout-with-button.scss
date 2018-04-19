@@ -1,6 +1,5 @@
 .calloutWithButton {
 	@include AU-clearfix(); //not using .row because of it's -margins
-	@include AU-space( margin-top, 2unit );
 	@include AU-space( padding, 2unit );
 	background: $AU-color-background-shade;
 
@@ -11,6 +10,10 @@
 
 	@include AU-media( lg ){
 		@include AU-space( padding, 4unit );
+	}
+
+	* + & {
+		@include AU-space( margin-top, 2unit );
 	}
 }
 

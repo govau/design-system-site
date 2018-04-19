@@ -4,16 +4,16 @@ lists:
   - heading: Help with design
     links:
       - text: Suggest a component
-        link: https://community.service.gov.au/c/gold/suggest-a-component
+        link: https://community.digital.gov.au/c/designsystem/suggest-a-component
       - text: Improve documentation
-        link: https://github.com/govau/GOLD/tree/master/content
+        link: https://github.com/govau/designsystem/tree/master/content
 
   - heading: Help with planning
     links:
       - text: Community support
-        link: https://community.service.gov.au/c/gold/general-issues
+        link: https://community.digital.gov.au/c/designsystem/general-issues
       - text: Roadmap discussions
-        link: https://community.service.gov.au/t/roadmap-discussion
+        link: https://community.digital.gov.au/t/roadmap-discussion
 
   - heading: Help with code
     links:
@@ -27,9 +27,9 @@ lists:
   - heading: Help with usability
     links:
       - text: Component discussions
-        link: https://community.service.gov.au/c/gold/released-components
+        link: https://community.digital.gov.au/c/designsystem/released-components
       - text: Provide research findings
-        link: https://community.service.gov.au/c/gold/in-progress-components
+        link: https://community.digital.gov.au/c/designsystem/in-progress-components
 ---
 
 ## How you can contribute

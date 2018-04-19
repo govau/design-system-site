@@ -30,8 +30,9 @@
 @import 'components/component-table';
 @import 'components/overlay';
 @import 'components/component-header';
+@import 'components/component-documentation';
 @import 'components/card';
-@import 'components/card--gold';
+@import 'components/card--component';
 @import 'components/download-intro';
 @import 'components/furnace';
 @import 'components/abstract';
@@ -50,6 +51,8 @@
 @import 'components/callout-with-button';
 @import 'components/section';
 @import 'components/searchpage';
+@import 'components/statistics';
+@import 'hotfix';
 
 //Possible Visual Design Tweaks to UIKit
 @import 'components/vd-tweaks';

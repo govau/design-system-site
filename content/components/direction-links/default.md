@@ -4,11 +4,21 @@ example: examples/example-default
 headline: Default
 code:
   - HTML: |
+      <!--
+        Light:  <a href="#" class="au-direction-link">
+        Dark:   <a href="#" class="au-direction-link au-direction-link--dark">
+      -->
+
       <a class="au-direction-link au-direction-link--left" href="#">Back</a>
       <a class="au-direction-link" href="#">Next</a>
       <a class="au-direction-link au-direction-link--up" href="#">Top</a>
       <a class="au-direction-link au-direction-link--down" href="#">Skip to footer</a>
   - React: |
+      /*
+        Light:  <AUdirectionLink>
+        Dark:   <AUdirectionLink dark>
+      */
+
       import AUdirectionLink from '@gov.au/direction-links';
 
       <AUdirectionLink link="#url" text="Back" direction="left" />

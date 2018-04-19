@@ -4,6 +4,11 @@ example: examples/example-default
 headline: Default
 code:
   - HTML: |
+      <!--
+        Light:  <ul class="au-progress-indicator">
+        Dark:   <ul class="au-progress-indicator au-progress-indicator--dark">
+      -->
+
       <ul class="au-progress-indicator">
         <li>
           <a class="au-progress-indicator__link au-progress-indicator__link--doing" href="#url">
@@ -25,6 +30,11 @@ code:
         </li>
       </ul>
   - React: |
+      /*
+        Light:  <AUprogressIndicator items={[
+        Dark:   <AUprogressIndicator dark items={[
+      */
+
       import AUprogressIndicator from '@gov.au/progress-indicator';
 
       <AUprogressIndicator items={[

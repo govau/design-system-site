@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Inpage nav rationale
+pagetitle: Inpage nav code
 
 header:
   - /_shared/header.md

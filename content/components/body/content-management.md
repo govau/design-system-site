@@ -4,6 +4,13 @@ example: examples/example-content-management
 headline: Content management
 code:
   - HTML: |
+      <!--
+        Light:      <div class="au-body">
+        Light Alt:  <div class="au-body au-body--alt">
+        Dark:       <div class="au-body au-body--dark">
+        Dark Alt:   <div class="au-body au-body--dark au-body--alt">
+      -->
+
       <div class="au-body">
         <del>Delete</del> or <s>Strike</s>
         <ins>Insert</ins>

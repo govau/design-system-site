@@ -8,7 +8,7 @@ path: ./
 command: node server/index.js
 
 applications:
-- name: gold
+- name: designsystem
 
 routes:
-- route: gold.service.gov.au
+- route: designsystem.gov.au

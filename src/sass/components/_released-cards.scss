@@ -12,6 +12,14 @@
 		}
 	}
 
+	a.au-card:hover .au-card__title:after {
+		color: $AU-color-foreground-text;
+		background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">' +
+			'<path fill="#{ $AU-color-foreground-text }" d="M128 64l-64 64-16-16 64-64"/>' +
+			'<path fill="#{ $AU-color-foreground-text }" d="M128 64l-16 16-64-64L64 0"/>' +
+		'</svg>');
+	}
+
 	.au-card__title {
 		@include AU-fontgrid( sm, heading );
 		@include AU-space( padding-right, 1unit );

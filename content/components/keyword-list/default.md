@@ -4,6 +4,11 @@ example: examples/example-default
 headline: Default
 code:
   - HTML: |
+      <!--
+        Light:  <ul class="au-link-list au-keyword-list">
+        Dark:   <ul class="au-link-list au-keyword-list au-keyword-list--dark">
+      -->
+
       <ul class="au-keyword-list au-link-list">
         <li>
           <small class="au-keyword-list__small">Department of </small>
@@ -15,6 +20,11 @@ code:
         </li>
       </ul>
   - React: |
+      /*
+        Light:  <AUkeywordList repeatedName='repeated text'
+        Dark:   <AUkeywordList dark repeatedName='repeated text'
+      */
+
       import AUkeywordList from '@gov.au/keyword-list';
 
       <AUkeywordList repeatedName='Department of' items={[

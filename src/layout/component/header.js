@@ -24,12 +24,12 @@ const ComponentHeader = ({ _relativeURL, _parseYaml, _parseMD, _pages, _parents,
 
 				<h1 className="componentheader__headling">
 					{ MODULE.name }
-					{
-						MODULE.state === 'published'
-							? <span className="version">v{ MODULE.version }</span>
-							: null
-					}
 				</h1>
+				{
+					MODULE.state === 'published'
+						? <span className="componentheader__version">v{ MODULE.version }</span>
+						: null
+				}
 
 				<div className="componentheader__body abstract">{ _parseMD( MODULE.description ) }</div>
 			</div>

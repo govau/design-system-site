@@ -72,7 +72,7 @@ const ComponentFooter = ({ _ID, _parseYaml, _relativeURL, _pages, _parents }) =>
 					<h3>Feedback</h3>
 					<ul>
 						<li>
-							<a className="icon icon--community" href={ `https://community.service.gov.au/t/${ MODULES[ module ].ID }` }>Community discussion</a>
+							<a className="icon icon--community" href={ `https://community.digital.gov.au/t/${ MODULES[ module ].ID }` }>Community discussion</a>
 						</li>
 						<li>
 							<a className="icon icon--github" href="https://github.com/govau/uikit/issues/new">Report an issue</a>
@@ -88,7 +88,7 @@ const ComponentFooter = ({ _ID, _parseYaml, _relativeURL, _pages, _parents }) =>
 								: null
 						}
 						<li>
-							<a className="icon icon--email" href="mailto:gold@digital.gov.au">Email the team</a>
+							<a className="icon icon--email" href="mailto:designsystem@digital.gov.au">Email the team</a>
 						</li>
 					</ul>
 				</div>

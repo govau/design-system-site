@@ -10,7 +10,7 @@
 	line-height: 1;
 }
 
-.headergovau__title {
+.headergovau__content__title {
 	font-weight: bold;
 	margin-top: 0;
 }
@@ -69,70 +69,41 @@
 
 	a {
 		color: $AU-colordark-foreground-text;
-		text-decoration: none;
-
 		@include AU-focus( 'dark' );
-
-		.headergovau__official {
-			text-decoration: underline;
-		}
-
-		&:hover .headergovau__official {
-			text-decoration: none;
-		}
-	}
-
-	.au-link-list {
-		float: right;
-		margin: 2px 0 0 0;
-		padding: 0;
-		line-height: 1;
-		font-size: 12px;
-		font-size: 0.75rem;
-
-		& > li {
-			margin: 0;
-
-			@include AU-space( margin-right, 0.5unit );
-			@include AU-space( padding-right, 0.5unit );
-			border-right: 1px solid $AU-colordark-foreground-border;
-
-			&:last-of-type {
-				border-right: 0;
-				margin-right: 0;
-				padding-right: 0;
-			}
-
-			& > a {
-				color: $AU-colordark-foreground-muted;
-
-				&:hover {
-					text-decoration: underline;
-					color: $AU-colordark-foreground-text;
-				}
-			}
-		}
 	}
 }
 
 .headergovau__button {
-	@include AU-space( padding-right, 1unit );
-	position: relative;
-	display: block;
 	float: left;
+	text-decoration: none;
+	position: relative;
+
+	&:before {
+		content: " ";
+		display: inline-block;
+		vertical-align: middle;
+		@include AU-space( width, 1.25unit );
+		@include AU-space( height, 1.25unit );
+
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-image: AU-svguri('
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">' +
+			'	<path fill="#{ $AU-colordark-foreground-text }" d="M10 .28l2.1 5.3 5.45-1.67-2.84 4.95 4.71 3.23-5.64.86.41 5.69L10 14.77l-4.19 3.87.41-5.69-5.64-.86 4.71-3.23-2.84-4.95 5.46 1.67L10 .28z"/>' +
+			'	<path fill="none" d="M0 0h20v20H0z"/>' +
+			'</svg>');
+	}
 
 	&:after {
+		content: " ";
+		display: inline-block;
+		vertical-align: middle;
 		@include AU-space( width, 0.75unit );
 		@include AU-space( height, 0.75unit );
-		content: " ";
-		display: block;
-		position: absolute;
-		right: 0;
-		top: 0;
-
-		background-position: center;
+		background-position: center 2px;
 		background-repeat: no-repeat;
-		background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">' +
+		background-image: AU-svguri('
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">' +
 			'	<path fill="#{ $AU-colordark-foreground-text }" d="M64 0l64 64-16 16-64-64"/>' +
 			'	<path fill="#{ $AU-colordark-foreground-text }" d="M64 0l16 16-64 64L0 64"/>' +
 			'</svg>');
@@ -150,29 +121,44 @@
 		}
 	}
 
+	&:hover .headergovau__official {
+		text-decoration: none;
+	}
+
 	&.au-accordion--closed:after {
 		transform: rotate( -180deg );
 	}
 }
 
-// * GOV.AU - logo
-.headergovau__logo {
-	@include AU-space( margin-right, 0.5unit );
-	@include AU-space( padding-right, 0.5unit );
-	border-right: 1px solid $AU-colordark-foreground-border;
+.headergovau__text {
+	display: inline-block;
+	vertical-align: middle;
+	@include AU-space( padding-left, 0.25unit );
+	@include AU-space( padding-right, 0.25unit );
+}
 
-	.headergovau__logo__text {
-		font-weight: bold;
+.headergovau__title,
+.headergovau__official {
+	display: block;
+
+	@include AU-media( xs ){
+		display: inline-block;
 	}
+}
 
-	.headergovau__logo__svg,
-	img {
-		display: block;
-		float: left;
-		@include AU-space( width, 0.75unit );
-		@include AU-space( height, 0.75unit );
-		@include AU-space( margin-right, 0.25unit );
-		position: relative;
-		top: -1px;
+.headergovau__title {
+	font-weight: bold;
+}
+
+.headergovau__official {
+	text-decoration: underline;
+}
+
+.headergovau__publisher {
+	float: right;
+	@include AU-space( margin-top, 0.25unit );
+
+	&:hover {
+		text-decoration: none;
 	}
 }

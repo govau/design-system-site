@@ -45,7 +45,7 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parents, _parseYaml }
 		return (
 			<Fragment>
 				<section className="au-accordion">
-					<a href={ `#nav-accordion-${ state }` }
+					<a href={ `#accordion-${ state }` }
 						className={ `au-accordion__title js-accordion${ _isOpen ? '' : ' au-accordion--closed' }` }
 						aria-controls={ `accordion-${ state }` }
 						aria-expanded={ _isOpen ? 'true' : 'false' }

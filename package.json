@@ -1,5 +1,5 @@
 {
-	"name": "GOLD",
+	"name": "designsystem",
 	"version": "1.0.0",
 	"description": "The government open language for design website.",
 	"scripts": {
@@ -21,18 +21,21 @@
 		"watch:js": "onchange 'src/js/**/*.js' -- npm run build:js",
 		"watch:site": "cuttlebelle -w -n",
 		"watch": "npm run build && npm run watch:sass | npm run watch:js | npm run watch:site",
+		"start:local": "node server/index.js local",
+		"start:staging": "node server/index.js staging",
+		"start": "node server/index.js",
 		"test": "echo 'Error: no test specified' && exit 0"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/govau/GOLD"
+		"url": "https://github.com/govau/designsystem"
 	},
 	"author": {
 		"name": "Commonwealth of Australia, DTA",
 		"email": "guides@digital.gov.au",
 		"url": "https://www.dta.gov.au/"
 	},
-	"homepage": "https://github.com/govau/GOLD",
+	"homepage": "https://github.com/govau/designsystem",
 	"contributors": [
 		{
 			"name": "Dominik Wilkowski",
@@ -54,7 +57,7 @@
 	"licenses": [
 		{
 			"type": "MIT",
-			"url": "https://github.com/govau/GOLD/blob/master/LICENSE"
+			"url": "https://github.com/govau/designsystem/blob/master/LICENSE"
 		}
 	],
 	"dependencies": {
@@ -87,7 +90,9 @@
 		"concat-cli": "^4.0.0",
 		"cuttlebelle": "^1.0.0-alpha.56",
 		"express": "^4.16.2",
+		"node-fetch": "^2.1.1",
 		"node-sass": "^4.7.2",
+		"numeral": "^2.0.6",
 		"postcss-cli": "^4.1.1",
 		"slugify": "^1.2.9",
 		"uglify-js": "^3.3.4"

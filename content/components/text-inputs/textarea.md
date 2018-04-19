@@ -4,11 +4,21 @@ example: examples/example-textarea
 headline: Text area
 code:
   - HTML: |
+      <!--
+        Light:  <ul class="au-text-input au-text-input--block">
+        Dark:   <ul class="au-text-input au-text-input--block au-text-input--dark">
+      -->
+
       <label for="textarea">label text</label>
       <textarea class="au-text-input au-text-input--block" name="textarea" id="textarea">
         Value
       </textarea>
   - React: |
+      /*
+        Light:  <AUtextInput block>
+        Dark:   <AUtextInput block dark>
+      */
+
       import AUtextInput from '@gov.au/text-inputs';
 
       <label htmlFor="textarea" block >label text</label>

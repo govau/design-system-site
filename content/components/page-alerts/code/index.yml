@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Page alerts rationale
+pagetitle: Page alerts code
 
 header:
   - /_shared/header.md

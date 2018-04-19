@@ -1,13 +1,16 @@
-GOLD
+Australian Government Design System
 ====
 
-> **G**overnment **O**pen **L**anguage for **D**esign
 
-| Production                  | Staging                        |
+| Production [![CircleCI](https://circleci.com/gh/govau/designsystem/tree/master.svg?style=svg)](https://circleci.com/gh/govau/designsystem/tree/master)                  | Staging [![CircleCI](https://circleci.com/gh/govau/designsystem/tree/develop.svg?style=svg)](https://circleci.com/gh/govau/designsystem/tree/develop)                        |
 |-----------------------------|--------------------------------|
-| https://gold.service.gov.au | https://gold.apps.y.cld.gov.au |
-|                             | user: `gold`, pass: `gold`     |
+| https://designsystem.gov.au | https://designsystem.apps.y.cld.gov.au |
+|                             | user: `ds`, pass: `ds`                 |
 
+
+## Branches
+
+All branches ending with `-test` will go live automatically to `https://designsystem[your-branch-name]-test.apps.y.cld.gov.au`.
 
 ## Install
 

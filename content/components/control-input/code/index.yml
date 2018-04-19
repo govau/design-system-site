@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Control input rationale
+pagetitle: Control input code
 
 header:
   - /_shared/header.md
