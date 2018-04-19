@@ -76,10 +76,10 @@ const Page = ({
 				</div>
 				{ footer }
 			</div>
+			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
 			{
 				_ID === 'download' ? <script src={ _relativeURL( '/assets/js/prism.js', _ID ) } /> : null
 			}
-			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
 		</body>
 		</html>
 	);
