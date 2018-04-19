@@ -48,14 +48,12 @@ const Example = ({ _ID, _relativeURL, pagetitle, example, alignment, fullwidth }
 	<script src="${ _relativeURL( '/assets/js/respond.js', _ID ) }"></script>
 <![endif]-->
 
-<script src=${ _relativeURL( '/assets/js/header.js', _ID ) }></script>`;
+<script>var $html=document.documentElement;if($html.classList)$html.classList.remove("no-js"),$html.classList.add("js");else{var className="no-js";$html.className=$html.className.replace(new RegExp("(^|\\b)"+className.split(" ").join("|")+"(\\b|$)","gi")," "),$html.className+=" js"}</script>`;
 
 	return (
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }} />
 		<body className="au-body">
-			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Z7S8GB" height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe></noscript>
-
 			<div className="example__wrapper">
 				<h2 className='example__title'>Example</h2>
 				<main className={ `example${ alignment === 'center' ? ' example--center' : '' }${ fullwidth === true ? ' example--fullwidth' : '' }` }>
