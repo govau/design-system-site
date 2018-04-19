@@ -125,6 +125,7 @@ const ComponentPage = ({
 
 				{ footer }
 			</div>
+			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
 			{
 				_ID !== 'components'
 				?
@@ -134,8 +135,6 @@ const ComponentPage = ({
 					</Fragment>
 				: null
 			}
-
-			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
 		</body>
 		</html>
 	);
