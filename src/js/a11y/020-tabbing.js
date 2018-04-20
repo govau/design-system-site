@@ -46,13 +46,14 @@ function Tab() {
 	var loop = 0;
 
 	return setInterval( function() {
-		items[ loop ].focus();
-		loop ++;
-
 		if( loop >= items.length ) {
 			StopTab( interval, document.querySelector( '.js-tabbing-switch' ) );
 		}
-	}, 1000 );
+
+		items[ loop ].focus();
+
+		loop ++;
+	}, 300 );
 }
 
 
