@@ -53,7 +53,7 @@ function Tab() {
 		items[ loop ].focus();
 
 		loop ++;
-	}, 300 );
+	}, 500 );
 }
 
 
