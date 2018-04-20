@@ -67,6 +67,7 @@ ${
 		<body className="a11y au-body">
 			<div className="example__wrapper">
 			<svg
+				aria-hidden="true"
 				className="svg-filter"
 				xmlns="http://www.w3.org/2000/svg"
 				version="1.1">
