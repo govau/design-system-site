@@ -170,7 +170,6 @@ $color-status--suggestion-gradient-end:   $AU-color-background-alt-shade;
 
 		& > li {
 			position: relative;
-			float: left;
 
 			&:hover {
 				z-index: 10;
@@ -186,8 +185,6 @@ $color-status--suggestion-gradient-end:   $AU-color-background-alt-shade;
 	width: 2.4em;
 	height: 2.4em;
 	padding: 0;
-	position: relative;
-	top: 2px;
 	border-radius: 100%;
 	appearance: none;
 	text-align: center;
