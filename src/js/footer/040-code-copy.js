@@ -26,6 +26,7 @@ function CopyString( text ) {
 	document.body.removeChild( textarea );
 }
 
+
 /**
  * On click of any of the copy code buttons
  */
@@ -38,17 +39,23 @@ AddEvent( copyButtons, 'click', function( event, $this ) {
 	AddClass( $this, 'icon--success' );
 
 	var analytics  = {
-		'event': 'copynpm',
+		'event': 'copy',
 		'page': document.getElementsByTagName( "title" )[ 0 ].innerHTML.split(' - ')[ 0 ],
 	}
 
 	// If we are on the component overview page add extra analytics
 	if ( analytics.page !== 'Download' && analytics.page.indexOf( 'code' ) !== analytics.page.length - 4 ) {
-		analytics[ 'event' ] = 'copy';
 		analytics[ 'component' ] = document.getElementsByClassName( "componentheader__headling" )[ 0 ].innerHTML;
 		analytics[ 'version' ]   = document.getElementsByClassName( "componentheader__version" )[ 0 ].innerHTML;
 		analytics[ 'language' ]  = $this.parentNode.parentNode.parentNode.id.split( '-' )[ 0 ];
 		analytics[ 'variation' ] = $this.parentNode.parentNode.parentNode.id.split( '-' )[ 1 ];
+	}
+	else if( analytics.page === 'Download' ){
+		var selectedItems = GetSelectedFormItems( 'furnace' );
+		analytics[ 'event' ]              = 'copynpm';
+		analytics[ 'selectedComponents' ] = selectedItems.components.join( ' ' );
+		analytics[ 'selectedCss' ]        = selectedItems.styleOutput[ 0 ];
+		analytics[ 'selectedJs' ]         = selectedItems.jsOutput[ 0 ];
 	}
 
 	dataLayer.push( analytics );
