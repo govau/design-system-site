@@ -38,12 +38,13 @@ AddEvent( copyButtons, 'click', function( event, $this ) {
 	AddClass( $this, 'icon--success' );
 
 	var analytics  = {
-		'event': 'copy',
+		'event': 'copynpm',
 		'page': document.getElementsByTagName( "title" )[ 0 ].innerHTML.split(' - ')[ 0 ],
 	}
 
 	// If we are on the component overview page add extra analytics
 	if ( analytics.page !== 'Download' && analytics.page.indexOf( 'code' ) !== analytics.page.length - 4 ) {
+		analytics[ 'event' ] = 'copy';
 		analytics[ 'component' ] = document.getElementsByClassName( "componentheader__headling" )[ 0 ].innerHTML;
 		analytics[ 'version' ]   = document.getElementsByClassName( "componentheader__version" )[ 0 ].innerHTML;
 		analytics[ 'language' ]  = $this.parentNode.parentNode.parentNode.id.split( '-' )[ 0 ];
