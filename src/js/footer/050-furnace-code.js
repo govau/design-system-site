@@ -1,6 +1,7 @@
 var furnaceComponents = document.querySelectorAll( '.js-furnace-selector' );
 var furnaceNPM        = document.querySelectorAll( '.js-furnace-code code' )[ 0 ];
 var furnaceClear      = document.querySelectorAll( '.js-furnace-clear ' )[ 0 ];
+var furnaceDownload   = document.querySelectorAll( '.furnace__buildbox__download' )[ 0 ];
 
 
 /**
@@ -17,6 +18,23 @@ AddEvent( furnaceComponents, 'change', function( event, $this ) {
 AddEvent( furnaceClear, 'click', function( event ){
 	ClearNPM();
 });
+
+
+/**
+ * Send data about selected form items on download
+ */
+AddEvent( furnaceDownload, 'click', function( event ){
+	var selectedItems = GetSelectedFormItems( 'furnace' );
+	var analytics  = {
+		'event': 'download',
+		'selectedComponents' : selectedItems.components.join( ' ' ),
+		'selectedCss' : selectedItems.styleOutput[ 0 ],
+		'selectedJs' : selectedItems.jsOutput[ 0 ]
+	}
+
+	dataLayer.push( analytics );
+});
+
 
 
 /**
