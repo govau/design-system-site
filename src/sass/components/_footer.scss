@@ -34,26 +34,23 @@
 .footer__affiliate {
 	@include AU-fontgrid( xs );
 
-	a {
+	.au-cta-link {
+		@include AU-fontgrid( xs );
+		display: inline-block;
+		font-weight: normal;
+		margin-top: 0;
+
 		&:after {
-			content: ' ';
+			content: '';
 			@include AU-space( width, 0.75unit );
 			@include AU-space( height, 0.75unit );
-			@include AU-space( margin, 0 0.25unit 0 0.25unit );
+			@include AU-space( margin-left, 0.25unit );
 			display: inline-block;
 			vertical-align: middle;
-			background-repeat: no-repeat;
-			background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">' +
-					'<path fill="#{ $AU-colordark-foreground-action }" d="M128 64l-64 64-16-16 64-64"/>' +
-					'<path fill="#{ $AU-colordark-foreground-action }" d="M128 64l-16 16-64-64L64 0"/>' +
-				'</svg>');
 		}
 
 		&:hover:after {
-		background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">' +
-				'<path fill="#{ $AU-colordark-foreground-text }" d="M128 64l-64 64-16-16 64-64"/>' +
-				'<path fill="#{ $AU-colordark-foreground-text }" d="M128 64l-16 16-64-64L64 0"/>' +
-			'</svg>');
+			@include AU-space( margin-left, 0.5unit );
 		}
 	}
 
