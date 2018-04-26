@@ -12,7 +12,8 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - todo.md
+  - bootstrap.md
+  - augrid.md
 
 footer:
   - /_shared/footer.md
