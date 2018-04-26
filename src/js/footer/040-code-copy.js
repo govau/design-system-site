@@ -50,6 +50,11 @@ AddEvent( copyButtons, 'click', function( event, $this ) {
 		analytics[ 'language' ]  = $this.parentNode.parentNode.parentNode.id.split( '-' )[ 0 ];
 		analytics[ 'variation' ] = $this.parentNode.parentNode.parentNode.id.split( '-' )[ 1 ];
 	}
+	else if( analytics.page.indexOf( 'code' ) === analytics.page.length - 4 ){
+		analytics[ 'component' ] = document.getElementsByClassName( "componentheader__headling" )[ 0 ].innerHTML;
+		analytics[ 'version' ]   = document.getElementsByClassName( "componentheader__version" )[ 0 ].innerHTML;
+		analytics[ 'section' ]   = $this.parentNode.parentNode.previousSibling.innerHTML;
+	}
 	else if( analytics.page === 'Download' ){
 		var selectedItems = GetSelectedFormItems( 'furnace' );
 		analytics[ 'event' ]              = 'copynpm';
@@ -57,6 +62,8 @@ AddEvent( copyButtons, 'click', function( event, $this ) {
 		analytics[ 'selectedCss' ]        = selectedItems.styleOutput[ 0 ];
 		analytics[ 'selectedJs' ]         = selectedItems.jsOutput[ 0 ];
 	}
+
+	console.log( analytics );
 
 	dataLayer.push( analytics );
 
