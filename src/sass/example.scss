@@ -89,7 +89,8 @@
 }
 
 // Grids
-.grids {
+.au-grid .container .row > *,
+.au-grid .container-fluid .row > * {
 	@include AU-space( padding-top, 0.75unit );
 	@include AU-space( padding-bottom, 0.75unit );
 	background: $AU-colordark-foreground-text;
