@@ -64,7 +64,7 @@
 
 
 // Live demo header bar
-.live-demo header {
+.live-demo .header--example {
 	@include AU-space( margin-bottom, 1unit );
 	@include AU-space( padding, 1unit );
 	background-color: #1D1D1D;
@@ -89,8 +89,7 @@
 }
 
 // Grids
-.au-grid .container .row > *,
-.au-grid .container-fluid .row > * {
+.grid-example .row > * {
 	@include AU-space( padding-top, 0.75unit );
 	@include AU-space( padding-bottom, 0.75unit );
 	background: $AU-colordark-foreground-text;
