@@ -1,6 +1,7 @@
 import AUfooter from '../../_uikit/layout/footer';
 import AUlinkList from '../../_uikit/layout/link-list';
 import AUheading from '../../_uikit/layout/headings';
+import AUctaLink from '../../_uikit/layout/cta-link';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -35,10 +36,9 @@ const Footer = ({ headline, legallist, mainlist, _body, _ID, _relativeURL }) => 
 							<span>An initiative of the </span>
 							<span>Digital Transformation Agency </span>
 							<span className="footer__affiliate-link">
-								<a href="https://www.dta.gov.au/">More projects</a>
+								<AUctaLink link="http://dta.gov.au/" text="More projects" dark/>
 							</span>
 						</p>
-						{/* <a href="http://dta.gov.au"><img className="footer__image" src={ _relativeURL( '/assets/img/footer-logo-dta.png', _ID ) } alt="Digital Transformation Agency" title="Digital Transformation Agency"/></a> */}
 					</div>
 
 				</div>
