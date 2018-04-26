@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Grid 12 rationale
+pagetitle: Core code
 
 header:
   - /_shared/header.md
@@ -12,8 +12,7 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - bootstrap.md
-  - augrid.md
+  - sass-usage.md
 
 footer:
   - /_shared/footer.md
