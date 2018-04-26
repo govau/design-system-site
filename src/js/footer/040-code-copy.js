@@ -45,13 +45,13 @@ AddEvent( copyButtons, 'click', function( event, $this ) {
 
 	// If we are on the component overview page add extra analytics
 	if ( analytics.page !== 'Download' && analytics.page.indexOf( 'code' ) !== analytics.page.length - 4 ) {
-		analytics[ 'component' ] = document.getElementsByClassName( "componentheader__headling" )[ 0 ].innerHTML;
+		analytics[ 'component' ] = document.getElementsByClassName( "componentheader__heading" )[ 0 ].innerHTML;
 		analytics[ 'version' ]   = document.getElementsByClassName( "componentheader__version" )[ 0 ].innerHTML;
 		analytics[ 'language' ]  = $this.parentNode.parentNode.parentNode.id.split( '-' )[ 0 ];
 		analytics[ 'variation' ] = $this.parentNode.parentNode.parentNode.id.split( '-' )[ 1 ];
 	}
 	else if( analytics.page.indexOf( 'code' ) === analytics.page.length - 4 ){
-		analytics[ 'component' ] = document.getElementsByClassName( "componentheader__headling" )[ 0 ].innerHTML;
+		analytics[ 'component' ] = document.getElementsByClassName( "componentheader__heading" )[ 0 ].innerHTML;
 		analytics[ 'version' ]   = document.getElementsByClassName( "componentheader__version" )[ 0 ].innerHTML;
 		analytics[ 'section' ]   = $this.parentNode.parentNode.previousSibling.innerHTML;
 	}

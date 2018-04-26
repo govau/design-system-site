@@ -22,7 +22,7 @@ const ComponentHeader = ({ _relativeURL, _parseYaml, _parseMD, _pages, _parents,
 		<div className="row componentheader">
 			<div className="col-sm-6">
 
-				<h1 className="componentheader__headling">
+				<h1 className="componentheader__heading">
 					{ MODULE.name }
 				</h1>
 				{
