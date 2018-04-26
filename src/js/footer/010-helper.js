@@ -86,3 +86,26 @@ function GetStyle( element, property ) {
 			: element.currentStyle
 	)[ property ]; // avoid getPropertyValue altogether
 }
+
+
+// Get all the selected items in a form
+function GetSelectedFormItems( id ){
+	var formInputs = document.getElementById( id ).getElementsByTagName( 'input' );
+	var selected = {};
+
+	// For each form element
+	for( var i = 0; i < formInputs.length; i++ ){
+
+		// If they are checked create a key and array of values
+		if ( formInputs[ i ].checked ){
+			if( selected[ formInputs[ i ].name ] ){
+				selected[ formInputs[ i ].name ].push( formInputs[ i ].defaultValue );
+			}
+			else{
+				selected[ formInputs[ i ].name ] = [ formInputs[ i ].defaultValue ]
+			}
+		}
+	}
+
+	return selected;
+}
