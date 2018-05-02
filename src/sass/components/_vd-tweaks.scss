@@ -28,3 +28,8 @@
 		background-color: $AU-color-background;
 	}
 }
+
+// give images inside links focus
+a:focus img {
+	outline: 3px solid $AU-color-foreground-focus;
+}
