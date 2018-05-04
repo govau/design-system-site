@@ -68,6 +68,9 @@
 a.header__logo-wrapper {
 	text-decoration: none;
 	color: $AU-colordark-foreground-text;
+	display: inline-block;
+
+	@include AU-focus( 'dark' );
 
 	&:hover {
 		h1 {
