@@ -23,6 +23,6 @@ tiles:
   - description: Github stars
     number: stars
 
-  - description: Downloads this year
+  - description: Downloads in the last year
     number: downloads
 ---

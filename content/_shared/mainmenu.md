@@ -20,7 +20,7 @@ navigation:
           link: /support
     - alignment: right
       items:
-        - text: Github
+        - text: GitHub
           link: https://github.com/govau/uikit/
         - text: Download
           link: /download
