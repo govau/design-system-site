@@ -6,7 +6,7 @@ mainlist:
     link: https://community.digital.gov.au/c/designsystem
   - text: Roadmap
     link: https://github.com/orgs/govau/projects/7?fullscreen=true
-  - text: Github
+  - text: GitHub
     link: https://github.com/govau/uikit/
 legallist:
   - text: Privacy

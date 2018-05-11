@@ -80,7 +80,7 @@ Statistics.propTypes = {
 	* tiles:
 	*   - description: Live projects
 	*     number: 5
-	*   - description: Github stars
+	*   - description: GitHub stars
 	*     number: stars
 	*   - description: Downloads
 	*     number: downloads

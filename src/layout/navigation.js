@@ -5,7 +5,7 @@ import PropTypes           from 'prop-types';
 
 export const CreateLink = ( link, _relativeURL, _ID, _pages ) => {
 
-	const linkClasses = `${ link.text == 'Github' ? 'icon icon--dark icon--github icon--action' : '' }` +
+	const linkClasses = `${ link.text == 'GitHub' ? 'icon icon--dark icon--github icon--action' : '' }` +
 		`${ link.text == 'Download' ? 'icon icon--dark icon--download icon--action' : '' }` +
 		`${ link.text == 'Live demo' ? 'icon icon--right icon--demo icon--action' : '' }`;
 
