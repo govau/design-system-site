@@ -20,7 +20,7 @@ tiles:
 # https://beta.health.gov.au/
 # https://asbestossafety.gov.au/
 
-  - description: Github stars
+  - description: GitHub stars
     number: stars
 
   - description: Downloads in the last year
