@@ -12,8 +12,9 @@ sidebar:
   - /components/sidebar.md
 
 main:
+  - notabutton.md
   - iconography.md
-  - button.md
+  - appearance.md
 
 footer:
   - /_shared/footer.md
