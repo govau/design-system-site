@@ -17,7 +17,7 @@ const Search = ({ headline, link, _parseReact }) => {
 				Released
 				<span class="searchpage__section__headline__found">(##found##)</span>
 			</h2>
-			<ul class="searchpage__section__listing au-card-list au-card-list--matchheight">
+			<ul class="searchpage__section__listing au-card-list au-card-list--matchheight row">
 	`;
 	output.publishedMiddle = `
 		<li class="col-xs-6 col-sm-3">
@@ -126,7 +126,7 @@ const Search = ({ headline, link, _parseReact }) => {
 			<div className="searchpage__headline">
 				<AUheading className="searchpage__headline__heading" size="lg" level="1">
 					{ headline }&nbsp;
-					<span className="searchpage__headline__heading__searchstring">##searchstring##</span>
+					<span className="searchpage__headline__heading__searchstring">"##searchstring##"</span>
 				</AUheading>
 				<a className="searchpage__headline__link" href={ link.link }>{ link.text }</a>
 			</div>
