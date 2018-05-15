@@ -21,7 +21,9 @@ const Features = ({ title, btnURL, btntext, tiles, _relativeURL, _ID, _parseMD, 
 				tiles.map( ( tile, i ) => (
 					<li className="feature col-xs-6 col-sm-3 col-lg-2" key={ i }>
 						<div className="feature__wrapper">
-							<AUheading className="feature__wrapper__headline" size="sm" level="3">{ tile.smltitle }</AUheading>
+							<AUheading className="feature__wrapper__headline" size="sm" level="3">
+								{ tile.smltitle }
+							</AUheading>
 							<p>{ tile.text }</p>
 						</div>
 					</li>

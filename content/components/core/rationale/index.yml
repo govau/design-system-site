@@ -13,6 +13,7 @@ sidebar:
 
 main:
   - system-fonts.md
+  - focus-color.md
 
 footer:
   - /_shared/footer.md

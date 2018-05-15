@@ -107,6 +107,9 @@ accordion:
     - name: Julian Fleetwood
       img: julian-fleetwood.jpg
       url: 'https://github.com/joolswood'
+    - name: Nathan Davison
+      img: nathan-davison.jpg
+      url: 'https://github.com/ndavison'
   state: published
   order: 10
   discussions:

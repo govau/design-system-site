@@ -192,7 +192,13 @@ const DisplaySearch = ( search = '' ) => {
 
 	const result = FuseSearch.search( search );
 
-	const searchResult = MakeResultHTML( result, HTML );
+	let searchResult = `<section class="searchpage__section released">
+			No results found for "${ search }"
+		</section>`;
+
+	if ( result.length ){
+		searchResult = MakeResultHTML( result, HTML );
+	}
 
 	return HTML.start + searchResult + HTML.end;
 };
