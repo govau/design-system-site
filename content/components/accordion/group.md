@@ -7,6 +7,10 @@ code:
       <!--
         Light:  <section class="au-accordion">
         Dark:   <section class="au-accordion au-accordion--dark">
+
+        Note: Accordion requires feature detection to see if a user has javascript.
+              Please add a `no-js` class on html and replace it with `js` if enabled
+              https://www.paulirish.com/2009/avoiding-the-fouc-v3/
       -->
 
       <section class="au-accordion">
@@ -32,6 +36,10 @@ code:
       /*
         Light:  <Accordion header="Accordion title">
         Dark:   <Accordion header="Accordion title" dark>
+
+        Note: Accordion requires feature detection to see if a user has javascript.
+              Please add a `no-js` class on html and replace it with `js` if enabled
+              https://www.paulirish.com/2009/avoiding-the-fouc-v3/
       */
 
       import AUaccordion from '@gov.au/accordion';
