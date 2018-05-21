@@ -44,25 +44,30 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parents, _parseYaml }
 
 		return (
 			<Fragment>
-				<section className="au-accordion">
-					<a href={ `#accordion-${ state }` }
-						className={ `au-accordion__title js-accordion${ _isOpen ? '' : ' au-accordion--closed' }` }
-						aria-controls={ `accordion-${ state }` }
-						aria-expanded={ _isOpen ? 'true' : 'false' }
-						aria-selected={ _isOpen ? 'true' : 'false' }
-						role="tab"
-						onClick="return UIKIT.accordion.Toggle( this )">
-							{ title } <span className={ `badge badge--${ state }` }>{ components.length }</span>
-					</a>
-					<div
-						className={ `au-accordion__body${ _isOpen ? '' : ' au-accordion--closed' }` }
-						id={ `accordion-${ state }` }
-						aria-hidden="false">
-						<div className="au-accordion__body-wrapper">
-							<AUlinkList items={ navItems } />
-						</div>
-					</div>
-				</section>
+				{
+					components.length
+						?
+						<section className="au-accordion">
+							<a href={ `#accordion-${ state }` }
+								className={ `au-accordion__title js-accordion${ _isOpen ? '' : ' au-accordion--closed' }` }
+								aria-controls={ `accordion-${ state }` }
+								aria-expanded={ _isOpen ? 'true' : 'false' }
+								aria-selected={ _isOpen ? 'true' : 'false' }
+								role="tab"
+								onClick="return UIKIT.accordion.Toggle( this )">
+									{ title } <span className={ `badge badge--${ state }` }>{ components.length }</span>
+							</a>
+							<div
+								className={ `au-accordion__body${ _isOpen ? '' : ' au-accordion--closed' }` }
+								id={ `accordion-${ state }` }
+								aria-hidden="false">
+								<div className="au-accordion__body-wrapper">
+									<AUlinkList items={ navItems } />
+								</div>
+							</div>
+						</section>
+						: ''
+				}
 			</Fragment>
 		)
 	};

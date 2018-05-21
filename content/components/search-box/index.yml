@@ -1,6 +1,6 @@
 layout: component/page
-module: navigation
-pagetitle: Navigation overview
+module: search-box
+pagetitle: Main navigation overview
 
 header:
   - /_shared/header.md

@@ -1,0 +1,16 @@
+layout: component/page
+module: main-nav
+pagetitle: Main nav overview
+
+header:
+  - /_shared/header.md
+
+sidebar:
+  - /components/search.md
+  - /components/sidebar.md
+
+main:
+  - default.md
+
+footer:
+  - /_shared/footer.md

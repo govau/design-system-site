@@ -31,21 +31,27 @@ const TableSuggestions = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _
 
 	return (
 		<Fragment>
-			<h2>{ title }</h2>
+			{
+				components.length
+					?
+						<Fragment>
+							<h2>{ title }</h2>
 
-			<Table
-				className="component-table"
-				caption={ caption }
-				header={ tableTH }
-				body={ body }
-			/>
+							<Table
+								className="component-table"
+								caption={ caption }
+								header={ tableTH }
+								body={ body }
+							/>
 
-			<p>
-				<AUbutton href={ btnURL } className={ btnIcon && `icon icon--${ btnIcon } icon--dark`}>
-					{ btntext }
-				</AUbutton>
-			</p>
-
+							<p>
+								<AUbutton href={ btnURL } className={ btnIcon && `icon icon--${ btnIcon } icon--dark`}>
+									{ btntext }
+								</AUbutton>
+							</p>
+						</Fragment>
+					: ''
+			}
 		</Fragment>
 	);
 }
