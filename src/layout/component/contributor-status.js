@@ -15,7 +15,7 @@ const ContributorStatus = ( status ) => {
 	};
 
 	return(
-		<span class={ 'contributor-status contributor-status--' + status }>
+		<span className={ 'contributor-status contributor-status--' + status }>
 			{ statusMap[ status ] }
 		</span>
 	);
