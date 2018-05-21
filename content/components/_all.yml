@@ -1532,7 +1532,7 @@ table:
   hasReact: true    # <-- auto generated, don't change
 main-nav:
   name: Main nav
-  description: Horizontal list of links to key areas on the website usually in the header
+  description: Horizontal list of links to key areas on the website. Usually located in the header.
   metatags:
     - mobile menu
     - nav
@@ -1579,7 +1579,7 @@ main-nav:
   hasReact: true    # <-- auto generated, don't change
 side-nav:
   name: Side nav
-  description: A list of links next to the body content
+  description: A vertical list of links for site navigation typically placed next to the body content.
   metatags:
     - mobile menu
     - nav
