@@ -1,5 +1,4 @@
 // Table. Just a typical one.
-
 .au-table,
 .au-body table {
 	width: 100%;
@@ -17,19 +16,28 @@
 	td {
 		border-bottom: solid 1px $AU-color-background-alt-shade;
 	}
+
+	&.au-table--small {
+		@include AU-fontgrid( xs );
+
+		th, td {
+			@include AU-space( padding, 1unit 0.5unit );
+		}
+	}
+
+	&.au-table--striped .au-table__body:nth-child( even ) {
+		background: $AU-color-background-shade;
+	}
+
+	&.au-table--responsive {
+		overflow:auto;
+		@include AU-space( margin-top, 1unit );
+	}
+
 }
 
-.au-responsive-table__caption {
+.au-table__caption {
 	display: table-caption;
 	text-align: left;
 	@include AU-space( margin-bottom, 1unit );
-}
-
-.au-responsive-table__body:nth-child( even ) {
-	background: $AU-color-background-shade;
-}
-
-.au-responsive-table {
-	overflow:auto;
-	@include AU-space( margin-top, 1unit );
 }

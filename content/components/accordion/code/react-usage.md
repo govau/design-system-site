@@ -7,11 +7,11 @@ layout: section
 ```jsx
 import AUaccordion from '@gov.au/accordion';
 
-<Accordion header="Closed">
+<Accordion header="Open">
   Some content of the accordion <a href="#url">here</a>
 </Accordion>
 
-<Accordion open header="Open">
+<Accordion closed header="Closed">
   Some content of the accordion <a href="#url">here</a>
 </Accordion>
 
@@ -29,7 +29,7 @@ import AUaccordion from '@gov.au/accordion';
   Some content of the accordion <a href="#url">here</a>
 </Accordion>
 
-<Accordion open={ this.state.accordionOpen } header="State controlled accordion open">
+<Accordion closed={ this.state.accordionClosed } header="State controlled accordion open">
   Some content of the accordion <a href="#url">here</a>
 </Accordion>
 <button type="button" onClick={ () => { this.changeAccordion('accordionOpen') } }>

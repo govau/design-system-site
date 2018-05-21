@@ -7,7 +7,7 @@ layout: section
 | Prop name | Type    | Description
 |-----------|---------------------------------------------------------------------------------------
 | header      | string   | The headline of the accordion
-| open        | boolean  | Open state, optional
+| closed      | boolean  | Closed state, optional
 | speed       | number   | Speed of the animation in ms, optional
 | onOpen      | function | A function executed when the accordion opens, optional
 | afterOpen   | function | A function executed after the accordion opened, optional
