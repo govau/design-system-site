@@ -1,7 +1,7 @@
 ---
 layout: component/table-inprogress
 title: In progress
-caption: A table of in progress components including their status, current version, and contributors.
+caption: A table of in progress components including their current status.
 btntext: Community
 btnURL: /community
 btnIcon: community

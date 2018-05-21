@@ -1,7 +1,7 @@
 ---
 layout: component/table-suggestions
 title: Suggestions
-caption: A table of components that have been suggested, including their status.
+caption: A table of suggested components including their current status.
 btntext: Make a Suggestion
 btnURL: /community
 tableTH:
