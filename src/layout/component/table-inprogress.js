@@ -1,7 +1,7 @@
 import AUbutton            from '../../_uikit/layout/buttons';
 import Table               from '../table';
 import GetData             from '../getData';
-import Contributors        from './contributors';
+import ContributorStatus   from './contributor-status';
 
 import React, { Fragment } from 'react';
 import PropTypes           from 'prop-types';
@@ -17,19 +17,30 @@ const TableInProgress = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _p
 		yaml: _parseYaml,
 	});
 
-
 	const body = components.map( component => {
 
 		return [
 			{
 				text: <a href={ `/components/${ component.ID }` }>{ component.name }</a>,
 			},
-			// {
-			// 	text: component.version,
-			// },
-			// {
-			// 	text: <Contributors contributors={ component.contributors } _relativeURL={ _relativeURL } _ID={ _ID } />,
-			// },
+			{
+				text: ContributorStatus( component.status.usable )
+			},
+			{
+				text: ContributorStatus( component.status.consistent )
+			},
+			{
+				text: ContributorStatus( component.status.versatile )
+			},
+			{
+				text: ContributorStatus( component.status.coded )
+			},
+			{
+				text: ContributorStatus( component.status.tested )
+			},
+			{
+				text: ContributorStatus( component.status.considered )
+			},
 		];
 	}
 
@@ -48,6 +59,9 @@ const TableInProgress = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _p
 								caption={ caption }
 								header={ tableTH }
 								body={ body }
+								smallTable
+								responsive
+								striped
 							/>
 
 							<p>
@@ -96,6 +110,7 @@ TableInProgress.propTypes = {
 	tableTH: PropTypes.arrayOf(
 		PropTypes.shape({
 			text: PropTypes.string.isRequired,
+			link: PropTypes.string,
 			className: PropTypes.string,
 		})
 	).isRequired

@@ -7,18 +7,24 @@ import PropTypes from 'prop-types';
  *
  * @disable-docs
  */
-const Table = ({ caption, header, body, footer, className }) => (
-	<div className={`au-responsive-table ${ className }`}>
+const Table = ({ caption, header, body, footer, className, responsive, smallTable, striped }) => (
+	<div className={`au-table au-body ${ smallTable ? 'au-table--small ' : ''}${ responsive ? 'au-table--responsive ' : ''}${ striped ? 'au-table--striped ' : ''}${ className }`}>
 		<table>
-			<caption className="au-responsive-table__caption">{ caption }</caption>
+			<caption className="au-table__caption">{ caption }</caption>
 			{
 				header &&
 					<thead>
-						<tr className="au-responsive-table__header">
+						<tr className="au-table__header">
 							{
 								header.map( ( th, i ) => (
 									<th key={ i } scope="col" className={ th.className }>
-										{ th.text }
+										{
+											th.link
+												? th.link.startsWith('http://') || th.link.startsWith('https://')
+													? <a href={ th.link } rel="external">{ th.text }</a>
+													: <a href={ th.link }>{ th.text }</a>
+												: th.text
+										}
 									</th>
 								))
 							}
@@ -29,7 +35,7 @@ const Table = ({ caption, header, body, footer, className }) => (
 			<tbody>
 				{
 					body.map( ( bodyTD, i ) => (
-						<tr key={ i } className="au-responsive-table__body">
+						<tr key={ i } className="au-table__body">
 							{
 								bodyTD.map( ( td, j ) => (
 									<td key={ j } scope="col" className={ td.className }>
@@ -45,7 +51,7 @@ const Table = ({ caption, header, body, footer, className }) => (
 			{
 				footer &&
 					<tfoot>
-						<tr className="au-responsive-table__footer">
+						<tr className="au-table__footer">
 							{
 								footer.map( ( td, i ) => (
 									<td key={ i } scope="col" className={ td.className }>
@@ -65,6 +71,11 @@ Table.propTypes = {
 	 * caption: A table of in progress components including their status, current version, and contributors.
 	 */
 	caption: PropTypes.string.isRequired,
+
+	/**
+	 * smallTitle: If the titles are small
+	 */
+	smallTable: PropTypes.bool,
 
 	/**
 	 * header:

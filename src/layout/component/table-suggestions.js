@@ -1,6 +1,7 @@
 import AUbutton            from '../../_uikit/layout/buttons';
 import GetData             from './../getData';
 import Table               from './../table';
+import ContributorStatus   from './contributor-status';
 
 import React, { Fragment } from 'react';
 import PropTypes           from 'prop-types';
@@ -22,9 +23,12 @@ const TableSuggestions = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _
 				{
 					text: <a href={ `/components/${ component.ID }` }>{ component.name }</a>,
 				},
-				// {
-				// 	text: `Suggestion`,
-				// },
+				{
+					text: ContributorStatus( component.status.useful )
+				},
+				{
+					text: ContributorStatus( component.status.unique )
+				},
 			];
 		}
 	);
@@ -42,6 +46,9 @@ const TableSuggestions = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _
 								caption={ caption }
 								header={ tableTH }
 								body={ body }
+								smallTable
+								responsive
+								striped
 							/>
 
 							<p>

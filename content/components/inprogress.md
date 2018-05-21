@@ -7,8 +7,23 @@ btnURL: /community
 btnIcon: community
 tableTH:
   - text: Title
-  # - text: Version
-  #   className: component-table--minwidth
-  # - text: Contributors
-  #   className: component-table--minwidth
+    className: component-table--title
+  - text: Usable
+    link: https://github.com/govau/uikit/blob/master/CONTRIBUTING.md#usable
+    className: component-table--minwidth
+  - text: Consistent
+    link: https://github.com/govau/uikit/blob/master/CONTRIBUTING.md#consistent
+    className: component-table--minwidth
+  - text: Versatile
+    link: https://github.com/govau/uikit/blob/master/CONTRIBUTING.md#versatile
+    className: component-table--minwidth
+  - text: Coded
+    link: https://github.com/govau/uikit/blob/master/CONTRIBUTING.md#coded
+    className: component-table--minwidth
+  - text: Tested
+    link: https://github.com/govau/uikit/blob/master/CONTRIBUTING.md#tested
+    className: component-table--minwidth
+  - text: Considered
+    link: https://github.com/govau/uikit/blob/master/CONTRIBUTING.md#considered
+    className: component-table--minwidth
 ---

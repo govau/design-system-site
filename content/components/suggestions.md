@@ -6,6 +6,11 @@ btntext: Make a Suggestion
 btnURL: /community
 tableTH:
   - text: Title
-  # - text: Status
-  #   className: component-table--minwidth
+    className: component-table--title
+  - text: Useful
+    link: https://github.com/govau/uikit/blob/master/CONTRIBUTING.md#useful
+    className: component-table--minwidth
+  - text: Unique
+    link: https://github.com/govau/uikit/blob/master/CONTRIBUTING.md#unique
+    className: component-table--minwidth
 ---

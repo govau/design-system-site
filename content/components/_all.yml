@@ -1442,6 +1442,13 @@ cards:
     - TODO
   required: false
   state: inprogress
+  status:
+    usable: done
+    consistent: done
+    versatile: done
+    coded: doing
+    tested: todo
+    considered: todo
   order: 10
   discussions:
     - open: 2
@@ -1504,6 +1511,13 @@ table:
       img: gary-broadbent.jpg
       url: 'https://github.com/gazhands'
   state: inprogress
+  status:
+    usable: done
+    consistent: done
+    versatile: done
+    coded: doing
+    tested: todo
+    considered: todo
   order: 20
   discussions:
     - open: 2
@@ -1544,6 +1558,13 @@ main-nav:
       img: patrick-de-young.png
       url: 'https://github.com/pattyde'
   state: inprogress
+  status:
+    usable: done
+    consistent: done
+    versatile: done
+    coded: doing
+    tested: todo
+    considered: todo
   order: 10
   discussions:
     - open: 2
@@ -1584,6 +1605,13 @@ side-nav:
       img: patrick-de-young.png
       url: 'https://github.com/pattyde'
   state: inprogress
+  status:
+    usable: done
+    consistent: done
+    versatile: done
+    coded: doing
+    tested: todo
+    considered: todo
   order: 10
   discussions:
     - open: 2
@@ -1625,6 +1653,9 @@ search-box:
       img: patrick-de-young.png
       url: 'https://github.com/pattyde'
   state: suggestion
+  status:
+    useful: done
+    unique: done
   order: 10
   discussions:
     - open: 2
