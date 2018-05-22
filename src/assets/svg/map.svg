@@ -102,15 +102,14 @@
 		<path d="M8,8V24H64V8Zm8,12a4,4,0,1,1,4-4A4,4,0,0,1,16,20Z" fill="#858585" />
 	</symbol>
 	<symbol id="grid-12" viewBox="0 0 72 72">
-		<rect x="30" y="8" width="32" height="16" fill="#858585" />
-		<rect x="30" y="28" width="32" height="36" fill="#858585" />
-		<rect x="10" y="8" width="12" height="56" fill="#858585" />
-		<rect x="22" y="8" width="2" height="56" fill="#007099" />
-		<rect x="8" y="8" width="2" height="56" fill="#007099" />
-		<rect x="42" y="8" width="2" height="56" fill="#007099" />
-		<rect x="28" y="8" width="2" height="56" fill="#007099" />
-		<rect x="62" y="8" width="2" height="56" fill="#007099" />
-		<rect x="48" y="8" width="2" height="56" fill="#007099" />
+		<rect x="30" y="8" width="30" height="18" style="fill:#858585"/>
+		<rect x="48" y="28" width="12" height="36" style="fill:#858585"/>
+		<rect x="30" y="28" width="12" height="36" style="fill:#858585"/>
+		<rect x="12" y="8" width="12" height="56" style="fill:#858585"/>
+		<rect x="26" y="8" width="2" height="56" style="fill:#007099"/>
+		<rect x="8" y="8" width="2" height="56" style="fill:#007099"/>
+		<rect x="44" y="28" width="2" height="36" style="fill:#007099"/>
+		<rect x="62" y="8" width="2" height="56" style="fill:#007099"/>
 	</symbol>
 	<symbol id="header" viewBox="0 0 72 72">
 		<rect x="8" y="28" width="16" height="16" fill="#858585" />
@@ -158,10 +157,12 @@
 		<rect x="25" y="4" width="6" height="40" transform="translate(4 52) rotate(-90)" fill="#858585" />
 	</symbol>
 	<symbol id="page-alerts" viewBox="0 0 72 72">
-		<rect x="8" y="28" width="16" height="16" fill="#858585" />
-		<rect x="8" y="48" width="56" height="16" fill="#858585" />
-		<path d="M8,8V24H64V8Zm8,12a4,4,0,1,1,4-4A4,4,0,0,1,16,20Z" fill="#858585" />
-		<path d="M28,28V44H64V28ZM41.38,40,46,32l4.62,8Z" fill="#007099" />
+		<rect x="33" y="9" width="6" height="56" transform="translate(-1 73) rotate(-90)" style="fill:#858585"/>
+		<rect x="33" y="21" width="6" height="56" transform="translate(-13 85) rotate(-90)" style="fill:#858585"/>
+		<rect x="33" y="33" width="6" height="56" transform="translate(-25 97) rotate(-90)" style="fill:#858585"/>
+		<path d="M8,8V26H64V8Zm28,8H54v2H36ZM12,22l6-10,6,10Zm46,0H36V20H58Zm0-8H36V12H58Z" style="fill:#007099"/>
+		<path d="M18,18.67a.83.83,0,1,0,.86.83A.85.85,0,0,0,18,18.67Z" style="fill:#007099"/>
+		<polygon points="17.57 18.25 18.43 18.25 18.86 15.33 17.14 15.33 17.57 18.25" style="fill:#007099"/>
 	</symbol>
 	<symbol id="progress-indicator" viewBox="0 0 72 72">
 		<rect x="24" y="12.97" width="40" height="6" fill="#858585" />
@@ -228,5 +229,40 @@
 			0,0,1-1.12-.2,2.5,2.5,0,0,1-1.42-1.45,3.08,3.08,0,0,1-.2-1.11,3.42,3.42,0,0,1,.19-1.17,2.66,2.66,0,0,1,.54-.94,2.4,2.4,0,0,1,.87-.61,2.87,2.87,0,0,1,
 			1.17-.22,3.59,3.59,0,0,1,.93.12,2.71,2.71,0,0,1,.8.39,2.07,2.07,0,0,1,.57.64,2,2,0,0,1,.25.91H34.85A1,1,0,0,0,33.75,19.54Z" fill="#007099" />
 		<path d="M58,8H13.91a6,6,0,0,0-6,6V27a6,6,0,0,0,6,6H58a6,6,0,0,0,6-6V14A6,6,0,0,0,58,8Zm0,19H14V14H58Z" fill="#007099" />
+	</symbol>
+	<symbol id="cards" viewBox="0 0 72 72">
+		<path d="M60,8H42a4,4,0,0,0-4,4V30a4,4,0,0,0,4,4H60a4,4,0,0,0,4-4V12A4,4,0,0,0,60,8Zm0,22H42V12H60Z" style="fill:#858585"/>
+		<rect x="44" y="14" width="14" height="2" style="fill:#858585"/>
+		<rect x="54" y="26" width="4" height="2" style="fill:#858585"/>
+		<rect x="44" y="18" width="10" height="2" style="fill:#858585"/>
+		<path d="M60,38H42a4,4,0,0,0-4,4V60a4,4,0,0,0,4,4H60a4,4,0,0,0,4-4V42A4,4,0,0,0,60,38Zm0,22H42V42H60Z" style="fill:#858585"/>
+		<rect x="44" y="44" width="14" height="2" style="fill:#858585"/>
+		<rect x="54" y="56" width="4" height="2" style="fill:#858585"/>
+		<rect x="44" y="48" width="10" height="2" style="fill:#858585"/>
+		<path d="M30,38H12a4,4,0,0,0-4,4V60a4,4,0,0,0,4,4H30a4,4,0,0,0,4-4V42A4,4,0,0,0,30,38Zm0,22H12V42H30Z" style="fill:#858585"/>
+		<rect x="14" y="44" width="14" height="2" style="fill:#858585"/>
+		<rect x="24" y="56" width="4" height="2" style="fill:#858585"/>
+		<rect x="14" y="48" width="10" height="2" style="fill:#858585"/>
+		<path d="M30,8H12a4,4,0,0,0-4,4V30a4,4,0,0,0,4,4H30a4,4,0,0,0,4-4V12A4,4,0,0,0,30,8ZM14,18H24v2H14ZM28,28H24V26h4Zm0-12H14V14H28Z" style="fill:#007099"/>
+	</symbol>
+	<symbol id="main-nav" viewBox="0 0 72 72">
+		<path d="M8,14V58a6,6,0,0,0,6,6H58a6,6,0,0,0,6-6V14a6,6,0,0,0-6-6H14A6,6,0,0,0,8,14ZM58,58H14V14H58Z" style="fill:#858585"/>
+		<path d="M49,50a3,3,0,0,0,0-6H23a3,3,0,0,0,0,6Z" style="fill:#007099"/>
+		<path d="M49,39a3,3,0,0,0,0-6H23a3,3,0,0,0,0,6Z" style="fill:#007099"/>
+		<path d="M49,28a3,3,0,0,0,0-6H23a3,3,0,0,0,0,6Z" style="fill:#007099"/>
+	</symbol>
+	<symbol id="search-box" viewBox="0 0 72 72">
+		<path d="M7.91,58a6,6,0,0,0,6,6H58a6,6,0,0,0,6-6V14a6,6,0,0,0-6-6H13.91a6,6,0,0,0-6,6m6,0H58V58H14" style="fill:#858585"/>
+		<path d="M50,45.76l-5.67-5.67a12,12,0,1,0-4.24,4.24L45.76,50ZM28,34a6,6,0,1,1,6,6A6,6,0,0,1,28,34Z" style="fill:#007099"/>
+	</symbol>
+	<symbol id="side-nav" viewBox="0 0 72 72">
+		<rect x="8" y="28" width="16" height="16" style="fill:#007099"/>
+		<rect x="28" y="28" width="36" height="16" style="fill:#858585"/>
+		<rect x="8" y="48" width="56" height="16" style="fill:#858585"/>
+		<path d="M8,8V24H64V8Zm8,12a4,4,0,1,1,4-4A4,4,0,0,1,16,20Z" style="fill:#858585"/>
+	</symbol>
+	<symbol id="table" viewBox="0 0 72 72">
+		<path d="M60,28v6H42V28H38v6H22V28H18v6H12V28H8V58H64V28ZM18,54H12V48h6Zm0-10H12V38h6ZM38,54H22V48H38Zm0-10H22V38H38ZM60,54H42V48H60Zm0-10H42V38H60Z" style="fill:#858585"/>
+		<path d="M8,14V28H64V14ZM18,24H12V18h6Zm20,0H22V18H38Zm22,0H42V18H60Z" style="fill:#007099"/>
 	</symbol>
 </svg>
