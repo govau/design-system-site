@@ -1543,6 +1543,8 @@ main-nav:
     - navigation
     - interactive
   related:
+    - side-nav
+    - header
     - link-list
   related-articles:
     - TODO
@@ -1592,6 +1594,7 @@ side-nav:
     - navigation
     - interactive
   related:
+    - main-nav
     - link-list
   related-articles:
     - TODO
