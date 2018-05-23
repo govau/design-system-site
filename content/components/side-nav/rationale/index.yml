@@ -1,6 +1,5 @@
 layout: component/page
-module: side-nav
-pagetitle: Side nav overview
+pagetitle: TODO rationale
 
 header:
   - /_shared/header.md
@@ -13,7 +12,7 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - default.md
+  - todo.md
 
 footer:
   - /_shared/footer.md
