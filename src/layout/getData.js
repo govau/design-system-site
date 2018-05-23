@@ -29,7 +29,23 @@ const GetData = ({ yaml, filter = () => true, object = false }) => {
 	else {
 		return Object.keys( COMPONENTS )
 			.filter( ( key ) => filter( key, COMPONENTS ) )
-			.sort( ( keyA, keyB ) => COMPONENTS[ keyA ].order - COMPONENTS[ keyB ].order )
+			.sort( ( keyA, keyB ) => {
+				let orderValue = COMPONENTS[ keyA ].order - COMPONENTS[ keyB ].order;
+
+				if ( orderValue === 0 ){
+					if( COMPONENTS[ keyA ].name < COMPONENTS[ keyB ].name ){
+						return -1;
+					}
+					if( COMPONENTS[ keyA ].name > COMPONENTS[ keyB ].name ){
+						return 1;
+					}
+
+					return 0;
+				}
+				else {
+					return orderValue;
+				}
+			})
 			.map( ( key ) => COMPONENTS[ key ] );
 	}
 };
