@@ -1539,6 +1539,8 @@ main-nav:
     - mobile menu
     - nav
     - links
+    - hamburger
+    - horizontal
   tags:
     - navigation
     - interactive
@@ -1546,6 +1548,7 @@ main-nav:
     - side-nav
     - header
     - link-list
+    - breadcrumbs
   related-articles:
     - TODO
   used-in:
@@ -1590,12 +1593,14 @@ side-nav:
     - mobile menu
     - nav
     - links
+    - vertical
   tags:
     - navigation
     - interactive
   related:
     - main-nav
     - link-list
+    - breadcrumbs
   related-articles:
     - TODO
   used-in:
