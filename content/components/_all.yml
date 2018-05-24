@@ -1566,7 +1566,7 @@ main-nav:
     versatile: done
     coded: doing
     tested: todo
-    considered: todo
+    considered: done
   order: 10
   discussions:
     - open: 2
@@ -1615,7 +1615,7 @@ side-nav:
     versatile: done
     coded: doing
     tested: todo
-    considered: todo
+    considered: done
   order: 10
   discussions:
     - open: 2
