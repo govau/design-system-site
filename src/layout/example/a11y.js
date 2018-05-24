@@ -65,8 +65,7 @@ ${
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }}  />
 		<body className="a11y au-body">
-			<div className="example__wrapper">
-			<svg
+		<svg
 				aria-hidden="true"
 				className="svg-filter"
 				xmlns="http://www.w3.org/2000/svg"
@@ -146,6 +145,7 @@ ${
 					</filter>
 				</defs>
 			</svg>
+			<div className="example__wrapper">
 				<h2 className='example__title'>Example</h2>
 				<main className={`example${ fullwidth === true ? ' example--fullwidth' : '' }${ tabbing ? ' js-tabbing' : '' }${ filter === 'protanopia' || filter === 'deuteranopia' ? ' js-filter' : '' }`}>
 					<div className={`content filter${ tabbing ? ' js-tabbing-area' : '' }`}>
