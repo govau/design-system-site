@@ -2,6 +2,7 @@
 layout: component/code-demo
 example: examples/example-offset
 headline: Offset
+exampleFullwidth: true
 code:
   - HTML: |
       <main class="au-grid">

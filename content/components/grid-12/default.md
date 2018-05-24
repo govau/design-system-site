@@ -1,6 +1,7 @@
 ---
 layout: component/code-demo
 example: examples/example-default
+exampleFullwidth: true
 headline: Default
 code:
   - HTML: |
