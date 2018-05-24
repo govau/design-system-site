@@ -13,6 +13,11 @@
 		@include AU-space( border-bottom, 0.25unit solid $AU-color-background-alt-shade );
 	}
 
+	th[scope="row"]{
+		border-right: solid 1px $AU-color-background-alt-shade;
+	}
+
+	th[scope="row"],
 	td {
 		border-bottom: solid 1px $AU-color-background-alt-shade;
 	}

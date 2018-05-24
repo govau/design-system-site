@@ -49,6 +49,7 @@ const TableSuggestions = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _
 								smallTable
 								responsive
 								striped
+								firstColTH
 							/>
 
 							<p>
