@@ -12,11 +12,11 @@ layout: section
 ### [md]node_modules import
 
 ```jsx
-import AUheader, { AUheadeBrand } from '@gov.au/header';
+import AUheader, { AUheaderBrand } from '@gov.au/header';
 ```
 
 ### [md]pancake import
 
 ```jsx
-import AUheader, { AUheadeBrand } from './header';
+import AUheader, { AUheaderBrand } from './header';
 ```

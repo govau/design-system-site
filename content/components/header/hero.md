@@ -10,9 +10,21 @@ code:
         Dark:   <header class="au-header au-header--hero au-header--dark" role="banner">
       -->
 
-      <header class="au-header au-header--hero" role="banner">
-        <h1 class="au-header-heading">Page title</h1>
-        <span class="au-header-subline">Service sub-title that could be a little longer</span>
+      <header class="au-grid au-header au-header--hero au-header--dark" role="banner">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9">
+              <img class="au-header__brand-image" alt="Australian Government Crest" src="http://placehold.it/256x80">
+              <div class="au-header__text">
+                <h1 class="au-header__heading">Site title</h1>
+                <div class="au-header__subline">
+                  Service description that could be a little longer
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col-md-3">Extras</div> -->
+          </div>
+        </div>
       </header>
   - React: |
       /*
@@ -20,9 +32,23 @@ code:
         Dark:   <AUheader dark>
       */
 
-      import AUheader from '@gov.au/header';
+      import AUheader, { AUheaderBrand } from '@gov.au/header';
 
-      <AUheader title="Page title" hero subline="Service sub-title that could be a little longer" />
+      <AUheader>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9">
+              <AUheaderBrand
+                title="Page title" 
+                subline="Service sub-title that could be a little longer"
+                link="#"
+                brandImage="http://placehold.it/256x80"
+                brandImageAlt="Digital Transformation Agency"
+              />
+            </div>
+          </div>
+        </div>
+      </AUheader>
 ---
 
 A ‘hero’ version of the header. This version has larger spacing for more visual prominence. Examples of use might be a home page, or promotional page.
