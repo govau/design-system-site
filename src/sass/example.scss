@@ -19,12 +19,8 @@
 	&.example--fullwidth .content {
 		padding: 0;
 
-		.au-body.au-body--dark,
-		.au-header.au-header--dark {
-			margin: 0;
-		}
-
 		.au-body.au-body--dark {
+			margin: 0;
 			padding: 0;
 		}
 	}
@@ -46,6 +42,10 @@
 
 	.live-demo.live-demo--fullwidth & {
 		max-width: 1200px;
+
+		.au-header.au-header--dark {
+			margin: 0;
+		}
 	}
 }
 
