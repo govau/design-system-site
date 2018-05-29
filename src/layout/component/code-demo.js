@@ -8,36 +8,41 @@ import Path from 'path';
 import Fs from 'fs';
 
 
+
 /**
  * The codedemo component
  */
-const CodeDemo = ({ headline, example, iframe, code, _body, _ID, _parseMD, _relativeURL }) => {
+const CodeDemo = ({ headline, example, exampleFullwidth, iframe, code, _body, _ID, _parseMD, _relativeURL }) => {
 	const pathToCode = Path.normalize(`${ SETTINGS.get().folder.content }/${ _ID }/${ example }/code.md`);
 	const exampleCode = Fs.readFileSync( pathToCode, 'utf8' );
+	const CodeExampleClass = exampleFullwidth
+		? 'col-sm-12'
+		: 'col-sm-6';
 
 	return (
 		<div className="code-demo">
 			<div className="row" id={ Slugify( headline ).toLowerCase() }>
 				<a className="code-demo__anchor" href={`#${ Slugify( headline ).toLowerCase() }`}>#</a>
 
-				<h2 className="col-sm-6 code-demo__headline">
-					{ headline }
-				</h2>
-
-				<div className="col-sm-6 code-demo__example-wrapper">
-					<div className="code-demo__example">
-						<iframe
-							frameBorder="0"
-							className="code-demo__example__iframe"
-							scrolling="no"
-							src={ iframe ? _relativeURL( `/${ _ID }/${ iframe }/`, _ID ) : _relativeURL( `/${ _ID }/${ example }/`, _ID ) }>
-								{ exampleCode }
-						</iframe>
+					<div className={`code-demo__text ${CodeExampleClass}` }>
+						<h2 className="code-demo__headline">
+							{ headline }
+						</h2>
+						{ _body }
 					</div>
-				</div>
-				<div className="col-sm-6 code-demo__text">
-					{ _body }
-				</div>
+
+					<div className={`code-demo__example-wrapper ${CodeExampleClass}` }>
+						<div className="code-demo__example">
+							<iframe
+								frameBorder="0"
+								className="code-demo__example__iframe"
+								scrolling="no"
+								src={ iframe ? _relativeURL( `/${ _ID }/${ iframe }/`, _ID ) : _relativeURL( `/${ _ID }/${ example }/`, _ID ) }>
+									{ exampleCode }
+							</iframe>
+						</div>
+					</div>
+
 			</div>
 			{
 				code

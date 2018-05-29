@@ -1,6 +1,7 @@
 ---
 layout: component/code-demo
 example: examples/example-hero
+exampleFullwidth: true
 headline: Hero
 code:
   - HTML: |
@@ -24,4 +25,4 @@ code:
       <AUheader title="Page title" hero subline="Service sub-title that could be a little longer" />
 ---
 
-A hero version of the header. This version has larger spacing to help users focus on the content.
+A ‘hero’ version of the header. This version has larger spacing for more visual prominence. Examples of use might be a home page, or promotional page.

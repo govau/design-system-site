@@ -153,7 +153,7 @@ animate:
       img: simon-schwartz.jpg
       url: 'https://github.com/simonschwartz'
   state: published
-  order: 20
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -215,7 +215,7 @@ body:
       img: petra-gulicher.jpg
       url: 'https://github.com/petronbot'
   state: published
-  order: 30
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -278,7 +278,7 @@ breadcrumbs:
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
-  order: 40
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -334,7 +334,7 @@ buttons:
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
-  order: 50
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -405,7 +405,7 @@ cta-link:
       img: julian-fleetwood.jpg
       url: 'https://github.com/joolswood'
   state: published
-  order: 60
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -459,7 +459,7 @@ callout:
       img: julian-fleetwood.jpg
       url: 'https://github.com/joolswood'
   state: published
-  order: 70
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -524,7 +524,7 @@ control-input:
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
-  order: 80
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -589,7 +589,7 @@ direction-links:
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
-  order: 90
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -652,7 +652,7 @@ footer:
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
-  order: 100
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -695,7 +695,7 @@ grid-12:
       img: julian-fleetwood.jpg
       url: 'https://github.com/joolswood'
   state: published
-  order: 110
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -756,7 +756,7 @@ header:
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
-  order: 120
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -814,7 +814,7 @@ headings:
       img: julian-fleetwood.jpg
       url: 'https://github.com/joolswood'
   state: published
-  order: 130
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -878,7 +878,7 @@ inpage-nav:
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
-  order: 140
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -940,7 +940,7 @@ keyword-list:
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
-  order: 150
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -1001,7 +1001,7 @@ link-list:
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
-  order: 160
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -1058,7 +1058,7 @@ page-alerts:
       img: julian-fleetwood.jpg
       url: 'https://github.com/joolswood'
   state: published
-  order: 170
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -1113,7 +1113,7 @@ progress-indicator:
       img: alexander-sadleir.jpg
       url: 'https://github.com/maxious'
   state: published
-  order: 180
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -1169,7 +1169,7 @@ responsive-media:
       img: julian-fleetwood.jpg
       url: 'https://github.com/joolswood'
   state: published
-  order: 190
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -1221,7 +1221,7 @@ select:
       img: gary-broadbent.jpg
       url: 'https://github.com/gazhands'
   state: published
-  order: 200
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -1283,7 +1283,7 @@ skip-link:
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
-  order: 210
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -1346,7 +1346,7 @@ tags:
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
-  order: 220
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -1411,7 +1411,7 @@ text-inputs:
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
-  order: 230
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -1518,7 +1518,7 @@ table:
     coded: doing
     tested: todo
     considered: todo
-  order: 20
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -1539,11 +1539,16 @@ main-nav:
     - mobile menu
     - nav
     - links
+    - hamburger
+    - horizontal
   tags:
     - navigation
     - interactive
   related:
+    - side-nav
+    - header
     - link-list
+    - breadcrumbs
   related-articles:
     - TODO
   used-in:
@@ -1588,11 +1593,14 @@ side-nav:
     - mobile menu
     - nav
     - links
+    - vertical
   tags:
     - navigation
     - interactive
   related:
+    - main-nav
     - link-list
+    - breadcrumbs
   related-articles:
     - TODO
   used-in:
