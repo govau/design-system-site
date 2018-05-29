@@ -11,11 +11,11 @@ code:
       -->
 
       <header class="au-grid au-header" role="banner">
-        <div class="container">
+        <div class="container-fluid">
           <div class="row">
             <div class="col-md-9">
               <a class="au-header__brand" href="#">
-                <img class="au-header__brand-image" alt="Australian Government Crest" src="http://placehold.it/256x80">
+                <img class="au-header__brand-image" alt="Insert alternate text here" src="http://placehold.it/256x80">
                 <div class="au-header__text">
                   <h1 class="au-header__heading">Site title</h1>
                   <div class="au-header__subline">
@@ -37,7 +37,7 @@ code:
       import AUheader, { AUheaderBrand } from '@gov.au/header';
 
       <AUheader hero>
-        <div class="container">
+        <div class="container-fluid">
           <div class="row">
             <div class="col-md-9">
               <AUheaderBrand
@@ -45,7 +45,7 @@ code:
                 subline="Service sub-title that could be a little longer"
                 link="#"
                 brandImage="http://placehold.it/256x80"
-                brandImageAlt="Digital Transformation Agency"
+                brandImageAlt="Insert alternate text here"
               />
             </div>
           </div>

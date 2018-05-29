@@ -57,9 +57,9 @@ const Live = ({ _ID, _parents, _pages, _relativeURL, _parseYaml, pagetitle, exam
 	return (
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }} />
-		<body className={`live-demo au-body au-grid${ fullwidth ? ' live-demo--fullwidth' : '' }`} >
+		<body className={`live-demo au-body au-grid`} >
 			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Z7S8GB" height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe></noscript>
-			<header className="header--example">
+			<header className="header__example">
 				<div className="container-fluid">
 					<div className="row">
 						<div className="col-md-12">
@@ -71,7 +71,7 @@ const Live = ({ _ID, _parents, _pages, _relativeURL, _parseYaml, pagetitle, exam
 				</div>
 			</header>
 
-			<div className={ `example${ alignment === 'center' ? ' example--center' : '' }` }>
+			<div className={ `example${ alignment === 'center' ? ' example--center' : '' }${ fullwidth ? ' example--fullwidth' : '' }` }>
 				<div className='content'>
 					{ example }
 				</div>

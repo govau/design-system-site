@@ -1,9 +1,9 @@
 <header class="au-grid au-header" role="banner">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md-9">
         <a class="au-header__brand js-focus-me" href="#">
-          <img class="au-header__brand-image" alt="Australian Government Crest" src="http://placehold.it/256x80">
+          <img class="au-header__brand-image" alt="Australian Government Crest" src="/assets/img/header-logo-agov--dark.png">
           <div class="au-header__text">
             <h1 class="au-header__heading">Site title</h1>
             <div class="au-header__subline">
@@ -18,11 +18,11 @@
 </header>
 
 <header class="au-grid au-header au-header--dark" role="banner">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md-9">
         <a class="au-header__brand js-focus-me" href="#">
-          <img class="au-header__brand-image" alt="Australian Government Crest" src="http://placehold.it/256x80">
+          <img class="au-header__brand-image" alt="Australian Government Crest" src="/assets/img/header-logo-agov.png">
           <div class="au-header__text">
             <h1 class="au-header__heading">Site title</h1>
             <div class="au-header__subline">

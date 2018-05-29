@@ -14,11 +14,13 @@ code:
         <div class="container">
           <div class="row">
             <div class="col-md-9">
-              <img class="au-header__brand-image" alt="Australian Government Crest" src="http://placehold.it/256x80">
-              <div class="au-header__text">
-                <h1 class="au-header__heading">Site title</h1>
-                <div class="au-header__subline">
-                  Service description that could be a little longer
+              <div class="au-header__brand">
+                <img class="au-header__brand-image" alt="Insert alternate text here" src="http://placehold.it/256x80">
+                <div class="au-header__text">
+                  <h1 class="au-header__heading">Site title</h1>
+                  <div class="au-header__subline">
+                    Service description that could be a little longer
+                  </div>
                 </div>
               </div>
             </div>
@@ -43,7 +45,7 @@ code:
                 subline="Service sub-title that could be a little longer"
                 link="#"
                 brandImage="http://placehold.it/256x80"
-                brandImageAlt="Digital Transformation Agency"
+                brandImageAlt="Insert alternate text here"
               />
             </div>
           </div>
