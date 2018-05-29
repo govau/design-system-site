@@ -1564,6 +1564,24 @@ main-nav:
     - name: Patrick De Young
       img: patrick-de-young.png
       url: 'https://github.com/pattyde'
+    - name: Christopher Lee
+      img: christopher-lee.jpg
+      url: 'https://github.com/sirleech'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
+    - name: Julian Fleetwood
+      img: julian-fleetwood.jpg
+      url: 'https://github.com/joolswood'
+    - name: Petra Gulicher
+      img: petra-gulicher.jpg
+      url: 'https://github.com/petronbot'
+    - name: Simon Pascal Klein
+      img: simon-pascal-klein.jpg
+      url: 'https://github.com/klepas'
+    - name: Dominik Wilkowski
+      img: dominik-wilkowski.jpg
+      url: 'https://github.com/dominikwilkowski'
   state: published
   status:
     usable: done
@@ -1616,6 +1634,24 @@ side-nav:
     - name: Patrick De Young
       img: patrick-de-young.png
       url: 'https://github.com/pattyde'
+    - name: Christopher Lee
+      img: christopher-lee.jpg
+      url: 'https://github.com/sirleech'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
+    - name: Julian Fleetwood
+      img: julian-fleetwood.jpg
+      url: 'https://github.com/joolswood'
+    - name: Petra Gulicher
+      img: petra-gulicher.jpg
+      url: 'https://github.com/petronbot'
+    - name: Simon Pascal Klein
+      img: simon-pascal-klein.jpg
+      url: 'https://github.com/klepas'
+    - name: Dominik Wilkowski
+      img: dominik-wilkowski.jpg
+      url: 'https://github.com/dominikwilkowski'
   state: published
   status:
     usable: done
