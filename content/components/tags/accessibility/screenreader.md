@@ -3,9 +3,11 @@ layout: component/screenreader
 headline: Screen readers
 speak: |
 
-  [Definition list four items].
+  [Heading level 2] Tags.
 
-  Tags. [link] foo, [link] bar, [link] baz.
+  [List 3 items].
+  
+  [link] foo, [link] bar, [link] baz.
 
 ---
 

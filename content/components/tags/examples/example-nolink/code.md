@@ -1,5 +1,5 @@
 <section>
-  <span>Tags:</span>
+  <h2 class="au-display-sm">Tags:</h2>
   <ul class="au-tags">
     <li>foo</li>
     <li>bar</li>
@@ -8,7 +8,7 @@
 </section>
 
 <div class="au-body au-body--dark">
-  <span>Tags:</span>
+  <h2 class="au-display-sm">Tags:</h2>
   <ul class="au-tags au-tags--dark">
     <li>foo</li>
     <li>bar</li>

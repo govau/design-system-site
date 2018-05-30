@@ -9,7 +9,7 @@ code:
         Dark:   <ul class="au-tags au-tags--dark">
       -->
 
-      <span>Tags:</span>
+      <h2>Tags:</h2>
       <ul class="au-tags">
         <li>foo</li>
         <li>bar</li>

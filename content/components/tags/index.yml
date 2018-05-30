@@ -14,7 +14,7 @@ sidebar:
 
 main:
   - default.md
-  - unordered.md
+  - without-links.md
 
 footer:
   - /_shared/footer.md
