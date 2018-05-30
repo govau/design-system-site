@@ -21,7 +21,7 @@
     <section class="au-footer__end row">
       <div class="col-sm-12">
         <p>Footer text</p>
-        <img class="au-responsive-media-img" src="http://placehold.it/157x80" alt="Commonwealth Coat of Arms crest logo">
+        <img class="au-responsive-media-img" width="240" src="/assets/img/header-logo-agov--dark.png" alt="Commonwealth Coat of Arms crest logo">
         <p><small>© Commonwealth of Australia, <a href="https://github.com/govau/uikit/blob/master/LICENSE.md" rel="external license">MIT licensed</a></small></p>
       </div>
     </section>
@@ -52,7 +52,7 @@
       <section class="au-footer__end row">
         <div class="col-sm-12">
           <p>Footer text</p>
-          <img class="au-responsive-media-img" src="http://placehold.it/157x80" alt="Commonwealth Coat of Arms crest logo">
+          <img class="au-responsive-media-img" width="240" src="/assets/img/header-logo-agov.png" alt="Commonwealth Coat of Arms crest logo">
           <p><small>© Commonwealth of Australia, <a href="https://github.com/govau/uikit/blob/master/LICENSE.md" rel="external license">MIT licensed</a></small></p>
         </div>
       </section>
