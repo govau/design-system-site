@@ -1,7 +1,7 @@
-import AUheader            from '../../_uikit/layout/header';
-import AUskipLink          from '../../_uikit/layout/skip-link';
-import React, { Fragment } from 'react';
-import PropTypes           from 'prop-types';
+import AUheader, { AUheaderBrand } from '../../_uikit/layout/header';
+import AUskipLink                  from '../../_uikit/layout/skip-link';
+import React, { Fragment }         from 'react';
+import PropTypes                   from 'prop-types';
 
 
 /**
@@ -20,51 +20,30 @@ const Header = ({ title, title_badge, mainmenu, header_govau, _relativeURL, _ID,
 			},
 		]} />
 		{ header_govau }
-		<div className={ `header${ _ID === 'index' ? ' header--home' : '' }` }>
+		<div className="header">
 			<div id="focustrap-top"></div>
-			<AUheader dark>
+			<AUheader dark hero={ _ID === 'index' }>
 				<div className="container-fluid">
 					<div className="row">
 						<div className="col-md-12">
-
-							{/* If statement for Home / Content Page */}
-							{
-								_ID === 'index'
-									? <Fragment>
-											<div className="header__logo-wrapper">
-												<img className="header--logo-coa" src={ _relativeURL( '/assets/img/header-logo-agov.png', _ID ) } alt="The Australian Government coat of Arms"/>
-												<h1 className="header__title">{ title } {/* <- Space here is intentional */
-														title_badge
-															? <span className="header__badge"> { title_badge }</span>
-															: null
-													}
-												</h1>
-											</div>
-											<div className="header__blurb au-body au-body--dark">
-												<div className="header__blurb--content">{ _body }</div>
-											</div>
-										</Fragment>
-
-									: <Fragment>
-											<a href={ _relativeURL( '/', _ID ) } className="header__logo-wrapper">
-												<img className="header--logo-coa" src={ _relativeURL( '/assets/img/header-logo-agov.png', _ID ) } alt="The Australian Government coat of Arms"/>
-												<h1 className="header__title">{ title } {/* <- Space here is intentional */
-														title_badge
-															? <span className="header__badge">{ title_badge }</span>
-															: null
-													}
-												</h1>
-											</a>
-										</Fragment>
-							}
-
+							<AUheaderBrand
+								title={
+									<Fragment>
+										{ title } <span className="header__badge"> { title_badge }</span>
+									</Fragment>
+								}
+								subline={ _body }
+								link={ _ID === 'index' ? undefined : '/' }
+								brandImage={ _relativeURL( '/assets/img/header-logo-agov.png', _ID ) }
+								brandImageAlt="The Australian Government coat of Arms"
+								>
+							</AUheaderBrand>
 							<button id="mainmenu-toggle"
 								className="mainmenu-toggle au-btn au-btn--tertiary au-btn--dark au-btn--block icon au-accordion--closed"
 								aria-controls="mainmenu"
 								aria-expanded="false"
 								aria-selected="false"
 								role="tab">Open menu</button>
-
 						</div>
 					</div>
 				</div>
