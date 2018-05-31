@@ -1585,6 +1585,9 @@ main-nav:
     - name: Chris Lamb
       img: chris-lamb.jpg
       url: 'https://github.com/Chris820'
+    - name: Alexandra Baranov
+      img: alexandra-baranov.jpg
+      url: 'https://au.linkedin.com/in/alexandrabaranov'
   state: published
   status:
     usable: done
@@ -1658,6 +1661,9 @@ side-nav:
     - name: Chris Lamb
       img: chris-lamb.jpg
       url: 'https://github.com/Chris820'
+    - name: Alexandra Baranov
+      img: alexandra-baranov.jpg
+      url: 'https://au.linkedin.com/in/alexandrabaranov'
   state: published
   status:
     usable: done
