@@ -1,20 +1,20 @@
 ---
 layout: component/code-demo
 example: examples/example-default
-headline: Tags using definition list
+headline: Tags with links
 code:
   - HTML: |
       <!--
-        Light:  <dl class="au-tags">
-        Dark:   <dl class="au-tags au-tags--dark">
+        Light:  <ul class="au-tags">
+        Dark:   <ul class="au-tags au-tags--dark">
       -->
 
-      <dl class="au-tags">
-        <dt>Tags:</dt>
-          <dd><a href="#">foo</a></dd>
-          <dd><a href="#">bar</a></dd>
-          <dd><a href="#">baz</a></dd>
-      </dl>
+      <h2>Tags:</h2>
+      <ul class="au-tags">
+        <li><a href="#">foo</a></li>
+        <li><a href="#">bar</a></li>
+        <li><a href="#">baz</a></li>
+      </ul>
   - React: |
       /*
         Light:  <AUtags tags={[
@@ -39,7 +39,6 @@ code:
       ]} />
 ---
 
+A list of related tags that use links.
 
-Tags support use of the [`<dl>` HTML element]( https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl). This is particularly useful when there are multiple lists of tags.
-
-In a list of tags, each tag can be described by the `<dd>` (description detail) and titled with a `<dt>` (description term).
+**Note:** An [appropriate heading level](https://www.w3.org/TR/WCAG20-TECHS/G141.html) should be used to introduce the purpose of the list.
