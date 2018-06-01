@@ -1588,6 +1588,9 @@ main-nav:
     - name: Alexandra Baranov
       img: alexandra-baranov.jpg
       url: 'https://au.linkedin.com/in/alexandrabaranov'
+    - name: DHS Web Services Team
+      img: dhs-webservices-team.jpg
+      url: 'https://www.humanservices.gov.au/'
   state: published
   status:
     usable: done
@@ -1664,6 +1667,9 @@ side-nav:
     - name: Alexandra Baranov
       img: alexandra-baranov.jpg
       url: 'https://au.linkedin.com/in/alexandrabaranov'
+    - name: DHS Web Services Team
+      img: dhs-webservices-team.jpg
+      url: 'https://www.humanservices.gov.au/'
   state: published
   status:
     usable: done
