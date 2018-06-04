@@ -27,11 +27,11 @@ code:
       </main>
 ---
 
-The grid is similar to the bootstrap grid system. This means you can access different breakpoints by changing `sm`. The breakpoints for each value are:
+The grid is similar to the bootstrap grid system. This means you can access different breakpoints by changing the class name or by using the variables below. The breakpoints for each value are:
 
 - `xs`  : `$AU-media-xs` : `576px`
 - `sm`  : `$AU-media-sm` : `768px`
 - `md`  : `$AU-media-md` : `992px`
 - `lg`  : `$AU-media-lg` : `1200px`
 
-These sizes can be overriden as necessary.
+These sizes can be overridden as necessary.
