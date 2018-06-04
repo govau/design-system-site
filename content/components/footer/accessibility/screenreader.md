@@ -3,9 +3,27 @@ layout: component/screenreader
 headline: Screen readers
 speak: |
 
-  [Link] Navigation item.
+  [Heading level 3] Section
 
-  [Link] Some copyright information.
+  [link] Link 1
+
+  [link] Link 2
+
+  [link] Link 3
+
+  [Heading level 3] Section
+
+  [link] Link 1
+
+  [link] Link 2
+
+  [link] Link 3
+
+  Footer text
+  
+  Brand image [image]
+  
+  Copyright sign Commonwealth of Australia, [link] MIT licensed
 
 ---
 
