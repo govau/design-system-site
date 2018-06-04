@@ -6,9 +6,10 @@ btntext: See our Performance Dashboard
 
 tiles:
   - description: Live projects
-    number: 11
+    number: 13
 
 # https://www.dta.gov.au/
+# https://beta.dta.gov.au
 # http://designsystem.gov.au/
 # https://guides.service.gov.au/
 # https://dashboard.gov.au/
@@ -19,6 +20,7 @@ tiles:
 # https://www.dva.gov.au/myservice/
 # https://beta.health.gov.au/
 # https://asbestossafety.gov.au/
+# https://search.data.gov.au/
 
   - description: GitHub stars
     number: stars

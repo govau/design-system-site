@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
  *
  * @disable-docs
  */
-const Table = ({ caption, header, body, footer, className, responsive, smallTable, striped }) => (
+const Table = ({ caption, header, body, footer, className, responsive, smallTable, striped, firstColTH }) => (
 	<div className={`au-table au-body ${ smallTable ? 'au-table--small ' : ''}${ responsive ? 'au-table--responsive ' : ''}${ striped ? 'au-table--striped ' : ''}${ className }`}>
 		<table>
 			<caption className="au-table__caption">{ caption }</caption>
@@ -38,9 +38,16 @@ const Table = ({ caption, header, body, footer, className, responsive, smallTabl
 						<tr key={ i } className="au-table__body">
 							{
 								bodyTD.map( ( td, j ) => (
-									<td key={ j } scope="col" className={ td.className }>
-										{ td.text }
-									</td>
+
+									firstColTH && j === 0
+									?
+										<th key={ j } scope="row" className={ td.className }>
+											{ td.text }
+										</th>
+
+									:	<td key={ j } className={ td.className }>
+											{ td.text }
+										</td>
 								))
 							}
 						</tr>

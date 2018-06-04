@@ -64,7 +64,7 @@ ${
 	return (
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }}  />
-		<body className="a11y au-body">
+		<body className="a11y au-body au-grid">
 		<svg
 				aria-hidden="true"
 				className="svg-filter"

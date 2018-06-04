@@ -5,7 +5,13 @@ layout: section
 ## React Usage
 
 ```jsx
-import AUheader from '@gov.au/header';
+import AUheader, { AUheaderBrand } from './header.js';
 
-<AUheader title="Page title" />
+<AUheader>
+	<AUheaderBrand
+		link="#"
+		brandImage="http://placehold.it/256x80"
+		brandImageAlt="Digital Transformation Agency"
+	/>
+</AUheader>
 ```

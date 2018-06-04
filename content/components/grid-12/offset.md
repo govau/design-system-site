@@ -15,4 +15,4 @@ code:
       </main>
 ---
 
-Grid using offset.
+You can offset a row by a specified number of columns by using the `offset` class name.

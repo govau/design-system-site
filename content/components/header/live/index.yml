@@ -1,3 +1,4 @@
 layout: live/page
 pagetitle: Header live demo
 example: ../accessibility/code.md
+fullwidth: true

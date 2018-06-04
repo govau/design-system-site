@@ -16,4 +16,4 @@ code:
       </main>
 ---
 
-Grid using `container-fluid` class.
+Use `container-fluid` class for a full width container, spanning the entire width of your viewport.

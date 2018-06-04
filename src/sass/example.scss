@@ -16,12 +16,23 @@
 		@include AU-clearfix();
 	}
 
-	&.example--fullwidth .content {
-		padding: 0;
+	&.example--fullwidth {
+
+		.content {
+			padding: 0;
+		}
 
 		.au-body.au-body--dark {
 			margin: 0;
 			padding: 0;
+		}
+
+		.au-header.au-header--dark {
+			margin: 0;
+		}
+
+		.live-demo & {
+			max-width: none;
 		}
 	}
 
@@ -32,12 +43,8 @@
 	.live-demo & {
 		border: 0;
 		margin: 0 auto;
-		max-width: 800px;
+		max-width: 600px;
 		padding: 0;
-
-		.container {
-			max-width: 100%;
-		}
 	}
 }
 
@@ -56,25 +63,26 @@
 }
 
 
-.a11y .content .au-body.au-body--dark,
-.example .content .au-body.au-body--dark {
-	@include AU-space( margin, 1unit -2unit -1unit );
+.a11y .au-body.au-body--dark,
+.example .au-body.au-body--dark {
 	@include AU-space( padding, 1unit 2unit );
+	@include AU-space( margin, 1unit -2unit -1unit );
+}
+
+.a11y .au-header:first-of-type {
+	@include AU-space( margin, -1unit -2unit 0 );
+}
+
+.a11y .au-header:last-of-type {
+	@include AU-space( margin, 0 -2unit -1unit );
 }
 
 
 // Live demo header bar
-.live-demo .header--example {
+.header__example {
 	@include AU-space( margin-bottom, 1unit );
-	@include AU-space( padding, 1unit );
+	@include AU-space( padding, 1unit 0 );
 	background-color: #1D1D1D;
-
-	.container-fluid {
-		max-width: 1360px;
-		max-width: 85rem;
-		@include AU-space( padding-left, 3unit );
-		@include AU-space( padding-right, 3unit );
-	}
 
 	a {
 		color: #45c2f0;

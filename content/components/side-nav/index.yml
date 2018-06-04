@@ -5,9 +5,6 @@ pagetitle: Side nav overview
 header:
   - /_shared/header.md
 
-component_nav:
-  - /components/_tabs.md
-
 sidebar:
   - /components/search.md
   - /components/sidebar.md
