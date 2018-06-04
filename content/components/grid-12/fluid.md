@@ -1,6 +1,7 @@
 ---
 layout: component/code-demo
 example: examples/example-fluid
+exampleFullwidth: true
 headline: Fluid
 code:
   - HTML: |
@@ -15,4 +16,4 @@ code:
       </main>
 ---
 
-Grid using `container-fluid` class.
+Use `container-fluid` class for a full width container, spanning the entire width of your viewport.

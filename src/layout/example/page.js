@@ -53,7 +53,7 @@ const Example = ({ _ID, _relativeURL, pagetitle, example, alignment, fullwidth }
 	return (
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }} />
-		<body className="au-body">
+		<body className="au-body au-grid">
 			<div className="example__wrapper">
 				<h2 className='example__title'>Example</h2>
 				<main className={ `example${ alignment === 'center' ? ' example--center' : '' }${ fullwidth === true ? ' example--fullwidth' : '' }` }>

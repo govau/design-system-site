@@ -2,6 +2,7 @@
 layout: component/code-demo
 example: examples/example-offset
 headline: Offset
+exampleFullwidth: true
 code:
   - HTML: |
       <main class="au-grid">
@@ -14,4 +15,4 @@ code:
       </main>
 ---
 
-Grid using offset.
+You can offset a row by a specified number of columns by using the `offset` class name.

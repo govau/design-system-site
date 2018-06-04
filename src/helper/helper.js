@@ -279,10 +279,9 @@ const FetchStars = repo => {
 
 /**
  * Write all stats from the GitHub API to out _data.yml file
- *
- * @param  {object} DATA - The existing data from our _data.yml to be merged
  */
-const WriteStats = async ( DATA ) => {
+const WriteStats = async ( ) => {
+	const DATA = {};
 	try {
 		DATA.pancake = {
 			download: 0,
@@ -356,7 +355,6 @@ const WriteStats = async ( DATA ) => {
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
 const UIKIT = JSON.parse( Fs.readFileSync( Path.normalize(`${ __dirname }/../_uikit/uikit.json`), 'utf-8') );
 const COMPONENTS = EncodeYAML( Fs.readFileSync( Path.normalize(`${ __dirname }/../../content/components/_all.yml`), 'utf-8') );
-const DATA = EncodeYAML( Fs.readFileSync( Path.normalize(`${ __dirname }/../../content/_data.yml`), 'utf-8') );
 
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -375,5 +373,5 @@ CFonts.say( 'Australian Government Design System', {
 if( process.argv.indexOf( 'components' ) !== -1 ) {
 	GenerateComponents( UIKIT, COMPONENTS );
 	CheckComponents( UIKIT, COMPONENTS );
-	WriteStats( DATA );
+	WriteStats();
 }
