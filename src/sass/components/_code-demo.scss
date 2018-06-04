@@ -11,6 +11,10 @@
 		}
 	}
 
+	.code-demo__example-wrapper.col-sm-12{
+		@include AU-space( margin-top, 2unit );
+	}
+
 	* + & {
 		@include AU-space( margin-top, 3unit );
 	}

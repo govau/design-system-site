@@ -62,6 +62,7 @@ const TableInProgress = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _p
 								smallTable
 								responsive
 								striped
+								firstColTH
 							/>
 
 							<p>

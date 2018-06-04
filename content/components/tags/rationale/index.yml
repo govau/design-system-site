@@ -13,6 +13,7 @@ sidebar:
 
 main:
   - borders.md
+  - description-list.md
 
 footer:
   - /_shared/footer.md

@@ -3,9 +3,13 @@ layout: component/screenreader
 headline: Screen readers
 speak: |
 
-  [Heading level 1] Page title
+  [link] 
   
-  Service sub-title that could be a little longer.
+  Australian Government Crest
+  
+  Site title, Service description that could be longer 
+  
+  [banner]
 
 ---
 

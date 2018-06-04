@@ -23,3 +23,7 @@ src/assets/css/example.css
 src/assets/js/footer.js
 src/assets/js/header.js
 src/assets/js/a11y.js
+
+
+# Generated files
+_data.yml

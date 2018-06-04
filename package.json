@@ -91,7 +91,7 @@
 		"cuttlebelle": "^1.0.0-alpha.56",
 		"express": "^4.16.2",
 		"node-fetch": "^2.1.1",
-		"node-sass": "^4.7.2",
+		"node-sass": "^4.9.0",
 		"numeral": "^2.0.6",
 		"postcss-cli": "^4.1.1",
 		"slugify": "^1.2.9",

@@ -1,17 +1,17 @@
 <section>
-  <dl class="au-tags">
-    <dt>Tags:</dt>
-    <dd><a class="js-focus-me" href="#">foo</a></dd>
-    <dd><a class="js-focus-me" href="#">bar</a></dd>
-    <dd><a class="js-focus-me" href="#">baz</a></dd>
-  </dl>
+  <h2 class="au-display-sm">Tags:</h2>
+  <ul class="au-tags">
+    <li><a href="#" class="js-focus-me">foo</a></li>
+    <li><a href="#" class="js-focus-me">bar</a></li>
+    <li><a href="#" class="js-focus-me">baz</a></li>
+  </ul>
 </section>
 
 <div class="au-body au-body--dark">
-  <dl class="au-tags au-tags--dark">
-    <dt>Tags:</dt>
-    <dd><a class="js-focus-me" href="#">foo</a></dd>
-    <dd><a class="js-focus-me" href="#">bar</a></dd>
-    <dd><a class="js-focus-me" href="#">baz</a></dd>
-  </dl>
+  <h2 class="au-display-sm">Tags:</h2>
+  <ul class="au-tags au-tags--dark">
+    <li><a href="#" class="js-focus-me">foo</a></li>
+    <li><a href="#" class="js-focus-me">bar</a></li>
+    <li><a href="#" class="js-focus-me">baz</a></li>
+  </ul>
 </div>
