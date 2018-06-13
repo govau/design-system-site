@@ -28,5 +28,6 @@ All other props are spread into the component
 | brandImage    | string  | The headline content, optional
 | brandImageAlt | string  | Brand image alt tag
 | link          | string  | An optional link for the header brand, optional
+| linkComponent | string  | The component used for the link, optional
 
 All other props are spread into the component
