@@ -41,6 +41,7 @@ const Page = ({
 <meta property="og:description" content="Inclusive design, open-source code and shared insights">
 <meta property="og:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:url" content="https://designsystem.gov.au">
+<meta name="google-site-verification" content="rd00twS6xfSXiS4gzkLEBfJ3sRmQXz2YBhkCFWTivzI" />
 
 <title>${ pagetitle } - Australian Government Design System</title>
 
