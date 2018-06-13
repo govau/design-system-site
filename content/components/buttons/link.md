@@ -5,38 +5,38 @@ headline: Links as buttons
 code:
   - HTML: |
       <!--
-        Light:  <a href="#" class="au-btn">
-        Dark:   <a href="#" class="au-btn au-btn--dark">
+        Light:  <a link="#" class="au-btn">
+        Dark:   <a link="#" class="au-btn au-btn--dark">
       -->
 
-      <a href="/buy-now" class="au-btn">
+      <a link="#" class="au-btn">
         Primary link button
       </a>
 
-      <a href="/buy-now" class="au-btn au-btn--secondary">
+      <a link="#" class="au-btn au-btn--secondary">
         Secondary link button
       </a>
 
-      <a href="/buy-now" class="au-btn au-btn--tertiary">
+      <a link="#" class="au-btn au-btn--tertiary">
         Tertiary link button
       </a>
   - React: |
       /*
-        Light:  <AUbutton href="#">
-        Dark:   <AUbutton href="#" dark>
+        Light:  <AUbutton link="#">
+        Dark:   <AUbutton link="#" dark>
       */
 
       import AUbutton from '@gov.au/buttons';
 
-      <AUbutton href="buy-now">
+      <AUbutton link="#">
         Primary link button
       </AUbutton>
 
-      <AUbutton secondary href="buy-now">
+      <AUbutton secondary link="#">
         Secondary link button
       </AUbutton>
 
-      <AUbutton tertiary href="buy-now">
+      <AUbutton tertiary link="#">
         Tertiary link button
       </AUbutton>
 ---
