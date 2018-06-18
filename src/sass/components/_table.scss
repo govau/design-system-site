@@ -30,7 +30,7 @@
 		}
 	}
 
-	&.au-table--striped .au-table__body:nth-child( even ) {
+	&.au-table--striped .au-table__body:nth-of-type( 2n ) {
 		background: $AU-color-background-shade;
 	}
 
