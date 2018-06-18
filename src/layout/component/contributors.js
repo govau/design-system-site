@@ -16,7 +16,7 @@ const Contributors = ({ contributors, _relativeURL, _ID }) => {
 		<ul className="component-status__definition__list component-status__definition__list--images js-more-wrapper">
 			{
 				Shuffle( contributors ).map( ( contributor, i ) => (
-					<li className="component-status__definition__list__item" key={ i }>
+					<li className={ `component-status__definition__list__item${ i > 3 ? ' component-status__definition__list__item--gt5' : '' }` } key={ i }>
 						<a href={ contributor.url } className="avatar">
 							<img
 								src={`${ _relativeURL(`/assets/img/contributors/${ contributor.img }`, _ID ) }`}
