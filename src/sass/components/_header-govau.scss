@@ -57,7 +57,7 @@
 
 		&.icon--secure:before {
 			background: AU-svguri( '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">' +
-			'<path fill="#{ $AU-colordark-foreground-muted }" d="M26 14h-2v-4a8 8 0 0 0-16 0v4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V16a2 2 0 0 0-2-2zm-14-4a4 4 0 0 1 8 0v4h-8z"/>' +
+				'<path fill="#{ $AU-colordark-foreground-muted }" d="M26 14h-2v-4a8 8 0 0 0-16 0v4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V16a2 2 0 0 0-2-2zm-14-4a4 4 0 0 1 8 0v4h-8z"/>' +
 			'</svg>' );
 		}
 	}
@@ -87,10 +87,9 @@
 
 		background-position: center center;
 		background-repeat: no-repeat;
-		background-image: AU-svguri('
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">' +
-			'	<path fill="#{ $AU-colordark-foreground-text }" d="M10 .28l2.1 5.3 5.45-1.67-2.84 4.95 4.71 3.23-5.64.86.41 5.69L10 14.77l-4.19 3.87.41-5.69-5.64-.86 4.71-3.23-2.84-4.95 5.46 1.67L10 .28z"/>' +
-			'	<path fill="none" d="M0 0h20v20H0z"/>' +
+		background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">' +
+				'<path fill="#{ $AU-colordark-foreground-text }" d="M10 .28l2.1 5.3 5.45-1.67-2.84 4.95 4.71 3.23-5.64.86.41 5.69L10 14.77l-4.19 3.87.41-5.69-5.64-.86 4.71-3.23-2.84-4.95 5.46 1.67L10 .28z"/>' +
+				'<path fill="none" d="M0 0h20v20H0z"/>' +
 			'</svg>');
 	}
 
@@ -102,10 +101,9 @@
 		@include AU-space( height, 0.75unit );
 		background-position: center 2px;
 		background-repeat: no-repeat;
-		background-image: AU-svguri('
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">' +
-			'	<path fill="#{ $AU-colordark-foreground-text }" d="M64 0l64 64-16 16-64-64"/>' +
-			'	<path fill="#{ $AU-colordark-foreground-text }" d="M64 0l16 16-64 64L0 64"/>' +
+		background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">' +
+				'<path fill="#{ $AU-colordark-foreground-text }" d="M64 0l64 64-16 16-64-64"/>' +
+				'<path fill="#{ $AU-colordark-foreground-text }" d="M64 0l16 16-64 64L0 64"/>' +
 			'</svg>');
 		transition: transform 0.25s ease-in;
 	}
