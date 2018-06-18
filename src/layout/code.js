@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 /**
  * The Code component
  */
-const Code = ({ language, nocopy, children, className }) => (
+const Code = ({ language, nocopy, children, className, ...attributeOptions }) => (
 	<pre className={ `language-${ language }${ nocopy ? ' js-nocopy' : '' } ${ className ? className : '' }` }>
-		<code className={ `language-${ language }` }>
+		<code className={ `language-${ language }` } { ...attributeOptions } >
 			{ children }
 		</code>
 	</pre>
