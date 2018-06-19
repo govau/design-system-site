@@ -756,6 +756,7 @@ header:
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
+  highlight: update
   order: 10
   discussions:
     - open: 2
@@ -1592,6 +1593,7 @@ main-nav:
       img: dhs-webservices-team.jpg
       url: 'https://www.humanservices.gov.au/'
   state: published
+  highlight: new
   status:
     usable: done
     consistent: done
@@ -1671,6 +1673,7 @@ side-nav:
       img: dhs-webservices-team.jpg
       url: 'https://www.humanservices.gov.au/'
   state: published
+  highlight: new
   status:
     usable: done
     consistent: done

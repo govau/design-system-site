@@ -1,4 +1,6 @@
 .au-card {
+	position: relative; // for card__highlight
+
 	&.au-card--border {
 		@include AU-space( padding, 1unit 0 );
 		@include AU-space( border-top, 0.5unit solid $AU-color-foreground-border );
@@ -31,4 +33,22 @@
 		@include AU-fontgrid( xs );
 		color: $AU-color-foreground-muted;
 	}
+}
+
+
+.card__highlight {
+	@include AU-space( padding, 0.25unit 0 );
+	font-size: 12px;
+	font-size: 0.75rem;
+	line-height: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: $AU-color-success-a11y;
+	color: $AU-color-background;
+	font-weight: bold;
+	text-align: center;
+	transform-origin: left top;
+	transform: rotate( 315deg ) translateX( -50% ) translateY( 20px );
 }
