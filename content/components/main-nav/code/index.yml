@@ -1,0 +1,20 @@
+layout: component/page
+pagetitle: TODO rationale
+
+header:
+  - /_shared/header.md
+
+component_nav:
+  - /components/_tabs.md
+
+sidebar:
+  - /components/search.md
+  - /components/sidebar.md
+
+main:
+  - react-usage.md
+  - react-props.md
+  - react-exports.md
+
+footer:
+  - /_shared/footer.md
