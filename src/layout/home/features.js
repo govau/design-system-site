@@ -31,7 +31,7 @@ const Features = ({ title, btnURL, btntext, tiles, _relativeURL, _ID, _parseMD, 
 			}
 		</ul>
 		<div className="features__cta">
-			<AUbutton href={ btnURL } as='secondary'>{ btntext }</AUbutton>
+			<AUbutton link={ btnURL } as='secondary'>{ btntext }</AUbutton>
 		</div>
 	</div>
 );

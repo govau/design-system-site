@@ -66,7 +66,7 @@ const TableInProgress = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _p
 							/>
 
 							<p>
-								<AUbutton href={ btnURL } className={ btnIcon && `icon icon--${ btnIcon } icon--dark`}>
+								<AUbutton link={ btnURL } className={ btnIcon && `icon icon--${ btnIcon } icon--dark`}>
 									{ btntext }
 								</AUbutton>
 							</p>

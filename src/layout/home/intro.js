@@ -22,7 +22,7 @@ const Intro = ({ title, url, imgalt, imgurl, _relativeURL, _ID, cta, _body }) =>
 				<h2 className="intro__title">{ title }</h2>
 				<div className="content">{ _body }</div>
 				<p className="intro__cta">
-					<AUbutton href={ url } as='secondary'>{ cta }</AUbutton>
+					<AUbutton link={ url } as='secondary'>{ cta }</AUbutton>
 				</p>
 			</div>
 

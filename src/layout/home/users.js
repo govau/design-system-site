@@ -13,7 +13,7 @@ const Users = ({ title, btnURL, btntext, tiles, _relativeURL, _ID, _parseMD, _bo
 		<div className="users__intro col-xs-12 col-md-4">
 			<h2>{ title }</h2>
 			{ _body }
-			<p><AUbutton href={ btnURL } as='secondary'>{ btntext }</AUbutton></p>
+			<p><AUbutton link={ btnURL } as='secondary'>{ btntext }</AUbutton></p>
 		</div>
 
 		<div  className="col-xs-12 col-md-7 col-md-offset-1">
