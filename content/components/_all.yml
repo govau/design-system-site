@@ -1592,6 +1592,9 @@ main-nav:
     - name: DHS Web Services Team
       img: dhs-webservices-team.jpg
       url: 'https://www.humanservices.gov.au/'
+    - name: Simon Victory
+      img: simon-victory.jpg
+      url: 'http://github.com/svict4'
   state: published
   highlight: new
   status:
@@ -1672,6 +1675,9 @@ side-nav:
     - name: DHS Web Services Team
       img: dhs-webservices-team.jpg
       url: 'https://www.humanservices.gov.au/'
+    - name: Simon Victory
+      img: simon-victory.jpg
+      url: 'http://github.com/svict4'
   state: published
   highlight: new
   status:
