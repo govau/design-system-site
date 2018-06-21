@@ -16,3 +16,10 @@ The side navigation is used to provide a means for users to find other pages whi
 The side navigation component supports three levels of nesting along with an accompanying heading.
 
 On mobile or smaller viewports the side navigation collapses down to an expandable element.
+
+
+### Tips
+
+- Only expand active subsections to help emphasise which section the user is in and to reduce visual complexity.
+
+- Consider [WCAG-2.1 3.2.3 Consistent Navigation](https://www.w3.org/TR/WCAG21/#consistent-navigation)
