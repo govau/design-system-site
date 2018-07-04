@@ -11,7 +11,7 @@ const ResponseError = ({ btnURL, imgalt, imgurl, btntext, _relativeURL, _ID, _bo
 
 		<div className="error__intro col-xs-12 col-md-4">
 			{ _body }
-			<p><AUbutton href={ _relativeURL( btnURL, _ID ) } as='secondary'>{ btntext }</AUbutton></p>
+			<p><AUbutton link={ _relativeURL( btnURL, _ID ) } as='secondary'>{ btntext }</AUbutton></p>
 		</div>
 
 		<div className="error__extra col-xs-12 col-md-7 col-md-offset-1">
