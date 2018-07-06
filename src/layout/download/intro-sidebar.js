@@ -1,18 +1,27 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import AUlinkList from '../../_uikit/layout/link-list';
 
 
 /**
- * The Intro component
+ * The sidebar component
  */
-const IntroSidebar = ({ _body }) => (
+const IntroSidebar = ({ links, title }) => (
 	<div className="col-xs-12  col-sm-4  col-md-offset-1 col-md-3">
-		{ _body }
+		<h2> {title} </h2>
+		<AUlinkList items={
+			links.map( link => ({
+				link: link.download,
+				text: link.title,
+				className: link.icon ? ` icon icon--${link.icon} ` : ''
+			}))
+		} />
 	</div>
 );
 
 IntroSidebar.propTypes = {
-
+	links: PropTypes.array,
+	title: PropTypes.string
 };
 
 IntroSidebar.defaultProps = {};
