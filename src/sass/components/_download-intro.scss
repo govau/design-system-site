@@ -2,6 +2,16 @@
 	@include AU-space( margin-bottom, 2unit );
 	@include AU-space( padding-top, 4unit );
 
+	.download-intro__sidebar {
+		@include AU-space( padding-top, 4unit );
+	}
+
+	@include AU-media( "sm" ) {
+		.download-intro__sidebar {
+			padding-top: 0;
+		}
+	}
+
 	.au-link-list {
 		padding: 0;
 		@include AU-space( margin-top, 1.25unit );
