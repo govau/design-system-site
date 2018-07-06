@@ -1,8 +1,6 @@
 ---
 layout: download/intro
 sidebar: intro-designers-sidebar.md
-paddingTop: true
-borderBottom: true
 ---
 
 ## Designers

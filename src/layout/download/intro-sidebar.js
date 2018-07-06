@@ -20,8 +20,14 @@ const IntroSidebar = ({ links, title }) => (
 );
 
 IntroSidebar.propTypes = {
-	links: PropTypes.array,
-	title: PropTypes.string
+	links: PropTypes.arrayOf(
+		PropTypes.shape({
+			title: PropTypes.string.isRequired,
+			download: PropTypes.string.isRequired,
+			icon: PropTypes.string,
+		})
+	).isRequired,
+	title: PropTypes.string,
 };
 
 IntroSidebar.defaultProps = {};
