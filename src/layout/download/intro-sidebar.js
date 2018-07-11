@@ -6,12 +6,12 @@ import AUlinkList from '../../_uikit/layout/link-list';
 /**
  * The sidebar component
  */
-const IntroSidebar = ({ links, title }) => (
+const IntroSidebar = ({ links, title, _relativeURL }) => (
 	<div className="download-intro__sidebar col-xs-12  col-sm-4  col-md-offset-1 col-md-3">
 		<h2> {title} </h2>
 		<AUlinkList items={
 			links.map( link => ({
-				link: link.download,
+				link: _relativeURL( link.download ),
 				text: link.title,
 				className: link.icon ? ` icon icon--${link.icon} ` : ''
 			}))
