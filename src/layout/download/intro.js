@@ -5,8 +5,8 @@ import React from 'react';
 /**
  * The Intro component
  */
-const DownloadIntro = ({ _body, borderTop, sidebar }) => (
-	<div className={`row download-intro${ borderTop ? ' download-intro--border' : '' }` }>
+const DownloadIntro = ({ _body, sidebar }) => (
+	<div className={`row download-intro` }>
 		<div className="col-xs-12 col-sm-8">
 			{ _body }
 		</div>
@@ -25,15 +25,8 @@ DownloadIntro.propTypes = {
 	 * sidebar: (partials)(1)
 	 */
 	sidebar: PropTypes.node,
-
-	/**
-	 * borderTop: false
-	 */
-	borderTop: PropTypes.bool,
 };
 
-DownloadIntro.defaultProps = {
-	borderTop: false,
-};
+DownloadIntro.defaultProps = {};
 
 export default DownloadIntro;
