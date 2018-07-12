@@ -1,6 +1,5 @@
 layout: component/page
-module: main-nav
-pagetitle: Main nav overview
+pagetitle: TODO accessibility
 
 header:
   - /_shared/header.md
@@ -13,7 +12,10 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - default.md
+  - colorblind.md
+  - grayscale.md
+  - keyboard.md
+  - screenreader.md
 
 footer:
   - /_shared/footer.md
