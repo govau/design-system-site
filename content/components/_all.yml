@@ -1565,36 +1565,6 @@ main-nav:
     - name: Patrick De Young
       img: patrick-de-young.png
       url: 'https://github.com/pattyde'
-    - name: Christopher Lee
-      img: christopher-lee.jpg
-      url: 'https://github.com/sirleech'
-    - name: Gary Broadbent
-      img: gary-broadbent.jpg
-      url: 'https://github.com/gazhands'
-    - name: Julian Fleetwood
-      img: julian-fleetwood.jpg
-      url: 'https://github.com/joolswood'
-    - name: Petra Gulicher
-      img: petra-gulicher.jpg
-      url: 'https://github.com/petronbot'
-    - name: Simon Pascal Klein
-      img: simon-pascal-klein.jpg
-      url: 'https://github.com/klepas'
-    - name: Dominik Wilkowski
-      img: dominik-wilkowski.jpg
-      url: 'https://github.com/dominikwilkowski'
-    - name: Chris Lamb
-      img: chris-lamb.jpg
-      url: 'https://github.com/Chris820'
-    - name: Alexandra Baranov
-      img: alexandra-baranov.jpg
-      url: 'https://au.linkedin.com/in/alexandrabaranov'
-    - name: DHS Web Services Team
-      img: dhs-webservices-team.jpg
-      url: 'https://www.humanservices.gov.au/'
-    - name: Simon Victory
-      img: simon-victory.jpg
-      url: 'http://github.com/svict4'
   state: inprogress
   status:
     usable: done
@@ -1602,7 +1572,7 @@ main-nav:
     versatile: done
     coded: doing
     tested: todo
-    considered: todo
+    considered: done
   order: 10
   discussions:
     - open: 2
