@@ -1595,7 +1595,6 @@ main-nav:
       img: simon-victory.jpg
       url: 'http://github.com/svict4'
   state: published
-  highlight: new
   status:
     usable: done
     consistent: done
