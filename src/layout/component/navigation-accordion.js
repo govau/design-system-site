@@ -1,107 +1,110 @@
-import AUcardList          from '../card-list';
+import AUlinkList          from '../../_uikit/layout/link-list';
+import GetModule           from './../getModule';
+import { CreateLink }      from '../navigation';
 import GetData             from './../getData';
+
 import React, { Fragment } from 'react';
 import PropTypes           from 'prop-types';
 
 
 /**
- * The component released listing of cards
+ * The NavigationAccordion component
  */
-const ComponentReleased = ({ cardList, _ID, _body, _parseYaml, _relativeURL }) => {
+const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parents, _parseYaml }) => {
+	const module = GetModule( _parents, _pages, _ID );
 
-	const components = GetData({
-		filter: ( key, COMPONENTS ) => COMPONENTS[ key ].state === 'published',
-		yaml: _parseYaml,
+	const CreateAccordion = ( title, components, id, state, i ) => {
+
+		let _isOpen = false;
+
+		// Open the accordion based on the current pages module state
+		if( id && state ) {
+
+			const MODULE = GetData({
+				filter: ( key, COMPONENTS ) => key === module,
+				yaml: _parseYaml
+			})[ 0 ];
+
+			if ( MODULE.state === state ) {
+				_isOpen = true;
+			}
+		}
+
+		// Create AUlinkList from navigation
+		const navItems = [];
+		components.map( component => {
+
+			const link = {
+				link: `/components/${ component.ID }`,
+				text: component.name
+			}
+
+			navItems.push( CreateLink( link, _relativeURL, _ID, _pages ) );
+		});
+
+		return (
+			<Fragment>
+				{
+					components.length
+						?
+						<section className="au-accordion">
+							<a href={ `#accordion-${ state }` }
+								className={ `au-accordion__title js-accordion${ _isOpen ? '' : ' au-accordion--closed' }` }
+								aria-controls={ `accordion-${ state }` }
+								aria-expanded={ _isOpen ? 'true' : 'false' }
+								aria-selected={ _isOpen ? 'true' : 'false' }
+								role="tab"
+								onClick="return UIKIT.accordion.Toggle( this )">
+									{ title } <span className={ `badge badge--${ state }` }>{ components.length }</span>
+							</a>
+							<div
+								className={ `au-accordion__body${ _isOpen ? '' : ' au-accordion--closed' }` }
+								id={ `accordion-${ state }` }
+								aria-hidden="false">
+								<div className="au-accordion__body-wrapper">
+									<AUlinkList items={ navItems } />
+								</div>
+							</div>
+						</section>
+						: ''
+				}
+			</Fragment>
+		)
+	};
+
+	const componentStates = {
+		published: 'Released',
+		inprogress: 'In progress',
+		suggestion: 'Suggestions'
+	};
+
+	const accordionMarkup = [];
+
+	// For each state create an accordion
+	Object.keys( componentStates ).map( ( state, i ) => {
+
+		const components = GetData({
+			filter: ( key, COMPONENTS ) => COMPONENTS[ key ].state === state,
+			yaml: _parseYaml,
+		});
+
+		accordionMarkup.push( CreateAccordion( componentStates[ state ], components, module, state, i ) );
 	});
 
-	const cards = [];
-	components.map( component => {
-		cards.push({
-			link: _relativeURL( `/components/${ component.ID }`, _ID ),
-			rows: [{
-				type: 'svg',
-				title: component.name,
-				svg: `/assets/svg/map.svg#${ component.ID }`,
-				description: component.description,
-				fullwidth: true,
-			},
-			{
-				type: 'heading',
-				headingSize: '3',
-				text: component.name,
-			}]
-		})
-	})
 
 	return(
-		<Fragment>
-			{ _body }
-
-			<div className="row released">
-				<AUcardList
-					cards={ cards }
-					appearance={ cardList.appearance }
-					columnSize={ cardList.columnSize }
-					matchHeight={ cardList.matchHeight }
-					alignment={ cardList.alignment }
-				/>
-			</div>
-		</Fragment>
+		<nav className={ `navigation navigation--accordion ${ accordionMarkup.theme === 'dark' ? 'navigation--dark ' : '' }` }>
+		{
+			accordionMarkup.map( ( accordion, i ) => (
+				<Fragment key={ i }>{ accordion }</Fragment>
+			))
+		}
+		</nav>
 	)
 };
 
+NavigationAccordion.propTypes = {};
 
-ComponentReleased.propTypes = {
+NavigationAccordion.defaultProps = {};
 
-	/**
-	 * cardList:
-	 *   columnSize: col-xs-6 col-sm-3
-	 *   matchHeight: true
-	 *   appearance: shadow
-	 *   cards:
-	 *     - rows:
-	 *       - type: image
-	 *         description: A 300x300 image
-	 *         fullwidth: true
-	 *       - type: heading
-	 *         headingSize: '3'
-	 *         text: Hello world
-	 *         link: #
-	 *       link: #
-	 *     - rows:
-	 *       - type: image
-	 *         description: A 300x300 image
-	 *         fullwidth: true
-	 *       - type: heading
-	 *         headingSize: '3'
-	 *         text: Boop
-	 *         link: #
-	 */
-	cardList: PropTypes.shape({
-		apperance: PropTypes.oneOf([ 'flat', 'shadow', 'border-left' ]),
-		alignment: PropTypes.oneOf([ 'left', 'center', 'right' ]),
-		columnSize: PropTypes.string,
-		matchHeight: PropTypes.bool,
-		cards: PropTypes.arrayOf(
-			PropTypes.shape({
-				apperance: PropTypes.oneOf([ 'flat', 'shadow', 'border-left' ]),
-				alignment: PropTypes.oneOf([ 'left', 'center', 'right' ]),
-				link: PropTypes.string,
-				rows: PropTypes.arrayOf(
-					PropTypes.shape({
-						type: PropTypes.string.isRequired,
-						image: PropTypes.string,
-						description: PropTypes.string,
-						text: PropTypes.string,
-						link: PropTypes.string,
-						fullwidth: PropTypes.bool,
-						headingSize: PropTypes.string,
-						html: PropTypes.node,
-					})
-				)
-			})
-		)
-	}).isRequired
-};
-
-export default ComponentReleased;
+export default NavigationAccordion;
