@@ -2,6 +2,7 @@
 layout: component/code-demo
 example: examples/example-default
 headline: Default
+exampleFullwidth: true
 code:
   - HTML: |
       <nav class="au-side-nav au-accordion">
