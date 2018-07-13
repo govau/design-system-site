@@ -34,13 +34,9 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parents, _parseYaml }
 		const navItems = [];
 		components.map( component => {
 
-			const label = component.highlight
-				? <Fragment>{ component.name } <strong className="badge badge--highlight">{ component.highlight }</strong></Fragment>
-				: component.name;
-
 			const link = {
 				link: `/components/${ component.ID }`,
-				text: label
+				text: component.name
 			}
 
 			navItems.push( CreateLink( link, _relativeURL, _ID, _pages ) );

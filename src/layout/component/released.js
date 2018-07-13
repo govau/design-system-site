@@ -16,8 +16,7 @@ const ComponentReleased = ({ cardList, _ID, _body, _parseYaml, _relativeURL }) =
 
 	const cards = [];
 	components.map( component => {
-
-		const cardData = {
+		cards.push({
 			link: _relativeURL( `/components/${ component.ID }`, _ID ),
 			rows: [{
 				type: 'svg',
@@ -31,16 +30,7 @@ const ComponentReleased = ({ cardList, _ID, _body, _parseYaml, _relativeURL }) =
 				headingSize: '3',
 				text: component.name,
 			}]
-		}
-
-		if ( component.highlight ) {
-			cardData.rows.push ({
-				type: 'html',
-				html: <div className="card__highlight">{ component.highlight }</div>
-			})
-		}
-
-		cards.push(cardData);
+		})
 	})
 
 	return(
