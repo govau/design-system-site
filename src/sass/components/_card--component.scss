@@ -1,6 +1,4 @@
 .au-card {
-	position: relative; // for card__highlight
-
 	&.au-card--border {
 		@include AU-space( padding, 1unit 0 );
 		@include AU-space( border-top, 0.5unit solid $AU-color-foreground-border );
