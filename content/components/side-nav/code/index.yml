@@ -12,6 +12,7 @@ sidebar:
   - /components/sidebar.md
 
 main:
+  - scss-variables.md
   - react-usage.md
   - react-props.md
   - react-exports.md

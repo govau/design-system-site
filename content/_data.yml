@@ -2,40 +2,40 @@
 # THE `pancake` and `uikit` FIELDS WILL BE OVERWRITTEN
 
 pancake:
-  download: 82994
+  download: 82899
   modules:
-    '@gov.au/pancake': 20935
-    '@gov.au/pancake-js': 13002
+    '@gov.au/pancake': 20866
+    '@gov.au/pancake-js': 12986
     '@gov.au/pancake-json': 12177
     '@gov.au/pancake-react': 16447
-    '@gov.au/pancake-sass': 19970
-    '@gov.au/syrup': 463
+    '@gov.au/pancake-sass': 19963
+    '@gov.au/syrup': 460
   stars: 67
 uikit:
-  download: 252312
+  download: 252214
   modules:
-    '@gov.au/accordion': 11543
-    '@gov.au/animate': 12626
-    '@gov.au/body': 16535
-    '@gov.au/breadcrumbs': 8739
-    '@gov.au/buttons': 16791
-    '@gov.au/callout': 6686
-    '@gov.au/control-input': 8380
-    '@gov.au/core': 18094
-    '@gov.au/cta-link': 11589
-    '@gov.au/direction-links': 5933
-    '@gov.au/footer': 14669
-    '@gov.au/grid-12': 15298
-    '@gov.au/header': 11659
-    '@gov.au/headings': 9365
-    '@gov.au/inpage-nav': 7811
-    '@gov.au/keyword-list': 3983
-    '@gov.au/link-list': 14929
-    '@gov.au/page-alerts': 9998
-    '@gov.au/progress-indicator': 4853
-    '@gov.au/responsive-media': 6257
-    '@gov.au/select': 7843
-    '@gov.au/skip-link': 10304
-    '@gov.au/tags': 7025
-    '@gov.au/text-inputs': 11402
+    '@gov.au/accordion': 11541
+    '@gov.au/animate': 12620
+    '@gov.au/body': 16526
+    '@gov.au/breadcrumbs': 8731
+    '@gov.au/buttons': 16787
+    '@gov.au/callout': 6681
+    '@gov.au/control-input': 8377
+    '@gov.au/core': 18084
+    '@gov.au/cta-link': 11585
+    '@gov.au/direction-links': 5931
+    '@gov.au/footer': 14665
+    '@gov.au/grid-12': 15295
+    '@gov.au/header': 11654
+    '@gov.au/headings': 9363
+    '@gov.au/inpage-nav': 7806
+    '@gov.au/keyword-list': 3981
+    '@gov.au/link-list': 14922
+    '@gov.au/page-alerts': 9993
+    '@gov.au/progress-indicator': 4851
+    '@gov.au/responsive-media': 6256
+    '@gov.au/select': 7841
+    '@gov.au/skip-link': 10302
+    '@gov.au/tags': 7022
+    '@gov.au/text-inputs': 11400
   stars: 276
