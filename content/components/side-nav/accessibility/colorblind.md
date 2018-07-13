@@ -6,4 +6,4 @@ headline: Colour impairment
 ---
 
 
-How the TODO are viewed with various colour blindnesses
+How the side navigation is viewed with various colour blindnesses
