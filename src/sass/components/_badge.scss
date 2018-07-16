@@ -7,3 +7,8 @@
 	font-weight: normal;
 	float: right;
 }
+
+.badge--highlight {
+	background-color: $AU-color-background-alt;
+	color: $AU-color-foreground-muted;
+}
