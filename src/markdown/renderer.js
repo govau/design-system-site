@@ -83,16 +83,16 @@ module.exports = exports = function renderer({ Marked, _ID, _relativeURL }) {
 
 
 	/**
-     * Table overwrite
+	 * Table overwrite
 	 *
-     * @param {string} header - The title of the table
-     * @param {string} body   - The body of the table
-     *
-     * @return {string}       - The table element
-     */
-    Marked.table = ( header, body ) => {
-        return `<div class="au-table au-table--responsive">\n<table>\n<thead>\n${ header }</thead>\n<tbody>\n${ body }</tbody>\n</table>\n</div>\n`;
-    }
+	 * @param {string} header - The title of the table
+	 * @param {string} body   - The body of the table
+	 *
+	 * @return {string}       - The table element
+	 */
+	Marked.table = ( header, body ) => {
+		return `<div class="au-table au-table--responsive">\n<table>\n<thead>\n${ header }</thead>\n<tbody>\n${ body }</tbody>\n</table>\n</div>\n`;
+	};
 
 
 	return Marked;
