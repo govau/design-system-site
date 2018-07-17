@@ -78,15 +78,13 @@ const CodeDemo = ({ headline, example, exampleFullwidth, iframe, code, _body, _I
 														role="tabpanel"
 														id={ `${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }-${ Slugify( headline ).toLowerCase() }` }
 													>
-														<div className="codebox">
-															<Code language={
-																Object.keys( section )[ 0 ] === 'HTML' ? 'html' : '' +
-																Object.keys( section )[ 0 ] === 'SCSS' ? 'scss' : '' +
-																Object.keys( section )[ 0 ] === 'React' ? 'jsx' : ''
-															}>
-																{ section[ Object.keys( section )] }
-															</Code>
-														</div>
+														<Code language={
+															Object.keys( section )[ 0 ] === 'HTML' ? 'html' : '' +
+															Object.keys( section )[ 0 ] === 'SCSS' ? 'scss' : '' +
+															Object.keys( section )[ 0 ] === 'React' ? 'jsx' : ''
+														}>
+															{ section[ Object.keys( section )] }
+														</Code>
 													</div>
 												))
 											}
