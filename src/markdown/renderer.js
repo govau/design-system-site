@@ -95,5 +95,43 @@ module.exports = exports = function renderer({ Marked, _ID, _relativeURL }) {
 	};
 
 
+	/**
+	 * Convert all applicable characters to HTML entities
+	 *
+	 * @param   {string} rawCode  - Unencoded code
+	 *
+	 * @returns {string}          - Encoded code
+	 */
+	function EncodeCode( rawCode ) {
+		if( !rawCode ) {
+			return "";
+		}
+
+		var html = rawCode.replace( /[^a-z0-9A-Z ]/g, function( character ) {
+			return "&#" + character.charCodeAt() + ";";
+		});
+
+		return html;
+	}
+
+
+	/**
+	 * Code overwrite
+	 *
+	 * @param {string} code - Code to be formatted
+	 * @param {string} language   - The language of the code
+	 *
+	 * @return {string}       - The code element
+	 */
+	Marked.code = ( code, language ) => {
+		const encodedCode = EncodeCode(code);
+		if( !language ) {
+			return `<div class="codebox">\n<pre>\n<code>${ encodedCode }</code>\n</pre>\n</div>`;
+		}
+
+		return `<div class="codebox">\n<pre class="language-${ language }">\n<code>${ encodedCode }</code>\n</pre>\n</div>`;
+	}
+
+
 	return Marked;
 };
