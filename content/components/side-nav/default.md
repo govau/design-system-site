@@ -79,15 +79,17 @@ code:
       />
 ---
 
-The side navigation is used to provide a means for users to find other pages which share a similar topic or section.
+The side navigation allows users to find other pages which share a similar topic or section. It supports three levels of nesting along with an accompanying heading.
 
-The side navigation component supports three levels of nesting along with an accompanying heading.
-
-On mobile or smaller viewports the side navigation collapses down to an expandable element.
+On mobile and smaller viewports, the side navigation uses functionality from the accordion component to collapse down to an expandable element.
 
 
 ### Tips
 
 - Only expand active subsections to help emphasise which section the user is in and to reduce visual complexity.
 
-- Consider [WCAG-2.1 3.2.3 Consistent Navigation](https://www.w3.org/TR/WCAG21/#consistent-navigation)
+- Keep the navigation link text short. They can be shorter versions of pages titles.
+
+- If the side navigation is too long, users may miss items at the bottom. If there are too many levels, users may miss items that require too many clicks. Conduct usability testing to find the right balance between breadth and depth.
+
+- Consider [Web Content Accessibility Guidelines 2.1 Success Criterion 3.2.3 Consistent Navigation](https://www.w3.org/TR/WCAG21/#consistent-navigation).

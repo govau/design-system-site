@@ -13,9 +13,9 @@ layout: section
 | closed            | boolean  | Closed state, optional
 | speed             | number   | Speed of the animation in ms, optional
 | onOpen            | function | A function executed when the accordion opens, optional
-| afterOpen         | function | A function executed after the accordion opened, optional
+| afterOpen         | function | A function executed after the accordion opens, optional
 | onClose           | function | A function executed when the accordion closes, optional
-| afterClose        | function | A function executed when the accordion closes, optional
+| afterClose        | function | A function executed after the accordion closes, optional
 | dark              | boolean  | A dark variation of the component
 | alt               | boolean  | An alternate variation of the component
 | items             | object   | The menu items
