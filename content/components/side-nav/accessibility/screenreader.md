@@ -8,39 +8,39 @@ speak: |
 
   [List five items]
 
-    [Link] Do you need to lodge a tax return?
+  [Link] Do you need to lodge a tax return?
 
-    [Link] Lodge online
+  [Link] Lodge online
 
-    [List one item] [level two]
+  [List one item] [level two]
 
-      [Link] Pre filling your online tax return
+  [Link] Pre filling your online tax return
 
-    [End of list]
+  [End of list]
 
-    [Link] What’s new for individuals
+  [Link] What’s new for individuals
 
-    [Link] Why you may receive a tax bill
+  [Link] Why you may receive a tax bill
 
-    [Link] In detail
+  [Link] In detail
 
-    [List three items] [level two]
+  [List three items] [level two]
 
-      [Link] Record keeping
+  [Link] Record keeping
 
-      [List two items] [level 3]
+  [List two items] [level 3]
 
-        [Link] Keeping your tax returns
+  [Link] Keeping your tax returns
 
-        [Link] Incorrect amounts
+  [Link] Incorrect amounts
 
-      [End of list]
+  [End of list]
 
-      [Link] Tax receipt
+  [Link] Tax receipt
 
-      [Link] Pre-fill availability
+  [Link] Pre-fill availability
 
-    [End of list]
+  [End of list]
 
   [End of list]
 
