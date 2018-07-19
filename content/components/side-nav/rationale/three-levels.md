@@ -11,6 +11,6 @@ The best examples of navigation for a user where:
 - One level in a main menu
 - Landing page containing a list of second level links
 - Three levels in a side navigation, inlcuding:
-  - Title for second level
   - Active state in main menu
+  - Title in side navigation for second level
   - Breadcrumbs
