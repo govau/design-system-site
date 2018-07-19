@@ -10,11 +10,7 @@
   >
     In this section
   </a>
-  <div 
-    id="nav-default" 
-    class="au-side-nav__content au-accordion--closed au-accordion__body"
-    aria-hidden="true"
-  >
+  <div id="nav-default" class="au-side-nav__content au-accordion--closed au-accordion__body">
     <h2 class="au-sidenav__title">
       <a class="js-focus-me" href="#">Lodging your tax return</a>
     </h2>
