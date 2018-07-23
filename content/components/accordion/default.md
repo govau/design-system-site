@@ -18,7 +18,7 @@ code:
           Accordion title
         </a>
 
-        <div class="au-accordion__body" id="accordion-default" aria-hidden="false">
+        <div class="au-accordion__body" id="accordion-default">
           <div class="au-accordion__body-wrapper">
             Here <a href="#url">is</a> some accordion content
           </div>
