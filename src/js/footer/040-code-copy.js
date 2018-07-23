@@ -7,8 +7,6 @@ for( var i = 0; i < codeComponents.length; i++ ) {
 			'beforeend',
 			'<button type="button" class="btn-copy au-btn icon icon--copy js-copy-btn">Copy</button>'
 		);
-
-		codeComponents[ i ].outerHTML = '<div class="codebox">' + codeComponents[ i ].outerHTML + '</div>';
 	}
 }
 
@@ -62,8 +60,6 @@ AddEvent( copyButtons, 'click', function( event, $this ) {
 		analytics[ 'selectedCss' ]        = selectedItems.styleOutput[ 0 ];
 		analytics[ 'selectedJs' ]         = selectedItems.jsOutput[ 0 ];
 	}
-
-	console.log( analytics );
 
 	dataLayer.push( analytics );
 

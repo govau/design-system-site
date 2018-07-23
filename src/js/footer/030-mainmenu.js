@@ -54,15 +54,7 @@ AddEvent( focustrapBottom, 'focus', function( event ) {
 
 if ( mainmenu ){
 	var MenuCheck = function() {
-		var currentMenuDisplay = GetStyle( mainmenu, 'display' );
 		var mobileMenuDisplay  = GetStyle( mainmenuToggle, 'display' );
-
-		if( currentMenuDisplay === 'none' ){
-			mainmenu.setAttribute( "aria-hidden", "true" );
-		}
-		else {
-			mainmenu.setAttribute( "aria-hidden", "false" );
-		}
 
 		if( mobileMenuDisplay === 'none' ){
 			navSkipLink.setAttribute( "href", "#mainmenu" );
