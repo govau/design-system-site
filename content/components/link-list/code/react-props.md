@@ -11,7 +11,7 @@ layout: section
 | linkComponent    | string   | The component used for the child links, optional
 | items[0].link          | string   | The link of the breadcrumb, optional
 | items[0].linkComponent | string   | The component used for the link, optional
-| items[0].text          | string   | The text of the breadcrumb
+| items[0].text          | string   | The text of the link
 | items[0].li            | object   | An object that will be spread onto the `<li>` tag, optional
 | items[0].onClick       | function | A function to execute when this link is clicked
 | dark             | boolean  | A dark variation of the component
