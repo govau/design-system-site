@@ -30,14 +30,14 @@ code:
       </header>
   - React: |
       /*
-        Light:  <AUheader>
-        Dark:   <AUheader dark>
+        Light:  <AUheader hero>
+        Dark:   <AUheader hero dark>
       */
 
       import AUheader, { AUheaderBrand } from '@gov.au/header';
 
-      <AUheader>
-        <div class="container">
+      <AUheader hero>
+        <div class="container-fluid">
           <div class="row">
             <div class="col-md-9">
               <AUheaderBrand
