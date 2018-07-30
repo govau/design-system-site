@@ -37,7 +37,7 @@ code:
       import AUheader, { AUheaderBrand } from '@gov.au/header';
 
       <AUheader>
-        <div class="container">
+        <div className="container">
           <div className="row">
             <div className="col-md-9">
               <AUheaderBrand
