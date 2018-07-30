@@ -38,8 +38,8 @@ code:
 
       <AUheader hero>
         <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-9">
+          <div className="row">
+            <div className="col-md-9">
               <AUheaderBrand
                 title="Page title" 
                 subline="Service sub-title that could be a little longer"
