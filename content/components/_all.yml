@@ -1534,7 +1534,7 @@ table:
 main-nav:
   name: Main nav
   description: >
-    Horizontal list of links to key areas on the website. Usually located in the
+    A horizontal list of links to key areas on the website. Typically placed in the
     header.
   metatags:
     - mobile menu
