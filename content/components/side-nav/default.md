@@ -5,7 +5,7 @@ headline: Default
 exampleFullwidth: true
 code:
   - HTML: |
-      <nav class="au-side-nav au-accordion">
+      <aside class="au-side-nav au-accordion">
         <a 
           href="#nav-default" class="au-side-nav__toggle au-accordion__title au-accordion--closed" 
           aria-controls="nav-default"
@@ -43,7 +43,7 @@ code:
             </li>
             </ul>
         </div>
-      </nav>
+      </aside>
   - React: |
       <AUsideNav
         dark
