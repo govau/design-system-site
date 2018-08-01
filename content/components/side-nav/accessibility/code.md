@@ -1,4 +1,4 @@
-<nav class="au-side-nav au-accordion">
+<aside class="au-side-nav au-accordion">
   <a 
     href="#nav-default" 
     class="au-side-nav__toggle au-accordion__title au-accordion--closed js-focus-me" 
@@ -37,4 +37,4 @@
       </li>
       </ul>
   </div>
-</nav>
+</aside>

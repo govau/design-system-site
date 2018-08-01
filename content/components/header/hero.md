@@ -37,9 +37,9 @@ code:
       import AUheader, { AUheaderBrand } from '@gov.au/header';
 
       <AUheader hero>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-9">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-md-9">
               <AUheaderBrand
                 title="Page title" 
                 subline="Service sub-title that could be a little longer"
