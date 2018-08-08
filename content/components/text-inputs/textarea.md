@@ -5,8 +5,8 @@ headline: Text area
 code:
   - HTML: |
       <!--
-        Light:  <ul class="au-text-input au-text-input--block">
-        Dark:   <ul class="au-text-input au-text-input--block au-text-input--dark">
+        Light:  <textarea class="au-text-input au-text-input--block">
+        Dark:   <textarea class="au-text-input au-text-input--block au-text-input--dark">
       -->
 
       <label for="textarea">label text</label>
