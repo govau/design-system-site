@@ -5,8 +5,8 @@ headline: Block text inputs
 code:
   - HTML: |
       <!--
-        Light:  <ul class="au-text-input au-text-input--block">
-        Dark:   <ul class="au-text-input au-text-input--block au-text-input--dark">
+        Light:  <input class="au-text-input au-text-input--block">
+        Dark:   <input class="au-text-input au-text-input--block au-text-input--dark">
       -->
 
       <label for="text-input-block">label text</label>
