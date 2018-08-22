@@ -5,6 +5,6 @@ speak: aria-pressed, selected, toggle button
 ---
 
 
-How the {breadcrumbs} demo is described by assistive technology.
+How the main navigation demo is described by assistive on desktop screens.
 
 As read with macOS High Sierra VoiceOver.
