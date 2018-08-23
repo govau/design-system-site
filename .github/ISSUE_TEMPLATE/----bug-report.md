@@ -1,10 +1,10 @@
 ---
-name: "\U0001F4A5 Bug Report"
+name: "\U0001F4A5 Bug report"
 about: If something isn't working as expected
 
 ---
 
-# Bug Report
+# Bug report
 
 - [ ] I’ve read and understood the [Contributing guidelines](https://github.com/govau/designsystem/blob/master/CONTRIBUTING.md) and have done my best effort to follow them.
 - [ ] I’ve read and agree to the [Code of Conduct](https://github.com/govau/designsystem/blob/master/CODE_OF_CONDUCT.md).
