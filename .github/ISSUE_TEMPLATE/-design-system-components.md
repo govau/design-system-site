@@ -1,5 +1,5 @@
 ---
-name: "\U0001F5A5 Design System Components"
+name: "\U0001F5A5 Design System components"
 about: Suggest an idea or report a bug with a Design System component
 
 ---
