@@ -2,6 +2,5 @@ var mainNavToggles = document.querySelectorAll( '.au-main-nav__toggle--open, .au
 
 AddEvent( mainNavToggles, 'click', function( event, $this ) {
 	PreventEvent( event );
-	console.log( $this );
 	AU.mainNav.Toggle( $this );
 });
