@@ -7,19 +7,10 @@ $AU-main-nav-breakpoint: sm;
 // UI-Kit
 @import '../_uikit/sass/uikit';
 
-
-// Force the inner html and body to fit the iframe
-html,
-body {
-	height: 100%;
-}
-
-
 // Example wrapper
 .example {
 	position: relative;
 	display: block;
-	height: 100%;
 
 	.content {
 		@include AU-space( padding, 1unit 2unit );
@@ -60,12 +51,20 @@ body {
 
 
 // Hacky fix for a11y tabs when height is set
-.example-main-nav .content {
-	height: 100%;
-}
+.a11y .example-main-nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 
-.example-main-nav .bar + .content {
-	height: calc( 100% - 76px );
+	.content {
+		height: 100%;
+	}
+
+	.bar + .content {
+		height: calc( 100% - 76px );
+	}
 }
 
 

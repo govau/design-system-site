@@ -15,4 +15,8 @@ var isOldIE = (navigator.userAgent.indexOf( 'MSIE' ) !== -1 ); // Detect IE10 an
 
 iFrameResize( {
 	heightCalculationMethod: isOldIE ? 'max' : 'lowestElement'
-}, '.code-demo__example__iframe' );
+}, '.code-demo__example__iframe--resize' );
+
+var ele = document.querySelector( '.code-demo__example__iframe--resize' );
+
+console.log( ele );

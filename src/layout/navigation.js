@@ -22,7 +22,7 @@ export const CreateLink = ( link, _relativeURL, _ID, _pages ) => {
 		link: link.link.startsWith('http') ? link.link : _relativeURL( link.link, _ID ),
 		className: linkClasses,
 		li: {
-			className: `${ active ? 'mainmenu--active' : ''  }${ _isActiveTrail ? ' mainmenu--active-trail' : ''  }`,
+			className: `${ active ? 'active' : ''  }${ _isActiveTrail ? ' active-trail' : ''  }`,
 		}
 	}
 };
@@ -42,7 +42,7 @@ const Navigation = ({ navigation, uniqueClass, _relativeURL, _ID, _pages }) => {
 			navItems.push( CreateLink( item, _relativeURL, _ID, _pages ) );
 		});
 
-		return <AUlinkList items={ navItems } inline={ inline } className={ section.alignment === 'right' ? 'mainmenu--right' : '' } />;
+		return <AUlinkList items={ navItems } inline={ inline } className={ section.alignment === 'right' ? 'navigation--right' : '' } />;
 	}
 
 	const navMarkup = [];

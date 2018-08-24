@@ -32,7 +32,7 @@
 			border-bottom: 1px solid $AU-color-foreground-border;
 		}
 
-		&.mainmenu--active > a {
+		&.active > a {
 			color: $AU-color-foreground-action;
 			border-color: $AU-color-foreground-action;
 			font-weight: bold;
@@ -44,7 +44,7 @@
 	}
 
 	&.navigation--dark {
-		.au-link-list > li.mainmenu--active > a {
+		.au-link-list > li.active > a {
 			color: $AU-colordark-foreground-text;
 			border-color: $AU-colordark-foreground-text;
 		}
@@ -59,7 +59,7 @@
 			float: left;
 			@include AU-space( margin-bottom, -0.5unit );
 
-			&.mainmenu--right {
+			&.navigation--right {
 				float: right;
 			}
 
@@ -80,7 +80,7 @@
 					}
 				}
 
-				&.mainmenu--active > a {
+				&.active > a {
 					font-weight: normal;
 				}
 			}
@@ -103,4 +103,18 @@
 
 .navigation--component {
 	@include AU-space( margin-top, 2unit );
+}
+
+
+
+@include AU-media( $AU-main-nav-breakpoint ){
+	.au-main-nav {
+		.au-link-list {
+			float: left;
+		}
+
+		.au-link-list + .au-link-list {
+			float: right;
+		}
+	}
 }
