@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: TODO rationale
+pagetitle: Main nav rationale
 
 header:
   - /_shared/header.md
@@ -12,6 +12,7 @@ sidebar:
   - /components/sidebar.md
 
 main:
+  - scss-variables.md
   - react-usage.md
   - react-props.md
   - react-exports.md

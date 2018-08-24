@@ -6,16 +6,17 @@ layout: section
 
 | Name       | Type    | Description
 |------------|---------|-----------------------------------------------------------------------------
-| `AUTODO` | default | The TODO component Get from https://github.com/govau/uikit
+| `AUmainNav`      | default | The main nav component
+| `AUmainNavContent` | named | The main nav content component
 
 ### [md]node_modules import
 
 ```jsx
-import AUTODO from '@gov.au/TODO';
+import AUmainNav, { AUmainNavContent } from '@gov.au/main-nav';
 ```
 
 ### [md]pancake import
 
 ```jsx
-import AUTODO from './TODO';
+import AUmainNav, { AUmainNavContent } from './main-nav';
 ```
