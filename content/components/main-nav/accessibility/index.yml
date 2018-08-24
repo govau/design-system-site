@@ -15,7 +15,8 @@ main:
   - colorblind.md
   - grayscale.md
   - keyboard.md
-  - screenreader.md
+  - screenreader-desktop.md
+  - screenreader-mobile.md
 
 footer:
   - /_shared/footer.md
