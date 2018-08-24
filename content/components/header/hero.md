@@ -30,16 +30,16 @@ code:
       </header>
   - React: |
       /*
-        Light:  <AUheader>
-        Dark:   <AUheader dark>
+        Light:  <AUheader hero>
+        Dark:   <AUheader hero dark>
       */
 
       import AUheader, { AUheaderBrand } from '@gov.au/header';
 
-      <AUheader>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-9">
+      <AUheader hero>
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-md-9">
               <AUheaderBrand
                 title="Page title" 
                 subline="Service sub-title that could be a little longer"

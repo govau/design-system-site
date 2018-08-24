@@ -5,8 +5,8 @@ headline: Default
 code:
   - HTML: |
       <!--
-        Light:  <ul class="au-text-input">
-        Dark:   <ul class="au-text-input au-text-input--dark">
+        Light:  <input class="au-text-input">
+        Dark:   <input class="au-text-input au-text-input--dark">
       -->
 
       <label for="text-input">label text</label>

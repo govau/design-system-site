@@ -51,7 +51,7 @@ code:
             </li>
             </ul>
         </div>
-      </nav>
+      </aside>
   - React: |
       /*
         Light:  <AUsideNav>

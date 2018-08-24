@@ -1680,6 +1680,9 @@ side-nav:
     - name: Simon Victory
       img: simon-victory.jpg
       url: 'http://github.com/svict4'
+    - name: Raj Ghuman
+      img: raj-ghuman.jpg
+      url: 'https://github.com/sukhrajghuman'
   state: published
   highlight: new
   status:
