@@ -106,7 +106,7 @@ The main navigation component is intended to be used as the primary means of nav
 
 Most sites will require some form of navigation to help users find the information they’re looking for. While a horizontal navigation bar is just one option for navigation design, it is one of the most visible and familiar ways of helping users navigate a site.
 
-The main navigation component is designed to to work closely with the [header](/components/header/) component and collapses down to a conventional open/close menu button on smaller devices.
+The main navigation component is designed to work closely with the [header](/components/header/) component and collapses down to a conventional open/close menu button on smaller devices.
 
 **Note:** Because the main navigation component is a horizontal list, it doesn’t accommodate a large amount of items. If you need more space, consider another navigation component such as the [side nav](/components/side-nav/).
 
