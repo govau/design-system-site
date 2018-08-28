@@ -1698,7 +1698,7 @@ side-nav:
     - active: 7
     - something: something
   ID: side-nav    # <-- auto generated, don't change
-  version: 2.0.4    # <-- auto generated, don't change
+  version: 2.0.5    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
     - animate

@@ -8,4 +8,4 @@ height: 300
 ---
 
 
-How the main nav is viewed with various colour blindnesses
+How keyboard navigation works with main nav.
