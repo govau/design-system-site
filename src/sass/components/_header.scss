@@ -1,26 +1,13 @@
 .header {
-	@include AU-space( border-bottom, 0.5unit solid $AU-colordark-foreground-action );
 	background-color: $AU-colordark-background;
 
 	p {
 		color: $AU-colordark-foreground-muted;
 	}
 
-	@media screen and ( min-width: $nav_breakpoint ) {
-		position: relative;
-		z-index: 100;
-		box-shadow: 0 0 5px 0 $AU-color-foreground-border;
-	}
-
 	.au-header__subline {
 		@include AU-space( max-width, 36unit );
 	}
-}
-
-// Add relative for mobile menu
-.au-header {
-	position: relative;
-	z-index: 300;
 }
 
 // Remove padding bottom as we have a menu

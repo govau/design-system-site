@@ -9,7 +9,8 @@ import Fs from 'fs';
  *
  * @disable-docs
  */
-const Example = ({ _ID, _relativeURL, pagetitle, modules, filter, tabbing, example, fullwidth }) => {
+const Example = ({ _ID, _relativeURL, filter, tabbing, example, fullwidth }) => {
+	const componentID = _ID.split( '/' )[ 1 ];
 
 	const headContent = `
 <meta charset="utf-8">
@@ -33,13 +34,13 @@ const Example = ({ _ID, _relativeURL, pagetitle, modules, filter, tabbing, examp
 <meta name="twitter:name" content="Australian Government Design System">
 <meta name="twitter:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:type" content="website">
-<meta property="og:title" content="${ pagetitle } - Australian Government Design System">
+<meta property="og:title" content="Accessibility example - Australian Government Design System">
 <meta property="og:site_name" content="Australian Government Design System">
 <meta property="og:description" content="Inclusive design, open-source code and shared insights">
 <meta property="og:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:url" content="https://designsystem.gov.au">
 
-<title>${ pagetitle } - Australian Government Design System</title>
+<title>Accessibility example - Australian Government Design System</title>
 
 <link rel="stylesheet" href=${ _relativeURL( '/assets/css/example.css', _ID ) } />
 <link rel="stylesheet" href=${ _relativeURL( `/assets/css/a11y/a11y.css`, _ID ) } />
@@ -145,15 +146,12 @@ ${
 					</filter>
 				</defs>
 			</svg>
-			<div className="example__wrapper">
-				<h2 className='example__title'>Example</h2>
-				<main className={`example${ fullwidth === true ? ' example--fullwidth' : '' }${ tabbing ? ' js-tabbing' : '' }${ filter === 'protanopia' || filter === 'deuteranopia' ? ' js-filter' : '' }`}>
-					<div className={`content filter${ tabbing ? ' js-tabbing-area' : '' }`}>
-						{ example }
-					</div>
-					<p className="filter-fail">Unfortunately this feature is not available in this browser.</p>
-				</main>
-			</div>
+			<main className={`example${ fullwidth === true ? ' example--fullwidth' : '' }${ tabbing ? ' js-tabbing' : '' }${ filter === 'protanopia' || filter === 'deuteranopia' ? ' js-filter' : '' } example-${ componentID }`}>
+				<div className={`content filter${ tabbing ? ' js-tabbing-area' : '' }`}>
+					{ example }
+				</div>
+				<p className="filter-fail">Unfortunately this feature is not available in this browser.</p>
+			</main>
 			<script src={ _relativeURL( '/assets/js/iframe-resizer-contentWindow.js', _ID ) } />
 			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
 			<script src={ _relativeURL( '/assets/js/a11y.js', _ID ) } />

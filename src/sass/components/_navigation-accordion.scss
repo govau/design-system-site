@@ -4,8 +4,8 @@
 	.au-link-list > li {
 		border: 0;
 
-		&.mainmenu--active,
-		&.mainmenu--active-trail {
+		&.active,
+		&.active-trail {
 			position: relative;
 			font-weight: bold;
 

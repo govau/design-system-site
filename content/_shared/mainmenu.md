@@ -1,5 +1,5 @@
 ---
-layout: navigation
+layout: structure/main-menu
 navigation:
   inline: true
   theme: dark
