@@ -9,7 +9,7 @@ The visual design of the page-alerts was a challenging problem to resolve due to
 2. The component can't rely on colours to indicate meaning.
 3. The component also comes in light and dark themes.
 
-The solution relys on a few factors:
+The solution relies on a few factors:
 
 **Icon shape.** The icons selected use different background shapes to convey some meaning and draw inspiration from the shape of Australian traffic signals to convey severity.
 
