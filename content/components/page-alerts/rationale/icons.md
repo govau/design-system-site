@@ -15,4 +15,4 @@ The solution relies on a few factors:
 
 **Icon symbols.** The colour of the icon symbols is the same as the text-colour, and the background for the symbol is always the same as the background colour. This guarantees that the icon symbol will always pass colour contrast ratio (provided that the default text and background do).
 
-**Alert title.** We can't simply rely on icons and colour to convey meaning, so an alert title should always accompany the alert text.
+**Alert title.** We can't simply rely on icons and colour to convey meaning, so an alert title should always accompany the alert text. Using a meaningful title like "Error" in the occurance of an error can help users who can not perceive or understand meaningful colors.
