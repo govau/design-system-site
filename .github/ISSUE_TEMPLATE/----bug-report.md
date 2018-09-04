@@ -25,12 +25,9 @@ about: If something isn't working as expected
 
 ## Reproducing
 
-- Module name:
-- Module version:
-- Pancake version:
-- Node version:
-- npm version:
-- Pancake settings in your `package.json`:
+- Website URL:
+- Browser:
+- Operating system:
 
 Steps to reproduce:
 

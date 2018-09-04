@@ -12,7 +12,7 @@ import Fs from 'fs';
 /**
  * The codedemo component
  */
-const CodeDemo = ({ headline, example, exampleFullwidth, iframe, code, _body, _ID, _parseMD, _relativeURL }) => {
+const CodeDemo = ({ headline, example, exampleFullwidth, height = null, iframe, code, _body, _ID, _parseMD, _relativeURL }) => {
 	const pathToCode = Path.normalize(`${ SETTINGS.get().folder.content }/${ _ID }/${ example }/code.md`);
 	const exampleCode = Fs.readFileSync( pathToCode, 'utf8' );
 	const CodeExampleClass = exampleFullwidth
@@ -33,9 +33,11 @@ const CodeDemo = ({ headline, example, exampleFullwidth, iframe, code, _body, _I
 
 					<div className={`code-demo__example-wrapper ${CodeExampleClass}` }>
 						<div className="code-demo__example">
+							<h2 className='code-demo__example-title'>Example</h2>
 							<iframe
 								frameBorder="0"
-								className="code-demo__example__iframe"
+								height={ height }
+								className={ `code-demo__example__iframe ${ height === null ? 'code-demo__example__iframe--resize' : '' }` }
 								scrolling="no"
 								src={ iframe ? _relativeURL( `/${ _ID }/${ iframe }/`, _ID ) : _relativeURL( `/${ _ID }/${ example }/`, _ID ) }>
 									{ exampleCode }

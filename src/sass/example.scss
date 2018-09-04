@@ -1,14 +1,15 @@
 // This is used for our example iframes and live demo pages
 
+// We change the default main nav breakpoint
+$AU-main-nav-breakpoint: sm;
+
 
 // UI-Kit
 @import '../_uikit/sass/uikit';
 
-
 // Example wrapper
 .example {
 	position: relative;
-	border: 2px solid #cfcfcf;
 	display: block;
 
 	.content {
@@ -49,17 +50,21 @@
 }
 
 
-.example__wrapper .example__title {
-	@include AU-space( padding, 0.25unit );
-	font-size: 12px;
-	font-size: 0.75rem;
-	background: $AU-color-background-shade;
-	color: $AU-color-foreground-muted;
-	font-weight: normal;
-	border: 2px solid #cfcfcf;
-	border-bottom: 0;
-	display: inline-block;
-	z-index: 10;
+// Hacky fix for a11y tabs when height is set
+.a11y .example-main-nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	.content {
+		height: 100%;
+	}
+
+	.bar + .content {
+		height: calc( 100% - 76px );
+	}
 }
 
 

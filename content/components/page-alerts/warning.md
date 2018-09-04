@@ -12,7 +12,7 @@ code:
       -->
 
       <div role="alert" class="au-body au-page-alerts au-page-alerts--warning">
-        <h3>Alert title</h3>
+        <h3>Warning</h3>
         <p>Alert Content</p>
       </div>
   - React: |
@@ -26,7 +26,7 @@ code:
       import AUpageAlert from '@gov.au/page-alerts';
 
       <AUpageAlert as='warning'>
-        <h3>Alert title</h3>
+        <h3>Warning</h3>
         <p>Alert Content</p>
       </AUpageAlert>
 ---

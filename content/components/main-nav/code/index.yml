@@ -1,0 +1,21 @@
+layout: component/page
+pagetitle: Main nav rationale
+
+header:
+  - /_shared/header.md
+
+component_nav:
+  - /components/_tabs.md
+
+sidebar:
+  - /components/search.md
+  - /components/sidebar.md
+
+main:
+  - scss-variables.md
+  - react-usage.md
+  - react-props.md
+  - react-exports.md
+
+footer:
+  - /_shared/footer.md

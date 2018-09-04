@@ -93,10 +93,23 @@
 	}
 }
 
+.code-demo__example .code-demo__example-title {
+	@include AU-space( padding, 0.25unit );
+	font-size: 12px;
+	font-size: 0.75rem;
+	background: $AU-color-background-shade;
+	color: $AU-color-foreground-muted;
+	font-weight: normal;
+	border: 2px solid #cfcfcf;
+	border-bottom: 0;
+	display: inline-block;
+	z-index: 10;
+}
+
 .code-demo__example__iframe {
-	border: 0;
 	min-width: 100%;
 	display: block;
+	border: 2px solid #cfcfcf;
 }
 
 .au-body * + .code-demo__headline {
