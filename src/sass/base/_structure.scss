@@ -7,6 +7,10 @@ body {
 	display: grid;
 	grid-template-rows: 1fr auto;
 	grid-template-columns: minmax( 100%, 0 );
+
+	@media print {
+		display: block;
+	}
 }
 
 .container-fluid {
