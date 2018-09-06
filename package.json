@@ -97,7 +97,7 @@
 		"numeral": "^2.0.6",
 		"postcss-cli": "^4.1.1",
 		"slugify": "^1.2.9",
-		"uglify-js": "^3.3.4"
+		"uglify-js": "^3.4.9"
 	},
 	"devDependencies": {
 		"onchange": "^3.3.0"
