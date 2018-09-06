@@ -4,11 +4,11 @@ example: examples/example-default
 headline: Default
 code:
   - HTML: |
-      <nav class="au-skip-link">
+      <nav class="au-skip-link" aria-label="skip links navigation">
         <a class="au-skip-link__link" href="#content">Skip to main content</a>
         <a class="au-skip-link__link" href="#nav">Skip to main navigation</a>
       </nav>
-      <nav id="nav" tabindex="-1">
+      <nav id="nav" tabindex="-1" aria-label="skip links navigation">
         <ul>
           <li><a href="#">Some navigation</a></li>
         </ul>
@@ -29,7 +29,7 @@ code:
           text: 'Skip to main navigation',
         },
       ]} />
-      <nav id="nav" tabindex="-1">
+      <nav id="nav" tabindex="-1" aria-label="skip links navigation">
         <ul>
           <li><a href="#">Some navigation</a></li>
         </ul>
@@ -44,3 +44,5 @@ Skip links are not visual until they receive focus.
 Include skip links between the opening of the `<body>` and the page `<header>`.
 
 The content that the skip links goes to is linked with an `id` and it moves the focus to the element with `tabindex="-1"`.
+
+Inside the `<nav>` element use an `aria-label` with a string like `"skip links navigation"`. This will help screen readers identify which navigation element they are currently using.
