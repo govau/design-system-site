@@ -13,7 +13,7 @@ code:
       <div class="au-grid au-body">
         <footer class="au-footer" role="contentinfo">
           <div class="container">
-            <nav class="au-footer__navigation row">
+            <nav class="au-footer__navigation row" aria-label="footer navigation">
               <div class="col-md-3 col-sm-6">
                 <h3 class="au-display-lg">Section</h3>
                 <ul class="au-link-list">
@@ -54,7 +54,7 @@ code:
         <AUfooter>
           <div className="container">
             <AUfooterNav>
-              <div className="row">
+              <nav className="au-footer__navigation row" aria-label="footer navigation">
                 <div className="col-md-3 col-sm-6">
                   <h3 className="au-display-lg">Section</h3>
                   <ul className="au-link-list">
@@ -71,7 +71,7 @@ code:
                     <li><a href="#">Link 3</a></li>
                   </ul>
                 </div>
-              </div>
+              </nav>
             </AUfooterNav>
             <AUfooterEnd>
               <div className="row">
