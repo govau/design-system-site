@@ -6,14 +6,14 @@ exampleFullwidth: true
 code:
   - HTML: |
       <!--
-        Light:  <section class="au-side-nav">
-        Dark:   <section class="au-side-nav au-side-nav--dark">
+        Light:  <aside class="au-side-nav">
+        Dark:   <aside class="au-side-nav au-side-nav--dark">
 
         Note: Side nav requires feature detection to see if a user has javascript.
               Please add a `no-js` class on html and replace it with `js` if enabled
               https://www.paulirish.com/2009/avoiding-the-fouc-v3/
       -->
-      <nav class="au-side-nav au-accordion">
+      <aside class="au-side-nav au-accordion" aria-label="side navigation">
         <a 
           href="#nav-default" class="au-side-nav__toggle au-accordion__title au-accordion--closed" 
           aria-controls="nav-default"

@@ -19,6 +19,7 @@ All other props are spread into the component
 | Prop name | Type    | Description
 |-----------|---------------------------------------------------------------------------------------
 | linkComponent     | string   | The component used for the child links, optional
+| ariaLabel         | string   | The aria-label attribute, defaults to "main navigation"
 | speed             | number   | Speed of the animation in ms, optional
 | onOpen            | function | A function executed when the accordion opens, optional
 | afterOpen         | function | A function executed after the accordion opens, optional

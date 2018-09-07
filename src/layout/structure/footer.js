@@ -14,7 +14,7 @@ const Footer = ({ headline, legallist, mainlist, _body, _ID, _relativeURL }) => 
 
 		<div className="container-fluid">
 
-				<div className="row">
+				<nav className="row" aria-label="footer navigation">
 					<div className="col-md-offset-1 col-md-8 col-md-push-3">
 						<AUheading size="md" level="2">{ headline }</AUheading>
 
@@ -41,7 +41,7 @@ const Footer = ({ headline, legallist, mainlist, _body, _ID, _relativeURL }) => 
 						</p>
 					</div>
 
-				</div>
+				</nav>
 			</div>
 
 	</AUfooter>

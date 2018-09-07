@@ -1,9 +1,9 @@
-<nav class="au-skip-link">
+<nav class="au-skip-link" aria-label="skip links navigation">
 	<a class="au-skip-link__link js-focus-me" href="#content">Skip to main content</a>
 	<a class="au-skip-link__link js-focus-me" href="#nav">Skip to main navigation</a>
 </nav>
 <p>This example space contains a visually hidden feature.</p>
-<nav id="nav" tabindex="-1">
+<nav id="nav" tabindex="-1" aria-label="skip links navigation">
 	<ul>
 		<li><a class="js-focus-me" href="#">Some navigation</a></li>
 	</ul>
