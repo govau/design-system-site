@@ -9,7 +9,7 @@ code:
         Dark:   <nav class="au-inpage-nav-links au-inpage-nav-links--dark">
       -->
 
-      <nav class="au-inpage-nav-links">
+      <nav class="au-inpage-nav-links" aria-label="in page navigation">
         <h2 class="au-inpage-nav-links__heading">Contents</h2>
         <ul class="au-link-list">
           <li><a href="#section1">Section 1</a></li>

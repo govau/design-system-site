@@ -9,7 +9,8 @@ layout: section
 | Prop name | Type    | Description
 |-----------|---------------------------------------------------------------------------------------
 | title                 | string   | The title above all sections
-| sections              | array    | All of the sections in a neat array 
+| ariaLabel             | string   | The aria-label attribute, defaults to "in page navigation"
+| sections              | array    | All of the sections in a neat array
 | sections[ 0 ].link    | string   | The link to the section, this will be converted to a hash link
 | sections[ 0 ].title   | string   | The link text of this section
 | sections[ 0 ].li      | object   | An object that will be spread onto the `<li>` tag, optional

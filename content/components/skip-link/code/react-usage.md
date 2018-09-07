@@ -17,7 +17,7 @@ import AUskipLink from '@gov.au/skip-link';
     text: 'Skip to content',
   },
 ]} />
-<nav id="nav" tabindex="-1">
+<nav id="nav" tabindex="-1" aria-label="skip links navigation">
   <ul>
     <li><a href="#">Some navigation</a></li>
   </ul>

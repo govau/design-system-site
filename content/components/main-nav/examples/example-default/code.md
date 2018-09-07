@@ -1,4 +1,4 @@
-<nav class="au-main-nav">
+<nav class="au-main-nav" aria-label="main navigation">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
