@@ -1,4 +1,4 @@
-import AUfooter from '../../_uikit/layout/footer';
+import AUfooter, { AUfooterNav } from '../../_uikit/layout/footer';
 import AUlinkList from '../../_uikit/layout/link-list';
 import AUheading from '../../_uikit/layout/headings';
 import AUctaLink from '../../_uikit/layout/cta-link';
@@ -14,7 +14,7 @@ const Footer = ({ headline, legallist, mainlist, _body, _ID, _relativeURL }) => 
 
 		<div className="container-fluid">
 
-				<nav className="row" aria-label="footer navigation">
+				<AUfooterNav>
 					<div className="col-md-offset-1 col-md-8 col-md-push-3">
 						<AUheading size="md" level="2">{ headline }</AUheading>
 
@@ -41,7 +41,7 @@ const Footer = ({ headline, legallist, mainlist, _body, _ID, _relativeURL }) => 
 						</p>
 					</div>
 
-				</nav>
+				</AUfooterNav>
 			</div>
 
 	</AUfooter>
