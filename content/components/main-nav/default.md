@@ -7,8 +7,8 @@ headline: Default
 code:
   - HTML: |
       <!--
-        Light:  <nav class="au-main-nav" aria-label="main navigation">
-        Dark:   <nav class="au-main-nav au-main-nav--dark" aria-label="main navigation">
+        Light:  <nav class="au-main-nav">
+        Dark:   <nav class="au-main-nav au-main-nav--dark">
 
         Note: Main nav requires feature detection to see if a user has javascript.
               Please add a `no-js` class on html and replace it with `js` if enabled

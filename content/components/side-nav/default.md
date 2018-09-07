@@ -6,8 +6,8 @@ exampleFullwidth: true
 code:
   - HTML: |
       <!--
-        Light:  <aside class="au-side-nav" aria-label="side navigation">
-        Dark:   <aside class="au-side-nav au-side-nav--dark" aria-label="side navigation">
+        Light:  <aside class="au-side-nav">
+        Dark:   <aside class="au-side-nav au-side-nav--dark">
 
         Note: Side nav requires feature detection to see if a user has javascript.
               Please add a `no-js` class on html and replace it with `js` if enabled

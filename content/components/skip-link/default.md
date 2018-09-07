@@ -44,5 +44,3 @@ Skip links are not visual until they receive focus.
 Include skip links between the opening of the `<body>` and the page `<header>`.
 
 The content that the skip links goes to is linked with an `id` and it moves the focus to the element with `tabindex="-1"`.
-
-Inside the `<nav>` element use an `aria-label` with a string like `"skip links navigation"`. This will help screen readers identify which navigation element they are currently using.

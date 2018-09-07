@@ -44,7 +44,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <div id="main-nav-default" class="au-main-nav__content">
+        <div id="main-nav-default--dark" class="au-main-nav__content">
           <button
             aria-controls="main-nav-default"
             class="au-main-nav__toggle au-main-nav__toggle--open js-focus-me"
