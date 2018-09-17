@@ -47,6 +47,10 @@ $AU-main-nav-breakpoint: sm;
 		max-width: 600px;
 		padding: 0;
 	}
+
+	.au-side-nav.au-side-nav--dark {
+		background-color: $AU-colordark-background;
+	}
 }
 
 

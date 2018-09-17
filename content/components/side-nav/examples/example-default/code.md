@@ -1,4 +1,4 @@
-<main class="au-grid">
+<div class="au-grid">
   <div class="container-fluid">
     <div class="row">
       <aside class="au-side-nav au-accordion col-sm-6" aria-label="side navigation">
@@ -42,8 +42,8 @@
       </aside>
       <aside class="au-side-nav au-side-nav--dark au-accordion col-sm-6" aria-label="side navigation">
         <a 
-          href="#nav-default" class="au-side-nav__toggle au-accordion__title au-accordion--closed" 
-          aria-controls="nav-default"
+          href="#nav-default--dark" class="au-side-nav__toggle au-accordion__title au-accordion--closed" 
+          aria-controls="nav-default--dark"
           aria-expanded="false" 
           aria-selected="false" 
           role="tab" 
@@ -51,7 +51,7 @@
         >
           In this section
         </a>
-        <div id="nav-default" class="au-side-nav__content au-accordion--closed au-accordion__body">
+        <div id="nav-default--dark" class="au-side-nav__content au-accordion--closed au-accordion__body">
           <h2 class="au-sidenav__title">
             <a href="#">Lodging your tax return</a>
           </h2>
@@ -81,4 +81,4 @@
       </aside>
     </div>
   </div>
-</main>
+</div>
