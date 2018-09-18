@@ -51,6 +51,10 @@ $AU-main-nav-breakpoint: sm;
 	.au-side-nav.au-side-nav--dark {
 		background-color: $AU-colordark-background;
 	}
+
+	.au-main-nav.au-main-nav--dark {
+		@include AU-space( margin-top, 2unit );
+	}
 }
 
 
