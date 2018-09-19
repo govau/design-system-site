@@ -6,29 +6,41 @@ import React from 'react';
 /**
  * The Intro component
  */
-const Intro = ({ title, url, imgalt, imgurl, _relativeURL, _ID, cta, _body }) => (
-	<div className="intro au-grid">
-		<div className="intro-wrapper row">
+const Intro = ({ title, url, imgalt, imgurl, _relativeURL, _ID, cta, _body }) => {
 
-			<div className="intro__img col-sm-12 col-md-6 col-md-push-6">
-				<div className="intro__imgpadding">
-					<img className="au-responsive-media-img"
-						src={ _relativeURL( imgurl , _ID ) }
-					alt={ imgalt } />
+	if (url) {
+		var button =
+			<p className="intro__cta">
+				<AUbutton link={ url } as='secondary'>{ cta }</AUbutton>
+			</p>;
+	}
+
+	if (title) {
+		var heading = <h2 className="intro__title">{ title }</h2>;
+	}
+
+	return (
+		<div className="intro au-grid">
+			<div className="intro-wrapper row">
+
+				<div className="intro__img col-sm-12 col-md-6 col-md-push-6">
+					<div className="intro__imgpadding">
+						<img className="au-responsive-media-img"
+							src={ _relativeURL( imgurl , _ID ) }
+						alt={ imgalt } />
+					</div>
 				</div>
-			</div>
 
-			<div className="intro__text col-sm-12 col-md-5 col-md-pull-6">
-				<h2 className="intro__title">{ title }</h2>
-				<div className="content">{ _body }</div>
-				<p className="intro__cta">
-					<AUbutton link={ url } as='secondary'>{ cta }</AUbutton>
-				</p>
-			</div>
+				<div className="intro__text col-sm-12 col-md-5 col-md-pull-6">
+					{ heading ? heading : '' }
+					<div className="content">{ _body }</div>
+					{ button ? button: '' }
+				</div>
 
+			</div>
 		</div>
-	</div>
-);
+	);
+}
 
 Intro.propTypes = {
 	/**
