@@ -3,6 +3,7 @@ layout: home/intro
 imgurl: assets/img/artwork-community-2.png
 imgalt: designers and developers working together
 url:
+contentClass: content--left
 ---
 
 *Together we‘ll be able to build products and services better, faster and easier.*

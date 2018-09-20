@@ -5,6 +5,7 @@ imgurl: assets/img/artwork-about.png
 imgalt: designers and developers working together
 url: /get-started
 cta: Get started
+imgClass: intro__imgpadding
 ---
 
 *The Australian Government Design System provides a framework and a set of tools to help designers and developers build government products and services more easily.*

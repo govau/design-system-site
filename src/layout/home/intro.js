@@ -6,7 +6,7 @@ import React from 'react';
 /**
  * The Intro component
  */
-const Intro = ({ title, url, imgalt, imgurl, _relativeURL, _ID, cta, _body }) => {
+const Intro = ({ title, url, imgalt, imgurl, imgClass, contentClass, _relativeURL, _ID, cta, _body }) => {
 
 	if (url) {
 		var button =
@@ -24,7 +24,7 @@ const Intro = ({ title, url, imgalt, imgurl, _relativeURL, _ID, cta, _body }) =>
 			<div className="intro-wrapper row">
 
 				<div className="intro__img col-sm-12 col-md-6 col-md-push-6">
-					<div className="intro__imgpadding">
+					<div className={ imgClass }>
 						<img className="au-responsive-media-img"
 							src={ _relativeURL( imgurl , _ID ) }
 						alt={ imgalt } />
@@ -33,7 +33,7 @@ const Intro = ({ title, url, imgalt, imgurl, _relativeURL, _ID, cta, _body }) =>
 
 				<div className="intro__text col-sm-12 col-md-5 col-md-pull-6">
 					{ heading ? heading : '' }
-					<div className="content">{ _body }</div>
+					<div className={ `content ${ contentClass } `}>{ _body }</div>
 					{ button ? button: '' }
 				</div>
 
@@ -69,11 +69,24 @@ Intro.propTypes = {
 	cta: PropTypes.string.isRequired,
 
 	/**
+	 * imgClass: ''
+	 */
+	imgClass: PropTypes.string,
+
+	/**
+	 * contentClass:
+	 */
+	contentClass: PropTypes.string,
+
+	/**
 	 * _body: (text)(4)
 	 */
 	_body: PropTypes.node.isRequired,
 };
 
-Intro.defaultProps = {};
+Intro.defaultProps = {
+	imgClass: '',
+	contentClass: '',
+};
 
 export default Intro;
