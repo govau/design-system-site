@@ -70,7 +70,7 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 														className="au-control-input__input js-furnace-selector"
 														value={ MODULES[ module ].ID }
 														required={ MODULES[ module ].required }
-														checked={ MODULES[ module ].required }
+														defaultChecked={ MODULES[ module ].required }
 														disabled={ MODULES[ module ].required }
 														readOnly={ MODULES[ module ].required }
 													/>
