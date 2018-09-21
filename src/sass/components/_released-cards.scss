@@ -23,6 +23,7 @@
 	.au-card__title {
 		@include AU-fontgrid( sm, heading );
 		@include AU-space( padding-right, 1unit );
+		font-weight: normal;
 		position: relative;
 
 		&:after {
