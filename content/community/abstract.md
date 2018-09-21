@@ -1,7 +1,7 @@
 ---
-layout: home/intro
+layout: intro
 imgurl: assets/img/artwork-community-2.png
-imgalt: designers and developers working together
+imgalt: designers and developers working together illustration  
 url:
 contentClass: content--left
 ---

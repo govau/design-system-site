@@ -1,7 +1,7 @@
 ---
-layout: home/intro
+layout: intro
 imgurl: assets/img/artwork-getting-started.png
-imgalt: designers and developers working together
+imgalt: Getting started illustration
 url:
 contentClass: content--left
 ---

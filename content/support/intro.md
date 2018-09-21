@@ -1,8 +1,9 @@
 ---
-layout: home/intro
+layout: intro
 imgurl: assets/img/artwork-support.png
-imgalt: designers and developers working together
+imgalt: Get support illustration
 url:
+contentClass: content--left
 ---
 
 ## Get help from the community

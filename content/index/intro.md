@@ -1,8 +1,8 @@
 ---
-layout: home/intro
+layout: intro
 title: About
 imgurl: assets/img/artwork-about.png
-imgalt: designers and developers working together
+imgalt: designers and developers working together illustration
 url: /get-started
 cta: Get started
 imgClass: intro__imgpadding
