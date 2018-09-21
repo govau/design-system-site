@@ -1,5 +1,5 @@
 layout: basicpage/page
-pagetitle: Get started
+pagetitle: Set up a development environment
 
 header:
   - /_shared/header.md

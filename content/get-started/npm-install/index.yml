@@ -1,5 +1,5 @@
 layout: basicpage/page
-pagetitle: Get started
+pagetitle: npm install the components
 
 header:
   - /_shared/header.md
