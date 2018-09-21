@@ -31,7 +31,7 @@ const ComponentHeader = ({ _relativeURL, _parseYaml, _parseMD, _pages, _parents,
 						: null
 				}
 
-				<div className="componentheader__body abstract">{ _parseMD( MODULE.description ) }</div>
+				<div className="componentheader__body">{ _parseMD( MODULE.description ) }</div>
 			</div>
 			<div className="componentheader__statusbox col-sm-offset-1 col-sm-5">
 				{
