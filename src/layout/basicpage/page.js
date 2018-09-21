@@ -59,23 +59,24 @@ const Page = ({
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }} />
 
-		<body className="au-grid">
+		<body className="au-grid basicpage">
 			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Z7S8GB" height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe></noscript>
 			{ header }
 			<div className="page-wrapper">
 				<div className="content-wrapper">
 					<main tabIndex="-1" id="content" className="main au-body container-fluid">
 						<div className="row">
-							<div className="col-sm-8">
+							<div className="col-sm-4 col-sm-push-8">
+								{ sidenav }
+							</div>
+							<div className="col-sm-8 col-sm-pull-4">
 								<h1 className={
 									_ID === 'index' || _ID === '404'
 										? 'sronly'
 										: '' }>{ pagetitle }</h1>
 								{ main }
 							</div>
-							<div className="col-sm-4">
-								{ sidenav }
-							</div>
+
 						</div>
 					</main>
 				</div>
