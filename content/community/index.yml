@@ -4,7 +4,7 @@ header:
   - /_shared/header.md
 
 main:
-  - abstract.md
+  - intro.md
   - join.md
   - vision.md
   - how-it-works.md
