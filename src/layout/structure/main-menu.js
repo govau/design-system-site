@@ -34,7 +34,7 @@ const CreateMainMenuLink = ( link, _relativeURL, _ID, _pages ) => {
 const MainMenu = ({ navigation, _relativeURL, _ID, _pages }) => {
 
 	return (
-		<AUmainNav dark>
+		<AUmainNav dark id="mainmenu">
 			<div className="container-fluid">
 				<div className="row">
 					<div className="col-md-12">
