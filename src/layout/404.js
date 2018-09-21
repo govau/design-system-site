@@ -67,10 +67,7 @@ const Page = ({
 					<main tabIndex="-1" id="content" className="main au-body container-fluid">
 						<div className="row">
 							<div className="col-md-12">
-								<h1 className={
-									_ID === 'index' || _ID === '404'
-										? 'sronly'
-										: '' }>{ pagetitle }</h1>
+								<h1 className={ _ID === '404' ? 'sronly' : '' }>{ pagetitle }</h1>
 								{ main }
 							</div>
 						</div>

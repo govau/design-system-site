@@ -14,6 +14,7 @@ const Page = ({
 	footer
 }) => {
 
+	const title = _ID === 'index' ? 'Homepage' : pagetitle;
 	const headContent = `
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
@@ -36,14 +37,14 @@ const Page = ({
 <meta name="twitter:name" content="Australian Government Design System">
 <meta name="twitter:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:type" content="website">
-<meta property="og:title" content="${ pagetitle } - Australian Government Design System">
+<meta property="og:title" content="${ title } - Australian Government Design System">
 <meta property="og:site_name" content="Australian Government Design System">
 <meta property="og:description" content="Inclusive design, open-source code and shared insights">
 <meta property="og:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:url" content="https://designsystem.gov.au">
 <meta name="google-site-verification" content="rd00twS6xfSXiS4gzkLEBfJ3sRmQXz2YBhkCFWTivzI" />
 
-<title>${ pagetitle } - Australian Government Design System</title>
+<title>${ title } - Australian Government Design System</title>
 
 <link rel="stylesheet" href=${ _relativeURL( '/assets/css/style.css', _ID ) }>
 
@@ -66,10 +67,7 @@ const Page = ({
 					<main tabIndex="-1" id="content" className="main au-body container-fluid">
 						<div className="row">
 							<div className="col-md-12">
-								<h1 className={
-									_ID === 'index' || _ID === '404'
-										? 'sronly'
-										: '' }>{ pagetitle }</h1>
+								<h1>{ pagetitle }</h1>
 								{ main }
 							</div>
 						</div>
