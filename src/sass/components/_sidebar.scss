@@ -2,8 +2,12 @@
 .is-components {
 
 	.sidebar {
-		@include AU-space( margin-top, -1unit );
-		@include AU-space( margin-bottom, 4unit );
+		@include AU-space( padding-top, 2unit );
+		@include AU-space( padding-bottom, 4unit );
+	}
+
+	.content {
+		@include AU-space( padding-bottom, 4unit );
 	}
 
 	.navigation--accordion {
@@ -39,8 +43,6 @@
 
 		.content,
 		.sidebar {
-			@include AU-space( margin-top, -6unit );
-			@include AU-space( margin-bottom, -6unit );
 			@include AU-space( padding-top, 6unit );
 			@include AU-space( padding-bottom, 6unit );
 		}

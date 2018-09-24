@@ -1,5 +1,5 @@
-import GetModule             from '../getModule';
-import { GetComponentValue } from   '../getData';
+import GetModule             from '../../helper/getModule';
+import { GetComponentValue } from '../../helper/getData';
 
 import PropTypes from 'prop-types';
 import React from 'react';

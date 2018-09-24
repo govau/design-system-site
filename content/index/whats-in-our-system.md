@@ -1,45 +1,40 @@
 ---
 layout: home/features
-title: What makes our components great
+title: What is in our system
 btnURL: /components
 btntext: See examples
 
-tiles:
-  - smltitle: Designed
+features:
+  - title: Designed
     text: Deliver high-quality visual design
-
-  - smltitle: Modern
+  - title: Modern
     text: Built with HTML5 semantics
-
-  - smltitle: Responsive
+  - title: Responsive
     text: Deliver mobile first responsive design
-
-  - smltitle: Tested
+  - title: Tested
     text: Usability tested by the community
-
-  - smltitle: Accessible
+  - title: Accessible
     text: Meet WCAG 2.1 AA standard accessibility
-
-  - smltitle: Robust
+  - title: Robust
     text: Browser support back to IE8 and no-js fallbacks
-
-  - smltitle: Flexible
+  - title: Flexible
     text: Include options for common JavaScript, jQuery and React
-
-  - smltitle: Customisable
+  - title: Customisable
     text: Built on a detailed Sass ecosystem
-
-  - smltitle: Modular
+  - title: Modular
     text: Ability to choose the components you need
-
-  - smltitle: Versioned
+  - title: Versioned
     text: Need upgrading only when you're ready
-
-  - smltitle: Maintained
+  - title: Maintained
     text: Continuously improved
-
-  - smltitle: Supported
+  - title: Supported
     text: Empowered and driven by the community
+
+featureTitleSize: xs
+
+cardList:
+  columnSize: col-xs-6 col-sm-3 col-lg-2
+  matchHeight: true
 ---
 
-When you install a design system component you benefit from the shared efforts of a community dedicated to making government products and services better, faster, easier.
+When you install a component you benefit from the shared efforts of a community dedicated to making government products and services better, faster, easier.

@@ -1,5 +1,3 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
 import Path from 'path';
 import Fs from 'fs';
 

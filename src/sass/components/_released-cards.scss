@@ -24,6 +24,7 @@
 		@include AU-fontgrid( sm, heading );
 		@include AU-space( padding-right, 1unit );
 		position: relative;
+		font-weight: normal;
 
 		&:after {
 			content: ' ';

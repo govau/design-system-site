@@ -1,6 +1,6 @@
 import AUbutton            from '../../_uikit/layout/buttons';
 import Table               from '../table';
-import GetData             from '../getData';
+import GetData             from '../../helper/getData';
 import ContributorStatus   from './contributor-status';
 
 import React, { Fragment } from 'react';

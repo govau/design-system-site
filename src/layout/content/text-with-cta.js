@@ -9,14 +9,15 @@ const TextWithCTA = ({ button, _body }) => (
 	<Fragment>
 		{ _body }
 
-		{	button
-			?
-				<p>
-					<a href={ button.link } className={ `au-btn au-btn--${ button.type }${ button.icon ? ` icon icon--${ button.icon }` : '' }` }>
-						{ button.text }
-					</a>
-				</p>
-			: ''
+		{
+			button
+				?
+					<p>
+						<a href={ button.link } className={ `au-btn au-btn--${ button.type }${ button.icon ? ` icon icon--${ button.icon }` : '' }` }>
+							{ button.text }
+						</a>
+					</p>
+				: ''
 		}
 	</Fragment>
 );

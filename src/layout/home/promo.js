@@ -1,3 +1,5 @@
+import AUcardList          from '../card-list';
+
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -5,37 +7,43 @@ import React from 'react';
 /**
  * The Promo component
  */
-const Promo = ({ tiles, _relativeURL, _ID, _parseMD }) => (
-	<div className="au-grid">
-		<div className="promo-wrapper row">
+const Promo = ({ promos, cardList, _relativeURL, _ID, _parseMD }) => {
+	const cards = promos.map( promo => ({
+			link: _relativeURL( promo.url, _ID ),
+			rows: [{
+				type: 'image',
+				image: promo.imgurl.startsWith('http')
+					? promo.imgurl
+					: _relativeURL( promo.imgurl, _ID ),
+				description: promo.imgalt,
+			},
 			{
-				tiles.map( ( tile, i ) => (
-					<div className="promo col-sm-12 col-md-4" key={ i }>
-						<div className="promo-group">
-							<a href={ _relativeURL( tile.url, _ID ) }>
-								<img className="promo__thumbnail au-responsive-media-img" alt=""
-									src={
-										tile.imgurl.startsWith('http')
-											? tile.imgurl
-											: _relativeURL( tile.imgurl, _ID )
-									} />
-								<h2 className="promo__title">{ tile.title }</h2>
-							</a>
+				type: 'heading',
+				headingSize: '2',
+				text: promo.title,
+			},
+			{
+				type: 'content',
+				text: promo.text,
+			}]
+	}) );
 
-							<div className="content">
-								{ _parseMD( tile.text ) }
-							</div>
-						</div>
-					</div>
-				))
-			}
+	return (
+		<div className="promo row">
+			<AUcardList
+				cards={ cards }
+				appearance={ cardList.appearance }
+				columnSize={ cardList.columnSize }
+				matchHeight={ cardList.matchHeight }
+				alignment={ cardList.alignment }
+			/>
 		</div>
-	</div>
-);
+	);
+};
 
 Promo.propTypes = {
 	/**
-	 * tiles:
+	 * promos:
 	 *   - title: Community
 	 *     imgurl: http://placehold.it/320x320
 	 *     imgalt: Community Alt tag
@@ -47,7 +55,7 @@ Promo.propTypes = {
 	 *     url: /components
 	 *     text: Components are a collection of interface elements that can be used by teams of designers and developers across government to build products.
 	 */
-	tiles: PropTypes.arrayOf(
+	promos: PropTypes.arrayOf(
 		PropTypes.shape({
 			title: PropTypes.string,
 			imgurl: PropTypes.string,

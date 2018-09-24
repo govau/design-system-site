@@ -7,6 +7,7 @@ import React from 'react';
  */
 const Page = ({
 	_ID,
+	_relativeURL,
 	header,
 	pagetitle,
 	main,
@@ -35,24 +36,36 @@ const Page = ({
 <meta name="twitter:name" content="Australian Government Design System">
 <meta name="twitter:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:type" content="website">
-<meta property="og:title" content="${ pagetitle } - Australian Government Design System">
+<meta property="og:title" content="Homepage - Australian Government Design System">
 <meta property="og:site_name" content="Australian Government Design System">
 <meta property="og:description" content="Inclusive design, open-source code and shared insights">
 <meta property="og:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:url" content="https://designsystem.gov.au">
+<meta name="google-site-verification" content="rd00twS6xfSXiS4gzkLEBfJ3sRmQXz2YBhkCFWTivzI" />
 
-<title>${ pagetitle } - Australian Government Design System</title>
+<title>Homepage - Australian Government Design System</title>
 
-<base href="##url##">
-
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href=${ _relativeURL( '/assets/css/style.css', _ID ) }>
 
 <!--[if lte IE 9]>
-	<script src="/assets/js/html5shiv.js"></script>
-	<script src="/assets/js/respond.js"></script>
+	<script src="${ _relativeURL( '/assets/js/html5shiv.js', _ID ) }"></script>
+	<script src="${ _relativeURL( '/assets/js/respond.js', _ID ) }"></script>
 <![endif]-->
 
-<script src="/assets/js/header.js"></script>`;
+<script src=${ _relativeURL( '/assets/js/header.js', _ID ) }></script>`;
+
+	const mainContent = main.map( ( content, i ) => (
+		<div className={ `tier tier--${ i % 2 === 0 ? 'even' : 'odd' }` } key={ i }>
+			<div className="container-fluid">
+				<div className="row">
+					<div className="col-md-12">
+						{ i === 0 ? <h1>{ pagetitle }</h1> : null }
+						{ content }
+					</div>
+				</div>
+			</div>
+		</div>
+	) );
 
 	return (
 		<html>
@@ -60,24 +73,19 @@ const Page = ({
 
 		<body className="au-grid">
 			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Z7S8GB" height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe></noscript>
-
 			{ header }
 			<div className="page-wrapper">
 				<div className="content-wrapper">
-					<div className="tier">
-						<main tabIndex="-1" id="content" className="au-body container-fluid">
-							<div className="row">
-								<div className="col-md-12">
-									<h1 className={ _ID === '404' ? 'sronly' : '' }>{ pagetitle }</h1>
-									{ main }
-								</div>
-							</div>
-						</main>
-					</div>
+					<main tabIndex="-1" id="content" className="au-body">
+						{ mainContent }
+					</main>
 				</div>
 				{ footer }
 			</div>
-			<script src="/assets/js/footer.js" />
+			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
+			{
+				_ID === 'download' ? <script src={ _relativeURL( '/assets/js/prism.js', _ID ) } /> : null
+			}
 		</body>
 		</html>
 	);
