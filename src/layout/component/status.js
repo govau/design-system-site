@@ -25,15 +25,20 @@ const ComponentStatus = ({ module, _ID, _relativeURL, _parseYaml }) => {
 	const NameIdMenu = ( value, url = '' ) => {
 		const menuItems = [];
 
+		// Return null if there is no values
+		if( !component[ value ].length ) {
+			return null;
+		}
+
 		component[ value ].map( item => {
 
 			menuItems.push({
 				link: _relativeURL( `/components/${ url }${ item }`, _ID ),
 				text: GetComponentValue( item, 'name', _parseYaml ) || item.charAt( 0 ).toUpperCase() + item.slice( 1 ).toLowerCase()
 			})
-		})
+		});
 
-		return <AUlinkList className="component-status__definition__list" inline items={ menuItems } inline/>;
+		return <AUlinkList inline className="component-status__definition__list" items={ menuItems }/>
 	}
 
 
@@ -91,7 +96,7 @@ const ComponentStatus = ({ module, _ID, _relativeURL, _parseYaml }) => {
 					dependencies && component.state === 'published'
 						?
 							<Fragment>
-								<dt>Required</dt>
+								<dt>Requires</dt>
 								<dd>
 									{ dependencies }
 								</dd>
