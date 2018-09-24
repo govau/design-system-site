@@ -1,5 +1,5 @@
 ---
-layout: sideNav
+layout: side-nav
 order:
   - npm-install
   - download-page
