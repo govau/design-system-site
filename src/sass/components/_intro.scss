@@ -14,17 +14,6 @@
 			@include AU-fontgrid( md );
 			font-style: normal;
 		}
-
-		p {
-			//Center align while still using the A11y max-width feature
-			margin-left: auto;
-			margin-right: auto;
-
-			@include AU-media( md ) {
-				margin-left: 0;
-			}
-		}
-
 	}
 
 	.intro__cta {

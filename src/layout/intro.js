@@ -36,7 +36,7 @@ Intro.propTypes = {
 	/**
 	 * title: About
 	 */
-	title: PropTypes.string.isRequired,
+	title: PropTypes.string,
 
 	/**
 	 * imgurl: http://placehold.it/500x400
@@ -51,12 +51,12 @@ Intro.propTypes = {
 	/**
 	 * url: /get-started
 	 */
-	url: PropTypes.string.isRequired,
+	url: PropTypes.string,
 
 	/**
 	 * cta: Get started
 	 */
-	cta: PropTypes.string.isRequired,
+	cta: PropTypes.string,
 
 	/**
 	 * _body: (text)(4)
