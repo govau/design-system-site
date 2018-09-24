@@ -1,11 +1,11 @@
-.badge  {
+.badge {
 	padding: 2px 8px;
 	border-radius: 2em;
 	font-size: 0.75em;
 	background-color: $AU-color-foreground-action;
 	color: $AU-color-background;
-	font-weight: normal;
 	float: right;
+	font-weight: normal; // Reset parent title weights
 }
 
 .badge--highlight {

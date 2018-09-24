@@ -1,5 +1,5 @@
 import AUbutton  from '../../_uikit/layout/buttons';
-import GetModule from '../helper/getModule';
+import GetModule from '../../helper/getModule';
 
 import PropTypes from 'prop-types';
 import React     from 'react';

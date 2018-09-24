@@ -10,9 +10,6 @@
 
 	.componentheader__body {
 		@include AU-space( margin-top, 2unit );
-	}
-
-	.abstract {
 		@include AU-fontgrid( md );
 	}
 }

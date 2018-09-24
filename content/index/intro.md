@@ -1,8 +1,7 @@
 ---
-layout: home/intro
-title: About
+layout: intro
 imgurl: assets/img/artwork-about.png
-imgalt: designers and developers working together
+imgalt: designers and developers working together illustration
 url: /get-started
 cta: Get started
 ---

@@ -1,13 +1,25 @@
 ---
-layout: home/statistics
+layout: home/features
 title: Usage statistics
-btnURL: /components
-btntext: See our Performance Dashboard
+# btnURL: /components
+# btntext: See our Performance Dashboard
 
-tiles:
-  - description: Live projects
-    number: 14
+features:
+  - text: Live projects
+    title: "14"
+  - text: GitHub stars
+    title: stars-replace
+  - text: Downloads in the last year
+    title: downloads-replace
 
+featureTitleSize: xxl
+
+cardList:
+  columnSize: col-xs-12 col-sm-4
+  matchHeight: true
+
+# Live sites:
+#
 # https://www.dta.gov.au/
 # https://beta.dta.gov.au
 # http://designsystem.gov.au/
@@ -22,10 +34,4 @@ tiles:
 # https://asbestossafety.gov.au/
 # https://search.data.gov.au/
 # https://hub.casa.gov.au/content/casa/home.html
-
-  - description: GitHub stars
-    number: stars
-
-  - description: Downloads in the last year
-    number: downloads
 ---

@@ -1,12 +1,10 @@
-.au-display-sm.feature__wrapper__headline {
-	font-weight: bold;
-}
-
-.au-btn, a.au-btn {
+.au-btn,
+a.au-btn {
 	border-width: 2px;
 }
 
-.au-body *+h2, .au-body *+.au-display-xl {
+.au-body * + h2,
+.au-body * + .au-display-xl {
 	@include AU-space( margin-top, 5unit );
 }
 

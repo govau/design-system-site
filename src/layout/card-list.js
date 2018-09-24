@@ -25,8 +25,8 @@ import PropTypes from 'prop-types';
  * @param  {boolean} alignment   - Text alignment
  * @param  {boolean} matchHeight - Adds flex stlyes so cards match height
  */
-const AUcardList = ({ cards, columnSize, matchHeight, alignment, appearance }) => (
-	<ul className={ `au-card-list${ matchHeight ? ' au-card-list--matchheight' : '' }` }>
+const AUcardList = ({ cards, columnSize, matchHeight, alignment, appearance, className = "" }) => (
+	<ul className={ `au-card-list${ matchHeight ? ' au-card-list--matchheight' : '' } ${ className }` }>
 		{
 			cards.map( ( card, i ) =>
 				<li key={ i } className={ columnSize } >
@@ -47,6 +47,7 @@ AUcardList.propTypes = {
 	alignment: PropTypes.oneOf([ 'left', 'center', 'right' ]),
 	columnSize: PropTypes.string,
 	matchHeight: PropTypes.bool,
+	className: PropTypes.string,
 	cards: PropTypes.arrayOf(
 		PropTypes.shape({
 			apperance: PropTypes.oneOf([ 'flat', 'shadow', 'border-left' ]),

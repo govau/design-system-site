@@ -1,7 +1,8 @@
 import ComponentStatus from './status';
-import GetModule from '../../helper/getModule';
+import GetModule from './../../helper/getModule';
+import GetData from './../../helper/getData';
+
 import PropTypes from 'prop-types';
-import GetData from './../getData';
 import React from 'react';
 
 
@@ -31,7 +32,7 @@ const ComponentHeader = ({ _relativeURL, _parseYaml, _parseMD, _pages, _parents,
 						: null
 				}
 
-				<div className="componentheader__body abstract">{ _parseMD( MODULE.description ) }</div>
+				<div className="componentheader__body">{ _parseMD( MODULE.description ) }</div>
 			</div>
 			<div className="componentheader__statusbox col-sm-offset-1 col-sm-5">
 				{
