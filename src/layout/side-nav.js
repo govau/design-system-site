@@ -1,4 +1,4 @@
-import AUsideNav           from '../../_uikit/layout/side-nav';
+import AUsideNav           from '../_uikit/layout/side-nav';
 
 import React, { Fragment } from 'react';
 import PropTypes           from 'prop-types';
