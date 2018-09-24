@@ -1,5 +1,5 @@
 import ComponentStatus from './status';
-import GetModule from './../getModule';
+import GetModule from '../../helper/getModule';
 import PropTypes from 'prop-types';
 import GetData from './../getData';
 import React from 'react';

@@ -1,5 +1,5 @@
 import Navigation from '../navigation';
-import GetModule from './../getModule';
+import GetModule from '../../helper/getModule';
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Fs from 'fs';
