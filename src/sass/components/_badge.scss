@@ -5,6 +5,7 @@
 	background-color: $AU-color-foreground-action;
 	color: $AU-color-background;
 	float: right;
+	font-weight: normal; // Reset parent title weights
 }
 
 .badge--highlight {

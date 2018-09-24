@@ -35,7 +35,7 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parents, _parseYaml }
 		components.map( component => {
 
 			const label = component.highlight
-				? <Fragment>{ component.name } <strong className="badge badge--highlight">{ component.highlight }</strong></Fragment>
+				? <Fragment>{ component.name } <span className="badge badge--highlight">{ component.highlight }</span></Fragment>
 				: component.name;
 
 			const link = {
