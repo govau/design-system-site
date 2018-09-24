@@ -1,33 +1,17 @@
-// Promo [img, title+link, text]
-
 .promo {
-	@include AU-space( margin-top, 2unit );
-
-	@include AU-media( md ) {
-			@include AU-space( margin-top, 10unit );
-	}
-
-	text-align: center;
-
-	.content {
-		text-align: center;
-		max-width: $AU-maxwidth;
+	.au-card {
 		margin: 0 auto;
-		@include AU-space( margin-top, 1unit );
+		@include AU-space( max-width, 20unit );
+		@include AU-space( padding-bottom, 2unit );
 	}
 
-	.promo-group {
-		@include AU-space( padding, 0 3unit );
+	.au-card__image {
+		@include AU-space( max-width, 15unit );
+		margin: 0 auto;
 	}
-}
 
-.au-body img.promo__thumbnail {
-	display: inline-block;
-	max-width: 250px;
-}
-
-.au-body .promo .promo__title { //specific to override AU-body
-	@include AU-fontgrid( lg );
-	margin-top: 0;
-	font-weight: normal;
+	//specific to override AU-body
+	.au-card__title {
+		@include AU-fontgrid( lg );
+	}
 }
