@@ -1,3 +1,5 @@
+layout: home/page
+
 pagetitle: About
 header:
   - /index/header.md
