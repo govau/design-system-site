@@ -1,3 +1,4 @@
+// For the sticky footer on pages with a small amount of content
 html {
 	height: 100%;
 }
@@ -13,23 +14,18 @@ body {
 	}
 }
 
-.container-fluid {
-	@include AU-space( max-width, 85unit );
-}
-
 .au-footer {
 	grid-row-start: 2;
 	grid-row-end: 3;
 }
 
-main.main {
-	@include AU-space( padding-top, 6unit );
-	@include AU-space( padding-bottom, 6unit );
-}
 
-@include AU-media( xs ) {
-	.au-grid .container-fluid {
-		@include AU-space( padding-left, 3unit );
-		@include AU-space( padding-right, 3unit );
+// Override grid settings
+.au-grid .container-fluid {
+	@include AU-space( max-width, 83unit );
+
+	@include AU-media( xs ){
+		@include AU-space( padding-left, 2unit );
+		@include AU-space( padding-right, 2unit );
 	}
 }

@@ -1,0 +1,11 @@
+.tier {
+	@include AU-space( padding, 2unit 0 );
+
+	@include AU-media( sm ){
+		@include AU-space( padding, 5unit 0 );
+	}
+
+	&.tier--odd {
+		background: $AU-color-background-alt;
+	}
+}
