@@ -2,6 +2,11 @@
 layout: intro
 imgurl: assets/img/artwork-community-2.png
 imgalt: designers and developers working together illustration
+button:
+  link: https://community.digital.gov.au/c/designsystem
+  text: Join our community
+  type: secondary
+  icon: community
 ---
 
 *Together we‘ll be able to build products and services better, faster and easier.*

@@ -1,4 +1,3 @@
-import AUbutton from '../_uikit/layout/buttons';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -6,7 +5,7 @@ import React from 'react';
 /**
  * The Intro component
  */
-const Intro = ({ title, url, imgalt, imgurl, _relativeURL, _ID, cta, _body }) => (
+const Intro = ({ title, imgalt, imgurl, button, _relativeURL, _ID, _body }) => (
 	<div className="intro">
 		<div className="row">
 
@@ -21,11 +20,16 @@ const Intro = ({ title, url, imgalt, imgurl, _relativeURL, _ID, cta, _body }) =>
 			<div className="intro__text col-sm-12 col-md-5 col-md-pull-6">
 				{ title ? <h2 className="intro__title">{ title }</h2> : '' }
 				<div className="content">{ _body }</div>
-				{ url ?
-					<p className="intro__cta">
-					<AUbutton link={ url } as='secondary'>{ cta }</AUbutton>
-				</p>
-				: '' }
+				{
+					button
+						?
+							<p className="intro__button">
+								<a href={ button.link } className={ `au-btn au-btn--${ button.type }${ button.icon ? ` icon icon--${ button.icon }` : '' }` }>
+									{ button.text }
+								</a>
+							</p>
+						: ''
+				}
 			</div>
 
 		</div>
@@ -47,16 +51,6 @@ Intro.propTypes = {
 	 * imgalt: Intro Alt Tag
 	 */
 	imgalt: PropTypes.string.isRequired,
-
-	/**
-	 * url: /get-started
-	 */
-	url: PropTypes.string,
-
-	/**
-	 * cta: Get started
-	 */
-	cta: PropTypes.string,
 
 	/**
 	 * _body: (text)(4)

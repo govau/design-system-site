@@ -5,7 +5,6 @@ header:
 
 main:
   - intro.md
-  - join.md
   - vision.md
   - how-it-works.md
   - headingleft_open-source.md
