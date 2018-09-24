@@ -1,7 +1,7 @@
 import AUlinkList          from '../../_uikit/layout/link-list';
-import GetModule           from './../getModule';
+import GetModule           from './../../helper/getModule';
 import { CreateLink }      from '../navigation';
-import GetData             from './../getData';
+import GetData             from './../../helper/getData';
 
 import React, { Fragment } from 'react';
 import PropTypes           from 'prop-types';

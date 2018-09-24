@@ -2,11 +2,11 @@ import Navigation      from './../navigation';
 import ComponentHeader from './header';
 import ComponentFooter from './footer';
 import AUskipLink      from '../../_uikit/layout/skip-link';
+import GetData         from './../../helper/getData';
 
 
-import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import GetData from './../getData';
+import React, { Fragment } from 'react';
 import Path from 'path';
 import Fs from 'fs';
 

@@ -1,5 +1,6 @@
 import AUcardList          from '../card-list';
-import GetData             from './../getData';
+import GetData             from './../../helper/getData';
+
 import React, { Fragment } from 'react';
 import PropTypes           from 'prop-types';
 
