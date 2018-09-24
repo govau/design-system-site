@@ -5,8 +5,8 @@ header:
   - /index/header.md
 main:
   - intro.md
-  - promo.md
-  - features.md
+  - cards.md
+  - whats-in-our-system.md
   - users.md
   - statisitics.md
 footer:

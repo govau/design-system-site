@@ -1,40 +1,76 @@
-import AUheading from '../../_uikit/layout/headings';
+import AUcardList          from '../card-list';
 import AUbutton from '../../_uikit/layout/buttons';
+
 import PropTypes from 'prop-types';
 import React from 'react';
+import Path from 'path';
+import Fs from 'fs';
 
 
 /**
- * The Promo component
+ * The featured component
  */
-const Features = ({ title, btnURL, btntext, tiles, _relativeURL, _ID, _parseMD, _body }) => (
-	<div className="features au-grid">
-		<div className="row">
-			<div className="features__intro col-md-6 col-md-offset-3">
-				<h2 className="features__intro__headline">{ title }</h2>
-				<div className="content">{ _body }</div>
+const Features = ({ title, btnURL, btntext, features, featureTitleSize, cardList, _parseYaml, _body }) => {
+	const cards = features.map( feature => {
+		let featureTitle = feature.title.toString();
+
+		// Fetch the data if the title is meant to be dynamic
+		if ( featureTitle.includes( '-replace' ) ){
+			const dataType = featureTitle.replace( '-replace', '' );
+			const { uikit } = _parseYaml(
+				Fs.readFileSync(
+					Path.normalize(`${ __dirname }/../../../content/_data.yml`),
+					{ encoding: 'utf8' }
+				)
+			);
+
+			featureTitle = uikit[ dataType ].toString();
+		}
+
+		return {
+			rows: [
+			{
+				type: 'heading',
+				headingSize: '3',
+				text: featureTitle,
+				className: `au-display-${ featureTitleSize }`,
+			},
+			{
+				type: 'content',
+				text: feature.text,
+			}]
+		};
+	});
+
+	return (
+	<div className="features">
+		<div className="features__intro row">
+			<div className="col-md-6 col-md-offset-3">
+				<h2>{ title }</h2>
+				{ _body }
 			</div>
 		</div>
 
-		<ul className="features__list row">
-			{
-				tiles.map( ( tile, i ) => (
-					<li className="feature col-xs-6 col-sm-3 col-lg-2" key={ i }>
-						<div className="feature__wrapper">
-							<AUheading className="feature__wrapper__headline" size="sm" level="3">
-								{ tile.smltitle }
-							</AUheading>
-							<p>{ tile.text }</p>
-						</div>
-					</li>
-				))
-			}
-		</ul>
-		<div className="features__cta">
-			<AUbutton link={ btnURL } as='secondary'>{ btntext }</AUbutton>
-		</div>
+		<AUcardList
+			className="row"
+			cards={ cards }
+			appearance={ cardList.appearance }
+			columnSize={ cardList.columnSize }
+			matchHeight={ cardList.matchHeight }
+			alignment={ cardList.alignment }/>
+
+		{
+			btnURL && btntext
+				?
+					<div className="features__cta">
+						<AUbutton link={ btnURL } as='secondary'>{ btntext }</AUbutton>
+					</div>
+				: null
+	 	}
+
 	</div>
-);
+	)
+};
 
 
 Features.propTypes = {
@@ -46,31 +82,31 @@ Features.propTypes = {
 	/**
 	 * btnURL: /components
 	 */
-	btnURL: PropTypes.string.isRequired,
+	btnURL: PropTypes.string,
 
 	/**
 	 * btntext: See an examples
 	 */
-	btntext: PropTypes.string.isRequired,
+	btntext: PropTypes.string,
 
 	/**
-	 * tiles:
-	 *   - smltitle: Designed
+	 * features:
+	 *   - title: Designed
 	 *     text: High-quality visual design
-	 *   - smltitle: Modern
+	 *   - title: Modern
 	 *     text: HTML5 Semantics
-	 *   - smltitle: Responsive
+	 *   - title: Responsive
 	 *     text: Mobile first responsive design
-	 *   - smltitle: Tested
+	 *   - title: Tested
 	 *     text: Usability tested by the community
-	 *   - smltitle: Accessible
+	 *   - title: Accessible
 	 *     text: WCAG 2.1 AA standard accessibility
-	 *   - smltitle: Robust
+	 *   - title: Robust
 	 *     text: Browser support back to IE8 and no-js fallbacks
 	 */
-	tiles: PropTypes.arrayOf(
+	features: PropTypes.arrayOf(
 		PropTypes.shape({
-			smltitle: PropTypes.string,
+			title: PropTypes.string,
 			text: PropTypes.string,
 		})
 	).isRequired,
