@@ -213,7 +213,7 @@ const FetchDownloads = ( modules ) => {
 					.then( response => response.json() )
 					.then( thisData => data.push({
 						name: module,
-						download: GetStats( thisData.downloads ),
+						downloads: GetStats( thisData.downloads ),
 					})
 				)
 			);
@@ -284,7 +284,7 @@ const WriteStats = async ( ) => {
 	const DATA = {};
 	try {
 		DATA.pancake = {
-			download: 0,
+			downloads: 0,
 			modules: {},
 			stars: 0,
 		};
@@ -298,18 +298,18 @@ const WriteStats = async ( ) => {
 			'@gov.au/syrup',
 		]);
 
-		Tick('Got pancake download data');
+		Tick('Got pancake downloads data');
 
 		let downloadAllPancake = 0;
 		downloadPancakes.map( module => {
-			DATA.pancake.modules[ module.name ] = module.download;
-			downloadAllPancake += module.download;
+			DATA.pancake.modules[ module.name ] = module.downloads;
+			downloadAllPancake += module.downloads;
 		});
 
-		DATA.pancake.download = downloadAllPancake;
+		DATA.pancake.downloads = downloadAllPancake;
 
 		DATA.uikit = {
-			download: 0,
+			downloads: 0,
 			modules: {},
 			stars: 0,
 		};
@@ -317,22 +317,22 @@ const WriteStats = async ( ) => {
 		const uikitModules = await FetchModules();
 		const downloadUikit = await FetchDownloads( uikitModules );
 
-		Tick('Got uikit download data');
+		Tick( 'Got uikit downloads data' );
 
 		let downloadAllUikit = 0;
 		downloadUikit.map( module => {
-			DATA.uikit.modules[ module.name ] = module.download;
-			downloadAllUikit += module.download;
+			DATA.uikit.modules[ module.name ] = module.downloads;
+			downloadAllUikit += module.downloads;
 		});
 
-		DATA.uikit.download = downloadAllUikit;
+		DATA.uikit.downloads = downloadAllUikit;
 
 
 		const pancakeStars = await FetchStars('pancake');
-		Tick('Got pancake star data');
+		Tick( 'Got pancake stars data' );
 
 		const uikitStars = await FetchStars('uikit');
-		Tick('Got uikit star data');
+		Tick( 'Got uikit stars data' );
 
 		DATA.pancake.stars = pancakeStars;
 		DATA.uikit.stars = uikitStars;

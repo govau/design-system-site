@@ -1,48 +1,33 @@
-// Features
-
 .features {
-	@include AU-space( margin-top, 10unit );
-}
+	.features__intro,
+	.features__cta {
+		text-align: center;
+	}
 
-.features__intro {
-	text-align: center;
+	.features__intro * {
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-	.content {
+	.features__cta {
 		@include AU-space( margin-top, 2unit );
 	}
-}
 
-.au-body .features__list {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	@include AU-fontgrid( sm );
-	@include AU-space( margin-top, 3unit );
-
-	.feature {
+	.au-card {
 		@include AU-space( margin-top, -0.25unit );
+		@include AU-space( border-top, 0.25unit solid $AU-color-background-alt );
+		@include AU-space( border-bottom, 0.25unit solid $AU-color-background-alt );
+		@include AU-space( padding, 2unit 0 );
 	}
-}
 
-.feature__wrapper {
-	@include AU-space( border-top, 0.25unit solid $AU-color-background-alt );
-	@include AU-space( border-bottom, 0.25unit solid $AU-color-background-alt );
-	@include AU-space( padding, 2unit 0 );
-	min-height: 8em;
-}
+	.au-card-list {
+		@include AU-space( margin-top, 4unit );
 
-.feature__wrapper__headline {
-	@include AU-fontgrid( md );
-	font-weight: bold;
-}
-
-.features__cta {
-	text-align: center;
-	@include AU-space( margin-top, 3unit );
-}
-
-.au-body *+h2,
-.au-body *+.au-display-xl {
-    margin-top: 48px;
-    margin-top: 4rem;
+		// Overrides for au-body
+		.au-body & {
+			li {
+				margin-top: 0;
+			}
+		}
+	}
 }

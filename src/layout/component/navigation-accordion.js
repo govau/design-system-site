@@ -1,7 +1,7 @@
 import AUlinkList          from '../../_uikit/layout/link-list';
-import GetModule           from './../getModule';
+import GetModule           from './../../helper/getModule';
 import { CreateLink }      from '../navigation';
-import GetData             from './../getData';
+import GetData             from './../../helper/getData';
 
 import React, { Fragment } from 'react';
 import PropTypes           from 'prop-types';
@@ -35,7 +35,7 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parents, _parseYaml }
 		components.map( component => {
 
 			const label = component.highlight
-				? <Fragment>{ component.name } <strong className="badge badge--highlight">{ component.highlight }</strong></Fragment>
+				? <Fragment>{ component.name } <span className="badge badge--highlight">{ component.highlight }</span></Fragment>
 				: component.name;
 
 			const link = {

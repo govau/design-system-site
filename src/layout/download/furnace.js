@@ -1,5 +1,5 @@
 import { AUcheckbox, AUradio } from '../../_uikit/layout/control-input';
-import GetData from './../getData';
+import GetData from './../../helper/getData';
 import Code from './../code';
 
 import PropTypes from 'prop-types';
