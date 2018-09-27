@@ -2,8 +2,8 @@
 layout: component/code-demo
 example: examples/example-default
 exampleFullwidth: true
-height: 300
 headline: Default
+height: 300
 code:
   - HTML: |
       <!--
