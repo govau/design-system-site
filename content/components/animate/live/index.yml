@@ -1,3 +1,5 @@
-layout: live/page
+layout: example/page
 pagetitle: Animate live demo
-example: code.md
+examples:
+  - template: example-code.md
+page: true

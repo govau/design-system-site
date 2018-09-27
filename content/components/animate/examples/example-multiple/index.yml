@@ -1,2 +1,3 @@
 layout: example/page
-example: code.md
+examples:
+  - template: example-code.md

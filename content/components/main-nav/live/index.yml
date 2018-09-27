@@ -1,4 +1,6 @@
-layout: live/page
+layout: example/page
 pagetitle: Main nav live demo
-example: ../accessibility/code.md
+examples:
+  - template:  ../accessibility/example-code.md
 fullwidth: true
+page: true
