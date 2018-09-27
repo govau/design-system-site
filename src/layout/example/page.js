@@ -15,7 +15,7 @@ const Example = ({
 	tabbing,
 	examples,
 	fullwidth,
-	page,
+	livedemo,
 	alignment,
 	_ID,
 	_relativeURL,
@@ -68,31 +68,30 @@ const Example = ({
 <![endif]-->
 <script>var $html=document.documentElement;if($html.classList)$html.classList.remove("no-js"),$html.classList.add("js");else{var className="no-js";$html.className=$html.className.replace(new RegExp("(^|\\b)"+className.split(" ").join("|")+"(\\b|$)","gi")," "),$html.className+=" js"}</script>`;
 
+	let colWidth = 'col-md-12';
+	if( alignment === 'inline' && examples.length == 2 ){
+		colWidth = 'col-sm-6';
+	}
+
 	let exampleLayout = Object.values( examples ).map( ( example, key ) => {
 		if( example.style ){
 			return (
-				<div className={ `example example-${ componentID } example--${ example.style }` } key={ key }>
-					{ example.template }
+				<div className={ `${ colWidth } col-${ example.style }` } key={ key }>
+					<div className={ `example example-${ componentID }` }>
+						{ example.template }
+					</div>
 				</div>
 			);
 		}
 
 		return (
-			<div className={ `example  example-${ componentID }` } key={ key }>
-				{ example.template }
+			<div className={ `${ colWidth }` } key={ key }>
+				<div className={ `example example-${ componentID }` }>
+					{ example.template }
+				</div>
 			</div>
 		);
 	});
-
-	// Change the alignment if inline
-	if( alignment === 'inline' && exampleLayout.length == 2 ){
-		exampleLayout =
-			<div className="row">
-				{ exampleLayout.map( ( example, key ) => (
-					<div className="col-sm-6" key={ key }>{ example }</div>
-				) ) }
-			</div>
-	}
 
 	const a11yFilter = <svg
 		aria-hidden="true"
@@ -179,9 +178,9 @@ const Example = ({
 	return (
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }}  />
-		<body className={ `au-grid${ a11yPage ? ' a11y' : '' }${ page ? ' live-demo' : '' }` }>
+		<body className={ `au-grid${ a11yPage ? ' a11y' : '' }${ livedemo ? ' live-demo' : '' }` }>
 			{
-				page
+				livedemo
 					? <header className="header__example">
 							<div className="container-fluid">
 								<div className="row">
@@ -196,9 +195,11 @@ const Example = ({
 					: ''
 			}
 			{ filter ? a11yFilter : '' }
-			<main className={`${ fullwidth === false ? ' example--align-middle' : '' }${ tabbing ? ' js-tabbing' : '' }${ filter === 'protanopia' || filter === 'deuteranopia' ? ' js-filter' : '' }${ filter ? ` js-filter--${ filter}` : '' }`}>
-				<div className={`content${ tabbing ? ' js-tabbing-area' : '' }`}>
-					{ exampleLayout }
+			<main className={`${ fullwidth ? '' : ' example--align-middle' }${ tabbing ? ' js-tabbing' : '' }${ filter === 'protanopia' || filter === 'deuteranopia' ? ' js-filter' : '' }${ filter ? ` js-filter--${ filter}` : '' }`}>
+				<div className={`container-fluid content${ tabbing ? ' js-tabbing-area' : '' }`}>
+					<div className="row">
+						{ exampleLayout }
+					</div>
 				</div>
 				{
 					filter

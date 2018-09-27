@@ -2,5 +2,7 @@ layout: example/page
 pagetitle: Main nav live demo
 examples:
   - template:  ../accessibility/example-code.md
+  - template:  ../accessibility/example-dark.md
+    style: dark
 fullwidth: true
-page: true
+livedemo: true

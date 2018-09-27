@@ -2,4 +2,4 @@ layout: example/page
 pagetitle: TODO live demo
 examples:
   - template: ../accessibility/example-code.md
-page: true
+livedemo: true
