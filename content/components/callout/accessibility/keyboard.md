@@ -1,7 +1,7 @@
 ---
 layout: component/code-demo
-example: /
-iframe: a11y-keyboard
+example: a11y-keyboard
+exampleFullwidth: true
 headline: Keyboard accessibility
 ---
 

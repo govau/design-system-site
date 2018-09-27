@@ -1,6 +1,7 @@
 ---
 layout: component/code-demo
 example: examples/example-calendar
+exampleFullwidth: true
 headline: Calendar
 code:
   - HTML: |
