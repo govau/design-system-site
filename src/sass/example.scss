@@ -19,10 +19,6 @@ html {
 	@include AU-space( padding, 1unit );
 	position: relative;
 	display: block;
-
-	&.example--center {
-		text-align: center
-	}
 }
 
 .col-dark {
@@ -220,6 +216,11 @@ html {
 			color: $AU-colordark-foreground-muted;
 		}
 	}
+}
+
+// Align the content in the middle
+.content.content--center {
+	text-align: center;
 }
 
 

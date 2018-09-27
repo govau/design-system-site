@@ -196,7 +196,7 @@ const Example = ({
 			}
 			{ filter ? a11yFilter : '' }
 			<main className={`${ fullwidth ? '' : ' example--align-middle' }${ tabbing ? ' js-tabbing' : '' }${ filter === 'protanopia' || filter === 'deuteranopia' ? ' js-filter' : '' }${ filter ? ` js-filter--${ filter}` : '' }`}>
-				<div className={`container-fluid content${ tabbing ? ' js-tabbing-area' : '' }`}>
+				<div className={`container-fluid content${ alignment === 'center' ? ' content--center' : ''}${ tabbing ? ' js-tabbing-area' : '' }`}>
 					<div className="row">
 						{ exampleLayout }
 					</div>
