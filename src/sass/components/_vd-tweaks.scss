@@ -22,3 +22,10 @@ a.au-btn {
 		background-color: $AU-color-background;
 	}
 }
+
+
+// Below here is hotfixes we want to remove in the future
+[tabindex="-1"] {
+	outline: none;
+}
+
