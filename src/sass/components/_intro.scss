@@ -16,20 +16,6 @@
 		}
 	}
 
-	.intro__cta {
-		@include AU-space( margin-top, 3unit );
-
-		//Center align while still using the A11y max-width feature
-		text-align: center;
-		margin-left: auto;
-		margin-right: auto;
-
-		@include AU-media( md ) {
-			text-align: left;
-			margin-left: 0;
-		}
-	}
-
 	.intro__img {
 		@include AU-space( max-width, 40unit );
 		margin: 0 auto;

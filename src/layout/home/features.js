@@ -44,11 +44,9 @@ const Features = ({ title, btnURL, btntext, features, featureTitleSize, cardList
 
 	return (
 	<div className="features">
-		<div className="features__intro row">
-			<div className="col-md-6 col-md-offset-3">
-				<h2>{ title }</h2>
-				{ _body }
-			</div>
+		<div className="features__intro">
+			<h2>{ title }</h2>
+			{ _body }
 		</div>
 
 		<AUcardList
