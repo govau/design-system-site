@@ -1,8 +1,8 @@
 ---
 layout: component/code-demo
-example: /
-iframe: a11y-grayscale
+example: a11y-grayscale
 headline: Grayscale
+exampleFullwidth: true
 ---
 
 

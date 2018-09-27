@@ -1,6 +1,7 @@
 ---
 layout: component/code-demo
 example: examples/example-lists
+exampleFullwidth: true
 headline: Lists
 code:
   - HTML: |

@@ -23,9 +23,24 @@ html {
 	&.example--center {
 		text-align: center
 	}
+}
 
-	&.example--dark {
-		background: $AU-colordark-background;
+.col-dark {
+	background: $AU-colordark-background;
+}
+
+// Live demo page
+.live-demo {
+	// remove spacing
+	.example {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	// Align the components to the middle on live example page
+	.example--align-middle {
+		@include AU-space( max-width, 40unit );
+		margin: 0 auto;
 	}
 }
 

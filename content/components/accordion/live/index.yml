@@ -2,4 +2,6 @@ layout: example/page
 pagetitle: Accordion live demo
 examples:
   - template: ../accessibility/example-code.md
-page: true
+  - template: ../accessibility/example-dark.md
+    style: dark
+livedemo: true
