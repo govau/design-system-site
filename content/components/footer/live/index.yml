@@ -1,4 +1,7 @@
-layout: live/page
+layout: example/page
 pagetitle: Footer live demo
-example: ../accessibility/code.md
+examples:
+  - template: ../accessibility/example-code.md
+  - template: ../accessibility/example-dark.md
 fullwidth: true
+livedemo: true

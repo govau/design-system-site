@@ -1,7 +1,7 @@
 ---
 layout: component/code-demo
-example: examples/example-default
-exampleFullwidth: true
+iframe: examples/example-default
+iframeFullwidth: true
 headline: Default
 code:
   - HTML: |
