@@ -1,7 +1,7 @@
 ---
 layout: component/code-demo
-example: examples/example-lists
-exampleFullwidth: true
+iframe: examples/example-lists
+iframeFullwidth: true
 headline: Lists
 code:
   - HTML: |

@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-example: examples/example-group
+iframe: examples/example-group
 headline: Accordion group
 code:
   - HTML: |

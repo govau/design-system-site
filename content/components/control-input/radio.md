@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-example: examples/example-radio
+iframe: examples/example-radio
 headline: Radio
 code:
   - HTML: |

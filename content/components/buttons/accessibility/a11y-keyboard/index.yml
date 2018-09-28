@@ -4,3 +4,4 @@ examples:
   - template: ../example-dark.md
     style: dark
 tabbing: true
+alignment: inline

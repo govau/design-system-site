@@ -1,6 +1,7 @@
 ---
 layout: component/code-demo
-example: examples/example-link
+iframe: examples/example-link
+iframeFullwidth: true
 headline: Links as buttons
 code:
   - HTML: |

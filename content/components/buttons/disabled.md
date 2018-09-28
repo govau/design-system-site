@@ -1,6 +1,7 @@
 ---
 layout: component/code-demo
-example: examples/example-disabled
+iframe: examples/example-disabled
+iframeFullwidth: true
 headline: Disabled
 code:
   - HTML: |

@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-example: examples/example-math-code
+iframe: examples/example-math-code
 headline: Mathematics and code
 code:
   - HTML: |
