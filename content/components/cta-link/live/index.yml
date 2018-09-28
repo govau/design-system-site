@@ -1,3 +1,7 @@
-layout: live/page
+layout: example/page
 pagetitle: CTA link live demo
-example: ../accessibility/code.md
+examples:
+  - template: ../accessibility/example-code.md
+  - template: ../accessibility/example-dark.md
+    style: dark
+livedemo: true

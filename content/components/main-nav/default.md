@@ -1,9 +1,9 @@
 ---
 layout: component/code-demo
-example: examples/example-default
-exampleFullwidth: true
-height: 300
+iframe: examples/example-default
+iframeFullwidth: true
 headline: Default
+height: 300
 code:
   - HTML: |
       <!--

@@ -1,7 +1,7 @@
 ---
 layout: component/code-demo
-example: /
-iframe: a11y-colorblind
+examples: 
+  - template: a11y-colorblind
 headline: Colour impairment
 ---
 

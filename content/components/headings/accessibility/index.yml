@@ -14,7 +14,6 @@ sidebar:
 main:
   - colorblind.md
   - grayscale.md
-  - keyboard.md
   - screenreader.md
 
 footer:

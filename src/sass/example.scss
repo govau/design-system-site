@@ -7,79 +7,37 @@ $AU-main-nav-breakpoint: sm;
 // UI-Kit
 @import '../_uikit/sass/uikit';
 
+// Reset
+body,
+html {
+	margin: 0;
+	padding: 0;
+}
+
 // Example wrapper
 .example {
+	@include AU-space( padding, 1unit );
 	position: relative;
 	display: block;
+}
 
-	.content {
-		@include AU-space( padding, 1unit 2unit );
-		@include AU-clearfix();
+.col-dark {
+	background: $AU-colordark-background;
+}
+
+// Live demo page
+.live-demo {
+	// remove spacing
+	.example {
+		padding-left: 0;
+		padding-right: 0;
 	}
 
-	&.example--fullwidth {
-
-		.content {
-			padding: 0;
-		}
-
-		.au-body.au-body--dark {
-			margin: 0;
-			padding: 0;
-		}
-
-		.au-header.au-header--dark {
-			margin: 0;
-		}
-
-		.live-demo & {
-			max-width: none;
-		}
-	}
-
-	&.example--center {
-		text-align: center
-	}
-
-	.live-demo & {
-		border: 0;
+	// Align the components to the middle on live example page
+	.example--align-middle {
+		@include AU-space( max-width, 40unit );
 		margin: 0 auto;
-		max-width: 600px;
-		padding: 0;
 	}
-}
-
-
-// Hacky fix for a11y tabs when height is set
-.a11y .example-main-nav {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-
-	.content {
-		height: 100%;
-	}
-
-	.bar + .content {
-		height: calc( 100% - 76px );
-	}
-}
-
-
-.a11y .au-body.au-body--dark,
-.example .au-body.au-body--dark {
-	@include AU-space( padding, 1unit 2unit );
-	@include AU-space( margin, 1unit -2unit -1unit );
-}
-
-.a11y .au-header:first-of-type {
-	@include AU-space( margin, -1unit -2unit 0 );
-}
-
-.a11y .au-header:last-of-type {
-	@include AU-space( margin, 0 -2unit -1unit );
 }
 
 
@@ -101,7 +59,8 @@ $AU-main-nav-breakpoint: sm;
 	}
 }
 
-// Grids
+
+// Custom code for grid example
 .grid-example .row > * {
 	@include AU-space( padding-top, 0.75unit );
 	@include AU-space( padding-bottom, 0.75unit );
@@ -117,7 +76,7 @@ $AU-main-nav-breakpoint: sm;
 }
 
 
-// Animation
+// Custom code for animate example
 .animate-example {
 	@include AU-space( margin-top, 1unit );
 	background-color: hotpink;
@@ -125,12 +84,8 @@ $AU-main-nav-breakpoint: sm;
 }
 
 
-// Core typography
+// Custom code for core fontgrid example
 .fontgrid {
-	.col-xs-4 {
-		@include AU-space( margin-bottom, 1unit );
-	}
-
 	p {
 		@include AU-space( padding, 0.5unit 0 0.25unit );
 		@include AU-space( margin, 1unit 0 2unit );
@@ -173,6 +128,7 @@ $AU-main-nav-breakpoint: sm;
 }
 
 
+// Custom code for core spacing example
 .spacing {
 	.au-progress-indicator__link:before,
 	.au-accordion__title:before,
@@ -201,7 +157,7 @@ $AU-main-nav-breakpoint: sm;
 
 
 
-// Core color palettes
+// Custom code for core colours example
 .palette {
 	@include AU-clearfix();
 
@@ -260,4 +216,105 @@ $AU-main-nav-breakpoint: sm;
 			color: $AU-colordark-foreground-muted;
 		}
 	}
+}
+
+// Align the content in the middle
+.content.content--center {
+	text-align: center;
+}
+
+
+// A11y examples
+.sronly {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect( 0, 0, 0, 0 );
+	border: 0;
+}
+
+.bar {
+	border-bottom: 4px solid #f5f5f5;
+	border-bottom: .25rem solid #f5f5f5;
+}
+
+.a11y-button {
+	display: inline-block;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+	color: #007099;
+	background-color: #fff;
+	cursor: pointer;
+	vertical-align: middle;
+	font-size: 14px;
+	font-size: .875rem;
+	line-height: 1.14286;
+	padding: 12px 16px 12px;
+	padding: .75rem 1rem .75rem;
+	border: none;
+	border-bottom: 4px solid #f5f5f5;
+	border-bottom: .25rem solid #f5f5f5;
+	margin-bottom: -4px;
+	margin-bottom: -0.25rem;
+}
+
+.a11y-button:focus {
+	outline: 3px solid #9263DE;
+	outline-offset: 2px;
+}
+
+.a11y-button.is-active {
+	border-color: #007099;
+}
+
+.a11y-button.a11y-button--soft {
+	color: #313131;
+}
+
+.a11y .example .bar,
+.a11y .example .content,
+.a11y .example .bar,
+.a11y .example .content {
+	display: none;
+}
+
+@supports ( filter: url( "filters.svg#deuteranopia" ) ){
+	.filter-fail {
+		display: none;
+	}
+
+	.a11y .example .bar,
+	.a11y .example .content,
+	.a11y .example .bar,
+	.a11y .example .content {
+		display: block;
+	}
+}
+
+
+.svg-filter {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0;
+}
+
+
+.js-filter--tritanopia .content {
+	 filter: url( "#tritanopia" );
+}
+.js-filter--grayscale .content {
+	 filter: grayscale( 100% );
+}
+.js-filter--deuteranopia .content {
+	 filter: url( "#deuteranopia" );
 }

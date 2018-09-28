@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-example: examples/example-multiple
+iframe: examples/example-multiple
 headline: Multiple
 code:
   - HTML: |

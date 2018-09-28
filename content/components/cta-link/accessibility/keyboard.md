@@ -1,9 +1,8 @@
 ---
 layout: component/code-demo
-example: /
 iframe: a11y-keyboard
+iframeFullwidth: true
 headline: Keyboard accessibility
 ---
-
 
 How keyboard navigation works with call to action links.

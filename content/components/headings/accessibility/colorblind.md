@@ -1,7 +1,7 @@
 ---
 layout: component/code-demo
-example: /
 iframe: a11y-colorblind
+iframeFullwidth: true
 headline: Colour impairment
 ---
 
