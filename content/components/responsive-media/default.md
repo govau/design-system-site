@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-example: examples/example-default
+iframe: examples/example-default
 headline: Responsive image
 code:
   - HTML: |

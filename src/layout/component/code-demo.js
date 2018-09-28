@@ -105,9 +105,9 @@ CodeDemo.propTypes = {
 	headline: PropTypes.string.isRequired,
 
 	/**
-	 * example: primary
+	 * iframe: primary
 	 */
-	example: PropTypes.string.isRequired,
+	iframe: PropTypes.string.isRequired,
 
 	/**
 	 * code:

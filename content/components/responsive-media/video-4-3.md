@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-example: examples/example-video-4-3
+iframe: examples/example-video-4-3
 headline: Responsive videos 4:3
 code:
   - HTML: |
