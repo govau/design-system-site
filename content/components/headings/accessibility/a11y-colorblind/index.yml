@@ -1,3 +1,7 @@
-layout: example/a11y
-example: ../code.md
+layout: example/page
+examples:
+  - template: ../example-code.md
+  - template: ../example-dark.md
+    style: dark
+alignment: inline
 filter: deuteranopia

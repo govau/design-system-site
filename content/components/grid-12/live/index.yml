@@ -2,5 +2,5 @@ layout: example/page
 pagetitle: Grid 12 live demo
 examples:
   - template: example-code.md
-exampleFullwidth: true
+iframeFullwidth: true
 livedemo: true
