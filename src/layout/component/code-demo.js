@@ -9,9 +9,9 @@ import Slugify from 'slugify';
 /**
  * The codedemo component
  */
-const CodeDemo = ({ headline, example, exampleFullwidth, height = null, code, _body, _ID, _relativeURL }) => {
-	const codeExampleClass = exampleFullwidth ? 'col-sm-12' : 'col-sm-6';
-	const iframeSrc = _relativeURL( `/${ _ID }/${ example }/`, _ID );
+const CodeDemo = ({ headline, iframe, iframeFullwidth, height = null, code, _body, _ID, _relativeURL }) => {
+	const codeExampleClass = iframeFullwidth ? 'col-sm-12' : 'col-sm-6';
+	const iframeSrc = _relativeURL( `/${ _ID }/${ iframe }/`, _ID );
 
 	return (
 		<div className="code-demo">
