@@ -1,6 +1,7 @@
 ---
 layout: component/code-demo
-example: examples/example-success
+iframe: examples/example-success
+iframeFullwidth: true
 headline: Success
 code:
   - HTML: |
