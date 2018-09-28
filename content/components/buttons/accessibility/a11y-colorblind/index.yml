@@ -4,3 +4,4 @@ examples:
   - template: ../example-dark.md
     style: dark
 filter: deuteranopia
+alignment: inline

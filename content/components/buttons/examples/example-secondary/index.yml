@@ -1,5 +1,5 @@
 layout: example/page
-alignment: center
+alignContent: center
 examples:
   - template: example-code.md
   - template: example-dark.md
