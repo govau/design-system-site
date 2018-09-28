@@ -1,6 +1,7 @@
 ---
 layout: component/code-demo
-example: examples/example-block
+iframe: examples/example-block
+iframeFullwidth: true
 headline: Block text inputs
 code:
   - HTML: |
