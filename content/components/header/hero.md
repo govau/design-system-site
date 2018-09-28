@@ -1,7 +1,7 @@
 ---
 layout: component/code-demo
-example: examples/example-hero
-exampleFullwidth: true
+iframe: examples/example-hero
+iframeFullwidth: true
 headline: Hero
 code:
   - HTML: |

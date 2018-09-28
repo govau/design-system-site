@@ -1,4 +1,8 @@
-layout: live/page
+layout: example/page
 pagetitle: Header live demo
-example: ../accessibility/code.md
+examples:
+  - template: ../accessibility/example-code.md
+  - template: ../accessibility/example-dark.md
+    style: dark
 fullwidth: true
+livedemo: true
