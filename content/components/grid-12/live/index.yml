@@ -1,4 +1,6 @@
-layout: live/page
+layout: example/page
 pagetitle: Grid 12 live demo
-example: code.md
-fullwidth: true
+examples:
+  - template: example-code.md
+exampleFullwidth: true
+livedemo: true
