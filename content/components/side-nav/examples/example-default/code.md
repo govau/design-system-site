@@ -4,7 +4,6 @@
     aria-controls="nav-default"
     aria-expanded="false" 
     aria-selected="false" 
-    role="tab" 
     onclick="return AU.accordion.Toggle( this )"
   >
     In this section
