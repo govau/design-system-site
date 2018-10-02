@@ -1,37 +1,31 @@
-import { SETTINGS } from 'cuttlebelle/dist/settings';
-import Code from '../code';
+import CodeSnippet from '../code-snippet';
 
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Slugify from 'slugify';
-import Path from 'path';
-import Fs from 'fs';
 
 
 
 /**
  * The codedemo component
  */
-const CodeDemo = ({ headline, example, exampleFullwidth, height = null, iframe, code, _body, _ID, _parseMD, _relativeURL }) => {
-	const pathToCode = Path.normalize(`${ SETTINGS.get().folder.content }/${ _ID }/${ example }/code.md`);
-	const exampleCode = Fs.readFileSync( pathToCode, 'utf8' );
-	const CodeExampleClass = exampleFullwidth
-		? 'col-sm-12'
-		: 'col-sm-6';
+const CodeDemo = ({ headline, iframe, iframeFullwidth, height = null, code, _body, _ID, _relativeURL }) => {
+	const codeExampleClass = iframeFullwidth ? 'col-sm-12' : 'col-sm-6';
+	const iframeSrc = _relativeURL( `/${ _ID }/${ iframe }/`, _ID );
 
 	return (
 		<div className="code-demo">
 			<div className="row" id={ Slugify( headline ).toLowerCase() }>
 				<a className="code-demo__anchor" href={`#${ Slugify( headline ).toLowerCase() }`}>#</a>
 
-					<div className={`code-demo__text ${CodeExampleClass}` }>
+					<div className={`code-demo__text ${ codeExampleClass }` }>
 						<h2 className="code-demo__headline">
 							{ headline }
 						</h2>
 						{ _body }
 					</div>
 
-					<div className={`code-demo__example-wrapper ${CodeExampleClass}` }>
+					<div className={`code-demo__example-wrapper ${ codeExampleClass }` }>
 						<div className="code-demo__example">
 							<h2 className='code-demo__example-title'>Example</h2>
 							<iframe
@@ -39,9 +33,7 @@ const CodeDemo = ({ headline, example, exampleFullwidth, height = null, iframe, 
 								height={ height }
 								className={ `code-demo__example__iframe ${ height === null ? 'code-demo__example__iframe--resize' : '' }` }
 								scrolling="no"
-								src={ iframe ? _relativeURL( `/${ _ID }/${ iframe }/`, _ID ) : _relativeURL( `/${ _ID }/${ example }/`, _ID ) }>
-									{ exampleCode }
-							</iframe>
+								src={ iframeSrc }></iframe>
 						</div>
 					</div>
 
@@ -80,13 +72,13 @@ const CodeDemo = ({ headline, example, exampleFullwidth, height = null, iframe, 
 														role="tabpanel"
 														id={ `${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }-${ Slugify( headline ).toLowerCase() }` }
 													>
-														<Code language={
+														<CodeSnippet language={
 															Object.keys( section )[ 0 ] === 'HTML' ? 'html' : '' +
 															Object.keys( section )[ 0 ] === 'SCSS' ? 'scss' : '' +
 															Object.keys( section )[ 0 ] === 'React' ? 'jsx' : ''
 														}>
 															{ section[ Object.keys( section )] }
-														</Code>
+														</CodeSnippet>
 													</div>
 												))
 											}
@@ -113,9 +105,9 @@ CodeDemo.propTypes = {
 	headline: PropTypes.string.isRequired,
 
 	/**
-	 * example: primary
+	 * iframe: primary
 	 */
-	example: PropTypes.string.isRequired,
+	iframe: PropTypes.string.isRequired,
 
 	/**
 	 * code:

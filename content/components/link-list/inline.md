@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-example: examples/example-inline
+iframe: examples/example-inline
 headline: Inline
 code:
   - HTML: |

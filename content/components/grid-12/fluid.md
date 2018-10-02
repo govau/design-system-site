@@ -1,7 +1,7 @@
 ---
 layout: component/code-demo
-example: examples/example-fluid
-exampleFullwidth: true
+iframe: examples/example-fluid
+iframeFullwidth: true
 headline: Fluid
 code:
   - HTML: |

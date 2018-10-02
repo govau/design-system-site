@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-example: examples/example-secondary
+iframe: examples/example-secondary
 headline: Secondary
 code:
   - HTML: |

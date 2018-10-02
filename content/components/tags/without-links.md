@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-example: examples/example-nolink
+iframe: examples/example-nolink
 headline: Tags without links
 code:
   - HTML: |

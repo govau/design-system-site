@@ -1,6 +1,7 @@
 ---
 layout: component/code-demo
-example: examples/example-error
+iframe: examples/example-error
+iframeFullwidth: true
 headline: Error
 code:
   - HTML: |

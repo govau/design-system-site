@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-example: examples/example-block
+iframe: examples/example-block
 headline: Block
 code:
   - HTML: |

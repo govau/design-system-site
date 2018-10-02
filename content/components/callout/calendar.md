@@ -1,6 +1,7 @@
 ---
 layout: component/code-demo
-example: examples/example-calendar
+iframe: examples/example-calendar
+iframeFullwidth: true
 headline: Calendar
 code:
   - HTML: |
