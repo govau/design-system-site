@@ -1,53 +1,88 @@
----
----
-The design system will generate a colour palette based on the colours you input. Creating a new palette within your project is straight forward. All the colours needed for the design system are generated from four SASS variables:
+The Design System generates an accessible colour palette based on the colours you choose. All default colours are generated from four SASS variables:
 
-- Use `$AU-color-background` for setting the primary colour of your project e.g. background colour of the header, background colour of a menu.
-- Use `$AU-color-foreground-action` for setting the action colour of your project e.g. button colour, link on a dark background.
-- Use `$AU-color-foreground-focus` for setting the highlight colour of your project e.g. button colour.
--       Use `$AU-color-foreground-text ` for setting the text colour of your project e.g. text colour for the whole project.
+- `$AU-color-background` the default background colour for header and menu
+- `$AU-color-foreground-action` interactive element colours for buttons, links and calls to action
+- `$AU-color-foreground-focus` focus outline colour for interactive elements
+- `$AU-color-foreground-text ` the text colour
 
-Thes same list of variables exist for dark variants of components. See below the full list of user set variables.
+This will generate a pallete consisting of nine colours:
 
+- Four background colors: `$AU-color-background`, `$AU-color-background-shade`,  `$AU-color-background-alt`, `$AU-color-background-alt-shade`, 
+- Five foreground colors:`$AU-color-foreground-action`, `$AU-color-foreground-focus`, `$AU-color-foreground-text`, `$AU-color-foreground-muted`, `$AU-color-foreground-border`
+
+These nine variables also have dark variations that can be accessed by replacing `color` with `colordark` e.g. `AU-colordark-background`.
+
+
+## How the pallette is made
+
+The first step is to choose your four colours for `background`, `action`, `focus` and `text`. These colours are then ran through functions that create an accessible colour pallette. 
+
+The functions create three darker shades for the `background` colour. They also blend the text colour and background colour together, creating a border and muted text colour. After these colours are created we run a test to make sure that all the foreground colours pass colour contrast on the background colours. If they do not pass, the closest accessible colour is used in the pallette.
+
+This process gives you a pallette of five foreground colours and four background colours that are WCAG AA 2.1 compliant.
+
+
+## Add your colours
+
+The first step is to choose your own colours for the `background`, `action`, `focus` and `text`. Once chosen you need to override the colours throughout the system. This requires installing the components, adding some custom code and compiling the `sass` into `css`.
+
+If you have not set up your project already you can read the guides on the [getting started page](get-started). Once set up and you have components installed you should have an automatically generated `pancake.scss` file.
+
+### Adding the components sass file
+
+It is recommended to ignore the generated `pancake.scss` file and import it into a `main.scss` file. You can import the `pancake.scss` in the `main.scss` file like so:
+```scss
+@import "./pancake.scss";
 ```
-// Light colour palette
-$AU-color-foreground-action
-$AU-color-foreground-focus
-$AU-color-foreground-text
-$AU-color-background
+
+### Override the colours
+
+Any sass variable that ends with `!default` can be changed.
+
+When you change a color variable above the import of `pancake.scss` it flows through all of the components in the design system. In this `main.scss` example we have changed the dark colour scheme above the import of the design system:
+```scss
+// Dark colour theme changes
+$AU-colordark-foreground-text:   #ffffff;
+$AU-colordark-foreground-action: #f9f9f9;
+$AU-colordark-foreground-focus:  #13e241;
+$AU-colordark-background:        #134169;
+
+// Import the design system components
+@import "./pancake.scss";
+
+// Additional customisation not related to components
+body {
+  margin: 0;
+  padding: 0;
+}
 ```
 
-and the four dark variables if you want to use the dark variant of components:
+### Compile SASS to CSS
 
+We recommend looking into the create a [development environment page](/get-started/development-environment) this goes into detail on how to create a pipeline for compiling sass to css.
+
+To compile sass into css you need to install the npm package [node-sass](https://www.npmjs.com/package/node-sass). Once installed you can create a script to compile sass into css or run a command in terminal.
+
+Go to your project folder in terminal:
 ```
-// Dark colour palette
-$AU-colordark-foreground-action
-$AU-colordark-foreground-focus
-$AU-colordark-foreground-text
-$AU-colordark-background
+cd /Users/myUserName/Documents/myProject
+``` 
+
+Install `node-sass`:
+```
+npm install node-sass
 ```
 
-All colour schemes generated are WCAG AA 2.1 compliant and accessible to all types of colour blindness.
-
-To change the palette add the colour variables to your `main.scss` file. Assign your own colour for each variable in any legal CSS colour format you choose:
-
-
+You can then create a script in the `package.json` file that runs node-sass or run the following in the command line:
 ```
-// main.scss file
-$AU-color-foreground-action: #0000ff;
-$AU-color-foreground-focus: red;
-$AU-color-foreground-text: rgba(122, 200, 147, 0.75);
-$AU-color-background: hsl(120, 100%, 50%);
+node-sass assets/sass/main.scss /docs/css/main.css
 ```
-### Compiling your SCSS to CSS
-If you are using the [uikit-starter](https://github.com/govau/uikit-starter) then follow the steps to download the project.
 
-Open the terminal and use the `cd` command to move into the root of your project:
-`cd /Users/myUserName/Documents/myProject`
+> This script may change depending on where your sass files are located
 
-In the root of your project run the compile and watch command:
-`npm run watch`
+If you are using the uikit starter you can run:
+```
+npm run watch
+```
 
-The script opens a browser-sync window where you will see the index page. The colour palette has been generated and changes all the colours of the projects components based on the variables values.
-
-Changing any of the variable values and saving the `main.scss` file will automatically generate a new colour scheme and reload the browser with the updated styling.
+This will open a browser that will automatically refresh when changes are made. Changing any of the variable values and saving the `main.scss` file will automatically generate a new colour scheme and reload the browser with the updated styling.
