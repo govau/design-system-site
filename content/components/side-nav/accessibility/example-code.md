@@ -1,10 +1,9 @@
 <aside class="au-side-nav au-accordion" aria-label="side navigation">
   <a 
-    href="#nav-default" class="au-side-nav__toggle au-accordion__title au-accordion--closed" 
+    href="#nav-default" class="au-side-nav__toggle au-accordion__title au-accordion--closed"
     aria-controls="nav-default"
-    aria-expanded="false" 
-    aria-selected="false" 
-    role="tab" 
+    aria-expanded="false"
+    aria-selected="false"
     onclick="return AU.accordion.Toggle( this )"
   >
     In this section

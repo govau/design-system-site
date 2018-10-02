@@ -17,7 +17,6 @@ const HeaderGovAU = ({ publisher, publisher_url, left_title, left_content, right
 						aria-controls="headergovau-accordion"
 						aria-expanded="false"
 						aria-selected="false"
-						role="tab"
 						onClick="return AU.accordion.Toggle( this )"
 					>
 						<span className="headergovau__text">
