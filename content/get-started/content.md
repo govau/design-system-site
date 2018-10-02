@@ -7,13 +7,14 @@ The four main ways of getting started with the Design System include:
 - [npm install the components](get-started/npm-install)
 - [Download page to install the components](get-started/download-page)
 - [Design system starter kit](get-started/starter-kit)
-- [Design assets in sketch](get-started/design-assets)
+<!-- - [Design assets in sketch](get-started/design-assets) -->
 
 Once you have the components in a website we have advanced guides for developers on how to:
 
 - [Customise the colour scheme](get-started/customise-color)
 - [Customise existing components](get-started/customise-components)
 - [Create new components](get-started/create-components)
+- [How to use the font size and space functions](get-started/font-size-space)
 - [Set up a development environment](get-started/development-environment)
 
 Throughout the process you may notice issues, missing features or have ideas for new components. If you would like to contribute or help build the future of the Australian Government Design System you can:
