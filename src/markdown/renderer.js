@@ -126,10 +126,10 @@ module.exports = exports = function renderer({ Marked, _ID, _relativeURL }) {
 	Marked.code = ( code, language ) => {
 		const encodedCode = EncodeCode(code);
 		if( !language ) {
-			return `<div class="codebox">\n<pre>\n<code>${ encodedCode }</code>\n</pre>\n</div>`;
+			return `<div class="codebox"><pre><code>${ encodedCode }</code></pre></div>`;
 		}
 
-		return `<div class="codebox">\n<pre class="language-${ language }">\n<code>${ encodedCode }</code>\n</pre>\n</div>`;
+		return `<div class="codebox"><pre class="language-${ language }"><code>${ encodedCode }</code></pre></div>`;
 	}
 
 
