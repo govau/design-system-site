@@ -18,7 +18,8 @@ pre[class*="language-"] {
 }
 
 /* Code blocks */
-pre code {
+.au-body pre code {
+	@include AU-space( padding, 1unit 4.5unit 1unit 1unit );
 	overflow: auto;
 }
 
@@ -33,10 +34,6 @@ pre code {
 .token.cdata {
 	color: slategray;
 }
-
-// .token.punctuation {
-// 	color: #999;
-// }
 
 .namespace {
 	opacity: .7;
