@@ -134,5 +134,17 @@ module.exports = exports = function renderer({ Marked, _ID, _relativeURL }) {
 	}
 
 
+	/**
+	 * Blockquote overwrite
+	 *
+	 * @param {string} quote  - The text inside the quote
+	 *
+	 * @return {string}       - The blockquote element
+	 */
+	Marked.blockquote = ( quote ) => {
+		return `<blockquote class="au-callout">${ quote }</blockquote>`;
+	}
+
+
 	return Marked;
 };
