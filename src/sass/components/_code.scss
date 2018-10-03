@@ -110,7 +110,7 @@ pre[class*="language-"] {
 
 	.btn-copy {
 		@include AU-fontgrid( xs );
-		@include AU-space( top, 1unit );
+		@include AU-space( top, 0.5unit );
 		@include AU-space( right, 0.75unit );
 		position: absolute;
 		border: 0;
@@ -125,4 +125,11 @@ pre[class*="language-"] {
 
 * + .codebox {
 	@include AU-space( margin-top, 1unit );
+}
+
+// custom inline code
+.au-body {
+	code {
+		@include AU-space( padding, 0.1unit 0.25unit );
+	}
 }
