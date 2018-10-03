@@ -1,14 +1,20 @@
 ---
-layout: content/text-with-cta
+layout: intro
+imgurl: assets/img/artwork-community-2.png
+imgalt: designers and developers working together illustration
 button:
   link: https://community.digital.gov.au/c/designsystem
-  text: Visit the forums
+  text: Join our community
   type: secondary
   icon: community
 ---
 
-**Collaborate** on developing up great solutions to common design problems
+*Together we‘ll be able to build products and services better, faster and easier.*
 
-**Share** your hard work, insights and learnings with others
+Join in the community today. This is a great chance for you to:
 
-**Get help** with your own design and development challenges
+- **collaborate** on developing up great solutions to common design problems
+
+- **share** your hard work, insights and learnings with others
+
+- **get help** with your own design and development challenges

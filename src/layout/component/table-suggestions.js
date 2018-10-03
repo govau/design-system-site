@@ -1,5 +1,5 @@
 import AUbutton            from '../../_uikit/layout/buttons';
-import GetData             from './../getData';
+import GetData             from './../../helper/getData';
 import Table               from './../table';
 import ContributorStatus   from './contributor-status';
 

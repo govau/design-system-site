@@ -35,7 +35,6 @@
 		&.active > a {
 			color: $AU-color-foreground-action;
 			border-color: $AU-color-foreground-action;
-			font-weight: bold;
 
 			&:hover {
 				text-decoration: none;
@@ -78,10 +77,6 @@
 					&:focus {
 						position: relative; // fix outline overlap
 					}
-				}
-
-				&.active > a {
-					font-weight: normal;
 				}
 			}
 		}

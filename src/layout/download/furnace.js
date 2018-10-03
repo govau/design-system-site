@@ -1,6 +1,6 @@
-import { AUcheckbox, AUradio } from '../../_uikit/layout/control-input';
-import GetData from './../getData';
-import Code from './../code';
+import { AUradio } from '../../_uikit/layout/control-input';
+import GetData from './../../helper/getData';
+import CodeSnippet from './../code-snippet';
 
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
@@ -70,7 +70,7 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 														className="au-control-input__input js-furnace-selector"
 														value={ MODULES[ module ].ID }
 														required={ MODULES[ module ].required }
-														checked={ MODULES[ module ].required }
+														defaultChecked={ MODULES[ module ].required }
 														disabled={ MODULES[ module ].required }
 														readOnly={ MODULES[ module ].required }
 													/>
@@ -140,7 +140,7 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 
 					<div className="furnace-npm">
 						<h4>npm</h4>
-						<Code aria-live="polite" className="js-furnace-code">npm install --save @gov.au/core</Code>
+						<CodeSnippet aria-live="polite" className="js-furnace-code">npm install --save @gov.au/core</CodeSnippet>
 					</div>
 
 				</div>

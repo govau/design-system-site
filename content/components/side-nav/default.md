@@ -1,8 +1,8 @@
 ---
 layout: component/code-demo
-example: examples/example-default
+iframe: examples/example-default
 headline: Default
-exampleFullwidth: true
+iframeFullwidth: true
 code:
   - HTML: |
       <!--
@@ -19,7 +19,6 @@ code:
           aria-controls="nav-default"
           aria-expanded="false" 
           aria-selected="false" 
-          role="tab" 
           onclick="return AU.accordion.Toggle( this )"
         >
           In this section
@@ -91,7 +90,7 @@ code:
       />
 ---
 
-The side navigation allows users users to find other pages which share a similar topic or section. By default it supports three levels of nesting along with an accompanying heading.
+The side navigation allows users to find other pages which share a similar topic or section. By default it supports three levels of nesting along with an accompanying heading.
 
 On mobile and smaller viewports, the side navigation uses functionality from the accordion component to collapse down to an expandable element.
 

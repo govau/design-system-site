@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-example: examples/example-content-management
+iframe: examples/example-content-management
 headline: Content management
 code:
   - HTML: |

@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-example: examples/example-type
+iframe: examples/example-type
 headline: Basic Typography
 code:
   - HTML: |

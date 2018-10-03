@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-example: examples/example-textarea
+iframe: examples/example-textarea
 headline: Text area
 code:
   - HTML: |

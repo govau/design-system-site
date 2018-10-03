@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-example: examples/example-color
+iframe: examples/example-color
 headline: Color
 code:
   - SCSS: |

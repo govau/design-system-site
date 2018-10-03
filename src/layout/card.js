@@ -23,20 +23,21 @@ import PropTypes from 'prop-types';
  * @param  {string}  href             - We add the href so it isn't added to the attributeOptions
  * @param  {object}  attributeOptions - All of the other properties that can be added
  */
-const AUcardHeading = ({ text, headingSize, fullwidth, link, href, ...attributesOptions = {} }) => {
-
+const AUcardHeading = ({ text, headingSize, fullwidth, link, href, className = '', ...attributesOptions }) => {
 	const HeadingContainer = `h${ headingSize }`;
 
 	if( link ) {
 		return (
-			<HeadingContainer className={ `au-card__title${ fullwidth ? ' au-card__fullwidth' : '' }` }>
+			<HeadingContainer className={
+				`au-card__title${ fullwidth ? ' au-card__fullwidth' : '' } ${ className }`
+			} { ...attributesOptions }>
 				<a href={ link } >{ text }</a>
 			</HeadingContainer>
 		)
 	}
 
 	return(
-		<HeadingContainer className={ `au-card__title${ fullwidth ? ' au-card__fullwidth' : '' }` }>
+		<HeadingContainer className={ `au-card__title${ fullwidth ? ' au-card__fullwidth' : '' } ${ className }` } { ...attributesOptions }>
 			{ text }
 		</HeadingContainer>
 	);
@@ -47,6 +48,7 @@ AUcardHeading.propTypes = {
 	headingSize: PropTypes.oneOf([ '1', '2', '3', '4', '5', '6' ]).isRequired,
 	fullwidth: PropTypes.bool,
 	link: PropTypes.string,
+	className: PropTypes.string,
 };
 
 AUcardHeading.defaultProps = {

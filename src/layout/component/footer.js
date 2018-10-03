@@ -1,6 +1,7 @@
-import GetModule from './../getModule';
+import GetModule from './../../helper/getModule';
+import GetData from './../../helper/getData';
+
 import PropTypes from 'prop-types';
-import GetData from './../getData';
 import React from 'react';
 
 

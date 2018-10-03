@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-example: examples/example-tertiary
+iframe: examples/example-tertiary
 headline: Tertiary
 code:
   - HTML: |

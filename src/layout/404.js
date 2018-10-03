@@ -64,17 +64,16 @@ const Page = ({
 			{ header }
 			<div className="page-wrapper">
 				<div className="content-wrapper">
-					<main tabIndex="-1" id="content" className="main au-body container-fluid">
-						<div className="row">
-							<div className="col-md-12">
-								<h1 className={
-									_ID === 'index' || _ID === '404'
-										? 'sronly'
-										: '' }>{ pagetitle }</h1>
-								{ main }
+					<div className="tier">
+						<main tabIndex="-1" id="content" className="au-body container-fluid">
+							<div className="row">
+								<div className="col-md-12">
+									<h1 className={ _ID === '404' ? 'sronly' : '' }>{ pagetitle }</h1>
+									{ main }
+								</div>
 							</div>
-						</div>
-					</main>
+						</main>
+					</div>
 				</div>
 				{ footer }
 			</div>

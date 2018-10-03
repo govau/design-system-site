@@ -8,7 +8,6 @@
 		@include AU-space( border-top, 0.25unit solid $AU-color-background-alt );
 		@include AU-space( padding-top, 2unit );
 		color: $AU-color-foreground-muted;
-		font-weight: normal;
 
 		@include AU-media( md ) {
 			@include AU-space( border-bottom, 0.25unit solid $AU-color-background-alt );

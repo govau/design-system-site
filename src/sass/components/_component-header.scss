@@ -4,16 +4,12 @@
 	position: relative;
 
 	.componentheader__heading {
-		font-weight: normal;
 		@include AU-fontgrid( xxxl, nospace );
 		margin-top: 0;
 	}
 
 	.componentheader__body {
 		@include AU-space( margin-top, 2unit );
-	}
-
-	.abstract {
 		@include AU-fontgrid( md );
 	}
 }

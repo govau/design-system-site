@@ -1,5 +1,6 @@
 import AUcardList          from '../card-list';
-import GetData             from './../getData';
+import GetData             from './../../helper/getData';
+
 import React, { Fragment } from 'react';
 import PropTypes           from 'prop-types';
 
@@ -14,8 +15,7 @@ const ComponentReleased = ({ cardList, _ID, _body, _parseYaml, _relativeURL }) =
 		yaml: _parseYaml,
 	});
 
-	const cards = [];
-	components.map( component => {
+	const cards = components.map( component => {
 
 		const cardData = {
 			link: _relativeURL( `/components/${ component.ID }`, _ID ),
@@ -40,7 +40,7 @@ const ComponentReleased = ({ cardList, _ID, _body, _parseYaml, _relativeURL }) =
 			})
 		}
 
-		cards.push(cardData);
+		return cardData;
 	})
 
 	return(

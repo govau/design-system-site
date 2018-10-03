@@ -1,10 +1,10 @@
 ---
 layout: component/code-demo
-example: examples/example-spacing
+iframe: examples/example-spacing
 headline: Spacing
 code:
   - SCSS: |
-      // SCSS Example:
+      // SCSS iframe:
 
       @include AU-space( padding, 1unit );
 

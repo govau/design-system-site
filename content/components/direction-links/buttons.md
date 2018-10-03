@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-example: examples/example-buttons
+iframe: examples/example-buttons
 headline: Buttons
 code:
   - HTML: |

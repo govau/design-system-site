@@ -1,6 +1,7 @@
 ---
 layout: component/code-demo
-example: examples/example-warning
+iframe: examples/example-warning
+iframeFullwidth: true
 headline: Warning
 code:
   - HTML: |

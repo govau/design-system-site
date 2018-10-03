@@ -1,6 +1,7 @@
 ---
 layout: component/code-demo
-example: examples/example-default
+examples: 
+  - template: examples/example-default
 headline: Default
 code:
   - HTML: |

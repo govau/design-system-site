@@ -69,7 +69,6 @@ $color-status--suggestion-gradient-end:   $AU-color-background-alt-shade;
 		@include AU-space( padding-bottom, 1unit );
 		position: relative;
 		display: block;
-		font-weight: bold;
 		color: $color-status--published-text;
 
 		&:after {

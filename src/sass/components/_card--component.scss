@@ -26,7 +26,6 @@
 
 	.card__title {
 		@include AU-fontgrid( sm, nospace );
-		font-weight: normal;
 	}
 
 	.card__version {

@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-example: examples/example-typography
+iframe: examples/example-typography
 headline: Typography
 code:
   - SCSS: |

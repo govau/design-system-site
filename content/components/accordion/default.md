@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-example: examples/example-default
+iframe: examples/example-default
 headline: Default
 code:
   - HTML: |
@@ -14,7 +14,7 @@ code:
       -->
 
       <section class="au-accordion">
-        <a href="#accordion-default" class="au-accordion__title js-au-accordion" aria-controls="accordion-default" aria-expanded="true" aria-selected="true" role="tab" onclick="return AU.accordion.Toggle( this )">
+        <a href="#accordion-default" class="au-accordion__title js-au-accordion" aria-controls="accordion-default" aria-expanded="true" aria-selected="true" onclick="return AU.accordion.Toggle( this )">
           Accordion title
         </a>
 

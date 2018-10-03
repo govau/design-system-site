@@ -1,8 +1,8 @@
 ---
 layout: component/code-demo
-example: examples/example-offset
+iframe: examples/example-offset
+iframeFullwidth: true
 headline: Offset
-exampleFullwidth: true
 code:
   - HTML: |
       <main class="au-grid">
