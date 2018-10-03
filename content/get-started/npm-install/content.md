@@ -20,7 +20,7 @@ If you would like more control of the creation of the file you can run `npm init
 
 Once this is done the folder should now look like:
 
-```
+```nocopy
 design-system-starter/
 └─ package.json
 ```
@@ -56,7 +56,7 @@ npm install --save @gov.au/body @gov.au/header @gov.au/accordion
 > View the [full list of components](https://designsystem.gov.au/components)
 
 Now that the components have been installed your folder should look like:
-```
+```nocopy
 design-system-starter
 ├─ package-lock.json
 ├─ package.json

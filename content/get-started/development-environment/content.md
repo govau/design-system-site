@@ -9,7 +9,7 @@ We need to set up our directory so that we have a clear pipeline for development
 Create a `docs/` folder. This will hold a deployable version of the website. Lets move our current `index.html` or [create a new `index.html`](/get-started/npm-install#4-create-page) in the `docs` folder.
 
 We also are going to change the [Pancake](https://github.com/govau/pancake) settings in the `package.json` file to better suit our project structure. Lets change the location and file name for the sass and javascript files.
-```
+```json
 "sass": {
   "modules": false,
   "location": "src/sass/",
@@ -26,7 +26,7 @@ We also are going to change the [Pancake](https://github.com/govau/pancake) sett
 > When you make changes to the settings of pancake you need to run pancake again. This can be done by running `npm install` or by running `node node_modules/.bin/pancake`
 
 The final result should look like:
-```
+```nocopy
 design-system-starter/
 ├─ node_modules/
 └─ docs/
@@ -49,7 +49,7 @@ Now that we are set up we can install additional packages:
 - [postcss-cli](https://www.npmjs.com/package/postcss-cli), libray for transforming styles, used by autoprefixer
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer), adds [vendor prefixes](https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix) to the CSS file automatically
 
-```
+```bash
 npm install browser-sync node-sass on-change postcss-cli autoprefixer
 ```
 
@@ -66,7 +66,7 @@ We need to create npm scripts that do the following tasks:
 - `watch:sass`: watch the sass directory for changes and compile sass to css when it does
 
 To do this we edit the `scripts` in the `package.json` file:
-```
+```json
 "scripts": {
   "build": "build:css && npm run build:autoprefix",
   "build:autoprefix": "postcss docs/css/main.css -u autoprefixer -r -m",

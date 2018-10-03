@@ -64,24 +64,24 @@ We recommend looking into the create a [development environment page](/get-start
 To compile sass into css you need to install the npm package [node-sass](https://www.npmjs.com/package/node-sass). Once installed you can create a script to compile sass into css or run a command in terminal.
 
 Go to your project folder in terminal:
-```
+```bash
 cd /Users/myUserName/Documents/myProject
 ``` 
 
 Install `node-sass`:
-```
+```bash
 npm install node-sass
 ```
 
 You can then create a script in the `package.json` file that runs node-sass or run the following in the command line:
-```
+```bash
 node-sass assets/sass/main.scss /docs/css/main.css
 ```
 
 > This script may change depending on where your sass files are located
 
 If you are using the uikit starter you can run:
-```
+```bash
 npm run watch
 ```
 
