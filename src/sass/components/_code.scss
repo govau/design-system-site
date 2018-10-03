@@ -19,7 +19,6 @@ pre[class*="language-"] {
 
 /* Code blocks */
 .au-body pre code {
-	@include AU-space( padding, 1unit 4.5unit 1unit 1unit );
 	overflow: auto;
 }
 
@@ -99,6 +98,7 @@ pre[class*="language-"] {
 // Custom styles for codebox
 .furnace code[class*="language-"] {
 	white-space: pre-wrap;
+	@include AU-space( padding, 1unit 4.5unit 1unit 1unit );
 }
 
 .codebox {
