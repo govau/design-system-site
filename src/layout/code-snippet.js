@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
  */
 const CodeSnippet = ({ language, nocopy, children, className, ...attributeOptions }) => (
 	<div className="codebox">
-		<pre className={ `language-${ language }${ nocopy ? ' js-nocopy' : '' } ${ className ? className : '' }` }>
+		<pre className={ `language-${ language }${ nocopy ? ' language-nocopy' : '' } ${ className ? className : '' }` }>
 			<code className={ `language-${ language }` } { ...attributeOptions } >
 				{ children }
 			</code>

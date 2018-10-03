@@ -6,7 +6,7 @@ Select the components you wish to use and press download.
 
 If you wish to download the CSS and JS for each component in a single, bundled file, select the "CSS minified" and "JavaScript minified" radio buttons. We use a tool called [furnace](https://github.com/govau/furnace) to which builds zip files based on each selected component and options that are selected. The below folder will be downloaded onto your computer. 
 
-```
+```nocopy
 AU-DesignSystem/
   package.json
   css/
@@ -17,7 +17,7 @@ AU-DesignSystem/
 
 Copy the CSS and JS files into your project directory, and add an index.html file.
 
-```
+```nocopy
 /example-project
     docs/
         css/
