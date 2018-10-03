@@ -110,6 +110,9 @@ accordion:
     - name: Nathan Davison
       img: nathan-davison.jpg
       url: 'https://github.com/ndavison'
+    - name: Raj Ghuman
+      img: raj-ghuman.jpg
+      url: 'https://github.com/sukhrajghuman'
   state: published
   order: 10
   discussions:
