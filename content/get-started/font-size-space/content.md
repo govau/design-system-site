@@ -26,20 +26,20 @@ These are the values that are applied to the above CSS property. It is recommend
 The following SASS code:
 
 ```scss
-  @import "uikit.scss";
+@import "uikit.scss";
 
-  header {
-    @include AU-space( padding, 1unit 0 0 40% )
-  }
+header {
+  @include AU-space( padding, 1unit 0 0 40% )
+}
 ```
 
 will render the following css:
 
 ```css
-  header {
-    padding: 16px 0 0 40%;
-    padding: 1rem 0 0 40%;
-  }
+header {
+  padding: 16px 0 0 40%;
+  padding: 1rem 0 0 40%;
+}
 ```
 
 You might notice that the `padding` is repeated twice, in both the `rem` and `px` units. The reason for this is that Internet Explorer 8, by default, does not support the `rem` unit.
@@ -108,7 +108,7 @@ p {
 
 renders the following CSS (notice how the line height is adjusted from 1.25 to 1.3):
 
-```css
+```scss
 p {
   font-size: 40px;
   font-size: 2.5rem;
@@ -129,14 +129,14 @@ This gives a total element height of `40px` * 1.3 = `52px`.
 The grid-size is customisable by altering the `$AU-unit` variable. If for example this value is changed to 7, the new typography will snap to a 7 pixel grid.
 
 ```scss
-  //change the default grid size
-  $AU-unit: 7;
+//change the default grid size
+$AU-unit: 7;
 
-  @import "uikit.scss";
+@import "uikit.scss";
 
-  p {
-    @include AU-fontgrid( xxl, heading );
-  }
+p {
+  @include AU-fontgrid( xxl, heading );
+}
 ```
 
 renders the following CSS:
