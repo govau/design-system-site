@@ -41,18 +41,24 @@ AddEvent( copyButtons, 'click', function( event, $this ) {
 		'page': document.getElementsByTagName( "title" )[ 0 ].innerHTML.split(' - ')[ 0 ],
 	}
 
-	// If we are on the component overview page add extra analytics
-	if ( analytics.page !== 'Download' && analytics.page.indexOf( 'code' ) !== analytics.page.length - 4 ) {
-		analytics[ 'component' ] = document.getElementsByClassName( "componentheader__heading" )[ 0 ].innerHTML;
-		analytics[ 'version' ]   = document.getElementsByClassName( "componentheader__version" )[ 0 ].innerHTML;
-		analytics[ 'language' ]  = $this.parentNode.parentNode.parentNode.id.split( '-' )[ 0 ];
-		analytics[ 'variation' ] = $this.parentNode.parentNode.parentNode.id.split( '-' )[ 1 ];
+	var currentComponentPage = document.querySelector( '.is-components .content .navigation .active a' );
+
+	if( currentComponentPage !== null ){
+		// If we are on the component overview page add extra analytics
+		if ( currentComponentPage.innerHTML === 'Overview' ) {
+			analytics[ 'component' ] = document.getElementsByClassName( "componentheader__heading" )[ 0 ].innerHTML;
+			analytics[ 'version' ]   = document.getElementsByClassName( "componentheader__version" )[ 0 ].innerHTML;
+			analytics[ 'language' ]  = $this.parentNode.parentNode.parentNode.id.split( '-' )[ 0 ];
+			analytics[ 'variation' ] = $this.parentNode.parentNode.parentNode.id.split( '-' )[ 1 ];
+		}
+		// If we are on the component code page
+		else if( currentComponentPage.innerHTML === 'Code' ){
+			analytics[ 'component' ] = document.getElementsByClassName( "componentheader__heading" )[ 0 ].innerHTML;
+			analytics[ 'version' ]   = document.getElementsByClassName( "componentheader__version" )[ 0 ].innerHTML;
+			analytics[ 'section' ]   = $this.parentNode.parentNode.previousSibling.innerHTML;
+		}
 	}
-	else if( analytics.page.indexOf( 'code' ) === analytics.page.length - 4 ){
-		analytics[ 'component' ] = document.getElementsByClassName( "componentheader__heading" )[ 0 ].innerHTML;
-		analytics[ 'version' ]   = document.getElementsByClassName( "componentheader__version" )[ 0 ].innerHTML;
-		analytics[ 'section' ]   = $this.parentNode.parentNode.previousSibling.innerHTML;
-	}
+	// If we are on the download page
 	else if( analytics.page === 'Download' ){
 		var selectedItems = GetSelectedFormItems( 'furnace' );
 		analytics[ 'event' ]              = 'copynpm';
