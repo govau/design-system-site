@@ -10,7 +10,7 @@
   The <mark>mark</mark> element.<br>
   The <kbd>Keyboard Input</kbd> element.</p>
   <p>
-    <pre class="js-nocopy"><code>var i: Integer;
+    <pre class="language-nocopy"><code>var i: Integer;
     begin
       i := 1.1;
     end.</code></pre>
