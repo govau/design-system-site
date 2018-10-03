@@ -5,7 +5,7 @@ for( var i = 0; i < codeComponents.length; i++ ) {
 	if( HasClass( codeComponents[ i ], 'js-nocopy' ) === null ){
 		codeComponents[ i ].insertAdjacentHTML(
 			'beforeend',
-			'<button type="button" class="btn-copy au-btn icon icon--copy js-copy-btn">Copy</button>'
+			'<button type="button" class="btn-copy au-btn au-btn--tertiary icon icon--copy js-copy-btn">Copy</button>'
 		);
 	}
 }

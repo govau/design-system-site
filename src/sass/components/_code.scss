@@ -7,7 +7,6 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-	color: $AU-color-foreground-text;
 	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 	text-align: left;
 	white-space: pre;
@@ -21,19 +20,11 @@ pre[class*="language-"] {
 
 /* Code blocks */
 pre[class*="language-"] {
-	padding: 1em;
 	overflow: auto;
-}
-
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-	background: #f5f2f0;
 }
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-	padding: .1em;
-	border-radius: .3em;
 	white-space: normal;
 }
 
@@ -109,16 +100,7 @@ pre[class*="language-"] {
 }
 
 
-
-// Custom styles
-pre {
-	background: $AU-color-background-shade;
-
-	* + & {
-		@include AU-space( margin-top, 1unit );
-	}
-}
-
+// Custom styles for codebox
 .furnace code[class*="language-"] {
 	white-space: pre-wrap;
 }
@@ -127,20 +109,20 @@ pre {
 	position: relative;
 
 	.btn-copy {
-		@include AU-fontgrid( xs, nospace );
-		@include AU-space( top, -2unit );
-		@include AU-space( right, 0.5unit );
+		@include AU-fontgrid( xs );
+		@include AU-space( top, 1unit );
+		@include AU-space( right, 0.75unit );
+		position: absolute;
 		border: 0;
 		padding: 0;
-		background: transparent;
-		color: $AU-color-foreground-text;
-		position: absolute;
 
-		&:hover,
-		&:focus {
+		&.icon--success {
 			color: $AU-color-foreground-text;
-			background: transparent;
+			text-decoration: none;
 		}
 	}
 }
 
+* + .codebox {
+	@include AU-space( margin-top, 1unit );
+}
