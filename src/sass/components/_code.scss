@@ -110,7 +110,7 @@ pre[class*="language-"] {
 
 	.btn-copy {
 		@include AU-fontgrid( xs );
-		@include AU-space( top, 0.5unit );
+		@include AU-space( top, 1unit );
 		@include AU-space( right, 0.75unit );
 		position: absolute;
 		border: 0;
