@@ -129,7 +129,8 @@ module.exports = exports = function renderer({ Marked, _ID, _relativeURL }) {
 			return `<div class="codebox"><pre><code>${ encodedCode }</code></pre></div>`;
 		}
 
-		return `<div class="codebox"><pre class="language-${ language }"><code>${ encodedCode }</code></pre></div>`;
+		const languageClass = language === 'nocopy' ? 'js-nocopy' : `language-${ language }`;
+		return `<div class="codebox"><pre class="${ languageClass }"><code>${ encodedCode }</code></pre></div>`;
 	}
 
 
