@@ -18,7 +18,7 @@ pre[class*="language-"] {
 }
 
 /* Code blocks */
-pre[class*="language-"] {
+code {
 	overflow: auto;
 }
 
@@ -34,9 +34,9 @@ pre[class*="language-"] {
 	color: slategray;
 }
 
-.token.punctuation {
-	color: #999;
-}
+// .token.punctuation {
+// 	color: #999;
+// }
 
 .namespace {
 	opacity: .7;

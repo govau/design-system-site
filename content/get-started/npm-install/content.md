@@ -65,8 +65,7 @@ design-system-starter
   ├─ animate
   ├─ body
   ├─ core
-  ├─ header
-  └─ ...
+  └─ header
 └─ pancake
   ├─ css
   ├─ js
@@ -152,7 +151,7 @@ Here is an example HTML file to get started:
     <a href="#accordion-default" class="au-accordion__title js-au-accordion" aria-controls="accordion-default" aria-expanded="true" aria-selected="true" role="tab" onclick="return AU.accordion.Toggle( this )">Wuhuu design system</a>
     <div class="au-accordion__body" id="accordion-default">
       <div class="au-accordion__body-wrapper">
-        And it looks good 😉
+        And it looks good :)
       </div>
     </div>
   </section>
