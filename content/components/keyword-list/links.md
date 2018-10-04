@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-links
 iframeFullwidth: true
-headline: With links
 code:
   - HTML: |
       <!--
@@ -43,5 +42,6 @@ code:
         },
       ]} />
 ---
+## With links
 
 The keyword list also supports links which span both the key and value pair in the text.

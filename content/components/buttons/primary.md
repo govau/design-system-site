@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-default
-headline: Default
 code:
   - HTML: |
       <!--
@@ -24,6 +23,7 @@ code:
         Primary button
       </AUbutton>
 ---
+## Default
 
 A `strong` button style used for primary actions on a screen such as a `Submit` button on a form, or other actions that are critical in a user workflow. A
 primary button should be only used once per view.

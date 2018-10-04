@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import AnchorTitle from '../anchor-title';
+
 
 /**
  * The Rationale component
@@ -12,7 +14,7 @@ const Rationale = ({ heading, headinglevel, _body }) => {
 	return (
 		<div className="row headingLeft">
 			<div className="col-md-4">
-				<HeadingTag>{ heading }</HeadingTag>
+				<AnchorTitle heading={ heading } headinglevel={ 3 } />
 			</div>
 			<div className="col-md-8">{ _body }</div>
 		</div>

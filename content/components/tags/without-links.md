@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-nolink
-headline: Tags without links
 code:
   - HTML: |
       <!--
@@ -35,5 +34,6 @@ code:
         },
       ]} />
 ---
+## Tags without links
 
 A list of related tags without links.

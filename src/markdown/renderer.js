@@ -1,4 +1,6 @@
 // https://github.com/chjj/marked
+const Slugify = require( 'slugify' );
+
 
 module.exports = exports = function renderer({ Marked, _ID, _relativeURL }) {
 
@@ -39,7 +41,12 @@ module.exports = exports = function renderer({ Marked, _ID, _relativeURL }) {
 			display = Object.keys( headingLevels ).reverse()[ level ];
 		}
 
-		return `<h${ level }${ headingLevels[ display ] ? ` class="${ headingLevels[ display ] }"` : `` }>${ text }</h${ level }>`;
+
+		const displayClass = headingLevels[ display ] ? ` class="${ headingLevels[ display ] } anchor"` : '';
+		const slugifiedText = Slugify( text ).toLowerCase();
+		const anchor = `<a class="icon icon--link" aria-hidden="true" href="#${ slugifiedText }"></a>`;
+
+		return `<h${ level } id="${ slugifiedText }"${ displayClass }>${ anchor }${ text }</h${ level }>`;
 	};
 
 

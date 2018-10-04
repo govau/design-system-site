@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-multiple
-headline: Multiple
 code:
   - HTML: |
       <button aria-controls="animate-example-2" onclick="AU.animate.Run({
@@ -32,5 +31,6 @@ code:
       <!-- Make sure you include the uikit javascript file -->
       <script type="text/javascript" src="script.js"></script>
 ---
+## Multiple
 
 Toggle a property between two values across multiple items.

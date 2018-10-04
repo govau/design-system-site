@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-disabled
 iframeFullwidth: true
-headline: Disabled
 code:
   - HTML: |
       <!--
@@ -41,6 +40,6 @@ code:
         Disabled tertiary button
       </AUbutton>
 ---
+## Disabled
 
-A button that can’t be clicked and doesn’t react to hover. A disabled button is typically greyed out to indicate to users that they cannot undertake the action
-associated with it. This is usually for page logic reasons.
+A button that can’t be clicked and doesn’t react to hover. A disabled button is typically greyed out to indicate to users that they cannot undertake the action associated with it. This is usually for page logic reasons.

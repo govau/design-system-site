@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-spacing
-headline: Spacing
 code:
   - SCSS: |
       // SCSS iframe:
@@ -14,6 +13,7 @@ code:
       // padding: 1rem;
 
 ---
+## Spacing
 
 The consistent alignment of elements is paramount for good UI design. The design system provides functions in SCSS so that designers and developers can work together with predictable outcomes.
 

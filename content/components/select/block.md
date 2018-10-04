@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-block
-headline: Block
 code:
   - HTML: |
       <!--
@@ -43,5 +42,6 @@ code:
         },
       ]} />
 ---
+## Block
 
 Use an `.au-text-input--block` class to make a select box fill the available space.

@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-default
 iframeFullwidth: true
-headline: Default
 code:
   - HTML: |
       <!--
@@ -56,10 +55,9 @@ code:
         },
       ]} />
 ---
+## Default
 
-Our design system provides a progress indicator for larger tasks that can be
-completed out of order and returned to at a later date, like doing a tax
-return or applying for a driver’s licence.
+Our design system provides a progress indicator for larger tasks that can be completed out of order and returned to at a later date, like doing a tax return or applying for a driver’s licence.
 
 The individual tasks or steps are shown as either:
 

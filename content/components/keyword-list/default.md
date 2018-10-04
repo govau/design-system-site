@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-default
 iframeFullwidth: true
-headline: Default
 code:
   - HTML: |
       <!--
@@ -37,5 +36,6 @@ code:
         },
       ]} />
 ---
+## Default
 
 A key and value pair used to display a small subtitle above a larger title.

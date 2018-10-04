@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-color
-headline: Color
 code:
   - SCSS: |
       // Light palette
@@ -38,6 +37,7 @@ code:
       // $AU-colordark-background-alt-shade (#0a323c)
 
 ---
+## Color
 
 The colour palette is designed and tested to provide colour pairings that pass accessibility contrast ratios while still being easy to implement. This means that designers and developers using the system do not need to be concerned about if a colour will pass WCAG requirements  in a particular circumstance.
 

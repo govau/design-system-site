@@ -40,23 +40,6 @@
 			border-bottom-color: $AU-color-background-alt-shade;
 		}
 	}
-
-	&:hover .code-demo__anchor {
-		display: block;
-	}
-}
-
-.code-demo__headline {
-	position: relative;
-}
-
-.code-demo__anchor {
-	display: none;
-	position: absolute;
-	@include AU-space( left, -1unit );
-	@include AU-space( top, 0.8unit );
-	@include AU-fontgrid( sm, nospace );
-	z-index: 100;
 }
 
 .code-demo__example--screenreader {
@@ -110,10 +93,6 @@
 	min-width: 100%;
 	display: block;
 	border: 2px solid #cfcfcf;
-}
-
-.au-body * + .code-demo__headline {
-	margin-top: 0;
 }
 
 .code-demo__text {

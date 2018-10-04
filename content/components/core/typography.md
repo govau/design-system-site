@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-typography
-headline: Typography
 code:
   - SCSS: |
       @include AU-fontgrid( xxxl );          // font-size: 3rem    | 48px; line-height: 1.5  | 72px;
@@ -28,6 +27,7 @@ code:
       @include AU-fontgrid( sm, nospace );   // font-size: 1rem    | 16px; line-height: 1    | 16px;
       @include AU-fontgrid( xs, nospace );   // font-size: 0.87rem | 14px; line-height: 1.14 | 16px;
 ---
+## Typography
 
 A typographic scale was used to create a set of font-sizes and line-heights which have been designed for legibility and can be easily be implemented by designers or developers with a predictable output.
 

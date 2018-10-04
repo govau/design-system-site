@@ -1,6 +1,8 @@
-import AUlinkList from '../../_uikit/layout/link-list';
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+
+import AUlinkList from '../../_uikit/layout/link-list';
+import AnchorTitle from '../anchor-title';
 
 
 /**
@@ -13,11 +15,11 @@ const ListColumns = ({ lists, _body }) => (
 
 		<div className="row listcolumns">
 			{
-				lists.map( ( lists, i ) => (
+				lists.map( ( list, i ) => (
 					<div className="col-xs-12 col-sm-6 col-md-3" key={ i }>
-						<h3>{ lists.heading }</h3>
+						<AnchorTitle heading={ list.heading } headinglevel={ 3 } />
 						<AUlinkList items={
-							lists.links.map( list => {
+							list.links.map( list => {
 								return {
 									text: list.text,
 									link: list.link,

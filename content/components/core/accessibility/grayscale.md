@@ -2,8 +2,7 @@
 layout: component/code-demo
 iframe: a11y-grayscale
 iframeFullwidth: true
-headline: Grayscale
 ---
-
+## Grayscale
 
 How the core is viewed with total colour blindness.

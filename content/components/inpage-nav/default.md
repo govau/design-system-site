@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-default
 iframeFullwidth: true
-headline: Default
 code:
   - HTML: |
       <!--
@@ -56,6 +55,6 @@ code:
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       </AUinpageNavSection>
 ---
+## Default
 
-The inpage nav (or page contents) is placed above sections of a page and
-provides navigation to individual anchor links located in those sections.
+The inpage nav (or page contents) is placed above sections of a page and provides navigation to individual anchor links located in those sections.

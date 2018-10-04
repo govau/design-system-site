@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-default
 iframeFullwidth: true
-headline: Default
 code:
   - HTML: |
       <!--
@@ -25,5 +24,6 @@ code:
         A callout.
       </AUcallout>
 ---
+## Default
 
 Use callout to notify and alert users of important snippets of information.

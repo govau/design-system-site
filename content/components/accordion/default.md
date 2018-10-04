@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-default
-headline: Default
 code:
   - HTML: |
       <!--
@@ -40,5 +39,6 @@ code:
         Here <a href="#url">is</a> some accordion content
       </AUaccordion>
 ---
+## Default
 
 A singular method of expanding and collapsing a piece of content with a title. These are best used for transcripts of videos.

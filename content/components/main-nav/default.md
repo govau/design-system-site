@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-default
 iframeFullwidth: true
-headline: Default
 height: 300
 code:
   - HTML: |
@@ -101,6 +100,7 @@ code:
         </div>
       </AUmainNav>
 ---
+## Default
 
 The main navigation component is intended to be used as the primary means of navigation around the website. It typically accommodates the top level of the information architecture.
 

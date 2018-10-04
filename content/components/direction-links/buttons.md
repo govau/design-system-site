@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-buttons
-headline: Buttons
 code:
   - HTML: |
       <!--
@@ -20,5 +19,6 @@ code:
 
       <AUdirectionLink text="Next" />
 ---
+## Buttons
 
 Sometimes direction is needed inside a form. Buttons offer a way to direct users to the next or previous section inside a form.

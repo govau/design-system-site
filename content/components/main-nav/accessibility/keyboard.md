@@ -1,10 +1,9 @@
 ---
 layout: component/code-demo
 iframe: a11y-keyboard
-headline: Keyboard accessibility
 iframeFullwidth: true
 height: 300
 ---
-
+## Keyboard accessibility
 
 How keyboard navigation works with main nav.

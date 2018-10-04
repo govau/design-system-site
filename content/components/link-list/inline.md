@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-inline
-headline: Inline
 code:
   - HTML: |
       <!--
@@ -32,5 +31,6 @@ code:
         },
       ]} />
 ---
+## Inline
 
 The Inline link list is simply a modifier to the default link list which makes the links run inline/horizontally.
