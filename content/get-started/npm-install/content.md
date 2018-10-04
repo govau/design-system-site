@@ -2,7 +2,7 @@ NPM (node package manager) is a package manager for Node based projects. NPM com
 
 The Design System components require Node version 8 or higher. See the [Node/NPM installation guides](https://docs.npmjs.com/getting-started/installing-node#install-npm--manage-npm-versions) if you require assistance installing node.
 
-[Skip to step 3](#3-install-design-system-components) if you are adding the design system to an existing `npm` project.
+[Skip to step 3](#3-install-the-components) if you are adding the design system to an existing `npm` project.
 
 
 ## 1. Set up project folder

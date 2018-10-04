@@ -17,7 +17,7 @@ const ListColumns = ({ lists, _body }) => (
 			{
 				lists.map( ( list, i ) => (
 					<div className="col-xs-12 col-sm-6 col-md-3" key={ i }>
-						<AnchorTitle heading={ list.heading } headinglevel={ 3 } />
+						<AnchorTitle heading={ list.heading } headingSize={ 3 } />
 						<AUlinkList items={
 							list.links.map( list => {
 								return {

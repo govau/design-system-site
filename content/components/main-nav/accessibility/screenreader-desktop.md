@@ -1,6 +1,6 @@
 ---
 layout: component/screenreader
-headline: Screen reader desktop
+heading: Screen reader desktop
 speak: |
   [ Navigation ]
 

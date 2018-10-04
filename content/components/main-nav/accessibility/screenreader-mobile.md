@@ -1,6 +1,6 @@
 ---
 layout: component/screenreader
-headline: Screen reader mobile
+heading: Screen reader mobile
 speak: |
   [ Navigation ]
 

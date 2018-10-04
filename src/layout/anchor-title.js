@@ -8,9 +8,9 @@ import Slugify from 'slugify';
 /**
  * The partial component
  */
-const AnchorTitle = ({ heading, headinglevel }) => {
+const AnchorTitle = ({ heading, headingSize }) => {
 
-	const HeadingTag = `h${ headinglevel }`;
+	const HeadingTag = `h${ headingSize }`;
 	const slugifiedText = Slugify( heading ).toLowerCase();
 
 	return (
@@ -25,9 +25,14 @@ const AnchorTitle = ({ heading, headinglevel }) => {
 
 AnchorTitle.propTypes = {
 	/**
-	 * _body: (text)(4)
+	 * heading: Hello world
 	 */
-	_body: PropTypes.node.isRequired,
+	heading: PropTypes.string.isRequired,
+
+	/**
+	 * headingSize: 4
+	 */
+	headingSize: PropTypes.number.isRequired,
 
 };
 

@@ -10,7 +10,7 @@ const Screenreader = ({ heading, speak, _body, _parseMD }) => (
 	<div className="code-demo">
 		<div className="row">
 			<div className="col-sm-6">
-				<AnchorTitle heading={ heading } headinglevel={ 2 } />
+				<AnchorTitle heading={ heading } headingSize={ 2 } />
 			</div>
 
 			<div className="col-sm-6 code-demo__example-wrapper">
