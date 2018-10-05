@@ -1,4 +1,6 @@
 // https://github.com/chjj/marked
+const Slugify = require( 'slugify' );
+
 
 module.exports = exports = function renderer({ Marked, _ID, _relativeURL }) {
 
@@ -39,7 +41,12 @@ module.exports = exports = function renderer({ Marked, _ID, _relativeURL }) {
 			display = Object.keys( headingLevels ).reverse()[ level ];
 		}
 
-		return `<h${ level }${ headingLevels[ display ] ? ` class="${ headingLevels[ display ] }"` : `` }>${ text }</h${ level }>`;
+
+		const displayClass = headingLevels[ display ] ? ` class="${ headingLevels[ display ] } anchor"` : '';
+		const slugifiedText = Slugify( text ).toLowerCase();
+		const anchor = `<a class="icon icon--link" aria-hidden="true" href="#${ slugifiedText }"></a>`;
+
+		return `<h${ level } id="${ slugifiedText }"${ displayClass }>${ anchor }${ text }</h${ level }>`;
 	};
 
 
@@ -126,10 +133,23 @@ module.exports = exports = function renderer({ Marked, _ID, _relativeURL }) {
 	Marked.code = ( code, language ) => {
 		const encodedCode = EncodeCode(code);
 		if( !language ) {
-			return `<div class="codebox">\n<pre>\n<code>${ encodedCode }</code>\n</pre>\n</div>`;
+			return `<div class="codebox"><pre><code>${ encodedCode }</code></pre></div>`;
 		}
 
-		return `<div class="codebox">\n<pre class="language-${ language }">\n<code>${ encodedCode }</code>\n</pre>\n</div>`;
+		const languageClass = language === 'nocopy' ? 'js-nocopy' : `language-${ language }`;
+		return `<div class="codebox"><pre class="${ languageClass }"><code>${ encodedCode }</code></pre></div>`;
+	}
+
+
+	/**
+	 * Blockquote overwrite
+	 *
+	 * @param {string} quote  - The text inside the quote
+	 *
+	 * @return {string}       - The blockquote element
+	 */
+	Marked.blockquote = ( quote ) => {
+		return `<blockquote class="au-callout">${ quote }</blockquote>`;
 	}
 
 

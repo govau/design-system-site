@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-content-management
-headline: Content management
 code:
   - HTML: |
       <!--
@@ -18,6 +17,7 @@ code:
         <kbd>Keyboard Input</kbd>
       </div>
 ---
+## Content management
 
 - [Delete](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del)
 - [Strikethrough](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/s)

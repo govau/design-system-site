@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-math-code
-headline: Mathematics and code
 code:
   - HTML: |
       <!--
@@ -19,6 +18,7 @@ code:
         <pre><code>code block</code></pre>
       </div>
 ---
+## Mathematics and code
 
 The body component also provides styling for mathematical and code related HTML elements.
 

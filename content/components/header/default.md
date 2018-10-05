@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-default
 iframeFullwidth: true
-headline: Default
 code:
   - HTML: |
       <!--
@@ -52,5 +51,6 @@ code:
         </div>
       </AUheader>
 ---
+## Default
 
 The header at the top of the page. Usually contains a Commonwealth Coat of Arms, branding and navigation.

@@ -2,8 +2,7 @@
 layout: component/code-demo
 examples: 
   - template: a11y-colorblind
-headline: Colour impairment
 ---
-
+## Colour impairment
 
 How the TODO are viewed with various colour blindnesses

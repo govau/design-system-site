@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-default
 iframeFullwidth: true
-headline: Default
 code:
   - HTML: |
       <!--
@@ -27,6 +26,7 @@ code:
       <AUdirectionLink link="#url" text="Top" direction="up" />
       <AUdirectionLink link="#url" text="Skip to footer" direction="down" />
 ---
+## Default
 
 Use direction links to indicate a physical direction, such as:
 - Linking 'up' or 'down' within the page.

@@ -9,34 +9,29 @@ import Slugify from 'slugify';
 /**
  * The codedemo component
  */
-const CodeDemo = ({ headline, iframe, iframeFullwidth, height = null, code, _body, _ID, _relativeURL }) => {
+const CodeDemo = ({ iframe, iframeFullwidth, height = null, code, _body, _ID, _relativeURL }) => {
 	const codeExampleClass = iframeFullwidth ? 'col-sm-12' : 'col-sm-6';
 	const iframeSrc = _relativeURL( `/${ _ID }/${ iframe }/`, _ID );
+	const componentId = _body.key.split( '/' )[ _body.key.split( '/' ).length - 1 ];
 
 	return (
 		<div className="code-demo">
-			<div className="row" id={ Slugify( headline ).toLowerCase() }>
-				<a className="code-demo__anchor" href={`#${ Slugify( headline ).toLowerCase() }`}>#</a>
+			<div className="row">
+				<div className={`code-demo__text ${ codeExampleClass }` }>
+					{ _body }
+				</div>
 
-					<div className={`code-demo__text ${ codeExampleClass }` }>
-						<h2 className="code-demo__headline">
-							{ headline }
-						</h2>
-						{ _body }
+				<div className={`code-demo__example-wrapper ${ codeExampleClass }` }>
+					<div className="code-demo__example">
+						<h2 className='code-demo__example-title'>Example</h2>
+						<iframe
+							frameBorder="0"
+							height={ height }
+							className={ `code-demo__example__iframe ${ height === null ? 'code-demo__example__iframe--resize' : '' }` }
+							scrolling="no"
+							src={ iframeSrc }></iframe>
 					</div>
-
-					<div className={`code-demo__example-wrapper ${ codeExampleClass }` }>
-						<div className="code-demo__example">
-							<h2 className='code-demo__example-title'>Example</h2>
-							<iframe
-								frameBorder="0"
-								height={ height }
-								className={ `code-demo__example__iframe ${ height === null ? 'code-demo__example__iframe--resize' : '' }` }
-								scrolling="no"
-								src={ iframeSrc }></iframe>
-						</div>
-					</div>
-
+				</div>
 			</div>
 			{
 				code
@@ -51,8 +46,8 @@ const CodeDemo = ({ headline, iframe, iframeFullwidth, height = null, code, _bod
 													code && code.map( ( section, i ) => (
 														<li key={ i } className={ i === 0 ? 'tab-item--active' : '' }>
 															<a
-																href={`#${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }-${ Slugify( headline ).toLowerCase() }`}
-																aria-controls={`${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }-${ Slugify( headline ).toLowerCase() }`}
+																href={`#demo-${ i }-${ componentId }`}
+																aria-controls={`demo-${ i }-${ componentId }`}
 																role="tab"
 															>
 																{ Object.keys( section )[ 0 ] }
@@ -70,7 +65,7 @@ const CodeDemo = ({ headline, iframe, iframeFullwidth, height = null, code, _bod
 														key={ i }
 														tabIndex="-1"
 														role="tabpanel"
-														id={ `${ Slugify( Object.keys( section )[ 0 ] ).toLowerCase() }-${ Slugify( headline ).toLowerCase() }` }
+														id={ `demo-${ i }-${ componentId }` }
 													>
 														<CodeSnippet language={
 															Object.keys( section )[ 0 ] === 'HTML' ? 'html' : '' +
@@ -98,11 +93,6 @@ CodeDemo.propTypes = {
 	 * _body: (partials)(4)
 	 */
 	_body: PropTypes.node.isRequired,
-
-	/**
-	 * headline: Primary Buttons
-	 */
-	headline: PropTypes.string.isRequired,
 
 	/**
 	 * iframe: primary

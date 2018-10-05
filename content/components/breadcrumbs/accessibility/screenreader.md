@@ -1,6 +1,6 @@
 ---
 layout: component/screenreader
-headline: Screen readers
+heading: Screen readers
 speak: |
 
   [Breadcrumb navigation, list three items].

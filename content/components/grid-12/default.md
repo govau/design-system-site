@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-default
 iframeFullwidth: true
-headline: Default
 code:
   - HTML: |
       <main class="au-grid">
@@ -26,6 +25,7 @@ code:
         </div>
       </main>
 ---
+## Default
 
 The grid is similar to the bootstrap grid system. This means you can access different breakpoints by changing the class name or by using the variables below. The breakpoints for each value are:
 

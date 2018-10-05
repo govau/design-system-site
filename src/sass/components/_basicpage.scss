@@ -1,0 +1,8 @@
+// Top spacing for the content when sidenav above
+.basicpage .col-sm-4 + .col-sm-8 {
+	@include AU-space( margin-top, 4unit );
+
+	@include AU-media( sm ){
+		margin-top: 0;
+	}
+}

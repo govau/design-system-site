@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-type
-headline: Basic Typography
 code:
   - HTML: |
       <!--
@@ -22,6 +21,7 @@ code:
         </p>
       </div>
 ---
+## Basic Typography
 
 Body includes a range of styles for basic content elements.
 - [Headings](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)

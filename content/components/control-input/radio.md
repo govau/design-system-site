@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-radio
-headline: Radio
 code:
   - HTML: |
       <!--
@@ -28,5 +27,6 @@ code:
       <AUradio label="Phone" name="radio-ex" />
       <AUradio label="Phone" name="radio-ex" checked />
 ---
+## Radio
 
 Radio inputs allow users to select one item at a time.

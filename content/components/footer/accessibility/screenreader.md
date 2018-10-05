@@ -1,6 +1,6 @@
 ---
 layout: component/screenreader
-headline: Screen readers
+heading: Screen readers
 speak: |
 
   [Heading level 3] Section

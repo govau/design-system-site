@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-default
-headline: Default
 code:
   - HTML: |
       <button aria-controls="animate-example-1" onclick="AU.animate.Run({
@@ -31,5 +30,6 @@ code:
       <!-- Make sure you include the uikit javascript file -->
       <script type="text/javascript" src="script.js"></script>
 ---
+## Default
 
 Toggle a property between two values across one item.

@@ -1,9 +1,8 @@
 ---
 layout: component/code-demo
 iframe: a11y-keyboard
-headline: Keyboard accessibility
 iframeFullwidth: true
 ---
-
+## Keyboard accessibility
 
 How keyboard navigation works with side navigation.

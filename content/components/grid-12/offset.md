@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-offset
 iframeFullwidth: true
-headline: Offset
 code:
   - HTML: |
       <main class="au-grid">
@@ -14,5 +13,6 @@ code:
         </div>
       </main>
 ---
+## Offset
 
 You can offset a row by a specified number of columns by using the `offset` class name.

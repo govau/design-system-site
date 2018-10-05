@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-default
-headline: Default
 code:
   - HTML: |
       <nav class="au-skip-link" aria-label="skip links navigation">
@@ -38,6 +37,7 @@ code:
         Some content here
       </div>
 ---
+## Default
 
 Skip links are not visual until they receive focus.
 

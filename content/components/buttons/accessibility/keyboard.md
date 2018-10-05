@@ -2,7 +2,7 @@
 layout: component/code-demo
 iframe: a11y-keyboard
 iframeFullwidth: true
-headline: Keyboard accessibility
 ---
+## Keyboard accessibility
 
 How keyboard navigation works with buttons.

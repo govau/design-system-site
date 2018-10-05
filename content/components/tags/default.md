@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-default
-headline: Tags with links
 code:
   - HTML: |
       <!--
@@ -38,6 +37,7 @@ code:
         },
       ]} />
 ---
+## Tags with links
 
 A list of related tags that use links.
 

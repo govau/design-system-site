@@ -1,24 +1,22 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import AnchorTitle from '../anchor-title';
+
 
 /**
  * The partial component
  */
-const headingLeft = ({ heading, headinglevel, _body }) => {
-
-	const HeadingTag = `h${ headinglevel }`;
-
-	return (
-		<div className="row headingLeft">
-			<div className="col-md-2">
-				<HeadingTag>{ heading }</HeadingTag>
-			</div>
-			<div className="col-md-10">{ _body }</div>
+const headingLeft = ({ heading, headingSize, _body }) => (
+	<div className="row headingLeft">
+		<div className="col-md-2">
+			<AnchorTitle
+				heading={ heading }
+				headingSize={ headingSize } />
 		</div>
-	);
-
-};
+		<div className="col-md-10">{ _body }</div>
+	</div>
+);
 
 headingLeft.propTypes = {
 	/**
@@ -28,6 +26,8 @@ headingLeft.propTypes = {
 
 };
 
-headingLeft.defaultProps = {};
+headingLeft.defaultProps = {
+	headingSize: '3',
+};
 
 export default headingLeft;

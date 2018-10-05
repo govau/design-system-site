@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-calendar
 iframeFullwidth: true
-headline: Calendar
 code:
   - HTML: |
       <!--
@@ -31,5 +30,6 @@ code:
         name="New Year's Day"
       />
 ---
+## Calendar
 
 Use a calendar callout to notify and alert users of important dates and events.

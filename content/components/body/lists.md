@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-lists
 iframeFullwidth: true
-headline: Lists
 code:
   - HTML: |
       <!--
@@ -30,6 +29,7 @@ code:
         </dl>
       </div>
 ---
+## Lists
 
 Common HTML lists receive styling from the body component.
 

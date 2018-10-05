@@ -1,0 +1,30 @@
+.anchor {
+	&:before {
+		content: '\200B';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+	}
+
+	&:hover .icon {
+		visibility: visible;
+	}
+
+	.icon {
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		visibility: hidden;
+		@include AU-space( margin-top, -0.75unit );
+		@include AU-space( margin-left, -1.875unit );
+
+		&:hover {
+			visibility: visible;
+		}
+	}
+
+	.icon:before {
+		@include AU-space( width, 1.25unit );
+		@include AU-space( height, 1.25unit );
+	}
+}

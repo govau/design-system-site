@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-error
 iframeFullwidth: true
-headline: Error
 code:
   - HTML: |
       <!--
@@ -31,5 +30,6 @@ code:
         <p>Alert Content</p>
       </AUpageAlert>
 ---
+## Error
 
 The error page alert should be used with form validation errors or other errors which will block the user from completing their task.

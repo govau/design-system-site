@@ -3,11 +3,6 @@ a.au-btn {
 	border-width: 2px;
 }
 
-.au-body * + h2,
-.au-body * + .au-display-xl {
-	@include AU-space( margin-top, 5unit );
-}
-
 .au-body :target {
 	outline: none;
 	animation: example 2s;
@@ -29,3 +24,6 @@ a.au-btn {
 	outline: none;
 }
 
+blockquote {
+	margin: 0;
+}

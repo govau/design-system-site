@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-default
-headline: Checkbox
 code:
   - HTML: |
       <!--
@@ -28,5 +27,6 @@ code:
       <AUcheckbox label="Phone" name="checkbox-ex" />
       <AUcheckbox label="Tablet" name="checkbox-ex" checked />
 ---
+## Checkbox
 
 Check boxes allow users to select one or more items.

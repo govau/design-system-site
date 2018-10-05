@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-default
-headline: Default
 code:
   - HTML: |
       <!--
@@ -40,6 +39,7 @@ code:
         ]}
       />
 ---
+## Default
 
 Breadcrumbs show users where they are in the website hierarchy and how to navigate back/up to
 previous levels or content.

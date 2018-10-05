@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-block
 iframeFullwidth: true
-headline: Block
 code:
   - HTML: |
       <!--
@@ -41,6 +40,7 @@ code:
         Tertiary block button
       </AUbutton>
 ---
+## Block
 
 A block-level button uses 100% of the available width of the container or parent element.
 A block- level button is used for visual prominence.

@@ -1,24 +1,20 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import AnchorTitle from '../anchor-title';
+
 
 /**
  * The Rationale component
  */
-const Rationale = ({ heading, headinglevel, _body }) => {
-
-	const HeadingTag = `h${ headinglevel }`;
-
-	return (
-		<div className="row headingLeft">
-			<div className="col-md-4">
-				<HeadingTag>{ heading }</HeadingTag>
-			</div>
-			<div className="col-md-8">{ _body }</div>
+const Rationale = ({ heading, _body }) => (
+	<div className="row headingLeft">
+		<div className="col-md-4">
+			<AnchorTitle heading={ heading } headingSize={ 3 } />
 		</div>
-	);
-
-};
+		<div className="col-md-8">{ _body }</div>
+	</div>
+);
 
 Rationale.propTypes = {
 	/**
@@ -27,13 +23,13 @@ Rationale.propTypes = {
 	heading: PropTypes.string.isRequired,
 
 	/**
-	 * headinglevel: 3
+	 * _body: (partials)(4)
 	 */
-	headinglevel: PropTypes.number,
+	_body: PropTypes.node.isRequired,
 };
 
 Rationale.defaultProps = {
-	headinglevel: 3,
+	headingSize: 3,
 };
 
 export default Rationale;

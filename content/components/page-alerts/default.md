@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-default
 iframeFullwidth: true
-headline: Info
 code:
   - HTML: |
       <!--
@@ -31,5 +30,6 @@ code:
         <p>Alert Content</p>
       </AUpageAlert>
 ---
+## Info
 
 Page alerts are intended for important time-sensitive information only and should be used sparingly.

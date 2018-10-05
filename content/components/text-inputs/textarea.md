@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-textarea
-headline: Text area
 code:
   - HTML: |
       <!--
@@ -24,6 +23,7 @@ code:
       <label htmlFor="textarea" block >label text</label>
       <AUtextInput as="textarea" id="textarea" block />
 ---
+## Text area
 
 Also known as a multiline input.
 

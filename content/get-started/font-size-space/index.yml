@@ -1,0 +1,14 @@
+layout: getstarted/page
+pagetitle: How to use the font size and space functions
+
+header:
+  - /_shared/header.md
+
+sidenav:
+  - /get-started/sidenav.md
+
+main:
+  - content.md
+
+footer:
+  - /_shared/footer.md

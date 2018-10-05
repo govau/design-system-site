@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-default
-headline: Default
 iframeFullwidth: true
 code:
   - HTML: |
@@ -89,6 +88,7 @@ code:
         ]}
       />
 ---
+## Default
 
 The side navigation allows users to find other pages which share a similar topic or section. By default it supports three levels of nesting along with an accompanying heading.
 
