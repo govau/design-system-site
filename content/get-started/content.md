@@ -13,6 +13,7 @@ Once you have the components in a website we have advanced guides for developers
 
 - [Customise the colour scheme](get-started/customise-color)
 - [Customise existing components](get-started/customise-components)
+<!-- - [Create new components](get-started/create-components) -->
 - [How to use the font size and space functions](get-started/font-size-space)
 - [Set up a development environment](get-started/development-environment)
 
