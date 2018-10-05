@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-fluid
 iframeFullwidth: true
-headline: Fluid
 code:
   - HTML: |
       <main class="au-grid">
@@ -15,5 +14,6 @@ code:
         </div>
       </main>
 ---
+## Fluid
 
 Use `container-fluid` class for a full width container, spanning the entire width of your viewport.

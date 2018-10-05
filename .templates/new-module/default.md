@@ -2,7 +2,6 @@
 layout: component/code-demo
 examples: 
   - template: examples/example-default
-headline: Default
 code:
   - HTML: |
       TODO HTML
@@ -11,5 +10,6 @@ code:
       TODO React
       Get from https://github.com/govau/uikit
 ---
+## Default
 
 TODO

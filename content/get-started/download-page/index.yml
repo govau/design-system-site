@@ -1,0 +1,14 @@
+layout: getstarted/page
+pagetitle: Download page to install the components
+
+header:
+  - /_shared/header.md
+
+sidenav:
+  - /get-started/sidenav.md
+
+main:
+  - content.md
+
+footer:
+  - /_shared/footer.md

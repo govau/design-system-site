@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-default
 iframeFullwidth: true
-headline: Default
 code:
   - HTML: |
       <!--
@@ -21,5 +20,6 @@ code:
 
       <AUctaLink link="/signup" text="Sign up" />
 ---
+## Default
 
 A simple and clear link to direct users to a preferred action.

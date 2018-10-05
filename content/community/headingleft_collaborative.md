@@ -1,7 +1,7 @@
 ---
 layout: content/heading-left
 heading: Collaborative
-headinglevel: 3
+headingSize: 3
 ---
 
 Yes … a world class UI design system for all Australian government services.

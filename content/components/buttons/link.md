@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-link
 iframeFullwidth: true
-headline: Links as buttons
 code:
   - HTML: |
       <!--
@@ -41,6 +40,7 @@ code:
         Tertiary link button
       </AUbutton>
 ---
+## Links as buttons
 
 Simple links don’t always catch a user’s attention when they’re scanning a website. So a link is sometimes styled to look like a button where you want to give
 it greater prominence.

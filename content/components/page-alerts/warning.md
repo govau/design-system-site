@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-warning
 iframeFullwidth: true
-headline: Warning
 code:
   - HTML: |
       <!--
@@ -31,6 +30,6 @@ code:
         <p>Alert Content</p>
       </AUpageAlert>
 ---
+## Warning
 
-Use warning page alerts to tell the user something urgent. Only use an alert if
-the information will help the user avoid a problem.
+Use warning page alerts to tell the user something urgent. Only use an alert if the information will help the user avoid a problem.

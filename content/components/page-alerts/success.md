@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-success
 iframeFullwidth: true
-headline: Success
 code:
   - HTML: |
       <!--
@@ -31,5 +30,6 @@ code:
         <p>Alert Content</p>
       </AUpageAlert>
 ---
+## Success
 
 The success page alert is used for notifying the user that a task is fully completed.

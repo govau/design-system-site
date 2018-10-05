@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-default
 iframeFullwidth: true
-headline: Default
 code:
   - HTML: |
       <!--
@@ -86,5 +85,6 @@ code:
         </AUfooter>
       </div>
 ---
+## Default
 
 The footer at the bottom of a page. Usually contains copyright information and links to other sections of the site.

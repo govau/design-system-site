@@ -1,14 +1,14 @@
+layout: getstarted/page
 pagetitle: Get started
 
 header:
   - /_shared/header.md
 
+sidenav:
+  - /get-started/sidenav.md
+
 main:
-  - getting-started.md
-  - components.md
-  - production-build.md
-  - starter-pack.md
-  - custom-build.md
+  - content.md
 
 footer:
   - /_shared/footer.md

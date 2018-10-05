@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-default
 iframeFullwidth: true
-headline: Default
 code:
   - HTML: |
       <!--
@@ -23,5 +22,6 @@ code:
       <label htmlFor="text-input" >label text</label>
       <AUtextInput id="text-input" />
 ---
+## Default
 
 The default text inputs do not have a width applied to them.

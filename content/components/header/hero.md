@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-hero
 iframeFullwidth: true
-headline: Hero
 code:
   - HTML: |
       <!--
@@ -52,5 +51,6 @@ code:
         </div>
       </AUheader>
 ---
+## Hero
 
 A ‘hero’ version of the header. This version has larger spacing for more visual prominence. Examples of use might be a home page, or promotional page.

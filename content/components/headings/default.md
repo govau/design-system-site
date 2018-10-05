@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-default
 iframeFullwidth: true
-headline: Default
 code:
   - HTML: |
       <h4 class="au-display-xxxl">Display xxxl</h4>
@@ -23,5 +22,6 @@ code:
       <AUheading size="sm"   level="3">Display sm</AUheading>
       <AUheading size="xs"   level="1">Display xs</AUheading>
 ---
+## Default
 
 Our range of supported headings. These use the <a href="http://localhost:8080/components/core/#typography">AU-fontgrid</a> function to make the font size and lineheight snap to grid.

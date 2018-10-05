@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-default
-headline: Default
 code:
   - HTML: |
       <!--
@@ -43,5 +42,6 @@ code:
         },
       ]} />
 ---
+## Default
 
 **Note:** Select boxes (drop-down lists) have been provided in the system by necessity but should be avoided where possible. Select boxes are implemented differently on various devices and are proven to be difficult to use for users with low digital literacy. Instead consider using [text inputs](/components/text-inputs/) or for multiple-choice options try [radio buttons](/components/control-input/#radio).

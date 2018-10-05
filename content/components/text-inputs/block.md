@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-block
 iframeFullwidth: true
-headline: Block text inputs
 code:
   - HTML: |
       <!--
@@ -23,5 +22,6 @@ code:
       <label htmlFor="text-input-block">label text</label>
       <AUtextInput id="text-input-block" block />
 ---
+## Block text inputs
 
 The 'block' text inputs use an `.au-text-input--block` class to make them fill the available space.

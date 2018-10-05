@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-group
-headline: Accordion group
 code:
   - HTML: |
       <!--
@@ -63,5 +62,6 @@ code:
         </li>
       </ul>
 ---
+## Accordion group
 
 A group of accordions that expand and collapse on click. Notice that the accordions only change the one that is clicked.
