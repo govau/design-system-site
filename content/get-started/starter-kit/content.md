@@ -13,7 +13,7 @@ The starter pack requires Node version 8 or higher. See the [Node/NPM installati
 
 In your directory you have a `package.json` file. This file points to dependencies that are installed when `npm install` is ran. When you run `npm install` all of the Design System components and additional packages related to the local development environment are added to the `node_modules/` folder.
 
-When the user runs `npm run build` or `npm run watch` we use [node-sass](https://www.npmjs.com/package/node-sass?activeTab=versions) to convert the `src/sass/main.scss` file into the `docs/css/main.css` file. [Autoprefixer](https://www.npmjs.com/package/autoprefixer) is ran after compilation to add vendor prefixes to the `main.css` file.
+When the user runs `npm run build` or `npm run watch` we use [node-sass](https://www.npmjs.com/package/node-sass) to convert the `src/sass/main.scss` file into the `docs/css/main.css` file. [Autoprefixer](https://www.npmjs.com/package/autoprefixer) is ran after compilation to add vendor prefixes to the `main.css` file.
 
 > Refer to the `package.json` scripts for how this has been set up
 

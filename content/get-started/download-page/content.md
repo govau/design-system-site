@@ -2,12 +2,12 @@ If you are not familiar with `npm` and want to use the Design System, we have cr
 
 Once on the page you can select the components you wish to use. Select the components and choose how you want do download them.
 
-- *CSS minified* will bundle the css of the components into a single file to be used directly in HTML.
-- *CSS modules* are used with modern javascript allowing you to import styles specific component styles.
-- *SASS modules* will create multiple sass files that can be imported into a `main.scss` file.
-- *Javascript minified* will bundle the JavaScript of the components together and minify them for use directly in HTML.
-- *Javascript modules* are used when you want to break a part the components functionality.
-- *React modules* allow the components to be imported directly into react.
+- **CSS minified** will bundle the css of the components into a single file to be used directly in HTML.
+- **CSS modules** are used with modern javascript allowing you to import styles specific component styles.
+- **SASS modules** will create multiple sass files that can be imported into a `main.scss` file.
+- **Javascript minified** will bundle the JavaScript of the components together and minify them for use directly in HTML.
+- **Javascript modules** are used when you want to break a part the components functionality.
+- **React modules** allow the components to be imported directly into react.
 
 
 

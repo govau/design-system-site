@@ -53,8 +53,6 @@ The component name and version is also added to our list of dependencies in the 
 npm install @gov.au/body @gov.au/header @gov.au/accordion
 ```
 
-> View the [full list of components](https://designsystem.gov.au/components)
-
 Now that the components have been installed your folder structure should match:
 ```nocopy
 design-system-starter
