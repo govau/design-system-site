@@ -5,18 +5,18 @@ The patterns below are the best practice way to modify and change the components
 
 ## Set up
 
-When you install a component from the Design System the `pancake.scss` file is automatically generated.
+When you install a component from the design system the `pancake.scss` file is automatically generated.
 
 It is recommended to not touch the generated `pancake.scss` and import it into a `main.scss` file. You can import the `pancake.scss` in the `main.scss` file like so:
 ```scss
 @import "./pancake.scss";
 ```
 
-## Customise components with sass variables
+## Customise components with SASS variables
 
-Any sass variable on a line that ends with `!default` can be changed.
+Any SASS variable on a line that ends with `!default` can be changed.
 
-When you change a variable above the import of `pancake.scss` it flows throughout all of the components in the system. In this `main.scss` example you can see customisations to the colors and grid:
+When you change a variable above the import of `pancake.scss` it flows throughout all of the components in the system. In this `main.scss` example you can see customisations to the colours and grid:
 ```scss
 // Dark colour theme changes
 $AU-colordark-foreground-text:   #ffffff;
@@ -43,7 +43,7 @@ body {
 
 Often times we may need a bigger button or a larger header component. In these cases we do not need to create our own components we can modify existing ones.
 
-To customise components that already exist we recommend using [block element modifier](http://getbem.com/)( BEM ) to modify styles on existing components. 
+To customise components that already exist we recommend using [block element modifier](http://getbem.com/)( BEM ) to modify styles on existing components.
 
 If you were going to make a large button with an icon you could add some additional classes and html to the existing `.au-btn`.
 ```html
