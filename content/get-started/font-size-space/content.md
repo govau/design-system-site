@@ -6,19 +6,25 @@ Developers can use the function `AU-space` for consistent spacing across element
 
 `1unit` is the equivalent of `1rem`, which by default is `16px`.
 
-The `AU-space` function accepts three parameters: the property you wish to add space to, the values of the spacing size and an Internet Explorer 8 pixel fallback. The output is the CSS property with a `rem` spacing applied to it and a pixel fallback for Internet Explorer 8 (if the pixel fallback parameter is not selected as `false`).
+The `AU-space` function accepts three parameters:
+
+1. The property you wish to add space to,
+1. The values of the spacing size, and
+1. An Internet Explorer 8 pixel fallback.
+
+The output is the CSS property with a `rem` spacing applied to it and a pixel fallback for Internet Explorer 8 (if the pixel fallback parameter is not selected as `false`).
 
 ### Property
 
-The CSS property to apply the spacing. E.g. `margin`, `padding`, `margin-top` etc.
+The CSS property to apply the spacing. For example `margin`, `padding`, `margin-top`.
 
 ### Values
 
-These are the values that are applied to the above CSS property. It is recommended to use `unit` however it is not a requirement. Other units you may use are `px`, `%`, `rem` or `em`. 
+These are the values that are applied to the above CSS property. It is recommended to use `unit` however it is not a requirement. Other units you may use are `px`, `%`, `rem` or `em`.
 
 ### Pixel Fallback
 
-`pixelfallback` is a boolean that toggles support for a pixel fallback for Internet Explorer 8 users, by default it is set to `true`. This can be changed on a per-use-basis, by passing `false` in the third parameter of the `AU-space` function. Or it can be changed globally, by setting the `$AU-pixel-fallback` variable to `false`.
+`pixelfallback` is a boolean that toggles support for a pixel fallback for Internet Explorer 8 users. By default it is set to `true`. This can be changed on a per-use basis, by passing `false` in the third parameter of the `AU-space` function. Or it can be changed globally, by setting the `$AU-pixel-fallback` variable to `false`.
 
 
 ### Example of `AU-space` function in use
@@ -33,7 +39,7 @@ header {
 }
 ```
 
-will render the following css:
+will render the following CSS:
 
 ```css
 header {
@@ -53,7 +59,7 @@ If we set the `font-size` for the `<h1>` to `2rem` and the same user now adjusts
 
 The `AU-fontgrid` function allows developers and designers to scale their typography while making sure they snap to a 4 pixel grid as defined by the `$AU-unit` variable.
 
-For consistency, we've defined a typography scale in the core module. The `AU-fontgrid` function accepts two parameters; a font-size and a line height. The return of this function is a `font-size` and `line-height` combination that snaps to the grid, with the `font-size` having a pixel fallback for Internet Explorer 8. 
+For consistency, we've defined a typography scale in the core module. The `AU-fontgrid` function accepts two parameters; a font-size and a line height. The return of this function is a `font-size` and `line-height` combination that snaps to the grid, with the `font-size` having a pixel fallback for Internet Explorer 8.
 
 ### Font Size
 
@@ -75,9 +81,9 @@ The font sizes are in pixels, though we haven't added a `px` unit. This is becau
 
 ### Line Height
 
-The `line-height` CSS property defines the vertical spacing above and below an element. The `line-height` can be set using a unitless number, or by using either of `px`, `rem`, `em` or `%`. In the `AU-fontgrid` function, we are using unitless numbers to set the `line-height`. Mozilla have a great article that explains why [numbers are preferred over length to set the line-height](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Prefer_unitless_numbers_for_line-height_values). 
+The `line-height` CSS property defines the vertical spacing above and below an element. The `line-height` can be set using a unitless number, or by using either of `px`, `rem`, `em` or `%`. In the `AU-fontgrid` function, we are using unitless numbers to set the `line-height`. Mozilla have a great article that explains why [numbers are preferred over length to set the line-height](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Prefer_unitless_numbers_for_line-height_values).
 
-The `line-height` parameter accepts one option, from a range of three: `nospace`, `heading` or `default`. 
+The `line-height` parameter accepts one option, from a range of three: `nospace`, `heading` or `default`.
 
 ```scss
 $AU-lineheight-map: (
