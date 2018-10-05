@@ -1,12 +1,12 @@
 Development environments have many benefits when using the design system. You can easily override variables in the components and see the changes throughout the system instantly.
 
-If you have any trouble throughout this process you can pick up a premade development environment with the [uikit starter](https://github.com/govau/uikit-starter). 
+If you have any trouble throughout this process you can pick up a premade development environment with the [uikit starter](https://github.com/govau/uikit-starter) and follow our [guide on how to use it](/get-started/starter-kit). 
 
 ## Initial set up
 
 We need to set up our directory so that we have a clear pipeline for development files and the final product.
 
-Create a `docs/` folder. This will hold a deployable version of the website. Lets move our current `index.html` or [create a new `index.html`](/get-started/npm-install#4-create-page) in the `docs` folder.
+Create a `docs/` folder. This will hold all of the files needed for the website to render in the browser. Lets move our current `index.html` or [create a new `index.html`](/get-started/npm-install#4-create-page) in the `docs` folder.
 
 We also are going to change the [Pancake](https://github.com/govau/pancake) settings in the `package.json` file to better suit our project structure. Lets change the location and file name for the sass and javascript files.
 ```json

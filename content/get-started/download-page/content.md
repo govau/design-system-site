@@ -1,4 +1,4 @@
-If you haven't worked with `npm` before, you can download the Design System components directly on the [downloads page](https://designsystem.gov.au/download/).
+If you haven't worked with `npm` before, you can download the Design System components directly on the [downloads page](/download).
 
 Select the components you wish to use and press download.
 

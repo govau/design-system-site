@@ -7,14 +7,14 @@ The Design System components require Node version 8 or higher. See the [Node/NPM
 
 ## 1. Set up project folder
 
-Create a new folder for the project, e.g. `design-system-starter`.
+Create a new folder for the project, in the examples below we will assume it is called `design-system-starter`.
 
 
 ## 2. Initialise npm
 
 To install the components through npm, you must have a `package.json` file in your project folder. This file holds the projects configuration, scripts and package versions. Find out more about the `package.json` file on the [NPM documentation website](https://docs.npmjs.com/files/package.json). 
 
-To create a `package.json` file open your command line in the project folder and run `npm init -y`. This will create a package.json based off the folder you are in. 
+To create a `package.json` file, open terminal in the project folder and run `npm init -y`. This will create a package.json with some default settings. 
 
 If you would like more control of the creation of the file you can run `npm init` and follow the prompts.
 
@@ -50,12 +50,12 @@ Individual components can be installed via the command line using `npm install`.
 The component name and version is also added to our list of dependencies in the `package.json` file. Let's start by installing the body, header and accordion components.
 
 ```bash
-npm install --save @gov.au/body @gov.au/header @gov.au/accordion
+npm install @gov.au/body @gov.au/header @gov.au/accordion
 ```
 
 > View the [full list of components](https://designsystem.gov.au/components)
 
-Now that the components have been installed your folder should look like:
+Now that the components have been installed your folder structure should match:
 ```nocopy
 design-system-starter
 ├─ package-lock.json
@@ -76,7 +76,7 @@ design-system-starter
 
 ### Node modules
 
-Each dependency ( in the `package.json` file ) is installed into the `node_modules` folder. If a component requires another component or library that dependency will also be installed.
+Each dependency in the `package.json` file is installed into the `node_modules` folder. If a component requires another component or library that dependency will also be installed.
 
 
 ### Pancake
@@ -162,4 +162,4 @@ Here is an example HTML file to get started:
 </html>
 ```
 
-To start using other components you can install them and copy paste the [HTML code from the documentation](https://designsystem.gov.au/components/).
+To start using other components you can install them and copy paste the [HTML code from the documentation](/components/).
