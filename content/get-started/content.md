@@ -1,5 +1,3 @@
----
----
 There are many ways to get started with the Australian Government Design System. It all depends on your project needs, technical understanding and whether you are a developer or a designer. Don’t forget to check out our [community](https://community.digital.gov.au/c/designsystem) to see what others are doing!
 
 The four main ways of getting started with the Design System include:
