@@ -1,6 +1,6 @@
 Development environments have many benefits when using the design system. You can easily override variables in the components and see the changes throughout the system instantly.
 
-If you have any trouble throughout this process you can pick up a premade development environment with the [uikit starter](https://github.com/govau/uikit-starter) and follow our [guide on how to use it](/get-started/starter-kit). 
+If you have any trouble throughout this process you can pick up a pre-made development environment with the [uikit starter](https://github.com/govau/uikit-starter) and follow our [guide on how to use it](/get-started/starter-kit).
 
 ## Initial set up
 
@@ -8,7 +8,7 @@ We need to set up our directory so that we have a clear pipeline for development
 
 Create a `docs/` folder. This will hold all of the files needed for the website to render in the browser. Lets move our current `index.html` or [create a new `index.html`](/get-started/npm-install/#4-create-a-page) in the `docs` folder.
 
-We also are going to change the [Pancake](https://github.com/govau/pancake) settings in the `package.json` file to better suit our project structure. Lets change the location and file name for the sass and javascript files.
+We also are going to change the [Pancake](https://github.com/govau/pancake) settings in the `package.json` file to better suit our project structure. Lets change the location and file name for the sass and JavaScript files.
 ```json
 "sass": {
   "modules": false,
@@ -40,13 +40,13 @@ design-system-starter/
 ```
 
 
-## Packages required for local development 
+## Packages required for local development
 
 Now that we are set up we can install additional packages:
 - [browser-sync](https://www.npmjs.com/package/browser-sync), local development server that reloads the browser when a file changes
 - [node-sass](https://www.npmjs.com/package/node-sass), compiles SASS files into CSS files
 - [on-change](https://www.npmjs.com/package/onchange), watches for changes to the files
-- [postcss-cli](https://www.npmjs.com/package/postcss-cli), libray for transforming styles, used by autoprefixer
+- [postcss-cli](https://www.npmjs.com/package/postcss-cli), library for transforming styles, used by autoprefixer
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer), adds [vendor prefixes](https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix) to the CSS file automatically
 
 ```bash
@@ -58,12 +58,12 @@ npm install browser-sync node-sass on-change postcss-cli autoprefixer
 With these packages installed we need to update the `package.json` file so we can run commands that create our local environment.
 
 We need to create npm scripts that do the following tasks:
-- `build`: runs `build:css` to compile sass into css and `build:autoprefix` to autoprefix the compiled css
-- `build:autoprefix` add prefixes to the compiled css
-- `build:css`: compile the sass into css with a compressed output and source maps
+- `build`: runs `build:css` to compile SASS into CSS and `build:autoprefix` to autoprefix the compiled CSS
+- `build:autoprefix` add prefixes to the compiled CSS
+- `build:css`: compile the SASS into CSS with a compressed output and source maps
 - `serve`: start the local server and refresh the browser when `.html`, `main.css` or `script.js` files change
-- `watch`: runs `build` to create files then `serve` to start the local server and finally `watch:sass` for building css when sass changes
-- `watch:sass`: watch the sass directory for changes and compile sass to css when it does
+- `watch`: runs `build` to create files then `serve` to start the local server and finally `watch:sass` for building CSS when SASS changes
+- `watch:sass`: watch the sass directory for changes and compile SASS to CSS when it does
 
 To do this we edit the `scripts` in the `package.json` file:
 ```json
