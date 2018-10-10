@@ -1,18 +1,21 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
+import Breadcrumbs from "../breadcrumbs";
 
 /**
  * The page component
  */
 const Page = ({
+	_parents,
+	_pages,
 	_ID,
 	_relativeURL,
 	header,
 	pagetitle,
 	sidenav,
 	main,
-	footer
+	footer,
+
 }) => {
 
 	const headContent = `
@@ -66,6 +69,11 @@ const Page = ({
 				<div className="content-wrapper">
 					<div className="tier">
 						<main tabIndex="-1" id="content" className="main au-body container-fluid">
+						<Breadcrumbs
+							parents={ _parents }
+							ID={ _ID }
+							relativeURL={ _relativeURL }
+							pages={ _pages } />
 							<div className="row">
 								<div className="col-sm-4 col-sm-push-8">
 									{ sidenav }
