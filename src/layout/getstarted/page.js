@@ -70,10 +70,10 @@ const Page = ({
 					<div className="tier">
 						<main tabIndex="-1" id="content" className="main au-body container-fluid">
 						<Breadcrumbs
-							parents={_parents}
-							ID={_ID}
-							relativeURL={_relativeURL}
-							pages={_pages } />
+							parents={ _parents }
+							ID={ _ID }
+							relativeURL={ _relativeURL }
+							pages={ _pages } />
 							<div className="row">
 								<div className="col-sm-4 col-sm-push-8">
 									{ sidenav }
