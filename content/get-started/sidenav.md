@@ -1,5 +1,6 @@
 ---
 layout: side-nav
+startID: get-started
 order:
   - npm-install
   - download-page
