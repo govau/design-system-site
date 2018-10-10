@@ -4,12 +4,14 @@ import PropTypes from 'prop-types';
 
 const Breadcrumbs = ({ startPath, parents, ID, relativeURL, pages }) => {
 
-	let parentArray = startPath === undefined ? parents : parents.
-	slice( parents.indexOf( startPath ), parents.length );
+	let parentItems = parents;
+	if ( startPath !== undefined ){
+		parentItems = parents.slice( parents.indexOf( startPath ), parents.length );
+	}
 	// index of current page path in _parents array
-	const currentPageIndex = parentArray.indexOf( ID );
+	const currentPageIndex = parentItems.indexOf( ID );
 
-	const breadcrumbItems = parentArray.map( ( breadcrumbItem) => {
+	const breadcrumbItems = parentItems.map( ( breadcrumbItem) => {
 		// the root path is written as "index" in the _parents cuttlebelle object
 		// changed text to home, since title of home page is "About"
 		if ( breadcrumbItem === "index" ) {
@@ -35,7 +37,7 @@ const Breadcrumbs = ({ startPath, parents, ID, relativeURL, pages }) => {
 	});
 
 	return (
-		<AUbreadcrumbs label="Breadcrumb for this page" items={breadcrumbItems} />
+		<AUbreadcrumbs label="Breadcrumb for this page" items={ breadcrumbItems } />
 	)
 }
 
