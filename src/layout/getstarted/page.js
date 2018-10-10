@@ -10,7 +10,6 @@ const Page = ({
 	_pages,
 	_ID,
 	_relativeURL,
-	_nav,
 	header,
 	pagetitle,
 	sidenav,
