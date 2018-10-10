@@ -2,7 +2,13 @@ import React from 'react';
 import AUbreadcrumbs from '../../_uikit/layout/breadcrumbs';
 
 
-const Breadcrumbs = ( { _parents, _ID, _relativeURL, startPath, _pages} ) => {
+const Breadcrumbs = ({
+		_parents,
+		_ID,
+		_relativeURL,
+		startPath,
+		_pages
+}) => {
 
 	const parents = startPath === undefined ? _parents : _parents.
 	slice( _parents.indexOf( startPath ), _parents.length );
@@ -10,22 +16,23 @@ const Breadcrumbs = ( { _parents, _ID, _relativeURL, startPath, _pages} ) => {
 	// index of current page path in parents array
 	const index = parents.indexOf( _ID );
 
+	// breadcrumb items
 	const items = parents.map( ( path, i ) => {
 		if ( path === "index" ) {
 			return {
 				link: _relativeURL( "/", _ID ),
+				// Home title is "About"
 				text: "Home"
 			}
 		}
-		// link is not last item
+		// breadcrumb item is not last item
 		else if ( path !== parents[index] ) {
 			return {
 				link: _relativeURL( parents[ index - 1 ], _ID ),
 				text: _pages[ path ].pagetitle
 			}
 		}
-
-		// link is last item
+		// breadcrumb item is last item
 		else {
 			return {
 				text: _pages[ path ].pagetitle
