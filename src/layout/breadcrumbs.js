@@ -1,0 +1,57 @@
+import React from 'react';
+import AUbreadcrumbs from '../_uikit/layout/breadcrumbs';
+import PropTypes from 'prop-types';
+
+const Breadcrumbs = ({
+		startPath,
+		parents,
+		ID,
+		relativeURL,
+		pages
+}) => {
+
+	let parentArray = startPath === undefined ? parents : parents.
+	slice( parents.indexOf( startPath ), parents.length );
+
+	// index of current page path in _parents array
+	const currentPageIndex = parentArray.indexOf( ID );
+
+	// breadcrumb items
+	const breadcrumbItems = parentArray.map( ( breadcrumbItem ) => {
+		// the root path is written as "index" in the _parents cuttlebelle object
+		// change text to home, since title of home page is "About"
+		if ( breadcrumbItem === "index" ) {
+			return {
+				link: relativeURL( "/", ID ),
+				text: "Home"
+			}
+		}
+		// if breadcrumb item is not last item, create relative URL from
+		// curent path to parentArray page
+		else if ( breadcrumbItem !== parentArray[ currentPageIndex ] ) {
+			return {
+				link: relativeURL( parentArray[ currentPageIndex - 1 ], ID ),
+				text: pages[ breadcrumbItem ].pagetitle
+			}
+		}
+		// breadcrumb item is last item
+		else {
+			return {
+				text: pages[ breadcrumbItem ].pagetitle
+			}
+		}
+	});
+
+	return (
+		<AUbreadcrumbs label="Breadcrumb for this page" items={breadcrumbItems} />
+	)
+}
+
+Breadcrumbs.propTypes = {
+	startPath: PropTypes.string,
+	parents: PropTypes.object.isRequired,
+	relativeURL: PropTypes.func.isRequired,
+	pages: PropTypes.object.isRequired,
+}
+
+export default Breadcrumbs;
