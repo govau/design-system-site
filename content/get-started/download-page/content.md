@@ -1,19 +1,19 @@
-If you are not familiar with `npm` and want to use the Design System, we have created a [download page](/download) to help.
+If you are not familiar with `npm` and want to use the design system, we have created a [download page](/download) to help.
 
-Once on the page you can select the components you wish to use. Select the components and choose how you want do download them.
+Once on the page you can select the components you wish to use and choose how you want do download them.
 
-- **CSS minified** will bundle the css of the components into a single file to be used directly in HTML.
-- **CSS modules** are used with modern javascript allowing you to import styles specific component styles.
-- **SASS modules** will create multiple sass files that can be imported into a `main.scss` file.
-- **Javascript minified** will bundle the JavaScript of the components together and minify them for use directly in HTML.
-- **Javascript modules** are used when you want to break a part the components functionality.
-- **React modules** allow the components to be imported directly into react.
+- **CSS minified** will bundle the CSS of the components into a single file to be used directly in HTML.
+- **CSS modules** are used with modern JavaScript allowing you to import styles specific component styles.
+- **SASS modules** will create multiple SASS files that can be imported into a `main.scss` file.
+- **JavaScript minified** will bundle the JavaScript of the components together and minify them for use directly in HTML.
+- **JavaScript modules** are used when you want to break a part the components functionality.
+- **React modules** allow the components to be imported directly into React.
 
 
 
-**Minified CSS and JavaScript** 
+**Minified CSS and JavaScript**
 
-If you wish to download the CSS and JS for each component in a single, bundled file, select the "CSS minified" and "JavaScript minified". The result will be a zip file containing:
+If you wish to download the CSS and JavaScript for each component in a single, bundled file, select the "CSS minified" and "JavaScript minified". The result will be a zip file containing:
 ```nocopy
 AU-DesignSystem/
 ├─ package.json
@@ -23,9 +23,9 @@ AU-DesignSystem/
   └─ furnace.min.js
 ```
 
-You can now move these css and javascript files into a project directory or create an `index.html` file that references them.
+You can now move these CSS and JavaScript files into a project directory or create an `index.html` file that references them.
 
-Here is an example of how to reference these assests in your `index.html` file.
+Here is an example of how to reference these assets in your `index.html` file.
 ```html
 <!DOCTYPE html>
 <!--[if lt IE 8]>
