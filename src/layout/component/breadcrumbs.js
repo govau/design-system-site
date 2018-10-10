@@ -26,7 +26,7 @@ const Breadcrumbs = ({
 			}
 		}
 		// breadcrumb item is not last item
-		else if ( path !== parents[index] ) {
+		else if ( path !== parents[ index ] ) {
 			return {
 				link: _relativeURL( parents[ index - 1 ], _ID ),
 				text: _pages[ path ].pagetitle
@@ -40,11 +40,10 @@ const Breadcrumbs = ({
 		}
 	});
 
-
 	return (
-		<AUbreadcrumbs label="Breadcrumb for this page"
-			items={items}
-		/>
+		<AUbreadcrumbs
+			label="Breadcrumb for this page"
+			items={items} />
 	)
 }
 
