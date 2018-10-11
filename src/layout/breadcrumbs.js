@@ -22,10 +22,10 @@ const Breadcrumbs = ({ startPath, parents, ID, relativeURL, pages }) => {
 			}
 		}
 		// if breadcrumb item is not last item, create relative URL from
-		// curent path to parentArray page
-		else if ( breadcrumbItem !== parentArray[ currentPageIndex ] ) {
+		// curent path to parentItems page
+		else if ( breadcrumbItem !== parentItems[ currentPageIndex ] ) {
 			return {
-				link: relativeURL( parentArray[ currentPageIndex - 1 ], ID ),
+				link: relativeURL( parentItems[ currentPageIndex - 1 ], ID ),
 				text: pages[ breadcrumbItem ].pagetitle
 			}
 		}

@@ -6,3 +6,7 @@
 		margin-top: 0;
 	}
 }
+
+.au-breadcrumbs + h1 {
+	@include AU-space( margin-top, 1unit );
+}
