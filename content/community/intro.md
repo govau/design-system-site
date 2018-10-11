@@ -1,6 +1,6 @@
 ---
 layout: intro
-imgurl: assets/img/artwork-community-2.png
+imgurl: assets/img/artwork-community.png
 imgalt: designers and developers working together illustration
 button:
   link: https://community.digital.gov.au/c/designsystem

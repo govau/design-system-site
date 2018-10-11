@@ -1,35 +1,56 @@
 import AUsideNav           from '../_uikit/layout/side-nav';
 
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes           from 'prop-types';
 
-const SideNav = ({ order, _relativeURL, _ID, _nav, _pages }) => {
+const SideNav = ({
+	startID,
+	maxDepth,
+	order,
+	_relativeURL,
+	_ID,
+	_nav,
+	_pages
+}) => {
 
-	// const SortNavigation = ( a, b ) => {
-	// 	const indexOfA = order.indexOf( a.link );
-	// 	const indexOfB = order.indexOf( b.link );
+	const SortNavigation = ( a, b ) => {
 
-	// 	if ( indexOfA === -1 ){
-	// 		indexOfA = order.length + 1;
-	// 	}
+		// Split the values ../../ and return the ID
+		const GetLinkID = ( link ) => {
+			return link.split( '/' )[ link.split( '/' ).length - 1 ]
+		}
 
-	// 	if ( indexOfB === -1 ){
-	// 		indexOfB = order.length + 1;
-	// 	}
+		// If it is the current page use the ID or use the link value
+		const aLink = a.link === '.' ? _ID : a.link;
+		const bLink = b.link === '.' ? _ID : b.link;
 
-	// 	if ( indexOfA < indexOfB ){
-	// 		return -1;
-	// 	}
+		// Get the index from the order of the last part of the link
+		let indexOfA = order.indexOf( GetLinkID( aLink ) );
+		let indexOfB = order.indexOf( GetLinkID( bLink ) );
 
-	// 	if ( indexOfA > indexOfB ){
-	// 		return 1;
-	// 	}
+		if ( indexOfA === -1 ){
+			indexOfA = order.length + 1;
+		}
 
-	// 	return 0;
-	// }
+		if ( indexOfB === -1 ){
+			indexOfB = order.length + 1;
+		}
 
+		if ( indexOfA < indexOfB ){
+			return -1;
+		}
+
+		if ( indexOfA > indexOfB ){
+			return 1;
+		}
+
+		return 0;
+	}
+
+	let currentDepth = 0;
 	const CreateNavigation = ( nav ) => Object.entries( nav )
 		.map( ([ key, value ]) => {
+			currentDepth ++;
 			const link = {
 				text: _pages[ key ].pagetitle,
 				link: _relativeURL( key, _ID ),
@@ -37,20 +58,19 @@ const SideNav = ({ order, _relativeURL, _ID, _nav, _pages }) => {
 			}
 
 			// If the element has children create children
-			if ( typeof value === 'object' ){
+			if ( typeof value === 'object' && currentDepth !== maxDepth ){
 				link.children = CreateNavigation( value );
 			}
 
 			return link;
 		});
 
-	let navItems = CreateNavigation( _nav.index[ 'get-started' ] );
+	let navItems = CreateNavigation( _nav.index[ startID ] );
 
 	// If there is an order, sort the navigation
-	// if( order ){
-	// 	navItems.sort( SortNavigation );
-	// }
-
+	if( order ){
+		navItems = navItems.sort( SortNavigation );
+	}
 
 	return(
 		<AUsideNav
@@ -63,8 +83,25 @@ const SideNav = ({ order, _relativeURL, _ID, _nav, _pages }) => {
 };
 
 
-SideNav.propTypes = {};
+SideNav.propTypes = {
+	/**
+	 * startID: 'get-started'
+	 */
+	startID: PropTypes.string,
 
-SideNav.defaultProps = {};
+	/**
+	 * maxDepth: 1
+	 */
+	maxDepth: PropTypes.number,
+
+	/**
+	 * order: [ 'npm-install', 'customise-color' ]
+	 */
+	order: PropTypes.arrayOf( PropTypes.string ),
+};
+
+SideNav.defaultProps = {
+	maxDepth: 3,
+};
 
 export default SideNav;

@@ -1,3 +1,5 @@
+<img src="/assets/img/artwork-getting-started.png" alt="A man and woman with a sign offering different guidance" width="500"/>
+
 There are many ways to get started with the Australian Government Design System. It all depends on your project's needs, technical understanding and whether you are a developer or a designer (or somewhere in between). Don’t forget to check out our [community](https://community.digital.gov.au/c/designsystem) to see what others are doing!
 
 The three main ways of getting started with the design system include:

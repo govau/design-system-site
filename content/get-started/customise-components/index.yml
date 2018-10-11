@@ -1,5 +1,5 @@
 layout: getstarted/page
-pagetitle: Customising the existing components
+pagetitle: Customise existing components
 
 header:
   - /_shared/header.md
