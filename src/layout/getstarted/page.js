@@ -1,18 +1,21 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
+import Breadcrumbs from "../breadcrumbs";
 
 /**
  * The page component
  */
 const Page = ({
+	_parents,
+	_pages,
 	_ID,
 	_relativeURL,
 	header,
 	pagetitle,
 	sidenav,
 	main,
-	footer
+	footer,
+
 }) => {
 
 	const headContent = `
@@ -71,6 +74,10 @@ const Page = ({
 									{ sidenav }
 								</div>
 								<div className="col-sm-8 col-sm-pull-4">
+									{ _ID === 'get-started'
+										? null
+										: <Breadcrumbs parents={ _parents } ID={ _ID } relativeURL={ _relativeURL } pages={ _pages } startPath="get-started" />
+									}
 									<h1 className={
 										_ID === 'index' || _ID === '404'
 											? 'sronly'
