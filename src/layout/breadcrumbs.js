@@ -44,7 +44,7 @@ const Breadcrumbs = ({ startPath, parents, ID, relativeURL, pages }) => {
 
 Breadcrumbs.propTypes = {
 	startPath: PropTypes.string,
-	parents: PropTypes.object.isRequired,
+	parents: PropTypes.arrayOf( PropTypes.string ).isRequired,
 	relativeURL: PropTypes.func.isRequired,
 	pages: PropTypes.object.isRequired,
 }
