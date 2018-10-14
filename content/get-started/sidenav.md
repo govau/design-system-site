@@ -8,4 +8,5 @@ order:
   - design-assets
   - customise-color
   - font-size-space
+  - customise-components
 ---
