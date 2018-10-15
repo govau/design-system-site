@@ -24,7 +24,7 @@ We are going to create a card component. So lets answer the questions above.
 
 **Is it possible to use an exisiting component?**
 
-We could use `callout` however callout should be used for bringing attention to a piece of content. We need a solution that groups content together and the content inside it can be flexible.
+We could use `callout`; however, callout should be used for bringing attention to a piece of content. We need a solution that groups content together and the content inside it can be flexible.
 
 
 **Is it possible to meet this user need by customising an existing component?**
@@ -34,8 +34,8 @@ We could probably customise the `callout` component to meet this user need. Howe
 
 **Is it possible to use components that exist to make this?**
 
-For now we will be keeping it simple and not using any components. However we will use the functionality from `core` and in the future we can add the `headings` for the card titles as a dependency.
-
+For now we will be keeping it simple and not using any components. However, we will use the functionality from `core` and in the future we can add the `headings` for the card titles as a dependency.
+s
 
 **Can we build this component in a way that other products can benefit from it in the future?**
 
@@ -62,7 +62,7 @@ We will need to create a variable for the shadow around the card as this current
 
 ## Building a custom component
 
-Before you start creating components it is recommeneded to understand how to use BEM( Block Element Modifier )[http://getbem.com/]. BEM allows our components styling to stay specific and customisable.
+Before you start creating components it is recommeneded to understand how to use BEM ( Block Element Modifier )[http://getbem.com/]. BEM allows our components styling to stay specific and customisable.
 
 To start we will create a simple HTML snippet for a card. The class `.card` is unique to this component and can be reused throughout the product. The HTML created doesn't use any classes from the design system, it may be recommended to wrap this component in `au-body` or maybe this component can work without it.
 
