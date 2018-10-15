@@ -29,7 +29,7 @@ We could use `callout`; however, callout should be used for bringing attention t
 
 **Is it possible to meet this user need by customising an existing component?**
 
-We could probably customise the `callout` component to meet this user need. However it feels a bit confusing, cards are used for grouping and callouts are used for grouping text and highlighting it to a user. In this situation we will create the component but let the [community](https://community.digital.gov.au/) know that `card` and `callout` are very similar but meet different user needs.
+We could probably customise the `callout` component to meet this user need. However, it feels a bit confusing, cards are used for grouping and callouts are used for grouping text and highlighting it to a user. In this situation we will create the component but let the [community](https://community.digital.gov.au/) know that `card` and `callout` are very similar but meet different user needs.
 
 
 **Is it possible to use components that exist to make this?**
