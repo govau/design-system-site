@@ -24,16 +24,14 @@ layout: section
 | `$AU-colordark-background`        | #135E70       | Standard colour for backgrounds.                                                                            |
 
 
-### Page Alerts
+### Fonts
 
-Standard colors for the [Design System Page Alerts](../components/page-alerts)
-
-| Variable Name     | Default Value | Description                                                                                                   |
-|-------------------|---------------|---------------------------------------------------------------------------------------------------------------|
-| `$AU-color-error`   | #ff635c       | Color for the error page alert - used to notify users of errors that will stop them from completing the task. |
-| `$AU-color-success` | #0cac78       | Color for the success page alert - used to notify user a task is fully completed.                             |
-| `$AU-color-warning` | #f69900       | Color for the warning page alert - used to provide information to users that will help them avoid a problem.   |
-| `$AU-color-info`    | #00bfe9       | Color for the info page alert - used to notify users of important information that may help them complete a task.                                                                             |
+| Variable Name      |  Default Value                                                                                                                         |  Description                                                          | 
+|--------------------|----------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------| 
+| `$AU-font`           |  -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" |  Default fonts for the Design System.                                                       | 
+| `$AU-font-monospace` |  "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace                                                              |  Default monospaced fonts (fonts where each character takes the same amount of horizontal space) for the Design System. | 
+| `$AU-fontsize-map`   |  ( xs: 14, sm: 16, md: 20, lg: 24, xl: 32, xxl: 40, xxxl: 48 ) |  Predetermined pixel sizes from a 1.25 typescale rounded to the nearest `$AU-unit` (vertical grid, default value at 4) | 
+| `$AU-lineheight-map` |  ( nospace: 1, heading: 1.25, default: 1.5 )                   |  Predetermined lineheight mapped to keyword                                                      | 
 
 
 ### Media Breakpoints
@@ -48,21 +46,26 @@ Our breakpoints are designed for mobile first. These breakpoints correspond to `
 | `$AU-media-lg`  |  1200px        |  Large laptops and desktops, 1200px and higher. | 
 
 
-### Fonts
+### Page Alerts
 
-| Variable Name      |  Default Value                                                                                                                         |  Description                                                          | 
-|--------------------|----------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------| 
-| `$AU-font`           |  -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" |  Default fonts for the Design System.                                                       | 
-| `$AU-font-monospace` |  "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace                                                              |  Default monospaced fonts (fonts where each character takes the same amount of horizontal space) for the Design System. | 
-| `$AU-fontsize-map`   |  ( xs: 14, sm: 16, md: 20, lg: 24, xl: 32, xxl: 40, xxxl: 48 ) |  Predetermined pixel sizes from a 1.25 typescale rounded to the nearest `$AU-unit` (vertical grid, default value at 4) | 
-| `$AU-lineheight-map` |  ( nospace: 1, heading: 1.25, default: 1.5 )                   |  Predetermined lineheight mapped to keyword                                                      | 
+Standard colors for the [Design System Page Alerts](../components/page-alerts)
+
+| Variable Name     | Default Value | Description                                                                                                   |
+|-------------------|---------------|---------------------------------------------------------------------------------------------------------------|
+| `$AU-color-error`   | #ff635c       | Color for the error page alert - used to notify users of errors that will stop them from completing the task. |
+| `$AU-color-success` | #0cac78       | Color for the success page alert - used to notify user a task is fully completed.                             |
+| `$AU-color-warning` | #f69900       | Color for the warning page alert - used to provide information to users that will help them avoid a problem.   |
+| `$AU-color-info`    | #00bfe9       | Color for the info page alert - used to notify users of important information that may help them complete a task.                                                                             |
 
 
 ### Other
 
+Other useful variables
+
 | Variable Name     |  Default Value |  Description                                     | 
 |-------------------|----------------|--------------------------------------------------| 
-| `$AU-rem`           |  16            |  `rem` value used for `rem` calculation           | 
-| `$AU-unit`          |  4             |  Unit used for all type and grid calculations | 
-| `$AU-pixelfallback` |  true          |  Enable/disable pixel fall back for older browsers         | 
+| `$AU-rem`           |  16            |  `rem` value used for `rem` calculation.           | 
+| `$AU-unit`          |  4             |  Unit used for all type and grid calculations. | 
+| `$AU-pixelfallback` |  true          |  Enable/disable pixel fall back for older browsers.         | 
 | `$AU-border-radius` |  $AU-unit + 0px |  Design Systeem border-radius styles | 
+| `$AU-maxwidth`      |  42em           |  Max width for line lengths. | 
