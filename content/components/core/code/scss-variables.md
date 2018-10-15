@@ -4,7 +4,7 @@ layout: section
 
 ## SCSS Variables
 
-### Default Colors
+### Default Theme Colours
 
 | Variable Name               | Default Value | Description                                                                                                |
 |-----------------------------|---------------|------------------------------------------------------------------------------------------------------------|
@@ -14,7 +14,7 @@ layout: section
 | `$AU-color-background`        | `#FFFFFF`       | Background colour.                                                                            |
 
 
-### Dark Theme 
+### Dark Theme Colours
 
 | Variable Name               | Default Value | Description                                                                                                |
 |-----------------------------|---------------|------------------------------------------------------------------------------------------------------------|
