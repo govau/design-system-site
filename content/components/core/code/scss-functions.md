@@ -103,7 +103,7 @@ Create media queries and wraps the @content code inside of it.
 
 ### AU-fontgrid
 
-Mixin for setting font-size and line-height that snaps to the grid. Please visit our getting started docs to see [why and how to use the Au-fontgrid function](get-started/font-size-space/#font-size-function).
+Mixin for setting font-size and line-height that snaps to the grid. Please visit our getting started docs to see [why and how to use the AU-fontgrid function](get-started/font-size-space/#font-size-function).
 
 `AU-fontgrid( fontsize, lineheight )`
 
