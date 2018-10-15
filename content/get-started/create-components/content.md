@@ -24,7 +24,7 @@ We are going to create a card component. So lets answer the questions above.
 
 **Is it possible to use an exisiting component?**
 
-We could use `callout` however callout should be used for bringing attention to a peice of content. We need a solution that groups content together and the content inside it can be flexible.
+We could use `callout` however callout should be used for bringing attention to a piece of content. We need a solution that groups content together and the content inside it can be flexible.
 
 
 **Is it possible to meet this user need by customising an existing component?**
