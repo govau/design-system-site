@@ -123,7 +123,7 @@ p {
 ```
 and in the browser:
 
-<img src="/assets/img/get-started/small-grid.png" width="300" />
+<img alt="A screenshot of a grid lining up with the X height of the text" src="/assets/img/get-started/small-grid.png" width="300" />
 
 
 This gives a total element height of `40px` * 1.3 = `52px`.
@@ -157,7 +157,7 @@ p {
 
 And in the browser:
 
-<img src="/assets/img/get-started/large-grid.png" width="300" />
+<img src="/assets/img/get-started/large-grid.png" alt="A screenshot of a large grid lining up with the X height of the text" width="300" />
 
 This gives a total element height of `40px` * 1.225 = `49px`.
 

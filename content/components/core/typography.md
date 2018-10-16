@@ -37,4 +37,4 @@ To ensure consistency with other components in the system:
 - Designers can use font-size and line-height values from the typographic scale.
 - Developers can use the `AU-fontgrid` function in SCSS.
 
-**[Why does the design system use system fonts?](/components/core/rationale/)**
+**[Why does the design system use system fonts?](/components/core/rationale/#why-system-fonts)**
