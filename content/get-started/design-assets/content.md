@@ -2,7 +2,7 @@ We provide designers with a sketch file to get started prototyping using the com
 
 Download the sketch design files from the [download page](/download).
 
-> The sketch files use the San Francisco typeface, this is the default system font for OSX. San Francisco is not in the font book by default. To use the typeface in sketch you should [download and install San Francisco](https://developer.apple.com/fonts/).
+> The design system sketch files use the default system font for OSX, San Francisco. San Francisco is not usable in sketch by default, to use the typeface in sketch you have to [download and install San Francisco](https://developer.apple.com/fonts/).
 
 
 ## Using the sketch file
