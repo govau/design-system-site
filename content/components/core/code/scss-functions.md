@@ -2,15 +2,16 @@
 layout: section
 ---
 
+## SCSS Functions
 
-## AU-color-contrast
+### AU-color-contrast
 
 Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA standard 4.5:1
 
 `AU-color-contrast( foreground, background, silent, rounded )`
 
 
-### Props
+#### Props
 
 | Prop name | Type    | Description
 |-----------|---------------------------------------------------------------------------------------
@@ -20,21 +21,21 @@ Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA stand
 | `rounded`    | boolean | If the value is rounded or not
 
 
-### Example
+#### Example
 
 ```scss
 content: AU-color-contrast( red, blue );
 ```
 
 
-## AU-color-a11y
+### AU-color-a11y
 
 The function to find the nearest accessible color.
 
 `AU-color-a11y( toMakeA11y, background, ratioKey, steps )`
 
 
-### Props
+#### Props
 
 | Prop name | Type    | Description
 |-----------|---------------------------------------------------------------------------------------
@@ -44,28 +45,28 @@ The function to find the nearest accessible color.
 | `steps`      | number | The step size our function is searching for a new color in. The bigger the number the faster the process the rougher the found color. Must be from 0.1 to 100.
 
 
-### Example
+#### Example
 
 ```scss
 background: AU-color-a11y( red, blue );
 ```
 
 
-## AU-svguri
+### AU-svguri
 
 Generate an optimized SVG data-uri.
 
 `AU-svguri( svg )`
 
 
-### Props
+#### Props
 
 | Prop name | Type    | Description
 |-----------|---------------------------------------------------------------------------------------
 | `svg` | string  | The SVG data to be converted.
 
 
-### Example
+#### Example
 
 ```scss
 background-image: AU-svguri(
@@ -77,21 +78,21 @@ background-image: AU-svguri(
 ```
 
 
-## AU-media
+### AU-media
 
 Create media queries and wraps the @content code inside of it.
 
 `AU-media( breakpoint )`
 
 
-### Props
+#### Props
 
 | Prop name | Type    | Description
 |-----------|---------------------------------------------------------------------------------------
 | `breakpoint` | string | Either one of the following keywords: `xs`, `sm`, `md`, `lg`
 
 
-### Example
+#### Example
 
 ```scss
 @include AU-media( sm ) {
@@ -100,14 +101,14 @@ Create media queries and wraps the @content code inside of it.
 ```
 
 
-## AU-fontgrid
+### AU-fontgrid
 
-Mixin for setting font-size and line-height that snaps to the grid.
+Mixin for setting font-size and line-height that snaps to the grid. Please visit our getting started docs to see [why and how to use the AU-fontgrid function](get-started/font-size-space/#font-size-function).
 
 `AU-fontgrid( fontsize, lineheight )`
 
 
-### Props
+#### Props
 
 | Prop name | Type    | Description
 |-----------|---------------------------------------------------------------------------------------
@@ -115,21 +116,21 @@ Mixin for setting font-size and line-height that snaps to the grid.
 | `lineheight` | string | Either one of the following keywords: `heading`, `nospace`, `default`.
 
 
-### Example
+#### Example
 
 ```scss
 @include AU-fontgrid( md, heading );
 ```
 
 
-## AU-space
+### AU-space
 
-Mixin for setting a properties value to snap to the grid, with a fallback for REM.
+Mixin for setting a properties value to snap to the grid, with a fallback for REM. Please visit our getting started docs to see [why and how to use the AU-space function](get-started/font-size-space/#au-space-function).
 
 `AU-space( property, value )`
 
 
-### Props
+#### Props
 
 | Prop name | Type    | Description
 |-----------|---------------------------------------------------------------------------------------
@@ -137,57 +138,58 @@ Mixin for setting a properties value to snap to the grid, with a fallback for RE
 | `value`    | string | The values of the property ( `0`, `20px`, `1unit`, `5%` )
 
 
-### Example
+#### Example
 
 ```scss
 @include AU-space( margin, 1unit 10% );
 ```
 
 
-## AU-focus
+### AU-focus
 
 Add the outline to focus.
 
 `AU-focus( dark )`
 
 
-### Props
+#### Props
 
 | Prop name | Type    | Description
 |-----------|---------------------------------------------------------------------------------------
 | `theme` | string | Either one of the following keywords: `light` or `dark`.
 
 
-### Example
+#### Example
 
 ```scss
 @include AU-focus();
 ```
 
 
-## AU-sronly
+### AU-sronly
 
 Hide an element from the screen but not a screen reader.
 
 `AU-sronly()`
 
 
-### Example
+#### Example
 
 ```scss
 @include AU-sronly();
 ```
 
 
-## AU-clearfix
+### AU-clearfix
 
 Clearing floats.
 
 `AU-clearfix()`
 
 
-### Example
+#### Example
 
 ```scss
 @include AU-clearfix();
 ```
+

@@ -12,7 +12,8 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - sass-usage.md
+  - scss-variables.md
+  - scss-functions.md
 
 footer:
   - /_shared/footer.md
