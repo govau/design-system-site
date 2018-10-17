@@ -3,7 +3,7 @@ layout: intro
 imgurl: assets/img/artwork-about.png
 imgalt: designers and developers working together illustration
 button:
-  url: /get-started
+  link: /get-started
   text: Get started
   type: secondary
 ---
