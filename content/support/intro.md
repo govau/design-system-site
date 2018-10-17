@@ -3,7 +3,7 @@ layout: intro
 imgurl: assets/img/artwork-support.png
 imgalt: Get support illustration
 button:
-  url: https://community.digital.gov.au/c/designsystem
+  link: https://community.digital.gov.au/c/designsystem
   text: Join our commmunity
   icon: community
   type: secondary
