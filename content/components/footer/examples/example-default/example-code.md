@@ -18,9 +18,9 @@
         </ul>
       </div>
     </nav>
-    <div class="au-footer__end">
-      <div class="row">
-        <div class="col-sm-12">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="au-footer__end">
           <p>Footer text</p>
           <img class="au-responsive-media-img" width="240" src="http://placehold.it/157x80" alt="Brand image">
           <p><small>© Commonwealth of Australia, <a href="https://github.com/govau/uikit/blob/master/LICENSE.md" rel="external license">MIT licensed</a></small></p>
