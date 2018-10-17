@@ -18,12 +18,14 @@
         </ul>
       </div>
     </nav>
-    <section class="au-footer__end row">
+    <div class="row">
       <div class="col-sm-12">
-        <p>Footer text</p>
-        <img class="au-responsive-media-img" width="240" src="http://placehold.it/157x80" alt="Brand image">
-        <p><small>© Commonwealth of Australia, <a href="https://github.com/govau/uikit/blob/master/LICENSE.md" rel="external license">MIT licensed</a></small></p>
+        <div class="au-footer__end">
+          <p>Footer text</p>
+          <img class="au-responsive-media-img" width="240" src="http://placehold.it/157x80" alt="Brand image">
+          <p><small>© Commonwealth of Australia, <a href="https://github.com/govau/uikit/blob/master/LICENSE.md" rel="external license">MIT licensed</a></small></p>
+        </div>
       </div>
-    </section>
+    </div>
   </div>
 </footer>

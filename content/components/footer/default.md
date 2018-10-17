@@ -5,41 +5,42 @@ iframeFullwidth: true
 code:
   - HTML: |
       <!--
-        Light:  <footer class="au-footer">
-        Dark:   <footer class="au-footer au-footer--dark">
+        Light:  <footer class="au-footer au-body">
+        Dark:   <footer class="au-footer au-footer--dark au-body au-body--dark">
       -->
 
-      <div class="au-grid au-body">
-        <footer class="au-footer" role="contentinfo">
-          <div class="container">
-            <nav class="au-footer__navigation row" aria-label="footer navigation">
-              <div class="col-md-3 col-sm-6">
-                <h3 class="au-display-lg">Section</h3>
-                <ul class="au-link-list">
-                  <li><a href="#">Link 1</a></li>
-                  <li><a href="#">Link 2</a></li>
-                  <li><a href="#">Link 3</a></li>
-                </ul>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <h3 class="au-display-lg">Section</h3>
-                <ul class="au-link-list">
-                  <li><a href="#">Link 1</a></li>
-                  <li><a href="#">Link 2</a></li>
-                  <li><a href="#">Link 3</a></li>
-                </ul>
-              </div>
-            </nav>
-            <section class="au-footer__end row">
-              <div class="col-sm-12">
+
+      <footer class="au-footer au-body" role="contentinfo">
+        <div class="container">
+          <nav class="au-footer__navigation row" aria-label="footer navigation">
+            <div class="col-md-3 col-sm-6">
+              <h3 class="au-display-lg">Section</h3>
+              <ul class="au-link-list">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <h3 class="au-display-lg">Section</h3>
+              <ul class="au-link-list">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+              </ul>
+            </div>
+          </nav>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="au-footer__end">
                 <p>Footer text</p>
                 <img class="au-responsive-media-img" src="http://placehold.it/157x80" alt="Brand image">
                 <p><small>&copy; Commonwealth of Australia, <a href="https://github.com/govau/uikit/blob/master/LICENSE.md" rel="external license">MIT licensed</a></small></p>
               </div>
-            </section>
-          </footer>
+            </div>
           </div>
-      </div>
+        </div>
+      </footer>
 
   - React: |
       /*
@@ -72,15 +73,15 @@ code:
                 </div>
               </div>
             </AUfooterNav>
-            <AUfooterEnd>
-              <div className="row">
-                <div className="col-sm-12">
+            <div className="row">
+              <div className="col-sm-12">
+                <AUfooterEnd>
                   <p>Footer text</p>
                   <img className="au-responsive-media-img" src="http://placehold.it/157x80" alt="Brand image" />
                   <p><small>&copy; Commonwealth of Australia, <a href="https://github.com/govau/uikit/blob/master/LICENSE.md" rel="external license">MIT licensed</a></small></p>
-                </div>
+                </AUfooterEnd>
               </div>
-            </AUfooterEnd>
+            </div>
           </div>
         </AUfooter>
       </div>
