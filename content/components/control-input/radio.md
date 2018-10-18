@@ -14,7 +14,7 @@ code:
       </label>
       <label class="au-control-input">
         <input class="au-control-input__input" type="radio" name="radio-ex" checked>
-        <span class="au-control-input__text">Phone</span>
+        <span class="au-control-input__text">Tablet</span>
       </label>
   - React: |
       /*
@@ -25,7 +25,7 @@ code:
       import { AUradio } from '@gov.au/control-input';
 
       <AUradio label="Phone" name="radio-ex" />
-      <AUradio label="Phone" name="radio-ex" checked />
+      <AUradio label="Tablet" name="radio-ex" checked />
 ---
 ## Radio
 
