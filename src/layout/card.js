@@ -11,7 +11,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import AUbutton from '../_uikit/layout/buttons';
 
 /**
  * AUcardHeading - A heading row inside a card
@@ -196,6 +196,32 @@ AUcardCTA.propTypes = {
 
 
 /**
+ * AUcardCTA - A call to action row inside a card
+ *
+ * @param  {array}   buttons          - An array of button objects, each containing type, link and text
+ * @param  {object}  attributeOptions - All of the other properties that can be added
+ */
+const AUcardButton = ({ buttons, ...attributesOptions = {} }) => {
+	return(
+		buttons.map( button => {
+			return (
+				<AUbutton link={button.btnUrl} as={ button.btnType } block>{ button.btnText }</AUbutton>
+			)
+		})
+	);
+};
+
+AUcardButton.propTypes = {
+	buttons: PropTypes.arrayOf(PropTypes.shape({
+		btnType: PropTypes.string,
+		btnText: PropTypes.string.isRequired,
+		btnUrl: PropTypes.string,
+	})).isRequired,
+
+};
+
+
+/**
  * AUcardHTML - A html row inside a card
  *
  * @param  {object} html      - The HTML inside the row
@@ -253,6 +279,7 @@ const AUcard = ({ rows, appearance, alignment, link, href, ...attributesOptions 
 		svg: AUcardSVG,
 		heading: AUcardHeading,
 		content: AUcardContent,
+		button: AUcardButton,
 		html: AUcardHTML,
 	}
 

@@ -1,11 +1,10 @@
-pagetitle: Templates
+pagetitle: Basic Page Example
 
 header:
   - /_shared/header.md
 
 main:
-  - templates.md
-  - template-cards.md
+  - content.md
 
 footer:
   - /_shared/footer.md
