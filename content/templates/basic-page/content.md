@@ -1,4 +1,3 @@
-
 ## Components Used
 
 - Side Nav
@@ -10,5 +9,8 @@
 - Footer
 - Link List
 
+## When to use
 
+
+## Guidance
 

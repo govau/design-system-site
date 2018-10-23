@@ -1,4 +1,5 @@
-pagetitle: Basic Page
+layout: templates/documentation-page
+pagetitle: Basic Page Demo
 
 header:
   - /_shared/header.md

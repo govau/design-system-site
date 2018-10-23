@@ -9,7 +9,7 @@ import React from 'react';
  */
 const TemplateCards = ({ templates, cardList, _relativeURL, _ID, _parseMD }) => {
 	const cards = templates.map( template => ({
-			// link: _relativeURL( template.url, _ID ),
+			link: _relativeURL( template.url, _ID ),
 			rows: [{
 				type: 'image',
 				image: template.imgurl.startsWith('http')
@@ -25,10 +25,6 @@ const TemplateCards = ({ templates, cardList, _relativeURL, _ID, _parseMD }) => 
 			{
 				type: 'content',
 				text: template.text,
-			},
-			{
-				type: 'button',
-				buttons: template.buttons
 			},
 		]
 	}) );
