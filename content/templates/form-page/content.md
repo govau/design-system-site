@@ -1,13 +1,18 @@
-## Components Used
+Forms are used to collect information from users.
+
+## Guidance
+
+- Only label the optional inputs. Users can infer that all the others are required.
+- 
+
+## Components used
 
 - Header
 - Main Nav
-- Text Inputs
-- Control Input
-- Typography
+- Text inputs
+- Control inputs
+- Buttons
+- Link list
+- Core
+- Body
 - Grid
-
-## When to use
-
-
-## Guidance
