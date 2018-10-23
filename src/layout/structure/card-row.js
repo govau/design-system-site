@@ -5,43 +5,43 @@ import React from 'react';
 
 
 /**
- * The Promo component
+ * The Card-Row component
  */
-const Promo = ({ promos, cardList, _relativeURL, _ID, _parseMD }) => {
-	const cards = promos.map( promo => ({
-			link: _relativeURL( promo.url, _ID ),
+const CardRow = ({ cardItems, cardListVisual, _relativeURL, _ID, _parseMD }) => {
+	const cards = cardItems.map( cardItem => ({
+			link: _relativeURL( cardItem.url, _ID ),
 			rows: [{
 				type: 'image',
-				image: promo.imgurl.startsWith('http')
-					? promo.imgurl
-					: _relativeURL( promo.imgurl, _ID ),
-				description: promo.imgalt,
+				image: cardItem.imgurl.startsWith('http')
+					? cardItem.imgurl
+					: _relativeURL( cardItem.imgurl, _ID ),
+				description: cardItem.imgalt,
 			},
 			{
 				type: 'heading',
 				headingSize: '2',
-				text: promo.title,
+				text: cardItem.title,
 			},
 			{
 				type: 'content',
-				text: promo.text,
+				text: cardItem.text,
 			}]
 	}) );
 
 	return (
-		<div className="promo row">
+		<div className="card-row row">
 			<AUcardList
 				cards={ cards }
-				appearance={ cardList.appearance }
-				columnSize={ cardList.columnSize }
-				matchHeight={ cardList.matchHeight }
-				alignment={ cardList.alignment }
+				appearance={ cardListVisual.appearance }
+				columnSize={ cardListVisual.columnSize }
+				matchHeight={ cardListVisual.matchHeight }
+				alignment={ cardListVisual.alignment }
 			/>
 		</div>
 	);
 };
 
-Promo.propTypes = {
+CardRow.propTypes = {
 	/**
 	 * promos:
 	 *   - title: Community
@@ -55,7 +55,7 @@ Promo.propTypes = {
 	 *     url: /components
 	 *     text: Components are a collection of interface elements that can be used by teams of designers and developers across government to build products.
 	 */
-	promos: PropTypes.arrayOf(
+	cardItems: PropTypes.arrayOf(
 		PropTypes.shape({
 			title: PropTypes.string,
 			imgurl: PropTypes.string,
@@ -66,6 +66,6 @@ Promo.propTypes = {
 	).isRequired,
 };
 
-Promo.defaultProps = {};
+CardRow.defaultProps = {};
 
-export default Promo;
+export default CardRow;
