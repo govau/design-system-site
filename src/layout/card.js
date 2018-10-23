@@ -196,7 +196,7 @@ AUcardCTA.propTypes = {
 
 
 /**
- * AUcardCTA - A call to action row inside a card
+ * AUcardButton - A button (or list of) row inside a card
  *
  * @param  {array}   buttons          - An array of button objects, each containing type, link and text
  * @param  {object}  attributeOptions - All of the other properties that can be added
