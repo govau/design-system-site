@@ -2,6 +2,7 @@
 # THE `pancake` and `uikit` FIELDS WILL BE OVERWRITTEN
 
 pancake:
+<<<<<<< HEAD
   downloads: 125769
   modules:
     '@gov.au/pancake': 28544
@@ -40,4 +41,44 @@ uikit:
     '@gov.au/skip-link': 16434
     '@gov.au/tags': 12198
     '@gov.au/text-inputs': 17938
+=======
+  downloads: 123136
+  modules:
+    '@gov.au/pancake': 28080
+    '@gov.au/pancake-js': 18734
+    '@gov.au/pancake-json': 21689
+    '@gov.au/pancake-react': 23799
+    '@gov.au/pancake-sass': 30183
+    '@gov.au/syrup': 651
+  stars: 69
+uikit:
+  downloads: 368786
+  modules:
+    '@gov.au/accordion': 18627
+    '@gov.au/animate': 18171
+    '@gov.au/body': 22171
+    '@gov.au/breadcrumbs': 13107
+    '@gov.au/buttons': 22192
+    '@gov.au/callout': 9710
+    '@gov.au/control-input': 11675
+    '@gov.au/core': 25105
+    '@gov.au/cta-link': 16244
+    '@gov.au/direction-links': 8851
+    '@gov.au/footer': 19725
+    '@gov.au/grid-12': 20806
+    '@gov.au/header': 16304
+    '@gov.au/headings': 13862
+    '@gov.au/inpage-nav': 10450
+    '@gov.au/keyword-list': 6589
+    '@gov.au/link-list': 19992
+    '@gov.au/main-nav': 1679
+    '@gov.au/page-alerts': 14899
+    '@gov.au/progress-indicator': 8124
+    '@gov.au/responsive-media': 9409
+    '@gov.au/select': 13070
+    '@gov.au/side-nav': 2683
+    '@gov.au/skip-link': 16070
+    '@gov.au/tags': 11773
+    '@gov.au/text-inputs': 17498
+>>>>>>> 094e463... Add control input block example
   stars: 291
