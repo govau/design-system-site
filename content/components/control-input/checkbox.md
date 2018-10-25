@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-iframe: examples/example-default
+iframe: examples/example-checkbox
 code:
   - HTML: |
       <!--
