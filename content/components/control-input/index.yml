@@ -13,8 +13,10 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - default.md
+  - checkbox.md
   - radio.md
+  - checkbox-block.md
+  - radio-block.md
 
 footer:
   - /_shared/footer.md
