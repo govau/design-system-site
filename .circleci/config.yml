@@ -1,36 +1,36 @@
 # Node CircleCI 2.0 configuration file to DTA cloud 2.0
 version: 2
 jobs:
-  # installing dependencies, building assets and testing
-  build-and-test-ds:
-    docker:
-      - image: circleci/node:8.12.0
-    working_directory: ~/designsystem
-    steps:
-      - checkout
-      - restore_cache:
-          name: Restore node_modules from cache
-          keys:
-            - v1-npm-deps-{{ checksum "package-lock.json" }}
-      - run:
-          name: Install Nodejs dependencies
-          command: npm install
-      - save_cache:
-          name: Save node_modules to cache
-          key: v1-npm-deps-{{ checksum "package-lock.json" }}
-          paths:
-            - node_modules
-      - run:
-          name: Install nodejs dependencies
-          command: npm npm test
-      - run:
-          name: Install nodejs dependencies
-          command: npm run build
-      - persist_to_workspace:
-          root: ~/designsystem
-          paths:
-            - site/
-            - .deploy/
+    build-and-test-ds:
+        docker:
+            - image: circleci/node:8.12.0
+        working_directory: ~/designsystem
+        steps:
+            - checkout
+            - restore_cache:
+                name: Restore node_modules from cache
+                keys:
+                  - v2-npm-deps-{{ checksum "package.json" }}
+            - run:
+                name: Install Nodejs dependencies
+                command: npm install
+            - save_cache:
+                name: Save node_modules to cache
+                key: v2-npm-deps-{{ checksum "package.json" }}
+                paths:
+                  - node_modules
+            - run:
+                name: Generate static HTML!
+                command: npm run build
+            - persist_to_workspace:
+                root: ~/designsystem
+                paths:
+                  - site/
+                  - .deploy/
+                  - server/
+                  - content/
+                  - package.json
+                  - package-lock.json
 
 
   # DEPLOY-STAGING JOB
