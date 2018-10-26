@@ -9,11 +9,12 @@ import React, { Fragment } from 'react';
 const HeaderGovAU = ({ publisher, publisher_url, left_title, left_content, right_title, right_content }) => (
 	<div className="headergovau">
 		<div className="container-fluid">
-			<div className="row headergovau__bar">
+			<div className="row headergovau__bar" role="tablist">
 				<div className="col-md-12">
 					<a
 						href="#headergovau-accordion"
 						className="headergovau__button js-header-accordion au-accordion--closed"
+						role="tab"
 						aria-controls="headergovau-accordion"
 						aria-expanded="false"
 						aria-selected="false"
