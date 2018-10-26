@@ -28,6 +28,8 @@ jobs:
                   - site/
                   - .deploy/
                   - package.json
+                  - package-lock.json
+                  - server
 
 
     deploy-staging:
@@ -42,6 +44,8 @@ jobs:
                 cd ~/designsystem
                 cp .deploy/manifest-staging.yml site/
                 cp package.json site/
+                cp package-lock.json site/
+                cp -r server site/
                 cd site
                 cf login -a $CF_API_STAGING -o $CF_ORG_STAGING -s $CF_SPACE_STAGING -u $CF_USER_STAGING -p $CF_PASSWORD_STAGING
                 cf zero-downtime-push designsystem -f manifest-staging.yml
@@ -61,6 +65,8 @@ jobs:
                   cd ~/designsystem
                   cp .deploy/manifest-prod.yml site/
                   cp package.json site/
+                  cp package-lock.json site/
+                  cp -r server site/
                   cd site
                   cf login -a $CF_API_PROD -o $CF_ORG_PROD -s $CF_SPACE_PROD -u $CF_USER_PROD -p $CF_PASSWORD_PROD
                   cf zero-downtime-push designsystem -f manifest-prod.yml
@@ -80,6 +86,8 @@ jobs:
                   cd ~/designsystem
                   cp .deploy/manifest-testing.yml site/
                   cp package.json site/
+                  cp package-lock.json site/
+                  cp -r server site/
                   cd site
                   cf login -a $CF_API_STAGING -o $CF_ORG_STAGING -s $CF_SPACE_STAGING -u $CF_USER_STAGING -p $CF_PASSWORD_STAGING
                   cf zero-downtime-push designsystem-$CIRCLE_BRANCH -f manifest-testing.yml
