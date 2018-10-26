@@ -27,10 +27,10 @@ jobs:
                 paths:
                   - site/
                   - .deploy/
+                  - server/
+                  - content/
                   - package.json
                   - package-lock.json
-                  - server
-                  - content
 
 
     deploy-staging:
