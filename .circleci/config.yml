@@ -10,13 +10,13 @@ jobs:
             - restore_cache:
                 name: Restore node_modules from cache
                 keys:
-                  - v2-npm-deps-{{ checksum "package-lock.json" }}
+                  - v2-npm-deps-{{ checksum "package.json" }}
             - run:
                 name: Install Nodejs dependencies
                 command: npm install
             - save_cache:
                 name: Save node_modules to cache
-                key: v2-npm-deps-{{ checksum "package-lock.json" }}
+                key: v2-npm-deps-{{ checksum "package.json" }}
                 paths:
                   - node_modules
             - run:
