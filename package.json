@@ -104,7 +104,9 @@
 		"onchange": "^3.3.0"
 	},
 	"engines": {
-		"node": "~9"
+		"node": "~8",
+		"npm": "~6",
+		"yarn": "~1"
 	},
 	"cuttlebelle": {
 		"folder": {
