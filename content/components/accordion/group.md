@@ -11,7 +11,7 @@ code:
               Please add a `no-js` class on html and replace it with `js` if enabled
               https://www.paulirish.com/2009/avoiding-the-fouc-v3/
       -->
-      <ul className="au-accordion-group">
+      <ul class="au-accordion-group">
         <li>
           <section class="au-accordion">
             <a href="#accordion-group-1" class="au-accordion__title js-au-accordion au-accordion--closed" aria-controls="accordion-group-1" aria-expanded="false" aria-selected="false" onclick="return AU.accordion.Toggle( this )">Accordion group 1</a>
