@@ -7,22 +7,20 @@ import React               from 'react';
 const HeaderGovAU = ({ publisher, publisher_url, left_title, left_content, right_title, right_content }) => (
 	<div className="headergovau">
 		<div className="container-fluid">
-			<div className="row headergovau__bar" role="presentation">
+			<div className="row headergovau__bar">
 				<div className="col-md-12">
-					<a
+					<button
 						href="#headergovau-accordion"
 						className="headergovau__button js-header-accordion au-accordion--closed"
-						role="link"
 						aria-controls="headergovau-accordion"
 						aria-expanded="false"
-						aria-selected="false"
 						onClick="return AU.accordion.Toggle( this )"
 					>
 						<span className="headergovau__text">
 							<span className="headergovau__title">Australian Government&nbsp;</span>
 							<span className="headergovau__official">official website</span>
 						</span>
-					</a>
+					</button>
 					<a href={ publisher_url } className="headergovau__publisher">
 						{ publisher }
 					</a>
