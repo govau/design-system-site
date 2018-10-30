@@ -9,7 +9,7 @@ import React, { Fragment } from 'react';
 const HeaderGovAU = ({ publisher, publisher_url, left_title, left_content, right_title, right_content }) => (
 	<div className="headergovau">
 		<div className="container-fluid">
-			<div className="row headergovau__bar" role="tablist">
+			<div className="row headergovau__bar" role="presentation">
 				<div className="col-md-12">
 					<a
 						href="#headergovau-accordion"
