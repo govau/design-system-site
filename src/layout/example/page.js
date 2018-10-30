@@ -18,6 +18,7 @@ const Example = ({
 	livedemo,
 	alignment,
 	alignContent,
+	templateCSS,
 	_ID,
 	_relativeURL,
 	_parseYaml,
@@ -62,6 +63,7 @@ const Example = ({
 <title>${ pagetitle ? pagetitle : componentTitle + ` example` } - Australian Government Design System</title>
 
 <link rel="stylesheet" href=${ _relativeURL( '/assets/css/example.css', _ID ) } />
+<link rel="stylesheet" href=${ _relativeURL( `/assets/css/${templateCSS}`, _ID ) } />
 
 <!--[if lte IE 9]>
 	<script src="${ _relativeURL( '/assets/js/html5shiv.js', _ID ) }"></script>

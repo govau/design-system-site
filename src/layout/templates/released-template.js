@@ -1,53 +1,41 @@
 import AUcardList          from '../card-list';
-import GetData             from './../../helper/getData';
+import GetData             from './../../helper/getTemplateData';
 
 import React, { Fragment } from 'react';
 import PropTypes           from 'prop-types';
 
 
 /**
- * The component/template released listing of cards
+ * The component released listing of cards
  */
-const ComponentReleased = ({ cardList, cardType, releasedItemsPath, _ID, _body, _parseYaml, _relativeURL }) => {
+const ComponentReleased = ({ cardList, _ID, _body, _parseYaml, _relativeURL }) => {
 
-	const components = GetData({
-		filter: ( key, COMPONENTS ) => COMPONENTS[ key ].state === 'published',
+	const templates = GetData({
+		filter: ( key, Templates ) => Templates[ key ].state === 'published',
 		yaml: _parseYaml,
 	});
 
-	const cards = components.map( component => {
-
-		const imageRow = cardType === 'components' ? {
-			type: 'svg',
-			title: component.name,
-			svg: `/assets/svg/map.svg#${ component.ID }`,
-			description: component.description,
-			fullwidth: true,
-		} :
-		{
-			type:  'image',
-			title: component.name,
-			image: `/assets/img/template.${ component.ID }.png`,
-			description: component.description,
-			fullwidth: true,
-
-		}
-		console.log(  releasedItemsPath + component.ID )
+	const cards = templates.map( template => {
 		const cardData = {
-			link: _relativeURL( `${ releasedItemsPath + component.ID }`, _ID ),
-			rows: [
-			imageRow,
+			link: _relativeURL( `/templates/${ template.ID }`, _ID ),
+			rows: [{
+				type: 'image',
+				description: template.name,
+				image: `/assets/img/template.${ template.ID }.png`,
+				description: template.description,
+				fullwidth: true,
+			},
 			{
 				type: 'heading',
 				headingSize: '3',
-				text: component.name,
+				text: template.name,
 			}]
 		}
 
-		if ( component.highlight ) {
+		if ( template.highlight ) {
 			cardData.rows.push ({
 				type: 'html',
-				html: <div className="card__highlight">{ component.highlight }</div>
+				html: <div className="card__highlight">{ template.highlight }</div>
 			})
 		}
 

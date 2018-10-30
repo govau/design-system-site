@@ -1,0 +1,110 @@
+$AU-main-nav-breakpoint: sm;
+@import '../_uikit/sass/uikit';
+
+// Reset the body
+body {
+	padding: 0;
+	margin: 0;
+}
+
+
+// Increase the spacing for au-body elements inside main
+main {
+	.au-body {
+		@include AU-space( padding, 2unit 0 );
+
+		@include AU-media( sm ) {
+			@include AU-space( padding, 4unit 0 );
+		}
+	}
+}
+
+
+// Slight grid changes for container fluid
+.au-grid .container-fluid {
+	@include AU-space( max-width, 80unit );
+
+	@include AU-media( sm ){
+		@include AU-space( padding-left, 2unit );
+		@include AU-space( padding-right, 2unit );
+	}
+}
+
+// Increase spacing between inline list items in footer
+.au-footer .au-link-list--inline li {
+	@include AU-space( padding-right, 1unit );
+}
+
+// The call to actions on the home page
+.btn-cta-group {
+	@include AU-space( margin-top, 1unit );
+
+	.au-btn {
+		@include AU-space( margin-top, 1unit );
+	}
+}
+
+
+// Home page highlighted spacing on mobile
+.highlighted-section .col-sm-4 + .col-sm-4 {
+	@include AU-space( margin-top, 4unit );
+
+	@include AU-media( sm ) {
+		margin-top: 0;
+	}
+}
+
+
+// Mobile side nav spacing
+.au-side-nav {
+	@include AU-space( margin-bottom, 2unit );
+
+	@include AU-media( sm ){
+		margin-bottom: 0;
+	}
+}
+
+form {
+	@include AU-space( margin-top, 2unit );
+
+	label + input,
+	label + textarea {
+		@include AU-space( margin-top, .5unit );
+	}
+}
+
+.form-item + .form-item {
+	@include AU-space( margin-top, 2.5unit );
+}
+
+
+.form-required {
+	color: $AU-color-foreground-muted;
+	@include AU-fontgrid( xs, default );
+	border-bottom: 1px $AU-color-error solid;
+}
+
+
+.label--block {
+	display: block;
+}
+
+// Reset empty required values
+.empty-required {
+
+	// Text inputs and text areas
+	&.au-text-input:invalid,
+	&.au-text-input.au-text-input--dark:invalid, {
+		background: transparent;
+		border-color: $AU-color-foreground-border;
+	}
+
+	// Radio buttons and control inputs
+	&.au-control-input__input:invalid + .au-control-input__text, {
+		background:transparent;
+	}
+
+	&.au-control-input__input:invalid + .au-control-input__text:after{
+		border-color: transparent;
+	}
+}

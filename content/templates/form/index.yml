@@ -1,16 +1,17 @@
-pagetitle: Templates
+pagetitle: Form Template
 layout: templates/page
 headernav: false
 showheader: false
+
 header:
   - /_shared/header.md
 
-main:
-  - templates.md
-  - released.md
-
 sidebar:
-  - sidebar.md
+  - /templates/sidebar.md
+
+main:
+  - default.md
+  - guidance.md
 
 footer:
   - /_shared/footer.md

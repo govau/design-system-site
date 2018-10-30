@@ -1,0 +1,3 @@
+---
+layout: templates/template-accordion
+---

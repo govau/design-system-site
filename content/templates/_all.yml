@@ -1,0 +1,104 @@
+Form:
+  name: Form Template
+  description: >
+    Form Page Tempalte
+  metatags:
+    - color
+    - spacing
+    - typography
+    - mixins
+    - variables
+    - functions
+  tags:
+    - typography
+    - accessibility
+  related: null
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
+  required: true
+  contributors:
+    - name: Dominik Wilkowski
+      img: dominik-wilkowski.jpg
+      url: 'https://github.com/dominikwilkowski'
+    - name: Trevor Brennan
+      img: trevor-brennan.jpg
+      url: 'https://github.com/TrebBrennan'
+  state: published
+  order: 0
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  ID: form
+Basic:
+  name: Basic Template
+  description: >
+    Form Page Tempalte
+  metatags:
+    - color
+    - spacing
+    - typography
+    - mixins
+    - variables
+    - functions
+  tags:
+    - typography
+    - accessibility
+  related: null
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
+  required: true
+  contributors:
+    - name: Dominik Wilkowski
+      img: dominik-wilkowski.jpg
+      url: 'https://github.com/dominikwilkowski'
+    - name: Trevor Brennan
+      img: trevor-brennan.jpg
+      url: 'https://github.com/TrebBrennan'
+  state: published
+  order: 0
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  ID: basic
+
+Home:
+  name: Home Template
+  description: >
+    Form Page Tempalte
+  metatags:
+    - color
+    - spacing
+    - typography
+    - mixins
+    - variables
+    - functions
+  tags:
+    - typography
+    - accessibility
+  related: null
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
+  required: true
+  contributors:
+    - name: Dominik Wilkowski
+      img: dominik-wilkowski.jpg
+      url: 'https://github.com/dominikwilkowski'
+    - name: Trevor Brennan
+      img: trevor-brennan.jpg
+      url: 'https://github.com/TrebBrennan'
+  state: published
+  order: 0
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  ID: home
+

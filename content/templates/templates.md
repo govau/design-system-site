@@ -5,6 +5,8 @@ btnurl: https://community.digital.gov.au/c/designsystem
 btntype: secondary
 ---
 
+# Templates 
+
 **Templates aren't ready yet, but we'd love your help.**
 
 Templates will provide examples of components being used together on a page. They will also help you get your project up and running faster.
