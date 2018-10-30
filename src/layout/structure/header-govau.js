@@ -1,7 +1,5 @@
-import AUlinkList          from '../../_uikit/layout/link-list';
-
 import PropTypes           from 'prop-types';
-import React, { Fragment } from 'react';
+import React               from 'react';
 
 /**
  * The headergovau component
@@ -14,7 +12,7 @@ const HeaderGovAU = ({ publisher, publisher_url, left_title, left_content, right
 					<a
 						href="#headergovau-accordion"
 						className="headergovau__button js-header-accordion au-accordion--closed"
-						role="tab"
+						role="link"
 						aria-controls="headergovau-accordion"
 						aria-expanded="false"
 						aria-selected="false"
