@@ -13,7 +13,7 @@ import Fs from 'fs';
  *
  * @disable-docs
  */
-const GetData = ({ yaml, filter = () => true, object = false }) => {
+const GetTemplateData = ({ yaml, filter = () => true, object = false }) => {
 	const COMPONENTS = yaml(
 		Fs.readFileSync(
 			Path.normalize(`${ __dirname }/../../content/templates/_all.yml`),
@@ -49,7 +49,7 @@ const GetData = ({ yaml, filter = () => true, object = false }) => {
 	}
 };
 
-export default GetData;
+export default GetTemplateData;
 
 
 /**
@@ -61,7 +61,7 @@ export default GetData;
  * @return {string}             - The data that matches the value and string
  */
 export const GetComponentValue = ( componentID, value, yaml ) => {
-	const data = GetData({
+	const data = GetTemplateData({
 		filter: ( key, COMPONENTS ) => COMPONENTS[ key ].ID === componentID,
 		yaml: yaml,
 	})[ 0 ];

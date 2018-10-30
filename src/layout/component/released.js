@@ -1,5 +1,7 @@
 import AUcardList          from '../card-list';
 import GetData             from './../../helper/getData';
+import GetTemplateData             from './../../helper/getTemplateData';
+
 
 import React, { Fragment } from 'react';
 import PropTypes           from 'prop-types';
@@ -10,10 +12,13 @@ import PropTypes           from 'prop-types';
  */
 const ComponentReleased = ({ cardList, cardType, releasedItemsPath, _ID, _body, _parseYaml, _relativeURL }) => {
 
-	const components = GetData({
+	const components = cardType === 'components' ? GetData({
 		filter: ( key, COMPONENTS ) => COMPONENTS[ key ].state === 'published',
-		yaml: _parseYaml,
-	});
+		yaml: _parseYaml
+	}) : GetTemplateData({
+		filter: ( key, COMPONENTS ) => COMPONENTS[ key ].state === 'published',
+		yaml: _parseYaml
+	})
 
 	const cards = components.map( component => {
 
@@ -32,7 +37,6 @@ const ComponentReleased = ({ cardList, cardType, releasedItemsPath, _ID, _body, 
 			fullwidth: true,
 
 		}
-		console.log(  releasedItemsPath + component.ID )
 		const cardData = {
 			link: _relativeURL( `${ releasedItemsPath + component.ID }`, _ID ),
 			rows: [

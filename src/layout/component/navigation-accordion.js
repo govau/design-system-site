@@ -2,6 +2,7 @@ import AUlinkList          from '../../_uikit/layout/link-list';
 import GetModule           from './../../helper/getModule';
 import { CreateLink }      from '../navigation';
 import GetData             from './../../helper/getData';
+import GetTemplateData             from '../../helper/getTemplateData';
 
 import React, { Fragment } from 'react';
 import PropTypes           from 'prop-types';
@@ -10,7 +11,7 @@ import PropTypes           from 'prop-types';
 /**
  * The NavigationAccordion component
  */
-const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parents, _parseYaml }) => {
+const NavigationAccordion = ({ _relativeURL, isTemplate, releasedItemsPath, _ID, _pages, _parents, _parseYaml }) => {
 	const module = GetModule( _parents, _pages, _ID );
 
 	const CreateAccordion = ( title, components, id, state, i ) => {
@@ -20,7 +21,10 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parents, _parseYaml }
 		// Open the accordion based on the current pages module state
 		if( id && state ) {
 
-			const MODULE = GetData({
+			const MODULE = isTemplate ? GetTemplateData({
+				filter: ( key, COMPONENTS ) => key === module,
+				yaml: _parseYaml
+			})[ 0 ] : GetData({
 				filter: ( key, COMPONENTS ) => key === module,
 				yaml: _parseYaml
 			})[ 0 ];
@@ -39,7 +43,7 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parents, _parseYaml }
 				: component.name;
 
 			const link = {
-				link: `/components/${ component.ID }`,
+				link: `${ releasedItemsPath + component.ID }`,
 				text: label
 			}
 
@@ -86,7 +90,10 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parents, _parseYaml }
 	// For each state create an accordion
 	Object.keys( componentStates ).map( ( state, i ) => {
 
-		const components = GetData({
+		const components = isTemplate ? GetTemplateData({
+			filter: ( key, COMPONENTS ) => COMPONENTS[ key ].state === state,
+			yaml: _parseYaml,
+		}) : GetData({
 			filter: ( key, COMPONENTS ) => COMPONENTS[ key ].state === state,
 			yaml: _parseYaml,
 		});
