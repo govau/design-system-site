@@ -29,6 +29,8 @@ jobs:
                   - .deploy/
                   - server/
                   - content/
+                  - package.json
+                  - package-lock.json
 
 
     deploy-staging:
