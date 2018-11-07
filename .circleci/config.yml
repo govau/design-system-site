@@ -1,5 +1,4 @@
 # Node CircleCI 2.0 configuration file to DTA cloud 2.0
-
 version: 2
 jobs:
     build-and-test-ds:
@@ -102,6 +101,7 @@ jobs:
               cd deploy/
               cf login -a $CF_API_STAGING -o $CF_ORG_STAGING -s $CF_SPACE_STAGING -u $CF_USER_STAGING -p $CF_PASSWORD_STAGING
               cf zero-downtime-push designsystem-$CIRCLE_BRANCH -f manifest-testing.yml
+            
 
 # OUR WORKFLOW
 # this is where we orchestrate our jobs
