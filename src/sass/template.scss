@@ -22,11 +22,10 @@ main {
 
 // Slight grid changes for container fluid
 .au-grid .container-fluid {
-	@include AU-space( max-width, 80unit );
 
 	@include AU-media( sm ){
-		@include AU-space( padding-left, 2unit );
-		@include AU-space( padding-right, 2unit );
+		// @include AU-space( padding-left, 2unit );
+		// @include AU-space( padding-right, 2unit );
 	}
 }
 

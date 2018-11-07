@@ -1,0 +1,8 @@
+layout: templates/demo-page
+pagetitle: Home Page Live Demo
+examples:
+  - template: example-code.md
+livedemo: true
+alignment: inline
+fullwidth: true
+templateCSS: template.css

@@ -6,7 +6,7 @@ header:
   - /_shared/header.md
 
 main:
-  - templates.md
+
   - released.md
 
 sidebar:

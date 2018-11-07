@@ -7,7 +7,7 @@
 
 <!-- HEADER -->
 <header class="au-header au-header--dark" role="banner">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <a class="au-header__brand" href="#">
@@ -24,7 +24,7 @@
 
 <!-- MAIN NAVIGATION -->
 <nav class="au-main-nav au-main-nav--dark" id="#mainmenu" aria-label="main navigation">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="au-main-nav__content" id="main-nav-default-dark">
@@ -64,7 +64,7 @@
 <main id="content">
     <!--CONTENT-->
     <div class="au-body au-body--alt">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-sm-push-6">
                     <img class="au-responsive-media-img banner__image" src="http://placehold.it/600x260" alt="">
@@ -81,7 +81,7 @@
         </div>
     </div>
     <section class="au-body">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <h2>Some highlighted content</h2>
@@ -93,7 +93,7 @@
         </div>
     </section>
     <section class="highlighted-section au-body au-body--dark au-body--alt">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-sm-4">
                         <img class="au-responsive-media-img banner__image" src="http://placehold.it/100x100" alt="">
@@ -114,7 +114,7 @@
         </div>
     </section>
     <section class="au-body">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <h2>Sub content</h2>
@@ -133,7 +133,7 @@
 
 <!--FOOTER -->
 <footer class="au-footer au-footer--dark au-body au-body--dark" role="contentinfo">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <nav class="col-md-12">
                 <ul class="au-link-list au-link-list--inline">
