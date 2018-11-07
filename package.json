@@ -22,7 +22,7 @@
 		"watch:js": "onchange 'src/js/**/*.js' -- npm run build:js",
 		"watch:site": "cuttlebelle -w -n",
 		"watch": "npm run build && npm run watch:sass | npm run watch:js | npm run watch:site",
-		"setup": "node src/helper/mkdir.js src/assets/js/ && node src/helper/mkdir.js src/assets/css/",
+		"setup": "npm run mkdirp src/assets/js/ && npm run mkdirp src/assets/css/",
 		"start:local": "node server/index.js local",
 		"start:staging": "node server/index.js staging",
 		"start": "node server/index.js",
@@ -102,6 +102,7 @@
 		"uglify-js": "^3.4.9"
 	},
 	"devDependencies": {
+		"mkdirp": "^0.5.1",
 		"onchange": "^3.3.0"
 	},
 	"engines": {

@@ -35,108 +35,114 @@ jobs:
 
     deploy-staging:
       docker:
-          - image: govau/cf-cli
+        - image: govau/cf-cli
       steps:
-          - attach_workspace:
-              at: ~/designsystem
-          - run:
-              name: Deploy to cloud.gov.au
-              command: |
-                cd ~/designsystem
-                mkdir -p deploy/
-                mv site/ deploy/
-                mv server deploy/
-                mv content deploy/
-                mv package.json deploy/
-                mv package-lock.json deploy/
-                mv .deploy/manifest-staging.yml deploy/
-                cd deploy/
-                cf login -a $CF_API_STAGING -o $CF_ORG_STAGING -s $CF_SPACE_STAGING -u $CF_USER_STAGING -p $CF_PASSWORD_STAGING
-                cf zero-downtime-push designsystem -f manifest-staging.yml
+        - attach_workspace:
+            at: ~/designsystem
+        - run:
+            name: Deploy to cloud.gov.au
+            command: |
+              cd ~/designsystem
+              mkdir -p deploy/
+              mv site/ deploy/
+              mv server deploy/
+              mv content deploy/
+              mv package.json deploy/
+              mv package-lock.json deploy/
+              mv .deploy/manifest-staging.yml deploy/
+              cd deploy/
+              cf login -a $CF_API_STAGING -o $CF_ORG_STAGING -s $CF_SPACE_STAGING -u $CF_USER_STAGING -p $CF_PASSWORD_STAGING
+              cf zero-downtime-push designsystem -f manifest-staging.yml
 
 
     # DEPLOY-PROD JOB
     # installing dependencies, building assets and deploying to production
     deploy-prod:
-        docker:
-            - image: govau/cf-cli
-        steps:
-            - attach_workspace:
-                at: ~/designsystem
-            - run:
-                name: Deploy to cloud.gov.au
-                command: |
-                  cd ~/designsystem
-                  mkdir -p deploy/
-                  mv site/ deploy/
-                  mv server deploy/
-                  mv content deploy/
-                  mv package.json deploy/
-                  mv package-lock.json deploy/
-                  mv .deploy/manifest-prod.yml deploy/
-                  cd deploy/
-                  cf login -a $CF_API_PROD -o $CF_ORG_PROD -s $CF_SPACE_PROD -u $CF_USER_PROD -p $CF_PASSWORD_PROD
-                  cf zero-downtime-push designsystem -f manifest-prod.yml
+      docker:
+        - image: govau/cf-cli
+      steps:
+        - attach_workspace:
+            at: ~/designsystem
+        - run:
+            name: Deploy to cloud.gov.au
+            command: |
+              cd ~/designsystem
+              mkdir -p deploy/
+              mv site/ deploy/
+              mv server deploy/
+              mv content deploy/
+              mv package.json deploy/
+              mv package-lock.json deploy/
+              mv .deploy/manifest-prod.yml deploy/
+              cd deploy/
+              cf login -a $CF_API_PROD -o $CF_ORG_PROD -s $CF_SPACE_PROD -u $CF_USER_PROD -p $CF_PASSWORD_PROD
+              cf zero-downtime-push designsystem -f manifest-prod.yml
 
 
     # DEPLOY-TEST JOB
     # installing dependencies, building assets and deploying to test branches
     deploy-test:
-        docker:
-            - image: govau/cf-cli
-        steps:
-            - attach_workspace:
-                at: ~/designsystem
-            - run:
-                name: Deploy to cloud.gov.au
-                command: |
-                  cd ~/designsystem
-                  mkdir -p deploy/
-                  mv site/ deploy/
-                  mv server deploy/
-                  mv content deploy/
-                  mv package.json deploy/
-                  mv package-lock.json deploy/
-                  mv .deploy/manifest-testing.yml deploy/
-                  cd deploy/
-                  cf login -a $CF_API_STAGING -o $CF_ORG_STAGING -s $CF_SPACE_STAGING -u $CF_USER_STAGING -p $CF_PASSWORD_STAGING
-                  cf zero-downtime-push designsystem-$CIRCLE_BRANCH -f manifest-testing.yml
-
+      docker:
+        - image: govau/cf-cli
+      steps:
+        - attach_workspace:
+            at: ~/designsystem
+        - run:
+            name: Deploy to cloud.gov.au
+            command: |
+              cd ~/designsystem
+              mkdir -p deploy/
+              mv site/ deploy/
+              mv server deploy/
+              mv content deploy/
+              mv package.json deploy/
+              mv package-lock.json deploy/
+              mv .deploy/manifest-testing.yml deploy/
+              cd deploy/
+              cf login -a $CF_API_STAGING -o $CF_ORG_STAGING -s $CF_SPACE_STAGING -u $CF_USER_STAGING -p $CF_PASSWORD_STAGING
+              cf zero-downtime-push designsystem-$CIRCLE_BRANCH -f manifest-testing.yml
+            
 
 # OUR WORKFLOW
 # this is where we orchestrate our jobs
 workflows:
-    version: 2
-    deploy-designsystem:
-        jobs:
+  version: 2
+  deploy-designsystem:
+    jobs:
+      - build-and-test-ds
+      - deploy-staging: # run deploy staging
+          requires:
             - build-and-test-ds
-            - deploy-staging:       # run deploy staging
-                requires:
-                  - build-and-test-ds
-                filters:
-                  branches:
-                    only: develop   # and only on the `develop` branch
+          filters:
+            branches:
+              only: develop # and only on the `develop` branch
 
-            - deploy-prod:          # run deploy production
-                requires:
-                  - build-and-test-ds
-                filters:
-                  branches:
-                    only: master    # and only on the `master` branch
+      - deploy-prod: # run deploy production
+          requires:
+            - build-and-test-ds
+          filters:
+            branches:
+              only: master # and only on the `master` branch
 
-            - deploy-test:          # run test branches
-                requires:
-                  - build-and-test-ds
-                filters:
-                  branches:
-                    only: /.*-test/ # and only on the branches that end with `-test`
+      - deploy-test: # run test branches
+          requires:
+            - build-and-test-ds
+          filters:
+            branches:
+              only: /.*-test/ # and only on the branches that end with `-test`
 
-    nightly-rebuild:            # rerun a task via scheduling, all times are UTC https://circleci.com/docs/2.0/workflows/#scheduling-a-workflow
-        triggers:
-          - schedule:
-              cron: "0 14 * * *"  # 2PM utc => 1am or midnight (daylight saving)
-              filters:
-                branches:
-                  only: master    # we only run the master branch
-        jobs:
-            - deploy-prod           # and only the production deploy
+  nightly-rebuild: # rerun a task via scheduling, all times are UTC https://circleci.com/docs/2.0/workflows/#scheduling-a-workflow
+    triggers:
+      - schedule:
+          cron: "0 14 * * *" # 2PM utc => 1am or midnight (daylight saving)
+          filters:
+            branches:
+              only: master # we only run the master branch
+    jobs:
+      - build-and-test-ds
+      - deploy-prod: # run deploy production
+          requires:
+            - build-and-test-ds
+          filters:
+            branches:
+              only: master # and only on the `master` branch
