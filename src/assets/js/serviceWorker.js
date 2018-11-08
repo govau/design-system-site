@@ -1,5 +1,5 @@
 // Name of the cache stored in the users browser
-const CACHE_NAME = "designsystem";
+const CACHE_NAME = "designsystem-v1";
 
 // List of assets to cache on inital page fetch.
 const CACHE = [
@@ -41,11 +41,11 @@ if ("serviceWorker" in navigator) {
 	/**
 	 * Open cache, cache specified files
 	 */
-	window.addEventListener("install", function(event) {
+	self.addEventListener("install", function(event) {
 		event.waitUntil(
 			caches.open(CACHE_NAME).then(function(cache) {
 				console.log("Opened cache");
-				return cache.addAll(urlsToCache);
+				return cache.addAll(CACHE);
 			})
 		);
 	});
@@ -53,7 +53,7 @@ if ("serviceWorker" in navigator) {
 	/**
 	 * Find resources as found in cache on page fetch
 	 */
-	window.addEventListener("fetch", function(event) {
+	self.addEventListener("fetch", function(event) {
 		event.respondWith(
 			caches.match(event.request).then(function(response) {
 				if (response) {
