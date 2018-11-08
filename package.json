@@ -4,18 +4,18 @@
 	"description": "The government open language for design website.",
 	"scripts": {
 		"docs": "cuttlebelle docs",
-		"prebuild:pancake": "./node_modules/.bin/pancake",
+		"prebuild:pancake": "pancake",
 		"prebuild": "npm run prebuild:pancake && node src/helper/helper.js components",
-		"build:site": "./node_modules/.bin/cuttlebelle",
+		"build:site": "cuttlebelle",
 		"build:autoprefix": "postcss src/assets/css/style.css -u autoprefixer -r && postcss src/assets/css/example.css -u autoprefixer -r",
-		"build:sass": "./node_modules/.bin/mkdirp src/assets/css/ && node-sass --output-style compressed src/sass/style.scss src/assets/css/style.css && node-sass --output-style compressed src/sass/example.scss src/assets/css/example.css",
-		"build:sass:dev": "./node_modules/.bin/mkdirp src/assets/css/ && node-sass --output-style compact --source-map true src/sass/style.scss src/assets/css/style.css && node-sass --output-style compact --source-map true src/sass/example.scss src/assets/css/example.css",
+		"build:sass": "mkdirp src/assets/css/ && node-sass --output-style compressed src/sass/style.scss src/assets/css/style.css && node-sass --output-style compressed src/sass/example.scss src/assets/css/example.css",
+		"build:sass:dev": "mkdirp src/assets/css/ && node-sass --output-style compact --source-map true src/sass/style.scss src/assets/css/style.css && node-sass --output-style compact --source-map true src/sass/example.scss src/assets/css/example.css",
 		"build:css": "npm run build:sass && npm run build:autoprefix",
 		"build:js-a11y": "concat-cli -f src/js/a11y/*.js -o src/assets/js/a11y.js",
 		"build:js-header": "concat-cli -f src/js/header/*.js -o src/assets/js/header.js",
 		"build:js-footer": "concat-cli -f src/js/footer/*.js -o src/assets/js/footer.js",
 		"build:uglify": "uglifyjs src/assets/js/header.js --compress --output src/assets/js/header.js && uglifyjs src/assets/js/footer.js --compress --output src/assets/js/footer.js",
-		"build:js": "./node_modules/.bin/mkdirp src/assets/js/ && npm run build:js-a11y && npm run build:js-header && npm run build:js-footer && npm run build:uglify",
+		"build:js": "mkdirp src/assets/js/ && npm run build:js-a11y && npm run build:js-header && npm run build:js-footer && npm run build:uglify",
 		"build:assets": "npm run build:css && npm run build:js",
 		"build": "npm run build:assets && npm run build:site",
 		"watch:sass": "onchange 'src/sass/**/*.scss' -- npm run build:sass:dev && npm run build:autoprefix",
@@ -98,10 +98,10 @@
 		"numeral": "^2.0.6",
 		"postcss-cli": "^4.1.1",
 		"slugify": "^1.2.9",
-		"uglify-js": "^3.4.9"
+		"uglify-js": "^3.4.9",
+		"mkdirp": "^0.5.1"
 	},
 	"devDependencies": {
-		"mkdirp": "^0.5.1",
 		"onchange": "^3.3.0"
 	},
 	"engines": {
