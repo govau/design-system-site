@@ -2,7 +2,7 @@
 	"name": "Australian Government Design System",
 	"short_name": "designsystem",
 	"description": "The government open language for design website.",
-	"start_url": ".",
+	"start_url": "./",
 	"dir": "ltr",
 	"lang": "en-AU",
 	"icons": [

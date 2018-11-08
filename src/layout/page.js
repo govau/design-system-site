@@ -78,7 +78,6 @@ const Page = ({
 			</div>
 			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
 			<script src={ _relativeURL( '/assets/js/pwa.js', _ID ) }></script>
-			<script src={ _relativeURL( '/assets/js/serviceWorker.js', _ID ) }></script>
 			{
 				_ID === 'download' ? <script src={ _relativeURL( '/assets/js/prism.js', _ID ) } /> : null
 			}

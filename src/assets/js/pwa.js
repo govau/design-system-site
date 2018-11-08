@@ -2,7 +2,7 @@
 if ("serviceWorker" in navigator) {
 	// Load and register this service worker configuration.
 	window.addEventListener("load", function() {
-		navigator.serviceWorker.register("/assets/js/serviceWorker.js").then(
+		navigator.serviceWorker.register("/serviceWorker.js").then(
 			function(registration) {
 				if (registration.installing) {
 					console.log("Service worker installing");

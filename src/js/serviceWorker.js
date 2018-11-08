@@ -4,11 +4,16 @@ const CACHE_NAME = "govau-designsystem";
 // List of assets to cache on inital page fetch.
 const CACHE = [
 	"/",
+	"/serviceWorker.js",
 	"/assets/css/style.css",
 	"/assets/js/header.js",
 	"/assets/js/footer.js",
+	"/assets/js/pwa.js",
 	"/assets/favicons/site.webmanifest",
 	"/assets/favicons/favicon.ico",
+	"/assets/favicons/favicon-32x32.png",
+	"/assets/favicons/favicon-16x16.png",
+	"/assets/favicons/android-chrome-192x192.png",
 	"/assets/img/artwork-about-community.png",
 	"/assets/img/artwork-about-components.png",
 	"/assets/img/artwork-about-templates.png",
@@ -28,7 +33,7 @@ const CACHE = [
 self.addEventListener("install", function(event) {
 	event.waitUntil(
 		caches.open(CACHE_NAME).then(function(cache) {
-			console.log("Opened cache");
+			console.log("Opened cache for request");
 			return cache.addAll(CACHE);
 		})
 	);
@@ -38,13 +43,10 @@ self.addEventListener("install", function(event) {
  * Find resources as found in cache on page fetch
  */
 self.addEventListener("fetch", function(event) {
+	console.log(event.request.url);
 	event.respondWith(
 		caches.match(event.request).then(function(response) {
-			console.log(`Found cache match`)
-			if (response) {
-				return response;
-			}
-			return fetch(event.request);
+			return response || fetch(event.request);
 		})
 	);
 });

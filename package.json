@@ -17,7 +17,7 @@
 		"build:uglify": "uglifyjs src/assets/js/header.js --compress --output src/assets/js/header.js && uglifyjs src/assets/js/footer.js --compress --output src/assets/js/footer.js",
 		"build:js": "mkdir -p src/assets/js/ && npm run build:js-a11y && npm run build:js-header && npm run build:js-footer && npm run build:uglify",
 		"build:assets": "npm run build:css && npm run build:js",
-		"build": "npm run build:assets && npm run build:site",
+		"build": "npm run build:assets && npm run build:site && cp src/js/serviceWorker.js site/",
 		"watch:sass": "onchange 'src/sass/**/*.scss' -- npm run build:sass:dev && npm run build:autoprefix",
 		"watch:js": "onchange 'src/js/**/*.js' -- npm run build:js",
 		"watch:site": "cuttlebelle -w -n",

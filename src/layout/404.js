@@ -79,7 +79,6 @@ const Page = ({
 			</div>
 			<script src="/assets/js/footer.js" />
 			<script src="/assets/js/pwa.js"></script>
-			<script src="/assets/js/serviceWorker.js"></script>
 		</body>
 		</html>
 	);
