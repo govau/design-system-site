@@ -49,19 +49,20 @@ const AddFakePassword = ( request, response, next ) => {
 		const b64auth = ( request.headers.authorization || '' ).split(' ')[ 1 ] || '';
 		const [ login, password ] = new Buffer( b64auth, 'base64' ).toString().split(':');
 
-		// Verify login and password are set and correct
-		if(
-			!login ||
-			!password ||
-			login !== auth.login ||
-			password !== auth.password
-		) {
-			response.set('WWW-Authenticate', 'Basic realm="Please authenticate"');
-			response.status( 401 ).send(`This is just the staging site. Please check out the real deal at <a href="https://designsystem.gov.au/">designsystem.gov.au</a>`);
-		}
-		else {
-			return next();
-		}
+		return next();
+		// // Verify login and password are set and correct
+		// if(
+		// 	!login ||
+		// 	!password ||
+		// 	login !== auth.login ||
+		// 	password !== auth.password
+		// ) {
+		// 	response.set('WWW-Authenticate', 'Basic realm="Please authenticate"');
+		// 	response.status( 401 ).send(`This is just the staging site. Please check out the real deal at <a href="https://designsystem.gov.au/">designsystem.gov.au</a>`);
+		// }
+		// else {
+		// 	return next();
+		// }
 	}
 	else {
 		return next();
