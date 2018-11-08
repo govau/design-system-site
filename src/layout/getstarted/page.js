@@ -56,6 +56,7 @@ const Page = ({
 	<script src="${ _relativeURL( '/assets/js/respond.js', _ID ) }"></script>
 <![endif]-->
 
+<script src=${ _relativeURL( '/assets/js/pwa.js', _ID ) }></script>
 <script src=${ _relativeURL( '/assets/js/serviceWorker.js', _ID ) }></script>
 <script src=${ _relativeURL( '/assets/js/header.js', _ID ) }></script>`;
 
