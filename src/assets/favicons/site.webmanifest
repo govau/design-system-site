@@ -1,6 +1,10 @@
 {
-	"name": "",
-	"short_name": "",
+	"name": "Australian Government Design System",
+	"short_name": "designsystem",
+	"description": "The government open language for design website.",
+	"start_url": ".",
+	"dir": "ltr",
+	"lang": "en-AU",
 	"icons": [
 		{
 			"src": "/assets/favicons/android-chrome-192x192.png",
@@ -11,6 +15,11 @@
 			"src": "/assets/favicons/android-chrome-256x256.png",
 			"sizes": "256x256",
 			"type": "image/png"
+		},
+		{
+			"src": "/assets/favicons/favicon.ico",
+			"sizes": "128x128 64x64 32x32 24x24 16x16",
+			"type": "image/x-icon"
 		}
 	],
 	"theme_color": "#ffffff",
