@@ -56,8 +56,6 @@ const Page = ({
 	<script src="${ _relativeURL( '/assets/js/respond.js', _ID ) }"></script>
 <![endif]-->
 
-<script src=${ _relativeURL( '/assets/js/pwa.js', _ID ) }></script>
-<script src=${ _relativeURL( '/assets/js/serviceWorker.js', _ID ) }></script>
 <script src=${ _relativeURL( '/assets/js/header.js', _ID ) }></script>`;
 
 	return (
@@ -94,6 +92,8 @@ const Page = ({
 				{ footer }
 			</div>
 			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
+			<script src={ _relativeURL( '/assets/js/pwa.js', _ID ) }></script>
+			<script src={ _relativeURL( '/assets/js/serviceWorker.js', _ID ) }></script>
 			<script src={ _relativeURL( '/assets/js/prism.js', _ID ) } />
 		</body>
 		</html>

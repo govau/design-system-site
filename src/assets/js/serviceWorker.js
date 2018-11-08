@@ -1,5 +1,5 @@
 // Name of the cache stored in the users browser
-const CACHE_NAME = "designsystem-v1";
+const CACHE_NAME = "govau-designsystem";
 
 // List of assets to cache on inital page fetch.
 const CACHE = [

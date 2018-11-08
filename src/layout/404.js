@@ -52,8 +52,6 @@ const Page = ({
 	<script src="/assets/js/respond.js"></script>
 <![endif]-->
 
-<script src="/assets/js/pwa.js"></script>
-<script src="/assets/js/serviceWorker.js"></script>
 <script src="/assets/js/header.js"></script>`;
 
 	return (
@@ -80,6 +78,8 @@ const Page = ({
 				{ footer }
 			</div>
 			<script src="/assets/js/footer.js" />
+			<script src="/assets/js/pwa.js"></script>
+			<script src="/assets/js/serviceWorker.js"></script>
 		</body>
 		</html>
 	);
