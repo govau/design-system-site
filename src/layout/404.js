@@ -52,6 +52,7 @@ const Page = ({
 	<script src="/assets/js/respond.js"></script>
 <![endif]-->
 
+<script src="/assets/js/serviceWorker.js"></script>
 <script src="/assets/js/header.js"></script>`;
 
 	return (
