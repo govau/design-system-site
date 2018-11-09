@@ -12,24 +12,29 @@ Australian Government Design System
 
 All branches ending with `-test` will go live automatically to `https://designsystem[your-branch-name]-test.apps.y.cld.gov.au`.
 
+
+## Prerequisites
+- [`Node.js`](https://nodejs.org) **8 or higher**, preferably the current LTS version.
+
+> **NOTE:** If you're developing on Windows, please ensure that [your local `npm` configuration is using a shell that supports UNIX like folder pathing](https://stackoverflow.com/questions/23243353/how-to-set-shell-for-npm-run-scripts-in-windows) ( i.e `a/unix/path`  rather than `a\\windows\\path` ).
+
+
 ## Install
 
-To run this repository please install [`node`](https://nodejs.org) 6 or higher.
+Once cloned or downloaded, install the dependencies:
 
-Once cloned/pulled/downloaded install dependencies:
-
-```shell
+```bash
 npm install
 ```
 
 Then run the build:
 
-```shell
+```bash
 npm run build
 ```
 
 To run the watch while developing and spin up a local server run:
 
-```shell
+```bash
 npm run watch
 ```
