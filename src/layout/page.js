@@ -29,8 +29,8 @@ const Page = ({
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <meta name="robots" content="index, follow">
-<meta name="description" content="Inclusive design, open-source code and shared insights">
 <meta name="author" content="Digital Transformation Agency">
+<meta name="description" content="Inclusive design, open-source code and shared insights">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Australian Government Design System">
 <meta name="twitter:description" content="Inclusive design, open-source code and shared insights">
