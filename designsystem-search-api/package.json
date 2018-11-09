@@ -1,0 +1,17 @@
+{
+  "name": "designsystem-search-api",
+  "version": "0.1.0",
+  "description": "Module to handle static site search queries",
+  "main": "src/index.js",
+  "repository": "https://github.com/govau/designsystem",
+  "author": "Commonwealth of Australia, DTA",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "express": "^4.16.4",
+    "helmet": "^3.15.0",
+    "js-yaml": "^3.12.0",
+    "node-fetch": "^2.2.1"
+  }
+}

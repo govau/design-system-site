@@ -1,0 +1,19 @@
+layout: component/page
+pagetitle: Keyword list rationale
+
+header:
+  - /_shared/header.md
+
+component_nav:
+  - /components/_tabs.md
+
+sidebar:
+  - /components/search.md
+  - /components/sidebar.md
+
+main:
+  - max-width.md
+  - horizontal-separator.md
+
+footer:
+  - /_shared/footer.md

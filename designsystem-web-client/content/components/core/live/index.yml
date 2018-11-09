@@ -1,0 +1,7 @@
+layout: example/page
+pagetitle: Core live demo
+examples:
+  - template: ../accessibility/example-code.md
+  - template: ../accessibility/example-dark.md
+    style: dark
+livedemo: true

@@ -1,0 +1,6 @@
+layout: example/page
+pagetitle: Grid 12 live demo
+examples:
+  - template: example-code.md
+iframeFullwidth: true
+livedemo: true

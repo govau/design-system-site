@@ -1,0 +1,17 @@
+pagetitle: Community
+
+header:
+  - /_shared/header.md
+
+main:
+  - intro.md
+  - vision.md
+  - how-it-works.md
+  - headingleft_open-source.md
+  - headingleft_maintained.md
+  - headingleft_transparent.md
+  - headingleft_collaborative.md
+  - footer-lists.md
+
+footer:
+  - /_shared/footer.md

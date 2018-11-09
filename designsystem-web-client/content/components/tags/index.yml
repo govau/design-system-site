@@ -1,0 +1,20 @@
+layout: component/page
+module: tags
+pagetitle: Tags overview
+
+header:
+  - /_shared/header.md
+
+component_nav:
+  - /components/_tabs.md
+
+sidebar:
+  - /components/search.md
+  - /components/sidebar.md
+
+main:
+  - default.md
+  - without-links.md
+
+footer:
+  - /_shared/footer.md

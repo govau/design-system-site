@@ -1,0 +1,24 @@
+layout: component/page
+module: buttons
+pagetitle: Buttons overview
+
+header:
+  - /_shared/header.md
+
+component_nav:
+  - /components/_tabs.md
+
+sidebar:
+  - /components/search.md
+  - /components/sidebar.md
+
+main:
+  - primary.md
+  - secondary.md
+  - tertiary.md
+  - disabled.md
+  - block.md
+  - link.md
+
+footer:
+  - /_shared/footer.md

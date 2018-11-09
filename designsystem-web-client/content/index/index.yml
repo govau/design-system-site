@@ -1,0 +1,13 @@
+layout: home/page
+
+pagetitle: About
+header:
+  - /index/header.md
+main:
+  - intro.md
+  - cards.md
+  - whats-in-our-system.md
+  - users.md
+  - statisitics.md
+footer:
+  - /_shared/footer.md

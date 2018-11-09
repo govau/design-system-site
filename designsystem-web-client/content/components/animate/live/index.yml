@@ -1,0 +1,6 @@
+layout: example/page
+pagetitle: Animate live demo
+examples:
+  - template: ../examples/example-default/example-code.md
+  - template: ../examples/example-multiple/example-code.md
+livedemo: true

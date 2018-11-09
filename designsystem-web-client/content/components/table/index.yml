@@ -1,0 +1,16 @@
+layout: component/page
+module: table
+pagetitle: Table overview
+
+header:
+  - /_shared/header.md
+
+sidebar:
+  - /components/search.md
+  - /components/sidebar.md
+
+main:
+  - default.md
+
+footer:
+  - /_shared/footer.md

@@ -1,0 +1,5 @@
+layout: example/page
+pagetitle: Skip link live demo
+examples:
+  - template: ../accessibility/example-code.md
+livedemo: true

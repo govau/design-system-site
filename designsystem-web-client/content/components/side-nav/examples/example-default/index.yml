@@ -1,0 +1,6 @@
+layout: example/page
+alignment: inline
+examples:
+  - template: example-code.md
+  - template: example-dark.md
+    style: dark

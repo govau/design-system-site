@@ -1,0 +1,21 @@
+layout: component/page
+pagetitle: Buttons rationale
+
+header:
+  - /_shared/header.md
+
+component_nav:
+  - /components/_tabs.md
+
+sidebar:
+  - /components/search.md
+  - /components/sidebar.md
+
+main:
+  - wayfinding.md
+  - buttons-links.md
+  - underline-on-hover.md
+  - round-corners.md
+
+footer:
+  - /_shared/footer.md

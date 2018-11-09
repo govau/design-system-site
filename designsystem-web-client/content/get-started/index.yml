@@ -1,0 +1,14 @@
+layout: getstarted/page
+pagetitle: Get started
+
+header:
+  - /_shared/header.md
+
+sidenav:
+  - /get-started/sidenav.md
+
+main:
+  - content.md
+
+footer:
+  - /_shared/footer.md
