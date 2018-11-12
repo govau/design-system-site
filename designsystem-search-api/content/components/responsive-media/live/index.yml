@@ -1,8 +1,0 @@
-layout: example/page
-pagetitle: Responsive media live demo
-examples:
-  - template: ../examples/example-default/example-code.md
-  - template: ../examples/example-video-4-3/example-code.md
-  - template: ../examples/example-video-16-9/example-code.md
-livedemo: true
-

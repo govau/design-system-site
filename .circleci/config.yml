@@ -1,7 +1,7 @@
 # Node CircleCI 2.0 configuration file to DTA cloud 2.0
 version: 2
 jobs:
-    build-and-test-ds:
+    build-designsystem:
         docker:
             - image: circleci/node:8.12.0
         working_directory: ~/designsystem
@@ -19,21 +19,45 @@ jobs:
                 key: v2-npm-deps-{{ checksum "package.json" }}
                 paths:
                   - node_modules
-            - run:
-                name: Generate static HTML!
-                command: npm run build
             - persist_to_workspace:
                 root: ~/designsystem
                 paths:
-                  - site/
-                  - .deploy/
-                  - server/
-                  - content/
-                  - package.json
-                  - package-lock.json
+                  - node_modules
+                  - designsystem-web-client/node_modules
 
+    test-search-api:
+        docker:
+            - image: circleci/node:8.12.0
+        working_directory: ~/designsystem
+        steps:
+        - run:
+            name: Change DIR to designsystem-search-api
+            command: cd ~/designsystem/designsystem-search-api
+        - run:
+            name: Run the tests
+            command: npm run test
 
-    deploy-staging:
+    test-web-client:
+        docker:
+            - image: circleci/node:8.12.0
+        working_directory: ~/designsystem
+        steps:
+        - run:
+            name: Change DIR to designsystem-web-client
+            command: cd ~/designsystem/designsystem-web-client
+        - run:
+            name: Generate static HTML!
+            command: npm run build
+        - run:
+            name: Run the tests
+            command: npm run test
+        - persist_to_workspace:
+            root: ~/designsystem-web-client
+            paths:
+              - site/
+              - .deploy/
+
+    deploy-web-client-staging:
       docker:
         - image: govau/cf-cli
       steps:
@@ -57,7 +81,7 @@ jobs:
 
     # DEPLOY-PROD JOB
     # installing dependencies, building assets and deploying to production
-    deploy-prod:
+    deploy-web-client-prod:
       docker:
         - image: govau/cf-cli
       steps:
@@ -81,7 +105,7 @@ jobs:
 
     # DEPLOY-TEST JOB
     # installing dependencies, building assets and deploying to test branches
-    deploy-test:
+    deploy-web-client-test:
       docker:
         - image: govau/cf-cli
       steps:
@@ -107,31 +131,34 @@ jobs:
 # this is where we orchestrate our jobs
 workflows:
   version: 2
-  deploy-designsystem:
+  designsystem:
     jobs:
-      - build-and-test-ds
-      - deploy-staging: # run deploy staging
+      - build-designsystem
+      - deploy-web-client-staging: # run deploy staging
           requires:
-            - build-and-test-ds
+            - build-designsystem
+            - test-web-client
           filters:
             branches:
               only: develop # and only on the `develop` branch
 
-      - deploy-prod: # run deploy production
+      - deploy-web-client-prod: # run deploy production
           requires:
-            - build-and-test-ds
+            - build-designsystem
+            - test-web-client
           filters:
             branches:
               only: master # and only on the `master` branch
 
-      - deploy-test: # run test branches
+      - deploy-web-client-test: # run test branches
           requires:
-            - build-and-test-ds
+            - build-designsystem
+            - test-web-client
           filters:
             branches:
               only: /.*-test/ # and only on the branches that end with `-test`
 
-  nightly-rebuild: # rerun a task via scheduling, all times are UTC https://circleci.com/docs/2.0/workflows/#scheduling-a-workflow
+  nightly-web-client-rebuild: # rerun a task via scheduling, all times are UTC https://circleci.com/docs/2.0/workflows/#scheduling-a-workflow
     triggers:
       - schedule:
           cron: "0 14 * * *" # 2PM utc => 1am or midnight (daylight saving)
@@ -139,10 +166,12 @@ workflows:
             branches:
               only: master # we only run the master branch
     jobs:
-      - build-and-test-ds
+      - build-designsystem
+      - test-web-client
       - deploy-prod: # run deploy production
           requires:
-            - build-and-test-ds
+            - build-designsystem
+            - test-web-client
           filters:
             branches:
               only: master # and only on the `master` branch

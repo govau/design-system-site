@@ -128,7 +128,7 @@
 		},
 		"json": {
 			"enable": true,
-			"location": "src/_uikit/",
+			"location": "designsystem-web-client/src/_uikit/",
 			"name": "uikit"
 		}
 	},

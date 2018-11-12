@@ -7,6 +7,9 @@
   "author": "Commonwealth of Australia, DTA",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "start": "node src/index.js"
+  },
   "dependencies": {
     "crypto": "^1.0.1",
     "express": "^4.16.4",
