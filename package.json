@@ -1,6 +1,6 @@
 {
 	"name": "designsystem",
-	"version": "1.0.1",
+	"version": "1.0.0",
 	"description": "The government open language for design website.",
 	"scripts": {
 		"docs": "cuttlebelle docs",
