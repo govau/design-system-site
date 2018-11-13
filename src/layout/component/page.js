@@ -52,7 +52,6 @@ const ComponentPage = ({
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <meta name="robots" content="index, follow">
-<meta name="description" content="${ module !== '' ? `${ MODULE.description } - ` : '' }Australian Government Design System">
 <meta name="author" content="Digital Transformation Agency">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Australian Government Design System">

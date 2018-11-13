@@ -24,4 +24,4 @@ code:
 ---
 ## Default
 
-Our range of supported headings. These use the <a href="http://localhost:8080/components/core/#typography">AU-fontgrid</a> function to make the font size and lineheight snap to grid.
+Our range of supported headings. These use the <a href="/components/core/#typography">AU-fontgrid</a> function to make the font size and lineheight snap to grid.
