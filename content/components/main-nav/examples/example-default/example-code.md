@@ -21,7 +21,7 @@
               <ul class="au-link-list">
                 <li><a href="#">About</a></li>
                 <li><a href="#">Get started</a></li>
-                <li class="active"><a href="#">Components</a></li>
+                <li class="active"><a href="#" aria-current="page">Components</a></li>
                 <li><a href="#">Templates</a></li>
                 <li><a href="#">Community</a></li>
                 <li><a href="#">Support</a></li>
