@@ -21,7 +21,7 @@
               <ul class="au-link-list">
                 <li><a class="js-focus-me" href="#">About</a></li>
                 <li><a class="js-focus-me" href="#">Get started</a></li>
-                <li class="active"><a class="js-focus-me" href="#">Components</a></li>
+                <li class="active"><a class="js-focus-me" href="#" aria-current="page">Components</a></li>
                 <li><a class="js-focus-me" href="#">Templates</a></li>
                 <li><a class="js-focus-me" href="#">Community</a></li>
                 <li><a class="js-focus-me" href="#">Support</a></li>

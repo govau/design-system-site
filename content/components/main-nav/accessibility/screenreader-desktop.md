@@ -10,7 +10,7 @@ speak: |
 
   [ Link ] Get started
 
-  [ Link ] Components
+  Current Page, [ Link ] Components
 
   [ Link ] Templates
 
