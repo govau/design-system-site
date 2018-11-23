@@ -30,8 +30,8 @@ code:
       import { AUcheckbox } from '@gov.au/control-input';
 
       <AUcheckbox label="Phone" name="checkbox-ex" block />
-      <AUcheckbox label="Tablet" name="checkbox-ex" block checked />
-      <AUcheckbox label="Laptop" name="checkbox-ex" block checked />
+      <AUcheckbox label="Tablet" name="checkbox-ex" block defaultChecked />
+      <AUcheckbox label="Laptop" name="checkbox-ex" block defaultChecked />
 ---
 ## Checkbox Block
 

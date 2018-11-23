@@ -25,7 +25,7 @@ code:
       import { AUcheckbox } from '@gov.au/control-input';
 
       <AUcheckbox label="Phone" name="checkbox-ex" />
-      <AUcheckbox label="Tablet" name="checkbox-ex" checked />
+      <AUcheckbox label="Tablet" name="checkbox-ex" defaultChecked />
 ---
 ## Checkbox
 
