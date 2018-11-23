@@ -25,7 +25,7 @@ code:
       import { AUradio } from '@gov.au/control-input';
 
       <AUradio label="Phone" name="radio-ex" />
-      <AUradio label="Tablet" name="radio-ex" checked />
+      <AUradio label="Tablet" name="radio-ex" defaultChecked />
 ---
 ## Radio
 
