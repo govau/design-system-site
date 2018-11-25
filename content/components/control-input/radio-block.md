@@ -30,7 +30,7 @@ code:
       import { AUradio } from '@gov.au/control-input';
 
       <AUradio label="Phone" name="radio-ex" block />
-      <AUradio label="Tablet" name="radio-ex" block checked />
+      <AUradio label="Tablet" name="radio-ex" block defaultChecked />
       <AUradio label="Laptop" name="radio-ex" block />
 ---
 ## Radio Block
