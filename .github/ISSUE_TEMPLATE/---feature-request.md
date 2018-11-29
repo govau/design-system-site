@@ -10,7 +10,7 @@ about: Suggest an idea for this project
 - [ ] I’ve searched for any related issues and avoided creating a duplicate issue.
 - [ ] I've searched the [community forums](https://community.digital.gov.au/c/designsystem) to check for related issues or feature requests
 
-## What would you like to suggest?
+## What feature would you like to suggest?
 
 <!--
         Describe the feature. E.g. I would like to have the option to do XYZ on component ABC
