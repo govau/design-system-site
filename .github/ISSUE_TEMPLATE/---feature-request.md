@@ -10,19 +10,12 @@ about: Suggest an idea for this project
 - [ ] I’ve searched for any related issues and avoided creating a duplicate issue.
 - [ ] I've searched the [community forums](https://community.digital.gov.au/c/designsystem) to check for related issues or feature requests
 
-## Is this feature request relating to an existing component? Please describe.
-- Component name:
-- Component version:
+## What would you like to suggest?
 
 <!--
         Describe the feature. E.g. I would like to have the option to do XYZ on component ABC
 -->
 
-## Do you have a suggestion for a new component?
-
-<!--
-         Please describe the component suggestion, along with details of some use cases
--->
 
 ## Other request?
 
