@@ -16,13 +16,6 @@ about: Suggest an idea for this project
         Describe the feature. E.g. I would like to have the option to do XYZ on component ABC
 -->
 
-
-## Other request?
-
-<!--
-       A clear and concise description of the feature and what you would like to happen
--->
-
 ## Additional context
 <!--
          Add any other context or screenshots about the feature request here. 
