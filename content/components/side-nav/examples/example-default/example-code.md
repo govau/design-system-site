@@ -25,7 +25,7 @@
         <ul class="au-link-list">
           <li><a href="#">Record keeping</a>
             <ul class="au-link-list">
-              <li class="active"><a href="#">Keeping your tax records</a></li>
+              <li class="active"><span>Keeping your tax records</span></li>
               <li><a href="#">Incorrect amounts</a></li>
             </ul>
           </li>
