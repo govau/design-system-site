@@ -1,6 +1,7 @@
 ---
 name: "\U0001F4AC Support question"
-about: If you need support using the design system website (the community is here to help)
+about: If you need support using the design system website (the community is here
+  to help)
 
 ---
 
