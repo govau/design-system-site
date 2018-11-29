@@ -16,6 +16,7 @@ Once you have the components in a website we have advanced guides for developers
 - [Customise existing components](get-started/customise-components)
 - [Create a new component](get-started/create-components)
 - [Set up a development environment](get-started/development-environment)
+- [Spacing between components](get-started/spacing-between-components)
 
 Throughout the process you may notice issues, missing features or have ideas for new components. If you would like to contribute or help build the future of the Australian Government Design System you can:
 
