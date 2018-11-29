@@ -1,8 +1,8 @@
 layout: example/page
 pagetitle: Side nav live demo
 examples:
-  - template: ../accessibility/example-code.md
-  - template: ../accessibility/example-dark.md
+  - template: ../examples/example-default/example-code.md
+  - template: ../examples/example-default/example-dark.md
     style: dark
 livedemo: true
 alignment: inline
