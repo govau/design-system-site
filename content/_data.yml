@@ -10,7 +10,7 @@ pancake:
     '@gov.au/pancake-react': 25917
     '@gov.au/pancake-sass': 33159
     '@gov.au/syrup': 800
-  stars: 71
+  stars: 72
 uikit:
   downloads: 401657
   modules:
