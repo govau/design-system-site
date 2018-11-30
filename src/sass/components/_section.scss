@@ -1,3 +1,16 @@
-* + .section {
-	@include AU-space( margin-top, 3.5unit );
+.section {
+	
+	* + & {
+		@include AU-space( margin-top, 3.5unit );
+	}
+
+	&--shadow {
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);		
+	}
+
+	&--pading {
+		@include AU-space( padding, 2unit );
+	}
 }
+
+
