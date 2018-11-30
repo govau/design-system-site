@@ -25,7 +25,7 @@ import PropTypes from 'prop-types';
  * @param  {boolean} alignment   - Text alignment
  * @param  {boolean} matchHeight - Adds flex stlyes so cards match height
  */
-const AUcardList = ({ cards, columnSize, matchHeight, alignment, appearance, className = "" }) => (
+const AUcardList = ({ cards, columnSize, matchHeight, alignment, appearance, backgroundAlt, className = "" }) => (
 	<ul className={ `au-card-list${ matchHeight ? ' au-card-list--matchheight' : '' } ${ className }` }>
 		{
 			cards.map( ( card, i ) =>
@@ -33,6 +33,7 @@ const AUcardList = ({ cards, columnSize, matchHeight, alignment, appearance, cla
 					<AUcard
 						rows={ card.rows }
 						link={ card.link }
+						backgroundAlt={ backgroundAlt }
 						alignment={ card.alignment ? card.alignment : alignment }
 						appearance={ card.appearance ? card.appearance : appearance }
 					/>

@@ -1,6 +1,6 @@
 .au-card {
 	display:block;
-	max-width: $AU-maxwidth;
+	// max-width: $AU-maxwidth;
 	width: 100%;
 
 	img,
@@ -28,7 +28,7 @@
 	&.au-card--shadow {
 		border-radius: 4px;
 		overflow:hidden;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 		background: $AU-color-background;
 
 		.au-card__inner {
@@ -65,10 +65,18 @@
 
 	.au-card__bg {
 		@include AU-space( padding, 1unit );
-		background-color: $AU-color-background-alt;
+		// background-color: $AU-color-background-alt;
 
 		&:not(:first-child) {
 			@include AU-space( margin-top, 1unit );
+		}
+	}
+
+	.au-card__content {
+		@include AU-space( padding, 2rem );
+		text-align: left;
+		h2 {
+			@include AU-space( margin-bottom, 1rem );
 		}
 	}
 }

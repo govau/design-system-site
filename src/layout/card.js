@@ -201,11 +201,12 @@ AUcardCTA.propTypes = {
  * @param  {object} html      - The HTML inside the row
  * @param  {string} fullwidth - If the element stretches to the fullwidth of the container
  */
-const AUcardHTML = ({ html, fullwidth }) => (
+const AUcardHTML = ({ html, fullwidth }) => {
+	return (
 	<div className={ `au-card__html${ fullwidth ? ' au-card__fullwidth' : '' }` }>
 		{ html }
-	</div>
-);
+	</div>)
+};
 
 AUcardHTML.propTypes = {
 	html: PropTypes.node.isRequired,
@@ -237,7 +238,7 @@ AUcardLine.propTypes = {
  * @param  {string}  href             - We add the href so it isn't added to the attributeOptions
  * @param  {object}  attributeOptions - All of the other properties that can be added
  */
-const AUcard = ({ rows, appearance, alignment, link, href, ...attributesOptions = {} }) => {
+const AUcard = ({ rows, appearance, alignment, backgroundAlt, link, href, ...attributesOptions = {} }) => {
 
 	let CardContainer = 'div';
 
@@ -276,7 +277,7 @@ const AUcard = ({ rows, appearance, alignment, link, href, ...attributesOptions 
 			`au-card ${ appearance === 'shadow' ? ' au-card--shadow' : '' }` +
 			`${ alignment === 'center' ? ' au-card--centered': '' }`
 		}>
-			<div className='au-card__inner'>
+			<div className={`au-card__inner ${backgroundAlt ? ' au-card__bg' : ''}`}>
 				{
 					items.map( ( item, i ) => (
 						<item.component { ...item.props } key={ i } />

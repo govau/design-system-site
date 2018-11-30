@@ -4,8 +4,7 @@ header:
   - /_shared/header.md
 
 main:
-  - home-template.md
-  - basic-template.md
+  - template-list.md
 
 footer:
   - /_shared/footer.md
