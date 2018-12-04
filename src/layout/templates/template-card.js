@@ -12,11 +12,11 @@ import React     from 'react';
 const TemplateCard = ({ templates, cardList, _body, _parents, _pages, _ID }) => {
 
 	const module = GetModule( _parents, _pages, _ID );
-	
+
 	const cards = templates.map( ( template ) => ({
 		rows: [{
 			type: 'html',
-			html: 
+			html:
 				<section className="row au-card--shadow">
 				<div className="col-md-7 ">
 					<img src={ template.imgurl } alt="" className="au-responsive-media"/>
@@ -26,20 +26,20 @@ const TemplateCard = ({ templates, cardList, _body, _parents, _pages, _ID }) => 
 					{ template.body } <br/><br />
 					<div>
 					{ template.btns.map(( btn, i ) => {
-						return ( 
+						return (
 							<AUbutton
 							key={ i }
-							link={btn.btnurl} 
-							as={btn.btntype} 
+							link={btn.btnurl}
+							as={btn.btntype}
 							>
-							{ btn.btntext } 
-							</AUbutton> 
+							{ btn.btntext }
+							</AUbutton>
 						)
 					})}
 					</div>
 				</div>
 			</section>
-			
+
 		}]
 	})
 	);
@@ -51,7 +51,6 @@ const TemplateCard = ({ templates, cardList, _body, _parents, _pages, _ID }) => 
 			columnSize={ cardList.columnSize }
 			matchHeight={ cardList.matchHeight }
 			alignment={ cardList.alignment }
-			backgroundAlt= {true }
 		/>
 	)
 }
