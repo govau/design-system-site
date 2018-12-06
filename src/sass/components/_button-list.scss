@@ -1,0 +1,23 @@
+.au-btn__list {
+	list-style: none;
+	padding: 0;
+
+	* + & {
+		@include AU-space( margin-top, 1.5unit );
+	}
+
+	& > li + li {
+		@include AU-space( margin-top, 1unit );
+	}
+}
+
+.au-btn__list--inline {
+	& > li {
+		display: inline-block;
+	}
+
+	& > li + li {
+		margin-top: 0;
+		@include AU-space( margin-left, 1unit );
+	}
+}

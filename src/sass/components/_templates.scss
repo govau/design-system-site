@@ -1,0 +1,47 @@
+.template-card {
+	@include AU-clearfix();
+	@include AU-space( padding, 2unit );
+	@include AU-space( max-width, 55unit );
+	border-radius: $AU-border-radius;
+	background: $AU-color-background-alt;
+}
+
+.template-card .template-card__image {
+	@include AU-space( max-width, 20unit );
+	@include AU-space( margin-right, -25unit );
+	float: left;
+	width: auto;
+
+	&:before {
+		@include AU-space( margin-bottom, -1.25unit );
+		@include AU-space( padding-top, 0.25unit );
+		@include AU-space( padding-left, 0.25unit );
+		@include AU-fontgrid( sm, nospace  );
+		content: "● ● ●";
+		display: block;
+		color: $AU-color-foreground-muted;
+	}
+
+	img {
+		@include AU-space( border-top, 1.5unit solid $AU-color-foreground-text );
+	}
+}
+
+.template-card .template-card__content {
+	// @include AU-space( margin-top, 1unit );
+	@include AU-space( margin-left, 22unit );
+	display: block;
+	float: left;
+}
+
+.templates__released {
+	@include AU-space( margin-top, 2unit );
+	list-style: none;
+	padding: 0;
+
+	& > li {
+		width: auto;
+		list-style: none;
+		@include AU-space( margin-top, 2unit );
+	}
+}
