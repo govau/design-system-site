@@ -12,7 +12,7 @@
 
 
 .chameleon-wrapper__iframe {
-    height: 85vh;
+    height: 75vh;
     display: inline-block;
     border-radius: .25rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -50,4 +50,12 @@
             display: none;
         }
     }
+}
+
+.form-item + .form-item {
+	@include AU-space( margin-top, 2.5unit );
+}
+
+.label--block {
+	display: block;
 }
