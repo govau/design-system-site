@@ -99,9 +99,9 @@ const Customise = ({
 			<main>
 				<div className={`container-fluid content${ alignContent === 'center' ? ' content--center' : ''}`}>
 					<div className="row">
-						<div className="col-md-12">
+						<div className="col-md-12 chameleon">
 							<h1>Customise</h1>
-							<iframe className="chameleon" src={
+							<iframe src={
 								process.env.NODE_ENV == "production" 
 								? "https://designsystem.gov.au/chameleon" 
 								: 'http://localhost:3000/chameleon'}
@@ -109,12 +109,11 @@ const Customise = ({
 							<div className="accessibility-selection">
 								<h2>Accessibility Options</h2>
 								<label
-									className="lbl-greyscale"
+									className="lbl-grayscale"
 									>Greyscale
 									<input
-										onchange="AddClass( this, 'greyscale' );"
 										name="a11y"
-										id="greyscale"
+										id="grayscale"
 										type="radio"
 									/>
 								</label>
@@ -122,7 +121,6 @@ const Customise = ({
 									className="lbl-deuteranopia"
 									>Deuteranopia
 									<input
-										onchange="AddClass( this, 'deuteranopia' );"
 										name="a11y"
 										id="deuteranopia"
 										type="radio"
@@ -132,7 +130,6 @@ const Customise = ({
 									className="lbl-tritanopia"
 									>Tritanopia
 									<input
-										onchange="AddClass( this, 'tritanopia' );"
 										name="a11y"
 										id="tritanopia"
 										type="radio"

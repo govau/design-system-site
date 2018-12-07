@@ -36,7 +36,7 @@ const TemplatesReleased = ({ templates, _body, _relativeURL, _parseYaml, _parseM
 	return (
 		<Fragment>
 			{ _body }
-			<ul class="templates__released">
+			<ul className="templates__released">
 				{ cards.map( ( card, i ) => (
 					<li key={ i } class="template-card au-card">{ card }</li>
 				)) }
