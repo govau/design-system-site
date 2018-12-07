@@ -16,7 +16,6 @@ const Customise = ({
 }) => {
 	const parentId = _parents[ _parents.length - 2 ];
 	const parentData = _pages[parentId];
-
 	const headContent = `
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
@@ -54,6 +53,12 @@ const Customise = ({
 	<script src="${ _relativeURL( '/assets/js/respond.js', _ID ) }"></script>
 <![endif]-->
 <script>var $html=document.documentElement;if($html.classList)$html.classList.remove("no-js"),$html.classList.add("js");else{var className="no-js";$html.className=$html.className.replace(new RegExp("(^|\\b)"+className.split(" ").join("|")+"(\\b|$)","gi")," "),$html.className+=" js"}</script>`;
+
+const iframes = [
+	{ width: '320px', device: 'mobile' },
+	{ width: '768px', device: 'tablet' },
+	{ width: '1024px', device: 'desktop' },
+]
 
 	return (
 		<html>
@@ -97,55 +102,72 @@ const Customise = ({
 				</defs>
 			</svg>
 			<main>
-				<div className={`container-fluid content${ alignContent === 'center' ? ' content--center' : ''}`}>
-					<div className="row">
-						<div className="col-md-12">
-							<h1>Customise</h1>
-							<iframe className="chameleon" src={
-								process.env.NODE_ENV == "production" 
-								? "https://designsystem.gov.au/chameleon" 
-								: 'http://localhost:3000/chameleon'}
-							/>
-							<div className="accessibility-selection">
-								<h2>Accessibility Options</h2>
-								<label
-									className="lbl-greyscale"
-									>Greyscale
-									<input
-										onchange="AddClass( this, 'greyscale' );"
-										name="a11y"
-										id="greyscale"
-										type="radio"
-									/>
+				<section className="container-fluid">
+					<div className="chameleon-wrapper">
+						{
+							iframes.map( ( frame ) => {
+								return (
+								<iframe className={`chameleon-wrapper__iframe ${frame.device}`} width={frame.width} src={
+										process.env.NODE_ENV == "production" 
+										? "https://designsystem.gov.au/chameleon" 
+										: 'http://localhost:3000/chameleon'}
+								/> )
+							})
+						}
+					</div>
+				</section>
+
+				<section className="container-fluid au-body">
+					<div className="chameleon-toolkit">
+						<div className="row">
+							<div className="col-md-8 chameleon-toolkit__container hidden chameleon-toolkit__container--custom">
+								<h2>hello</h2>
+							</div>
+							<div className="col-md-4 chameleon-toolkit__container chameleon-toolkit__container--presets">
+								<h2>Presets</h2>
+								<label className="au-control-input au-control-input--block">
+									<input className="au-control-input__input" type="radio" name="preset-theme" value="green"/>
+									<span className="au-control-input__text">Green</span>
 								</label>
-								<label
-									className="lbl-deuteranopia"
-									>Deuteranopia
-									<input
-										onchange="AddClass( this, 'deuteranopia' );"
-										name="a11y"
-										id="deuteranopia"
-										type="radio"
-									/>
+
+								<label className="au-control-input au-control-input--block">
+									<input className="au-control-input__input" type="radio" name="preset-theme" value="blue"/>
+									<span className="au-control-input__text">Blue</span>
 								</label>
-								<label
-									className="lbl-tritanopia"
-									>Tritanopia
-									<input
-										onchange="AddClass( this, 'tritanopia' );"
-										name="a11y"
-										id="tritanopia"
-										type="radio"
-									/>
+
+								<label className="au-control-input au-control-input--block">
+									<input className="au-control-input__input" type="radio" name="preset-theme" value="default"/>
+									<span className="au-control-input__text">Default</span>
+								</label>
+								<br/> {/* FIX THIS */}
+								<button id="sub-btn" class="au-btn">Customise</button>
+
+							</div>
+							<div className="col-md-4 chameleon-toolkit__container chameleon-toolkit__container--presets--a11y">
+								<h2>Accessibility </h2>
+								<label class="au-control-input au-control-input--block">
+									<input class="au-control-input__input" type="radio" name="a11y-filter" value="deuteranopia" />
+									<span class="au-control-input__text">Deuteranopia</span>
+								</label>
+	
+	
+								<label class="au-control-input au-control-input--block">
+									<input class="au-control-input__input" type="radio" name="a11y-filter" value="tritanopia" />
+									<span class="au-control-input__text">Tritanopia</span>
+								</label>
+		
+								<label class="au-control-input au-control-input--block">
+									<input class="au-control-input__input" type="radio" name="a11y-filter" value="default"/>
+									<span class="au-control-input__text">Default</span>
 								</label>
 							</div>
 						</div>
 					</div>
-				</div>
+				</section>
 			</main>
-			{/* <script src={ _relativeURL( '/assets/js/iframe-resizer-contentWindow.js', _ID ) } /> */}
 			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
-			<script src={ _relativeURL( '/assets/js/a11y-helpers.js', _ID ) } />
+			{/* <script src={ _relativeURL( '/assets/js/a11y-helpers.js', _ID ) } />	 */}
+
 		</body>
 		</html>
 		)
