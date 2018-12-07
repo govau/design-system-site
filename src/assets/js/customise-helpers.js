@@ -1,38 +1,27 @@
-var frames = document.querySelectorAll( 'iframe' )
-var a11yInputs = document.querySelectorAll( 'input[name="a11y"]' );
-var paletteInputs = document.querySelectorAll( 'input[name="palette"]' );
-
-var resetBtn = document.getElementsByName("btn-reset");
+var frames = document.getElementsByTagName( 'iframe' )
+var a11yInputs = document.getElementsByName( 'a11y' );
+var paletteInputs = document.getElementsByName( 'palette' );
+var resetBtn = document.getElementsByName( 'btn-reset' );
 
 // Reset button event handler
-resetBtn[0].addEventListener("click", function(){
-    ResetFilters( );
+resetBtn[0].addEventListener("click", function() {
+    ResetFilters();
 });
 
 // Add event listners to each `a11y` input
-a11yInputs.forEach( item => {
-    item.addEventListener("click", function(){
-        AddA11yClass( item.id );
+for ( var i = 0; i < a11yInputs.length; i++ ) {
+	a11yInputs[ i ].addEventListener( "click", function() {
+        ApplyA11yToFrames( this.id );
     });
-});
+}
 
-paletteInputs.forEach( item => {
-    item.addEventListener("click", function(){
-        FillPaletteColors( item.id );
+for ( var i = 0; i < paletteInputs.length; i++ ) {
+	paletteInputs[ i ].addEventListener( "click", function() {
+        FillPaletteColors( this.id );
     });
-});
-
-
-// Add class to all iframes
-function AddA11yClass( a11yProfile ){
-    frames.forEach( item => {
-		item.setAttribute( 'class', `js-filter--${ a11yProfile }` )
-	})
 }
 
 function FillPaletteColors( elementId ) {
-	console.log(elementId);
-
 	var styles = {
 		mygov: {
 				text:           '',
@@ -55,13 +44,12 @@ function FillPaletteColors( elementId ) {
 			backgroundDark: '#002341',
 		}
 	}
-	
-		Object.keys( styles ).forEach( key => {			
-			if ( key === elementId ) {
-				FillFormColors( styles[ key ] )
-			}
-		})
-	
+
+	Object.keys( styles ).forEach( key => {			
+		if ( key === elementId ) {
+			FillFormColors( styles[ key ] )
+		}
+	})
 }
 
 
@@ -71,7 +59,7 @@ function FillPaletteColors( elementId ) {
 function FillFormColors( paramObject = QueryToObject() ){
 	Object.entries( paramObject ).map( value => {
 		if ( value[0] ) {
-			var input = document.querySelector( `input[ id="${ value[ 0 ]}"]` );
+			var input = document.getElementById( value[ 0 ]  )
 			input.value = value[ 1 ];
 		}
 	})
@@ -134,9 +122,9 @@ function PrefillPalette( element ) {
  * ApplyColors - Applies the colours to the iframe
  */
 function ApplyColours( paramString = window.location.search ){
-	frames.forEach( item => {
-		item.src = `http://localhost:3000/chameleon${ paramString }`
-	})
+	for ( var i = 0; i < frames.length; i++ ) {
+		frames[ i ].src = ( 'http://localhost:3000/chameleon' + paramString );
+	}
 }
 
 /**
@@ -144,9 +132,9 @@ function ApplyColours( paramString = window.location.search ){
  * @param {*} filter - A11y filter selected ( e.g greyscale, deuteranopia )
  */
 function ApplyA11yToFrames ( filterId  ) {
-	frames.forEach( item => {
-		item.setAttribute( 'class', `filter filter--${ filterId }` )
-	})
+	for ( var i = 0; i < frames.length; i++ ) {
+		frames[ i ].setAttribute( 'class', ( 'js-filter--' + filterId ) ) 
+	}
 }
 
 
@@ -166,15 +154,20 @@ function ResetFilters() {
     // Reset form inputs
     Object.entries( QueryToObject() ).map( value => {
 		if ( value[0] ) {
-			var input = document.querySelector( `input[ id="${ value[ 0 ]}"]` );
-			input.value = '';
+			var inputs = document.getElementById( value[0] );
+			inputs.value = '';
 		}
     })
     
     // Reset a11y inputs
     a11yInputs.forEach( item => {
 		item.checked = false;
-    })
+	})
+	
+	// Reset a11y inputs
+	paletteInputs.forEach( item => {
+		item.checked = false;
+	})
 }
 
 
