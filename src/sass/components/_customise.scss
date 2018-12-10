@@ -46,10 +46,22 @@
         border: solid 1px #ccc;
         @include AU-space( padding, 2unit );
 
+        div[class^="col-"] + div[class^="col-"], .row + .row {
+            @include AU-space( margin-top, 2.5unit );
+        }
+
+        @include AU-media( sm ) {
+            div[class^="col-"] + div[class^="col-"] {
+                margin-top: 0;
+            }
+        }
+        
+        
         &.hidden {
             display: none;
         }
     }
+
 }
 
 .form-item + .form-item {

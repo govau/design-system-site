@@ -121,8 +121,8 @@ const iframes = [
 					<div className="chameleon-toolkit">
 						<div className="row">
 						{/* CUSTOMISE PALLETTE (FIX THESE CLASSES)*/}
-							<div className="col-md-8 chameleon-toolkit__container hidden chameleon-toolkit__container--custom">
-								<h2>hello</h2>
+							<div id="custom-colour-pallette" className="col-md-8 chameleon-toolkit__container hidden">
+								<h2>Custom colours</h2> <br/> {/* FIX THIS */}
 								<div className="row">
 									<div className="col-sm-6">
 										<div class="form-item">
@@ -136,9 +136,6 @@ const iframes = [
 										<div class="form-item">
 											<label class="label--block" htmlFor="background">Background</label>
 											<input class="au-text-input" name="background" id="background" type="text" />
-										</div>
-										<div class="form-item">
-											<button id="show-presets" class="au-btn au-btn--secondary">Back to presets</button>
 										</div>
 									</div>
 									<div className="col-sm-6">
@@ -154,14 +151,25 @@ const iframes = [
 											<label className="label--block" htmlFor="backgroundDark">Dark background</label>
 											<input className="au-text-input" name="backgroundDark" id="backgroundDark" type="text"/>
 										</div>
+									</div>
+								</div>
+								{/* CUSTOM COLOR FORM BUTTONS */}
+								<div className="row">
+									<div className="col-sm-6">
+										<div class="form-item">
+											<button id="show-presets" class="au-btn au-btn--secondary">Back to presets</button>
+										</div>
+									</div>
+									<div className="col-sm-6">
 										<div className="form-item">
 											<button id="" className="au-btn">Submit</button>
 										</div>
 									</div>
 								</div>
+
 							</div>
 							{/* PRESET OPTIONS*/}
-							<div className="col-md-4 chameleon-toolkit__container chameleon-toolkit__container--presets">
+							<div id="preset-pallette" className="col-md-4 chameleon-toolkit__container">
 								<h2>Presets</h2>
 								<label className="au-control-input au-control-input--block">
 									<input className="au-control-input__input" type="radio" name="preset-theme" value="green"/>
