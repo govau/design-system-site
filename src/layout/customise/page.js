@@ -143,49 +143,49 @@ const Customise = ({
 								/>
 								<h2>Input</h2>
 								<form id="au-form">
-									<div class="form-item">
+									<div className="form-item">
 										<label>
 											Text
 											<input name="text" id="text" type="text" />
 										</label>
 									</div>
-									<div class="form-item">
+									<div className="form-item">
 										<label>
 											Action
 											<input name="action" id="action" type="text" />
 										</label>
 									</div>
-									<div class="form-item">
+									<div className="form-item">
 										<label>
 											Focus
 											<input name="focus" id="focus" type="text" />
 										</label>
 									</div>
-									<div class="form-item">
+									<div className="form-item">
 										<label>
 											Background
 											<input name="background" id="background" type="text" />
 										</label>
 									</div>
-									<div class="form-item">
+									<div className="form-item">
 										<label>
 											Dark text
 											<input name="textDark" id="textDark" type="text" />
 										</label>
 									</div>
-									<div class="form-item">
+									<div className="form-item">
 										<label>
 											Dark action
 											<input name="actionDark" id="actionDark" type="text" />
 										</label>
 									</div>
-									<div class="form-item">
+									<div className="form-item">
 										<label>
 											Dark focus
 											<input name="focusDark" id="focusDark" type="text" />
 										</label>
 									</div>
-									<div class="form-item">
+									<div className="form-item">
 										<label>
 											Dark background
 											<input
@@ -195,10 +195,11 @@ const Customise = ({
 											/>
 										</label>
 									</div>
-									<button>Change colours!</button>
+									<button>Change Colours!</button>
 								</form>
 
 								<button name="btn-reset">Reset</button>
+								<button name="btn-share">Share</button>
 
 								<div className="accessibility-selection">
 									<h2>Accessibility Options</h2>
@@ -234,7 +235,6 @@ const Customise = ({
 				</main>
 				{/* <script src={ _relativeURL( '/assets/js/iframe-resizer-contentWindow.js', _ID ) } /> */}
 				<script src={_relativeURL("/assets/js/footer.js", _ID)} />
-				<script src={_relativeURL("/assets/js/customise-helpers.js", _ID)} />
 			</body>
 		</html>
 	);
