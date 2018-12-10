@@ -1,14 +1,14 @@
-const customiseBtn    = document.getElementById( 'show-color-pallette' );
-const presetsBtn      = document.getElementById( 'show-presets' );
-const colorPallette   = document.querySelector( '.chameleon-toolkit__container--custom' );
-const presetPallette  = document.querySelector( '.chameleon-toolkit__container--presets');
+var customiseBtn    = document.getElementById( 'show-color-pallette' );
+var presetsBtn      = document.getElementById( 'show-presets' );
+var colorPallette   = document.querySelector( '.chameleon-toolkit__container--custom' );
+var presetPallette  = document.querySelector( '.chameleon-toolkit__container--presets');
 
-customiseBtn.addEventListener( 'click', () => {
+customiseBtn.addEventListener( 'click', function() {
     AddClass( presetPallette, 'hidden');
     RemoveClass( colorPallette, 'hidden' );
 })
 
-presetsBtn.addEventListener( 'click', () => {
+presetsBtn.addEventListener( 'click', function() {
     AddClass( colorPallette, 'hidden');
     RemoveClass( presetPallette, 'hidden' );
 })

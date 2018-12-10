@@ -126,15 +126,15 @@ const iframes = [
 								<div className="row">
 									<div className="col-sm-6">
 										<div class="form-item">
-											<label class="label--block" for="text">Text</label>
+											<label class="label--block" htmlFor="text">Text</label>
 											<input class="au-text-input" name="text" id="text" type="text" />
 										</div>
 										<div class="form-item">
-											<label class="label--block" for="action">Action</label>
+											<label class="label--block" htmlFor="action">Action</label>
 											<input class="au-text-input" name="action" id="action" type="text" />
 										</div>
 										<div class="form-item">
-											<label class="label--block" for="background">Background</label>
+											<label class="label--block" htmlFor="background">Background</label>
 											<input class="au-text-input" name="background" id="background" type="text" />
 										</div>
 										<div class="form-item">
@@ -143,19 +143,19 @@ const iframes = [
 									</div>
 									<div className="col-sm-6">
 										<div class="form-item">
-											<label class="label--block" for="textDark">Dark text</label>
+											<label class="label--block" htmlFor="textDark">Dark text</label>
 											<input class="au-text-input" name="textDark" id="textDark" type="text"/>
 										</div>
 										<div class="form-item">
-											<label class="label--block" for="actionDark">Dark action</label>
+											<label class="label--block" htmlFor="actionDark">Dark action</label>
 											<input class="au-text-input" name="actionDark" id="actionDark" type="text"/>
 										</div>
 										<div class="form-item">
-											<label class="label--block" for="backgroundDark">Dark background</label>
-											<input class="au-text-input" name="backgroundDark" id="backgroundDark" type="text"/>
+											<label className="label--block" htmlFor="backgroundDark">Dark background</label>
+											<input className="au-text-input" name="backgroundDark" id="backgroundDark" type="text"/>
 										</div>
-										<div class="form-item">
-											<button id="" class="au-btn">Submit</button>
+										<div className="form-item">
+											<button id="" className="au-btn">Submit</button>
 										</div>
 									</div>
 								</div>
@@ -178,24 +178,24 @@ const iframes = [
 									<span className="au-control-input__text">Default</span>
 								</label>
 								<br/> {/* FIX THIS */}
-								<button id="show-color-pallette" class="au-btn">Customise</button>
+								<button id="show-color-pallette" className="au-btn">Customise</button>
 							</div>
 							{/* A11Y OPTIONS*/}
 							<div className="col-md-4 chameleon-toolkit__container chameleon-toolkit__container--presets--a11y">
 								<h2>Accessibility </h2>
-								<label class="au-control-input au-control-input--block">
-									<input class="au-control-input__input" type="radio" name="a11y-filter" value="deuteranopia" />
-									<span class="au-control-input__text">Deuteranopia</span>
+								<label className="au-control-input au-control-input--block">
+									<input className="au-control-input__input" type="radio" name="a11y-filter" value="deuteranopia" />
+									<span className="au-control-input__text">Deuteranopia</span>
 								</label>
 	
-								<label class="au-control-input au-control-input--block">
-									<input class="au-control-input__input" type="radio" name="a11y-filter" value="tritanopia" />
-									<span class="au-control-input__text">Tritanopia</span>
+								<label className="au-control-input au-control-input--block">
+									<input className="au-control-input__input" type="radio" name="a11y-filter" value="tritanopia" />
+									<span className="au-control-input__text">Tritanopia</span>
 								</label>
 		
-								<label class="au-control-input au-control-input--block">
-									<input class="au-control-input__input" type="radio" name="a11y-filter" value="default"/>
-									<span class="au-control-input__text">Default</span>
+								<label className="au-control-input au-control-input--block">
+									<input className="au-control-input__input" type="radio" name="a11y-filter" value="default"/>
+									<span className="au-control-input__text">Default</span>
 								</label>
 							</div>
 						</div>
