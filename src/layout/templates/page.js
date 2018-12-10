@@ -1,7 +1,4 @@
-import ComponentHeader from './header';
-import ComponentFooter from './footer';
 import AUskipLink      from '../../_uikit/layout/skip-link';
-import GetData         from './../../helper/getData';
 
 
 import PropTypes from 'prop-types';
@@ -11,28 +8,16 @@ import React, { Fragment } from 'react';
 /**
  * The page component for components
  */
-const ComponentPage = ({
+const TemplatePage = ({
 	_ID,
 	_relativeURL,
-	_parseYaml,
-	_parseMD,
-	_pages,
-	_parents,
-	_isDocs,
 	header,
-	showheader = true,
-	component_nav,
 	sidebar,
 	pagetitle,
 	main,
 	footer,
 	module = ''
 }) => {
-
-	const MODULE = GetData({
-		filter: ( key, COMPONENTS ) => key === module,
-		yaml: _parseYaml
-	})[ 0 ];
 
 	const headContent = `
 <meta charset="utf-8">
@@ -52,13 +37,13 @@ const ComponentPage = ({
 <meta name="author" content="Digital Transformation Agency">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Australian Government Design System">
-<meta name="twitter:description" content="${ module !== '' ? `${ MODULE.description } - ` : '' }Australian Government Design System">
+<meta name="twitter:description" content="Australian Government Design System">
 <meta name="twitter:name" content="Australian Government Design System">
 <meta name="twitter:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:type" content="website">
 <meta property="og:title" content="${ pagetitle } - Australian Government Design System">
 <meta property="og:site_name" content="Australian Government Design System">
-<meta property="og:description" content="${ module !== '' ? `${ MODULE.description } - ` : '' }Australian Government Design System">
+<meta property="og:description" content="Australian Government Design System">
 <meta property="og:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:url" content="https://designsystem.gov.au">
 
@@ -78,7 +63,6 @@ const ComponentPage = ({
 
 		<body className="au-grid is-components">
 			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Z7S8GB" height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe></noscript>
-
 			{ header }
 			<div className="page-wrapper">
 				<div className="content-wrapper">
@@ -88,38 +72,12 @@ const ComponentPage = ({
 								{ sidebar }
 							</div>
 							<div id="content" tabIndex="-1" className="col-md-9 content">
-								{
-									showheader &&
-									<Fragment>
-										<AUskipLink links={[
-											{
-												link: '#component-documentation',
-												text: `Skip to ${ pagetitle }`,
-											},
-										]} />
-										<ComponentHeader
-											_relativeURL={ _relativeURL }
-											_parseYaml={ _parseYaml }
-											_parseMD={ _parseMD }
-											_parents={ _parents }
-											_pages={ _pages }
-											_ID={ _ID }
-											_isDocs={ _isDocs }
-										/>
-										{ component_nav }
-									</Fragment>
-								}
-								<div tabIndex="-1" className="componentdocumentation" id="component-documentation">
-									{ main }
-								</div>
-								{
-									showheader && <ComponentFooter _ID={ _ID } _parseYaml={ _parseYaml } _relativeURL={ _relativeURL } _pages={ _pages } _parents= { _parents } />
-								}
+								<h1>{ pagetitle }</h1>
+								{ main }
 							</div>
 						</div>
 					</main>
 				</div>
-
 				{ footer }
 			</div>
 			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
@@ -137,7 +95,7 @@ const ComponentPage = ({
 	);
 }
 
-ComponentPage.propTypes = {
+TemplatePage.propTypes = {
 	/**
 	 * pagetitle: Homepage
 	 */
@@ -159,6 +117,6 @@ ComponentPage.propTypes = {
 	footer: PropTypes.node.isRequired,
 };
 
-ComponentPage.defaultProps = {};
+TemplatePage.defaultProps = {};
 
-export default ComponentPage;
+export default TemplatePage;

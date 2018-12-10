@@ -3,7 +3,7 @@
 	padding: 0;
 
 	* + & {
-		@include AU-space( margin-top, 1.5unit );
+		@include AU-space( margin-top, 1unit );
 	}
 
 	& > li + li {

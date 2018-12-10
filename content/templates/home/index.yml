@@ -3,6 +3,9 @@ pagetitle: Home
 header:
   - /_shared/header.md
 
+sidebar:
+  - /templates/sidebar.md
+
 main:
   - intro.md
 

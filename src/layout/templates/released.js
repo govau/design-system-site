@@ -14,7 +14,7 @@ const TemplatesReleased = ({ templates, _body, _relativeURL, _parseYaml, _parseM
 		const templateYaml = ( `${ templatesDir }${ template }/index.yml` );
 		const templateData = _parseYaml( Fs.readFileSync( templateYaml, 'utf-8' ) );
 
-		const intro = _parseMD( Fs.readFileSync( `${ templatesDir }${ template }/intro.md`, 'utf-8' ) )
+		const intro = _parseMD( Fs.readFileSync( `${ templatesDir }${ template }/intro.md`, 'utf-8' ) );
 
 		return (
 			<Fragment>
@@ -22,7 +22,7 @@ const TemplatesReleased = ({ templates, _body, _relativeURL, _parseYaml, _parseM
 					<img alt={ `${ template } page template` } src={ _relativeURL( `/assets/img/templates/${ template }.jpg` ) } />
 				</a>
 				<div className="template-card__content">
-					<h2 class="au-display-xl">{ templateData.pagetitle }</h2>
+					<h2 className="au-display-xl">{ templateData.pagetitle }</h2>
 					{ intro }
 					<ul className="au-btn__list au-btn__list--inline">
 						<li><AUbutton link={ template }>Documentation</AUbutton></li>
@@ -38,7 +38,7 @@ const TemplatesReleased = ({ templates, _body, _relativeURL, _parseYaml, _parseM
 			{ _body }
 			<ul className="templates__released">
 				{ cards.map( ( card, i ) => (
-					<li key={ i } class="template-card au-card">{ card }</li>
+					<li key={ i } className="template-card au-card">{ card }</li>
 				)) }
 			</ul>
 		</Fragment>

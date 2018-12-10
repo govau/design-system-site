@@ -7,8 +7,8 @@
 }
 
 .template-card .template-card__image {
-	@include AU-space( max-width, 20unit );
-	@include AU-space( margin-right, -25unit );
+	@include AU-space( max-width, 16unit );
+	@include AU-space( margin-right, -21unit );
 	float: left;
 	width: auto;
 
@@ -28,10 +28,13 @@
 }
 
 .template-card .template-card__content {
-	// @include AU-space( margin-top, 1unit );
-	@include AU-space( margin-left, 22unit );
+	@include AU-space( margin-left, 18unit );
 	display: block;
 	float: left;
+
+	.au-btn__list {
+		@include AU-space( margin-top, 3unit );
+	}
 }
 
 .templates__released {

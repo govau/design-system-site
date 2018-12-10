@@ -1,7 +1,10 @@
-pagetitle: Basic
+pagetitle: Basic page template
 
 header:
   - /_shared/header.md
+
+sidebar:
+  - /templates/sidebar.md
 
 main:
   - intro.md

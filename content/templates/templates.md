@@ -2,7 +2,7 @@
 layout: templates/released
 templates:
   - home
-  - basic
+  - content
 cardList:
   appearance: shadow
 ---
