@@ -1,7 +1,11 @@
+layout: templates/page
 pagetitle: Templates
 
 header:
   - /_shared/header.md
+
+sidebar:
+  - sidebar.md
 
 main:
   - templates.md
