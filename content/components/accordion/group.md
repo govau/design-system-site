@@ -50,13 +50,13 @@ code:
       import AUaccordion from '@gov.au/accordion';
       <ul className="au-accordion-group">
         <li>
-          <AUaccordion open={ false } header="Accordion group 1">
+          <AUaccordion closed={ true } header="Accordion group 1">
             Here <a href="#url">is</a> some accordion content
           </AUaccordion>
         </li>
         
         <li>
-          <AUaccordion open={ false } header="Accordion group 2">
+          <AUaccordion closed={ true } header="Accordion group 2">
             Here <a href="#url">is</a> some accordion content
           </AUaccordion>
         </li>
