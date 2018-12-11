@@ -55,8 +55,6 @@ const Customise = ({
 <script>var $html=document.documentElement;if($html.classList)$html.classList.remove("no-js"),$html.classList.add("js");else{var className="no-js";$html.className=$html.className.replace(new RegExp("(^|\\b)"+className.split(" ").join("|")+"(\\b|$)","gi")," "),$html.className+=" js"}</script>`;
 
 const iframes = [
-	{ width: '320px', device: 'mobile' },
-	{ width: '768px', device: 'tablet' },
 	{ width: '1024px', device: 'desktop' },
 ]
 
@@ -67,10 +65,13 @@ const iframes = [
 			<header className="header__example">
 				<div className="container-fluid">
 					<div className="row">
-						<div className="col-md-12">
+						<div className="col-md-10">
 							<a className="au-direction-link au-direction-link--left" href={ `/${ parentId }` }>
 								Go back to { parentData.pagetitle }
 							</a>
+						</div>
+						<div className="col-md-2">
+							<a href="#tk" className="au-btn">Customise</a>
 						</div>
 					</div>
 				</div>
@@ -107,7 +108,7 @@ const iframes = [
 						{
 							iframes.map( ( frame ) => {
 								return (
-								<iframe className={`chameleon-wrapper__iframe ${frame.device}`} width={frame.width} src={
+								<iframe className={`chameleon-wrapper__iframe ${frame.device}`} src={
 										process.env.NODE_ENV == "production" 
 										? "https://designsystem.gov.au/chameleon" 
 										: 'http://localhost:3000/chameleon'}
@@ -118,75 +119,77 @@ const iframes = [
 				</section>
 
 				<section className="container-fluid au-body">
-					<div className="chameleon-toolkit">
+					<div className="chameleon-toolkit" >
 						<div className="row">
-						{/* CUSTOMISE PALLETTE (FIX THESE CLASSES)*/}
-							<div id="custom-colour-pallette" className="col-md-8 chameleon-toolkit__container hidden">
-								<h2>Custom colours</h2> <br/> {/* FIX THIS */}
-								<div className="row">
-									<div className="col-sm-6">
-										<div class="form-item">
-											<label class="label--block" htmlFor="text">Text</label>
-											<input class="au-text-input" name="text" id="text" type="text" />
+							<div className="col-md-6 chameleon-toolkit__container" id="tk">
+							{/* CUSTOMISE PALLETTE (FIX THESE CLASSES)*/}
+								<div id="custom-colour-pallette" className="hidden">
+									<h2>Custom colours</h2> <br/> {/* FIX THIS */}
+									<div  className="row">
+										<div className="col-sm-6">
+											<div className="form-item">
+												<label className="label--block" htmlFor="text">Text</label>
+												<input className="au-text-input" name="text" id="text" type="text" />
+											</div>
+											<div className="form-item">
+												<label className="label--block" htmlFor="action">Action</label>
+												<input className="au-text-input" name="action" id="action" type="text" />
+											</div>
+											<div className="form-item">
+												<label className="label--block" htmlFor="background">Background</label>
+												<input className="au-text-input" name="background" id="background" type="text" />
+											</div>
 										</div>
-										<div class="form-item">
-											<label class="label--block" htmlFor="action">Action</label>
-											<input class="au-text-input" name="action" id="action" type="text" />
-										</div>
-										<div class="form-item">
-											<label class="label--block" htmlFor="background">Background</label>
-											<input class="au-text-input" name="background" id="background" type="text" />
-										</div>
-									</div>
-									<div className="col-sm-6">
-										<div class="form-item">
-											<label class="label--block" htmlFor="textDark">Dark text</label>
-											<input class="au-text-input" name="textDark" id="textDark" type="text"/>
-										</div>
-										<div class="form-item">
-											<label class="label--block" htmlFor="actionDark">Dark action</label>
-											<input class="au-text-input" name="actionDark" id="actionDark" type="text"/>
-										</div>
-										<div class="form-item">
-											<label className="label--block" htmlFor="backgroundDark">Dark background</label>
-											<input className="au-text-input" name="backgroundDark" id="backgroundDark" type="text"/>
-										</div>
-									</div>
-								</div>
-								{/* CUSTOM COLOR FORM BUTTONS */}
-								<div className="row">
-									<div className="col-sm-6">
-										<div class="form-item">
-											<button id="show-presets" class="au-btn au-btn--secondary">Back to presets</button>
+										<div className="col-sm-6">
+											<div className="form-item">
+												<label className="label--block" htmlFor="textDark">Dark text</label>
+												<input className="au-text-input" name="textDark" id="textDark" type="text"/>
+											</div>
+											<div className="form-item">
+												<label className="label--block" htmlFor="actionDark">Dark action</label>
+												<input className="au-text-input" name="actionDark" id="actionDark" type="text"/>
+											</div>
+											<div className="form-item">
+												<label className="label--block" htmlFor="backgroundDark">Dark background</label>
+												<input className="au-text-input" name="backgroundDark" id="backgroundDark" type="text"/>
+											</div>
 										</div>
 									</div>
-									<div className="col-sm-6">
-										<div className="form-item">
-											<button id="" className="au-btn">Submit</button>
+									{/* CUSTOM COLOR FORM BUTTONS */}
+									<div className="row">
+										<div className="col-sm-6">
+											<div className="form-item">
+												<button id="show-presets" className="au-btn au-btn--secondary">Back to presets</button>
+											</div>
+										</div>
+										<div className="col-sm-6">
+											<div className="form-item">
+												<button id="" className="au-btn">Submit</button>
+											</div>
 										</div>
 									</div>
-								</div>
 
-							</div>
+								</div>
 							{/* PRESET OPTIONS*/}
-							<div id="preset-pallette" className="col-md-4 chameleon-toolkit__container">
-								<h2>Presets</h2>
-								<label className="au-control-input au-control-input--block">
-									<input className="au-control-input__input" type="radio" name="preset-theme" value="green"/>
-									<span className="au-control-input__text">Green</span>
-								</label>
+								<div id="preset-pallette">
+									<h2>Presets</h2>
+									<label className="au-control-input au-control-input--block">
+										<input className="au-control-input__input" type="radio" name="preset-theme" value="green"/>
+										<span className="au-control-input__text">Green</span>
+									</label>
 
-								<label className="au-control-input au-control-input--block">
-									<input className="au-control-input__input" type="radio" name="preset-theme" value="blue"/>
-									<span className="au-control-input__text">Blue</span>
-								</label>
+									<label className="au-control-input au-control-input--block">
+										<input className="au-control-input__input" type="radio" name="preset-theme" value="blue"/>
+										<span className="au-control-input__text">Blue</span>
+									</label>
 
-								<label className="au-control-input au-control-input--block">
-									<input className="au-control-input__input" type="radio" name="preset-theme" value="default"/>
-									<span className="au-control-input__text">Default</span>
-								</label>
-								<br/> {/* FIX THIS */}
-								<button id="show-color-pallette" className="au-btn">Customise</button>
+									<label className="au-control-input au-control-input--block">
+										<input className="au-control-input__input" type="radio" name="preset-theme" value="default"/>
+										<span className="au-control-input__text">Default</span>
+									</label>
+									<br/> {/* FIX THIS */}
+									<button id="show-color-pallette" className="au-btn">Customise</button>
+								</div>
 							</div>
 							{/* A11Y OPTIONS*/}
 							<div className="col-md-4 chameleon-toolkit__container chameleon-toolkit__container--presets--a11y">

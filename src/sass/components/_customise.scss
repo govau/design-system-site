@@ -1,46 +1,44 @@
 .chameleon-wrapper {
-    overflow-x: scroll;
+    // overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
     @include AU-space( padding, 1unit 2unit 1unit 2unit );
     background: whitesmoke;
     text-align: center;
-    @include AU-media (sm) {
-        text-align: left;
-    }
 }
 
 
 .chameleon-wrapper__iframe {
-    height: 75vh;
     display: inline-block;
+    height: 75vh;
     border-radius: .25rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    & + * {
-        @include AU-space( margin-left, 2unit );
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    width: 280px;
+
+    @include AU-media( xs ){
+        width: 400px;
     }
 
-    @include AU-media ( lg ) {
-
+    @include AU-media( sm ) {
+        width: 600px;
     }
 
-    &.desktop {
-        display: none;
-        @include AU-media ( md ) {
-            display: inline-block;
-        }
+    @include AU-media( md ) {
+        width: 840px;
     }
 
-    &.tablet {
-        display: none;
-        @include AU-media ( sm ) {
-            display: inline-block;
-        }
+    @include AU-media( lg ) {
+        width: 71rem;
     }
 }
 
+
 .chameleon-toolkit {
-    @include AU-space( margin, 1unit 3unit 2unit 3unit );
+    @include AU-space( margin, .5unit 1.5unit 1unit 1.5unit );
+
+    @include AU-media( sm ) {
+        @include AU-space( margin, 1unit 3unit 2unit 3unit );
+    }
 
     & .chameleon-toolkit__container {
         border: solid 1px #ccc;
@@ -55,18 +53,38 @@
                 margin-top: 0;
             }
         }
-        
-        
-        &.hidden {
+
+        &>.hidden {
             display: none;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        &>.show {
+            display:block;
+            visibility: visible;
+            animation: fade 1s;
+            opacity: 1;
         }
     }
 
 }
 
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
 .form-item + .form-item {
 	@include AU-space( margin-top, 2.5unit );
 }
+
 
 .label--block {
 	display: block;
