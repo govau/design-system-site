@@ -11,8 +11,7 @@ const HeaderGovAU = ({ publisher, publisher_url, left_title, left_content, right
 		<div className="container-fluid">
 			<div className="row headergovau__bar">
 				<div className="col-md-12">
-					<a
-						href="#headergovau-accordion"
+					<button
 						className="headergovau__button js-header-accordion au-accordion--closed"
 						aria-controls="headergovau-accordion"
 						aria-expanded="false"
@@ -23,7 +22,7 @@ const HeaderGovAU = ({ publisher, publisher_url, left_title, left_content, right
 							<span className="headergovau__title">Australian Government&nbsp;</span>
 							<span className="headergovau__official">official website</span>
 						</span>
-					</a>
+					</button>
 					<a href={ publisher_url } className="headergovau__publisher">
 						{ publisher }
 					</a>

@@ -1,13 +1,13 @@
 <aside class="au-side-nav au-accordion" aria-label="side navigation">
-  <a 
-    href="#nav-default" class="au-side-nav__toggle au-accordion__title au-accordion--closed js-focus-me"
+  <button 
+    class="au-side-nav__toggle au-accordion__title au-accordion--closed js-focus-me"
     aria-controls="nav-default"
     aria-expanded="false"
     aria-selected="false"
     onclick="return AU.accordion.Toggle( this )"
   >
     In this section
-  </a>
+  </button>
   <div id="nav-default" class="au-side-nav__content au-accordion--closed au-accordion__body">
     <h2 class="au-sidenav__title">
       <a href="#" class="js-focus-me">Lodging your tax return</a>
