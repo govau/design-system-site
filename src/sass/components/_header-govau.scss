@@ -67,13 +67,22 @@
 .headergovau__bar {
 	@include AU-space( padding, 0.5unit 0 );
 
-	a {
+	button {
 		color: $AU-colordark-foreground-text;
 		@include AU-focus( 'dark' );
 	}
 }
 
 .headergovau__button {
+
+	//button resets
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+
 	float: left;
 	text-decoration: none;
 	position: relative;
