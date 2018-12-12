@@ -52,14 +52,14 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parents, _parseYaml }
 					components.length
 						?
 						<section className="au-accordion">
-							<a href={ `#accordion-${ state }` }
+							<button href={ `#accordion-${ state }` }
 								className={ `au-accordion__title js-accordion${ _isOpen ? '' : ' au-accordion--closed' }` }
 								aria-controls={ `accordion-${ state }` }
 								aria-expanded={ _isOpen ? 'true' : 'false' }
 								aria-selected={ _isOpen ? 'true' : 'false' }
 								onClick="return UIKIT.accordion.Toggle( this )">
 									{ title } <span className={ `badge badge--${ state }` }>{ components.length }</span>
-							</a>
+							</button>
 							<div
 								className={ `au-accordion__body${ _isOpen ? '' : ' au-accordion--closed' }` }
 								id={ `accordion-${ state }` }
