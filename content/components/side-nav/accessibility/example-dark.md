@@ -1,6 +1,6 @@
 <aside class="au-side-nav au-side-nav--dark au-accordion au-accordion--dark js-focus-me" aria-label="side navigation">
   <button
-    href="#nav-default--dark" class="au-side-nav__toggle au-accordion__title au-accordion--closed js-focus-me"
+    class="au-side-nav__toggle au-accordion__title au-accordion--closed js-focus-me"
     aria-controls="nav-default--dark"
     aria-expanded="false"
     aria-selected="false"
