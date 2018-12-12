@@ -13,9 +13,9 @@ code:
       -->
 
       <section class="au-accordion">
-        <a href="#accordion-default" class="au-accordion__title js-au-accordion" aria-controls="accordion-default" aria-expanded="true" aria-selected="true" onclick="return AU.accordion.Toggle( this )">
+        <button href="#accordion-default" class="au-accordion__title js-au-accordion" aria-controls="accordion-default" aria-expanded="true" aria-selected="true" onclick="return AU.accordion.Toggle( this )">
           Accordion title
-        </a>
+        </button>
 
         <div class="au-accordion__body" id="accordion-default">
           <div class="au-accordion__body-wrapper">
