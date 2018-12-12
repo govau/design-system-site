@@ -76,14 +76,6 @@ html {
 }
 
 
-// Custom code for animate example
-.animate-example {
-	@include AU-space( margin-top, 1unit );
-	background-color: hotpink;
-	background-color: rebeccapurple; // Not supported by IE
-}
-
-
 // Custom code for core fontgrid example
 .fontgrid {
 	p {

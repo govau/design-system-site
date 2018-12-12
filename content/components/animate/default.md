@@ -25,7 +25,7 @@ code:
 
       <button aria-controls="animate-example-1" onclick="AU.animate.Stop( document.getElementById('animate-example-1') )">Stop</button>
 
-      <div class="animate-example" id="animate-example-1">&nbsp;<br /><br /><br /></div>
+      <div style="background:#663399; margin-top:1rem" id="animate-example-1">&nbsp;<br /><br /><br /></div>
 
       <!-- Make sure you include the uikit javascript file -->
       <script type="text/javascript" src="script.js"></script>

@@ -16,7 +16,7 @@
 })">Toggle all</button>
 
 <div id="animate-example-2">
-  <div class="animate-example animate-example-2">&nbsp;<br><br><br></div>
-  <div class="animate-example animate-example-2" style="width:0;">&nbsp;<br><br><br></div>
-  <div class="animate-example animate-example-2">&nbsp;<br><br><br></div>
+  <div class="animate-example-2" style="background:#663399; margin-top:1rem">&nbsp;<br><br><br></div>
+  <div class="animate-example-2" style="background:#663399; margin-top:1rem; width:0;">&nbsp;<br><br><br></div>
+  <div class="animate-example-2" style="background:#663399; margin-top:1rem">&nbsp;<br><br><br></div>
 </div>
