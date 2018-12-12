@@ -23,9 +23,9 @@ code:
       })">Toggle all</button>
 
       <div id="animate-example-2">
-        <div class="animate-example" style="background:#663399; margin-top:1rem" >&nbsp;<br><br><br></div>
-        <div class="animate-example" style="background:#663399; margin-top:1rem; width: 0" >&nbsp;<br><br><br></div>
-        <div class="animate-example" style="background:#663399; margin-top:1rem" >&nbsp;<br><br><br></div>
+        <div class="animate-example" style="background:#663399; margin-top:16px" >&nbsp;<br><br><br></div>
+        <div class="animate-example" style="background:#663399; margin-top:16px; width: 0" >&nbsp;<br><br><br></div>
+        <div class="animate-example" style="background:#663399; margin-top:16px" >&nbsp;<br><br><br></div>
       </div>
 
       <!-- Make sure you include the uikit javascript file -->

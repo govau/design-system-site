@@ -16,4 +16,4 @@
     speed: 500,
   })">Toggle</button>
 
-<div style="background:#663399; margin-top:1rem" id="animate-example-1">&nbsp;<br /><br /><br /></div>
+<div style="background:#663399; margin-top:16px" id="animate-example-1">&nbsp;<br /><br /><br /></div>
