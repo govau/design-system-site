@@ -52,7 +52,7 @@ const NavigationAccordion = ({ _relativeURL, _ID, _pages, _parents, _parseYaml }
 					components.length
 						?
 						<section className="au-accordion">
-							<button href={ `#accordion-${ state }` }
+							<button
 								className={ `au-accordion__title js-accordion${ _isOpen ? '' : ' au-accordion--closed' }` }
 								aria-controls={ `accordion-${ state }` }
 								aria-expanded={ _isOpen ? 'true' : 'false' }
