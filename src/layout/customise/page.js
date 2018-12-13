@@ -1,4 +1,5 @@
 import React from 'react';
+import FormList from '../form-item-list';
 
 /**
  * The example component
@@ -14,20 +15,20 @@ const Customise = ({
 	_parents,
 	_pages
 }) => {
-	const parentId = _parents[ _parents.length - 2 ];
+	const parentId = _parents[_parents.length - 2];
 	const parentData = _pages[parentId];
 	const headContent = `
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-<link rel="apple-touch-icon" sizes="180x180" href=${ _relativeURL('/assets/favicons/apple-touch-icon.png', _ID ) }>
-<link rel="icon" type="image/png" sizes="32x32" href=${ _relativeURL('/assets/favicons/favicon-32x32.png', _ID ) }>
-<link rel="icon" type="image/png" sizes="16x16" href=${ _relativeURL('/assets/favicons/favicon-16x16.png', _ID ) }>
-<link rel="manifest" href=${ _relativeURL('/assets/favicons/site.webmanifest', _ID ) }>
-<link rel="mask-icon" href=${ _relativeURL('/assets/favicons/safari-pinned-tab.svg', _ID ) } color="#06262d">
-<link rel="shortcut icon" href=${ _relativeURL('/assets/favicons/favicon.ico', _ID ) }>
-<meta name="msapplication-config" content=${ _relativeURL('/assets/favicons/browserconfig.xml', _ID ) }>
+<link rel="apple-touch-icon" sizes="180x180" href=${ _relativeURL('/assets/favicons/apple-touch-icon.png', _ID)}>
+<link rel="icon" type="image/png" sizes="32x32" href=${ _relativeURL('/assets/favicons/favicon-32x32.png', _ID)}>
+<link rel="icon" type="image/png" sizes="16x16" href=${ _relativeURL('/assets/favicons/favicon-16x16.png', _ID)}>
+<link rel="manifest" href=${ _relativeURL('/assets/favicons/site.webmanifest', _ID)}>
+<link rel="mask-icon" href=${ _relativeURL('/assets/favicons/safari-pinned-tab.svg', _ID)} color="#06262d">
+<link rel="shortcut icon" href=${ _relativeURL('/assets/favicons/favicon.ico', _ID)}>
+<meta name="msapplication-config" content=${ _relativeURL('/assets/favicons/browserconfig.xml', _ID)}>
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <meta name="robots" content="index, follow">
@@ -38,185 +39,211 @@ const Customise = ({
 <meta name="twitter:name" content="Australian Government Design System">
 <meta name="twitter:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:type" content="website">
-<meta property="og:title" content="${ pagetitle } - Australian Government Design System">
+<meta property="og:title" content="${ pagetitle} - Australian Government Design System">
 <meta property="og:site_name" content="Australian Government Design System">
 <meta property="og:description" content="Inclusive design, open-source code and shared insights">
 <meta property="og:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:url" content="https://designsystem.gov.au">
 
-<title>${ pagetitle ? pagetitle : componentTitle + ` example` } - Australian Government Design System</title>
+<title>${ pagetitle ? pagetitle : componentTitle + ` example`} - Australian Government Design System</title>
 
-<link rel="stylesheet" href=${ _relativeURL( '/assets/css/example.css', _ID ) } />
+<link rel="stylesheet" href=${ _relativeURL('/assets/css/example.css', _ID)} />
 
 <!--[if lte IE 9]>
-	<script src="${ _relativeURL( '/assets/js/html5shiv.js', _ID ) }"></script>
-	<script src="${ _relativeURL( '/assets/js/respond.js', _ID ) }"></script>
+	<script src="${ _relativeURL('/assets/js/html5shiv.js', _ID)}"></script>
+	<script src="${ _relativeURL('/assets/js/respond.js', _ID)}"></script>
 <![endif]-->
 <script>var $html=document.documentElement;if($html.classList)$html.classList.remove("no-js"),$html.classList.add("js");else{var className="no-js";$html.className=$html.className.replace(new RegExp("(^|\\b)"+className.split(" ").join("|")+"(\\b|$)","gi")," "),$html.className+=" js"}</script>`;
 
-const iframes = [
-	{ width: '1024px', device: 'desktop' },
-]
+	const iframes = [
+		{ width: '1024px', device: 'desktop' },
+	]
+
+	const formItemsLight = [
+		{
+			id: 'text',
+			className: "",
+			label: 'Text'
+		},
+		{
+			id: 'action',
+			className: "",
+			label: 'Action'
+		},
+		{
+			id: 'background',
+			className: "",
+			label: 'Background'
+		},
+		{
+			id: 'focus',
+			className: "",
+			label: 'Focus'
+		},
+
+	]
+
+	const formItemsDark = [
+		{
+			id: 'dark-text',
+			className: "",
+			label: 'Dark text'
+		},
+		{
+			id: 'dark-action',
+			className: "",
+			label: 'Dark action'
+		},
+		{
+			id: 'dark-background',
+			className: "",
+			label: 'Dark background'
+		},
+		{
+			id: 'dark-focus',
+			className: "",
+			label: 'Dark focus'
+		},
+
+	]
 
 	return (
 		<html>
-		<head dangerouslySetInnerHTML={{ __html: headContent }}  />
-		<body className={ `au-grid live-demo"` }>
-			<header className="header__example">
-				<div className="container-fluid">
-					<div className="row">
-						<div className="col-md-10">
-							<a className="au-direction-link au-direction-link--left" href={ `/${ parentId }` }>
-								Go back to { parentData.pagetitle }
+			<head dangerouslySetInnerHTML={{ __html: headContent }} />
+			<body className={`au-grid live-demo"`}>
+				<header className="header__example">
+					<div className="container-fluid">
+						<div className="row">
+							<div className="col-xs-6">
+								<a className="au-direction-link au-direction-link--left" href={`/${parentId}`}>
+									Go back to { parentData.pagetitle }
+								</a>
+							</div>
+							<div className="col-xs-6">
+							<a id="cs" className="au-btn" href="#tk">
+									Use toolkit
 							</a>
 						</div>
-						<div className="col-md-2">
-							<a href="#tk" className="au-btn">Customise</a>
 						</div>
 					</div>
-				</div>
-			</header>
-			<svg
-				aria-hidden="true"
-				className="svg-filter"
-				xmlns="http://www.w3.org/2000/svg"
-				version="1.1">
-				<defs>
-					<filter id="deuteranopia">
-						<feColorMatrix
-							in="SourceGraphic"
-							type="matrix"
-							values="0.625, 0.375, 0,   0, 0
+				</header>
+				<svg
+					aria-hidden="true"
+					className="svg-filter"
+					xmlns="http://www.w3.org/2000/svg"
+					version="1.1">
+					<defs>
+						<filter id="deuteranopia">
+							<feColorMatrix
+								in="SourceGraphic"
+								type="matrix"
+								values="0.625, 0.375, 0,   0, 0
 									0.7,   0.3,   0,   0, 0
 									0,     0.3,   0.7, 0, 0
 									0,     0,     0,   1, 0"/>
 					</filter>
-					<filter id="tritanopia">
-						<feColorMatrix
-							in="SourceGraphic"
-							type="matrix"
-							values="0.95, 0.05,  0,     0, 0
+						<filter id="tritanopia">
+							<feColorMatrix
+								in="SourceGraphic"
+								type="matrix"
+								values="0.95, 0.05,  0,     0, 0
 									0,    0.433, 0.567, 0, 0
 									0,    0.475, 0.525, 0, 0
 									0,    0,     0,     1, 0"/>
 					</filter>
-				</defs>
-			</svg>
-			<main>
-				<section className="container-fluid">
-					<div className="chameleon-wrapper">
-						{
-							iframes.map( ( frame ) => {
-								return (
-								<iframe className={`chameleon-wrapper__iframe ${frame.device}`} src={
-										process.env.NODE_ENV == "production" 
-										? "https://designsystem.gov.au/chameleon" 
+					</defs>
+				</svg>
+				<main>
+					<section className="container-fluid chameleon-wrapper">
+						<div className="row equal au-body">
+							<div className="col-lg-7">
+								<iframe className={`chameleon-wrapper__iframe`} src={
+									process.env.NODE_ENV == "production"
+										? "https://designsystem.gov.au/chameleon"
 										: 'http://localhost:3000/chameleon'}
-								/> )
-							})
-						}
-					</div>
-				</section>
+								/>
+							</div>
+							<div id="tk" className="col-lg-5 chameleon-toolkit">
+							<div className="row chameleon-toolkit__container">
+									<div id="custom-colour-pallette">
+										<h2>Custom colours</h2> <br /> {/* FIX THIS */}
+										<div className="row">
+											<div className="col-sm-6">
+												<FormList formItems = { formItemsLight } />
+											</div>
+											<div className="col-sm-6">
+												<FormList formItems = { formItemsDark } />												
+											</div>
+										</div>
+										{/* CUSTOM COLOR FORM BUTTONS */}
+										<div className="row">
+											<div className="col-sm-6">
+												<div className="form-item">
+													<button id="show-presets" className="au-btn au-btn--secondary">Reset</button>
+												</div>
+											</div>
+											<div className="col-sm-6">
+												<div className="form-item">
+													<button id="" className="au-btn">Submit</button>
+												</div>
+											</div>
+										</div>
 
-				<section className="container-fluid au-body">
-					<div className="chameleon-toolkit" >
-						<div className="row">
-							<div className="col-md-6 chameleon-toolkit__container" id="tk">
-							{/* CUSTOMISE PALLETTE (FIX THESE CLASSES)*/}
-								<div id="custom-colour-pallette" className="hidden">
-									<h2>Custom colours</h2> <br/> {/* FIX THIS */}
-									<div  className="row">
-										<div className="col-sm-6">
-											<div className="form-item">
-												<label className="label--block" htmlFor="text">Text</label>
-												<input className="au-text-input" name="text" id="text" type="text" />
-											</div>
-											<div className="form-item">
-												<label className="label--block" htmlFor="action">Action</label>
-												<input className="au-text-input" name="action" id="action" type="text" />
-											</div>
-											<div className="form-item">
-												<label className="label--block" htmlFor="background">Background</label>
-												<input className="au-text-input" name="background" id="background" type="text" />
-											</div>
-										</div>
-										<div className="col-sm-6">
-											<div className="form-item">
-												<label className="label--block" htmlFor="textDark">Dark text</label>
-												<input className="au-text-input" name="textDark" id="textDark" type="text"/>
-											</div>
-											<div className="form-item">
-												<label className="label--block" htmlFor="actionDark">Dark action</label>
-												<input className="au-text-input" name="actionDark" id="actionDark" type="text"/>
-											</div>
-											<div className="form-item">
-												<label className="label--block" htmlFor="backgroundDark">Dark background</label>
-												<input className="au-text-input" name="backgroundDark" id="backgroundDark" type="text"/>
-											</div>
-										</div>
 									</div>
-									{/* CUSTOM COLOR FORM BUTTONS */}
-									<div className="row">
-										<div className="col-sm-6">
-											<div className="form-item">
-												<button id="show-presets" className="au-btn au-btn--secondary">Back to presets</button>
-											</div>
-										</div>
-										<div className="col-sm-6">
-											<div className="form-item">
-												<button id="" className="au-btn">Submit</button>
-											</div>
-										</div>
-									</div>
-
 								</div>
-							{/* PRESET OPTIONS*/}
-								<div id="preset-pallette">
-									<h2>Presets</h2>
+								<div className="row chameleon-toolkit__container">
+								<div className="col-md-6">
+								<h2>Accessibility </h2>
 									<label className="au-control-input au-control-input--block">
-										<input className="au-control-input__input" type="radio" name="preset-theme" value="green"/>
-										<span className="au-control-input__text">Green</span>
+										<input className="au-control-input__input" type="radio" name="a11y-filter" value="deuteranopia" />
+										<span className="au-control-input__text">Deuteranopia</span>
 									</label>
 
 									<label className="au-control-input au-control-input--block">
-										<input className="au-control-input__input" type="radio" name="preset-theme" value="blue"/>
-										<span className="au-control-input__text">Blue</span>
+										<input className="au-control-input__input" type="radio" name="a11y-filter" value="tritanopia" />
+										<span className="au-control-input__text">Tritanopia</span>
 									</label>
 
 									<label className="au-control-input au-control-input--block">
-										<input className="au-control-input__input" type="radio" name="preset-theme" value="default"/>
+										<input className="au-control-input__input" type="radio" name="a11y-filter" value="default" />
 										<span className="au-control-input__text">Default</span>
 									</label>
-									<br/> {/* FIX THIS */}
-									<button id="show-color-pallette" className="au-btn">Customise</button>
 								</div>
-							</div>
-							{/* A11Y OPTIONS*/}
-							<div className="col-md-4 chameleon-toolkit__container chameleon-toolkit__container--presets--a11y">
-								<h2>Accessibility </h2>
-								<label className="au-control-input au-control-input--block">
-									<input className="au-control-input__input" type="radio" name="a11y-filter" value="deuteranopia" />
-									<span className="au-control-input__text">Deuteranopia</span>
-								</label>
-	
-								<label className="au-control-input au-control-input--block">
-									<input className="au-control-input__input" type="radio" name="a11y-filter" value="tritanopia" />
-									<span className="au-control-input__text">Tritanopia</span>
-								</label>
-		
-								<label className="au-control-input au-control-input--block">
-									<input className="au-control-input__input" type="radio" name="a11y-filter" value="default"/>
-									<span className="au-control-input__text">Default</span>
-								</label>
+								<div className="col-md-6">
+								<div id="preset-pallette">
+										<h2>Presets</h2>
+										<label className="au-control-input au-control-input--block">
+											<input className="au-control-input__input" type="radio" name="preset-theme" value="green" />
+											<span className="au-control-input__text">Green</span>
+										</label>
+
+										<label className="au-control-input au-control-input--block">
+											<input className="au-control-input__input" type="radio" name="preset-theme" value="blue" />
+											<span className="au-control-input__text">Blue (default)</span>
+										</label>
+
+										<label className="au-control-input au-control-input--block">
+											<input className="au-control-input__input" type="radio" name="preset-theme" value="default" />
+											<span className="au-control-input__text">Custom</span>
+										</label>
+									</div>
+								</div>
+									
+								</div>
+								
+
 							</div>
 						</div>
-					</div>
-				</section>
-			</main>
-			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
-		</body>
+					</section>
+
+					<section className="container-fluid au-body">
+
+					</section>
+				</main>
+				<script src={_relativeURL('/assets/js/footer.js', _ID)} />
+			</body>
 		</html>
-		)
+	)
 };
 
 Customise.propTypes = {};
