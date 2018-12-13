@@ -10,7 +10,6 @@ const Customise = ({
 	alignContent,
 	_ID,
 	_relativeURL,
-	_parseYaml,
 	_parents,
 	_pages
 }) => {
@@ -100,8 +99,7 @@ const Customise = ({
 					aria-hidden="true"
 					className="svg-filter"
 					xmlns="http://www.w3.org/2000/svg"
-					version="1.1"
-				>
+					version="1.1">
 					<defs>
 						<filter id="deuteranopia">
 							<feColorMatrix

@@ -4,7 +4,7 @@ import GetData from './../../helper/getData';
 import NavigationAccordion from '../navigation-accordion';
 
 
-const ComponentSidebar = ({ _relativeURL, _ID, _pages, _parents, _parseYaml }) => {
+const ComponentSidebar = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
 	const componentStates = {
 		published: 'Released',
 		inprogress: 'In progress',
@@ -26,9 +26,7 @@ const ComponentSidebar = ({ _relativeURL, _ID, _pages, _parents, _parseYaml }) =
 			navItems={ navItems }
 			_relativeURL={ _relativeURL }
 			_ID={ _ID }
-			_pages={ _pages }
-			_parents={ _parents }
-			_navItems={ navItems } />
+			_pages={ _pages } />
 	);
 };
 

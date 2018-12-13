@@ -12,7 +12,7 @@ export const CreateLink = ( link, _relativeURL, _ID, _pages ) => {
 	const active = _pages[ _ID ]._url === link.link;
 
 	const _isActiveTrail =
-		_pages[ _ID ]._url.startsWith( link.link ) &&
+		_pages[ _ID ]._url.includes( link.link ) &&
 		link.link !== '/' &&
 		_pages[ _ID ]._url.split('/').length > link.link.split('/').length;
 

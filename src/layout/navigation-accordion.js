@@ -1,26 +1,21 @@
 import React, { Fragment } from 'react';
 
 import AUlinkList          from '../_uikit/layout/link-list';
-import GetModule           from '../helper/getModule';
 import { CreateLink }      from './navigation';
-import GetData             from '../helper/getData';
 
 
 
 /**
  * The NavigationAccordion component
  */
-const NavigationAccordion = ({ navItems, _relativeURL, _ID, _pages, _parents, _parseYaml }) => {
-	const currentItem = _ID.split( '/' )[ 1 ];  // e.g. /components/buttons = buttons
+const NavigationAccordion = ({ navItems, _relativeURL, _ID, _pages }) => {
+	// e.g. /components/buttons = buttons
+	const splitUrl = _ID.split( '/' );
 
-	const CreateAccordion = ( title, links, currentItem ) => {
-
-		let _isOpen = false;
+	const CreateAccordion = ( title, links, _pages, _ID ) => {
 
 		// Open the accordion based on the current pages section
-		if ( _ID.includes( currentItem ) ) {
-			_isOpen = true;
-		}
+		let _isOpen = false;
 
 		// Create AUlinkList from navigation
 		const menu = [];
@@ -32,8 +27,12 @@ const NavigationAccordion = ({ navItems, _relativeURL, _ID, _pages, _parents, _p
 					</Fragment>
 				: link.name;
 
+			if ( _ID.includes( link.ID ) ) {
+				_isOpen = true;
+			}
+
 			const linkData = {
-				link: link.ID,
+				link: `${ splitUrl[ 0 ] }/${ link.ID }`,
 				text: label
 			};
 
@@ -73,7 +72,7 @@ const NavigationAccordion = ({ navItems, _relativeURL, _ID, _pages, _parents, _p
 	const accordionMarkup = [];
 
 	Object.entries( navItems ).map( ([ title, links ]) => {
-		accordionMarkup.push( CreateAccordion( title, links, currentItem ) );
+		accordionMarkup.push( CreateAccordion( title, links, _pages, _ID ) );
 	});
 
 	return(
