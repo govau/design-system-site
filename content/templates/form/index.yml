@@ -1,6 +1,6 @@
 layout: templates/page
 pagetitle: Home
-state: released
+state: in-progress
 
 header:
   - /_shared/header.md

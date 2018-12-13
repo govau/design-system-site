@@ -1,4 +1,6 @@
+layout: templates/page
 pagetitle: Content
+state: released
 
 header:
   - /_shared/header.md

@@ -1,8 +1,5 @@
 ---
 layout: templates/released
-templates:
-  - home
-  - content
 cardList:
   appearance: shadow
 ---

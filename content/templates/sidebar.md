@@ -1,1 +1,3 @@
-Hello sidebar my old friend
+---
+layout: templates/templates-sidebar
+---

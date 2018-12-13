@@ -1,4 +1,3 @@
-import PropTypes           from 'prop-types';
 import React, { Fragment } from 'react';
 import Fs                  from 'fs';
 import Path                from 'path';
@@ -8,9 +7,14 @@ import AUbutton  from '../../_uikit/layout/buttons';
 /**
  * The Discussion Intro component
  */
-const TemplatesReleased = ({ templates, _body, _relativeURL, _parseYaml, _parseMD }) => {
+const TemplatesReleased = ({ _body, _relativeURL, _parseYaml, _parseMD }) => {
+	const templatesDir = Path.normalize( `${ __dirname }/../../../content/templates/` );
+
+	const templates = _parseYaml(
+		Fs.readFileSync( `${ templatesDir }/_all.yml`, 'utf-8' )
+	);
+
 	const cards = templates.map( template => {
-		const templatesDir = Path.normalize( `${ __dirname }/../../../content/templates/` );
 		const templateYaml = ( `${ templatesDir }${ template }/index.yml` );
 		const templateData = _parseYaml( Fs.readFileSync( templateYaml, 'utf-8' ) );
 
