@@ -8,7 +8,7 @@ var queryObject = QueryToObject();
 
 // Reset button event handler
 AddEvent(resetBtn[0], "click", function( event, $this ) {
-	ResetFilters();
+	ResetInputs();
 });
 
 // // Share button event handler
@@ -156,16 +156,9 @@ function ApplyFilter( element ) {
 
 
 /**
- * Reset form input.
+ * Reset page inputs.
  */
-function ResetFilters() {
-	/**
-	 * @todo This fails when QueryToObject() returns "".
-	 * Cannot reset form inputs with no window query.
-	 */
-	// var queryObject = QueryToObject();
-	// var queryObjectKeys = getKeys( queryObject );
-	
+function ResetInputs() {
 	/**
 	 * Reset form inputs
 	 * ---
