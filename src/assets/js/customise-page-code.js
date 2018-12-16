@@ -141,7 +141,6 @@ function ApplyColours(){
 function ApplyA11yToFrames ( filterId  ) {
 	for ( var i = 0; i < frames.length; i++ ) {
 		frames[ i ].setAttribute( 'class', 'js-filter--' + filterId )
-		// AddClass( frames[ i ], ( 'js-filter--' + filterId ) )
 	}
 }
 
@@ -180,6 +179,9 @@ function ResetInputs() {
 	for ( var i = 0; i < paletteInputs.length; i++ ) {
 		paletteInputs[i].checked = false;
 	}
+
+	// Reset color filter applied to iframe class
+	ApplyA11yToFrames("normal");
 }
 
 
