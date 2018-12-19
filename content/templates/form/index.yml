@@ -1,6 +1,4 @@
 layout: templates/page
-pagetitle: Home
-state: in-progress
 
 header:
   - /_shared/header.md
@@ -8,8 +6,7 @@ header:
 sidebar:
   - /templates/sidebar.md
 
-main:
-  - intro.md
+# main:
 
 footer:
   - /_shared/footer.md

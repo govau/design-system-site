@@ -1,6 +1,6 @@
-import AUskipLink      from '../../_uikit/layout/skip-link';
-
-
+import TemplateHeader from './header';
+import Path  from 'path';
+import Fs    from 'fs';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
@@ -11,13 +11,26 @@ import React, { Fragment } from 'react';
 const TemplatePage = ({
 	_ID,
 	_relativeURL,
+	_parseYaml,
+	_parseMD,
 	header,
 	sidebar,
-	pagetitle,
 	main,
 	footer,
-	module = ''
+	pagetitle = '',
 }) => {
+	const templatesDir = Path.normalize( `${ __dirname }/../../../content/templates/` );
+	const templatesYaml = Fs.readFileSync( `${ templatesDir }/_all.yml`, 'utf-8' )
+	const templates =  _parseYaml( templatesYaml );
+
+	const templateID = _ID.split( '/' )[ 1 ];
+	const template = templates[ templateID ];
+
+	// Use the page title otherwise use the template name
+	let title = pagetitle;
+	if( template ){
+		title = template.name;
+	}
 
 	const headContent = `
 <meta charset="utf-8">
@@ -41,13 +54,13 @@ const TemplatePage = ({
 <meta name="twitter:name" content="Australian Government Design System">
 <meta name="twitter:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:type" content="website">
-<meta property="og:title" content="${ pagetitle } - Australian Government Design System">
+<meta property="og:title" content="${ title } - Australian Government Design System">
 <meta property="og:site_name" content="Australian Government Design System">
 <meta property="og:description" content="Australian Government Design System">
 <meta property="og:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:url" content="https://designsystem.gov.au">
 
-<title>${ pagetitle } - Australian Government Design System</title>
+<title>${ title } - Australian Government Design System</title>
 
 <link rel="stylesheet" href=${ _relativeURL( '/assets/css/style.css', _ID ) }>
 
@@ -72,7 +85,21 @@ const TemplatePage = ({
 								{ sidebar }
 							</div>
 							<div id="content" tabIndex="-1" className="col-md-9 content">
-								<h1>{ pagetitle }</h1>
+								{
+									template
+										?
+											<Fragment>
+												<TemplateHeader
+													templateID={ templateID }
+													template={ template }
+													_ID={ _ID }
+													_relativeURL={ _relativeURL }
+													_parseMD={ _parseMD }
+													_parseYaml={ _parseYaml }
+												/>
+											</Fragment>
+										: <h1>{ title }</h1>
+								}
 								{ main }
 							</div>
 						</div>
@@ -96,11 +123,6 @@ const TemplatePage = ({
 }
 
 TemplatePage.propTypes = {
-	/**
-	 * pagetitle: Homepage
-	 */
-	pagetitle: PropTypes.string.isRequired,
-
 	/**
 	 * header: (partials)(2)
 	 */

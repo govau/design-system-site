@@ -1,7 +1,6 @@
 layout: component/page
 pagetitle: Components
-headernav: false
-showheader: false
+landingpage: true
 
 header:
   - /_shared/header.md
