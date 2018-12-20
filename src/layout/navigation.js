@@ -7,14 +7,14 @@ export const CreateLink = ( link, _relativeURL, _ID, _pages ) => {
 
 	const linkClasses = `${ link.text == 'GitHub' ? 'icon icon--dark icon--github icon--action' : '' }` +
 		`${ link.text == 'Download' ? 'icon icon--dark icon--download icon--action' : '' }` +
-		`${ link.text == 'Live demo' ? 'icon icon--right icon--demo icon--action' : '' }`;
+		`${ link.text == 'Live demo' || link.text == 'Customise' ? 'icon icon--right icon--demo icon--action' : '' }`;
 
 	const active = _pages[ _ID ]._url === link.link;
 
 	const _isActiveTrail =
 		_pages[ _ID ]._url.includes( link.link ) &&
 		link.link !== '/' &&
-		_pages[ _ID ]._url.split('/').length > link.link.split('/').length;
+		_pages[ _ID ]._url.split( '/' ).length > link.link.split( '/' ).length;
 
 
 	return {

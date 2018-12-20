@@ -8,18 +8,18 @@ import Fs from 'fs';
 /**
  * The navigation tabs component
  */
-const NavigationTabs = ({ navigation, _body, _relativeURL, _ID, _pages, _parents }) => {
-	const module = GetModule( _parents, _pages, _ID );
+const NavigationTabs = ({ navigation, _relativeURL, _ID, _pages, _parents }) => {
+	const pageID = _ID.split( '/' )[ 1 ];
 
 	navigation.sections = navigation.sections.map( section => {
 
 		const navItems = [];
 
 		section.items.map( item => {
-			if ( Fs.existsSync( `content/components/${ module }${ item.link }` ) ) {
+			if ( Fs.existsSync( `content/${ navigation.parent }/${ pageID }${ item.link }` ) ) {
 				navItems.push({
 					text: item.text,
-					link: `/components/${ module }${ item.link === '/' ? '' : item.link }`,
+					link: `/${ navigation.parent }/${ pageID }${ item.link === '/' ? '' : item.link }`,
 				});
 			}
 		});

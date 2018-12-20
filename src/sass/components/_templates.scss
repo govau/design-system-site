@@ -60,3 +60,12 @@
 		@include AU-space( margin-top, 2unit );
 	}
 }
+
+
+// Demo on the templates page
+.template-demo {
+
+	* + & {
+		@include AU-space( margin-top, 2unit );
+	}
+}

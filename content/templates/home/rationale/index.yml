@@ -1,18 +1,15 @@
 layout: templates/page
-pagetitle: Content
-state: released
 
 header:
   - /_shared/header.md
 
-tabs:
-  - /templates/_tabs.md
-
 sidebar:
   - /templates/sidebar.md
 
-main:
-  - main.md
+tabs:
+  - /templates/_tabs.md
+
+# main:
 
 footer:
   - /_shared/footer.md

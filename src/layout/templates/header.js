@@ -13,7 +13,7 @@ import { GetComponentValue, GetState } from '../../helper/getData';
 /**
  * The template header component
  */
-const TemplateHeader = ({ templateID, template, _parseMD, _ID, _relativeURL, _parseYaml }) => {
+const TemplateHeader = ({ template, _parseMD, _ID, _relativeURL, _parseYaml }) => {
 	const requiredComponents = [];
 	let templateContributors;
 
@@ -26,22 +26,19 @@ const TemplateHeader = ({ templateID, template, _parseMD, _ID, _relativeURL, _pa
 				text: GetComponentValue( component, 'name', _parseYaml ),
 			});
 
-			allContributors.push( GetComponentValue( component, 'contributors', _parseYaml ) );
+			allContributors.push( ...GetComponentValue( component, 'contributors', _parseYaml ) );
 		});
 
 		// Get the unique template contributors from multiple components
-		templateContributors = [].concat.apply( ...allContributors )
-			.reduce( ( accumulator, current ) => {
+		templateContributors = allContributors.reduce( ( accumulator, current ) => {
 				// If it cannot find a unique name, add it to the accumulator
 				if ( !accumulator.find( ({ name }) => name === current.name ) ) {
 					accumulator.push( current );
 				}
+
 				return accumulator;
 			}, [] );
 	}
-
-
-
 
 	return (
 		<div className="row componentheader">
@@ -78,7 +75,7 @@ const TemplateHeader = ({ templateID, template, _parseMD, _ID, _relativeURL, _pa
 								: null
 						}
 						{
-							template.state === 'published' && template.components
+							template.state === 'published' && templateContributors
 								?
 									<Fragment>
 										<dt>Contributors</dt>

@@ -17,6 +17,7 @@ const TemplatePage = ({
 	sidebar,
 	main,
 	footer,
+	tabs,
 	pagetitle = '',
 }) => {
 	const templatesDir = Path.normalize( `${ __dirname }/../../../content/templates/` );
@@ -100,6 +101,7 @@ const TemplatePage = ({
 											</Fragment>
 										: <h1>{ title }</h1>
 								}
+								{ tabs ? tabs : null }
 								{ main }
 							</div>
 						</div>

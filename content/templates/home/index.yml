@@ -1,12 +1,12 @@
 layout: templates/page
 
-header:
-  - /_shared/header.md
+header: /_shared/header.md
 
-sidebar:
-  - /templates/sidebar.md
+sidebar: /templates/sidebar.md
 
-# main:
+tabs: /templates/_tabs.md
 
-footer:
-  - /_shared/footer.md
+main:
+  - main.md
+
+footer: /_shared/footer.md

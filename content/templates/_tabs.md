@@ -1,7 +1,7 @@
 ---
 layout: component/navigation-tabs
 navigation:
-  parent: components
+  parent: templates
   inline: true
   sections:
     - alignment: left
@@ -18,5 +18,7 @@ navigation:
           link: /discussion
     - alignment: right
       items:
-        - text: Live demo
-          link: /live
+        - text: Download
+          link: /download
+        - text: Customise
+          link: /customise

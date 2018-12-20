@@ -1,9 +1,10 @@
 .au-btn__list {
 	list-style: none;
 	padding: 0;
+	margin: 0;
 
 	* + & {
-		@include AU-space( margin-top, 1unit );
+		@include AU-space( margin-top, 2unit );
 	}
 
 	& > li + li {
