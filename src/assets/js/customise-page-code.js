@@ -76,25 +76,14 @@ function FillPaletteColors( elementId ) {
 
 	for ( key in styles ) {
 		if ( key == elementId ) {
+			// Fill form inputs
 			FillFormColors( styles[key] );
+			
+			UpdateState();
 		}
 	}
 }
 
-// Return an array of keys from a given object
-function getKeys(obj) {
-	var keys = [];
-	iterate(obj, function (oVal, oKey) { keys.push(oKey) });
-	return keys;
-}
-
-// IE6+ compliant iterate helper
-function iterate(iterable, callback) {
-	for (var key in iterable) {
-		if (key === 'length' || key === 'prototype' || !Object.prototype.hasOwnProperty.call(iterable, key)) continue;
-		callback(iterable[key], key, iterable);
-	}
-}
 
 /**
  * FillForm - Fills the form with the parameters in the URL
@@ -156,7 +145,6 @@ function ApplyColours(){
  * @param { string } filter - A11y filter selected ( e.g greyscale, deuteranopia )
  */
 function ApplyA11yToFrames ( filterId  ) {
-	// filterId is split with 'in-' because Safari
 	for ( var i = 0; i < frames.length; i++ ) {
 		frames[ i ].setAttribute( 'class', 'js-filter--' + filterId.split("in-")[2] )
 	}
@@ -171,35 +159,6 @@ function ApplyFilter( element ) {
 	ApplyA11yToFrames( element.id );
 }
 
-
-/**
- * Reset form inputs
- * ---
- * Iterate over the 'form-item' elements, 
- * get the first child which will be a <label/> element
- * get the first child of said <label/> element which is the form input
- */ 
-// function ResetInputs() {
-// 	for ( var i = 0; i < inputs.length; i++ ){
-// 		inputs[i].children[0].children[0].value = "";
-// 	}
-
-// 	// Reset a11y inputs
-// 	for ( var i = 0; i < a11yInputs.length; i++ ) {
-// 		a11yInputs[i].checked = false;
-// 	}
-
-// 	// Reset a11y inputs
-// 	for ( var i = 0; i < paletteInputs.length; i++ ) {
-// 		paletteInputs[i].checked = false;
-// 	}
-
-// 	// Reset color filter applied to iframe class
-// 	ApplyA11yToFrames("normal");
-
-// 	// Clear DOM state
-// 	UpdateState();
-// }
 
 /**
  * Push the updated color state to DOM with title 'Chameleon', 
@@ -226,10 +185,10 @@ function ColorStateToString( colorState ) {
 
 	for (var key in colorState ) {
 		if ( colorState[ key ] ) {
-			result += key + "=" + colorState[ key ] + "&"
+			result += key + "=" + encodeURIComponent( colorState[ key ] ) + "&"
 		}
 	}
-
+	
 	return result;
 }
 

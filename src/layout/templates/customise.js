@@ -1,27 +1,23 @@
 import React from "react";
-import Path  from 'path';
-import Fs    from 'fs';
-
+import Path from "path";
+import Fs from "fs";
 
 /**
  * The example component
  *
  * @disable-docs
  */
-const Customise = ({
-	alignContent,
-	_ID,
-	_relativeURL,
-	_parseYaml,
-}) => {
-	const templatesDir = Path.normalize( `${ __dirname }/../../../content/templates/` );
-	const templatesYaml = Fs.readFileSync( `${ templatesDir }/_all.yml`, 'utf-8' )
-	const templates =  _parseYaml( templatesYaml );
+const Customise = ({ alignContent, _ID, _relativeURL, _parseYaml }) => {
+	const templatesDir = Path.normalize(
+		`${__dirname}/../../../content/templates/`
+	);
+	const templatesYaml = Fs.readFileSync(`${templatesDir}/_all.yml`, "utf-8");
+	const templates = _parseYaml(templatesYaml);
 
-	const templateID = _ID.split( '/' )[ 1 ];
-	const template = templates[ templateID ];
+	const templateID = _ID.split("/")[1];
+	const template = templates[templateID];
 
-	const pagetitle = `Customise ${ template.name }`;
+	const pagetitle = `Customise ${template.name}`;
 
 	const headContent = `
 <meta charset="utf-8">
@@ -94,9 +90,9 @@ const Customise = ({
 							<div className="col-md-12">
 								<a
 									className="au-direction-link au-direction-link--left"
-									href={`/templates/${ templateID }`}
+									href={`/templates/${templateID}`}
 								>
-									Go back to { template.name }
+									Go back to {template.name}
 								</a>
 							</div>
 						</div>
@@ -109,22 +105,25 @@ const Customise = ({
 					version="1.1"
 				>
 					<defs>
-					<filter id="deuteranopia">
-						<feColorMatrix
-							in="SourceGraphic"
-							type="matrix"
-							values="0.625, 0.375, 0,   0, 0
-									0.7,   0.3,   0,   0, 0
-									0,     0.3,   0.7, 0, 0
-									0,     0,     0,   1, 0"/>
+						<filter id="deuteranopia">
+							<feColorMatrix
+								in="SourceGraphic"
+								type="matrix"
+								values="0.625, 0.375, 0,   0, 0
+										0.7,   0.3,   0,   0, 0
+										0,     0.3,   0.7, 0, 0
+										0,     0,     0,   1, 0"
+							/>
 						</filter>
 						<filter id="tritanopia">
-						<feColorMatrix
-							type="matrix"
-							values="1   0   0   0   0
-									0   0   0   0   0
-									0   0   0   0   0
-									0   0   0   1   0 "/>
+							<feColorMatrix
+								in="SourceGraphic"
+								type="matrix"
+								values="0.95, 0.05,  0,     0, 0
+									0,    0.433, 0.567, 0, 0
+									0,    0.475, 0.525, 0, 0
+									0,    0,     0,     1, 0"
+							/>
 						</filter>
 					</defs>
 				</svg>
@@ -204,7 +203,9 @@ const Customise = ({
 								</form>
 
 								{/* <button name="btn-reset">Reset</button> */}
-								<a id="btn-reset" rel="noopener noreferrer">Reset</a>
+								<a id="btn-reset" rel="noopener noreferrer">
+									Reset
+								</a>
 								<button name="btn-share">Share</button>
 
 								<div className="accessibility-selection">
