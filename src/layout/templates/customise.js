@@ -1,4 +1,7 @@
 import React from "react";
+import Path  from 'path';
+import Fs    from 'fs';
+
 
 /**
  * The example component
@@ -6,16 +9,19 @@ import React from "react";
  * @disable-docs
  */
 const Customise = ({
-	pagetitle,
 	alignContent,
 	_ID,
 	_relativeURL,
 	_parseYaml,
-	_parents,
-	_pages
 }) => {
-	const parentId = _parents[_parents.length - 2];
-	const parentData = _pages[parentId];
+	const templatesDir = Path.normalize( `${ __dirname }/../../../content/templates/` );
+	const templatesYaml = Fs.readFileSync( `${ templatesDir }/_all.yml`, 'utf-8' )
+	const templates =  _parseYaml( templatesYaml );
+
+	const templateID = _ID.split( '/' )[ 1 ];
+	const template = templates[ templateID ];
+
+	const pagetitle = `Customise ${ template.name }`;
 
 	const headContent = `
 <meta charset="utf-8">
@@ -88,9 +94,9 @@ const Customise = ({
 							<div className="col-md-12">
 								<a
 									className="au-direction-link au-direction-link--left"
-									href={`/${parentId}`}
+									href={`/templates/${ templateID }`}
 								>
-									Go back to {parentData.pagetitle}
+									Go back to { template.name }
 								</a>
 							</div>
 						</div>

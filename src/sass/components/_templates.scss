@@ -6,11 +6,31 @@
 	background: $AU-color-background-alt;
 }
 
+// When the image is inside a template card
 .template-card .template-card__image {
 	@include AU-space( max-width, 16unit );
 	@include AU-space( margin-right, -21unit );
 	float: left;
 	width: auto;
+}
+
+
+// When the content is inside a template card
+.template-card .template-card__content {
+	@include AU-space( margin-left, 18unit );
+	display: block;
+	float: left;
+
+	.au-btn__list {
+		@include AU-space( margin-top, 3unit );
+	}
+}
+
+
+
+// The browser styles around a template image
+.template-card__image {
+	@include AU-space( max-width, 24unit );
 
 	&:before {
 		@include AU-space( margin-bottom, -1.25unit );
@@ -27,16 +47,8 @@
 	}
 }
 
-.template-card .template-card__content {
-	@include AU-space( margin-left, 18unit );
-	display: block;
-	float: left;
 
-	.au-btn__list {
-		@include AU-space( margin-top, 3unit );
-	}
-}
-
+// Released listing
 .templates__released {
 	@include AU-space( margin-top, 2unit );
 	list-style: none;

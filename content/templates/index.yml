@@ -8,7 +8,7 @@ sidebar:
   - sidebar.md
 
 main:
-  - templates.md
+  - released.md
 
 footer:
   - /_shared/footer.md

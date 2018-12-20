@@ -5,11 +5,14 @@ state: released
 header:
   - /_shared/header.md
 
+templateHeader:
+  - /templates/template-header.md
+
 sidebar:
   - /templates/sidebar.md
 
-main:
-  - intro.md
+# main:
+#   - intro.md
 
 footer:
   - /_shared/footer.md

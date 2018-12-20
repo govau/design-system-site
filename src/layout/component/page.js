@@ -20,7 +20,7 @@ const ComponentPage = ({
 	_parents,
 	_isDocs,
 	header,
-	showheader = true,
+	landingpage = false,
 	component_nav,
 	sidebar,
 	pagetitle,
@@ -89,31 +89,38 @@ const ComponentPage = ({
 							</div>
 							<div id="content" tabIndex="-1" className="col-md-9 content">
 								{
-									showheader &&
-									<Fragment>
-										<AUskipLink links={[
-											{
-												link: '#component-documentation',
-												text: `Skip to ${ pagetitle }`,
-											},
-										]} />
-										<ComponentHeader
-											_relativeURL={ _relativeURL }
-											_parseYaml={ _parseYaml }
-											_parseMD={ _parseMD }
-											_parents={ _parents }
-											_pages={ _pages }
-											_ID={ _ID }
-											_isDocs={ _isDocs }
-										/>
-										{ component_nav }
-									</Fragment>
+									!landingpage &&
+										<Fragment>
+											<AUskipLink links={[
+												{
+													link: '#component-documentation',
+													text: `Skip to ${ pagetitle }`,
+												},
+											]} />
+											<ComponentHeader
+												_relativeURL={ _relativeURL }
+												_parseYaml={ _parseYaml }
+												_parseMD={ _parseMD }
+												_parents={ _parents }
+												_pages={ _pages }
+												_ID={ _ID }
+												_isDocs={ _isDocs }
+											/>
+											{ component_nav }
+										</Fragment>
 								}
 								<div tabIndex="-1" className="componentdocumentation" id="component-documentation">
 									{ main }
 								</div>
 								{
-									showheader && <ComponentFooter _ID={ _ID } _parseYaml={ _parseYaml } _relativeURL={ _relativeURL } _pages={ _pages } _parents= { _parents } />
+									!landingpage &&
+										<ComponentFooter
+											_ID={ _ID }
+											_parseYaml={ _parseYaml }
+											_relativeURL={ _relativeURL }
+											_pages={ _pages }
+											_parents= { _parents }
+										/>
 								}
 							</div>
 						</div>

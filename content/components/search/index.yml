@@ -1,7 +1,6 @@
 layout: component/page
 pagetitle: Search
-headernav: false
-showheader: false
+landingpage: true
 searchvalue: '##searchstring##'
 
 header:
