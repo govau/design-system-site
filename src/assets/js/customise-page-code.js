@@ -1,15 +1,17 @@
 var frames = document.getElementsByTagName( 'iframe' )
 var a11yInputs = document.getElementsByName( 'a11y' );
 var paletteInputs = document.getElementsByName( 'palette' );
+var inputs = document.querySelectorAll('.form-item');
 var resetBtn = document.getElementsByName( 'btn-reset' );
 var shareBtn = document.getElementsByName( 'btn-share' );
+var colors = GetColorState();
 
 var queryObject = QueryToObject();
 
 // Reset button event handler
-AddEvent(resetBtn[0], "click", function( event, $this ) {
-	ResetInputs();
-});
+// AddEvent(resetBtn[0], "click", function( event, $this ) {
+// 	ResetInputs();
+// });
 
 // // Share button event handler
 AddEvent(shareBtn[0], "click", function( event, $this ) {
@@ -20,7 +22,7 @@ AddEvent(shareBtn[0], "click", function( event, $this ) {
 // Add event listners to each `a11y` input
 for ( var i = 0; i < a11yInputs.length; i++ ) {
 	AddEvent( a11yInputs[ i ], "click", function( event, $this ) {
-		ApplyA11yToFrames( $this.id )
+		ApplyA11yToFrames( "in-" + $this.id )
 	});
 }
 
@@ -28,6 +30,20 @@ for ( var i = 0; i < a11yInputs.length; i++ ) {
 for ( var i = 0; i < paletteInputs.length; i++ ) {
 	AddEvent( paletteInputs[ i ], "click", function( event, $this ) {
 		FillPaletteColors( $this.id )
+	});
+}
+
+
+// Bind form inputs on keyup event to HandleChange( element )
+var timeout;
+for ( var i = 0; i < inputs.length; i++ ) {
+	AddEvent(inputs[i].children[0].children[0], "keyup", function( event, $this ) {
+		if( timeout ){
+			clearTimeout( timeout );
+			timeout = null;
+		}
+		
+		timeout = setTimeout( function(){ UpdateState( $this ) }, 250 );
 	});
 }
 
@@ -130,25 +146,26 @@ function ApplyColours(){
 	paramString = window.location.search;
 	for ( var i = 0; i < frames.length; i++ ) {
 		frames[ i ].src = ( 'http://localhost:3000/chameleon' + paramString );
+		// frames[ i ].src = ( 'http://10.0.2.2:3000/chameleon' + paramString );
 	}
 }
 
 
 /**
  * ApplyA11yToFrames - Set a filter class to all frames given a selected a11y radio input selection.
- * @param {*} filter - A11y filter selected ( e.g greyscale, deuteranopia )
+ * @param { string } filter - A11y filter selected ( e.g greyscale, deuteranopia )
  */
 function ApplyA11yToFrames ( filterId  ) {
+	// filterId is split with 'in-' because Safari
 	for ( var i = 0; i < frames.length; i++ ) {
-		frames[ i ].setAttribute( 'class', 'js-filter--' + filterId )
-		// AddClass( frames[ i ], ( 'js-filter--' + filterId ) )
+		frames[ i ].setAttribute( 'class', 'js-filter--' + filterId.split("in-")[2] )
 	}
 }
 
 
 /**
  * Function binding onchange a11y radio input
- * @param {*} element
+ * @param { HTMLElement } element
  */
 function ApplyFilter( element ) {
 	ApplyA11yToFrames( element.id );
@@ -156,34 +173,106 @@ function ApplyFilter( element ) {
 
 
 /**
- * Reset page inputs.
+ * Reset form inputs
+ * ---
+ * Iterate over the 'form-item' elements, 
+ * get the first child which will be a <label/> element
+ * get the first child of said <label/> element which is the form input
+ */ 
+// function ResetInputs() {
+// 	for ( var i = 0; i < inputs.length; i++ ){
+// 		inputs[i].children[0].children[0].value = "";
+// 	}
+
+// 	// Reset a11y inputs
+// 	for ( var i = 0; i < a11yInputs.length; i++ ) {
+// 		a11yInputs[i].checked = false;
+// 	}
+
+// 	// Reset a11y inputs
+// 	for ( var i = 0; i < paletteInputs.length; i++ ) {
+// 		paletteInputs[i].checked = false;
+// 	}
+
+// 	// Reset color filter applied to iframe class
+// 	ApplyA11yToFrames("normal");
+
+// 	// Clear DOM state
+// 	UpdateState();
+// }
+
+/**
+ * Push the updated color state to DOM with title 'Chameleon', 
+ * set URL to ColorStateToString()
  */
-function ResetInputs() {
-	/**
-	 * Reset form inputs
-	 * ---
-	 * Iterate over the 'form-item' elements, 
-	 * get the first child which will be a <label/> element
-	 * get the first child of said <label/> element which is the form input
-	 */ 
-	var inputs = document.getElementsByClassName('form-item');
+function UpdateState() {
+	var formData = GetFormValues();
+	var colorStateURL = ColorStateToString( formData );
+
+	// Replace DOM state with current color object
+	window.history.pushState( formData , "Chameleon", colorStateURL );
+
+	// Set iframe src to mirror current DOM state
+	ApplyColours();
+}
+
+
+/**
+ * Return the color keys object as a URL param string 
+ * @param {object} colorState - Object with color keys
+ */
+function ColorStateToString( colorState ) {
+	var result = "?";
+
+	for (var key in colorState ) {
+		if ( colorState[ key ] ) {
+			result += key + "=" + colorState[ key ] + "&"
+		}
+	}
+
+	return result;
+}
+
+
+/**
+ * Return object of color keys
+ */
+function GetColorState() {
+	return {
+		text:           '',
+		action:         '',
+		focus:          '',
+		background:     '',
+		textDark:       '',
+		actionDark:     '',
+		focusDark:      '',
+		backgroundDark: '',
+	}
+}
+
+
+/**
+ * Return the form values as object at any point in time
+ */
+function GetFormValues() {
+	var values = GetColorState();
+
 	for ( var i = 0; i < inputs.length; i++ ){
-		inputs[i].children[0].children[0].value = "";
+		var inputId = inputs[i].children[0].children[0].id;
+		values[ inputId ] = inputs[i].children[0].children[0].value;
 	}
 
-	// Reset a11y inputs
-	for ( var i = 0; i < a11yInputs.length; i++ ) {
-		a11yInputs[i].checked = false;
-	}
-
-	// Reset a11y inputs
-	for ( var i = 0; i < paletteInputs.length; i++ ) {
-		paletteInputs[i].checked = false;
-	}
+	return values;
 }
 
 
 // On page load, apply the colours
 ApplyColours();
 
+
+// Prefill form input with query string
 FillFormColors();
+
+
+// Set Reset link href to window location without search
+document.getElementById("btn-reset").href = window.location.href.replace(window.location.search, "")
