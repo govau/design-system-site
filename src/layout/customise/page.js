@@ -103,25 +103,22 @@ const Customise = ({
 					version="1.1"
 				>
 					<defs>
-						<filter id="deuteranopia">
-							<feColorMatrix
-								in="SourceGraphic"
-								type="matrix"
-								values="0.625, 0.375, 0,   0, 0
+					<filter id="deuteranopia">
+						<feColorMatrix
+							in="SourceGraphic"
+							type="matrix"
+							values="0.625, 0.375, 0,   0, 0
 									0.7,   0.3,   0,   0, 0
 									0,     0.3,   0.7, 0, 0
-									0,     0,     0,   1, 0"
-							/>
+									0,     0,     0,   1, 0"/>
 						</filter>
 						<filter id="tritanopia">
-							<feColorMatrix
-								in="SourceGraphic"
-								type="matrix"
-								values="0.95, 0.05,  0,     0, 0
-									0,    0.433, 0.567, 0, 0
-									0,    0.475, 0.525, 0, 0
-									0,    0,     0,     1, 0"
-							/>
+						<feColorMatrix
+							type="matrix"
+							values="1   0   0   0   0
+									0   0   0   0   0
+									0   0   0   0   0
+									0   0   0   1   0 "/>
 						</filter>
 					</defs>
 				</svg>
@@ -134,13 +131,15 @@ const Customise = ({
 						<div className="row">
 							<div className="col-md-12 chameleon">
 								<h1>Customise</h1>
-								<iframe
-									src={
-										process.env.NODE_ENV == "production"
-											? "https://designsystem.gov.au/chameleon"
-											: "http://localhost:3000/chameleon"
-									}
-								/>
+								<div id="test-a11y">
+									<iframe
+										src={
+											process.env.NODE_ENV == "production"
+												? "https://designsystem.gov.au/chameleon"
+												: "http://localhost:3000/chameleon"
+										}
+									/>
+								</div>
 								<h2>Input</h2>
 								<form id="au-form">
 									<div className="form-item">
@@ -198,22 +197,23 @@ const Customise = ({
 									<button>Change Colours!</button>
 								</form>
 
-								<button name="btn-reset">Reset</button>
+								{/* <button name="btn-reset">Reset</button> */}
+								<a id="btn-reset" rel="noopener noreferrer">Reset</a>
 								<button name="btn-share">Share</button>
 
 								<div className="accessibility-selection">
 									<h2>Accessibility Options</h2>
 									<label className="lbl-grayscale">
 										Greyscale
-										<input name="a11y" id="grayscale" type="radio" />
+										<input name="a11y" id="in-grayscale" type="radio" />
 									</label>
 									<label className="lbl-deuteranopia">
 										Deuteranopia
-										<input name="a11y" id="deuteranopia" type="radio" />
+										<input name="a11y" id="in-deuteranopia" type="radio" />
 									</label>
 									<label className="lbl-tritanopia">
 										Tritanopia
-										<input name="a11y" id="tritanopia" type="radio" />
+										<input name="a11y" id="in-tritanopia" type="radio" />
 									</label>
 								</div>
 
@@ -235,6 +235,7 @@ const Customise = ({
 				</main>
 				{/* <script src={ _relativeURL( '/assets/js/iframe-resizer-contentWindow.js', _ID ) } /> */}
 				<script src={_relativeURL("/assets/js/footer.js", _ID)} />
+				{/* <script src={_relativeURL("/assets/js/a11y.js", _ID)} /> */}
 				<script src={_relativeURL("/assets/js/customise-page-code.js", _ID)} />
 			</body>
 		</html>
