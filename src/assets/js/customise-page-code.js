@@ -8,36 +8,35 @@ var colors = GetColorState();
 
 var queryObject = QueryToObject();
 
-// Reset button event handler
-// AddEvent(resetBtn[0], "click", function( event, $this ) {
-// 	ResetInputs();
-// });
-
-// // Share button event handler
+/**
+ * ------------------------------------------------------------
+ * Event Handlers
+ * ------------------------------------------------------------
+ */
+// Add event handler to share button
 AddEvent(shareBtn[0], "click", function( event, $this ) {
 	// Copy the current window URL to clipboard
 	CopyString( window.location.href );
 });
 
-// Add event listners to each `a11y` input
+// Add event handler to each `a11y` input
 for ( var i = 0; i < a11yInputs.length; i++ ) {
 	AddEvent( a11yInputs[ i ], "click", function( event, $this ) {
 		ApplyA11yToFrames( "in-" + $this.id )
 	});
 }
 
-// Add event listners to each `palette` input
+// Add event handler to each `palette` input
 for ( var i = 0; i < paletteInputs.length; i++ ) {
 	AddEvent( paletteInputs[ i ], "click", function( event, $this ) {
 		FillPaletteColors( $this.id )
 	});
 }
 
-
-// Bind form inputs on keyup event to HandleChange( element )
+// Add event handler to handle key press on form inputs.
 var timeout;
 for ( var i = 0; i < inputs.length; i++ ) {
-	AddEvent(inputs[i].children[0].children[0], "keyup", function( event, $this ) {
+	AddEvent( inputs[i].children[0].children[0], "keyup", function( event, $this ) {
 		if( timeout ){
 			clearTimeout( timeout );
 			timeout = null;
@@ -46,6 +45,7 @@ for ( var i = 0; i < inputs.length; i++ ) {
 		timeout = setTimeout( function(){ UpdateState( $this ) }, 250 );
 	});
 }
+
 
 /**
  * Prefill the form given a color palette selection ( e.g 'ato' prefills the form with ATO colors )
@@ -225,13 +225,14 @@ function GetFormValues() {
 }
 
 
-// On page load, apply the colours
+/**
+ * ------------------------------------------------------------
+ * On page load
+ * ------------------------------------------------------------
+ */
 ApplyColours();
 
-
-// Prefill form input with query string
 FillFormColors();
 
-
-// Set Reset link href to window location without search
+// Set Reset link href to window location without search query
 document.getElementById("btn-reset").href = window.location.href.replace(window.location.search, "")
