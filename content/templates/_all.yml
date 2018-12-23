@@ -1,10 +1,7 @@
 home:
   name: Home
   description: >
-    The home page is the initial template a user will see. It explains what your product or service is and informs the user on important sections and service offerings.
-
-
-    It is your users first experience with a product so keep it simple, clear and fast.
+    Home pages explain your product or service and help users find what they are looking for.
   state: published
   version: 1.0.0
   components:
@@ -15,14 +12,12 @@ home:
     - grid-12
     - main-nav
     - skip-link
+    - buttons
 
 content:
   name: Content
   description: >
-    Content pages hold information that is important to a user. They usually are a child page of a section.
-
-
-    They  contain breadcrumbs and side navigation that give context to the user about where the page lives on the website.
+    Content pages display information clearly.
   state: published
   version: 1.0.0
   components:
@@ -38,5 +33,17 @@ content:
 
 form:
   name: Form
-  description: A form template coming soon
+  description: >
+    Form pages ask users a question and allow them to answer it.
   state: inprogress
+  components:
+    - core
+    - header
+    - footer
+    - body
+    - grid-12
+    - text-inputs
+    - buttons
+    - page-alerts
+    - main-nav
+    - skip-link

@@ -54,7 +54,7 @@
 		padding-bottom: 0;
 
 		* + & {
-			@include AU-space( padding-top, 2unit );
+			@include AU-space( margin-top, 2unit );
 		}
 
 		.au-link-list--inline {

@@ -6,7 +6,12 @@ header:
 sidebar:
   - /templates/sidebar.md
 
-main: default.md
+tabs:
+  - /templates/_tabs.md
+
+main:
+  - community-intro.md
+  - github-intro.md
 
 footer:
   - /_shared/footer.md

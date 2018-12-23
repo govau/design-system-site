@@ -1,8 +1,9 @@
 ---
 layout: templates/demo
 ---
-The home page template includes all the building blocks to start creating a home page.
+The home page is usually the first experience a user will have with a product or service. 
 
-The fully responsive page layout uses the `grid-12` component for alignment of content througout the sections. 
+It needs to clearly explain what the product or service is. This should be the first thing a user sees when coming to the home page.
 
-The different sections can be themed with the `au-body--dark` or `au-body--alt` css classes. Allowing you to customise the layout to meet your user needs.
+It should help users find what they are looking for by highlighting important sections and information.
+
