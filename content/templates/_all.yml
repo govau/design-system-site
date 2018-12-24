@@ -13,6 +13,7 @@ home:
     - main-nav
     - skip-link
     - buttons
+    - headings
 
 content:
   name: Content
@@ -30,6 +31,7 @@ content:
     - side-nav
     - main-nav
     - skip-link
+    - headings
 
 form:
   name: Form
@@ -47,3 +49,4 @@ form:
     - page-alerts
     - main-nav
     - skip-link
+    - headings

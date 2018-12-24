@@ -1,11 +1,12 @@
-var frames = document.getElementsByTagName( 'iframe' )
-var a11yInputs = document.getElementsByName( 'a11y' );
-var paletteInputs = document.getElementsByName( 'palette' );
-var inputs = document.querySelectorAll('.form-item');
-var resetBtn = document.getElementsByName( 'btn-reset' );
-var shareBtn = document.getElementsByName( 'btn-share' );
-var colors = GetColorState();
+var frames = document.querySelectorAll( 'iframe.chameleon' )
 
+var a11yInputs = document.querySelectorAll( '.a11y input' );
+var paletteInputs = document.querySelectorAll( '.palette input' );
+var customInputs = document.querySelectorAll( '.custom-color input' );
+
+var shareBtn = document.getElementById( 'btn-share' );
+
+var colors = GetColorState();
 var queryObject = QueryToObject();
 
 /**
@@ -14,20 +15,20 @@ var queryObject = QueryToObject();
  * ------------------------------------------------------------
  */
 // Add event handler to share button
-AddEvent(shareBtn[0], "click", function( event, $this ) {
+AddEvent( shareBtn[ 0 ], "click", function( event, $this ) {
 	// Copy the current window URL to clipboard
 	CopyString( window.location.href );
 });
 
 // Add event handler to each `a11y` input
-for ( var i = 0; i < a11yInputs.length; i++ ) {
+for( var i = 0; i < a11yInputs.length; i++ ) {
 	AddEvent( a11yInputs[ i ], "click", function( event, $this ) {
 		ApplyA11yToFrames( "in-" + $this.id )
 	});
 }
 
 // Add event handler to each `palette` input
-for ( var i = 0; i < paletteInputs.length; i++ ) {
+for( var i = 0; i < paletteInputs.length; i++ ) {
 	AddEvent( paletteInputs[ i ], "click", function( event, $this ) {
 		FillPaletteColors( $this.id )
 	});
@@ -35,14 +36,16 @@ for ( var i = 0; i < paletteInputs.length; i++ ) {
 
 // Add event handler to handle key press on form inputs.
 var timeout;
-for ( var i = 0; i < inputs.length; i++ ) {
-	AddEvent( inputs[i].children[0].children[0], "keyup", function( event, $this ) {
-		if( timeout ){
+for( var i = 0; i < customInputs.length; i++ ) {
+	AddEvent( customInputs[ i ], "keyup", function( event, $this ) {
+		if( timeout ) {
 			clearTimeout( timeout );
 			timeout = null;
 		}
-		
-		timeout = setTimeout( function(){ UpdateState( $this ) }, 250 );
+
+		timeout = setTimeout( function(){
+			UpdateState( $this );
+		}, 250 );
 	});
 }
 
@@ -76,9 +79,9 @@ function FillPaletteColors( elementId ) {
 
 	for ( key in styles ) {
 		if ( key == elementId ) {
+
 			// Fill form inputs
 			FillFormColors( styles[key] );
-			
 			UpdateState();
 		}
 	}
@@ -119,7 +122,7 @@ function QueryToObject() {
 		var query = paramString.substr( 1 ).split( '&' )
 
 		for ( var i = 0; i < query.length; i++ ){
-			var keyValue = query[i].split( '=' );
+			var keyValue = query[ i ].split( '=' );
 			paramObject[ keyValue[ 0 ] ] = decodeURIComponent( keyValue[ 1 ] ).split( '+' ).join( '' );
 		}
 	}
@@ -146,7 +149,7 @@ function ApplyColours(){
  */
 function ApplyA11yToFrames ( filterId  ) {
 	for ( var i = 0; i < frames.length; i++ ) {
-		frames[ i ].setAttribute( 'class', 'js-filter--' + filterId.split("in-")[2] )
+		frames[ i ].setAttribute( 'class', 'js-filter--' + filterId.split("in-")[ 2 ] )
 	}
 }
 
@@ -161,7 +164,7 @@ function ApplyFilter( element ) {
 
 
 /**
- * Push the updated color state to DOM with title 'Chameleon', 
+ * Push the updated color state to DOM with title 'Chameleon',
  * set URL to ColorStateToString()
  */
 function UpdateState() {
@@ -177,7 +180,7 @@ function UpdateState() {
 
 
 /**
- * Return the color keys object as a URL param string 
+ * Return the color keys object as a URL param string
  * @param {object} colorState - Object with color keys
  */
 function ColorStateToString( colorState ) {
@@ -188,7 +191,7 @@ function ColorStateToString( colorState ) {
 			result += key + "=" + encodeURIComponent( colorState[ key ] ) + "&"
 		}
 	}
-	
+
 	return result;
 }
 
@@ -216,9 +219,9 @@ function GetColorState() {
 function GetFormValues() {
 	var values = GetColorState();
 
-	for ( var i = 0; i < inputs.length; i++ ){
-		var inputId = inputs[i].children[0].children[0].id;
-		values[ inputId ] = inputs[i].children[0].children[0].value;
+	for ( var i = 0; i < customInputs.length; i++ ){
+		var inputId = customInputs[ i ].id;
+		values[ inputId ] = customInputs[ i ].value;
 	}
 
 	return values;
@@ -231,8 +234,4 @@ function GetFormValues() {
  * ------------------------------------------------------------
  */
 ApplyColours();
-
 FillFormColors();
-
-// Set Reset link href to window location without search query
-document.getElementById("btn-reset").href = window.location.href.replace(window.location.search, "")

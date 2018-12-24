@@ -155,7 +155,7 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 							<a
 								className="au-direction-link au-direction-link--left"
 								href={`/templates/${ templateID }`}
-							>Go back to { template.name }</a>
+							>Go back to { template.name } template</a>
 						</div>
 					</div>
 				</div>
@@ -170,25 +170,24 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 							<p>Choose the colours for the template</p>
 							{ CustomColorInputs }
 						</fieldset>
-						<fieldset className="palette-selection">
+						<fieldset className="palette">
 							<legend className="au-display-4">Select a palette</legend>
 							<p>Choose a palette from an existing colour pairing</p>
 							{ PaletteRadios }
 						</fieldset>
-						<fieldset className="accessibility-selection">
+						<fieldset className="a11y">
 							<legend className="au-display-4">Colour blindness</legend>
 							<p>View the template with different types of colour blindness</p>
 							{ ColorBlindnessRadios }
 						</fieldset>
 						<AUbutton>Change colours</AUbutton>
-						<AUbutton link="/" as="secondary" id="btn-reset">Reset</AUbutton>
-						<AUbutton name="btn-share" as="secondary">Share</AUbutton>
+						<AUbutton link={ `/${ _ID }` } as="secondary">Reset</AUbutton>
+						<AUbutton id="btn-share" as="secondary">Share</AUbutton>
 					</form>
-
 				</div>
 			</main>
 			<script src={_relativeURL("/assets/js/footer.js", _ID)} />
-			<script src={_relativeURL("/assets/js/customise-page-code.js", _ID)} />
+			<script src={_relativeURL("/assets/js/chameleon.js", _ID)} />
 		</body>
 		</html>
 	);
