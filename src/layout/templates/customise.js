@@ -1,3 +1,8 @@
+import AUtextInput from '../../_uikit/layout/text-inputs';
+import { AUradio } from '../../_uikit/layout/control-input';
+import AUbutton from '../../_uikit/layout/buttons';
+
+
 import React from "react";
 import Path from "path";
 import Fs from "fs";
@@ -7,7 +12,7 @@ import Fs from "fs";
  *
  * @disable-docs
  */
-const Customise = ({ alignContent, _ID, _relativeURL, _parseYaml }) => {
+const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 	const templatesDir = Path.normalize(
 		`${__dirname}/../../../content/templates/`
 	);
@@ -17,41 +22,24 @@ const Customise = ({ alignContent, _ID, _relativeURL, _parseYaml }) => {
 	const templateID = _ID.split("/")[1];
 	const template = templates[templateID];
 
-	const pagetitle = `Customise ${template.name}`;
+	const pagetitle = `Customise ${ template.name }`;
+
+	const iframeSrc = process.env.NODE_ENV === "production"
+		? "https://designsystem.gov.au/chameleon"
+		: "http://localhost:3000/chameleon";
 
 	const headContent = `
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-<link rel="apple-touch-icon" sizes="180x180" href=${_relativeURL(
-		"/assets/favicons/apple-touch-icon.png",
-		_ID
-	)}>
-<link rel="icon" type="image/png" sizes="32x32" href=${_relativeURL(
-		"/assets/favicons/favicon-32x32.png",
-		_ID
-	)}>
-<link rel="icon" type="image/png" sizes="16x16" href=${_relativeURL(
-		"/assets/favicons/favicon-16x16.png",
-		_ID
-	)}>
-<link rel="manifest" href=${_relativeURL(
-		"/assets/favicons/site.webmanifest",
-		_ID
-	)}>
-<link rel="mask-icon" href=${_relativeURL(
-		"/assets/favicons/safari-pinned-tab.svg",
-		_ID
-	)} color="#06262d">
-<link rel="shortcut icon" href=${_relativeURL(
-		"/assets/favicons/favicon.ico",
-		_ID
-	)}>
-<meta name="msapplication-config" content=${_relativeURL(
-		"/assets/favicons/browserconfig.xml",
-		_ID
-	)}>
+<link rel="apple-touch-icon" sizes="180x180" href=${ _relativeURL('/assets/favicons/apple-touch-icon.png', _ID ) }>
+<link rel="icon" type="image/png" sizes="32x32" href=${ _relativeURL('/assets/favicons/favicon-32x32.png', _ID ) }>
+<link rel="icon" type="image/png" sizes="16x16" href=${ _relativeURL('/assets/favicons/favicon-16x16.png', _ID ) }>
+<link rel="manifest" href=${ _relativeURL('/assets/favicons/site.webmanifest', _ID ) }>
+<link rel="mask-icon" href=${ _relativeURL('/assets/favicons/safari-pinned-tab.svg', _ID ) } color="#06262d">
+<link rel="shortcut icon" href=${ _relativeURL('/assets/favicons/favicon.ico', _ID ) }>
+<meta name="msapplication-config" content=${ _relativeURL('/assets/favicons/browserconfig.xml', _ID ) }>
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <meta name="robots" content="index, follow">
@@ -68,183 +56,140 @@ const Customise = ({ alignContent, _ID, _relativeURL, _parseYaml }) => {
 <meta property="og:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:url" content="https://designsystem.gov.au">
 
-<title>${
-		pagetitle ? pagetitle : componentTitle + ` example`
-	} - Australian Government Design System</title>
+<title>${ pagetitle } - Australian Government Design System</title>
 
-<link rel="stylesheet" href=${_relativeURL("/assets/css/example.css", _ID)} />
+<link rel="stylesheet" href=${ _relativeURL( '/assets/css/example.css', _ID ) }>
 
 <!--[if lte IE 9]>
-	<script src="${_relativeURL("/assets/js/html5shiv.js", _ID)}"></script>
-	<script src="${_relativeURL("/assets/js/respond.js", _ID)}"></script>
+	<script src="${ _relativeURL( '/assets/js/html5shiv.js', _ID ) }"></script>
+	<script src="${ _relativeURL( '/assets/js/respond.js', _ID ) }"></script>
 <![endif]-->
-<script>var $html=document.documentElement;if($html.classList)$html.classList.remove("no-js"),$html.classList.add("js");else{var className="no-js";$html.className=$html.className.replace(new RegExp("(^|\\b)"+className.split(" ").join("|")+"(\\b|$)","gi")," "),$html.className+=" js"}</script>`;
+<script src=${ _relativeURL( '/assets/js/header.js', _ID ) }></script>`;
+
+	const a11yFilter = <svg
+			aria-hidden="true"
+			className="svg-filter sronly"
+			xmlns="http://www.w3.org/2000/svg"
+			version="1.1">
+			<defs>
+				<filter id="deuteranopia">
+					<feColorMatrix
+						in="SourceGraphic"
+						type="matrix"
+						values="0.625, 0.375, 0,   0, 0
+										0.7,   0.3,   0,   0, 0
+										0,     0.3,   0.7, 0, 0
+										0,     0,     0,   1, 0"/>
+				</filter>
+				<filter id="tritanopia">
+					<feColorMatrix
+						in="SourceGraphic"
+						type="matrix"
+						values="0.95, 0.05,  0,     0, 0
+										0,    0.433, 0.567, 0, 0
+										0,    0.475, 0.525, 0, 0
+										0,    0,     0,     1, 0"/>
+				</filter>
+			</defs>
+		</svg>;
+
+	const colorOptions = {
+		text: "Text",
+		action: "Action",
+		focus: "Focus",
+		background: "Background",
+		textDark: "Dark text",
+		actionDark: "Dark action",
+		focusDark: "Dark focus",
+		backgroundDark: "Dark background"
+	};
+
+	const palette = [
+		"Default",
+		"Goanna green",
+		"Bluetongue blue",
+	];
+
+	const colorBlindnesses = [
+		"No colour blindness",
+		"Grayscale",
+		"Deuteranopia",
+		"Tritanopia",
+	];
+
+	const CustomColorInputs = Object.entries( colorOptions )
+		.map( ([ colorID, colorName ]) => (
+			<div className="form-item">
+				<label htmlFor={ colorID }>{ colorName }</label>
+				<AUtextInput id={ colorID } block></AUtextInput>
+			</div>
+		 ) );
+
+	const ColorBlindnessRadios = colorBlindnesses.map( ( colorBlindness, i ) => (
+			<div className="form-item">
+				<AUradio
+					label={ colorBlindness }
+					name="a11y"
+					defaultChecked={ i === 0 }></AUradio>
+			</div>
+		) );
+
+	const PaletteRadios = palette.map( ( color, i ) => (
+		<div className="form-item">
+			<AUradio
+				label={ color }
+				name="palette"
+				defaultChecked={ i === 0 }></AUradio>
+		</div>
+	) );
 
 	return (
 		<html>
-			<head dangerouslySetInnerHTML={{ __html: headContent }} />
-			<body className={`au-grid live-demo"`}>
-				<header className="header__example">
-					<div className="container-fluid">
-						<div className="row">
-							<div className="col-md-12">
-								<a
-									className="au-direction-link au-direction-link--left"
-									href={`/templates/${templateID}`}
-								>
-									Go back to {template.name}
-								</a>
-							</div>
+		<head dangerouslySetInnerHTML={{ __html: headContent }} />
+		<body className={`au-grid live-demo"`}>
+			{ a11yFilter }
+			<header className="header__example">
+				<div className="container-fluid">
+					<div className="row">
+						<div className="col-md-12">
+							<a
+								className="au-direction-link au-direction-link--left"
+								href={`/templates/${ templateID }`}
+							>Go back to { template.name }</a>
 						</div>
 					</div>
-				</header>
-				<svg
-					aria-hidden="true"
-					className="svg-filter"
-					xmlns="http://www.w3.org/2000/svg"
-					version="1.1"
-				>
-					<defs>
-						<filter id="deuteranopia">
-							<feColorMatrix
-								in="SourceGraphic"
-								type="matrix"
-								values="0.625, 0.375, 0,   0, 0
-										0.7,   0.3,   0,   0, 0
-										0,     0.3,   0.7, 0, 0
-										0,     0,     0,   1, 0"
-							/>
-						</filter>
-						<filter id="tritanopia">
-							<feColorMatrix
-								in="SourceGraphic"
-								type="matrix"
-								values="0.95, 0.05,  0,     0, 0
-									0,    0.433, 0.567, 0, 0
-									0,    0.475, 0.525, 0, 0
-									0,    0,     0,     1, 0"
-							/>
-						</filter>
-					</defs>
-				</svg>
-				<main>
-					<div
-						className={`container-fluid content${
-							alignContent === "center" ? " content--center" : ""
-						}`}
-					>
-						<div className="row">
-							<div className="col-md-12 chameleon">
-								<h1>Customise</h1>
-								<div id="test-a11y">
-									<iframe
-										src={
-											process.env.NODE_ENV == "production"
-												? "https://designsystem.gov.au/chameleon"
-												: "http://localhost:3000/chameleon"
-										}
-									/>
-								</div>
-								<h2>Input</h2>
-								<form id="au-form">
-									<div className="form-item">
-										<label>
-											Text
-											<input name="text" id="text" type="text" />
-										</label>
-									</div>
-									<div className="form-item">
-										<label>
-											Action
-											<input name="action" id="action" type="text" />
-										</label>
-									</div>
-									<div className="form-item">
-										<label>
-											Focus
-											<input name="focus" id="focus" type="text" />
-										</label>
-									</div>
-									<div className="form-item">
-										<label>
-											Background
-											<input name="background" id="background" type="text" />
-										</label>
-									</div>
-									<div className="form-item">
-										<label>
-											Dark text
-											<input name="textDark" id="textDark" type="text" />
-										</label>
-									</div>
-									<div className="form-item">
-										<label>
-											Dark action
-											<input name="actionDark" id="actionDark" type="text" />
-										</label>
-									</div>
-									<div className="form-item">
-										<label>
-											Dark focus
-											<input name="focusDark" id="focusDark" type="text" />
-										</label>
-									</div>
-									<div className="form-item">
-										<label>
-											Dark background
-											<input
-												name="backgroundDark"
-												id="backgroundDark"
-												type="text"
-											/>
-										</label>
-									</div>
-									<button>Change Colours!</button>
-								</form>
+				</div>
+			</header>
+			<main>
+				<iframe className="chameleon" src={ iframeSrc } />
+				<div className="customise au-body">
+					<h1>Customise</h1>
+					<form>
+						<fieldset className="custom-color">
+							<legend className="au-display-4">Custom palette</legend>
+							<p>Choose the colours for the template</p>
+							{ CustomColorInputs }
+						</fieldset>
+						<fieldset className="palette-selection">
+							<legend className="au-display-4">Select a palette</legend>
+							<p>Choose a palette from an existing colour pairing</p>
+							{ PaletteRadios }
+						</fieldset>
+						<fieldset className="accessibility-selection">
+							<legend className="au-display-4">Colour blindness</legend>
+							<p>View the template with different types of colour blindness</p>
+							{ ColorBlindnessRadios }
+						</fieldset>
+						<AUbutton>Change colours</AUbutton>
+						<AUbutton link="/" as="secondary" id="btn-reset">Reset</AUbutton>
+						<AUbutton name="btn-share" as="secondary">Share</AUbutton>
+					</form>
 
-								{/* <button name="btn-reset">Reset</button> */}
-								<a id="btn-reset" rel="noopener noreferrer">
-									Reset
-								</a>
-								<button name="btn-share">Share</button>
-
-								<div className="accessibility-selection">
-									<h2>Accessibility Options</h2>
-									<label className="lbl-grayscale">
-										Greyscale
-										<input name="a11y" id="in-grayscale" type="radio" />
-									</label>
-									<label className="lbl-deuteranopia">
-										Deuteranopia
-										<input name="a11y" id="in-deuteranopia" type="radio" />
-									</label>
-									<label className="lbl-tritanopia">
-										Tritanopia
-										<input name="a11y" id="in-tritanopia" type="radio" />
-									</label>
-								</div>
-
-								<div className="palette-selection">
-									<h2>Palette Options</h2>
-									<label className="lbl-palette-mygov">
-										myGov
-										<input name="palette" id="mygov" type="radio" />
-									</label>
-									<label className="lbl-palette-ato">
-										ATO
-										<input name="palette" id="ato" type="radio" />
-									</label>
-								</div>
-								<br />
-							</div>
-						</div>
-					</div>
-				</main>
-				{/* <script src={ _relativeURL( '/assets/js/iframe-resizer-contentWindow.js', _ID ) } /> */}
-				<script src={_relativeURL("/assets/js/footer.js", _ID)} />
-				{/* <script src={_relativeURL("/assets/js/a11y.js", _ID)} /> */}
-				<script src={_relativeURL("/assets/js/customise-page-code.js", _ID)} />
-			</body>
+				</div>
+			</main>
+			<script src={_relativeURL("/assets/js/footer.js", _ID)} />
+			<script src={_relativeURL("/assets/js/customise-page-code.js", _ID)} />
+		</body>
 		</html>
 	);
 };

@@ -7,8 +7,6 @@ $AU-main-nav-breakpoint: sm;
 // UI-Kit
 @import '../_uikit/sass/uikit';
 
-@import 'components/customise';
-
 // Reset
 body,
 html {
@@ -296,18 +294,6 @@ html {
 	.a11y .example .content {
 		display: block;
 	}
-}
-
-
-.svg-filter {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0,0,0,0);
-	border: 0;
 }
 
 

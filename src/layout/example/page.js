@@ -96,7 +96,7 @@ const Example = ({
 
 	const a11yFilter = <svg
 		aria-hidden="true"
-		className="svg-filter"
+		className="svg-filter sronly"
 		xmlns="http://www.w3.org/2000/svg"
 		version="1.1">
 		<defs>
