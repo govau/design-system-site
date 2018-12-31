@@ -7,4 +7,4 @@ It was discovered during usability observation that the [secondary button](/comp
 
 **Note** The border-radius is removed on focus. This is because the focus outline does not receive the radius.
 
-**Note** The border-radius is [not supported in IE8.](http://caniuse.com/#feat=border-radius)
+**Note** The border-radius is [not supported in IE8.](https://caniuse.com/#feat=border-radius)
