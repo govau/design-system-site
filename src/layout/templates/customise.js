@@ -104,41 +104,45 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 		backgroundDark: "Dark background"
 	};
 
-	const palette = [
-		"Default",
-		"Goanna green",
-		"Bluetongue blue",
-	];
+	const palette = {
+		default: "Default",
+		green: "Goanna green",
+		blue: "Bluetongue blue",
+	}
 
-	const colorBlindnesses = [
-		"No colour blindness",
-		"Grayscale",
-		"Deuteranopia",
-		"Tritanopia",
-	];
+	const colorBlindnesses = {
+		none: "No colour blindness",
+		grayscale: "Grayscale",
+		deuteranopia: "Deuteranopia",
+		tritanopia: "Tritanopia",
+	};
 
 	const CustomColorInputs = Object.entries( colorOptions )
 		.map( ([ colorID, colorName ]) => (
 			<div className="form-item">
 				<label htmlFor={ colorID }>{ colorName }</label>
-				<AUtextInput id={ colorID } block></AUtextInput>
+				<AUtextInput id={ colorID } name={ colorID } block></AUtextInput>
 			</div>
 		 ) );
 
-	const ColorBlindnessRadios = colorBlindnesses.map( ( colorBlindness, i ) => (
+	const ColorBlindnessRadios = Object.entries( colorBlindnesses )
+		.map( ([ colorBlindnessID, colorBlindnessName ], i ) => (
 			<div className="form-item">
 				<AUradio
-					label={ colorBlindness }
+					label={ colorBlindnessName }
 					name="a11y"
+					id={ colorBlindnessID }
 					defaultChecked={ i === 0 }></AUradio>
 			</div>
 		) );
 
-	const PaletteRadios = palette.map( ( color, i ) => (
+	const PaletteRadios = Object.entries( palette )
+		.map( ([ colorID, colorName ], i ) => (
 		<div className="form-item">
 			<AUradio
-				label={ color }
+				label={ colorName }
 				name="palette"
+				id={ colorID }
 				defaultChecked={ i === 0 }></AUradio>
 		</div>
 	) );
@@ -146,7 +150,7 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 	return (
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }} />
-		<body className={`au-grid live-demo"`}>
+		<body className="au-grid live-demo customise-page">
 			{ a11yFilter }
 			<header className="header__example">
 				<div className="container-fluid">
@@ -161,7 +165,9 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 				</div>
 			</header>
 			<main>
-				<iframe className="chameleon" src={ iframeSrc } />
+				<div id="chameleon">
+					<iframe src={ iframeSrc } />
+				</div>
 				<div className="customise au-body">
 					<h1>Customise</h1>
 					<form>
@@ -180,9 +186,9 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 							<p>View the template with different types of colour blindness</p>
 							{ ColorBlindnessRadios }
 						</fieldset>
-						<AUbutton>Change colours</AUbutton>
-						<AUbutton link={ `/${ _ID }` } as="secondary">Reset</AUbutton>
+						<AUbutton type="submit">Change colours</AUbutton>
 						<AUbutton id="btn-share" as="secondary">Share</AUbutton>
+						<AUbutton link={ "/" + _ID } as="tertiary">Reset</AUbutton>
 					</form>
 				</div>
 			</main>

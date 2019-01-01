@@ -296,17 +296,32 @@ html {
 	}
 }
 
-
+// SVG filters
 .js-filter--tritanopia {
 	 filter: url( "#tritanopia" );
 }
-
 
 .js-filter--grayscale {
 	 filter: grayscale( 100% );
 }
 
-
 .js-filter--deuteranopia {
 	 filter: url( "#deuteranopia" );
+}
+
+
+
+// Chameleon code
+.customise-page #chameleon iframe {
+	width: 60%;
+	height: 700px;
+	float: left;
+	border: 0;
+}
+
+.customise-page .customise {
+	width: 40%;
+	float: left;
+	height: 700px;
+	overflow: auto;
 }

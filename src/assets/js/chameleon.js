@@ -1,4 +1,5 @@
-var frames = document.querySelectorAll( 'iframe.chameleon' )
+var iframeContainer = document.getElementById( 'chameleon' );
+var iframe = document.querySelector( '#chameleon iframe' );
 
 var a11yInputs = document.querySelectorAll( '.a11y input' );
 var paletteInputs = document.querySelectorAll( '.palette input' );
@@ -6,160 +7,146 @@ var customInputs = document.querySelectorAll( '.custom-color input' );
 
 var shareBtn = document.getElementById( 'btn-share' );
 
-var colors = GetColorState();
-var queryObject = QueryToObject();
+var colors = {
+	text:           '',
+	action:         '',
+	focus:          '',
+	background:     '',
+	textDark:       '',
+	actionDark:     '',
+	focusDark:      '',
+	backgroundDark: '',
+};
 
-/**
- * ------------------------------------------------------------
- * Event Handlers
- * ------------------------------------------------------------
- */
-// Add event handler to share button
-AddEvent( shareBtn[ 0 ], "click", function( event, $this ) {
-	// Copy the current window URL to clipboard
-	CopyString( window.location.href );
-});
-
-// Add event handler to each `a11y` input
-for( var i = 0; i < a11yInputs.length; i++ ) {
-	AddEvent( a11yInputs[ i ], "click", function( event, $this ) {
-		ApplyA11yToFrames( "in-" + $this.id )
-	});
-}
-
-// Add event handler to each `palette` input
-for( var i = 0; i < paletteInputs.length; i++ ) {
-	AddEvent( paletteInputs[ i ], "click", function( event, $this ) {
-		FillPaletteColors( $this.id )
-	});
-}
-
-// Add event handler to handle key press on form inputs.
-var timeout;
-for( var i = 0; i < customInputs.length; i++ ) {
-	AddEvent( customInputs[ i ], "keyup", function( event, $this ) {
-		if( timeout ) {
-			clearTimeout( timeout );
-			timeout = null;
-		}
-
-		timeout = setTimeout( function(){
-			UpdateState( $this );
-		}, 250 );
-	});
-}
-
-
-/**
- * Prefill the form given a color palette selection ( e.g 'ato' prefills the form with ATO colors )
- */
-function FillPaletteColors( elementId ) {
-	var styles = {
-		mygov: {
-				text:           '',
-				action:         '#026540',
-				focus:          '#ac1523',
-				background:     '',
-				textDark:       '#ffffff',
-				actionDark:     '#f9f9f9',
-				focusDark:      '#D2E771',
-				backgroundDark: '#026540',
-		},
-		ato: {
-			text:           '',
-			action:         '#0D979B',
-			focus:          '',
-			background:     '',
-			textDark:       '#ffffff',
-			actionDark:     '#F2D814',
-			focusDark:      '#4569a0',
-			backgroundDark: '#002341',
-		}
+var paletteStyles = {
+	default: colors,
+	green: {
+		action:         '#026540',
+		focus:          '#AC1523',
+		actionDark:     '#F9F9F9',
+		focusDark:      '#D2E771',
+		backgroundDark: '#026540',
+	},
+	blue: {
+		action:         '#0D979B',
+		actionDark:     '#F2D814',
+		focusDark:      '#4569A0',
+		backgroundDark: '#002341',
 	}
+};
 
-	for ( key in styles ) {
-		if ( key == elementId ) {
-
-			// Fill form inputs
-			FillFormColors( styles[key] );
-			UpdateState();
-		}
-	}
-}
-
-
-/**
- * FillForm - Fills the form with the parameters in the URL
- */
-function FillFormColors( colorObject ) {
-	if ( colorObject ) {
-		for ( var key in colorObject ){
-			var input = document.getElementById( key )
-			if ( input ) {
-				input.value = colorObject[key];
-			}
-		}
-	}
-	else {
-		for ( var key in queryObject ){
-			var input = document.getElementById( key )
-			if ( input ) {
-				input.value = queryObject[key];
-			}
-		}
-	}
-}
 
 
 /**
  * QueryToObject - Turns the url query into an object
+ *
+ * @param   {string} queryString - The query string, usually window.location.search
+ * @returns {object}       - The key value object from the query string
  */
-function QueryToObject() {
+function QueryToObject( queryString ) {
 	var paramObject = {};
 
-	if ( window.location.search ) {
-		var paramString = window.location.search
-		var query = paramString.substr( 1 ).split( '&' )
+	var splitQuery = queryString.substr( 1 ).split( '&' )
 
-		for ( var i = 0; i < query.length; i++ ){
-			var keyValue = query[ i ].split( '=' );
-			paramObject[ keyValue[ 0 ] ] = decodeURIComponent( keyValue[ 1 ] ).split( '+' ).join( '' );
+	for ( var i = 0; i < splitQuery.length; i++ ) {
+		var keyValue = splitQuery[ i ].split( '=' );
+
+		// Check there is a key value pair
+		if( keyValue[ 0 ] ){
+			paramObject[ keyValue[ 0 ] ] = decodeURIComponent( keyValue[ 1 ] ) || '';
 		}
 	}
 
 	return paramObject;
-}
+};
 
 
 /**
- * ApplyColors - Applies the colours to the iframe
+ * ObjectToQueryString - Turns a key value object into a url query string
+ *
+ * @param   {object} query - The key value object from the query string
+ * @returns {string}       - The query string, usually window.location.search
  */
-function ApplyColours(){
-	paramString = window.location.search;
-	for ( var i = 0; i < frames.length; i++ ) {
-		frames[ i ].src = ( 'http://localhost:3000/chameleon' + paramString );
-		// frames[ i ].src = ( 'http://10.0.2.2:3000/chameleon' + paramString );
+function ObjectToQueryString( query ) {
+	var queryString = '?';
+
+	for( var key in query ) {
+		queryString += '&' + key + '=' + encodeURIComponent( query[ key ] );
 	}
-}
+
+	return queryString;
+};
 
 
 /**
- * ApplyA11yToFrames - Set a filter class to all frames given a selected a11y radio input selection.
- * @param { string } filter - A11y filter selected ( e.g greyscale, deuteranopia )
+ * GetTextInputValues - Return the values of an array of inputs as an object
+ *
+ * @param   {array}  inputs - The inputs to get the values from
+ * @returns {object}        - The key value object from the input values
  */
-function ApplyA11yToFrames ( filterId  ) {
-	for ( var i = 0; i < frames.length; i++ ) {
-		frames[ i ].setAttribute( 'class', 'js-filter--' + filterId.split("in-")[ 2 ] )
+function GetTextInputValues( inputs ) {
+	var formValues = {};
+
+	for ( var i = 0; i < inputs.length; i++ ){
+		formValues[ inputs[ i ].id ] = inputs[ i ].value;
 	}
+
+	return formValues;
+};
+
+
+/**
+ * FillForm - Injects values into the form from the querystring
+ *
+ * @param {object} queryString - The query turned into an object
+ */
+function ApplyColors( queryString ) {
+	var query = QueryToObject( queryString );
+
+	for( var key in query ) {
+		var input = document.getElementById( key );
+
+		if( input ) {
+			input.value = query[ key ];
+		}
+	}
+
+	ApplyQueryToIframe( queryString );
 }
 
 
 /**
- * Function binding onchange a11y radio input
- * @param { HTMLElement } element
+ * ApplyQueryToIframe - Applies the current website query to the iframe src
+ * @param   {string} query - The query string, usually window.location.search
  */
-function ApplyFilter( element ) {
-	ApplyA11yToFrames( element.id );
+function ApplyQueryToIframe( query ){
+	// This is hacky and should be replaced
+	var inputQuery = query.replace( '&palette=on&a11y=on', '' );
+	iframe.src = ( 'http://localhost:3000/chameleon' + inputQuery );
+}
+
+
+/**
+ * ApplyPalette - Applies a palette to the iframe and form values
+ *
+ * @param {string} paletteId - The palette to apply
+ */
+function ApplyPalette( paletteId ){
+	var paletteValues = {};
+	var palette = paletteStyles[ paletteId ];
+
+	// For each color
+	for( var key in colors ){
+		paletteValues[ key ] = palette[ key ] || colors[ key ];
+	}
+
+	// Apply the colour scheme
+	if( paletteValues ){
+		var queryFromInputs = ObjectToQueryString( paletteValues );
+
+		ApplyColors( queryFromInputs );
+		ApplyQueryToIframe( queryFromInputs );
+	}
 }
 
 
@@ -168,63 +155,62 @@ function ApplyFilter( element ) {
  * set URL to ColorStateToString()
  */
 function UpdateState() {
-	var formData = GetFormValues();
-	var colorStateURL = ColorStateToString( formData );
+	var formData = GetTextInputValues( customInputs );
+	var colorStateURL = ObjectToQueryString( formData );
 
 	// Replace DOM state with current color object
 	window.history.pushState( formData , "Chameleon", colorStateURL );
 
 	// Set iframe src to mirror current DOM state
-	ApplyColours();
+	ApplyColors( window.location.search );
 }
 
 
 /**
- * Return the color keys object as a URL param string
- * @param {object} colorState - Object with color keys
+ * ------------------------------------------------------------
+ * Event Handlers
+ * ------------------------------------------------------------
  */
-function ColorStateToString( colorState ) {
-	var result = "?";
+// When the share button is clicked copy the current URL
+AddEvent( shareBtn, "click", function( event, $this ) {
+	CopyString( window.location.href );
+});
 
-	for (var key in colorState ) {
-		if ( colorState[ key ] ) {
-			result += key + "=" + encodeURIComponent( colorState[ key ] ) + "&"
+
+// Toggle the color blindness filter on the iframe
+for( var i = 0; i < a11yInputs.length; i++ ) {
+	AddEvent( a11yInputs[ i ], "click", function( event, $this ) {
+		iframe.setAttribute( 'class', 'js-filter--' + $this.id );
+	});
+}
+
+
+// Add event handler to each `palette` input
+for( var i = 0; i < paletteInputs.length; i++ ) {
+	AddEvent( paletteInputs[ i ], "click", function( event, $this ) {
+		ApplyPalette( $this.id );
+	});
+}
+
+// Add event handler to handle key press on form inputs.
+var timeout;
+for( var i = 0; i < customInputs.length; i++ ) {
+	AddEvent( customInputs[ i ], "keyup", function( event, $this ) {
+		// Add the loading class
+		if( !HasClass( iframeContainer, 'chameleon--loading' ) ) {
+			AddClass( iframeContainer, 'chameleon--loading' );
 		}
-	}
 
-	return result;
-}
+		if( timeout ) {
+			clearTimeout( timeout );
+			timeout = null;
+		}
 
-
-/**
- * Return object of color keys
- */
-function GetColorState() {
-	return {
-		text:           '',
-		action:         '',
-		focus:          '',
-		background:     '',
-		textDark:       '',
-		actionDark:     '',
-		focusDark:      '',
-		backgroundDark: '',
-	}
-}
-
-
-/**
- * Return the form values as object at any point in time
- */
-function GetFormValues() {
-	var values = GetColorState();
-
-	for ( var i = 0; i < customInputs.length; i++ ){
-		var inputId = customInputs[ i ].id;
-		values[ inputId ] = customInputs[ i ].value;
-	}
-
-	return values;
+		timeout = setTimeout( function(){
+			UpdateState( $this );
+			RemoveClass( iframeContainer, 'chameleon--loading' );
+		}, 500 );
+	});
 }
 
 
@@ -233,5 +219,4 @@ function GetFormValues() {
  * On page load
  * ------------------------------------------------------------
  */
-ApplyColours();
-FillFormColors();
+ApplyColors( window.location.search );
