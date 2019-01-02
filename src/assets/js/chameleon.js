@@ -1,10 +1,15 @@
 var iframe = document.querySelector( '#chameleon iframe' );
+var form = document.querySelector( '.customise__form' );
 
 var a11yInputs = document.querySelectorAll( '.a11y input' );
 var paletteInputs = document.querySelectorAll( '.palette input' );
 var customInputs = document.querySelectorAll( '.custom-color input' );
 
-var shareBtn = document.getElementById( 'btn-share' );
+var toggleColorInputButtons = document.querySelectorAll( '.toggle-color-input' );
+var shareButton = document.getElementById( 'btn-share' );
+
+var templateName = window.location.pathname.split( '/' )[ 2 ];
+
 
 var colors = {
 	text:           '',
@@ -118,9 +123,12 @@ function ApplyColors( queryString ) {
  * @param   {string} query - The query string, usually window.location.search
  */
 function ApplyQueryToIframe( query ){
-	// This is hacky and should be replaced
-	var inputQuery = query.replace( '&palette=on&a11y=on', '' );
-	iframe.src = ( 'http://localhost:3000/chameleon' + inputQuery );
+	// These two lines are hacky and should be replaced
+	var template = templateName === 'home' ? '' : '/' + templateName;
+	var iframeQuery = template + query.replace( '&palette=on&a11y=on', '' );
+
+	// Need to fix this up
+	iframe.src = ( 'http://localhost:3000/chameleon' + iframeQuery );
 }
 
 
@@ -168,9 +176,22 @@ function PushValuesToURL( inputs ) {
  * ------------------------------------------------------------
  */
 // When the share button is clicked copy the current URL
-AddEvent( shareBtn, "click", function( event, $this ) {
+AddEvent( shareButton, "click", function( event, $this ) {
 	CopyString( window.location.href );
 });
+
+
+// When the share button is clicked copy the current URL
+for( var i = 0; i < toggleColorInputButtons.length; i++ ){
+	AddEvent( toggleColorInputButtons[ i ], "click", function( event, $this ) {
+		if( HasClass( form, 'show--palette ' )){
+			RemoveClass( form, 'show--palette ' );
+		}
+		else {
+			AddClass( form, 'show--palette ' );
+		}
+	});
+}
 
 
 // Toggle the color blindness filter on the iframe
