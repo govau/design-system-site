@@ -128,7 +128,7 @@ const Example = ({
 		<body className={ `au-grid${ a11yPage ? ' a11y' : '' }${ livedemo ? ' live-demo' : '' }` }>
 			{
 				livedemo
-					? <header className="header_bar">
+					? <header className="header__bar">
 							<div className="container-fluid">
 								<div className="row">
 									<div className="col-md-12">

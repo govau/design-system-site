@@ -1640,7 +1640,13 @@ template { display: none; }
 
 .sronly { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
 
-.header__bar { margin-bottom: 16px; margin-bottom: 1rem; padding: 16px 0; padding: 1rem 0; background-color: #1D1D1D; }
+.au-fieldset { border: none; padding: 0; margin: 0; width: 100%; }
+
+.au-fieldset legend { font-weight: bold; }
+
+.au-fieldset + .au-fieldset { margin-top: 32px; margin-top: 2rem; }
+
+.header__bar { padding: 16px 0; padding: 1rem 0; background-color: #1D1D1D; }
 
 .header__bar a { color: #45c2f0; display: block; float: left; }
 
@@ -1652,8 +1658,10 @@ template { display: none; }
 
 .js-filter--deuteranopia { filter: url("#deuteranopia"); }
 
-.customise-page #chameleon iframe { width: 60%; height: 700px; float: left; border: 0; }
+#chameleon { width: 100%; }
 
-.customise-page .customise { width: 40%; float: left; height: 700px; overflow: auto; }
+#chameleon iframe { margin-right: 320px; margin-right: 20rem; }
+
+.customise { padding: 16px; padding: 1rem; width: 320px; width: 20rem; }
 
 /*# sourceMappingURL=customise.css.map */

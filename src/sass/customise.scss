@@ -11,21 +11,21 @@
 
 
 // Our components
+@import 'components/fieldset';
 @import 'components/header-bar';
 @import 'components/svg-filters';
 
 
 // Chameleon code
-.customise-page #chameleon iframe {
-	width: 60%;
-	height: 700px;
-	float: left;
-	border: 0;
+#chameleon {
+	width: 100%;
+
+	iframe {
+		@include AU-space( margin-right, 20unit );
+	}
 }
 
-.customise-page .customise {
-	width: 40%;
-	float: left;
-	height: 700px;
-	overflow: auto;
+.customise {
+	@include AU-space( padding, 1unit );
+	@include AU-space( width, 20unit );
 }

@@ -1,6 +1,5 @@
 // Live demo header bar
 .header__bar {
-	@include AU-space( margin-bottom, 1unit );
 	@include AU-space( padding, 1unit 0 );
 	background-color: #1D1D1D;
 
