@@ -1,0 +1,31 @@
+// This is used for our customise pages
+
+
+// UI-Kit
+@import '../_uikit/sass/uikit';
+
+
+// Our base styles
+@import 'base/reset';
+@import 'base/utility';
+
+
+// Our components
+@import 'components/header-bar';
+@import 'components/svg-filters';
+
+
+// Chameleon code
+.customise-page #chameleon iframe {
+	width: 60%;
+	height: 700px;
+	float: left;
+	border: 0;
+}
+
+.customise-page .customise {
+	width: 40%;
+	float: left;
+	height: 700px;
+	overflow: auto;
+}

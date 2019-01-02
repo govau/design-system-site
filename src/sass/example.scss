@@ -7,12 +7,16 @@ $AU-main-nav-breakpoint: sm;
 // UI-Kit
 @import '../_uikit/sass/uikit';
 
-// Reset
-body,
-html {
-	margin: 0;
-	padding: 0;
-}
+
+// Our base styles
+@import 'base/reset';
+@import 'base/utility';
+
+
+// Our components
+@import 'components/header-bar';
+@import 'components/svg-filters';
+
 
 // Example wrapper
 .example {
@@ -37,25 +41,6 @@ html {
 	.example--align-middle {
 		@include AU-space( max-width, 40unit );
 		margin: 0 auto;
-	}
-}
-
-
-// Live demo header bar
-.header__example {
-	@include AU-space( margin-bottom, 1unit );
-	@include AU-space( padding, 1unit 0 );
-	background-color: #1D1D1D;
-
-	a {
-		color: #45c2f0;
-		display: block;
-		float: left;
-
-		&:hover {
-			text-decoration: none;
-			color: #fff;
-		}
 	}
 }
 
@@ -223,61 +208,34 @@ html {
 	text-align: center;
 }
 
-
-// A11y examples
-.sronly {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect( 0, 0, 0, 0 );
-	border: 0;
-}
-
 .bar {
 	border-bottom: 4px solid #f5f5f5;
 	border-bottom: .25rem solid #f5f5f5;
 }
 
 .a11y-button {
-	display: inline-block;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
-	color: #007099;
-	background-color: #fff;
-	cursor: pointer;
-	vertical-align: middle;
-	font-size: 14px;
-	font-size: .875rem;
-	line-height: 1.14286;
-	padding: 12px 16px 12px;
-	padding: .75rem 1rem .75rem;
+	color: #007099; // Hard coded as UIKIT is not overidden
+	border-radius: 0;
 	border: none;
-	border-bottom: 4px solid #f5f5f5;
-	border-bottom: .25rem solid #f5f5f5;
-	margin-bottom: -4px;
-	margin-bottom: -0.25rem;
+	@include AU-fontgrid( xs );
+	@include AU-space( padding, 0.75unit 1unit );
+	@include AU-space( border-bottom, 0.25unit solid #f5f5f5 );
+	@include AU-space( margin-bottom, -0.25unit );
 }
 
 .a11y-button:focus {
-	outline: 3px solid #9263DE;
+	outline: 3px solid #9263DE; // Hard coded as UIKIT is not overidden
 	outline-offset: 2px;
 }
 
-.a11y-button.is-active {
+.au-btn.a11y-button.is-active {
 	border-color: #007099;
+
+	&:hover {
+		border-color: #007099;
+	}
 }
 
-.a11y-button.a11y-button--soft {
-	color: #313131;
-}
-
-.a11y .example .bar,
-.a11y .example .content,
 .a11y .example .bar,
 .a11y .example .content {
 	display: none;
@@ -294,34 +252,4 @@ html {
 	.a11y .example .content {
 		display: block;
 	}
-}
-
-// SVG filters
-.js-filter--tritanopia {
-	 filter: url( "#tritanopia" );
-}
-
-.js-filter--grayscale {
-	 filter: grayscale( 100% );
-}
-
-.js-filter--deuteranopia {
-	 filter: url( "#deuteranopia" );
-}
-
-
-
-// Chameleon code
-.customise-page #chameleon iframe {
-	width: 60%;
-	height: 700px;
-	float: left;
-	border: 0;
-}
-
-.customise-page .customise {
-	width: 40%;
-	float: left;
-	height: 700px;
-	overflow: auto;
 }

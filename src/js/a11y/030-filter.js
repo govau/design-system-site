@@ -3,10 +3,10 @@ if( filters !== null ) {
 	filters.insertAdjacentHTML(
 		'afterbegin',
 		'<div class="bar">' +
-		'<button type="button" class="a11y-button js-filter-btn is-active" data-filter="deuteranopia">' +
+		'<button type="button" class="au-btn au-btn--tertiary a11y-button js-filter-btn is-active" data-filter="deuteranopia">' +
 			'<span class="sronly">Apply </span>Deuteranopia<span class="sronly"> color filter</span>' +
 		'</button>' +
-		'<button type="button" class="a11y-button js-filter-btn" data-filter="tritanopia">' +
+		'<button type="button" class="au-btn au-btn--tertiary a11y-button js-filter-btn" data-filter="tritanopia">' +
 			'<span class="sronly">Apply </span>Tritanopia<span class="sronly"> color filter</span>' +
 		'</button>' +
 		'</div>'

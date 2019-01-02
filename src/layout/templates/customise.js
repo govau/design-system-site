@@ -58,7 +58,7 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 
 <title>${ pagetitle } - Australian Government Design System</title>
 
-<link rel="stylesheet" href=${ _relativeURL( '/assets/css/example.css', _ID ) }>
+<link rel="stylesheet" href=${ _relativeURL( '/assets/css/customise.css', _ID ) }>
 
 <!--[if lte IE 9]>
 	<script src="${ _relativeURL( '/assets/js/html5shiv.js', _ID ) }"></script>
@@ -118,8 +118,8 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 	};
 
 	const CustomColorInputs = Object.entries( colorOptions )
-		.map( ([ colorID, colorName ]) => (
-			<div className="form-item">
+		.map( ([ colorID, colorName ], i ) => (
+			<div className="form-item" key={ i }>
 				<label htmlFor={ colorID }>{ colorName }</label>
 				<AUtextInput id={ colorID } name={ colorID } block></AUtextInput>
 			</div>
@@ -127,7 +127,7 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 
 	const ColorBlindnessRadios = Object.entries( colorBlindnesses )
 		.map( ([ colorBlindnessID, colorBlindnessName ], i ) => (
-			<div className="form-item">
+			<div className="form-item" key={ i }>
 				<AUradio
 					label={ colorBlindnessName }
 					name="a11y"
@@ -138,13 +138,13 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 
 	const PaletteRadios = Object.entries( palette )
 		.map( ([ colorID, colorName ], i ) => (
-		<div className="form-item">
-			<AUradio
-				label={ colorName }
-				name="palette"
-				id={ colorID }
-				defaultChecked={ i === 0 }></AUradio>
-		</div>
+			<div className="form-item" key={ i }>
+				<AUradio
+					label={ colorName }
+					name="palette"
+					id={ colorID }
+					defaultChecked={ i === 0 }></AUradio>
+			</div>
 	) );
 
 	return (
@@ -152,7 +152,7 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 		<head dangerouslySetInnerHTML={{ __html: headContent }} />
 		<body className="au-grid live-demo customise-page">
 			{ a11yFilter }
-			<header className="header__example">
+			<header className="header__bar">
 				<div className="container-fluid">
 					<div className="row">
 						<div className="col-md-12">
@@ -171,17 +171,17 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 				<div className="customise au-body">
 					<h1>Customise</h1>
 					<form>
-						<fieldset className="custom-color">
+						<fieldset className="au-fieldset custom-color">
 							<legend className="au-display-4">Custom palette</legend>
 							<p>Choose the colours for the template</p>
 							{ CustomColorInputs }
 						</fieldset>
-						<fieldset className="palette">
+						<fieldset className="au-fieldset palette">
 							<legend className="au-display-4">Select a palette</legend>
 							<p>Choose a palette from an existing colour pairing</p>
 							{ PaletteRadios }
 						</fieldset>
-						<fieldset className="a11y">
+						<fieldset className="au-fieldset a11y">
 							<legend className="au-display-4">Colour blindness</legend>
 							<p>View the template with different types of colour blindness</p>
 							{ ColorBlindnessRadios }
