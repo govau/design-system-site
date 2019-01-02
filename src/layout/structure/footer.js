@@ -36,7 +36,7 @@ const Footer = ({ headline, legallist, mainlist, _body, _ID, _relativeURL }) => 
 							<span>An initiative of the </span>
 							<span>Digital Transformation Agency </span>
 							<span className="footer__affiliate-link">
-								<AUctaLink link="http://dta.gov.au/what-we-do" text="More projects" dark/>
+								<AUctaLink link="https://www.dta.gov.au/our-projects" text="More projects" dark/>
 							</span>
 						</p>
 					</div>
