@@ -20,7 +20,7 @@
 // The iFrame and wrapper
 #chameleon {
 	@include AU-space( top, 3.5unit );
-	@include AU-space( right, 26.25unit );
+	@include AU-space( right, 25.25unit );
 	left: 0;
 	bottom: 0;
 	position: absolute;
@@ -36,8 +36,8 @@
 // The container of the form
 .customise {
 	@include AU-space( top, 3.5unit );
-	@include AU-space( width, 24unit );
-	@include AU-space( padding, 1unit );
+	@include AU-space( width, 22unit );
+	@include AU-space( padding, 0.75unit 1.5unit );
 	@include AU-space( border-left, 0.25unit solid $AU-color-foreground-border );
 	right: 0;
 	bottom: 0;
@@ -47,7 +47,7 @@
 
 // The description of the form
 .customise__form {
-	@include AU-space( margin-top, 1unit );
+	@include AU-space( margin-top, 1.5unit );
 
 	.fieldset__description {
 		@include AU-space( margin-top, 0.25unit );
@@ -55,11 +55,14 @@
 	}
 
 	.au-fieldset {
-		@include AU-space( margin-top, 1unit );
 		border-top: 1px solid $AU-color-foreground-border;
 
 		legend {
 			padding-right: 10px;
+		}
+
+		& + .au-fieldset {
+			@include AU-space( margin-top, 1.5unit );
 		}
 	}
 }
@@ -81,6 +84,8 @@
 .toggle-color-input {
 	padding: 0;
 	border: 0;
+	vertical-align: baseline;
+	display: inline;
 }
 
 .palette {

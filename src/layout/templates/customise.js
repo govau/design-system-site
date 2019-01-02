@@ -179,7 +179,7 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 					<form className="customise__form">
 						<fieldset className="au-fieldset custom-color">
 							<legend className="au-display-4">Custom palette</legend>
-							<p className="fieldset__description">Customise the colours for the template, or <AUbutton className="toggle-color-input" as="tertiary">choose from defined palettes</AUbutton></p>
+							<p className="fieldset__description">Customise the colours for the template, or <AUbutton className="toggle-color-input" as="tertiary">choose from defined palettes</AUbutton>.</p>
 							<div className="row">
 								{ CustomColorInputs }
 							</div>
@@ -191,7 +191,7 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 						</fieldset>
 						<fieldset className="au-fieldset a11y">
 							<legend className="au-display-4">Colour blindness</legend>
-							<p className="fieldset__description">View the template with different types of colour blindness</p>
+							<p className="fieldset__description">View the template with colour blindness</p>
 							{ ColorBlindnessRadios }
 						</fieldset>
 						{/* Need to show this on older browsers */}

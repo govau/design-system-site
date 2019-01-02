@@ -27,7 +27,7 @@ var paletteStyles = {
 	green: {
 		action:         '#026540',
 		focus:          '#AC1523',
-		actionDark:     '#F9F9F9',
+		actionDark:     '#D7EA6A',
 		focusDark:      '#D2E771',
 		backgroundDark: '#026540',
 	},
@@ -152,6 +152,7 @@ function ApplyPalette( paletteId ){
 
 		ApplyColors( queryFromInputs );
 		ApplyQueryToIframe( queryFromInputs );
+		PushValuesToURL( customInputs );
 	}
 }
 
