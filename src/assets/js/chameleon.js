@@ -23,7 +23,7 @@ var colors = {
 };
 
 var paletteStyles = {
-	default: colors,
+	defaultPalette: colors,
 	green: {
 		action:         '#026540',
 		focus:          '#AC1523',
@@ -210,24 +210,28 @@ for( var i = 0; i < paletteInputs.length; i++ ) {
 	});
 }
 
-// Add event handler to handle key press on form inputs.
-var timeout;
-for( var i = 0; i < customInputs.length; i++ ) {
-	AddEvent( customInputs[ i ], "keyup", function( event, $this ) {
 
-		// If the user presses the key before the timeout fires
-		// clear the timeout and reset it
-		if( timeout ) {
-			clearTimeout( timeout );
-			timeout = null;
-		}
+// Magical URL update as typing
+if( window.history.pushState ) {
+	// Add event handler to handle key press on form inputs.
+	var timeout;
+	for( var i = 0; i < customInputs.length; i++ ) {
+		AddEvent( customInputs[ i ], "keyup", function( event, $this ) {
 
-		// Create a new timeout that runs the functions after the time has ended
-		timeout = setTimeout( function(){
-			PushValuesToURL( customInputs );
-			ApplyColors( window.location.search );
-		}, 400 );
-	});
+			// If the user presses the key before the timeout fires
+			// clear the timeout and reset it
+			if( timeout ) {
+				clearTimeout( timeout );
+				timeout = null;
+			}
+
+			// Create a new timeout that runs the functions after the time has ended
+			timeout = setTimeout( function(){
+				PushValuesToURL( customInputs );
+				ApplyColors( window.location.search );
+			}, 400 );
+		});
+	}
 }
 
 

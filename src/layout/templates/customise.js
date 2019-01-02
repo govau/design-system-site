@@ -108,7 +108,7 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 	}];
 
 	const palette = {
-		default: "Default",
+		defaultPalette: "Default",
 		green: "Goanna green",
 		blue: "Bluetongue blue",
 	}
@@ -195,7 +195,7 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 							{ ColorBlindnessRadios }
 						</fieldset>
 						{/* Need to show this on older browsers */}
-						{/* <AUbutton type="submit">Change colours</AUbutton> */}
+						<AUbutton className="customise--submit" type="submit">Customise template</AUbutton>
 					</form>
 				</div>
 			</main>

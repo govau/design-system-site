@@ -1700,4 +1700,10 @@ template { display: none; }
 
 .show--palette .palette { display: block; }
 
+.ie9 .a11y, .lt-ie9 .a11y { display: none; }
+
+.customise--submit { margin-top: 16px; margin-top: 1rem; display: none; }
+
+.ie9 .customise--submit, .lt-ie9 .customise--submit { display: block; }
+
 /*# sourceMappingURL=customise.css.map */

@@ -101,3 +101,26 @@
 		display: block;
 	}
 }
+
+
+// Hide SVG colour filters
+.ie9,
+.lt-ie9 {
+	.a11y {
+		display: none;
+	}
+}
+
+// Hide the submit button
+.customise--submit {
+	@include AU-space( margin-top, 1unit );
+	display: none;
+}
+
+// Show the submit button on legacy browsers
+.ie9,
+.lt-ie9 {
+	.customise--submit {
+		display: block;
+	}
+}
