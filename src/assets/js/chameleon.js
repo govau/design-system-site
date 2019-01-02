@@ -133,13 +133,13 @@ function ApplyPalette( paletteId ){
 	var paletteValues = {};
 	var palette = paletteStyles[ paletteId ];
 
-	// For each color
-	for( var key in colors ){
-		paletteValues[ key ] = palette[ key ] || colors[ key ];
+	// Add the values to the palette, no blank values
+	for( var key in colors ) {
+		paletteValues[ key ] = palette[ key ] || '';
 	}
 
 	// Apply the colour scheme
-	if( paletteValues ){
+	if( paletteValues ) {
 		var queryFromInputs = ObjectToQueryString( paletteValues );
 
 		ApplyColors( queryFromInputs );
@@ -192,16 +192,17 @@ for( var i = 0; i < paletteInputs.length; i++ ) {
 var timeout;
 for( var i = 0; i < customInputs.length; i++ ) {
 	AddEvent( customInputs[ i ], "keyup", function( event, $this ) {
+
+		// If the user presses the key before the timeout fires
+		// clear the timeout and reset it
 		if( timeout ) {
 			clearTimeout( timeout );
 			timeout = null;
 		}
 
+		// Create a new timeout that runs the functions after the time has ended
 		timeout = setTimeout( function(){
-			// Update the window.location.search to use values from the form
 			PushValuesToURL( customInputs );
-
-			// Set iframe src to mirror current DOM state
 			ApplyColors( window.location.search );
 		}, 400 );
 	});
