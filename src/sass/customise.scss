@@ -11,21 +11,88 @@
 
 
 // Our components
+@import 'components/button-list';
 @import 'components/fieldset';
 @import 'components/header-bar';
 @import 'components/svg-filters';
 
 
-// Chameleon code
+// The iFrame and wrapper
 #chameleon {
-	width: 100%;
+	@include AU-space( top, 3.5unit );
+	@include AU-space( right, 26.25unit );
+	left: 0;
+	bottom: 0;
+	position: absolute;
 
 	iframe {
-		@include AU-space( margin-right, 20unit );
+		border: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
 	}
 }
 
+// The container of the form
 .customise {
+	@include AU-space( top, 3.5unit );
+	@include AU-space( width, 24unit );
 	@include AU-space( padding, 1unit );
-	@include AU-space( width, 20unit );
+	@include AU-space( border-left, 0.25unit solid $AU-color-foreground-border );
+	right: 0;
+	bottom: 0;
+	overflow-x: auto;
+	position: absolute;
+}
+
+// The description of the form
+.customise__form {
+	@include AU-space( margin-top, 1unit );
+
+	.fieldset__description {
+		@include AU-space( margin-top, 0.25unit );
+		@include AU-space( margin-bottom, 1unit );
+	}
+
+	.au-fieldset {
+		@include AU-space( margin-top, 1unit );
+		border-top: 1px solid $AU-color-foreground-border;
+
+		legend {
+			padding-right: 10px;
+		}
+	}
+}
+
+// The text inputs inside custom palette
+.custom-color * + .form-item {
+	@include AU-space( margin-top, 0.5unit );
+}
+
+.palette,
+.a11y {
+	* + .form-item {
+		@include AU-space( margin-top, 0.5unit );
+	}
+}
+
+
+// Hide the definded palettes by default, show them when toggled
+.toggle-color-input {
+	padding: 0;
+	border: 0;
+}
+
+.palette {
+	display: none;
+}
+
+.show--palette {
+	.custom-color {
+		display: none;
+	}
+
+	.palette {
+		display: block;
+	}
 }

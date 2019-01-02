@@ -1640,17 +1640,31 @@ template { display: none; }
 
 .sronly { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
 
+.au-btn__list { list-style: none; padding: 0; margin: 0; }
+
+* + .au-btn__list { margin-top: 32px; margin-top: 2rem; }
+
+.au-btn__list > li + li { margin-top: 16px; margin-top: 1rem; }
+
+.au-btn__list--inline > li { display: inline-block; }
+
+.au-btn__list--inline > li + li { margin-top: 0; margin-left: 16px; margin-left: 1rem; }
+
 .au-fieldset { border: none; padding: 0; margin: 0; width: 100%; }
 
 .au-fieldset legend { font-weight: bold; }
 
 .au-fieldset + .au-fieldset { margin-top: 32px; margin-top: 2rem; }
 
-.header__bar { padding: 16px 0; padding: 1rem 0; background-color: #1D1D1D; }
+.header__bar { padding: 0 16px; padding: 0 1rem; background-color: #1D1D1D; }
 
-.header__bar a { color: #45c2f0; display: block; float: left; }
+.header__bar .au-direction-link { padding: 8px 0; padding: 0.5rem 0; margin: 8px 0; margin: 0.5rem 0; color: #45c2f0; }
 
-.header__bar a:hover { text-decoration: none; color: #fff; }
+.header__bar .au-direction-link:hover { text-decoration: none; color: #fff; }
+
+.header__bar .au-btn__list { margin: 8px 0; margin: 0.5rem 0; float: right; }
+
+.header__bar .au-btn { font-size: 14px; font-size: 0.875rem; line-height: 1.42857; }
 
 .js-filter--tritanopia { filter: url("#tritanopia"); }
 
@@ -1658,10 +1672,30 @@ template { display: none; }
 
 .js-filter--deuteranopia { filter: url("#deuteranopia"); }
 
-#chameleon { width: 100%; }
+#chameleon { top: 56px; top: 3.5rem; right: 420px; right: 26.25rem; left: 0; bottom: 0; position: absolute; }
 
-#chameleon iframe { margin-right: 320px; margin-right: 20rem; }
+#chameleon iframe { border: 0; display: block; width: 100%; height: 100%; }
 
-.customise { padding: 16px; padding: 1rem; width: 320px; width: 20rem; }
+.customise { top: 56px; top: 3.5rem; width: 384px; width: 24rem; padding: 16px; padding: 1rem; border-left: 4px solid gray; border-left: 0.25rem solid gray; right: 0; bottom: 0; overflow-x: auto; position: absolute; }
+
+.customise__form { margin-top: 16px; margin-top: 1rem; }
+
+.customise__form .fieldset__description { margin-top: 4px; margin-top: 0.25rem; margin-bottom: 16px; margin-bottom: 1rem; }
+
+.customise__form .au-fieldset { margin-top: 16px; margin-top: 1rem; border-top: 1px solid gray; }
+
+.customise__form .au-fieldset legend { padding-right: 10px; }
+
+.custom-color * + .form-item { margin-top: 8px; margin-top: 0.5rem; }
+
+.palette * + .form-item, .a11y * + .form-item { margin-top: 8px; margin-top: 0.5rem; }
+
+.toggle-color-input { padding: 0; border: 0; }
+
+.palette { display: none; }
+
+.show--palette .custom-color { display: none; }
+
+.show--palette .palette { display: block; }
 
 /*# sourceMappingURL=customise.css.map */

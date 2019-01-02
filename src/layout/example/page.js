@@ -1,3 +1,5 @@
+import AUdirectionLink from '../../_uikit/layout/direction-links';
+
 import React from 'react';
 
 import GetModule             from '../../helper/getModule';
@@ -129,15 +131,10 @@ const Example = ({
 			{
 				livedemo
 					? <header className="header__bar">
-							<div className="container-fluid">
-								<div className="row">
-									<div className="col-md-12">
-										<a className="au-direction-link au-direction-link--left" href={ _relativeURL( `/components/${ module }`, _ID ) }>
-											View { componentTitle } overview
-										</a>
-									</div>
-								</div>
-							</div>
+							<AUdirectionLink
+								link={ _relativeURL( `/components/${ module }`, _ID ) }
+								direction="left"
+								text={`View ${ componentTitle } overview`} />
 						</header>
 					: ''
 			}

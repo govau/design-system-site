@@ -1,4 +1,5 @@
 import AUtextInput from '../../_uikit/layout/text-inputs';
+import AUdirectionLink from '../../_uikit/layout/direction-links';
 import { AUradio } from '../../_uikit/layout/control-input';
 import AUbutton from '../../_uikit/layout/buttons';
 
@@ -93,16 +94,18 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 			</defs>
 		</svg>;
 
-	const colorOptions = {
+	const colorOptions = [{
 		text: "Text",
 		action: "Action",
 		focus: "Focus",
 		background: "Background",
+	},
+	{
 		textDark: "Dark text",
 		actionDark: "Dark action",
 		focusDark: "Dark focus",
 		backgroundDark: "Dark background"
-	};
+	}];
 
 	const palette = {
 		default: "Default",
@@ -117,13 +120,18 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 		tritanopia: "Tritanopia",
 	};
 
-	const CustomColorInputs = Object.entries( colorOptions )
-		.map( ([ colorID, colorName ], i ) => (
-			<div className="form-item" key={ i }>
-				<label htmlFor={ colorID }>{ colorName }</label>
-				<AUtextInput id={ colorID } name={ colorID } block></AUtextInput>
-			</div>
-		 ) );
+	const CustomColorInputs = colorOptions.map( ( palette, i ) => (
+		<div className="col-xs-6" key={ i }>
+			{
+				Object.entries( palette ).map( ([ colorID, colorName ], i ) => (
+					<div className="form-item" key={ i }>
+						<label htmlFor={ colorID }>{ colorName }</label>
+						<AUtextInput id={ colorID } name={ colorID } block></AUtextInput>
+					</div>
+				) )
+			}
+		</div>
+	) );
 
 	const ColorBlindnessRadios = Object.entries( colorBlindnesses )
 		.map( ([ colorBlindnessID, colorBlindnessName ], i ) => (
@@ -153,42 +161,41 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 		<body className="au-grid live-demo customise-page">
 			{ a11yFilter }
 			<header className="header__bar">
-				<div className="container-fluid">
-					<div className="row">
-						<div className="col-md-12">
-							<a
-								className="au-direction-link au-direction-link--left"
-								href={`/templates/${ templateID }`}
-							>Go back to { template.name } template</a>
-						</div>
-					</div>
-				</div>
+				<AUdirectionLink
+					text={ `View ${ template.name } template overview` }
+					link={ `/templates/${ templateID }` }
+					direction="left" />
+				<ul className="au-btn__list au-btn__list--inline">
+					<li><AUbutton dark id="btn-share" as="secondary">Share</AUbutton></li>
+					<li><AUbutton dark link={ "/" + _ID } as="tertiary">Reset</AUbutton></li>
+				</ul>
 			</header>
 			<main>
 				<div id="chameleon">
 					<iframe src={ iframeSrc } />
 				</div>
 				<div className="customise au-body">
-					<h1>Customise</h1>
-					<form>
+					<h1 className="au-display-lg">Customise</h1>
+					<form className="customise__form">
 						<fieldset className="au-fieldset custom-color">
 							<legend className="au-display-4">Custom palette</legend>
-							<p>Choose the colours for the template</p>
-							{ CustomColorInputs }
+							<p className="fieldset__description">Customise the colours for the template, or <AUbutton className="toggle-color-input" as="tertiary">choose from defined palettes</AUbutton></p>
+							<div className="row">
+								{ CustomColorInputs }
+							</div>
 						</fieldset>
 						<fieldset className="au-fieldset palette">
 							<legend className="au-display-4">Select a palette</legend>
-							<p>Choose a palette from an existing colour pairing</p>
+							<p className="fieldset__description">Choose a palette from an existing colour pairing, or <AUbutton className="toggle-color-input" as="tertiary">customise the colours</AUbutton>.</p>
 							{ PaletteRadios }
 						</fieldset>
 						<fieldset className="au-fieldset a11y">
 							<legend className="au-display-4">Colour blindness</legend>
-							<p>View the template with different types of colour blindness</p>
+							<p className="fieldset__description">View the template with different types of colour blindness</p>
 							{ ColorBlindnessRadios }
 						</fieldset>
-						<AUbutton type="submit">Change colours</AUbutton>
-						<AUbutton id="btn-share" as="secondary">Share</AUbutton>
-						<AUbutton link={ "/" + _ID } as="tertiary">Reset</AUbutton>
+						{/* Need to show this on older browsers */}
+						{/* <AUbutton type="submit">Change colours</AUbutton> */}
 					</form>
 				</div>
 			</main>
