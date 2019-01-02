@@ -1,4 +1,3 @@
-var iframeContainer = document.getElementById( 'chameleon' );
 var iframe = document.querySelector( '#chameleon iframe' );
 
 var a11yInputs = document.querySelectorAll( '.a11y input' );
@@ -45,7 +44,6 @@ var paletteStyles = {
  */
 function QueryToObject( queryString ) {
 	var paramObject = {};
-
 	var splitQuery = queryString.substr( 1 ).split( '&' )
 
 	for ( var i = 0; i < splitQuery.length; i++ ) {
@@ -151,18 +149,16 @@ function ApplyPalette( paletteId ){
 
 
 /**
- * Push the updated color state to DOM with title 'Chameleon',
- * set URL to ColorStateToString()
+ * PushValuesToURL - Push the value of inputs to the URL
+ *
+ * @param {array}  inputs - The inputs to push the state from
  */
-function UpdateState() {
-	var formData = GetTextInputValues( customInputs );
-	var colorStateURL = ObjectToQueryString( formData );
+function PushValuesToURL( inputs ) {
+	var inputsState = GetTextInputValues( inputs );
+	var queryString = ObjectToQueryString( inputsState );
 
 	// Replace DOM state with current color object
-	window.history.pushState( formData , "Chameleon", colorStateURL );
-
-	// Set iframe src to mirror current DOM state
-	ApplyColors( window.location.search );
+	window.history.pushState( inputsState , "Chameleon", queryString );
 }
 
 
@@ -196,20 +192,18 @@ for( var i = 0; i < paletteInputs.length; i++ ) {
 var timeout;
 for( var i = 0; i < customInputs.length; i++ ) {
 	AddEvent( customInputs[ i ], "keyup", function( event, $this ) {
-		// Add the loading class
-		if( !HasClass( iframeContainer, 'chameleon--loading' ) ) {
-			AddClass( iframeContainer, 'chameleon--loading' );
-		}
-
 		if( timeout ) {
 			clearTimeout( timeout );
 			timeout = null;
 		}
 
 		timeout = setTimeout( function(){
-			UpdateState( $this );
-			RemoveClass( iframeContainer, 'chameleon--loading' );
-		}, 500 );
+			// Update the window.location.search to use values from the form
+			PushValuesToURL( customInputs );
+
+			// Set iframe src to mirror current DOM state
+			ApplyColors( window.location.search );
+		}, 400 );
 	});
 }
 
