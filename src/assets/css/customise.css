@@ -1760,10 +1760,6 @@ a.au-card:hover .au-card__title, a.au-card:hover .au-card__link { text-decoratio
 
 .customise__form .au-btn__list .au-btn { padding: 8px 16px; padding: 0.5rem 1rem; font-size: 14px; font-size: 0.875rem; line-height: 1.42857; }
 
-.customise__form .au-btn__list .customise-btn { display: none; }
-
-.customise__form .au-btn__list .ie9 .customise-btn, .customise__form .au-btn__list .lt-ie9 .customise-btn { display: inline-block; }
-
 .customise__form .au-btn__list li { margin: 0 8px 0 0; margin: 0 0.5rem 0 0; }
 
 .customise__form .au-btn__list li:last-of-type { margin: 0; }
@@ -1784,6 +1780,8 @@ a.au-card:hover .au-card__title, a.au-card:hover .au-card__link { text-decoratio
 
 .show--palette .palette { display: block; }
 
-.ie9 .a11y, .lt-ie9 .a11y { display: none; }
+.a11y { display: none; }
+
+@supports (filter: url("filters.svg#deuteranopia")) { .a11y { display: block; } }
 
 /*# sourceMappingURL=customise.css.map */
