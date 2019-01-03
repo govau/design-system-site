@@ -51,3 +51,5 @@ body {
   padding: 0;
 }
 ```
+
+> Once you have entered your colour preferences, make sure to convert the SASS file into CSS. We have a guide on how to set up a development environment which covers [how to compile SASS files into CSS files](/get-started/development-environment), for use on your project.

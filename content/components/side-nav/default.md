@@ -13,15 +13,15 @@ code:
               https://www.paulirish.com/2009/avoiding-the-fouc-v3/
       -->
       <aside class="au-side-nav au-accordion" aria-label="side navigation">
-        <a 
-          href="#nav-default" class="au-side-nav__toggle au-accordion__title au-accordion--closed" 
+        <button 
+          class="au-side-nav__toggle au-accordion__title au-accordion--closed" 
           aria-controls="nav-default"
           aria-expanded="false" 
           aria-selected="false" 
           onclick="return AU.accordion.Toggle( this )"
         >
           In this section
-        </a>
+        </button>
         <div id="nav-default" class="au-side-nav__content au-accordion--closed au-accordion__body">
           <h2 class="au-sidenav__title">
             <a href="#">Lodging your tax return</a>
@@ -39,7 +39,7 @@ code:
               <ul class="au-link-list">
                 <li><a href="#">Record keeping</a>
                   <ul class="au-link-list">
-                    <li class="active"><a href="#">Keeping your tax records</a></li>
+                    <li class="active"><span>Keeping your tax records</span></li>
                     <li><a href="#">Incorrect amounts</a></li>
                   </ul>
                 </li>
