@@ -19,9 +19,6 @@ const TemplatesReleased = ({ _body, _relativeURL, _parseYaml, _parseMD }) => {
 	// Create a card for each released template
 	const cards = releasedTemplates.map( templateID => (
 		<Fragment>
-			<a href={ templateID } className="template-card__image au-card au-card--shadow">
-				<img alt={ `${ templateID } page template` } src={ _relativeURL( `/assets/img/templates/${ templateID }.jpg` ) } />
-			</a>
 			<div className="template-card__content">
 				<h2 className="au-display-xl">{ templates[ templateID ].name }</h2>
 				{ _parseMD( templates[ templateID ].description ) }
@@ -30,6 +27,11 @@ const TemplatesReleased = ({ _body, _relativeURL, _parseYaml, _parseMD }) => {
 					<li><AUbutton link={ `${ templateID }/customise` } as='secondary'>Customise</AUbutton></li>
 				</ul>
 			</div>
+			<a href={ templateID } className="template-card__image au-card au-card--shadow browser-bar">
+				<img
+					alt={ `${ templateID } page template` }
+					src={ _relativeURL( `/assets/img/templates/${ templateID }.jpg` ) } />
+			</a>
 		</Fragment>
 	) );
 
