@@ -126,7 +126,7 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 				Object.entries( palette ).map( ([ colorID, colorName ], i ) => (
 					<div className="form-item" key={ i }>
 						<label htmlFor={ colorID }>{ colorName }</label>
-						<AUtextInput id={ colorID } name={ colorID } block></AUtextInput>
+						<AUtextInput aria-controls="chameleon" id={ colorID } name={ colorID } block></AUtextInput>
 					</div>
 				) )
 			}
@@ -137,6 +137,7 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 		.map( ([ colorBlindnessID, colorBlindnessName ], i ) => (
 			<div className="form-item" key={ i }>
 				<AUradio
+					aria-controls="chameleon"
 					label={ colorBlindnessName }
 					name="a11y"
 					id={ colorBlindnessID }
@@ -148,6 +149,7 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 		.map( ([ colorID, colorName ], i ) => (
 			<div className="form-item" key={ i }>
 				<AUradio
+					aria-controls="chameleon"
 					label={ colorName }
 					name="palette"
 					id={ colorID }
@@ -167,7 +169,7 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 					direction="left" />
 			</header>
 			<main>
-				<div id="chameleon">
+				<div id="chameleon" role="region">
 					<div className="au-card au-card--shadow">
 						<iframe src={ iframeSrc } />
 					</div>
