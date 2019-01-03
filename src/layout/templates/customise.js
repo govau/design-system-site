@@ -177,14 +177,14 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 					<form className="customise__form">
 						<fieldset className="au-fieldset custom-color">
 							<legend className="au-display-4">Customise the colors</legend>
-							<p className="fieldset__description">Customise the colours for the template, or <AUbutton className="toggle-color-input" as="tertiary">choose from palettes</AUbutton>.</p>
+							<p className="fieldset__description">Customise the colours or <AUbutton className="toggle-color-input" as="tertiary">choose a palette</AUbutton>.</p>
 							<div className="row">
 								{ CustomColorInputs }
 							</div>
 						</fieldset>
 						<fieldset className="au-fieldset palette">
 							<legend className="au-display-4">Select a palette</legend>
-							<p className="fieldset__description">Choose a palette from an existing colour pairing, or <AUbutton className="toggle-color-input" as="tertiary">customise the colours</AUbutton>.</p>
+							<p className="fieldset__description">Choose a palette or <AUbutton className="toggle-color-input" as="tertiary">customise the colours</AUbutton>.</p>
 							{ PaletteRadios }
 						</fieldset>
 						<fieldset className="au-fieldset a11y">

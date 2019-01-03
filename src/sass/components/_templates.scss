@@ -15,12 +15,13 @@
 .template-card {
 	@include AU-clearfix();
 	@include AU-space( max-width, 20unit );
-	@include AU-space( padding, 1.5unit );
+	@include AU-space( padding, 1unit );
 	border-radius: $AU-border-radius;
 	background: $AU-color-background-shade;
 	margin: 0 auto;
 
 	@include AU-media( xs ) {
+		@include AU-space( padding, 1.5unit );
 		@include AU-space( max-width, 45unit );
 		margin: 0;
 	}
@@ -38,7 +39,11 @@
 	}
 
 	.au-btn__list {
-		@include AU-space( margin-top, 3unit );
+		@include AU-space( margin-top, 1unit );
+
+		@include AU-media( xs ){
+			@include AU-space( margin-top, 2unit );
+		}
 	}
 }
 
@@ -47,7 +52,7 @@
 .template-card .template-card__image {
 	@include AU-space( max-width, 24unit );
 	@include AU-space( max-height, 18unit );
-	@include AU-space( margin-top, 1unit );
+	@include AU-space( margin-top, 2unit );
 	width: auto;
 
 	@include AU-media( xs ){
