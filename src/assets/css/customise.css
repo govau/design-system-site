@@ -1640,6 +1640,66 @@ template { display: none; }
 
 .sronly { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
 
+.au-card { display: block; width: 100%; }
+
+.au-card img, .au-card svg { display: block; }
+
+.au-card * + hr, .au-card * + p, .au-card * + .au-card__title, .au-card * + .au-card__cta { margin-top: 16px; margin-top: 1rem; }
+
+.au-card hr { margin-bottom: 0; }
+
+.au-card .au-card__cta, .au-card .au-card__image { display: block; }
+
+.au-card.au-card--shadow { border-radius: 4px; overflow: hidden; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); background: #ffffff; }
+
+.au-card.au-card--shadow .au-card__inner { padding: 16px; padding: 1rem; }
+
+.lt-ie9 .au-card.au-card--shadow { border: solid 1px gray; }
+
+.au-card.au-card--shadow .au-card__fullwidth, .au-card.au-card--shadow .au-card__bg { margin-left: -16px; margin-left: -1rem; margin-right: -16px; margin-right: -1rem; }
+
+.au-card.au-card--shadow .au-card__fullwidth:first-child, .au-card.au-card--shadow .au-card__bg:first-child { margin-top: -16px; margin-top: -1rem; }
+
+.au-card.au-card--shadow .au-card__fullwidth:last-child, .au-card.au-card--shadow .au-card__bg:last-child { margin-bottom: -16px; margin-bottom: -1rem; }
+
+.au-card.au-card--centered { text-align: center; }
+
+.au-card.au-card--centered img, .au-card.au-card--centered svg { margin: 0 auto; }
+
+.au-card .au-card__bg { padding: 16px; padding: 1rem; background-color: #ebebeb; }
+
+.au-card .au-card__bg:not(:first-child) { margin-top: 16px; margin-top: 1rem; }
+
+a.au-card { color: #313131; }
+
+.au-body a.au-card { text-decoration: none; }
+
+a.au-card.au-card--shadow:focus { border-radius: 0; }
+
+a.au-card.au-card--shadow:hover { box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); }
+
+a.au-card .au-card__title, a.au-card .au-card__link, a.au-card .au-card__cta { color: #00698f; text-decoration: underline; text-decoration-skip: ink; }
+
+a.au-card:hover .au-card__title, a.au-card:hover .au-card__link { text-decoration: none; color: #313131; }
+
+.au-card-list { list-style: none; padding: 0; }
+
+.au-card-list:before, .au-card-list:after { content: " "; display: table; }
+
+.au-card-list:after { clear: both; }
+
+.au-card-list:before { display: none; }
+
+.au-card-list li { list-style: none; padding: 0; }
+
+.au-body .au-card-list li { margin-top: 24px; margin-top: 1.5rem; }
+
+.au-card-list.au-card-list--matchheight { display: flex; flex-wrap: wrap; }
+
+.au-card-list.au-card-list--matchheight li { display: flex; }
+
+.au-card-list.au-card-list--matchheight .au-card { display: block; flex-direction: column; }
+
 .au-btn__list { list-style: none; padding: 0; margin: 0; }
 
 * + .au-btn__list { margin-top: 32px; margin-top: 2rem; }
@@ -1662,37 +1722,61 @@ template { display: none; }
 
 .header__bar .au-direction-link:hover { text-decoration: none; color: #fff; }
 
-.header__bar .au-btn__list { margin: 8px 0; margin: 0.5rem 0; float: right; }
-
-.header__bar .au-btn { font-size: 14px; font-size: 0.875rem; line-height: 1.42857; }
-
 .js-filter--tritanopia { filter: url("#tritanopia"); }
 
 .js-filter--grayscale { filter: grayscale(100%); }
 
 .js-filter--deuteranopia { filter: url("#deuteranopia"); }
 
-#chameleon { top: 56px; top: 3.5rem; right: 404px; right: 25.25rem; left: 0; bottom: 0; position: absolute; }
+.customise-page { background-color: #ebebeb; }
+
+#chameleon { margin: 8px; margin: 0.5rem; top: 56px; top: 3.5rem; bottom: 240px; bottom: 15rem; position: absolute; left: 0; right: 0; }
+
+@media (min-width: 768px) { #chameleon { left: 328px; left: 20.5rem; bottom: 0; } }
 
 #chameleon iframe { border: 0; display: block; width: 100%; height: 100%; }
 
-.customise { top: 56px; top: 3.5rem; width: 352px; width: 22rem; padding: 12px 24px; padding: 0.75rem 1.5rem; border-left: 4px solid gray; border-left: 0.25rem solid gray; right: 0; bottom: 0; overflow-x: auto; position: absolute; }
+#chameleon .au-card.au-card--shadow { overflow: auto; width: 100%; height: 100%; }
 
-.customise__form { margin-top: 24px; margin-top: 1.5rem; }
+.customise { padding: 12px 16px; padding: 0.75rem 1rem; margin: 8px; margin: 0.5rem; height: 208px; height: 13rem; position: absolute; bottom: 0; left: 0; right: 0; width: auto; }
 
-.customise__form .fieldset__description { margin-top: 4px; margin-top: 0.25rem; margin-bottom: 16px; margin-bottom: 1rem; }
+@media (min-width: 768px) { .customise { top: 56px; top: 3.5rem; width: 288px; width: 18rem; height: auto; right: auto; } }
+
+.customise.au-card.au-card--shadow { overflow: auto; }
+
+.customise__form { margin-top: 20px; margin-top: 1.25rem; }
+
+.customise__form .fieldset__description { font-size: 14px; font-size: 0.875rem; line-height: 1.42857; margin-top: 4px; margin-top: 0.25rem; margin-bottom: 16px; margin-bottom: 1rem; }
+
+.customise__form .fieldset__description .au-btn { font-size: inherit; padding: 0; border: 0; vertical-align: baseline; display: inline; }
 
 .customise__form .au-fieldset { border-top: 1px solid gray; }
 
-.customise__form .au-fieldset legend { padding-right: 10px; }
+.customise__form .au-fieldset legend { padding-right: 12px; padding-right: 0.75rem; }
 
-.customise__form .au-fieldset + .au-fieldset { margin-top: 24px; margin-top: 1.5rem; }
+.customise__form .au-fieldset + .au-fieldset { margin-top: 20px; margin-top: 1.25rem; }
+
+.customise__form .au-btn__list { margin-top: 16px; margin-top: 1rem; padding-top: 16px; padding-top: 1rem; border-top: solid 1px gray; }
+
+.customise__form .au-btn__list .au-btn { padding: 8px 16px; padding: 0.5rem 1rem; font-size: 14px; font-size: 0.875rem; line-height: 1.42857; }
+
+.customise__form .au-btn__list .customise-btn { display: none; }
+
+.customise__form .au-btn__list .ie9 .customise-btn, .customise__form .au-btn__list .lt-ie9 .customise-btn { display: inline-block; }
+
+.customise__form .au-btn__list li { margin: 0 8px 0 0; margin: 0 0.5rem 0 0; }
+
+.customise__form .au-btn__list li:last-of-type { margin: 0; }
+
+.custom-color .row { margin: 0 -4px; margin: 0 -0.25rem; }
+
+.custom-color .col-xs-6 { padding: 0 4px; padding: 0 0.25rem; }
+
+.custom-color .au-text-input { padding: 4px 8px; padding: 0.25rem 0.5rem; }
 
 .custom-color * + .form-item { margin-top: 8px; margin-top: 0.5rem; }
 
 .palette * + .form-item, .a11y * + .form-item { margin-top: 8px; margin-top: 0.5rem; }
-
-.toggle-color-input { padding: 0; border: 0; vertical-align: baseline; display: inline; }
 
 .palette { display: none; }
 
@@ -1701,9 +1785,5 @@ template { display: none; }
 .show--palette .palette { display: block; }
 
 .ie9 .a11y, .lt-ie9 .a11y { display: none; }
-
-.customise--submit { margin-top: 16px; margin-top: 1rem; display: none; }
-
-.ie9 .customise--submit, .lt-ie9 .customise--submit { display: block; }
 
 /*# sourceMappingURL=customise.css.map */

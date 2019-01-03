@@ -17,7 +17,7 @@
 	@include AU-space( max-width, 20unit );
 	@include AU-space( padding, 1.5unit );
 	border-radius: $AU-border-radius;
-	background: $AU-color-background-alt;
+	background: $AU-color-background-shade;
 	margin: 0 auto;
 
 	@include AU-media( xs ) {

@@ -26,7 +26,7 @@ var paletteStyles = {
 	defaultPalette: colors,
 	green: {
 		action:         '#026540',
-		focus:          '#AC1523',
+		// focus:          '#AC1523',
 		actionDark:     '#D7EA6A',
 		focusDark:      '#D2E771',
 		backgroundDark: '#026540',
@@ -34,7 +34,7 @@ var paletteStyles = {
 	blue: {
 		action:         '#0D979B',
 		actionDark:     '#F2D814',
-		focusDark:      '#4569A0',
+		// focusDark:      '#4569A0',
 		backgroundDark: '#002341',
 	}
 };

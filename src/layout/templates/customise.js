@@ -97,13 +97,13 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 	const colorOptions = [{
 		text: "Text",
 		action: "Action",
-		focus: "Focus",
+		// focus: "Focus",
 		background: "Background",
 	},
 	{
 		textDark: "Dark text",
 		actionDark: "Dark action",
-		focusDark: "Dark focus",
+		// focusDark: "Dark focus",
 		backgroundDark: "Dark background"
 	}];
 
@@ -165,21 +165,19 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 					text={ `View ${ template.name } template overview` }
 					link={ `/templates/${ templateID }` }
 					direction="left" />
-				<ul className="au-btn__list au-btn__list--inline">
-					<li><AUbutton dark id="btn-share" as="secondary">Share</AUbutton></li>
-					<li><AUbutton dark link={ "/" + _ID } as="tertiary">Reset</AUbutton></li>
-				</ul>
 			</header>
 			<main>
 				<div id="chameleon">
-					<iframe src={ iframeSrc } />
+					<div className="au-card au-card--shadow">
+						<iframe src={ iframeSrc } />
+					</div>
 				</div>
-				<div className="customise au-body">
-					<h1 className="au-display-lg">Customise</h1>
+				<div className="customise au-body au-card au-card--shadow">
+					<h1 className="au-display-lg">Customise template</h1>
 					<form className="customise__form">
 						<fieldset className="au-fieldset custom-color">
-							<legend className="au-display-4">Custom palette</legend>
-							<p className="fieldset__description">Customise the colours for the template, or <AUbutton className="toggle-color-input" as="tertiary">choose from defined palettes</AUbutton>.</p>
+							<legend className="au-display-4">Customise the colors</legend>
+							<p className="fieldset__description">Customise the colours for the template, or <AUbutton className="toggle-color-input" as="tertiary">choose from palettes</AUbutton>.</p>
 							<div className="row">
 								{ CustomColorInputs }
 							</div>
@@ -195,7 +193,11 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 							{ ColorBlindnessRadios }
 						</fieldset>
 						{/* Need to show this on older browsers */}
-						<AUbutton className="customise--submit" type="submit">Customise template</AUbutton>
+						<ul className="au-btn__list au-btn__list--inline">
+							<li><AUbutton type="submit">Customise</AUbutton></li>
+							<li><AUbutton id="btn-share" as="secondary">Share</AUbutton></li>
+							<li><AUbutton link={ "/" + _ID } as="tertiary">Reset</AUbutton></li>
+						</ul>
 					</form>
 				</div>
 			</main>

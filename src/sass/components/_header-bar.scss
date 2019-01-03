@@ -13,13 +13,4 @@
 			color: #fff;
 		}
 	}
-
-	.au-btn__list {
-		@include AU-space( margin, 0.5unit 0 );
-		float: right;
-	}
-
-	.au-btn {
-		@include AU-fontgrid( xs );
-	}
 }
