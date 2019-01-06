@@ -182,7 +182,7 @@ AddEvent( shareButton, "click", function( event, $this ) {
 });
 
 
-// When the share button is clicked copy the current URL
+// Hide and show the customise color/palette when the button is pressed
 for( var i = 0; i < toggleColorInputButtons.length; i++ ){
 	AddEvent( toggleColorInputButtons[ i ], "click", function( event, $this ) {
 		if( HasClass( form, 'show--palette ' )){
