@@ -7,7 +7,7 @@ var customInputs = document.querySelectorAll( '.custom-color input' );
 
 var toggleColorInputButtons = document.querySelectorAll( '.toggle-color-input' );
 var shareButton = document.getElementById( 'btn-share' );
-var customiseButton = document.getElementById( 'btn-customise' );
+var buttonList = document.querySelector( '.customise__form .au-btn__list' );
 
 var templateName = window.location.pathname.split( '/' )[ 2 ];
 
@@ -224,9 +224,6 @@ for( var i = 0; i < paletteInputs.length; i++ ) {
 
 // Magical URL update as typing
 if( window.history.pushState ) {
-	// remove customise button
-	customiseButton.style.display = 'none';
-
 	// Add event handler to handle key press on form inputs.
 	var timeout;
 	for( var i = 0; i < customInputs.length; i++ ) {
@@ -246,6 +243,10 @@ if( window.history.pushState ) {
 			}, 400 );
 		});
 	}
+}
+// Show customise button when push state does not work
+else {
+	RemoveClass( buttonList, 'customise-btn--hide');
 }
 
 

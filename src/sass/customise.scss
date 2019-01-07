@@ -117,6 +117,11 @@
 			@include AU-fontgrid( xs );
 		}
 
+		// Hide the customise button if automatic url updating works
+		&.customise-btn--hide li:first-of-type {
+			display: none;
+		}
+
 		// Can't do spacing with lobotomised owl as the submit button is hidden
 		li {
 			@include AU-space( margin, 0 0.5unit 0 0 );

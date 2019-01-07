@@ -190,9 +190,9 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 							{ ColorBlindnessRadios }
 						</fieldset>
 						{/* Need to show this on older browsers */}
-						<ul className="au-btn__list au-btn__list--inline">
-							<li><AUbutton type="submit" id="btn-customise">Customise</AUbutton></li>
-							<li><AUbutton id="btn-share" className="btn-copy au-btn au-btn--secondary icon icon--copy">Copy Link</AUbutton></li>
+						<ul className="au-btn__list au-btn__list--inline customise-btn--hide">
+							<li><AUbutton type="submit">Customise</AUbutton></li>
+							<li><AUbutton id="btn-share" as="secondary" className="btn-copy icon icon--copy">Copy link</AUbutton></li>
 							<li><AUbutton link={ "/" + _ID } as="tertiary">Reset</AUbutton></li>
 						</ul>
 					</form>
