@@ -9,8 +9,9 @@ function HasClass( element, elementClass ) {
 
 function RemoveClass( element, elementClass ) {
 	if( HasClass( element, elementClass ) ) {
+		// This adds a space every time a class is removed, we should fix this
 		var reg = new RegExp( "(\\s|^)" + elementClass + "(\\s|$)" );
-		element.className = element.className.replace( reg, "" );
+		element.className = element.className.replace( reg, " " );
 	}
 }
 

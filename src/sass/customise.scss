@@ -16,6 +16,8 @@
 @import 'components/fieldset';
 @import 'components/header-bar';
 @import 'components/svg-filters';
+@import 'components/icons';
+
 
 .customise-page {
 	background-color: $AU-color-background-alt;
@@ -113,6 +115,11 @@
 		.au-btn {
 			@include AU-space( padding, 0.5unit 1unit );
 			@include AU-fontgrid( xs );
+		}
+
+		// Hide the customise button if automatic url updating works
+		&.customise-btn--hide li:first-of-type {
+			display: none;
 		}
 
 		// Can't do spacing with lobotomised owl as the submit button is hidden

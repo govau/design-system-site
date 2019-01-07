@@ -7,6 +7,7 @@ var customInputs = document.querySelectorAll( '.custom-color input' );
 
 var toggleColorInputButtons = document.querySelectorAll( '.toggle-color-input' );
 var shareButton = document.getElementById( 'btn-share' );
+var buttonList = document.querySelector( '.customise__form .au-btn__list' );
 
 var templateName = window.location.pathname.split( '/' )[ 2 ];
 
@@ -179,6 +180,16 @@ function PushValuesToURL( inputs ) {
 // When the share button is clicked copy the current URL
 AddEvent( shareButton, "click", function( event, $this ) {
 	CopyString( window.location.href );
+	var oldLabel = $this.innerHTML;
+	$this.innerHTML = 'Copied';
+	RemoveClass( $this, 'icon--copy' );
+	AddClass( $this, 'icon--success' );
+
+	setTimeout( function() {
+		$this.innerHTML = oldLabel;
+		RemoveClass( $this, 'icon--success' );
+		AddClass( $this, 'icon--copy' );
+	}, 1000 );
 });
 
 
@@ -232,6 +243,10 @@ if( window.history.pushState ) {
 			}, 400 );
 		});
 	}
+}
+// Show customise button when push state does not work
+else {
+	RemoveClass( buttonList, 'customise-btn--hide');
 }
 
 
