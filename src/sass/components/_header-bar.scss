@@ -1,0 +1,16 @@
+// Live demo header bar
+.header__bar {
+	@include AU-space( padding, 0 1unit );
+	background-color: #1D1D1D;
+
+	.au-direction-link {
+		@include AU-space( padding, 0.5unit 0 );
+		@include AU-space( margin, 0.5unit 0 );
+		color: #45c2f0; // Hard coded as the Uikit colours are not overridden
+
+		&:hover {
+			text-decoration: none;
+			color: #fff;
+		}
+	}
+}

@@ -1,0 +1,106 @@
+// List of released templates
+.templates__released {
+	@include AU-space( margin-top, 2unit );
+	list-style: none;
+	padding: 0;
+
+	& > li {
+		@include AU-space( margin-top, 2unit );
+		width: auto;
+		list-style: none;
+	}
+}
+
+// Individual template cards on the released page
+.template-card {
+	@include AU-clearfix();
+	@include AU-space( max-width, 20unit );
+	@include AU-space( padding, 1unit );
+	border-radius: $AU-border-radius;
+	background: $AU-color-background-shade;
+	margin: 0 auto;
+
+	@include AU-media( xs ) {
+		@include AU-space( padding, 1.5unit );
+		@include AU-space( max-width, 45unit );
+		margin: 0;
+	}
+}
+
+
+// The content inside the card
+.template-card .template-card__content {
+	@include AU-space( max-width, 18unit );
+
+	@include AU-media( xs ){
+		@include AU-space( margin-right, -18unit );
+		display: block;
+		float: left;
+	}
+
+	.au-btn__list {
+		@include AU-space( margin-top, 1unit );
+
+		@include AU-media( xs ){
+			@include AU-space( margin-top, 2unit );
+		}
+	}
+}
+
+
+// The image inside the card
+.template-card .template-card__image {
+	@include AU-space( max-width, 24unit );
+	@include AU-space( max-height, 18unit );
+	@include AU-space( margin-top, 2unit );
+	width: auto;
+
+	@include AU-media( xs ){
+		@include AU-space( margin-left, 19unit );
+		margin-top: 0;
+		float: right;
+	}
+}
+
+
+
+// The browser styles around a template image
+.browser-bar:before {
+	@include AU-space( height, 0.5unit );
+	@include AU-space( padding, 0.25unit 0.5unit );
+	@include AU-space( font-size, 0.5unit );
+	line-height: 1;
+	content: "● ● ●";
+	display: block;
+	color: $AU-color-foreground-muted;
+	background: $AU-color-foreground-text;
+}
+
+
+// Individual template pages
+.template-demo {
+	* + & {
+		@include AU-space( margin-top, 2unit );
+	}
+
+	.col-sm-6 + .col-sm-6 {
+		@include AU-space( margin-top, 1.5unit );
+
+		@include AU-media( sm ) {
+			margin-top: 0;
+		}
+	}
+}
+
+.template-demo .template-card__image {
+	@include AU-space( max-width, 25unit );
+	margin: 0 auto;
+
+	@include AU-media( sm ) {
+		margin: 0;
+	}
+}
+
+.template-demo .template-card__image {
+	@include AU-space( max-width, 25unit );
+}

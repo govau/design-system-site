@@ -53,7 +53,7 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 						<button type="reset" className="js-furnace-clear furnace__clear au-btn au-btn--tertiary icon icon--right icon--close">Clear selections</button>
 					</h3>
 
-					<fieldset className="fieldset--reset">
+					<fieldset className="au-fieldset">
 						<legend className="sronly">Components</legend>
 
 						<ul className="furnace__component-list">
@@ -119,7 +119,7 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 
 					<div className="furnace__buildbox">
 						<div className="furnace__buildbox__wrapper">
-						<fieldset className="fieldset--reset">
+						<fieldset className="au-fieldset">
 							<legend>Stylesheets</legend>
 
 							<AUradio label="CSS minified" block name="styleOutput" value="css" defaultChecked />
@@ -127,7 +127,7 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 							<AUradio label="SASS modules" block name="styleOutput" value="sassModules" />
 						</fieldset>
 
-						<fieldset className="fieldset--reset">
+						<fieldset className="au-fieldset">
 							<legend>JavaScript</legend>
 
 							<AUradio label="JavaScript minified" block name="jsOutput" value="js" defaultChecked />

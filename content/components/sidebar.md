@@ -1,3 +1,3 @@
 ---
-layout: component/navigation-accordion
+layout: component/component-sidebar
 ---

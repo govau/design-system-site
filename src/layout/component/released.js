@@ -31,7 +31,7 @@ const ComponentReleased = ({ cardList, _ID, _body, _parseYaml, _relativeURL }) =
 				headingSize: '3',
 				text: component.name,
 			}]
-		}
+		};
 
 		if ( component.highlight ) {
 			cardData.rows.push ({

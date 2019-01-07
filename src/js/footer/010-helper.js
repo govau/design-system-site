@@ -10,7 +10,7 @@ function HasClass( element, elementClass ) {
 function RemoveClass( element, elementClass ) {
 	if( HasClass( element, elementClass ) ) {
 		var reg = new RegExp( "(\\s|^)" + elementClass + "(\\s|$)" );
-		element.className = element.className.replace( reg, " " );
+		element.className = element.className.replace( reg, "" );
 	}
 }
 

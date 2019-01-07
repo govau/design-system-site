@@ -1,6 +1,7 @@
 ---
 layout: component/navigation-tabs
 navigation:
+  parent: components
   inline: true
   sections:
     - alignment: left
