@@ -7,6 +7,7 @@ var customInputs = document.querySelectorAll( '.custom-color input' );
 
 var toggleColorInputButtons = document.querySelectorAll( '.toggle-color-input' );
 var shareButton = document.getElementById( 'btn-share' );
+var customiseButton = document.getElementById( 'btn-customise' );
 
 var templateName = window.location.pathname.split( '/' )[ 2 ];
 
@@ -179,6 +180,16 @@ function PushValuesToURL( inputs ) {
 // When the share button is clicked copy the current URL
 AddEvent( shareButton, "click", function( event, $this ) {
 	CopyString( window.location.href );
+	var oldLabel = $this.innerHTML;
+	$this.innerHTML = 'Copied';
+	RemoveClass( $this, 'icon--copy' );
+	AddClass( $this, 'icon--success' );
+
+	setTimeout( function() {
+		$this.innerHTML = oldLabel;
+		RemoveClass( $this, 'icon--success' );
+		AddClass( $this, 'icon--copy' );
+	}, 1000 );
 });
 
 
@@ -213,6 +224,9 @@ for( var i = 0; i < paletteInputs.length; i++ ) {
 
 // Magical URL update as typing
 if( window.history.pushState ) {
+	// remove customise button
+	customiseButton.style.display = 'none';
+
 	// Add event handler to handle key press on form inputs.
 	var timeout;
 	for( var i = 0; i < customInputs.length; i++ ) {

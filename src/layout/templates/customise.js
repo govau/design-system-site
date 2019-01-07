@@ -169,11 +169,6 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 					direction="left" />
 			</header>
 			<main>
-				<div id="chameleon" role="region">
-					<div className="au-card au-card--shadow">
-						<iframe src={ iframeSrc } />
-					</div>
-				</div>
 				<div className="customise au-body au-card au-card--shadow">
 					<h1 className="au-display-lg">Customise template</h1>
 					<form className="customise__form">
@@ -196,11 +191,16 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 						</fieldset>
 						{/* Need to show this on older browsers */}
 						<ul className="au-btn__list au-btn__list--inline">
-							<li><AUbutton type="submit">Customise</AUbutton></li>
-							<li><AUbutton id="btn-share" as="secondary">Share</AUbutton></li>
+							<li><AUbutton type="submit" id="btn-customise">Customise</AUbutton></li>
+							<li><AUbutton id="btn-share" className="btn-copy au-btn au-btn--secondary icon icon--copy">Copy Link</AUbutton></li>
 							<li><AUbutton link={ "/" + _ID } as="tertiary">Reset</AUbutton></li>
 						</ul>
 					</form>
+				</div>
+				<div id="chameleon" role="region">
+					<div className="au-card au-card--shadow">
+						<iframe src={ iframeSrc } />
+					</div>
 				</div>
 			</main>
 			<script src={_relativeURL("/assets/js/footer.js", _ID)} />
