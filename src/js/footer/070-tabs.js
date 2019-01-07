@@ -1,7 +1,6 @@
 var tabItems = document.querySelectorAll( '.tabs .au-link-list a' );
 
 // Hide and show based on the active class
-
 AddEvent( tabItems, 'click', function( event, $this ) {
 	PreventEvent( event );
 

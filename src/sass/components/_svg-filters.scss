@@ -1,0 +1,12 @@
+// SVG filters
+.js-filter--tritanopia {
+	filter: url( "#tritanopia" );
+}
+
+.js-filter--grayscale {
+	filter: grayscale( 100% );
+}
+
+.js-filter--deuteranopia {
+	filter: url( "#deuteranopia" );
+}

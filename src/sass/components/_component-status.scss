@@ -16,7 +16,7 @@ $color-status--suggestion-gradient-end:   $AU-color-background-alt-shade;
 .componentheader__statusbox {
 	@include AU-space( margin-top, 2unit );
 
-	@include AU-media( md ){
+	@include AU-media( sm ){
 		margin-top: 0;
 	}
 }

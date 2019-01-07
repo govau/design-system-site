@@ -12,6 +12,10 @@
 		@include AU-space( margin-top, 2unit );
 		@include AU-fontgrid( md );
 	}
+
+	& + .navigation {
+		@include AU-space( margin-top, 1unit );
+	}
 }
 
 

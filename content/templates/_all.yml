@@ -1,0 +1,52 @@
+home:
+  name: Home
+  description: >
+    Home pages explain your product or service and help users find what they are looking for.
+  state: published
+  version: 1.0.0
+  components:
+    - core
+    - header
+    - footer
+    - body
+    - grid-12
+    - main-nav
+    - skip-link
+    - buttons
+    - headings
+
+content:
+  name: Content
+  description: >
+    Content pages display information clearly.
+  state: published
+  version: 1.0.0
+  components:
+    - core
+    - header
+    - footer
+    - body
+    - grid-12
+    - breadcrumbs
+    - side-nav
+    - main-nav
+    - skip-link
+    - headings
+
+form:
+  name: Form
+  description: >
+    Form pages ask users a question and allow them to answer it.
+  state: inprogress
+  components:
+    - core
+    - header
+    - footer
+    - body
+    - grid-12
+    - text-inputs
+    - buttons
+    - page-alerts
+    - main-nav
+    - skip-link
+    - headings

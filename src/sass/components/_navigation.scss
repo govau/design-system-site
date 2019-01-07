@@ -50,9 +50,12 @@
 	}
 
 	@media screen and ( min-width: $nav_breakpoint ) {
-		@include AU-space( padding-top, 2unit );
 		@include AU-space( border-bottom, 0.5unit solid $AU-color-background-shade );
 		padding-bottom: 0;
+
+		* + & {
+			@include AU-space( margin-top, 2unit );
+		}
 
 		.au-link-list--inline {
 			float: left;

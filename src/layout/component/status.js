@@ -1,6 +1,6 @@
 import AUlinkList                               from '../../_uikit/layout/link-list';
 import AUheading                                from '../../_uikit/layout/headings';
-import Contributors                             from './contributors';
+import Contributors                             from '../contributors';
 import GetData, { GetComponentValue, GetState } from '../../helper/getData';
 
 import React, { Fragment }                      from 'react';
