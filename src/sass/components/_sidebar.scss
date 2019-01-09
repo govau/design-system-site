@@ -3,7 +3,14 @@
 
 	.sidebar {
 		@include AU-space( padding-top, 2unit );
-		@include AU-space( padding-bottom, 4unit );
+	}
+
+	.sidebar + .content {
+		@include AU-space( margin-top, 1unit );
+
+		@include AU-media( md ){
+			margin-top: 0;
+		}
 	}
 
 	.content {
@@ -54,7 +61,6 @@
 		}
 
 		.sidebar .navigation--accordion {
-			// @include AU-space( margin-top, 2unit );
 			margin-right: -12px;
 			display: block;
 		}

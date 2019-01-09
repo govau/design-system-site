@@ -1,20 +1,21 @@
 // Variable overides
-@import 'base/colors';
-@import 'base/overrides';
+@import 'base/variables';
 
 
 // UI-Kit
 @import '../_uikit/sass/uikit';
 
 
-// Our reset
+// Our base styles
 @import 'base/reset';
 @import 'base/breakpoints';
 @import 'base/structure';
 @import 'base/utility';
 
+
 // Our component styles
 @import 'components/footer';
+@import 'components/fieldset';
 @import 'components/basicpage';
 @import 'components/header';
 @import 'components/header-govau';
@@ -53,6 +54,9 @@
 @import 'components/callout-with-button';
 @import 'components/section';
 @import 'components/searchpage';
+@import 'components/templates';
+@import 'components/button-list';
+
 
 //Possible Visual Design Tweaks to UIKit
 @import 'components/vd-tweaks';

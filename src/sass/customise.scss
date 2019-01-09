@@ -1,0 +1,196 @@
+// This is used for our customise pages
+
+
+// UI-Kit
+@import '../_uikit/sass/uikit';
+
+
+// Our base styles
+@import 'base/reset';
+@import 'base/utility';
+
+
+// Our components
+@import 'components/card';
+@import 'components/button-list';
+@import 'components/fieldset';
+@import 'components/header-bar';
+@import 'components/svg-filters';
+@import 'components/icons';
+
+
+.customise-page {
+	background-color: $AU-color-background-alt;
+}
+
+
+// The iFrame and wrapper
+#chameleon {
+	@include AU-space( margin, 0.5unit );
+	@include AU-space( top, 3.5unit );
+	@include AU-space( bottom, 15unit );
+	position: absolute;
+	left: 0;
+	right: 0;
+
+	@include AU-media( sm ){
+		@include AU-space( left, 20.5unit );
+		bottom: 0;
+	}
+
+
+	iframe {
+		border: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.au-card.au-card--shadow {
+		overflow: auto;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+// The container of the form
+.customise {
+	@include AU-space( padding, 0.75unit 1unit );
+	@include AU-space( margin, 0.5unit );
+	@include AU-space( height, 13unit );
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: auto;
+
+	@include AU-media( sm ){
+		@include AU-space( top, 3.5unit );
+		@include AU-space( width, 18unit );
+		height: auto;
+		right: auto;
+	}
+
+	// Overide the overflow
+	&.au-card.au-card--shadow {
+		overflow: auto;
+	}
+}
+
+// The description of the form
+.customise__form {
+	@include AU-space( margin-top, 1.25unit );
+
+	.fieldset__description {
+		@include AU-fontgrid( xs );
+		@include AU-space( margin-top, 0.25unit );
+		@include AU-space( margin-bottom, 1unit );
+
+		.au-btn {
+			font-size: inherit;
+			padding: 0;
+			border: 0;
+			vertical-align: baseline;
+			display: inline;
+		}
+	}
+
+	.au-fieldset {
+		border-top: 1px solid $AU-color-foreground-border;
+
+		legend {
+			@include AU-space( padding-right, 0.75unit );
+		}
+
+		& + .au-fieldset {
+			@include AU-space( margin-top, 1.25unit );
+		}
+	}
+
+	.au-btn__list {
+		@include AU-space( margin-top, 1unit );
+		@include AU-space( padding-top, 1unit );
+		border-top: solid 1px $AU-color-foreground-border;
+
+		.au-btn {
+			@include AU-space( padding, 0.5unit 1unit );
+			@include AU-fontgrid( xs );
+		}
+
+		// Hide the customise button if automatic url updating works
+		&.customise-btn--hide li:first-of-type {
+			display: none;
+		}
+
+		// Can't do spacing with lobotomised owl as the submit button is hidden
+		li {
+			@include AU-space( margin, 0 0.5unit 0 0 );
+
+			&:last-of-type {
+				margin: 0;
+			}
+		}
+	}
+}
+
+// The text inputs inside custom palette
+.custom-color {
+
+	// Adjust the column spacing inside grid
+	.row {
+		@include AU-space( margin, 0 -0.25unit );
+	}
+
+	.col-xs-6 {
+		@include AU-space( padding, 0 0.25unit );
+	}
+
+	// Adjust padding inside text inputs
+	.au-text-input {
+		@include AU-space( padding, 0.25unit 0.5unit );
+	}
+
+	* + .form-item {
+		@include AU-space( margin-top, 0.5unit );
+	}
+}
+
+
+// The radio buttons
+.palette,
+.a11y {
+	* + .form-item {
+		@include AU-space( margin-top, 0.5unit );
+	}
+}
+
+// Hide the palettes
+.palette {
+	display: none;
+}
+
+// Show the palettes when the user selects one
+.show--palette {
+	.custom-color {
+		display: none;
+	}
+
+	.palette {
+		display: block;
+	}
+}
+
+
+// Hide the a11y unless browser supports filter
+.a11y {
+	display: none;
+}
+
+// Hide SVG colour filters
+@supports ( filter: url( "filters.svg#deuteranopia" ) ){
+	.a11y {
+		display: block;
+	}
+}
+
+
