@@ -1,1 +1,3 @@
-<p class="au-callout" aria-label="Callout description">A callout.</p>
+<p class="au-callout">
+  A callout.
+</p>

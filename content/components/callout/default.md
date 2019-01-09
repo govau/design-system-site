@@ -9,7 +9,7 @@ code:
         Dark:   <p class="au-callout au-callout--dark">
       -->
 
-      <p class="au-callout" aria-label="Callout description1">
+      <p class="au-callout">
         A callout.
       </p>
   - React: |
@@ -20,8 +20,8 @@ code:
 
       import { AUcallout } from '@gov.au/callout';
 
-      <AUcallout description="description for first callout">
-        A callout.
+      <AUcallout>
+        <p>A callout<p>
       </AUcallout>
 ---
 ## Default

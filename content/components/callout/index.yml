@@ -14,6 +14,7 @@ sidebar:
 
 main:
   - default.md
+  - callout-title.md
   - calendar.md
 
 footer:
