@@ -25,6 +25,6 @@ code:
         <p>Description of the callout</p>
       </AUcallout>
 ---
-## Callout without heading
+## Callout heading screen reader only
 
-A callout with a hidden heading. Markup for the title is included for screen reader users.
+A callout with a heading that can be read by screen readers. Markup for the title is included for screen reader users.
