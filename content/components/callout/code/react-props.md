@@ -8,9 +8,9 @@ layout: section
 
 | Prop name | Type    | Description
 |-----------|---------------------------------------------------------------------------------------
-| title        | string  | Title of the callout
-| dark         | boolean | A dark variation of the component
-| srOnlyTitle  | boolean | Make title screen reader visible
+| title       | string  | Title of the callout
+| dark        | boolean | A dark variation of the component
+| srOnlyTitle | boolean | Make title screen reader visible
 
 
 All other props are spread into the component
