@@ -13,27 +13,34 @@ var templateName = window.location.pathname.split( '/' )[ 2 ];
 
 
 var colors = {
-	text:           '',
-	action:         '',
-	focus:          '',
-	background:     '',
-	textDark:       '',
-	actionDark:     '',
-	focusDark:      '',
-	backgroundDark: '',
+	text:           '#313131',
+	action:         '#00698F',
+	// focus:          '#9263DE',
+	background:     '#FFFFFF',
+	textDark:       '#FFFFFF',
+	actionDark:     '#61DAFF',
+	// focusDark:      '#C390F9',
+	backgroundDark: '#135E70',
 };
 
 var paletteStyles = {
 	defaultPalette: colors,
 	green: {
+		text:           '#313131',
 		action:         '#026540',
 		// focus:          '#AC1523',
+		background:     '#FFFFFF',
+		textDark:       '#FFFFFF',
 		actionDark:     '#D7EA6A',
-		focusDark:      '#D2E771',
+		// focusDark:      '#D2E771',
 		backgroundDark: '#026540',
 	},
 	blue: {
+		text:           '#313131',
 		action:         '#0D979B',
+		// focus:          '#9263DE',
+		background:     '#FFFFFF',
+		textDark:       '#FFFFFF',
 		actionDark:     '#F2D814',
 		// focusDark:      '#4569A0',
 		backgroundDark: '#002341',
@@ -129,7 +136,7 @@ function ApplyQueryToIframe( query ){
 	var iframeQuery = template + query.replace( '&palette=on&a11y=on', '' );
 
 	// Need to fix this up
-	iframe.src = ( '/chameleon' + iframeQuery );
+	iframe.src = ( 'http://localhost:3000/chameleon' + iframeQuery );
 }
 
 
@@ -255,4 +262,10 @@ else {
  * On page load
  * ------------------------------------------------------------
  */
-ApplyColors( window.location.search );
+if( window.location.search ){
+	ApplyColors( window.location.search );
+}
+else {
+	var defaultColors = ObjectToQueryString( colors );
+	ApplyColors( defaultColors );
+}
