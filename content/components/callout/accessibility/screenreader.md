@@ -3,7 +3,9 @@ layout: component/screenreader
 heading: Screen readers
 speak: |
 
-  A callout.
+  Heading level 2, Title of the callout.
+
+  Description of the callout.
 
 ---
 
