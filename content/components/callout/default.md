@@ -5,13 +5,14 @@ iframeFullwidth: true
 code:
   - HTML: |
       <!--
-        Light:  <p class="au-callout">
-        Dark:   <p class="au-callout au-callout--dark">
+        Light:  <section class="au-callout">
+        Dark:   <section class="au-callout au-callout--dark">
       -->
+      <section class="au-callout">
+          <h2 class="au-callout__heading">Title of the callout</h2>
+          <p>Description of the callout</p>
+      </section>
 
-      <p class="au-callout">
-        A callout.
-      </p>
   - React: |
       /*
         Light:  <AUcalloutCalendar>
@@ -20,8 +21,8 @@ code:
 
       import { AUcallout } from '@gov.au/callout';
 
-      <AUcallout>
-        <p>A callout<p>
+      <AUcallout title="Title of the callout">
+        <p>Description of the callout</p>
       </AUcallout>
 ---
 ## Default
