@@ -27,4 +27,4 @@ code:
 ---
 ## Callout without heading
 
-A callout with a hidden heading. Markup for the title is however included for screen reader users.
+A callout with a hidden heading. Markup for the title is included for screen reader users.
