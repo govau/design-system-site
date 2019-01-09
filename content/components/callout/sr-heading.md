@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-iframe: examples/example-default
+iframe: examples/example-sr-heading
 iframeFullwidth: true
 code:
   - HTML: |
@@ -9,7 +9,7 @@ code:
         Dark:   <section class="au-callout au-callout--dark">
       -->
       <section class="au-callout">
-          <h2 class="au-callout__heading">Title of the callout</h2>
+          <h2 class="au-callout__heading au-callout__heading--sronly">Title of the callout</h2>
           <p>Description of the callout</p>
       </section>
 
@@ -21,10 +21,10 @@ code:
 
       import { AUcallout } from '@gov.au/callout';
 
-      <AUcallout title="Title of the callout">
+      <AUcallout srOnlyTitle title="Title of the callout">
         <p>Description of the callout</p>
       </AUcallout>
 ---
-## Default
+## Callout heading screen reader only
 
-Use callout to notify and alert users of important snippets of information.
+A callout with a heading that can be read by screen readers. Markup for the title is included for screen reader users.
