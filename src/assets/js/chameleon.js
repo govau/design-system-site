@@ -8,7 +8,7 @@ var customInputs = document.querySelectorAll( '.custom-color input' );
 var toggleColorInputButtons = document.querySelectorAll( '.toggle-color-input' );
 var shareButton = document.getElementById( 'btn-share' );
 var buttonList = document.querySelector( '.customise__form .au-btn__list' );
-var loadingOverlay = document.querySelector( '.loading' );
+var loadingOverlay = document.querySelector( '.loading-overlay' );
 
 
 var templateName = window.location.pathname.split( '/' )[ 2 ];
