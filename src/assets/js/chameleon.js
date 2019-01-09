@@ -236,17 +236,17 @@ if( window.history.pushState ) {
 			if( timeout ) {
 				clearTimeout( timeout );
 				timeout = null;
-				RemoveClass( loadingOverlay, 'show' );
+				RemoveClass( loadingOverlay, 'hide' );
 			}
-
+			
 			// Create a new timeout that runs the functions after the time has ended
 			timeout = setTimeout( function(){
 				PushValuesToURL( customInputs );
 				ApplyColors( window.location.search );
-				RemoveClass( loadingOverlay, 'show' );
-			}, 400 );
+				AddClass( loadingOverlay, 'hide' );				
+			}, 1000 );
 
-			AddClass( loadingOverlay, 'show' );
+			RemoveClass( loadingOverlay, 'hide' );
 		});
 	}
 }
