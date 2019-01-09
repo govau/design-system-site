@@ -194,3 +194,18 @@
 }
 
 
+.loading-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	display: none;
+	background: no-repeat center;
+	background-color: #ffffff63;
+	background-image: url( '/assets/svg/spinner.svg' );
+	z-index: 100;
+	&.show {
+		display: block;
+	}
+}

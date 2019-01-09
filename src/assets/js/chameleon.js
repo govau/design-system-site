@@ -8,6 +8,8 @@ var customInputs = document.querySelectorAll( '.custom-color input' );
 var toggleColorInputButtons = document.querySelectorAll( '.toggle-color-input' );
 var shareButton = document.getElementById( 'btn-share' );
 var buttonList = document.querySelector( '.customise__form .au-btn__list' );
+var loadingOverlay = document.querySelector( '.loading' );
+
 
 var templateName = window.location.pathname.split( '/' )[ 2 ];
 
@@ -129,7 +131,7 @@ function ApplyQueryToIframe( query ){
 	var iframeQuery = template + query.replace( '&palette=on&a11y=on', '' );
 
 	// Need to fix this up
-	iframe.src = ( '/chameleon' + iframeQuery );
+	iframe.src = ( 'http://localhost:3000/chameleon' + iframeQuery );
 }
 
 
@@ -234,13 +236,17 @@ if( window.history.pushState ) {
 			if( timeout ) {
 				clearTimeout( timeout );
 				timeout = null;
+				RemoveClass( loadingOverlay, 'show' );
 			}
 
 			// Create a new timeout that runs the functions after the time has ended
 			timeout = setTimeout( function(){
 				PushValuesToURL( customInputs );
 				ApplyColors( window.location.search );
+				RemoveClass( loadingOverlay, 'show' );
 			}, 400 );
+
+			AddClass( loadingOverlay, 'show' );
 		});
 	}
 }
