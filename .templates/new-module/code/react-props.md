@@ -6,7 +6,7 @@ layout: section
 
 | Prop name | Type    | Description
 |-----------|---------------------------------------------------------------------------------------
-| TODO      | TODO    | TODO Get from https://github.com/govau/uikit
+| TODO      | TODO    | TODO Get from https://github.com/govau/design-system-components
 <!-- | label       | string  | Provide the aria label
 | items       | object  | The link, text and props for each of the breadcrumbs
 | items[0].link  | string  | The link of the breadcrumb, optional
