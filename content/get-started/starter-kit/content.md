@@ -1,4 +1,4 @@
-We have created a starter kit with templates that can get you up and running with the design system. You can view the [live version](https://govau.github.io/uikit-starter/) or go to the [starter kit GitHub repository](https://github.com/govau/design-system-components-starter) to download the code.
+We have created a starter kit with templates that can get you up and running with the design system. You can view the [live version](https://govau.github.io/design-system-starter/) or go to the [starter kit GitHub repository](https://github.com/govau/design-system-starter) to download the code.
 
 The starter kit requires Node.js version 8 or higher. See the [Node.js/npm installation guides](https://docs.npmjs.com/getting-started/installing-node#install-npm--manage-npm-versions) if you require assistance installing node.
 
