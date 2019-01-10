@@ -6,7 +6,7 @@ layout: section
 
 | Name       | Type    | Description
 |------------|---------|-----------------------------------------------------------------------------
-| `AUTODO` | default | The TODO component Get from https://github.com/govau/uikit
+| `AUTODO` | default | The TODO component Get from https://github.com/govau/design-system-components
 
 ### [md]node_modules import
 

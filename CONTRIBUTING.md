@@ -20,7 +20,7 @@ Wherever you are, and whatever your discipline is, you are invited to contribute
 
 ## Reporting Bugs, Asking Questions, Sending Suggestions
 
-Use the search in [issues](https://github.com/govau/designsystem/issues) to see if the same bug, question or suggestion has already been raised.
+Use the search in [issues](https://github.com/govau/design-system-site/issues) to see if the same bug, question or suggestion has already been raised.
 
 If you’re filing a bug, specific steps to reproduce are helpful. Please reference the module that has the bug, along with what you expected to see and what
 happened instead. For more info look at our [issue template](./ISSUE_TEMPLATE.md).
@@ -35,7 +35,7 @@ happened instead. For more info look at our [issue template](./ISSUE_TEMPLATE.md
 
 We use a static site generator called [cuttlebelle](https://cuttlebelle.com/). This means that all of the content in our site lives in markdown files.
 
-To get started contributing content we recommend editing the files in the [content folder](https://github.com/govau/designsystem/tree/master/content).
+To get started contributing content we recommend editing the files in the [content folder](https://github.com/govau/design-system-site/tree/master/content).
 
 
 **[⬆ back to top](#contents)**

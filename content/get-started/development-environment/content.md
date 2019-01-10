@@ -1,6 +1,6 @@
 Development environments have many benefits when using the design system. You can easily override variables in the components and see the changes throughout the system instantly.
 
-If you have any trouble throughout this process you can pick up a pre-made development environment with the [uikit starter](https://github.com/govau/uikit-starter) and follow our [guide on how to use it](/get-started/starter-kit).
+If you have any trouble throughout this process you can pick up a pre-made development environment with the [uikit starter](https://github.com/govau/design-system-components-starter) and follow our [guide on how to use it](/get-started/starter-kit).
 
 ## Initial set up
 

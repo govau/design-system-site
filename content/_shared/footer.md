@@ -7,7 +7,7 @@ mainlist:
   - text: Roadmap
     link: https://github.com/orgs/govau/projects/7?fullscreen=true
   - text: GitHub
-    link: https://github.com/govau/uikit/
+    link: https://github.com/govau/design-system-components/
 legallist:
   - text: Privacy
     link: https://www.dta.gov.au/privacy-statement
@@ -19,4 +19,4 @@ legallist:
     link: https://www.dta.gov.au/disclaimer-and-copyright
 ---
 
-© Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the [MIT license](https://github.com/govau/uikit/blob/master/LICENSE)
+© Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the [MIT license](https://github.com/govau/design-system-components/blob/master/LICENSE)

@@ -1,7 +1,7 @@
 ---
 layout: component/discussion-callout
 btntext: GitHub
-btnurl: https://github.com/govau/uikit-starter/
+btnurl: https://github.com/govau/design-system-components-starter/
 btntype: secondary
 ---
 

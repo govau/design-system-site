@@ -243,7 +243,7 @@ const FetchDownloads = ( modules ) => {
  */
 const FetchModules = () => {
 	return new Promise( ( resolve, reject ) => {
-		Fetch(`https://raw.githubusercontent.com/govau/uikit/master/uikit.json?${ Math.floor( new Date().getTime() / 1000 ) }`, { method: 'get' })
+		Fetch(`https://raw.githubusercontent.com/govau/design-system-components/master/uikit.json?${ Math.floor( new Date().getTime() / 1000 ) }`, { method: 'get' })
 			.catch( error => reject( error ) )
 			.then( response => response.json() )
 			.then( thisData => {
