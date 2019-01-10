@@ -1,6 +1,6 @@
-import AUmainNav, { AUmainNavContent } from '../../_uikit/layout/main-nav';
+import AUmainNav, { AUmainNavContent } from '../../_auds/layout/main-nav';
 import { CreateLink }      from '../navigation';
-import AUlinkList                      from '../../_uikit/layout/link-list';
+import AUlinkList                      from '../../_auds/layout/link-list';
 import React, { Fragment }             from 'react';
 import PropTypes                       from 'prop-types';
 

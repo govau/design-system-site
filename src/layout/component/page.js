@@ -1,6 +1,6 @@
 import ComponentHeader from './header';
 import ComponentFooter from './footer';
-import AUskipLink      from '../../_uikit/layout/skip-link';
+import AUskipLink      from '../../_auds/layout/skip-link';
 import GetData         from './../../helper/getData';
 
 

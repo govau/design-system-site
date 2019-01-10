@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import AUbreadcrumbs from '../_uikit/layout/breadcrumbs';
+import AUbreadcrumbs from '../_auds/layout/breadcrumbs';
 
 const Breadcrumbs = ({ startPath, parents, ID, relativeURL, pages }) => {
 

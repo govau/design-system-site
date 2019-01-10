@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import Path  from 'path';
 import Fs    from 'fs';
 
-import AUbutton  from '../../_uikit/layout/buttons';
+import AUbutton  from '../../_auds/layout/buttons';
 
 
 /**

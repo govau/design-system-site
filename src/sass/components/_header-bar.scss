@@ -6,7 +6,7 @@
 	.au-direction-link {
 		@include AU-space( padding, 0.5unit 0 );
 		@include AU-space( margin, 0.5unit 0 );
-		color: #45c2f0; // Hard coded as the Uikit colours are not overridden
+		color: #45c2f0; // Hard coded as the AUDS colours are not overridden
 
 		&:hover {
 			text-decoration: none;

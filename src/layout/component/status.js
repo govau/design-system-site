@@ -1,5 +1,5 @@
-import AUlinkList                               from '../../_uikit/layout/link-list';
-import AUheading                                from '../../_uikit/layout/headings';
+import AUlinkList                               from '../../_auds/layout/link-list';
+import AUheading                                from '../../_auds/layout/headings';
 import Contributors                             from '../contributors';
 import GetData, { GetComponentValue, GetState } from '../../helper/getData';
 
