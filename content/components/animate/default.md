@@ -27,7 +27,7 @@ code:
 
       <div style="background:#663399; margin-top:16px" id="animate-example-1">&nbsp;<br /><br /><br /></div>
 
-      <!-- Make sure you include the uikit javascript file -->
+      <!-- Make sure you include the auds javascript file -->
       <script type="text/javascript" src="script.js"></script>
 ---
 ## Default

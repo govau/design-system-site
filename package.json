@@ -29,14 +29,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/govau/designsystem"
+		"url": "https://github.com/govau/design-system-site"
 	},
 	"author": {
 		"name": "Commonwealth of Australia, DTA",
 		"email": "guides@digital.gov.au",
 		"url": "https://www.dta.gov.au/"
 	},
-	"homepage": "https://github.com/govau/designsystem",
+	"homepage": "https://github.com/govau/design-system-site",
 	"contributors": [
 		{
 			"name": "Dominik Wilkowski",
@@ -58,7 +58,7 @@
 	"licenses": [
 		{
 			"type": "MIT",
-			"url": "https://github.com/govau/designsystem/blob/master/LICENSE"
+			"url": "https://github.com/govau/design-system-site/blob/master/LICENSE"
 		}
 	],
 	"dependencies": {
@@ -128,22 +128,22 @@
 			"name": false
 		},
 		"sass": {
-			"location": "src/_uikit/sass/",
-			"name": "_uikit.scss"
+			"location": "src/_auds/sass/",
+			"name": "_auds.scss"
 		},
 		"js": {
 			"modules": false,
 			"location": "src/js/footer/",
 			"minified": false,
-			"name": "000-uikit.js"
+			"name": "000-auds.js"
 		},
 		"react": {
-			"location": "src/_uikit/layout/"
+			"location": "src/_auds/layout/"
 		},
 		"json": {
 			"enable": true,
-			"location": "src/_uikit/",
-			"name": "uikit"
+			"location": "src/_auds/",
+			"name": "auds"
 		}
 	},
 	"browserslist": [

@@ -1,5 +1,5 @@
-import AUheading from '../../_uikit/layout/headings';
-import AUbutton from '../../_uikit/layout/buttons';
+import AUheading from '../../_auds/layout/headings';
+import AUbutton from '../../_auds/layout/buttons';
 import PropTypes from 'prop-types';
 import React from 'react';
 

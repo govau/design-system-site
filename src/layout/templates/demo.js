@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import Path  from 'path';
 import Fs    from 'fs';
 
-import AUbutton  from '../../_uikit/layout/buttons';
+import AUbutton  from '../../_auds/layout/buttons';
 
 
 /**
@@ -26,7 +26,7 @@ const TemplateDemo = ({ _ID, _body, _relativeURL }) => {
 				<div className="col-sm-6">
 					{ _body }
 					<ul className="au-btn__list au-btn__list--inline">
-						<li><AUbutton link="https://github.com/govau/uikit-starter/archive/master.zip">
+						<li><AUbutton link="https://github.com/govau/design-system-starter/archive/master.zip">
 							Download
 						</AUbutton></li>
 						<li><AUbutton link="/get-started/starter-kit" as='secondary'>

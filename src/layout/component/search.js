@@ -1,4 +1,4 @@
-import AUheading from '../../_uikit/layout/headings';
+import AUheading from '../../_auds/layout/headings';
 import React, { Fragment } from 'react';
 import AUcard from '../card';
 import PropTypes from 'prop-types';

@@ -1,5 +1,5 @@
 import AUcardList          from '../card-list';
-import AUbutton from '../../_uikit/layout/buttons';
+import AUbutton from '../../_auds/layout/buttons';
 
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -17,14 +17,14 @@ const Features = ({ title, btnURL, btntext, features, featureTitleSize, cardList
 		// Fetch the data if the title is meant to be dynamic
 		if ( featureTitle.includes( '-replace' ) ){
 			const dataType = featureTitle.replace( '-replace', '' );
-			const { uikit } = _parseYaml(
+			const { auds } = _parseYaml(
 				Fs.readFileSync(
 					Path.normalize(`${ __dirname }/../../../content/_data.yml`),
 					{ encoding: 'utf8' }
 				)
 			);
 
-			featureTitle = uikit[ dataType ].toString();
+			featureTitle = auds[ dataType ].toString();
 		}
 
 		return {

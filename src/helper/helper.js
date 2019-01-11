@@ -66,16 +66,16 @@ const CleanName = ( name ) => name.replace( '@gov.au/', '' );
 
 
 /**
- * Merge the data from uikit.json file into our component/_all.yml
+ * Merge the data from auds.json file into our component/_all.yml
  *
- * @param  {object} uikit      - The uikit object
+ * @param  {object} auds      - The auds object
  * @param  {object} components - The components object
  */
-const CheckComponents = ( uikit, components ) => {
+const CheckComponents = ( auds, components ) => {
 	const failed = [];
 
-	for( module of Object.keys( uikit ) ) {
-		const name = CleanName( uikit[ module ].name );
+	for( module of Object.keys( auds ) ) {
+		const name = CleanName( auds[ module ].name );
 
 		if( typeof components[ name ] === 'undefined' ) {
 			failed.push({ name, reason: 'Missing entirely' });
@@ -124,27 +124,27 @@ const CheckComponents = ( uikit, components ) => {
 
 
 /**
- * Merge the data from uikit.json file into our component/_all.yml
+ * Merge the data from auds.json file into our component/_all.yml
  *
- * @param  {object} uikit      - The uikit object
+ * @param  {object} auds      - The auds object
  * @param  {object} components - The components object
  */
-const GenerateComponents = ( uikit, components ) => {
-	for( module of Object.keys( UIKIT ) ) {
-		const pathToPgk = Path.normalize(`${ UIKIT[ module ].path }/package.json`);
+const GenerateComponents = ( auds, components ) => {
+	for( module of Object.keys( AUDS ) ) {
+		const pathToPgk = Path.normalize(`${ AUDS[ module ].path }/package.json`);
 		const PGK = JSON.parse( Fs.readFileSync( pathToPgk, 'utf-8' ) );
-		const name = CleanName( UIKIT[ module ].name );
+		const name = CleanName( AUDS[ module ].name );
 
 		if( typeof components[ name ] === 'undefined' ) {
 			components[ name ] = {};
 		}
 
-		components[ name ].ID = CleanName( UIKIT[ module ].name );
-		components[ name ].version = UIKIT[ module ].version;
-		components[ name ].dependencies = Object.keys( UIKIT[ module ].dependencies ).map( dep => CleanName( dep ) );
-		components[ name ].hasSass = UIKIT[ module ].settings.plugins.includes('@gov.au/pancake-sass');
-		components[ name ].hasJs = UIKIT[ module ].settings.plugins.includes('@gov.au/pancake-js');
-		components[ name ].hasReact = UIKIT[ module ].settings.plugins.includes('@gov.au/pancake-react');
+		components[ name ].ID = CleanName( AUDS[ module ].name );
+		components[ name ].version = AUDS[ module ].version;
+		components[ name ].dependencies = Object.keys( AUDS[ module ].dependencies ).map( dep => CleanName( dep ) );
+		components[ name ].hasSass = AUDS[ module ].settings.plugins.includes('@gov.au/pancake-sass');
+		components[ name ].hasJs = AUDS[ module ].settings.plugins.includes('@gov.au/pancake-js');
+		components[ name ].hasReact = AUDS[ module ].settings.plugins.includes('@gov.au/pancake-react');
 		// components[ name ].contributors = PGK.contributors;
 	}
 
@@ -237,13 +237,13 @@ const FetchDownloads = ( modules ) => {
 
 
 /**
- * Get all modules from the uikit that is currently published
+ * Get all modules from the auds that is currently published
  *
  * @return {Promise object} - All module names in an array
  */
 const FetchModules = () => {
 	return new Promise( ( resolve, reject ) => {
-		Fetch(`https://raw.githubusercontent.com/govau/uikit/master/uikit.json?${ Math.floor( new Date().getTime() / 1000 ) }`, { method: 'get' })
+		Fetch(`https://raw.githubusercontent.com/govau/design-system-components/master/auds.json?${ Math.floor( new Date().getTime() / 1000 ) }`, { method: 'get' })
 			.catch( error => reject( error ) )
 			.then( response => response.json() )
 			.then( thisData => {
@@ -308,37 +308,37 @@ const WriteStats = async ( ) => {
 
 		DATA.pancake.downloads = downloadAllPancake;
 
-		DATA.uikit = {
+		DATA.auds = {
 			downloads: 0,
 			modules: {},
 			stars: 0,
 		};
 
-		const uikitModules = await FetchModules();
-		const downloadUikit = await FetchDownloads( uikitModules );
+		const audsModules = await FetchModules();
+		const downloadAuds = await FetchDownloads( audsModules );
 
-		Tick( 'Got uikit downloads data' );
+		Tick( 'Got auds downloads data' );
 
-		let downloadAllUikit = 0;
-		downloadUikit.map( module => {
-			DATA.uikit.modules[ module.name ] = module.downloads;
-			downloadAllUikit += module.downloads;
+		let downloadAllAuds = 0;
+		downloadAuds.map( module => {
+			DATA.auds.modules[ module.name ] = module.downloads;
+			downloadAllAuds += module.downloads;
 		});
 
-		DATA.uikit.downloads = downloadAllUikit;
+		DATA.auds.downloads = downloadAllAuds;
 
 
 		const pancakeStars = await FetchStars('pancake');
 		Tick( 'Got pancake stars data' );
 
-		const uikitStars = await FetchStars('uikit');
-		Tick( 'Got uikit stars data' );
+		const audsStars = await FetchStars('design-system-components');
+		Tick( 'Got auds stars data' );
 
 		DATA.pancake.stars = pancakeStars;
-		DATA.uikit.stars = uikitStars;
+		DATA.auds.stars = audsStars;
 
 
-		const DATAstring = '# THIS FILE IS AUTOGENERATED!\n# THE `pancake` and `uikit` FIELDS WILL BE OVERWRITTEN\n\n' + DecodeYAML( DATA )
+		const DATAstring = '# THIS FILE IS AUTOGENERATED!\n# THE `pancake` and `auds` FIELDS WILL BE OVERWRITTEN\n\n' + DecodeYAML( DATA )
 
 		Fs.writeFileSync( Path.normalize(`${ __dirname }/../../content/_data.yml`), DATAstring, `utf-8` );
 
@@ -353,7 +353,7 @@ const WriteStats = async ( ) => {
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
 // FILES
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
-const UIKIT = JSON.parse( Fs.readFileSync( Path.normalize(`${ __dirname }/../_uikit/uikit.json`), 'utf-8') );
+const AUDS = JSON.parse( Fs.readFileSync( Path.normalize(`${ __dirname }/../_auds/auds.json`), 'utf-8') );
 const COMPONENTS = EncodeYAML( Fs.readFileSync( Path.normalize(`${ __dirname }/../../content/components/_all.yml`), 'utf-8') );
 
 
@@ -371,7 +371,7 @@ CFonts.say( 'Australian Government Design System', {
 });
 
 if( process.argv.indexOf( 'components' ) !== -1 ) {
-	GenerateComponents( UIKIT, COMPONENTS );
-	CheckComponents( UIKIT, COMPONENTS );
+	GenerateComponents( AUDS, COMPONENTS );
+	CheckComponents( AUDS, COMPONENTS );
 	WriteStats();
 }

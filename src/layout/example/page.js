@@ -1,4 +1,4 @@
-import AUdirectionLink from '../../_uikit/layout/direction-links';
+import AUdirectionLink from '../../_auds/layout/direction-links';
 
 import React from 'react';
 

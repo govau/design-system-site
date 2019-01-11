@@ -22,7 +22,7 @@
       <div class="col-sm-12">
         <p>Footer text</p>
         <img class="au-responsive-media-img" src="http://placehold.it/157x80" alt="Brand image">
-        <p><small>© Commonwealth of Australia, <a class="js-focus-me" href="https://github.com/govau/uikit/blob/master/LICENSE.md" rel="external license">MIT licensed</a></small></p>
+        <p><small>© Commonwealth of Australia, <a class="js-focus-me" href="https://github.com/govau/design-system-components/blob/master/LICENSE.md" rel="external license">MIT licensed</a></small></p>
       </div>
     </section>
   </div>

@@ -1,7 +1,7 @@
-import AUfooter, { AUfooterNav } from '../../_uikit/layout/footer';
-import AUlinkList from '../../_uikit/layout/link-list';
-import AUheading from '../../_uikit/layout/headings';
-import AUctaLink from '../../_uikit/layout/cta-link';
+import AUfooter, { AUfooterNav } from '../../_auds/layout/footer';
+import AUlinkList from '../../_auds/layout/link-list';
+import AUheading from '../../_auds/layout/headings';
+import AUctaLink from '../../_auds/layout/cta-link';
 import PropTypes from 'prop-types';
 import React from 'react';
 

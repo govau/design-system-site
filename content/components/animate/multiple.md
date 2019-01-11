@@ -28,7 +28,7 @@ code:
         <div class="animate-example" style="background:#663399; margin-top:16px" >&nbsp;<br><br><br></div>
       </div>
 
-      <!-- Make sure you include the uikit javascript file -->
+      <!-- Make sure you include the auds javascript file -->
       <script type="text/javascript" src="script.js"></script>
 ---
 ## Multiple

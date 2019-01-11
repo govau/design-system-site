@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import AUlinkList from '../../_uikit/layout/link-list';
+import AUlinkList from '../../_auds/layout/link-list';
 
 
 /**
