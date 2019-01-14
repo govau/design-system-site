@@ -6,7 +6,7 @@
 	}
 
 	.sidebar + .content {
-		@include AU-space( margin-top, 1unit );
+		@include AU-space( margin-top, 2.5unit );
 
 		@include AU-media( md ){
 			margin-top: 0;
