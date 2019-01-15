@@ -1,5 +1,5 @@
-import AUheader, { AUheaderBrand } from '../../_uikit/layout/header';
-import AUskipLink                  from '../../_uikit/layout/skip-link';
+import AUheader, { AUheaderBrand } from '../../_auds/layout/header';
+import AUskipLink                  from '../../_auds/layout/skip-link';
 import React, { Fragment }         from 'react';
 import PropTypes                   from 'prop-types';
 

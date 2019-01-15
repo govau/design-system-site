@@ -6,7 +6,7 @@ lists:
       - text: Suggest a component
         link: https://community.digital.gov.au/c/designsystem/suggest-a-component
       - text: Improve documentation
-        link: https://github.com/govau/designsystem/tree/master/content
+        link: https://github.com/govau/design-system-site/tree/master/content
 
   - heading: Help with planning
     links:
@@ -18,10 +18,10 @@ lists:
   - heading: Help with code
     links:
       - text: Code contribution guide
-        link: https://github.com/govau/uikit/blob/master/CONTRIBUTING.md
+        link: https://github.com/govau/design-system-components/blob/master/CONTRIBUTING.md
         icon: github
       - text: Report an issue
-        link: https://github.com/govau/uikit/issues
+        link: https://github.com/govau/design-system-components/issues
         icon: github
 
   - heading: Help with usability

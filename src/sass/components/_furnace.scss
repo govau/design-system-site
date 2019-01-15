@@ -45,7 +45,7 @@
 	//label text & input
 	.furnace__component__control {
 		@include AU-space( margin, 1unit 0 0 5unit );
-		position: relative; //for the UIKIT checkboxes
+		position: relative; //for the AUDS checkboxes
 		display: block;
 
 		.au-control-input__text {

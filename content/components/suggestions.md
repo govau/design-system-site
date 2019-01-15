@@ -8,9 +8,9 @@ tableTH:
   - text: Title
     className: component-table--title
   - text: Useful
-    link: https://github.com/govau/uikit/blob/master/CONTRIBUTING.md#useful
+    link: https://github.com/govau/design-system-components/blob/master/CONTRIBUTING.md#useful
     className: component-table--minwidth
   - text: Unique
-    link: https://github.com/govau/uikit/blob/master/CONTRIBUTING.md#unique
+    link: https://github.com/govau/design-system-components/blob/master/CONTRIBUTING.md#unique
     className: component-table--minwidth
 ---

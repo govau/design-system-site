@@ -1,7 +1,7 @@
-import AUtextInput from '../../_uikit/layout/text-inputs';
-import AUdirectionLink from '../../_uikit/layout/direction-links';
-import { AUradio } from '../../_uikit/layout/control-input';
-import AUbutton from '../../_uikit/layout/buttons';
+import AUtextInput from '../../_auds/layout/text-inputs';
+import AUdirectionLink from '../../_auds/layout/direction-links';
+import { AUradio } from '../../_auds/layout/control-input';
+import AUbutton from '../../_auds/layout/buttons';
 
 
 import React from "react";

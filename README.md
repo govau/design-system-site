@@ -2,7 +2,7 @@ Australian Government Design System
 ====
 
 
-| Production [![CircleCI](https://circleci.com/gh/govau/designsystem/tree/master.svg?style=svg)](https://circleci.com/gh/govau/designsystem/tree/master)                  | Staging [![CircleCI](https://circleci.com/gh/govau/designsystem/tree/develop.svg?style=svg)](https://circleci.com/gh/govau/designsystem/tree/develop)                        |
+| Production [![CircleCI](https://circleci.com/gh/govau/design-system-site/tree/master.svg?style=svg)](https://circleci.com/gh/govau/design-system-site/tree/master)                  | Staging [![CircleCI](https://circleci.com/gh/govau/design-system-site/tree/develop.svg?style=svg)](https://circleci.com/gh/govau/design-system-site/tree/develop)                        |
 |-----------------------------|--------------------------------|
 | https://designsystem.gov.au | https://designsystem.apps.y.cld.gov.au |
 |                             | user: `ds`, pass: `ds`                 |

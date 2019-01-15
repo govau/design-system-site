@@ -1,4 +1,4 @@
-import AUbutton  from '../../_uikit/layout/buttons';
+import AUbutton  from '../../_auds/layout/buttons';
 import GetModule from '../../helper/getModule';
 
 import PropTypes from 'prop-types';

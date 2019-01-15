@@ -32,7 +32,7 @@ These are the values that are applied to the above CSS property. It is recommend
 The following SASS code:
 
 ```scss
-@import "uikit.scss";
+@import "auds.scss";
 
 header {
   @include AU-space( padding, 1unit 0 0 40% )
@@ -105,7 +105,7 @@ The `AU-fontgrid` function solves this problem by performing calculations which 
 Below, the `xxl` corresponds to a `font-size` of `40px`, `heading` corresponds to `line-height` of 1.25. The following SASS code:
 
 ```scss
-@import "uikit.scss";
+@import "auds.scss";
 
 p {
   @include AU-fontgrid( xxl, heading );
@@ -138,7 +138,7 @@ The grid-size is customisable by altering the `$AU-unit` variable. If for exampl
 //change the default grid size
 $AU-unit: 7;
 
-@import "uikit.scss";
+@import "auds.scss";
 
 p {
   @include AU-fontgrid( xxl, heading );

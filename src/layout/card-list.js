@@ -2,7 +2,7 @@
  *
  * CardList component
  *
- * TODO: Remove disable docs on uikit
+ * TODO: Remove disable docs on auds
  * @disable-docs
  *
  * Cards serve as an entry point to more detailed information
