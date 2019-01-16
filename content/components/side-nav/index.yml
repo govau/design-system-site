@@ -1,5 +1,4 @@
 layout: component/page
-module: side-nav
 pagetitle: Side nav overview
 
 header:

@@ -23,7 +23,9 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 	const templateID = _ID.split("/")[1];
 	const template = templates[templateID];
 
-	const pagetitle = `Customise ${ template.name }`;
+	const pagetitle = `Customise ${ template.name } page template`;
+
+	const description = `Customise ${ template.name.toLowerCase() } page template with different colour blindness filters, custom colour schemes and preset palettes.`;
 
 	const iframeSrc = process.env.NODE_ENV === "production"
 		? "https://designsystem.gov.au/chameleon"
@@ -45,15 +47,16 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 <meta name="theme-color" content="#ffffff">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Digital Transformation Agency">
+<meta name="description" content="${ description }">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Australian Government Design System">
-<meta name="twitter:description" content="Inclusive design, open-source code and shared insights">
+<meta name="twitter:description" content="${ description }">
 <meta name="twitter:name" content="Australian Government Design System">
 <meta name="twitter:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:type" content="website">
 <meta property="og:title" content="${pagetitle} - Australian Government Design System">
 <meta property="og:site_name" content="Australian Government Design System">
-<meta property="og:description" content="Inclusive design, open-source code and shared insights">
+<meta property="og:description" content="${ description }">
 <meta property="og:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:url" content="https://designsystem.gov.au">
 

@@ -1,5 +1,4 @@
 layout: component/page
-module: link-list
 pagetitle: Link list overview
 
 header:

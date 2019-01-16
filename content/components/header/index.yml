@@ -1,5 +1,4 @@
 layout: component/page
-module: header
 pagetitle: Header overview
 
 header:

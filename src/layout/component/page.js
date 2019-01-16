@@ -2,6 +2,7 @@ import ComponentHeader from './header';
 import ComponentFooter from './footer';
 import AUskipLink      from '../../_auds/layout/skip-link';
 import GetData         from './../../helper/getData';
+import GetModule       from './../../helper/getModule';
 
 
 import PropTypes from 'prop-types';
@@ -25,14 +26,22 @@ const ComponentPage = ({
 	sidebar,
 	pagetitle,
 	main,
-	footer,
-	module = ''
+	footer
 }) => {
+	// Get the module from the page ID and parents
+	const module = GetModule( _parents, _ID );
 
+	// Get the module information
 	const MODULE = GetData({
 		filter: ( key, COMPONENTS ) => key === module,
 		yaml: _parseYaml
 	})[ 0 ];
+
+	let description = "Discover all the different components that the Design System community is working on. Here you can find design and development files for each component, findings we’ve collected from performing user research as well as documentation to help teams adopt the design system for their projects.";
+	if( MODULE ) {
+		description = MODULE.description;
+	}
+
 
 	const headContent = `
 <meta charset="utf-8">
@@ -50,15 +59,16 @@ const ComponentPage = ({
 <meta name="theme-color" content="#ffffff">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Digital Transformation Agency">
+<meta name="description" content="${ description }">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Australian Government Design System">
-<meta name="twitter:description" content="${ module !== '' ? `${ MODULE.description } - ` : '' }Australian Government Design System">
+<meta name="twitter:description" content="${ description }">
 <meta name="twitter:name" content="Australian Government Design System">
 <meta name="twitter:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:type" content="website">
 <meta property="og:title" content="${ pagetitle } - Australian Government Design System">
 <meta property="og:site_name" content="Australian Government Design System">
-<meta property="og:description" content="${ module !== '' ? `${ MODULE.description } - ` : '' }Australian Government Design System">
+<meta property="og:description" content="${ description }">
 <meta property="og:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:url" content="https://designsystem.gov.au">
 
