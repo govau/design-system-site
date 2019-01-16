@@ -16,8 +16,7 @@ code:
         <button 
           class="au-side-nav__toggle au-accordion__title au-accordion--closed" 
           aria-controls="nav-default"
-          aria-expanded="false" 
-          aria-selected="false" 
+          aria-expanded="false"  
           onclick="return AU.accordion.Toggle( this )"
         >
           In this section
