@@ -4,7 +4,7 @@ iframe: examples/example-video-4-3
 code:
   - HTML: |
       <div class="au-responsive-media-vid au-responsive-media-vid--4x3">
-        <iframe class="au-responsive-media-vid__item" frameborder="0" src="#"></iframe>
+        <iframe title="responsive video" class="au-responsive-media-vid__item" frameborder="0" src="#"></iframe>
       </div>
 ---
 ## Responsive videos 4:3
