@@ -102,7 +102,7 @@ const Example = ({
 		xmlns="http://www.w3.org/2000/svg"
 		version="1.1">
 		<defs>
-			<filter id="deuteranopia">
+			<filter id="filter-deuteranopia">
 				<feColorMatrix
 					in="SourceGraphic"
 					type="matrix"
@@ -111,7 +111,7 @@ const Example = ({
 									0,     0.3,   0.7, 0, 0
 									0,     0,     0,   1, 0"/>
 			</filter>
-			<filter id="tritanopia">
+			<filter id="filter-tritanopia">
 				<feColorMatrix
 					in="SourceGraphic"
 					type="matrix"

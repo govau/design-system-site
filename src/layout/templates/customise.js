@@ -73,7 +73,7 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 			xmlns="http://www.w3.org/2000/svg"
 			version="1.1">
 			<defs>
-				<filter id="deuteranopia">
+				<filter id="filter-deuteranopia">
 					<feColorMatrix
 						in="SourceGraphic"
 						type="matrix"
@@ -82,7 +82,7 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 										0,     0.3,   0.7, 0, 0
 										0,     0,     0,   1, 0"/>
 				</filter>
-				<filter id="tritanopia">
+				<filter id="filter-tritanopia">
 					<feColorMatrix
 						in="SourceGraphic"
 						type="matrix"
@@ -199,7 +199,7 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 				</div>
 				<div id="chameleon" role="region">
 					<div className="au-card au-card--shadow">
-						<iframe src={ iframeSrc } />
+						<iframe title="Custom full page template" src={ iframeSrc } />
 					</div>
 				</div>
 			</main>
