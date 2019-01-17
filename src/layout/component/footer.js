@@ -10,8 +10,8 @@ import React from 'react';
  *
  * @disable-docs
  */
-const ComponentFooter = ({ _ID, _parseYaml, _relativeURL, _pages, _parents }) => {
-	const module = GetModule( _parents, _pages, _ID );
+const ComponentFooter = ({ _ID, _parseYaml, _relativeURL, _parents }) => {
+	const module = GetModule( _parents, _ID );
 
 	const MODULES = GetData({
 		yaml: _parseYaml,

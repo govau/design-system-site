@@ -3,7 +3,6 @@
     href="#nav-default--dark" class="au-side-nav__toggle au-accordion__title au-accordion--closed"
     aria-controls="nav-default--dark"
     aria-expanded="false"
-    aria-selected="false"
     onclick="return AU.accordion.Toggle( this )"
   >
     In this section

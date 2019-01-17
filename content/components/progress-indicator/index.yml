@@ -1,5 +1,4 @@
 layout: component/page
-module: progress-indicator
 pagetitle: Progress indicator overview
 
 header:

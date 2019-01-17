@@ -28,7 +28,3 @@
 		@include AU-space( height, 1.25unit );
 	}
 }
-
-.au-btn + .au-btn {
-	@include AU-space( margin-left, 1unit );
-}

@@ -11,8 +11,8 @@ import React from 'react';
  *
  * @disable-docs
  */
-const ComponentHeader = ({ _relativeURL, _parseYaml, _parseMD, _pages, _parents, _ID, _isDocs }) => {
-	const module = GetModule( _parents, _pages, _ID );
+const ComponentHeader = ({ _relativeURL, _parseYaml, _parseMD, _parents, _ID }) => {
+	const module = GetModule( _parents, _ID );
 
 	const MODULE = GetData({
 		filter: ( key, COMPONENTS ) => key === module,

@@ -146,7 +146,7 @@ Here is an example HTML file to get started:
  
   <!-- An example component -->
   <section class="au-accordion">
-    <a href="#accordion-default" class="au-accordion__title js-au-accordion" aria-controls="accordion-default" aria-expanded="true" aria-selected="true" role="tab" onclick="return AU.accordion.Toggle( this )">Wuhuu design system</a>
+    <a href="#accordion-default" class="au-accordion__title js-au-accordion" aria-controls="accordion-default" aria-expanded="true" role="tab" onclick="return AU.accordion.Toggle( this )">Wuhuu design system</a>
     <div class="au-accordion__body" id="accordion-default">
       <div class="au-accordion__body-wrapper">
         And it looks good :)
