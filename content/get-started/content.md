@@ -21,6 +21,6 @@ Once you have the components in a website we have advanced guides for developers
 Throughout the process you may notice issues, missing features or have ideas for new components. If you would like to contribute or help build the future of the Australian Government Design System you can:
 
 - [Join the community](/community)
-- [Submit a bug report](https://github.com/govau/uikit/issues/new?template=----bug-report.md)
-- [Submit a feature request](https://github.com/govau/uikit/issues/new?template=---feature-request.md)
+- [Submit a bug report](https://github.com/govau/design-system-components/issues/new?template=----bug-report.md)
+- [Submit a feature request](https://github.com/govau/design-system-components/issues/new?template=---feature-request.md)
 - [Suggest a component](https://community.digital.gov.au/c/designsystem/suggest-a-component)

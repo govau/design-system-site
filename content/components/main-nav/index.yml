@@ -1,5 +1,4 @@
 layout: component/page
-module: main-nav
 pagetitle: Main nav overview
 
 header:

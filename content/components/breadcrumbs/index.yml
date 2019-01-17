@@ -1,5 +1,4 @@
 layout: component/page
-module: breadcrumbs
 pagetitle: Breadcrumbs overview
 
 header:

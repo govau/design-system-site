@@ -13,6 +13,7 @@ const CodeDemo = ({ iframe, iframeFullwidth, height = null, code, _body, _ID, _r
 	const codeExampleClass = iframeFullwidth ? 'col-sm-12' : 'col-sm-6';
 	const iframeSrc = _relativeURL( `/${ _ID }/${ iframe }/`, _ID );
 	const componentId = _body.key.split( '/' )[ _body.key.split( '/' ).length - 1 ];
+	const iframeTitle = `${ componentId.split( '-' )[ 0 ] } example`;
 
 	return (
 		<div className="code-demo">
@@ -25,6 +26,7 @@ const CodeDemo = ({ iframe, iframeFullwidth, height = null, code, _body, _ID, _r
 					<div className="code-demo__example">
 						<h2 className='code-demo__example-title'>Example</h2>
 						<iframe
+							title={ iframeTitle }
 							frameBorder="0"
 							height={ height }
 							className={ `code-demo__example__iframe ${ height === null ? 'code-demo__example__iframe--resize' : '' }` }
@@ -41,21 +43,20 @@ const CodeDemo = ({ iframe, iframeFullwidth, height = null, code, _body, _ID, _r
 								<div className="code-demo__example__code">
 									<div className="tabs">
 										<nav className="tabs-nav">
-											<ul className="au-link-list au-link-list--inline ">
+											<div className="au-link-list au-link-list--inline" role="tablist">
 												{
 													code && code.map( ( section, i ) => (
-														<li key={ i } className={ i === 0 ? 'tab-item--active' : '' }>
-															<a
-																href={`#demo-${ i }-${ componentId }`}
-																aria-controls={`demo-${ i }-${ componentId }`}
-																role="tab"
-															>
-																{ Object.keys( section )[ 0 ] }
-															</a>
-														</li>
+														<button
+															key={ i }
+															className={ i === 0 ? ' tab-item--active' : '' }
+															aria-controls={`demo-${ i }-${ componentId }`}
+															role="tab"
+														>
+															{ Object.keys( section )[ 0 ] }
+														</button>
 													))
 												}
-											</ul>
+											</div>
 										</nav>
 										<div className="tab-contents">
 											{

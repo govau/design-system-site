@@ -55,6 +55,14 @@
 	@include AU-space( margin-top, 2unit );
 	width: auto;
 
+	.ie8 & {
+		@include AU-space( width, 20unit );
+	}
+
+	img {
+		width: 100%;
+	}
+
 	@include AU-media( xs ){
 		@include AU-space( margin-left, 19unit );
 		margin-top: 0;

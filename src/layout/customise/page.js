@@ -1,7 +1,7 @@
-import AUtextInput from '../../_uikit/layout/text-inputs';
-import AUdirectionLink from '../../_uikit/layout/direction-links';
-import { AUradio } from '../../_uikit/layout/control-input';
-import AUbutton from '../../_uikit/layout/buttons';
+import AUtextInput from '../../_auds/layout/text-inputs';
+import AUdirectionLink from '../../_auds/layout/direction-links';
+import { AUradio } from '../../_auds/layout/control-input';
+import AUbutton from '../../_auds/layout/buttons';
 
 
 import React from "react";
@@ -23,7 +23,9 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 	const templateID = _ID.split("/")[1];
 	const template = templates[templateID];
 
-	const pagetitle = `Customise ${ template.name }`;
+	const pagetitle = `Customise ${ template.name } page template`;
+
+	const description = `Customise ${ template.name.toLowerCase() } page template with different colour blindness filters, custom colour schemes and preset palettes.`;
 
 	const iframeSrc = process.env.NODE_ENV === "production"
 		? "https://designsystem.gov.au/chameleon"
@@ -45,15 +47,16 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 <meta name="theme-color" content="#ffffff">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Digital Transformation Agency">
+<meta name="description" content="${ description }">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Australian Government Design System">
-<meta name="twitter:description" content="Inclusive design, open-source code and shared insights">
+<meta name="twitter:description" content="${ description }">
 <meta name="twitter:name" content="Australian Government Design System">
 <meta name="twitter:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:type" content="website">
 <meta property="og:title" content="${pagetitle} - Australian Government Design System">
 <meta property="og:site_name" content="Australian Government Design System">
-<meta property="og:description" content="Inclusive design, open-source code and shared insights">
+<meta property="og:description" content="${ description }">
 <meta property="og:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:url" content="https://designsystem.gov.au">
 
@@ -73,7 +76,7 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 			xmlns="http://www.w3.org/2000/svg"
 			version="1.1">
 			<defs>
-				<filter id="deuteranopia">
+				<filter id="filter-deuteranopia">
 					<feColorMatrix
 						in="SourceGraphic"
 						type="matrix"
@@ -82,7 +85,7 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 										0,     0.3,   0.7, 0, 0
 										0,     0,     0,   1, 0"/>
 				</filter>
-				<filter id="tritanopia">
+				<filter id="filter-tritanopia">
 					<feColorMatrix
 						in="SourceGraphic"
 						type="matrix"
@@ -200,7 +203,7 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 				<div id="chameleon" role="region">
 					<div className="loading-overlay hide" role="alert"><span className="sronly">Loading your template</span></div>
 					<div className="au-card au-card--shadow">
-						<iframe src={ iframeSrc } />
+						<iframe title="Custom full page template" src={ iframeSrc } />
 					</div>
 				</div>
 			</main>

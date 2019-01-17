@@ -10,8 +10,8 @@ import React from 'react';
  *
  * @disable-docs
  */
-const ComponentFooter = ({ _ID, _parseYaml, _relativeURL, _pages, _parents }) => {
-	const module = GetModule( _parents, _pages, _ID );
+const ComponentFooter = ({ _ID, _parseYaml, _relativeURL, _parents }) => {
+	const module = GetModule( _parents, _ID );
 
 	const MODULES = GetData({
 		yaml: _parseYaml,
@@ -76,13 +76,13 @@ const ComponentFooter = ({ _ID, _parseYaml, _relativeURL, _pages, _parents }) =>
 							<a className="icon icon--community" href={ `https://community.digital.gov.au/t/${ MODULES[ module ].ID }` }>Community discussion</a>
 						</li>
 						<li>
-							<a className="icon icon--github" href="https://github.com/govau/uikit/issues/new">Report an issue</a>
+							<a className="icon icon--github" href="https://github.com/govau/design-system-components/issues/new">Report an issue</a>
 						</li>
 						{
 							MODULES[ module ].status === 'published'
 								?
 									<li>
-										<a className="icon icon--github" href={`https://github.com/govau/uikit/tree/master/packages/${ MODULES[ module ].ID }`}>
+										<a className="icon icon--github" href={`https://github.com/govau/design-system-components/tree/master/packages/${ MODULES[ module ].ID }`}>
 											Code Contribution
 										</a>
 									</li>

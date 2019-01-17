@@ -1,4 +1,4 @@
-import { AUradio } from '../../_uikit/layout/control-input';
+import { AUradio } from '../../_auds/layout/control-input';
 import GetData from './../../helper/getData';
 import CodeSnippet from './../code-snippet';
 

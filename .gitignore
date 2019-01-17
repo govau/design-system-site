@@ -16,8 +16,8 @@ npm-debug.log
 # artifacts
 site/
 docs/
-**/_uikit/**
-000-uikit.js
+**/_auds/**
+000-auds.js
 src/assets/css/style.css
 src/assets/css/style.css.map
 src/assets/css/example.css

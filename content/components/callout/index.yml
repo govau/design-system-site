@@ -1,5 +1,4 @@
 layout: component/page
-module: callout
 pagetitle: Callout overview
 
 header:
@@ -14,6 +13,7 @@ sidebar:
 
 main:
   - default.md
+  - sr-heading.md
   - calendar.md
 
 footer:

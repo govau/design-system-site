@@ -1,4 +1,4 @@
-import AUbutton  from '../../_uikit/layout/buttons';
+import AUbutton  from '../../_auds/layout/buttons';
 import GetModule from '../../helper/getModule';
 
 import PropTypes from 'prop-types';
@@ -8,9 +8,9 @@ import React     from 'react';
 /**
  * The Discussion Intro component
  */
-const CalloutWithButton = ({ btntext, btnurl, btntype, _body, _parents, _pages, _ID }) => {
+const CalloutWithButton = ({ btntext, btnurl, btntype, _body, _parents, _ID }) => {
 
-	const module = GetModule( _parents, _pages, _ID );
+	const module = GetModule( _parents, _ID );
 
 	return (
 		<div className="calloutWithButton calloutWithButton__text">

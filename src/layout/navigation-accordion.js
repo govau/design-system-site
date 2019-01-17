@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import AUlinkList          from '../_uikit/layout/link-list';
+import AUlinkList          from '../_auds/layout/link-list';
 import { CreateLink }      from './navigation';
 
 
@@ -49,8 +49,7 @@ const NavigationAccordion = ({ navItems, _relativeURL, _ID, _pages }) => {
 								className={ `au-accordion__title js-accordion${ _isOpen ? '' : ' au-accordion--closed' }` }
 								aria-controls={ `accordion-${ title }` }
 								aria-expanded={ _isOpen ? 'true' : 'false' }
-								aria-selected={ _isOpen ? 'true' : 'false' }
-								onClick="return UIKIT.accordion.Toggle( this )">
+								onClick="return AUDS.accordion.Toggle( this )">
 									{ title } <span className={ `badge badge--${ title }` }>{ links.length }</span>
 							</a>
 							<div

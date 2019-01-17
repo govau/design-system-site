@@ -5,7 +5,7 @@ $AU-main-nav-breakpoint: sm;
 
 
 // UI-Kit
-@import '../_uikit/sass/uikit';
+@import '../_auds/sass/auds';
 
 
 // Our base styles
@@ -206,7 +206,7 @@ $AU-main-nav-breakpoint: sm;
 }
 
 .a11y-button {
-	color: #007099; // Hard coded as UIKIT is not overidden
+	color: #007099; // Hard coded as AUDS is not overidden
 	border-radius: 0;
 	border: none;
 	@include AU-fontgrid( xs );
@@ -216,7 +216,7 @@ $AU-main-nav-breakpoint: sm;
 }
 
 .a11y-button:focus {
-	outline: 3px solid #9263DE; // Hard coded as UIKIT is not overidden
+	outline: 3px solid #9263DE; // Hard coded as AUDS is not overidden
 	outline-offset: 2px;
 }
 

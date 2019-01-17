@@ -1,4 +1,4 @@
-import AUbutton            from '../../_uikit/layout/buttons';
+import AUbutton            from '../../_auds/layout/buttons';
 import Table               from '../table';
 import GetData             from '../../helper/getData';
 import ContributorStatus   from './contributor-status';

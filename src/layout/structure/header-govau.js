@@ -1,4 +1,4 @@
-import AUlinkList          from '../../_uikit/layout/link-list';
+import AUlinkList          from '../../_auds/layout/link-list';
 
 import PropTypes           from 'prop-types';
 import React, { Fragment } from 'react';
@@ -15,7 +15,6 @@ const HeaderGovAU = ({ publisher, publisher_url, left_title, left_content, right
 						className="headergovau__button js-header-accordion au-accordion--closed"
 						aria-controls="headergovau-accordion"
 						aria-expanded="false"
-						aria-selected="false"
 						onClick="return AU.accordion.Toggle( this )"
 					>
 						<span className="headergovau__text">
