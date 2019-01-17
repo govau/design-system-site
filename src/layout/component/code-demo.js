@@ -43,21 +43,20 @@ const CodeDemo = ({ iframe, iframeFullwidth, height = null, code, _body, _ID, _r
 								<div className="code-demo__example__code">
 									<div className="tabs">
 										<nav className="tabs-nav">
-											<ul className="au-link-list au-link-list--inline" role="tablist">
+											<div className="au-link-list au-link-list--inline" role="tablist">
 												{
 													code && code.map( ( section, i ) => (
-														<li key={ i } className={ i === 0 ? 'tab-item--active' : '' }>
-															<a
-																href={`#demo-${ i }-${ componentId }`}
-																aria-controls={`demo-${ i }-${ componentId }`}
-																role="tab"
-															>
-																{ Object.keys( section )[ 0 ] }
-															</a>
-														</li>
+														<button
+															key={ i }
+															className={ i === 0 ? ' tab-item--active' : '' }
+															aria-controls={`demo-${ i }-${ componentId }`}
+															role="tab"
+														>
+															{ Object.keys( section )[ 0 ] }
+														</button>
 													))
 												}
-											</ul>
+											</div>
 										</nav>
 										<div className="tab-contents">
 											{
