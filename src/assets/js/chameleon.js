@@ -4,6 +4,7 @@ var form = document.querySelector( '.customise__form' );
 var a11yInputs = document.querySelectorAll( '.a11y input' );
 var paletteInputs = document.querySelectorAll( '.palette input' );
 var customInputs = document.querySelectorAll( '.custom-color input' );
+var colorSquares = document.querySelectorAll( '.color-square' );
 
 var toggleColorInputButtons = document.querySelectorAll( '.toggle-color-input' );
 var shareButton = document.getElementById( 'btn-share' );
@@ -136,7 +137,7 @@ function ApplyQueryToIframe( query ){
 	var iframeQuery = template + query.replace( '&palette=on&a11y=on', '' );
 
 	// Need to fix this up
-	iframe.src = ( '/chameleon' + iframeQuery );
+	iframe.src = ( 'http://localhost:3000/chameleon' + iframeQuery );
 }
 
 
@@ -176,6 +177,19 @@ function PushValuesToURL( inputs ) {
 
 	// Replace DOM state with current color object
 	window.history.pushState( inputsState , "Chameleon", queryString );
+}
+
+/**
+ * ApplyColorsToSpan - Adds background color to color square inside the color text inputs
+ *
+ * @param {array}  customInputs - The inputs to select the color values from
+ */
+function ApplyColorsToColorSquare( customInputs ) {
+	for ( var i = 0; i < customInputs.length; i++ ) {
+		const color = customInputs[i].value;
+		const id = 'color-icon--'+ customInputs[i].id;
+		document.getElementById( id ).style.background = color;
+	}
 }
 
 
@@ -247,6 +261,7 @@ if( window.history.pushState ) {
 			timeout = setTimeout( function(){
 				PushValuesToURL( customInputs );
 				ApplyColors( window.location.search );
+				ApplyColorsToSpan( [ $this ] );
 			}, 400 );
 		});
 	}
@@ -254,6 +269,13 @@ if( window.history.pushState ) {
 // Show customise button when push state does not work
 else {
 	RemoveClass( buttonList, 'customise-btn--hide');
+}
+
+// Lock focus on the input related to the color square that was clicked
+for( var i = 0; i < colorSquares.length; i++ ) {
+	AddEvent( colorSquares[i], "click", function( event, $this ){
+		$this.previousSibling.focus();
+	} )
 }
 
 
@@ -269,3 +291,6 @@ else {
 	var defaultColors = ObjectToQueryString( colors );
 	ApplyColors( defaultColors );
 }
+
+
+ApplyColorsToSpan( customInputs );
