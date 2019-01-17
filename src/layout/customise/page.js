@@ -201,7 +201,7 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 					</form>
 				</div>
 				<div id="chameleon" role="region">
-					<div className="loading-overlay hide" role="alert"><span className="sronly">Loading your template</span></div>
+					<div className="loading-overlay hide"><span className="sronly">Loading your template</span></div>
 					<div className="au-card au-card--shadow">
 						<iframe title="Custom full page template" src={ iframeSrc } />
 					</div>
