@@ -27,8 +27,9 @@
 			@include AU-focus();
 			@include AU-space( padding, 0.75unit 1unit 0.75unit );
 			border: 0;
-			color: $AU-color-foreground-action;
 			@include AU-space( border-bottom, 0.25unit solid $AU-color-background-alt-shade );
+			color: $AU-color-foreground-action;
+			background: transparent;
 			text-decoration: none;
 			cursor: pointer;
 			display: inline-block;
