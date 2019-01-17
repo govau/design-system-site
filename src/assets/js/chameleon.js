@@ -137,7 +137,7 @@ function ApplyQueryToIframe( query ){
 	var iframeQuery = template + query.replace( '&palette=on&a11y=on', '' );
 
 	// Need to fix this up
-	iframe.src = ( 'http://localhost:3000/chameleon' + iframeQuery );
+	iframe.src = ( '/chameleon' + iframeQuery );
 }
 
 
