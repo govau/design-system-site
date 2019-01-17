@@ -185,11 +185,11 @@ function PushValuesToURL( inputs ) {
  * @param {array}  customInputs - The inputs to select the color values from
  */
 function ApplyColorsToColorSquare( customInputs ) {
-	for ( var i = 0; i < customInputs.length; i++ ) {
-		const color = customInputs[i].value;
-		const id = 'color-icon--'+ customInputs[i].id;
-		document.getElementById( id ).style.background = color;
-	}
+for ( var i = 0; i < customInputs.length; i++ ) {
+	const color = customInputs[i].value;
+	const id = 'color-icon--'+ customInputs[i].id;
+	document.getElementById( id ).style.background = color;
+}
 }
 
 
@@ -261,7 +261,7 @@ if( window.history.pushState ) {
 			timeout = setTimeout( function(){
 				PushValuesToURL( customInputs );
 				ApplyColors( window.location.search );
-				ApplyColorsToSpan( [ $this ] );
+				ApplyColorsToColorSquare( [ $this ] );
 			}, 400 );
 		});
 	}
@@ -293,4 +293,4 @@ else {
 }
 
 
-ApplyColorsToSpan( customInputs );
+ApplyColorsToColorSquare( customInputs );
