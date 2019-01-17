@@ -250,7 +250,9 @@ if( window.history.pushState ) {
 			timeout = setTimeout( function(){
 				PushValuesToURL( customInputs );
 				ApplyColors( window.location.search );
-				AddClass( loadingOverlay, 'hide' );				
+				setTimeout( function() {
+					AddClass( loadingOverlay, 'hide' );
+				}, 2000);
 			}, 400 );
 
 			RemoveClass( loadingOverlay, 'hide' );
