@@ -251,7 +251,7 @@ if( window.history.pushState ) {
 				PushValuesToURL( customInputs );
 				ApplyColors( window.location.search );
 				AddClass( loadingOverlay, 'hide' );				
-			}, 1000 );
+			}, 400 );
 
 			RemoveClass( loadingOverlay, 'hide' );
 		});
