@@ -1,6 +1,6 @@
 <div class="au-body spacing">
   <section class="au-accordion">
-    <a href="#accordion-default" class="au-accordion__title js-au-accordion" aria-controls="accordion-default" aria-expanded="true" aria-selected="true" onclick="return AU.accordion.Toggle( this )">Accordion title</a>
+    <a href="#accordion-default" class="au-accordion__title js-au-accordion" aria-controls="accordion-default" aria-expanded="true" onclick="return AU.accordion.Toggle( this )">Accordion title</a>
     <div class="au-accordion__body" id="accordion-default">
       <div class="au-accordion__body-wrapper">
         Here <a href="#url">is</a> some accordion content

@@ -1,5 +1,4 @@
 layout: component/page
-module: cards
 pagetitle: Cards overview
 
 header:

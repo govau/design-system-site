@@ -1,5 +1,4 @@
 layout: component/page
-module: page-alerts
 pagetitle: Page alerts overview
 
 header:

@@ -28,9 +28,11 @@ const TemplatePage = ({
 	const template = templates[ templateID ];
 
 	// Use the page title otherwise use the template name
+	let description = "Choose from any of the template below to get your project up and running faster. They’ll save your team time and resources and help get value to your users sooner.";
 	let title = pagetitle;
 	if( template ){
 		title = template.name;
+		description = template.description;
 	}
 
 	const headContent = `
@@ -49,15 +51,16 @@ const TemplatePage = ({
 <meta name="theme-color" content="#ffffff">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Digital Transformation Agency">
+<meta name="description" content="${ description }">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Australian Government Design System">
-<meta name="twitter:description" content="Australian Government Design System">
+<meta name="twitter:description" content="${ description }">
 <meta name="twitter:name" content="Australian Government Design System">
 <meta name="twitter:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:type" content="website">
 <meta property="og:title" content="${ title } - Australian Government Design System">
 <meta property="og:site_name" content="Australian Government Design System">
-<meta property="og:description" content="Australian Government Design System">
+<meta property="og:description" content="${ description }">
 <meta property="og:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:url" content="https://designsystem.gov.au">
 

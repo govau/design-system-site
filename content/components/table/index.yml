@@ -1,5 +1,4 @@
 layout: component/page
-module: table
 pagetitle: Table overview
 
 header:
