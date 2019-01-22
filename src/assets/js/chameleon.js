@@ -238,10 +238,7 @@ if( window.history.pushState ) {
 	// Add event handler to handle key press on form inputs.
 	var timeout;
 	for( var i = 0; i < customInputs.length; i++ ) {
-		AddEvent( customInputs[ i ], "keyup", function( event, $this ) {
-
-			// Show the overlay when key press starts
-			RemoveClass( loadingOverlay, 'loading-overlay--hidden' );
+		AddEvent( customInputs[ i ], "input", function( event, $this ) {
 
 			// If the user presses the key before the timeout fires
 			// clear the timeout and reset it
@@ -252,6 +249,8 @@ if( window.history.pushState ) {
 
 			// Create a new timeout that runs the functions after the time has ended
 			timeout = setTimeout( function(){
+				// Show the overlay when key press starts
+				RemoveClass( loadingOverlay, 'loading-overlay--hidden' );
 				PushValuesToURL( customInputs );
 				ApplyColors( window.location.search );
 			}, 400 );
