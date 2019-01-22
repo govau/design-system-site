@@ -164,8 +164,8 @@ function ApplyPalette( paletteId ){
 		var queryFromInputs = ObjectToQueryString( paletteValues );
 
 		ApplyColors( queryFromInputs );
-		ApplyQueryToIframe( queryFromInputs );
 		PushValuesToURL( customInputs );
+		ApplyColorsToColorSquare( customInputs );
 	}
 }
 
@@ -184,15 +184,23 @@ function PushValuesToURL( inputs ) {
 }
 
 /**
- * ApplyColorsToSpan - Adds background color to color square inside the color text inputs
+ * ApplyColorsToSpan - Adds background color to color-square inside the color text inputs
  *
- * @param {array}  customInputs - The inputs to select the color values from
+ * @param {array}  customInputs - The text inputs to select the color values from
  */
 function ApplyColorsToColorSquare( customInputs ) {
 	for ( var i = 0; i < customInputs.length; i++ ) {
 		var color = customInputs[ i ].value;
 		var colorSquare = document.getElementById( 'color-square--' + customInputs[ i ].id );
+
+		colorSquare.removeAttribute( 'style' );
+		RemoveClass( customInputs[ i ], 'au-text-input--invalid' );
+		// assign color from text input to color square
 		colorSquare.style.background = color;
+		
+		if( !colorSquare.style.background && customInputs[ i ].value !== "") {
+			AddClass( customInputs[ i ], 'au-text-input--invalid' );
+		}
 	}
 }
 
