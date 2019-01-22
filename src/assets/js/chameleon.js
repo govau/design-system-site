@@ -253,7 +253,7 @@ if( window.history.pushState ) {
 				RemoveClass( loadingOverlay, 'loading-overlay--hidden' );
 				PushValuesToURL( customInputs );
 				ApplyColors( window.location.search );
-			}, 400 );
+			}, 100 );
 		});
 	}
 
