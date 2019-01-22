@@ -131,7 +131,7 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 					<div className="form-item" key={ i }>
 						<label htmlFor={ colorID }>{ colorName }</label>
 						<AUtextInput aria-controls="chameleon" id={ colorID } name={ colorID } block></AUtextInput>
-						<span className="color-square" id={colorID}></span>
+						<span className="color-square" id={ `color-square--${colorID}` }></span>
 					</div>
 				) )
 			}

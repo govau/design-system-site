@@ -161,7 +161,7 @@
 
 	// Adjust padding inside text inputs
 	.au-text-input {
-		@include AU-space( padding, 0.25unit 0.5unit );
+		@include AU-space( padding, 0.25unit 2.25unit 0.25unit 0.5unit );
 	}
 
 	* + .form-item {

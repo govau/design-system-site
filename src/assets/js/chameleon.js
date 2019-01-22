@@ -189,11 +189,11 @@ function PushValuesToURL( inputs ) {
  * @param {array}  customInputs - The inputs to select the color values from
  */
 function ApplyColorsToColorSquare( customInputs ) {
-for ( var i = 0; i < customInputs.length; i++ ) {
-	const color = customInputs[i].value;
-	const id = 'color-icon--'+ customInputs[i].id;
-	document.getElementById( id ).style.background = color;
-}
+	for ( var i = 0; i < customInputs.length; i++ ) {
+		var color = customInputs[ i ].value;
+		var colorSquare = document.getElementById( 'color-square--' + customInputs[ i ].id );
+		colorSquare.style.background = color;
+	}
 }
 
 
@@ -267,6 +267,7 @@ if( window.history.pushState ) {
 				RemoveClass( loadingOverlay, 'loading-overlay--hidden' );
 				PushValuesToURL( customInputs );
 				ApplyColors( window.location.search );
+				ApplyColorsToColorSquare( [ $this ] );
 			}, 100 );
 		});
 	}
