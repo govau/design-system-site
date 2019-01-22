@@ -21,6 +21,10 @@
 		&:hover {
 			visibility: visible;
 		}
+
+		.ie8 & {
+			margin-left: 0;
+		}
 	}
 
 	.icon:before {

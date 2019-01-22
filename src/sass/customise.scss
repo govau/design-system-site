@@ -106,7 +106,7 @@
 			display: inline;
 		}
 
-		
+
 	}
 
 	.au-fieldset {
@@ -204,5 +204,43 @@
 @supports ( filter: url( "filters.svg#deuteranopia" ) ){
 	.a11y {
 		display: block;
+	}
+}
+
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.loading-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
+	background-color: rgba( 255, 255, 255, 0.8 );
+
+	&:after {
+		@include AU-space( margin, -1.5unit );
+		@include AU-space( width, 3unit );
+		@include AU-space( height, 3unit );
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		content: " ";
+		display: block;
+		background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" stroke="#{ $AU-color-foreground-action }" viewBox="-2 -2 42 42">' +
+		'<g fill="none" fill-rule="evenodd" stroke-width="4" transform="translate(1 1)">' +
+		'<circle cx="18" cy="18" r="18" stroke-opacity=".5"/>' +
+		'<path d="M36 18C36 8 28 0 18 0"></path></g></svg>');
+		animation: rotate 1.5s linear infinite;
+	}
+
+	&.loading-overlay--hidden {
+		display: none;
 	}
 }
