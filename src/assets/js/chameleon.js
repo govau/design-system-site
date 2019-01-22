@@ -240,26 +240,31 @@ if( window.history.pushState ) {
 	for( var i = 0; i < customInputs.length; i++ ) {
 		AddEvent( customInputs[ i ], "keyup", function( event, $this ) {
 
+			// Show the overlay when key press starts
+			RemoveClass( loadingOverlay, 'loading-overlay--hidden' );
+
 			// If the user presses the key before the timeout fires
 			// clear the timeout and reset it
 			if( timeout ) {
 				clearTimeout( timeout );
 				timeout = null;
-				RemoveClass( loadingOverlay, 'hide' );
 			}
 
 			// Create a new timeout that runs the functions after the time has ended
 			timeout = setTimeout( function(){
 				PushValuesToURL( customInputs );
 				ApplyColors( window.location.search );
-				setTimeout( function() {
-					AddClass( loadingOverlay, 'hide' );
-				}, 2000);
 			}, 400 );
-
-			RemoveClass( loadingOverlay, 'hide' );
 		});
 	}
+
+	// When the iframe is done loading
+	AddEvent( iframe, 'load', function( event, $this ) {
+		// If overlay is NOT hidden then hide loading overlay
+		if( !HasClass( loadingOverlay, 'loading-overlay--hidden' ) ){
+			AddClass( loadingOverlay, 'loading-overlay--hidden' );
+		}
+	});
 }
 // Show customise button when push state does not work
 else {
