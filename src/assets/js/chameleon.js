@@ -5,13 +5,15 @@ var form = document.querySelector( '.customise__form' );
 var a11yInputs = document.querySelectorAll( '.a11y input' );
 var paletteInputs = document.querySelectorAll( '.palette input' );
 var customInputs = document.querySelectorAll( '.custom-color input' );
+var colorSquares = document.querySelectorAll( '.color-square' );
 
 var toggleColorInputButtons = document.querySelectorAll( '.toggle-color-input' );
 var shareButton = document.getElementById( 'btn-share' );
 var buttonList = document.querySelector( '.customise__form .au-btn__list' );
-var loadingOverlay = document.querySelector( '.loading-overlay' );
+var loadingToast = document.querySelector( '.au-toast' );
 
 
+// Global variables
 var templateName = window.location.pathname.split( '/' )[ 2 ];
 
 
@@ -124,8 +126,6 @@ function ApplyColors( queryString ) {
 			input.value = query[ key ];
 		}
 	}
-
-	ApplyQueryToIframe( queryString );
 }
 
 
@@ -162,9 +162,11 @@ function ApplyPalette( paletteId ){
 	if( paletteValues ) {
 		var queryFromInputs = ObjectToQueryString( paletteValues );
 
+		ShowToast( loadingToast );
 		ApplyColors( queryFromInputs );
 		ApplyQueryToIframe( queryFromInputs );
 		PushValuesToURL( customInputs );
+		ApplyColorsToColorSquare( customInputs );
 	}
 }
 
@@ -175,11 +177,34 @@ function ApplyPalette( paletteId ){
  * @param {array}  inputs - The inputs to push the state from
  */
 function PushValuesToURL( inputs ) {
-	var inputsState = GetTextInputValues( inputs );
-	var queryString = ObjectToQueryString( inputsState );
+	if( window.history.pushState ) {
+		var inputsState = GetTextInputValues( inputs );
+		var queryString = ObjectToQueryString( inputsState );
 
-	// Replace DOM state with current color object
-	window.history.pushState( inputsState , "Chameleon", queryString );
+		// Replace DOM state with current color object
+		window.history.pushState( inputsState , "Chameleon", queryString );
+	}
+}
+
+/**
+ * ApplyColorsToColorSquare - Adds background color to color square inside the color text inputs
+ *
+ * @param {array}  customInputs - The text inputs to select the color values from
+ */
+function ApplyColorsToColorSquare( customInputs ) {
+	for ( var i = 0; i < customInputs.length; i++ ) {
+		var color = customInputs[ i ].value;
+		var colorSquare = document.getElementById( 'color-square--' + customInputs[ i ].id );
+
+		colorSquare.removeAttribute( 'style' );
+		RemoveClass( customInputs[ i ], 'au-text-input--invalid' );
+		// assign color from text input to color square
+		colorSquare.style.background = color;
+
+		if( !colorSquare.style.background && customInputs[ i ].value !== "") {
+			AddClass( customInputs[ i ], 'au-text-input--invalid' );
+		}
+	}
 }
 
 
@@ -249,26 +274,35 @@ if( window.history.pushState ) {
 
 			// Create a new timeout that runs the functions after the time has ended
 			timeout = setTimeout( function(){
-				// Show the overlay when key press starts
-				RemoveClass( loadingOverlay, 'loading-overlay--hidden' );
+				ShowToast( loadingToast );
 				PushValuesToURL( customInputs );
 				ApplyColors( window.location.search );
+				ApplyQueryToIframe( window.location.search );
+				ApplyColorsToColorSquare( [ $this ] );
 			}, 100 );
 		});
 	}
-
-	// When the iframe is done loading
-	AddEvent( iframe, 'load', function( event, $this ) {
-		// If overlay is NOT hidden then hide loading overlay
-		if( !HasClass( loadingOverlay, 'loading-overlay--hidden' ) ){
-			AddClass( loadingOverlay, 'loading-overlay--hidden' );
-		}
-	});
 }
 // Show customise button when push state does not work
 else {
 	RemoveClass( buttonList, 'customise-btn--hide');
 }
+
+// Lock focus on the input related to the color square that was clicked
+for( var i = 0; i < colorSquares.length; i++ ) {
+	AddEvent( colorSquares[i], "click", function( event, $this ){
+		$this.previousSibling.focus();
+	} )
+}
+
+
+// When the page is loaded, check for additional iframe loads
+window.onload = function(){
+	AddEvent( iframe, 'load', function( event, $this ) {
+		HideToast( loadingToast );
+	});
+}
+
 
 
 /**
@@ -283,3 +317,5 @@ else {
 	var defaultColors = ObjectToQueryString( colors );
 	ApplyColors( defaultColors );
 }
+
+ApplyColorsToColorSquare( customInputs );
