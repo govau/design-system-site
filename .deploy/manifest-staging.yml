@@ -4,6 +4,7 @@ memory: 256M
 instances: 1
 env:
   NODE_MODULES_CACHE: false
+  NODE_ENV: staging
 path: ./
 command: node server/index.js staging
 
