@@ -203,7 +203,11 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 					</form>
 				</div>
 				<div id="chameleon" role="region">
-					<div className="loading-toast loading-toast--hidden">Loading template with new colours</div>
+					<div className="au-toast au-toast--hidden">
+						<div className="au-toast__content au-body au-body--dark">
+							<p>Loading template with new colours.</p>
+						</div>
+					</div>
 					<div className="au-card au-card--shadow">
 						<iframe title="Custom full page template" src={ iframeSrc } />
 					</div>

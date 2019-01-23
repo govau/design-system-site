@@ -1,7 +1,9 @@
 // This is used for our customise pages
 
+// Variable overides
+@import 'base/variables';
 
-// UI-Kit
+// Australian Government Design System
 @import '../_auds/sass/auds';
 
 
@@ -17,6 +19,7 @@
 @import 'components/header-bar';
 @import 'components/svg-filters';
 @import 'components/icons';
+@import 'components/toast';
 
 
 .customise-page {
@@ -204,24 +207,5 @@
 @supports ( filter: url( "filters.svg#deuteranopia" ) ){
 	.a11y {
 		display: block;
-	}
-}
-
-
-.loading-toast {
-	@include AU-space( left, 1unit );
-	@include AU-space( right, 1unit );
-	@include AU-space( top, 1unit );
-	@include AU-space( padding, 1unit );
-	position: absolute;
-	font-family: $AU-font;
-	border-radius: $AU-border-radius;
-	z-index: 10;
-	background-color: $AU-color-foreground-text;
-	color: $AU-color-background;
-	box-shadow: 0 2px 4px rgba( 0, 0, 0, 0.3 );
-
-	&.loading-toast--hidden {
-		display: none;
 	}
 }

@@ -10,9 +10,10 @@ var colorSquares = document.querySelectorAll( '.color-square' );
 var toggleColorInputButtons = document.querySelectorAll( '.toggle-color-input' );
 var shareButton = document.getElementById( 'btn-share' );
 var buttonList = document.querySelector( '.customise__form .au-btn__list' );
-var loadingOverlay = document.querySelector( '.loading-toast' );
+var loadingToast = document.querySelector( '.au-toast' );
 
 
+// Global variables
 var templateName = window.location.pathname.split( '/' )[ 2 ];
 
 
@@ -125,8 +126,6 @@ function ApplyColors( queryString ) {
 			input.value = query[ key ];
 		}
 	}
-
-	ApplyQueryToIframe( queryString );
 }
 
 
@@ -163,8 +162,9 @@ function ApplyPalette( paletteId ){
 	if( paletteValues ) {
 		var queryFromInputs = ObjectToQueryString( paletteValues );
 
-		RemoveClass( loadingOverlay, 'loading-toast--hidden' );
+		ShowToast( loadingToast );
 		ApplyColors( queryFromInputs );
+		ApplyQueryToIframe( queryFromInputs );
 		PushValuesToURL( customInputs );
 		ApplyColorsToColorSquare( customInputs );
 	}
@@ -274,10 +274,10 @@ if( window.history.pushState ) {
 
 			// Create a new timeout that runs the functions after the time has ended
 			timeout = setTimeout( function(){
-				// Show the overlay when iframe src changes
-				RemoveClass( loadingOverlay, 'loading-toast--hidden' );
+				ShowToast( loadingToast );
 				PushValuesToURL( customInputs );
 				ApplyColors( window.location.search );
+				ApplyQueryToIframe( window.location.search );
 				ApplyColorsToColorSquare( [ $this ] );
 			}, 100 );
 		});
@@ -296,13 +296,13 @@ for( var i = 0; i < colorSquares.length; i++ ) {
 }
 
 
-// When the iframe is done loading
-AddEvent( iframe, 'load', function( event, $this ) {
-	// If overlay is NOT hidden then hide loading overlay
-	if( !HasClass( loadingOverlay, 'loading-toast--hidden' ) ){
-		AddClass( loadingOverlay, 'loading-toast--hidden' );
-	}
-});
+// When the page is loaded, check for additional iframe loads
+window.onload = function(){
+	AddEvent( iframe, 'load', function( event, $this ) {
+		HideToast( loadingToast );
+	});
+}
+
 
 
 /**
