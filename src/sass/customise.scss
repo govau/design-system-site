@@ -208,39 +208,20 @@
 }
 
 
-@keyframes rotate {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-.loading-overlay {
+.loading-toast {
+	@include AU-space( left, 1unit );
+	@include AU-space( right, 1unit );
+	@include AU-space( top, 1unit );
+	@include AU-space( padding, 1unit );
 	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	font-family: $AU-font;
+	border-radius: $AU-border-radius;
 	z-index: 10;
-	background-color: rgba( 255, 255, 255, 0.8 );
+	background-color: $AU-color-foreground-text;
+	color: $AU-color-background;
+	box-shadow: 0 2px 4px rgba( 0, 0, 0, 0.3 );
 
-	&:after {
-		@include AU-space( margin, -1.5unit );
-		@include AU-space( width, 3unit );
-		@include AU-space( height, 3unit );
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		content: " ";
-		display: block;
-		background-image: AU-svguri('<svg xmlns="http://www.w3.org/2000/svg" stroke="#{ $AU-color-foreground-action }" viewBox="-2 -2 42 42">' +
-		'<g fill="none" fill-rule="evenodd" stroke-width="4" transform="translate(1 1)">' +
-		'<circle cx="18" cy="18" r="18" stroke-opacity=".5"/>' +
-		'<path d="M36 18C36 8 28 0 18 0"></path></g></svg>');
-		animation: rotate 1.5s linear infinite;
-	}
-
-	&.loading-overlay--hidden {
+	&.loading-toast--hidden {
 		display: none;
 	}
 }

@@ -10,7 +10,7 @@ var colorSquares = document.querySelectorAll( '.color-square' );
 var toggleColorInputButtons = document.querySelectorAll( '.toggle-color-input' );
 var shareButton = document.getElementById( 'btn-share' );
 var buttonList = document.querySelector( '.customise__form .au-btn__list' );
-var loadingOverlay = document.querySelector( '.loading-overlay' );
+var loadingOverlay = document.querySelector( '.loading-toast' );
 
 
 var templateName = window.location.pathname.split( '/' )[ 2 ];
@@ -163,9 +163,10 @@ function ApplyPalette( paletteId ){
 	if( paletteValues ) {
 		var queryFromInputs = ObjectToQueryString( paletteValues );
 
+		RemoveClass( loadingOverlay, 'loading-toast--hidden' );
 		ApplyColors( queryFromInputs );
-		ApplyQueryToIframe( queryFromInputs );
 		PushValuesToURL( customInputs );
+		ApplyColorsToColorSquare( customInputs );
 	}
 }
 
@@ -176,15 +177,17 @@ function ApplyPalette( paletteId ){
  * @param {array}  inputs - The inputs to push the state from
  */
 function PushValuesToURL( inputs ) {
-	var inputsState = GetTextInputValues( inputs );
-	var queryString = ObjectToQueryString( inputsState );
+	if( window.history.pushState ) {
+		var inputsState = GetTextInputValues( inputs );
+		var queryString = ObjectToQueryString( inputsState );
 
-	// Replace DOM state with current color object
-	window.history.pushState( inputsState , "Chameleon", queryString );
+		// Replace DOM state with current color object
+		window.history.pushState( inputsState , "Chameleon", queryString );
+	}
 }
 
 /**
- * ApplyColorsToSpan - Adds background color to color square inside the color text inputs
+ * ApplyColorsToColorSquare - Adds background color to color square inside the color text inputs
  *
  * @param {array}  customInputs - The inputs to select the color values from
  */
@@ -263,22 +266,14 @@ if( window.history.pushState ) {
 
 			// Create a new timeout that runs the functions after the time has ended
 			timeout = setTimeout( function(){
-				// Show the overlay when key press starts
-				RemoveClass( loadingOverlay, 'loading-overlay--hidden' );
+				// Show the overlay when iframe src changes
+				RemoveClass( loadingOverlay, 'loading-toast--hidden' );
 				PushValuesToURL( customInputs );
 				ApplyColors( window.location.search );
 				ApplyColorsToColorSquare( [ $this ] );
 			}, 100 );
 		});
 	}
-
-	// When the iframe is done loading
-	AddEvent( iframe, 'load', function( event, $this ) {
-		// If overlay is NOT hidden then hide loading overlay
-		if( !HasClass( loadingOverlay, 'loading-overlay--hidden' ) ){
-			AddClass( loadingOverlay, 'loading-overlay--hidden' );
-		}
-	});
 }
 // Show customise button when push state does not work
 else {
@@ -293,6 +288,15 @@ for( var i = 0; i < colorSquares.length; i++ ) {
 }
 
 
+// When the iframe is done loading
+AddEvent( iframe, 'load', function( event, $this ) {
+	// If overlay is NOT hidden then hide loading overlay
+	if( !HasClass( loadingOverlay, 'loading-toast--hidden' ) ){
+		AddClass( loadingOverlay, 'loading-toast--hidden' );
+	}
+});
+
+
 /**
  * ------------------------------------------------------------
  * On page load
@@ -305,6 +309,5 @@ else {
 	var defaultColors = ObjectToQueryString( colors );
 	ApplyColors( defaultColors );
 }
-
 
 ApplyColorsToColorSquare( customInputs );
