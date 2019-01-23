@@ -1,4 +1,4 @@
-var isStaging = document.querySelector( '.chameleon-staging' );
+var isCloud = document.querySelector( '.chameleon-staging' );
 var iframe = document.querySelector( '#chameleon iframe' );
 var form = document.querySelector( '.customise__form' );
 
@@ -139,7 +139,7 @@ function ApplyQueryToIframe( query ){
 	var iframeQuery = template + query.replace( '&palette=on&a11y=on', '' );
 
 	// Need to fix this up
-	var iframeSrc = isStaging ? "http://localhost:3000/chameleon" : "/chameleon";
+	var iframeSrc = isCloud ? "http://localhost:3000/chameleon" : "/chameleon";
 	iframe.src = iframeSrc + iframeQuery;
 }
 

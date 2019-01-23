@@ -27,8 +27,8 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 
 	const description = `Customise ${ template.name.toLowerCase() } page template with different colour blindness filters, custom colour schemes and preset palettes.`;
 
-	const isProduction = process.env.NODE_ENV === "production";
-	const iframeSrc = isProduction
+	const isCloud = process.env.NODE_ENV === "production" || process.env.NODE_ENV === "staging";
+	const iframeSrc = isCloud
 		? "/chameleon"
 		: "http://localhost:3000/chameleon";
 
@@ -165,7 +165,7 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 	return (
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }} />
-		<body className={ `au-grid live-demo customise-page ${ isProduction ? '' : 'chameleon-staging' }` }>
+		<body className={ `au-grid live-demo customise-page ${ isCloud ? '' : 'chameleon-staging' }` }>
 			{ a11yFilter }
 			<header className="header__bar">
 				<AUdirectionLink
