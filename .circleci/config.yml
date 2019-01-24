@@ -109,15 +109,33 @@ workflows:
   version: 2
   deploy-designsystem:
     jobs:
-      - build-and-test-ds
+      - build-and-test-ds:
+          filters:
+            branches:
+              only: develop # and only on the `develop` branch
+          environment:
+            NODE_ENV: development
+
+      - build-and-test-ds:
+          filters:
+            branches:
+              only: master # and only on the `develop` branch
+          environment:
+            NODE_ENV: production
+
+      - build-and-test-ds:
+          filters:
+            branches:
+              only: /.*-test/ # and only on the branches that end with `-test`
+          environment:
+            NODE_ENV: testing
+
       - deploy-staging: # run deploy staging
           requires:
             - build-and-test-ds
           filters:
             branches:
               only: develop # and only on the `develop` branch
-          environment:
-            NODE_ENV: development
 
       - deploy-prod: # run deploy production
           requires:
@@ -125,8 +143,6 @@ workflows:
           filters:
             branches:
               only: master # and only on the `master` branch
-          environment:
-            NODE_ENV: production
 
       - deploy-test: # run test branches
           requires:
@@ -134,8 +150,6 @@ workflows:
           filters:
             branches:
               only: /.*-test/ # and only on the branches that end with `-test`
-          environment:
-            NODE_ENV: test
 
   nightly-rebuild: # rerun a task via scheduling, all times are UTC https://circleci.com/docs/2.0/workflows/#scheduling-a-workflow
     triggers:
