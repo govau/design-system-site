@@ -1,9 +1,11 @@
 # Node CircleCI 2.0 configuration file to DTA cloud 2.0
 version: 2
 jobs:
-    build-and-test-ds:
+    build-and-test-ds-prod:
         docker:
-            - image: circleci/node:8.12.0
+            - image: circleci/node:10.14.0
+        environment:
+            NODE_ENV: production
         working_directory: ~/designsystem
         steps:
             - checkout
@@ -31,6 +33,40 @@ jobs:
                   - content/
                   - package.json
                   - package-lock.json
+
+
+    build-and-test-ds-dev:
+            docker:
+                - image: circleci/node:10.14.0
+            environment:
+                NODE_ENV: development
+            working_directory: ~/designsystem
+            steps:
+                - checkout
+                - restore_cache:
+                    name: Restore node_modules from cache
+                    keys:
+                      - v2-npm-deps-{{ checksum "package.json" }}
+                - run:
+                    name: Install Nodejs dependencies
+                    command: npm install
+                - save_cache:
+                    name: Save node_modules to cache
+                    key: v2-npm-deps-{{ checksum "package.json" }}
+                    paths:
+                      - node_modules
+                - run:
+                    name: Generate static HTML!
+                    command: npm run build
+                - persist_to_workspace:
+                    root: ~/designsystem
+                    paths:
+                      - site/
+                      - .deploy/
+                      - server/
+                      - content/
+                      - package.json
+                      - package-lock.json
 
 
     deploy-staging:
@@ -109,24 +145,25 @@ workflows:
   version: 2
   deploy-designsystem:
     jobs:
-      - build-and-test-ds
+      - build-and-test-ds-dev
+      - build-and-test-ds-prod
       - deploy-staging: # run deploy staging
           requires:
-            - build-and-test-ds
+            - build-and-test-ds-dev
           filters:
             branches:
               only: develop # and only on the `develop` branch
 
       - deploy-prod: # run deploy production
           requires:
-            - build-and-test-ds
+            - build-and-test-ds-prod
           filters:
             branches:
               only: master # and only on the `master` branch
 
       - deploy-test: # run test branches
           requires:
-            - build-and-test-ds
+            - build-and-test-ds-dev
           filters:
             branches:
               only: /.*-test/ # and only on the branches that end with `-test`
