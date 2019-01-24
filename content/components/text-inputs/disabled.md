@@ -23,6 +23,6 @@ code:
       <AUtextInput disabled />
 ---
 
-## Disabled
+## Disabled text inputs
 
 Disabled input elements are unusable and can not be clicked. This prevents a user from interacting with the input element until another action is complete. Disabled input elements in a form will not be submitted.
