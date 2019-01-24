@@ -12,13 +12,13 @@ jobs:
             - restore_cache:
                 name: Restore node_modules from cache
                 keys:
-                  - v2-npm-deps-{{ checksum "package.json" }}
+                  - v3-npm-deps-{{ checksum "package.json" }}
             - run:
                 name: Install Nodejs dependencies
                 command: npm install
             - save_cache:
                 name: Save node_modules to cache
-                key: v2-npm-deps-{{ checksum "package.json" }}
+                key: v3-npm-deps-{{ checksum "package.json" }}
                 paths:
                   - node_modules
             - run:
@@ -46,13 +46,13 @@ jobs:
                 - restore_cache:
                     name: Restore node_modules from cache
                     keys:
-                      - v2-npm-deps-{{ checksum "package.json" }}
+                      - v3-npm-deps-{{ checksum "package.json" }}
                 - run:
                     name: Install Nodejs dependencies
                     command: npm install
                 - save_cache:
                     name: Save node_modules to cache
-                    key: v2-npm-deps-{{ checksum "package.json" }}
+                    key: v3-npm-deps-{{ checksum "package.json" }}
                     paths:
                       - node_modules
                 - run:
@@ -145,22 +145,24 @@ workflows:
   version: 2
   deploy-designsystem:
     jobs:
+      - build-and-test-ds-dev
+      - build-and-test-ds-prod
       - deploy-staging: # run deploy staging
-          jobs:
+          requires:
             - build-and-test-ds-dev
           filters:
             branches:
               only: develop # and only on the `develop` branch
 
       - deploy-prod: # run deploy production
-          jobs:
+          requires:
             - build-and-test-ds-prod
           filters:
             branches:
               only: master # and only on the `master` branch
 
       - deploy-test: # run test branches
-          jobs:
+          requires:
             - build-and-test-ds-dev
           filters:
             branches:
