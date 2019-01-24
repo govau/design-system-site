@@ -3,25 +3,25 @@ layout: component/code-demo
 iframe: examples/example-disabled
 code:
   - HTML: |
-      <label class="au-control-input au-control-input--small">
-        <input class="au-control-input__input" type="radio" name="radio-ex">
+      <label class="au-control-input">
+        <input class="au-control-input__input" type="checkbox" name="checkbox-ex">
         <span class="au-control-input__text">Phone</span>
       </label>
-      <label class="au-control-input au-control-input--dark au-control-input--small">
-        <input class="au-control-input__input" type="radio" name="radio-ex" checked>
+      <label class="au-control-input au-control-input--dark">
+        <input class="au-control-input__input" type="checkbox" name="checkbox-ex" disabled>
         <span class="au-control-input__text">Tablet</span>
       </label>
   - React: |
       /*
-        Light:  <AUradio>
-        Dark:   <AUradio dark>
+        Light:  <AUcheckbox>
+        Dark:   <AUcheckbox dark>
       */
 
-      import { AUradio } from '@gov.au/control-input';
+      import { AUcheckbox } from '@gov.au/control-input';
 
-      <AUradio label="Phone"  name="radio-ex" />
-      <AUradio label="Tablet" name="radio-ex" defaultChecked />
+      <AUcheckbox label="Phone"  name="checkbox-ex" />
+      <AUcheckbox label="Tablet" name="checkbox-ex" disabled />
 ---
 ## Disabled control inputs
 
-These are smaller versions of screen inputs.
+Disabled control inputs can be used to indicate inputs that are no longer valid or expired.
