@@ -5,17 +5,15 @@ iframeFullwidth: true
 code:
   - HTML: |
       <!--
-        Light:  <input class="au-text-input au-text-input--valid">
-        Dark:   <input class="au-text-input au-text-input--valid au-text-input--dark">
-        Invalid:  <input class="au-text-input au-text-input--invalid">
+        Valid:  <input class="au-text-input au-text-input--valid">
+        Invalid:   <input class="au-text-input au-text-input--invalid">
       -->
 
       <label for="text-input">label text</label>
       <input class="au-text-input au-text-input--valid" name="text-input" id="text-input" type="text" value="value">
   - React: |
       /*
-        Light:  <AUtextInput>
-        Dark:   <AUtextInput dark>
+        Valid: <AUtextInput status="valid" />
         Invalid: <AUtextInput status="invalid" />
       */
 

@@ -10,7 +10,7 @@ code:
       -->
 
       <label for="text-input">label text</label>
-      <input class="au-text-input" name="text-input" id="text-input" type="text" value="value">
+      <input class="au-text-input" name="text-input" id="text-input" type="text" value="value" disabled>
   - React: |
       /*
         Light:  <AUtextInput>
