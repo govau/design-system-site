@@ -27,6 +27,6 @@ code:
       <AUradio label="Phone" status="valid" name="radio-ex" />
       <AUradio label="Tablet" status="invalid" name="radio-ex" defaultChecked />
 ---
-## Valid invalid
+## Valid and invalid states
 
-Add highlighting for to indicate valid or invalid control inputs. 
+Add highlighting around the control inputs to indicate valid or invalid selections.

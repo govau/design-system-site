@@ -24,4 +24,4 @@ code:
 ---
 ## Small inputs
 
-These are smaller versions of screen inputs.
+These are smaller versions of control inputs.
