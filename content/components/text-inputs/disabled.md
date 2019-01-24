@@ -7,7 +7,6 @@ code:
       <!--
         Light:  <input class="au-text-input" disabled>
         Dark:   <input class="au-text-input au-text-input--dark" disabled>
-
       -->
 
       <label for="text-input">label text</label>
