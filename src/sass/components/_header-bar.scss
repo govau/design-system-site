@@ -1,7 +1,7 @@
 // Live demo header bar
 .header__bar {
 	@include AU-space( padding, 0 1unit );
-	background-color: #1D1D1D;
+	background-color: #1D1D1D; // Hard coded as the AUDS colours are not overridden
 
 	.au-direction-link {
 		@include AU-space( padding, 0.5unit 0 );

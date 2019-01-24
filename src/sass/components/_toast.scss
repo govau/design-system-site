@@ -1,0 +1,47 @@
+.au-toast {
+	@include AU-space( margin, 0 1unit );
+	@include AU-space( top, 1unit );
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	text-align: center;
+
+	// Animation defaults
+	transition:
+		opacity 0.15s cubic-bezier( 0, 0, 0.2, 1),
+		transform .15s cubic-bezier( 0, 0, 0.2, 1);
+	opacity: 1;
+	transform: translateY( 0% );
+}
+
+.au-toast.au-toast--animating {
+	transform: translateY( -100% );
+	opacity: 0;
+	transition:
+		opacity 0.15s cubic-bezier( 0, 0, 0.2, 1) 0.3s,
+		transform .15s cubic-bezier( 0, 0, 0.2, 1) 0.3s;
+}
+
+.au-toast.au-toast--hidden {
+	transform: translateY( -100% );
+	opacity: 0;
+	display: none;
+}
+
+
+// Content inside the toast
+.au-toast__content {
+	@include AU-fontgrid( xs );
+	@include AU-space( padding, 1unit );
+	text-align: left;
+
+	display: inline-block;
+	border-radius: $AU-border-radius;
+	box-shadow: 0 2px 4px rgba( 0, 0, 0, 0.3 );
+
+	@include AU-media( sm ){
+		@include AU-fontgrid( sm );
+		@include AU-space( padding, 1unit 2unit );
+	}
+}

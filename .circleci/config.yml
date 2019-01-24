@@ -6,6 +6,11 @@ jobs:
             - image: circleci/node:8.12.0
         working_directory: ~/designsystem
         steps:
+            - run:
+                name: Set environment variables for build
+                command: |
+                  echo 'export NODE_ENV=$CIRCLE_BRANCH' >> $BASH_ENV
+                  source $BASH_ENV
             - checkout
             - restore_cache:
                 name: Restore node_modules from cache
@@ -101,7 +106,7 @@ jobs:
               cd deploy/
               cf login -a $CF_API_STAGING -o $CF_ORG_STAGING -s $CF_SPACE_STAGING -u $CF_USER_STAGING -p $CF_PASSWORD_STAGING
               cf zero-downtime-push designsystem-$CIRCLE_BRANCH -f manifest-testing.yml
-            
+
 
 # OUR WORKFLOW
 # this is where we orchestrate our jobs
