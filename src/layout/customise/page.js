@@ -27,7 +27,7 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 
 	const description = `Customise ${ template.name.toLowerCase() } page template with different colour blindness filters, custom colour schemes and preset palettes.`;
 
-	const isCloud = process.env.NODE_ENV === "production" || process.env.NODE_ENV === "development";
+	const isCloud = process.env.NODE_ENV === "master" || process.env.NODE_ENV === "develop";
 	const iframeSrc = isCloud
 		? "/chameleon"
 		: "http://localhost:3000/chameleon";
