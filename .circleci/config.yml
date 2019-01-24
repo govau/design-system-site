@@ -6,7 +6,7 @@ jobs:
             - image: circleci/node:8.12.0
         working_directory: ~/designsystem
         steps:
-            - export NODE_ENV={{ CIRCLE_BRANCH }}
+            - export NODE_ENV=$CIRCLE_BRANCH
             - checkout
             - restore_cache:
                 name: Restore node_modules from cache
