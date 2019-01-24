@@ -17,8 +17,8 @@ main:
   - checkbox-block.md
   - radio-block.md
   - valid-invalid.md
-  - small.md
   - disabled.md
+  - small.md
 
 footer:
   - /_shared/footer.md

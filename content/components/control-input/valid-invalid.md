@@ -4,8 +4,8 @@ iframe: examples/example-valid-invalid
 code:
   - HTML: |
       <!--
-        Valid:  <label class="au-control-input au-control-input--valid">
-        Invalid:   <label class="au-control-input au-control-input--invalid">
+        Valid:    <label class="au-control-input au-control-input--valid">
+        Invalid:  <label class="au-control-input au-control-input--invalid">
       -->
 
       <label class="au-control-input au-control-input--valid">
@@ -29,4 +29,4 @@ code:
 ---
 ## Valid and invalid states
 
-Add highlighting around the control inputs to indicate valid or invalid selections.
+Add a border around the control inputs to indicate valid or invalid selections.
