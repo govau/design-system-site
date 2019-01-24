@@ -145,24 +145,22 @@ workflows:
   version: 2
   deploy-designsystem:
     jobs:
-      - build-and-test-ds-dev
-      - build-and-test-ds-prod
       - deploy-staging: # run deploy staging
-          requires:
+          jobs:
             - build-and-test-ds-dev
           filters:
             branches:
               only: develop # and only on the `develop` branch
 
       - deploy-prod: # run deploy production
-          requires:
+          jobs:
             - build-and-test-ds-prod
           filters:
             branches:
               only: master # and only on the `master` branch
 
       - deploy-test: # run test branches
-          requires:
+          jobs:
             - build-and-test-ds-dev
           filters:
             branches:
