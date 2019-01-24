@@ -27,8 +27,9 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 
 	const description = `Customise ${ template.name.toLowerCase() } page template with different colour blindness filters, custom colour schemes and preset palettes.`;
 
-	const iframeSrc = process.env.NODE_ENV === "production"
-		? "https://designsystem.gov.au/chameleon"
+	const isCloud = process.env.NODE_ENV === "production" || process.env.NODE_ENV === "development";
+	const iframeSrc = isCloud
+		? "/chameleon"
 		: "http://localhost:3000/chameleon";
 
 	const headContent = `
@@ -130,6 +131,7 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 					<div className="form-item" key={ i }>
 						<label htmlFor={ colorID }>{ colorName }</label>
 						<AUtextInput aria-controls="chameleon" id={ colorID } name={ colorID } block></AUtextInput>
+						<span className="color-square" id={ `color-square--${colorID}` }></span>
 					</div>
 				) )
 			}
@@ -163,7 +165,7 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 	return (
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }} />
-		<body className="au-grid live-demo customise-page">
+		<body className={ `au-grid live-demo customise-page ${ isCloud ? '' : 'chameleon-staging' }` }>
 			{ a11yFilter }
 			<header className="header__bar">
 				<AUdirectionLink
@@ -201,6 +203,11 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 					</form>
 				</div>
 				<div id="chameleon" role="region">
+					<div className="au-toast au-toast--hidden">
+						<div className="au-toast__content au-body au-body--dark">
+							<p>Loading template with new colours.</p>
+						</div>
+					</div>
 					<div className="au-card au-card--shadow">
 						<iframe title="Custom full page template" src={ iframeSrc } />
 					</div>

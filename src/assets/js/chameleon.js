@@ -1,14 +1,19 @@
+var isCloud = document.querySelector( '.chameleon-staging' );
 var iframe = document.querySelector( '#chameleon iframe' );
 var form = document.querySelector( '.customise__form' );
 
 var a11yInputs = document.querySelectorAll( '.a11y input' );
 var paletteInputs = document.querySelectorAll( '.palette input' );
 var customInputs = document.querySelectorAll( '.custom-color input' );
+var colorSquares = document.querySelectorAll( '.color-square' );
 
 var toggleColorInputButtons = document.querySelectorAll( '.toggle-color-input' );
 var shareButton = document.getElementById( 'btn-share' );
 var buttonList = document.querySelector( '.customise__form .au-btn__list' );
+var loadingToast = document.querySelector( '.au-toast' );
 
+
+// Global variables
 var templateName = window.location.pathname.split( '/' )[ 2 ];
 
 
@@ -121,8 +126,6 @@ function ApplyColors( queryString ) {
 			input.value = query[ key ];
 		}
 	}
-
-	ApplyQueryToIframe( queryString );
 }
 
 
@@ -136,7 +139,8 @@ function ApplyQueryToIframe( query ){
 	var iframeQuery = template + query.replace( '&palette=on&a11y=on', '' );
 
 	// Need to fix this up
-	iframe.src = ( '/chameleon' + iframeQuery );
+	var iframeSrc = isCloud ? "http://localhost:3000/chameleon" : "/chameleon";
+	iframe.src = iframeSrc + iframeQuery;
 }
 
 
@@ -158,9 +162,11 @@ function ApplyPalette( paletteId ){
 	if( paletteValues ) {
 		var queryFromInputs = ObjectToQueryString( paletteValues );
 
+		ShowToast( loadingToast );
 		ApplyColors( queryFromInputs );
 		ApplyQueryToIframe( queryFromInputs );
 		PushValuesToURL( customInputs );
+		ApplyColorsToColorSquare( customInputs );
 	}
 }
 
@@ -171,11 +177,34 @@ function ApplyPalette( paletteId ){
  * @param {array}  inputs - The inputs to push the state from
  */
 function PushValuesToURL( inputs ) {
-	var inputsState = GetTextInputValues( inputs );
-	var queryString = ObjectToQueryString( inputsState );
+	if( window.history.pushState ) {
+		var inputsState = GetTextInputValues( inputs );
+		var queryString = ObjectToQueryString( inputsState );
 
-	// Replace DOM state with current color object
-	window.history.pushState( inputsState , "Chameleon", queryString );
+		// Replace DOM state with current color object
+		window.history.pushState( inputsState , "Chameleon", queryString );
+	}
+}
+
+/**
+ * ApplyColorsToColorSquare - Adds background color to color square inside the color text inputs
+ *
+ * @param {array}  customInputs - The text inputs to select the color values from
+ */
+function ApplyColorsToColorSquare( customInputs ) {
+	for ( var i = 0; i < customInputs.length; i++ ) {
+		var color = customInputs[ i ].value;
+		var colorSquare = document.getElementById( 'color-square--' + customInputs[ i ].id );
+
+		colorSquare.removeAttribute( 'style' );
+		RemoveClass( customInputs[ i ], 'au-text-input--invalid' );
+		// assign color from text input to color square
+		colorSquare.style.background = color;
+
+		if( !colorSquare.style.background && customInputs[ i ].value !== "") {
+			AddClass( customInputs[ i ], 'au-text-input--invalid' );
+		}
+	}
 }
 
 
@@ -234,7 +263,7 @@ if( window.history.pushState ) {
 	// Add event handler to handle key press on form inputs.
 	var timeout;
 	for( var i = 0; i < customInputs.length; i++ ) {
-		AddEvent( customInputs[ i ], "keyup", function( event, $this ) {
+		AddEvent( customInputs[ i ], "input", function( event, $this ) {
 
 			// If the user presses the key before the timeout fires
 			// clear the timeout and reset it
@@ -245,9 +274,12 @@ if( window.history.pushState ) {
 
 			// Create a new timeout that runs the functions after the time has ended
 			timeout = setTimeout( function(){
+				ShowToast( loadingToast );
 				PushValuesToURL( customInputs );
 				ApplyColors( window.location.search );
-			}, 400 );
+				ApplyQueryToIframe( window.location.search );
+				ApplyColorsToColorSquare( [ $this ] );
+			}, 100 );
 		});
 	}
 }
@@ -255,6 +287,22 @@ if( window.history.pushState ) {
 else {
 	RemoveClass( buttonList, 'customise-btn--hide');
 }
+
+// Lock focus on the input related to the color square that was clicked
+for( var i = 0; i < colorSquares.length; i++ ) {
+	AddEvent( colorSquares[i], "click", function( event, $this ){
+		$this.previousSibling.focus();
+	} )
+}
+
+
+// When the page is loaded, check for additional iframe loads
+window.onload = function(){
+	AddEvent( iframe, 'load', function( event, $this ) {
+		HideToast( loadingToast );
+	});
+}
+
 
 
 /**
@@ -269,3 +317,5 @@ else {
 	var defaultColors = ObjectToQueryString( colors );
 	ApplyColors( defaultColors );
 }
+
+ApplyColorsToColorSquare( customInputs );

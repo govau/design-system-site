@@ -1,7 +1,9 @@
 // This is used for our customise pages
 
+// Variable overides
+@import 'base/variables';
 
-// UI-Kit
+// Australian Government Design System
 @import '../_auds/sass/auds';
 
 
@@ -17,6 +19,7 @@
 @import 'components/header-bar';
 @import 'components/svg-filters';
 @import 'components/icons';
+@import 'components/toast';
 
 
 .customise-page {
@@ -34,7 +37,7 @@
 	right: 0;
 
 	@include AU-media( sm ){
-		@include AU-space( left, 20.5unit );
+		@include AU-space( left, 21.5unit );
 		bottom: 0;
 	}
 
@@ -66,7 +69,7 @@
 
 	@include AU-media( sm ){
 		@include AU-space( top, 3.5unit );
-		@include AU-space( width, 18unit );
+		@include AU-space( width, 19unit );
 		height: auto;
 		right: auto;
 	}
@@ -74,6 +77,18 @@
 	// Overide the overflow
 	&.au-card.au-card--shadow {
 		overflow: auto;
+	}
+
+	//style for color square icon inside custom color inputs
+	.color-square {
+		border: solid 1px $AU-color-foreground-muted;
+		border-radius: $AU-border-radius/2;
+		@include AU-space( height, 1.25unit );
+		@include AU-space( width, 1.25unit );
+		float: right;
+		position: relative;
+		right: 10px;
+		bottom: 34px;
 	}
 }
 
@@ -93,6 +108,8 @@
 			vertical-align: baseline;
 			display: inline;
 		}
+
+
 	}
 
 	.au-fieldset {
@@ -147,7 +164,7 @@
 
 	// Adjust padding inside text inputs
 	.au-text-input {
-		@include AU-space( padding, 0.25unit 0.5unit );
+		@include AU-space( padding, 0.25unit 2.25unit 0.25unit 0.5unit );
 	}
 
 	* + .form-item {
@@ -192,5 +209,3 @@
 		display: block;
 	}
 }
-
-
