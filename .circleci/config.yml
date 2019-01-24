@@ -8,7 +8,9 @@ jobs:
         steps:
             - run:
                 name: Set environment variables for build
-                command: 'export NODE_ENV=$CIRCLE_BRANCH && source $BASH_ENV'
+                command: |
+                  echo 'export NODE_ENV=$CIRCLE_BRANCH' >> $BASH_ENV
+                  source $BASH_ENV
             - checkout
             - restore_cache:
                 name: Restore node_modules from cache
