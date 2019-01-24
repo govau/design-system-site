@@ -11,6 +11,7 @@ jobs:
                 command: |
                   echo 'export NODE_ENV=$CIRCLE_BRANCH' >> $BASH_ENV
                   source $BASH_ENV
+                  printenv
             - checkout
             - restore_cache:
                 name: Restore node_modules from cache
