@@ -1,3 +1,4 @@
+var isStaging = document.querySelector( '.chameleon-staging' );
 var iframe = document.querySelector( '#chameleon iframe' );
 var form = document.querySelector( '.customise__form' );
 
@@ -8,6 +9,8 @@ var customInputs = document.querySelectorAll( '.custom-color input' );
 var toggleColorInputButtons = document.querySelectorAll( '.toggle-color-input' );
 var shareButton = document.getElementById( 'btn-share' );
 var buttonList = document.querySelector( '.customise__form .au-btn__list' );
+var loadingOverlay = document.querySelector( '.loading-overlay' );
+
 
 var templateName = window.location.pathname.split( '/' )[ 2 ];
 
@@ -136,7 +139,8 @@ function ApplyQueryToIframe( query ){
 	var iframeQuery = template + query.replace( '&palette=on&a11y=on', '' );
 
 	// Need to fix this up
-	iframe.src = ( '/chameleon' + iframeQuery );
+	var iframeSrc = isStaging ? "http://localhost:3000/chameleon" : "/chameleon";
+	iframe.src = iframeSrc + iframeQuery;
 }
 
 
@@ -234,7 +238,7 @@ if( window.history.pushState ) {
 	// Add event handler to handle key press on form inputs.
 	var timeout;
 	for( var i = 0; i < customInputs.length; i++ ) {
-		AddEvent( customInputs[ i ], "keyup", function( event, $this ) {
+		AddEvent( customInputs[ i ], "input", function( event, $this ) {
 
 			// If the user presses the key before the timeout fires
 			// clear the timeout and reset it
@@ -245,11 +249,21 @@ if( window.history.pushState ) {
 
 			// Create a new timeout that runs the functions after the time has ended
 			timeout = setTimeout( function(){
+				// Show the overlay when key press starts
+				RemoveClass( loadingOverlay, 'loading-overlay--hidden' );
 				PushValuesToURL( customInputs );
 				ApplyColors( window.location.search );
-			}, 400 );
+			}, 100 );
 		});
 	}
+
+	// When the iframe is done loading
+	AddEvent( iframe, 'load', function( event, $this ) {
+		// If overlay is NOT hidden then hide loading overlay
+		if( !HasClass( loadingOverlay, 'loading-overlay--hidden' ) ){
+			AddClass( loadingOverlay, 'loading-overlay--hidden' );
+		}
+	});
 }
 // Show customise button when push state does not work
 else {
