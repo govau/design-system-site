@@ -27,4 +27,4 @@ code:
 
 ## Valid and invalid inputs
 
-Add highlighting to text inputs and text areas to indicate whether user input is valid (validates according to the elements settings) or invalid (does not validate according to the elements settings).
+Add a border to text inputs and text areas to indicate whether user input is valid (validates according to the elements settings) or invalid (does not validate according to the elements settings).
