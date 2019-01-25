@@ -3,6 +3,10 @@ layout: component/code-demo
 iframe: examples/example-small
 code:
   - HTML: |
+      <!--
+        Checkbox:  <input class="au-control-input__input" type="checkbox" name="checkbox-ex">
+      -->
+
       <label class="au-control-input au-control-input--small">
         <input class="au-control-input__input" type="radio" name="radio-ex">
         <span class="au-control-input__text">Phone</span>
@@ -13,8 +17,7 @@ code:
       </label>
   - React: |
       /*
-        Light:  <AUradio>
-        Dark:   <AUradio dark>
+        Checkbox:  <AUcheckbox small>
       */
 
       import { AUradio } from '@gov.au/control-input';

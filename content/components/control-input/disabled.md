@@ -3,24 +3,27 @@ layout: component/code-demo
 iframe: examples/example-disabled
 code:
   - HTML: |
+      <!--
+        Checkbox:  <input class="au-control-input__input" type="checkbox" name="checkbox-ex">
+      -->
       <label class="au-control-input">
-        <input class="au-control-input__input" type="checkbox" name="checkbox-ex">
+        <input class="au-control-input__input" type="radio" name="radio-ex">
         <span class="au-control-input__text">Phone</span>
       </label>
       <label class="au-control-input au-control-input--dark">
-        <input class="au-control-input__input" type="checkbox" name="checkbox-ex" disabled>
+        <input class="au-control-input__input" type="radio" name="radio-ex" disabled>
         <span class="au-control-input__text">Tablet</span>
       </label>
   - React: |
       /*
-        Light:  <AUcheckbox>
-        Dark:   <AUcheckbox dark>
+        Checkbox:  <AUcheckbox disabled>
       */
 
-      import { AUcheckbox } from '@gov.au/control-input';
 
-      <AUcheckbox label="Phone"  name="checkbox-ex" />
-      <AUcheckbox label="Tablet" name="checkbox-ex" disabled />
+      import { AUradio } from '@gov.au/control-input';
+
+      <AUradio label="Phone"  name="radio-ex" />
+      <AUradio label="Tablet" name="radio-ex" disabled />
 ---
 ## Disabled control inputs
 
