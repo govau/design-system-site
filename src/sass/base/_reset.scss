@@ -239,6 +239,7 @@ svg:not(:root) {
 
 button,
 input,
+:not(input[type="radio"]),
 optgroup,
 select,
 textarea {
