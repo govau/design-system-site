@@ -17,7 +17,7 @@ code:
         </p>
         <hr />
         <p>
-          Lorem, <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> ipsum dolor sit amet consectetur adipisicing elit.
+          Lorem, WCAG (Web Content Accessibility Guidelines) ipsum dolor sit amet consectetur adipisicing elit.
         </p>
       </div>
 ---
@@ -28,4 +28,3 @@ Body includes a range of styles for basic content elements.
 - [Paragraph](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p)
 - [Links](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
 - [Horizontal rule](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr)
-- [Acronyms](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr)

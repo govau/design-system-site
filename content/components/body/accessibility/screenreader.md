@@ -5,8 +5,7 @@ speak: |
 
   [Heading level 1] Example heading.
 
-  Example paragraph with an, [link] internal link, and an, [link] external link, and [abbreviation group] abbreviation.
-
+  Example paragraph with an, [link] internal link, and an, [link] external link.
   [horizontal splitter].
 
   Example formula, E equals m c, two, f, x, n, equals log, four, x n.
