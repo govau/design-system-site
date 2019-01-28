@@ -14,7 +14,7 @@ code:
   - React: |
       /*
         Light:  <AUtextInput>
-        Dark:   <AUtextInput dark>
+        Dark:   <AUtextInput dark disabled>
       */
 
       import AUtextInput from '@gov.au/text-inputs';
