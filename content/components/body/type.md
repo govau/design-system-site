@@ -28,3 +28,4 @@ Body includes a range of styles for basic content elements.
 - [Paragraph](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p)
 - [Links](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a)
 - [Horizontal rule](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr)
+- [Acronyms](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr)
