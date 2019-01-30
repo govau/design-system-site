@@ -313,6 +313,7 @@ window.onload = function(){
  */
 if( window.location.search ){
 	ApplyColors( window.location.search );
+	ApplyQueryToIframe( window.location.search );
 }
 else {
 	var defaultColors = ObjectToQueryString( colors );
