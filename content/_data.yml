@@ -2,42 +2,42 @@
 # THE `pancake` and `auds` FIELDS WILL BE OVERWRITTEN
 
 pancake:
-  downloads: 170130
+  downloads: 170309
   modules:
-    '@gov.au/pancake': 38471
-    '@gov.au/pancake-js': 25715
-    '@gov.au/pancake-json': 31775
-    '@gov.au/pancake-react': 32161
-    '@gov.au/pancake-sass': 40891
+    '@gov.au/pancake': 38526
+    '@gov.au/pancake-js': 25743
+    '@gov.au/pancake-json': 31808
+    '@gov.au/pancake-react': 32191
+    '@gov.au/pancake-sass': 40924
     '@gov.au/syrup': 1117
   stars: 79
 auds:
-  downloads: 486439
+  downloads: 486734
   modules:
-    '@gov.au/accordion': 24574
-    '@gov.au/animate': 23923
-    '@gov.au/body': 28108
-    '@gov.au/breadcrumbs': 17858
-    '@gov.au/buttons': 27621
-    '@gov.au/callout': 12590
-    '@gov.au/control-input': 15141
-    '@gov.au/core': 31626
-    '@gov.au/cta-link': 21276
-    '@gov.au/direction-links': 11390
-    '@gov.au/footer': 25088
-    '@gov.au/grid-12': 26060
-    '@gov.au/header': 21487
-    '@gov.au/headings': 17042
-    '@gov.au/inpage-nav': 13805
-    '@gov.au/keyword-list': 9216
-    '@gov.au/link-list': 25502
-    '@gov.au/main-nav': 4690
-    '@gov.au/page-alerts': 20270
-    '@gov.au/progress-indicator': 10626
-    '@gov.au/responsive-media': 12751
-    '@gov.au/select': 18554
-    '@gov.au/side-nav': 5583
-    '@gov.au/skip-link': 21749
-    '@gov.au/tags': 16636
-    '@gov.au/text-inputs': 23273
-  stars: 494
+    '@gov.au/accordion': 24597
+    '@gov.au/animate': 23935
+    '@gov.au/body': 28122
+    '@gov.au/breadcrumbs': 17866
+    '@gov.au/buttons': 27629
+    '@gov.au/callout': 12594
+    '@gov.au/control-input': 15173
+    '@gov.au/core': 31642
+    '@gov.au/cta-link': 21292
+    '@gov.au/direction-links': 11394
+    '@gov.au/footer': 25092
+    '@gov.au/grid-12': 26068
+    '@gov.au/header': 21501
+    '@gov.au/headings': 17048
+    '@gov.au/inpage-nav': 13821
+    '@gov.au/keyword-list': 9220
+    '@gov.au/link-list': 25510
+    '@gov.au/main-nav': 4695
+    '@gov.au/page-alerts': 20284
+    '@gov.au/progress-indicator': 10630
+    '@gov.au/responsive-media': 12775
+    '@gov.au/select': 18566
+    '@gov.au/side-nav': 5592
+    '@gov.au/skip-link': 21759
+    '@gov.au/tags': 16646
+    '@gov.au/text-inputs': 23283
+  stars: 498

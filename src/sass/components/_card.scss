@@ -95,7 +95,7 @@ a.au-card {
 	.au-card__cta {
 		color: $AU-color-foreground-action;
 		text-decoration: underline;
-		text-decoration-skip: ink;
+		text-decoration-skip-ink: auto;
 	}
 
 	&:hover {
