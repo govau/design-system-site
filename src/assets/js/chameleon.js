@@ -42,7 +42,7 @@ var paletteStyles = {
 	},
 	blue: {
 		text:           '#313131',
-		action:         '#0D979B',
+		action:         '#0A8185',
 		// focus:          '#9263DE',
 		background:     '#FFFFFF',
 		textDark:       '#FFFFFF',
