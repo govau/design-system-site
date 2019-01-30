@@ -11,7 +11,7 @@
   </li>
   <li>
     <section class="au-accordion au-accordion--dark">
-      <a href="#accordion-group-dark-2" class="au-accordion__title js-au-accordion au-accordion--closed" aria-controls="accordion-group-dark-2" aria-expanded="false" onclick="return AU.accordion.Toggle( this )">Accordion group 2</a>
+      <button  class="au-accordion__title js-au-accordion au-accordion--closed" aria-controls="accordion-group-dark-2" aria-expanded="false" onclick="return AU.accordion.Toggle( this )">Accordion group 2</button>
       <div class="au-accordion__body au-accordion--closed" id="accordion-group-dark-2">
         <div class="au-accordion__body-wrapper">
           Here <a href="#url">is</a> some accordion content
