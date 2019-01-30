@@ -6,7 +6,7 @@ code:
   - HTML: |
       <!--
         Valid:  <input class="au-text-input au-text-input--valid">
-        Invalid:   <input class="au-text-input au-text-input--invalid">
+        Invalid:   <input class="au-text-input au-text-input--invalid" aria-invalid="true">
       -->
 
       <label for="text-input">label text</label>
@@ -14,7 +14,7 @@ code:
   - React: |
       /*
         Valid: <AUtextInput status="valid" />
-        Invalid: <AUtextInput status="invalid" />
+        Invalid: <AUtextInput status="invalid" aria-invalid="true" />
       */
 
       import AUtextInput from '@gov.au/text-inputs';
