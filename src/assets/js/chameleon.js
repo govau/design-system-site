@@ -42,7 +42,7 @@ var paletteStyles = {
 	},
 	blue: {
 		text:           '#313131',
-		action:         '#0D979B',
+		action:         '#0A8185',
 		// focus:          '#9263DE',
 		background:     '#FFFFFF',
 		textDark:       '#FFFFFF',
@@ -288,11 +288,12 @@ else {
 	RemoveClass( buttonList, 'customise-btn--hide');
 }
 
-// Lock focus on the input related to the color square that was clicked
+// Change focus to the input of the color square that was clicked
 for( var i = 0; i < colorSquares.length; i++ ) {
 	AddEvent( colorSquares[i], "click", function( event, $this ){
-		$this.previousSibling.focus();
-	} )
+		var textInputId = $this.id.replace( 'color-square--', '' );
+		document.getElementById( textInputId ).focus();
+	})
 }
 
 

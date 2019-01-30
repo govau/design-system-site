@@ -17,7 +17,7 @@ code:
         </p>
         <hr />
         <p>
-          Lorem, <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> ipsum dolor sit amet consectetur adipisicing elit.
+          Lorem, Web Content Accessibility Guidelines (WCAG) ipsum dolor sit amet consectetur adipisicing elit.
         </p>
       </div>
 ---

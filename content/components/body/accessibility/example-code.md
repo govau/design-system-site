@@ -1,6 +1,6 @@
 <div class="au-body">
   <h1>Example heading</h1>
-  <p>Example paragraph with an <a href="#" class="js-focus-me">Internal link</a> and an <a href="#" rel="external" class="js-focus-me">External link</a> and <abbr title="abbreviation">abbr</abbr>.</p>
+  <p>Example paragraph with an <a href="#" class="js-focus-me">Internal link</a> and an <a href="#" rel="external" class="js-focus-me">External link</a>.</p>
   <hr>
   <p>Example formula: <var>E</var>=<var>m</var><var>c</var><sup>2</sup>f(<var>x</var>, <var>n</var>) = log<sub>4</sub><var>x</var><sup><var>n</var></sup></p>
   <p>
