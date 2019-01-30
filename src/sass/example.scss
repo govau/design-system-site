@@ -246,6 +246,7 @@ $AU-main-nav-breakpoint: sm;
 	}
 }
 
+// Add margin above text input examples
 .example-form-item + .example-form-item {
 	@include AU-space( margin-top, 1unit );
 }
