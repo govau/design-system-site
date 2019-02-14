@@ -38,6 +38,10 @@
 		.au-link-list > li > button,
 		.tabs-nav {
 			border-bottom-color: $AU-color-background-alt-shade;
+
+			button + button {
+				@include AU-space( margin-left, .3125unit );
+			}
 		}
 	}
 }
