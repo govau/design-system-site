@@ -76,7 +76,7 @@ To do this we edit the `scripts` in the `package.json` file:
   "watch:sass": "onchange './src/sass/**/*.scss' -- npm run build",
 }
 ```
-and make sure we let our modules know what browsers we are supporting:
+Autoprefixer uses [Browserslist](https://www.npmjs.com/package/browserslist), so you can specify the browsers you want to target with the `browserlist` key in the `package.json` file as below:
 
 ```json
 "browserslist": [
