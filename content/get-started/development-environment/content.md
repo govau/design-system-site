@@ -76,6 +76,16 @@ To do this we edit the `scripts` in the `package.json` file:
   "watch:sass": "onchange './src/sass/**/*.scss' -- npm run build",
 }
 ```
+and make sure we let our modules know what browsers we are supporting:
+
+```json
+"browserslist": [
+  "last 2 versions",
+  "ie 8", 
+  "ie 9", 
+  "ie 10" 
+]
+```
 
 You can now run `npm run watch` to build your website and watch for any changes to your files. This will start a local development server at `http://localhost:3030/`.
 
