@@ -76,6 +76,16 @@ To do this we edit the `scripts` in the `package.json` file:
   "watch:sass": "onchange './src/sass/**/*.scss' -- npm run build",
 }
 ```
+Autoprefixer uses [Browserslist](https://www.npmjs.com/package/browserslist), so you can specify the browsers you want to target with the `browserlist` key in the `package.json` file as below:
+
+```json
+"browserslist": [
+  "last 2 versions",
+  "ie 8", 
+  "ie 9", 
+  "ie 10" 
+]
+```
 
 You can now run `npm run watch` to build your website and watch for any changes to your files. This will start a local development server at `http://localhost:3030/`.
 
