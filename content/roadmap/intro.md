@@ -1,2 +1,1 @@
-This roadmap shows what the Design System team is currently planning to work on over the coming year.
-
+This roadmap shows what the Design System team is currently planning to work on over the coming year. This roadmap is open to change and we welcome the [community input](https://community.digital.gov.au/t/roadmap-discussion/68).
