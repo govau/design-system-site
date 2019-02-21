@@ -4,18 +4,18 @@ iframe: examples/example-radio
 code:
   - HTML: |
       <!--
-        Light:  <label class="au-control-input">
-        Dark:   <label class="au-control-input au-control-input--dark">
+        Light:  <div class="au-control-input">
+        Dark:   <div class="au-control-input au-control-input--dark">
       -->
 
-      <label class="au-control-input">
-        <input class="au-control-input__input" type="radio" name="radio-ex">
-        <span class="au-control-input__text">Phone</span>
-      </label>
-      <label class="au-control-input">
-        <input class="au-control-input__input" type="radio" name="radio-ex" checked>
-        <span class="au-control-input__text">Tablet</span>
-      </label>
+      <div class="au-control-input">
+        <input class="au-control-input__input" type="radio" name="radio-ex" id="radio-phone">
+        <label class="au-control-input__text" for="radio-phone">Phone</label>
+      </div>
+      <div class="au-control-input">
+        <input class="au-control-input__input" type="radio" name="radio-ex" id="radio-tablet" checked>
+        <label class="au-control-input__text" for="radio-tablet">Tablet</label>
+      </div>
   - React: |
       /*
         Light:  <AUradio>
@@ -24,8 +24,8 @@ code:
 
       import { AUradio } from '@gov.au/control-input';
 
-      <AUradio label="Phone" name="radio-ex" />
-      <AUradio label="Tablet" name="radio-ex" defaultChecked />
+      <AUradio label="Phone" name="radio-ex" id="radio-phone-block" />
+      <AUradio label="Tablet" name="radio-ex" id="radio-tablet-block" defaultChecked />
 ---
 ## Radio
 
