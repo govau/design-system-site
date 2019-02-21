@@ -5,7 +5,7 @@ mainlist:
   - text: Forums
     link: https://community.digital.gov.au/c/designsystem
   - text: Roadmap
-    link: https://github.com/orgs/govau/projects/7?fullscreen=true
+    link: /roadmap
   - text: GitHub
     link: https://github.com/govau/design-system-components/
 legallist:
