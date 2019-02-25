@@ -96,7 +96,7 @@
 		"node-fetch": "^2.1.1",
 		"node-sass": "^4.9.3",
 		"numeral": "^2.0.6",
-		"postcss-cli": "^4.1.1",
+		"postcss-cli": "^6.1.2",
 		"slugify": "^1.2.9",
 		"uglify-js": "^3.4.9",
 		"mkdirp": "^0.5.1"
