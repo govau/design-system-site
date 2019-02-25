@@ -119,7 +119,7 @@ accordion:
     - open: 2
     - active: 7
     - something: something
-  version: 7.0.3    # <-- auto generated, don't change
+  version: 7.0.5    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - animate
     - core
@@ -226,7 +226,7 @@ body:
     - open: 2
     - active: 7
     - something: something
-  version: 2.0.13    # <-- auto generated, don't change
+  version: 2.1.0    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -417,7 +417,7 @@ cta-link:
     - active: 7
     - something: something
   ID: cta-link    # <-- auto generated, don't change
-  version: 2.1.5    # <-- auto generated, don't change
+  version: 2.1.7    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -601,7 +601,7 @@ direction-links:
     - active: 7
     - something: something
   ID: direction-links    # <-- auto generated, don't change
-  version: 2.1.5    # <-- auto generated, don't change
+  version: 2.1.7    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -768,7 +768,7 @@ header:
     - open: 2
     - active: 7
     - something: something
-  version: 4.1.7    # <-- auto generated, don't change
+  version: 4.1.9    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -1295,7 +1295,7 @@ skip-link:
     - open: 2
     - active: 7
     - something: something
-  version: 2.0.11    # <-- auto generated, don't change
+  version: 2.0.13    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -1667,7 +1667,7 @@ main-nav:
     - active: 7
     - something: something
   ID: main-nav    # <-- auto generated, don't change
-  version: 1.0.1    # <-- auto generated, don't change
+  version: 1.0.3    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
     - animate
@@ -1755,7 +1755,7 @@ side-nav:
     - active: 7
     - something: something
   ID: side-nav    # <-- auto generated, don't change
-  version: 5.0.3    # <-- auto generated, don't change
+  version: 5.0.5    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
     - animate
