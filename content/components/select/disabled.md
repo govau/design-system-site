@@ -5,8 +5,8 @@ iframeFullwidth: true
 code:
   - HTML: |
       <!--
-      Valid:    <label class="au-select" disabled>
-      Invalid:  <label class="au-select" disabled>
+      Light: <label class="au-select" disabled>
+      Dark:  <label class="au-select au-select--dark" disabled>
       -->
 
       <label for="select1disabled">What option?</label>
