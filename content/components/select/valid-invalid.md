@@ -46,4 +46,4 @@ code:
 ---
 ## Valid and invalid states
 
-Use the `.au-select--valid` class to add a  border around the select to indicate valid or invalid selections.
+Use the `.au-select--valid` class to add a border around the select to indicate valid or invalid selections.
