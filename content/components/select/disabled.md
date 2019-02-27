@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-disabled
-iframeFullwidth: true
 code:
   - HTML: |
       <!--
