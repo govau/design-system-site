@@ -6,7 +6,7 @@ code:
   - HTML: |
       <!--
       Valid:    <label class="au-select au-select--valid">
-      Invalid:  <label class="au-select au-select--invalid">
+      Invalid:  <select class="au-select au-select--invalid">
       -->
 
       <label for="select1block">What option?</label>
