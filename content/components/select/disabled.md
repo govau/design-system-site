@@ -4,7 +4,7 @@ iframe: examples/example-disabled
 code:
   - HTML: |
       <!--
-      Light: <label class="au-select" disabled>
+      Light: <select class="au-select" disabled>
       Dark:  <label class="au-select au-select--dark" disabled>
       -->
 
