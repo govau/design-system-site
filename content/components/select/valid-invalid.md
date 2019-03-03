@@ -5,7 +5,7 @@ iframeFullwidth: true
 code:
   - HTML: |
       <!--
-      Valid:    <label class="au-select au-select--valid">
+      Valid:    <select class="au-select au-select--valid">
       Invalid:  <select class="au-select au-select--invalid">
       -->
 
