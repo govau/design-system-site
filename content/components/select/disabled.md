@@ -5,7 +5,7 @@ code:
   - HTML: |
       <!--
       Light: <select class="au-select" disabled>
-      Dark:  <label class="au-select au-select--dark" disabled>
+      Dark:  <select class="au-select au-select--dark" disabled>
       -->
 
       <label for="select1disabled">What option?</label>
