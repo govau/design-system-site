@@ -122,17 +122,17 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 						<fieldset className="au-fieldset">
 							<legend>Stylesheets</legend>
 
-							<AUradio label="CSS minified" block name="styleOutput" value="css" defaultChecked />
-							<AUradio label="CSS modules" block name="styleOutput" value="cssModules" />
-							<AUradio label="SASS modules" block name="styleOutput" value="sassModules" />
+							<AUradio id="css-minified-radio" label="CSS minified" block name="styleOutput" value="css" defaultChecked />
+							<AUradio id="css-modules-radio" label="CSS modules" block name="styleOutput" value="cssModules" />
+							<AUradio id="sass-modules-radio" label="SASS modules" block name="styleOutput" value="sassModules" />
 						</fieldset>
 
 						<fieldset className="au-fieldset">
 							<legend>JavaScript</legend>
 
-							<AUradio label="JavaScript minified" block name="jsOutput" value="js" defaultChecked />
-							<AUradio label="JavaScript modules" block name="jsOutput" value="jsModules" />
-							<AUradio label="React modules" block name="jsOutput" value="react" />
+							<AUradio label="JavaScript minified" id="js-minified-radio" block name="jsOutput" value="js" defaultChecked />
+							<AUradio label="JavaScript modules" id="js-modules-radio" block name="jsOutput" value="jsModules" />
+							<AUradio label="React modules" block id="react-modules-radio" name="jsOutput" value="react" />
 						</fieldset>
 						</div>
 						<button type="submit" className="furnace__buildbox__download au-btn au-btn--block icon icon--dark icon--download">Download</button>
