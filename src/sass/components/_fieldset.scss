@@ -6,6 +6,7 @@
 
 	legend {
 		font-weight: bold;
+		@include AU-space( margin-bottom, 1unit );
 	}
 }
 

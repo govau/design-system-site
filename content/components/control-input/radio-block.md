@@ -5,22 +5,22 @@ iframeFullwidth: true
 code:
   - HTML: |
       <!--
-        Light:  <label class="au-control-input au-control-input--block">
-        Dark:   <label class="au-control-input au-control-input--block au-control-input--dark">
+        Light:  <div class="au-control-input au-control-input--block">
+        Dark:   <div class="au-control-input au-control-input--block au-control-input--dark">
       -->
 
-      <label class="au-control-input au-control-input--block">
-        <input class="au-control-input__input" type="radio" name="radio-ex">
-        <span class="au-control-input__text">Phone</span>
-      </label>
-      <label class="au-control-input au-control-input--block">
-        <input class="au-control-input__input" type="radio" name="radio-ex" checked>
-        <span class="au-control-input__text">Tablet</span>
-      </label>
-      <label class="au-control-input au-control-input--block">
-        <input class="au-control-input__input" type="radio" name="radio-ex">
-        <span class="au-control-input__text">Laptop</span>
-      </label>
+      <div class="au-control-input au-control-input--block">
+        <input class="au-control-input__input" type="radio" name="radio-ex" id="phone-radio-block">
+        <label class="au-control-input__text" for="phone-radio-block">Phone</label>
+      </div>
+      <div class="au-control-input au-control-input--block">
+        <input class="au-control-input__input" type="radio" name="radio-ex" id="tablet-radio-block" checked>
+        <label class="au-control-input__text" for="tablet-radio-block">Tablet</label>
+      </div>
+      <div class="au-control-input au-control-input--block">
+        <input class="au-control-input__input" type="radio" name="radio-ex" id="laptop-radio-block">
+        <label class="au-control-input__text" for="laptop-radio-block">Laptop</label>
+      </div>
   - React: |
       /*
         Light:  <AUradio>
@@ -29,9 +29,9 @@ code:
 
       import { AUradio } from '@gov.au/control-input';
 
-      <AUradio label="Phone" name="radio-ex" block />
-      <AUradio label="Tablet" name="radio-ex" block defaultChecked />
-      <AUradio label="Laptop" name="radio-ex" block />
+      <AUradio label="Phone" name="radio-ex" id="radio-phone-block" block />
+      <AUradio label="Tablet" name="radio-ex" id="radio-tablet-block" block defaultChecked />
+      <AUradio label="Laptop" name="radio-ex" id="radio-laptop-block" block />
 ---
 ## Radio Block
 

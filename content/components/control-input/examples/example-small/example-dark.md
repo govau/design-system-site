@@ -1,9 +1,9 @@
-<label class="au-control-input au-control-input--dark au-control-input--small">
-  <input class="au-control-input__input" type="radio" name="radio-ex-dark">
-  <span class="au-control-input__text">Phone</span>
-</label>
+<div class="au-control-input au-control-input--dark au-control-input--small">
+  <input class="au-control-input__input" type="radio" name="radio-ex-dark" id="phone-class-small-dark">
+  <label class="au-control-input__text" for="phone-class-small-dark">Phone</label>
+</div>
 
-<label class="au-control-input au-control-input--dark au-control-input--small">
-  <input class="au-control-input__input" type="radio" name="radio-ex-dark" checked="true">
-  <span class="au-control-input__text">Tablet</span>
-</label>
+<div class="au-control-input au-control-input--dark au-control-input--small">
+  <input class="au-control-input__input" type="radio" name="radio-ex-dark" id="tablet-class-small-dark" checked="true">
+  <label class="au-control-input__text" for="tablet-class-small-dark">Tablet</label>
+</div>
