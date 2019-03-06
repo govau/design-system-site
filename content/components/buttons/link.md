@@ -23,7 +23,7 @@ code:
   - React: |
       /*
         Light:  <AUbutton href="#">
-        Dark:   <AUbutton href="#" dark>
+        Dark:   <AUbutton link="#" dark>
       */
 
       import AUbutton from '@gov.au/buttons';
