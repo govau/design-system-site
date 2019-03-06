@@ -14,7 +14,7 @@ code:
       -->
 
       <label for="text-input-sm">label text</label>
-      <input class="au-text-input--width-sm" name="text-input-sm" id="text-input-sm" type="text" value="value">
+      <input class="au-text-input--width-sm" name="text-input-sm" id="text-input-sm" type="text" value="2600">
      
   - React: |
       <!--
