@@ -1553,21 +1553,15 @@ form:
     - TODO
   required: false
   contributors:
-    - name: Dominik Wilkowski
-      img: dominik-wilkowski.jpg
-      url: 'https://github.com/dominikwilkowski'
-    - name: Trevor Brennan
-      img: trevor-brennan.jpg
-      url: 'https://github.com/TrebBrennan'
-    - name: Alex Page
-      img: alex-page.jpg
-      url: 'https://github.com/alex-page'
-    - name: Patrick De Young
-      img: patrick-de-young.png
-      url: 'https://github.com/pattyde'
-    - name: Gary Broadbent
-      img: gary-broadbent.jpg
-      url: 'https://github.com/gazhands'
+    - name: Raj Ghuman
+      img: raj-ghuman.jpg
+      url: 'https://github.com/sukhrajghuman'
+    - name: Sarah Pulis
+      img: sarah-pulis.jpg
+      url: 'https://github.com/sarahpulis'
+    - name: Andrew Arch
+      img: andrew-arch.jpg
+      url: 'https://github.com/AndrewArch'
   state: inprogress
   status:
     usable: done
