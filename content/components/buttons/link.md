@@ -28,7 +28,7 @@ code:
 
       import AUbutton from '@gov.au/buttons';
 
-      <AUbutton href="#">
+      <AUbutton link="#">
         Primary link button
       </AUbutton>
 
