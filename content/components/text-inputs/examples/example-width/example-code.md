@@ -1,5 +1,5 @@
 <div class="au-body example-form-item">
-  <label for="text-input">label text</label>
+  <label for="text-input-sm">label text</label>
   <input class="au-text-input au-text-input--width-sm" name="text-input-sm" id="text-input-sm" type="text" value="ABCZ abcjg liI1 12340">
 </div>
 
