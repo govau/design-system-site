@@ -17,7 +17,7 @@ promos:
     imgurl: assets/img/artwork-about-templates.png
     imgalt: Templates
     url: /templates
-    text: Templates aren’t ready yet. But the intent is that they will be a great way to kickstart a project, and be designed to save on time and resources to get value to users sooner.
+    text: Templates combine components to help you kickstart your project. They’ll save your team time and resources and help get value to your users sooner.
 
 cardList:
   columnSize: col-xs-12 col-sm-4
