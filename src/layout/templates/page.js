@@ -28,7 +28,7 @@ const TemplatePage = ({
 	const template = templates[ templateID ];
 
 	// Use the page title otherwise use the template name
-	let description = "Choose from any of the template below to get your project up and running faster. They’ll save your team time and resources and help get value to your users sooner.";
+	let description = "Choose from any of the templates below to get your project up and running faster. They’ll save your team time and resources and help get value to your users sooner.";
 	let title = pagetitle;
 	if( template ){
 		title = template.name;
