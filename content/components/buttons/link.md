@@ -36,7 +36,7 @@ code:
         Secondary link button
       </AUbutton>
 
-      <AUbutton tertiary href="#">
+      <AUbutton tertiary link="#">
         Tertiary link button
       </AUbutton>
 ---
