@@ -22,7 +22,7 @@ code:
       </a>
   - React: |
       /*
-        Light:  <AUbutton href="#">
+        Light:  <AUbutton link="#">
         Dark:   <AUbutton link="#" dark>
       */
 
