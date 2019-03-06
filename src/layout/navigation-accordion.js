@@ -45,13 +45,13 @@ const NavigationAccordion = ({ navItems, _relativeURL, _ID, _pages }) => {
 					links.length
 						?
 						<section className="au-accordion">
-							<a href={ `#accordion-${ title }` }
+							<button href={ `#accordion-${ title }` }
 								className={ `au-accordion__title js-accordion${ _isOpen ? '' : ' au-accordion--closed' }` }
 								aria-controls={ `accordion-${ title }` }
 								aria-expanded={ _isOpen ? 'true' : 'false' }
 								onClick="return AUDS.accordion.Toggle( this )">
 									{ title } <span className={ `badge badge--${ title }` }>{ links.length }</span>
-							</a>
+							</button>
 							<div
 								className={ `au-accordion__body${ _isOpen ? '' : ' au-accordion--closed' }` }
 								id={ `accordion-${ title }` }
