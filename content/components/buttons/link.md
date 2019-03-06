@@ -32,7 +32,7 @@ code:
         Primary link button
       </AUbutton>
 
-      <AUbutton secondary href="#">
+      <AUbutton secondary link="#">
         Secondary link button
       </AUbutton>
 
