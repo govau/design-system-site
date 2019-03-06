@@ -5,38 +5,38 @@ iframeFullwidth: true
 code:
   - HTML: |
       <!--
-        Light:  <a link="#" class="au-btn">
-        Dark:   <a link="#" class="au-btn au-btn--dark">
+        Light:  <a href="#" class="au-btn">
+        Dark:   <a href="#" class="au-btn au-btn--dark">
       -->
 
-      <a link="#" class="au-btn">
+      <a href="#" class="au-btn">
         Primary link button
       </a>
 
-      <a link="#" class="au-btn au-btn--secondary">
+      <a href="#" class="au-btn au-btn--secondary">
         Secondary link button
       </a>
 
-      <a link="#" class="au-btn au-btn--tertiary">
+      <a href="#" class="au-btn au-btn--tertiary">
         Tertiary link button
       </a>
   - React: |
       /*
-        Light:  <AUbutton link="#">
-        Dark:   <AUbutton link="#" dark>
+        Light:  <AUbutton href="#">
+        Dark:   <AUbutton href="#" dark>
       */
 
       import AUbutton from '@gov.au/buttons';
 
-      <AUbutton link="#">
+      <AUbutton href="#">
         Primary link button
       </AUbutton>
 
-      <AUbutton secondary link="#">
+      <AUbutton secondary href="#">
         Secondary link button
       </AUbutton>
 
-      <AUbutton tertiary link="#">
+      <AUbutton tertiary href="#">
         Tertiary link button
       </AUbutton>
 ---
