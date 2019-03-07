@@ -10,5 +10,6 @@ layout: section
 | block       | string   | Add the block variation class
 | status      | number   | Mark this field as either 'valid' or 'invalid'
 | dark        | boolean  | A dark variation of the component
+| width       | string   | Width of text input, can be either `xs`, `sm`, `md`, `lg` or `xl`
 
 All other props are spread into the component

@@ -1,14 +1,14 @@
 <div class="au-body example-form-item">
-  <label for="text-input-sm">label text</label>
-  <input class="au-text-input au-text-input--width-sm" name="text-input-sm" id="text-input-sm" type="text" value="ABCZ abc">
+  <label class="example-label" for="text-input-xs">Postcode</label>
+  <input class="au-text-input au-text-input--width-sm" name="text-input-sm" id="text-input-sm" type="text" value="2600">
 </div>
 
 <div class="au-body example-form-item">
-  <label for="text-input-md">label text</label>
-  <input class="au-text-input au-text-input--width-md" name="text-input-md" id="text-input-md" type="text" value="ABCZ abcjg liI1 12340">
+  <label class="example-label" for="text-input-md">Mobile</label>
+  <input class="au-text-input au-text-input--width-md" name="text-input-md" id="text-input-md" type="text" value="0400 000 000">
 </div>
 
 <div class="au-body example-form-item">
-  <label for="text-input-lg">label text</label>
-  <input class="au-text-input au-text-input--width-lg" name="text-input-lg" id="text-input-lg" type="text" value="ABCZ abcjg liI1 12340">
+  <label class="example-label" for="text-input-lg">Address</label>
+  <input class="au-text-input au-text-input--width-lg" name="text-input-lg" id="text-input-lg" type="text" value="Level 3, 50 Marcus Clarke St">
 </div>
