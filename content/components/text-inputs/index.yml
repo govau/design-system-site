@@ -18,7 +18,6 @@ main:
   - valid-invalid.md
   - disabled.md
   - width.md
-  
 
 footer:
   - /_shared/footer.md
