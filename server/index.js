@@ -84,6 +84,15 @@ Server
 		response.send( DisplaySearch( request.query.s ) );
 	})
 
+	/**
+	 * Temporarily setup endpoint specifically for serviceWorker, 
+	 * this is required to resolve scope and file access issues
+	 * @see	https://stackoverflow.com/questions/34147562/service-worker-is-caching-files-but-fetch-event-is-never-fired
+	 */ 
+	.get( '/sw.js', ( request, response ) => {
+		response.sendFile( Path.normalize(`${ __dirname }/../site/sw.js`) );
+	})
+
 	// Now static assets
 	.use( Express.static( Path.normalize(`${ __dirname }/../site/`) ) )
 
