@@ -1424,7 +1424,7 @@ text-inputs:
     - active: 7
     - something: something
   ID: text-inputs    # <-- auto generated, don't change
-  version: 2.0.11    # <-- auto generated, don't change
+  version: 2.1.0    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
