@@ -250,3 +250,7 @@ $AU-main-nav-breakpoint: sm;
 .example-form-item + .example-form-item {
 	@include AU-space( margin-top, 1unit );
 }
+
+.example-label {
+	display: block;
+}

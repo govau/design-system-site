@@ -5,11 +5,11 @@ iframeFullwidth: true
 code:
   - HTML: |
       <!--
-        XS:  <input class="au-text-input--width-xs">
-        SM:  <input class="au-text-input--width-sm">
-        MD:  <input class="au-text-input--width-md">
-        LG:  <input class="au-text-input--width-lg">
-        XL:  <input class="au-text-input--width-xl">
+        XS:  <input class="au-text-input au-text-input--width-xs">
+        SM:  <input class="au-text-input au-text-input--width-sm">
+        MD:  <input class="au-text-input au-text-input--width-md">
+        LG:  <input class="au-text-input au-text-input--width-lg">
+        XL:  <input class="au-text-input au-text-input--width-xl">
 
       -->
 
@@ -29,9 +29,8 @@ code:
       import AUtextInput from '@gov.au/text-inputs';
 
       <label htmlFor="text-input" >label text</label>
-      <AUtextInput width="sm" />
+      <AUtextInput id="text-input" width="sm" />
 ---
 
 ## Different width sizes for inputs
-Add these classes to change the width of a text input. Choose from xs, sm, md, lg or xl. 
-
+The width of a text input field should indicate the amount of information expected to be entered into the field. The size of the field acts as a visual constraint for the end user. Generally, fields such as postcodes should be shorter than ones for emails for example.
