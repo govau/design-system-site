@@ -1537,6 +1537,51 @@ table:
   hasSass: true    # <-- auto generated, don't change
   hasJs: false    # <-- auto generated, don't change
   hasReact: true    # <-- auto generated, don't change
+form:
+  name: Form
+  description: 'Used to add styling to hint-text, error messages and field sets to forms.'
+  metatags:
+    - forms
+    - interactive
+  tags:
+    - forms
+  related:
+    - body
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
+  required: false
+  contributors:
+    - name: Raj Ghuman
+      img: raj-ghuman.jpg
+      url: 'https://github.com/sukhrajghuman'
+    - name: Sarah Pulis
+      img: sarah-pulis.jpg
+      url: 'https://github.com/sarahpulis'
+    - name: Andrew Arch
+      img: andrew-arch.jpg
+      url: 'https://github.com/AndrewArch'
+  state: inprogress
+  status:
+    usable: done
+    consistent: todo
+    versatile: todo
+    coded: todo
+    tested: todo
+    considered: todo
+  order: 10
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  ID: form    # <-- auto generated, don't change
+  version: 0.0.0    # <-- auto generated, don't change
+  dependencies:    # <-- auto generated, don't change
+    - core
+  hasSass: true    # <-- auto generated, don't change
+  hasJs: false    # <-- auto generated, don't change
+  hasReact: true    # <-- auto generated, don't change
 main-nav:
   name: Main nav
   description: >
