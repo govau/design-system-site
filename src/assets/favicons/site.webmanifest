@@ -1,6 +1,10 @@
 {
-	"name": "",
-	"short_name": "",
+	"name": "Australian Government Design System",
+	"short_name": "AUDS",
+	"description": "The government open language for design website.",
+	"start_url": "./",
+	"dir": "ltr",
+	"lang": "en-AU",
 	"icons": [
 		{
 			"src": "/assets/favicons/android-chrome-192x192.png",
