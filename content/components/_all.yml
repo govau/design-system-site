@@ -1547,6 +1547,9 @@ form:
     - forms
   related:
     - body
+    - text-inputs
+    - control inputs
+    - select
   related-articles:
     - TODO
   used-in:
