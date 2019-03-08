@@ -6,8 +6,7 @@ if (workbox) {
   workbox.googleAnalytics.initialize();
 
   workbox.routing.registerRoute(
-    new RegExp('.*\.js'),
-    new RegExp('.*\.html'),
+    new RegExp('.*'),
     new workbox.strategies.NetworkFirst()
   );
 
