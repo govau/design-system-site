@@ -7,6 +7,7 @@ if (workbox) {
 
   workbox.routing.registerRoute(
     new RegExp('.*\.js'),
+    new RegExp('.*\.html'),
     new workbox.strategies.NetworkFirst()
   );
 
