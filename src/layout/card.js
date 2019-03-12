@@ -66,7 +66,7 @@ AUcardHeading.defaultProps = {
  * @param  {string}  href             - We add the href so it isn't added to the attributeOptions
  * @param  {object}  attributeOptions - All of the other properties that can be added
  */
-const AUcardImage = ({ image, description, fullwidth, link, href, ...attributesOptions = {} }) => {
+const AUcardImage = ({ image, description, fullwidth, link, href, ...attributesOptions }) => {
 	let ImageContainer = 'div';
 
 	if( link !== undefined ) {
@@ -99,7 +99,7 @@ AUcardImage.propTypes = {
  * @param  {string}  href             - We add the href so it isn't added to the attributeOptions
  * @param  {object}  attributeOptions - All of the other properties that can be added
  */
-const AUcardSVG = ({ svg, title, fullwidth, link, href, ...attributesOptions = {} }) => {
+const AUcardSVG = ({ svg, title, fullwidth, link, href, ...attributesOptions }) => {
 	let ImageContainer = 'div';
 
 	if( link !== undefined ) {
@@ -134,7 +134,7 @@ AUcardSVG.propTypes = {
  * @param  {string}  href             - We add the href so it isn't added to the attributeOptions
  * @param  {object}  attributeOptions - All of the other properties that can be added
  */
-const AUcardContent = ({ text, fullwidth, link, href, ...attributesOptions = {} }) => {
+const AUcardContent = ({ text, fullwidth, link, href, ...attributesOptions }) => {
 
 	let ContentContainer = 'p';
 
@@ -169,7 +169,7 @@ AUcardContent.propTypes = {
  * @param  {string}  href             - We add the href so it isn't added to the attributeOptions
  * @param  {object}  attributeOptions - All of the other properties that can be added
  */
-const AUcardCTA = ({ text, fullwidth, link, href, ...attributesOptions = {} }) => {
+const AUcardCTA = ({ text, fullwidth, link, href, ...attributesOptions }) => {
 
 	let CTAContainer = 'div';
 
@@ -237,7 +237,7 @@ AUcardLine.propTypes = {
  * @param  {string}  href             - We add the href so it isn't added to the attributeOptions
  * @param  {object}  attributeOptions - All of the other properties that can be added
  */
-const AUcard = ({ rows, appearance, alignment, link, href, ...attributesOptions = {} }) => {
+const AUcard = ({ rows, appearance, alignment, link, href, ...attributesOptions }) => {
 
 	let CardContainer = 'div';
 
