@@ -11,7 +11,7 @@ const Searchbox = ({ label, placeholder, _relativeURL, _ID, _pages }) => (
 		<label className="sronly" htmlFor="s1">{ label }</label>
 
 		<div className="au-stretch_col-fill">
-			<AUtextInput name="s" id="s1" type="search" placeholder={ placeholder } defaultValue={ _pages[ _ID ].searchvalue && _pages[ _ID ].searchvalue } />
+			<AUtextInput block name="s" id="s1" type="search" placeholder={ placeholder } defaultValue={ _pages[ _ID ].searchvalue && _pages[ _ID ].searchvalue } />
 		</div>
 
 		<div className="au-stretch_col-fit">
