@@ -65,9 +65,11 @@
 
 	.furnace__component__documentation {
 		@include AU-fontgrid( xs );
-		@include AU-space( margin-top, 1.25unit );
+		@include AU-space( margin-top, 2unit );
 		float: right;
-
+		@include AU-media( sm ){
+			@include AU-space( margin-top, 1.25unit );
+		}
 		a {
 			position: relative;
 			z-index: 100;
