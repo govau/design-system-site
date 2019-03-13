@@ -90,10 +90,11 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 												<svg className="furnace__component__details__img" aria-hidden="true" title={ MODULES[ module ].name }>
 													<use xlinkHref={ `/assets/svg/map.svg#${ MODULES[ module ].ID }` } />
 												</svg>
-
-												<p className="furnace__component__dependencies">
+												 {MODULES[ module ].dependencies.length > 0 && <p className="furnace__component__dependencies">
 													<DependencyList dependencies={ MODULES[ module ].dependencies } MODULES={ MODULES } />
-												</p>
+												</p>}
+											 
+								
 
 												<p className="furnace__component__documentation">
 													<a href={ _relativeURL( `/components/${ MODULES[ module ].ID }`, _ID ) }>
