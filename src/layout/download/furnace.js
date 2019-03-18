@@ -82,6 +82,7 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 																	? ' (required)'
 																	: ''
 															}
+															<div>
 															{
 																MODULES[ module ].dependencies.length > 0 && 
 																<span className="furnace__component__dependencies">
@@ -89,9 +90,10 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 																</span>
 															}
 																<a className="furnace__component__documentation" href={ _relativeURL( `/components/${ MODULES[ module ].ID }`, _ID ) }>
-														<span className="sronly">{ MODULES[ module ].name }</span>
-														Documentation
-													</a>
+																	<span className="sronly">{ MODULES[ module ].name }</span>
+																	Documentation
+																</a>
+																</div>
 													</span>
 												</span>
 											</label>

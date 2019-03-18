@@ -57,7 +57,6 @@
 		.furnace__component__dependencies {
 			@include AU-fontgrid( xs, nospace );
 			font-weight: normal;
-			display: block;
 
 		}
 
@@ -84,6 +83,7 @@
 			@include AU-fontgrid( xs, nospace );
 			font-weight: bold;
 			padding-top: 0;
+			display: block;
 		}
 	}
 }
