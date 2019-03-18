@@ -22,21 +22,21 @@ code:
       </a>
   - React: |
       /*
-        Light:  <AUbutton link="#">
-        Dark:   <AUbutton link="#" dark>
+        Light:  <AUbutton href="#">
+        Dark:   <AUbutton href="#" dark>
       */
 
       import AUbutton from '@gov.au/buttons';
 
-      <AUbutton link="#">
+      <AUbutton href="#">
         Primary link button
       </AUbutton>
 
-      <AUbutton secondary link="#">
+      <AUbutton secondary href="#">
         Secondary link button
       </AUbutton>
 
-      <AUbutton tertiary link="#">
+      <AUbutton tertiary href="#">
         Tertiary link button
       </AUbutton>
 ---
