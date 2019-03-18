@@ -25,10 +25,10 @@
 	display: block;
 	position: relative;
 	background: $AU-color-background-shade;
-	height: 5.5rem;
+	@include AU-space( height, 5.75unit);	
 
-	@include AU-media( sm ){
-		height:4rem;
+	@include AU-media( xs ){
+	@include AU-space( height, 4unit);	
 	}
 
 	&:hover {
@@ -61,14 +61,13 @@
 		}
 
 		.furnace__component__documentation {
-			@include AU-fontgrid( xs );
+			@include AU-fontgrid( xs, nospace );
 			 position: relative;
 			 z-index: 100;
-			display: block;
+			 display: block;
 
-			@include AU-media( sm ){
+			@include AU-media( md ){
 				float: right;
-				
 			}
 
 			&:hover {

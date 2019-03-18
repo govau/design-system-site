@@ -61,7 +61,7 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 								Object.keys( MODULES )
 									.map( ( module, i ) => (
 										<li className="furnace__component" key={ i }>
-
+										<div>
 											<label className="furnace__component__label">
 												<span className="furnace__component__control">
 													<input
@@ -102,7 +102,7 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 													<use xlinkHref={ `/assets/svg/map.svg#${ MODULES[ module ].ID }` } />
 												</svg>
 											</div>
-
+											</div>
 										</li>
 									)
 								)
