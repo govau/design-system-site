@@ -4,6 +4,7 @@
 pancake:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   downloads: 187555
   modules:
     '@gov.au/pancake': 41998
@@ -70,6 +71,20 @@ auds:
   downloads: 500612
   modules:
 >>>>>>> 65a4958d679e799922929eb74a2129f423c921aa
+=======
+  downloads: 186554
+  modules:
+    '@gov.au/pancake': 41798
+    '@gov.au/pancake-js': 28322
+    '@gov.au/pancake-json': 35004
+    '@gov.au/pancake-react': 34631
+    '@gov.au/pancake-sass': 45605
+    '@gov.au/syrup': 1194
+  stars: 81
+auds:
+  downloads: 500612
+  modules:
+>>>>>>> 65a4958d679e799922929eb74a2129f423c921aa
     '@gov.au/accordion': 26260
     '@gov.au/animate': 25213
     '@gov.au/body': 29435
@@ -98,6 +113,9 @@ auds:
     '@gov.au/text-inputs': 24283
   stars: 526
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 65a4958d679e799922929eb74a2129f423c921aa
+=======
 >>>>>>> 65a4958d679e799922929eb74a2129f423c921aa
 =======
 >>>>>>> 65a4958d679e799922929eb74a2129f423c921aa

@@ -101,7 +101,10 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 												</svg>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 65a4958d679e799922929eb74a2129f423c921aa
 =======
 >>>>>>> 65a4958d679e799922929eb74a2129f423c921aa
 												 {MODULES[ module ].dependencies.length > 0 && <p className="furnace__component__dependencies">
