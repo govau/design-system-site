@@ -27,14 +27,13 @@
 	background: $AU-color-background-shade;
 	@include AU-space( height, 5.75unit);	
 
-	@include AU-media( xs ){
+	@include AU-media( xs ) {
 	@include AU-space( height, 4unit);	
 	}
 
 	&:hover {
 	 background: $AU-color-background-alt;
 	}
-
 }
 
 // Pull the label to full width and he
@@ -74,10 +73,10 @@
 				color: $AU-color-foreground-text;
 				text-decoration:none;
 			}
-		
 
 			
 		}
+
 		.au-control-input__text {
 			@include AU-fontgrid( xs, nospace );
 			font-weight: bold;
