@@ -2,49 +2,6 @@
 # THE `pancake` and `auds` FIELDS WILL BE OVERWRITTEN
 
 pancake:
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  downloads: 187555
-  modules:
-    '@gov.au/pancake': 41998
-    '@gov.au/pancake-js': 28465
-    '@gov.au/pancake-json': 35197
-    '@gov.au/pancake-react': 34778
-    '@gov.au/pancake-sass': 45918
-    '@gov.au/syrup': 1199
-  stars: 81
-auds:
-  downloads: 503342
-  modules:
-    '@gov.au/accordion': 26393
-    '@gov.au/animate': 25345
-    '@gov.au/body': 29635
-    '@gov.au/breadcrumbs': 18684
-    '@gov.au/buttons': 28271
-    '@gov.au/callout': 12034
-    '@gov.au/control-input': 14671
-    '@gov.au/core': 32859
-    '@gov.au/cta-link': 22447
-    '@gov.au/direction-links': 11445
-    '@gov.au/footer': 25799
-    '@gov.au/grid-12': 26804
-    '@gov.au/header': 22962
-    '@gov.au/headings': 16513
-    '@gov.au/inpage-nav': 13373
-    '@gov.au/keyword-list': 8752
-    '@gov.au/link-list': 26518
-    '@gov.au/main-nav': 5257
-    '@gov.au/page-alerts': 21363
-    '@gov.au/progress-indicator': 10452
-    '@gov.au/responsive-media': 12500
-    '@gov.au/select': 19692
-    '@gov.au/side-nav': 6241
-    '@gov.au/skip-link': 23167
-    '@gov.au/tags': 17709
-    '@gov.au/text-inputs': 24456
-  stars: 528
-=======
   downloads: 186554
   modules:
     '@gov.au/pancake': 41798
@@ -57,34 +14,6 @@ auds:
 auds:
   downloads: 500612
   modules:
-=======
-  downloads: 186554
-  modules:
-    '@gov.au/pancake': 41798
-    '@gov.au/pancake-js': 28322
-    '@gov.au/pancake-json': 35004
-    '@gov.au/pancake-react': 34631
-    '@gov.au/pancake-sass': 45605
-    '@gov.au/syrup': 1194
-  stars: 81
-auds:
-  downloads: 500612
-  modules:
->>>>>>> 65a4958d679e799922929eb74a2129f423c921aa
-=======
-  downloads: 186554
-  modules:
-    '@gov.au/pancake': 41798
-    '@gov.au/pancake-js': 28322
-    '@gov.au/pancake-json': 35004
-    '@gov.au/pancake-react': 34631
-    '@gov.au/pancake-sass': 45605
-    '@gov.au/syrup': 1194
-  stars: 81
-auds:
-  downloads: 500612
-  modules:
->>>>>>> 65a4958d679e799922929eb74a2129f423c921aa
     '@gov.au/accordion': 26260
     '@gov.au/animate': 25213
     '@gov.au/body': 29435
@@ -112,10 +41,3 @@ auds:
     '@gov.au/tags': 17605
     '@gov.au/text-inputs': 24283
   stars: 526
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 65a4958d679e799922929eb74a2129f423c921aa
-=======
->>>>>>> 65a4958d679e799922929eb74a2129f423c921aa
-=======
->>>>>>> 65a4958d679e799922929eb74a2129f423c921aa
