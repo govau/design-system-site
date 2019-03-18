@@ -27,7 +27,7 @@
 	background: $AU-color-background-shade;
 	@include AU-space( height, 5.75unit);	
 
-	@include AU-media( xs ){
+	@include AU-media( xs ) {
 	@include AU-space( height, 4unit);	
 	}
 
