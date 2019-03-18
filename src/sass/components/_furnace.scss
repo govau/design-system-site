@@ -28,7 +28,7 @@
 	@include AU-space( height, 5.75unit);	
 
 	@include AU-media( xs ) {
-	@include AU-space( height, 4unit);	
+		@include AU-space( height, 4unit);	
 	}
 
 	&:hover {
