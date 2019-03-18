@@ -61,7 +61,6 @@
 
 		}
 
-<<<<<<< HEAD
 		.furnace__component__documentation {
 			@include AU-fontgrid( xs );
 			 position: relative;
@@ -72,18 +71,6 @@
 				float: right;
 				
 			}
-=======
-	.furnace__component__documentation {
-		@include AU-fontgrid( xs );
-		@include AU-space( margin-top, 2unit );
-		float: right;
-		@include AU-media( sm ){
-			@include AU-space( margin-top, 1.25unit );
-		}
-		a {
-			position: relative;
-			z-index: 100;
->>>>>>> 65a4958d679e799922929eb74a2129f423c921aa
 
 			&:hover {
 				color: $AU-color-foreground-text;
