@@ -61,7 +61,6 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 								Object.keys( MODULES )
 									.map( ( module, i ) => (
 										<li className="furnace__component" key={ i }>
-										<div>
 											<label className="furnace__component__label">
 												<span className="furnace__component__control">
 													<input
@@ -93,7 +92,7 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 																	<span className="sronly">{ MODULES[ module ].name }</span>
 																	Documentation
 																</a>
-																</div>
+															</div>
 													</span>
 												</span>
 											</label>
@@ -101,7 +100,6 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 												<svg className="furnace__component__details__img" aria-hidden="true" title={ MODULES[ module ].name }>
 													<use xlinkHref={ `/assets/svg/map.svg#${ MODULES[ module ].ID }` } />
 												</svg>
-											</div>
 											</div>
 										</li>
 									)
