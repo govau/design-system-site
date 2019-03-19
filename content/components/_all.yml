@@ -56,7 +56,7 @@ core:
     - open: 2
     - active: 7
     - something: something
-  version: 3.2.0    # <-- auto generated, don't change
+  version: 3.3.0    # <-- auto generated, don't change
   dependencies: []    # <-- auto generated, don't change
   hasSass: true    # <-- auto generated, don't change
   hasJs: false    # <-- auto generated, don't change
