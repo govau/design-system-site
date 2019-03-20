@@ -12,10 +12,10 @@ const DependencyList = ({ dependencies, MODULES }) => {
 
 	const dependencyNames = [];
 
-	Object.keys( MODULES ).map( ( module ) => {
-		dependencies.map( ( dependency ) => {
-			if ( MODULES[ module ].ID === dependency ) {
-				dependencyNames.push( MODULES[ module ].name );
+	Object.keys(MODULES).map((module) => {
+		dependencies.map((dependency) => {
+			if (MODULES[module].ID === dependency) {
+				dependencyNames.push(MODULES[module].name);
 			}
 		})
 	})
@@ -24,7 +24,7 @@ const DependencyList = ({ dependencies, MODULES }) => {
 		<Fragment>
 			{
 				dependencyNames.length > 0
-					? `Dependencies: ${ dependencyNames.join(', ') }`
+					? `Dependencies: ${dependencyNames.join(', ')}`
 					: null
 			}
 		</Fragment>
@@ -38,7 +38,7 @@ const DependencyList = ({ dependencies, MODULES }) => {
  */
 const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 	const MODULES = GetData({
-		filter: ( key, COMPONENTS ) => COMPONENTS[ key ].state === 'published',
+		filter: (key, COMPONENTS) => COMPONENTS[key].state === 'published',
 		yaml: _parseYaml,
 	});
 
@@ -58,52 +58,55 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 
 						<ul className="furnace__component-list">
 							{
-								Object.keys( MODULES )
-									.map( ( module, i ) => (
-										<li className="furnace__component" key={ i }>
+								Object.keys(MODULES)
+									.map((module, i) => (
+										<li className="furnace__component" key={i}>
 											<label className="furnace__component__label">
 												<span className="furnace__component__control">
 													<input
 														type="checkbox"
 														name="components"
 														className="au-control-input__input js-furnace-selector"
-														value={ MODULES[ module ].ID }
-														required={ MODULES[ module ].required }
-														defaultChecked={ MODULES[ module ].required }
-														disabled={ MODULES[ module ].required }
-														readOnly={ MODULES[ module ].required }
+														value={MODULES[module].ID}
+														required={MODULES[module].required}
+														defaultChecked={MODULES[module].required}
+														disabled={MODULES[module].required}
+														readOnly={MODULES[module].required}
 													/>
 													<span className="au-control-input__text">
 														<span className="sronly">Add</span>
-															{ MODULES[ module ].name }
+														{MODULES[module].name}
+														{
+															MODULES[module].required
+																? ' (required)'
+																: ''
+														}
+														<div>
 															{
-																MODULES[ module ].required
-																	? ' (required)'
-																	: ''
-															}
-															<div>
-															{
-																MODULES[ module ].dependencies.length > 0 && 
+																MODULES[module].dependencies.length > 0 &&
 																<span className="furnace__component__dependencies">
-																	<DependencyList dependencies={ MODULES[ module ].dependencies } MODULES={ MODULES } />
+																	<DependencyList dependencies={MODULES[module].dependencies} MODULES={MODULES} />
 																</span>
+
 															}
-																<a className="furnace__component__documentation" href={ _relativeURL( `/components/${ MODULES[ module ].ID }`, _ID ) }>
-																	<span className="sronly">{ MODULES[ module ].name }</span>
+																<a className="furnace__component__documentation" href={_relativeURL(`/components/${MODULES[module].ID}`, _ID)}>
+																	<span className="sronly">{MODULES[module].name}</span>
 																	Documentation
 																</a>
-															</div>
+														</div>
 													</span>
 												</span>
 											</label>
+
 											<div className="furnace__component__details">
-												<svg className="furnace__component__details__img" aria-hidden="true" title={ MODULES[ module ].name }>
-													<use xlinkHref={ `/assets/svg/map.svg#${ MODULES[ module ].ID }` } />
+												<svg className="furnace__component__details__img" aria-hidden="true" title={MODULES[module].name}>
+													<use xlinkHref={`/assets/svg/map.svg#${MODULES[module].ID}`} />
 												</svg>
 											</div>
+
 										</li>
 									)
-								)
+									)
 							}
 						</ul>
 
@@ -117,21 +120,21 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 
 					<div className="furnace__buildbox">
 						<div className="furnace__buildbox__wrapper">
-						<fieldset className="au-fieldset">
-							<legend>Stylesheets</legend>
+							<fieldset className="au-fieldset">
+								<legend>Stylesheets</legend>
 
-							<AUradio id="css-minified-radio" label="CSS minified" block name="styleOutput" value="css" defaultChecked />
-							<AUradio id="css-modules-radio" label="CSS modules" block name="styleOutput" value="cssModules" />
-							<AUradio id="sass-modules-radio" label="SASS modules" block name="styleOutput" value="sassModules" />
-						</fieldset>
+								<AUradio id="css-minified-radio" label="CSS minified" block name="styleOutput" value="css" defaultChecked />
+								<AUradio id="css-modules-radio" label="CSS modules" block name="styleOutput" value="cssModules" />
+								<AUradio id="sass-modules-radio" label="SASS modules" block name="styleOutput" value="sassModules" />
+							</fieldset>
 
-						<fieldset className="au-fieldset">
-							<legend>JavaScript</legend>
+							<fieldset className="au-fieldset">
+								<legend>JavaScript</legend>
 
-							<AUradio label="JavaScript minified" id="js-minified-radio" block name="jsOutput" value="js" defaultChecked />
-							<AUradio label="JavaScript modules" id="js-modules-radio" block name="jsOutput" value="jsModules" />
-							<AUradio label="React modules" block id="react-modules-radio" name="jsOutput" value="react" />
-						</fieldset>
+								<AUradio label="JavaScript minified" id="js-minified-radio" block name="jsOutput" value="js" defaultChecked />
+								<AUradio label="JavaScript modules" id="js-modules-radio" block name="jsOutput" value="jsModules" />
+								<AUradio label="React modules" block id="react-modules-radio" name="jsOutput" value="react" />
+							</fieldset>
 						</div>
 						<button type="submit" className="furnace__buildbox__download au-btn au-btn--block icon icon--dark icon--download">Download</button>
 					</div>
