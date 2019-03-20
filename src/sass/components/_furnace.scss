@@ -9,6 +9,12 @@
 		@include AU-space( margin-top, -0.5unit );
 		float: right;
 	}
+
+	.furnace__selectall {
+		@include AU-space( margin-top, -0.5unit );
+		@include AU-space( margin-right, 1unit );
+		float: right;
+	}
 }
 
 .furnace__component-list {
