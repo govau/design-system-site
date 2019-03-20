@@ -58,9 +58,10 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 
 						<ul className="furnace__component-list">
 							{
-								Object.keys(MODULES)
-									.map((module, i) => (
-										<li className="furnace__component" key={i}>
+								Object.keys( MODULES )
+									.map( ( module, i ) => (
+										<li className="furnace__component" key={ i }>
+
 											<label className="furnace__component__label">
 												<span className="furnace__component__control">
 													<input
