@@ -12,10 +12,10 @@ const DependencyList = ({ dependencies, MODULES }) => {
 
 	const dependencyNames = [];
 
-	Object.keys(MODULES).map((module) => {
-		dependencies.map((dependency) => {
-			if (MODULES[module].ID === dependency) {
-				dependencyNames.push(MODULES[module].name);
+	Object.keys( MODULES ).map( ( module ) => {
+		dependencies.map( ( dependency ) => {
+			if ( MODULES[ module ].ID === dependency ) {
+				dependencyNames.push( MODULES[ module ].name );
 			}
 		})
 	})
@@ -24,7 +24,7 @@ const DependencyList = ({ dependencies, MODULES }) => {
 		<Fragment>
 			{
 				dependencyNames.length > 0
-					? `Dependencies: ${dependencyNames.join(', ')}`
+					? `Dependencies: ${ dependencyNames.join(', ') }`
 					: null
 			}
 		</Fragment>
@@ -38,7 +38,7 @@ const DependencyList = ({ dependencies, MODULES }) => {
  */
 const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 	const MODULES = GetData({
-		filter: (key, COMPONENTS) => COMPONENTS[key].state === 'published',
+		filter: ( key, COMPONENTS ) => COMPONENTS[ key ].state === 'published',
 		yaml: _parseYaml,
 	});
 
@@ -64,33 +64,34 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 											<label className="furnace__component__label">
 												<span className="furnace__component__control">
 													<input
+
 														type="checkbox"
 														name="components"
 														className="au-control-input__input js-furnace-selector"
-														value={MODULES[module].ID}
-														required={MODULES[module].required}
-														defaultChecked={MODULES[module].required}
-														disabled={MODULES[module].required}
-														readOnly={MODULES[module].required}
+														value={ MODULES[ module ].ID }
+														required={ MODULES[ module ].required }
+														defaultChecked={ MODULES[ module ].required }
+														disabled={ MODULES[ module ].required }
+														readOnly={ MODULES[ module ].required }
 													/>
 													<span className="au-control-input__text">
-														<span className="sronly">Add</span>
-														{MODULES[module].name}
-														{
-															MODULES[module].required
-																? ' (required)'
-																: ''
-														}
+													<span className="sronly">Add</span>
+															{ MODULES[ module ].name }
+															{
+																MODULES[ module ].required
+																	? ' (required)'
+																	: ''
+															}
 														<div>
 															{
 																MODULES[module].dependencies.length > 0 &&
 																<span className="furnace__component__dependencies">
-																	<DependencyList dependencies={MODULES[module].dependencies} MODULES={MODULES} />
+																	<DependencyList dependencies={ MODULES[module].dependencies } MODULES={ MODULES } />
 																</span>
 
 															}
-																<a className="furnace__component__documentation" href={_relativeURL(`/components/${MODULES[module].ID}`, _ID)}>
-																	<span className="sronly">{MODULES[module].name}</span>
+																<a className="furnace__component__documentation" href={ _relativeURL( `/components/${ MODULES[module].ID }`, _ID ) }>
+																	<span className="sronly">{ MODULES[module].name }</span>
 																	Documentation
 																</a>
 														</div>
@@ -99,8 +100,8 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 											</label>
 
 											<div className="furnace__component__details">
-												<svg className="furnace__component__details__img" aria-hidden="true" title={MODULES[module].name}>
-													<use xlinkHref={`/assets/svg/map.svg#${MODULES[module].ID}`} />
+												<svg className="furnace__component__details__img" aria-hidden="true" title={ MODULES[module].name }>
+													<use xlinkHref={ `/assets/svg/map.svg#${ MODULES[module].ID }` } />
 												</svg>
 											</div>
 
