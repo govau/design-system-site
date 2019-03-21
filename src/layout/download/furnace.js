@@ -64,7 +64,6 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 											<label className="furnace__component__label">
 												<span className="furnace__component__control">
 													<input
-
 														type="checkbox"
 														name="components"
 														className="au-control-input__input js-furnace-selector"
@@ -75,7 +74,7 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 														readOnly={ MODULES[ module ].required }
 													/>
 													<span className="au-control-input__text">
-													<span className="sronly">Add</span>
+														<span className="sronly">Add</span>
 															{ MODULES[ module ].name }
 															{
 																MODULES[ module ].required
@@ -86,12 +85,12 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 															{
 																MODULES[module].dependencies.length > 0 &&
 																<span className="furnace__component__dependencies">
-																	<DependencyList dependencies={ MODULES[module].dependencies } MODULES={ MODULES } />
+																	<DependencyList dependencies={ MODULES[ module ].dependencies } MODULES={ MODULES } />
 																</span>
 
 															}
-																<a className="furnace__component__documentation" href={ _relativeURL( `/components/${ MODULES[module].ID }`, _ID ) }>
-																	<span className="sronly">{ MODULES[module].name }</span>
+																<a className="furnace__component__documentation" href={ _relativeURL( `/components/${ MODULES[ module ].ID }`, _ID ) }>
+																	<span className="sronly">{ MODULES[ module ].name }</span>
 																	Documentation
 																</a>
 														</div>
@@ -100,8 +99,8 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 											</label>
 
 											<div className="furnace__component__details">
-												<svg className="furnace__component__details__img" aria-hidden="true" title={ MODULES[module].name }>
-													<use xlinkHref={ `/assets/svg/map.svg#${ MODULES[module].ID }` } />
+												<svg className="furnace__component__details__img" aria-hidden="true" title={ MODULES[ module ].name }>
+													<use xlinkHref={ `/assets/svg/map.svg#${ MODULES[ module ].ID }` } />
 												</svg>
 											</div>
 
