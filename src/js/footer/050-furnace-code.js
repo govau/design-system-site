@@ -2,8 +2,7 @@ var furnaceComponents = document.querySelectorAll( '.js-furnace-selector' );
 var furnaceNPM        = document.querySelectorAll( '.js-furnace-code code' )[ 0 ];
 var furnaceClear      = document.querySelectorAll( '.js-furnace-clear ' )[ 0 ];
 var furnaceDownload   = document.querySelectorAll( '.furnace__buildbox__download' )[ 0 ];
-
-
+var  selectAll    	  = document.querySelector('.furnace__selectall');	 
 /**
  * Adding event handler to each furnace checkbox
  */
@@ -64,3 +63,13 @@ function ToggleNPM( $this ) {
 function ClearNPM() {
 	furnaceNPM.innerHTML = 'npm install --save @gov.au/core';
 }
+
+/**
+ * Select all button selects all checkbox elements on page
+ */ 
+AddEvent( selectAll, 'click', function( event ){
+	furnaceComponents.forEach(function(furnaceComponents) {
+		furnaceComponents.checked=true;
+});
+	
+});

@@ -51,7 +51,7 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 					<h3 className="furnace__title">
 						Select components
 						<button type="reset" className="js-furnace-clear furnace__clear au-btn au-btn--tertiary icon icon--right icon--close">Clear selections</button>
-						<button  className="au-btn au-btn--primary furnace__selectall">Select All</button>
+						<button className="au-btn au-btn--primary furnace__selectall">Select All</button>
 					</h3>
 
 					<fieldset className="au-fieldset">
