@@ -25,9 +25,14 @@
 	display: block;
 	position: relative;
 	background: $AU-color-background-shade;
+	@include AU-space( height, 5.75unit );	
+
+	@include AU-media( xs ) {
+		@include AU-space( height, 4unit );
+	}
 
 	&:hover {
-	 background: $AU-color-background-alt;
+	 	background: $AU-color-background-alt;
 	}
 }
 
@@ -48,34 +53,35 @@
 		position: relative; //for the AUDS checkboxes
 		display: block;
 
-		.au-control-input__text {
+		.furnace__component__dependencies {
 			@include AU-fontgrid( xs, nospace );
-			font-weight: bold;
-			padding-top: 0;
+			font-weight: normal;
+
 		}
-	}
-}
 
-.furnace__component__details {
-	.furnace__component__dependencies {
-		@include AU-fontgrid( xs, nospace );
-		@include AU-space( margin, 2unit 0 0 2.5unit );
-		float: left;
-	}
+		.furnace__component__documentation {
+			@include AU-fontgrid( xs, nospace );
+			 position: relative;
+			 z-index: 100;
+			 display: block;
 
-	.furnace__component__documentation {
-		@include AU-fontgrid( xs );
-		@include AU-space( margin-top, 1.25unit );
-		float: right;
-
-		a {
-			position: relative;
-			z-index: 100;
+			@include AU-media( md ){
+				float: right;
+			}
 
 			&:hover {
 				color: $AU-color-foreground-text;
 				text-decoration:none;
 			}
+
+			
+		}
+
+		.au-control-input__text {
+			@include AU-fontgrid( xs, nospace );
+			font-weight: bold;
+			padding-top: 0;
+			display: block;
 		}
 	}
 }
