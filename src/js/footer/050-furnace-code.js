@@ -71,5 +71,4 @@ AddEvent( selectAll, 'click', function( event ){
 	furnaceComponents.forEach(function(furnaceComponents) {
 		furnaceComponents.checked=true;
 });
-	
 });
