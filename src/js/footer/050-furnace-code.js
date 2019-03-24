@@ -65,6 +65,7 @@ function ClearNPM() {
 	furnaceNPM.innerHTML = 'npm install --save @gov.au/core';
 }
 
+
 /**
  * Select all button selects all checkbox elements on page
  */ 
