@@ -2,7 +2,7 @@ var furnaceComponents = document.querySelectorAll( '.js-furnace-selector' );
 var furnaceNPM        = document.querySelectorAll( '.js-furnace-code code' )[ 0 ];
 var furnaceClear      = document.querySelectorAll( '.js-furnace-clear ' )[ 0 ];
 var furnaceDownload   = document.querySelectorAll( '.furnace__buildbox__download' )[ 0 ];
-var selectAll   = document.querySelector( '.furnace__selectall' );
+var furnaceSelectBtn  = document.querySelector( '.furnace__selectall' );
 
 /**
  * Adding event handler to each furnace checkbox
