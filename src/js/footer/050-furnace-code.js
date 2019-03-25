@@ -2,7 +2,7 @@ var furnaceComponents = document.querySelectorAll( '.js-furnace-selector' );
 var furnaceNPM        = document.querySelectorAll( '.js-furnace-code code' )[ 0 ];
 var furnaceClear      = document.querySelectorAll( '.js-furnace-clear ' )[ 0 ];
 var furnaceDownload   = document.querySelectorAll( '.furnace__buildbox__download' )[ 0 ];
-var furnaceSelectBtn  = document.querySelector( '.furnace__selectall' );
+var furnaceSelectAll  = document.querySelectorAll( '.furnace__selectall' );
 
 /**
  * Adding event handler to each furnace checkbox
@@ -67,10 +67,10 @@ function ClearNPM() {
 
 
 /**
- * Select all button selects all checkbox elements on page
+ * Selects all component checkboxes on page
  */ 
-AddEvent( furnaceSelectBtn, 'click', function( event ){
-	furnaceComponents.forEach( function( furnaceComponents ) {
-		furnaceComponents.checked = true;
-	});
-});
+AddEvent( furnaceSelectAll, "click", function( event, $this ) {
+	for ( i = 0; i < furnaceComponents.length; i++ ) {
+		furnaceComponents[ i ].checked = true;		
+	}
+})

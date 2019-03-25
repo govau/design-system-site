@@ -47,13 +47,13 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 			<form id="furnace" className="row furnace" method="POST" action="https://designsystem.gov.au/furnace/">
 
 				<div className="col-xs-12 col-sm-8">
-
-					<h3 className="furnace__title">
-						Select components
-						<button type="reset" className="js-furnace-clear furnace__clear au-btn au-btn--tertiary icon icon--right icon--close">Reset</button>
+					<div className="furnace__panel">
+						<h3 className="furnace__title">
+							Select components
+						</h3>
 						<button type="button" className="au-btn au-btn--primary furnace__selectall">Select all</button>
-					</h3>
-
+						<button type="reset" className="js-furnace-clear furnace__clear au-btn au-btn--tertiary icon icon--right icon--close">Clear selections</button>
+					</div>
 					<fieldset className="au-fieldset">
 						<legend className="sronly">Components</legend>
 
