@@ -69,7 +69,7 @@ function ClearNPM() {
 /**
  * Select all button selects all checkbox elements on page
  */ 
-AddEvent( selectAll, 'click', function( event ){
+AddEvent( furnaceSelectBtn, 'click', function( event ){
 	furnaceComponents.forEach( function( furnaceComponents ) {
 		furnaceComponents.checked = true;
 	});
