@@ -48,9 +48,7 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 
 				<div className="col-xs-12 col-sm-8">
 					<div className="furnace__panel">
-						<h3 className="furnace__title">
-							Select components
-						</h3>
+						<h3 className="furnace__title">Select components</h3>
 						<button type="button" className="au-btn au-btn--primary furnace__selectall">Select all</button>
 						<button type="reset" className="js-furnace-clear furnace__clear au-btn au-btn--tertiary icon icon--right icon--close">Clear selections</button>
 					</div>
