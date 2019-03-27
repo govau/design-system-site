@@ -60,7 +60,6 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 								Object.keys( MODULES )
 									.map( ( module, i ) => (
 										<li className="furnace__component" key={ i }>
-
 											<label className="furnace__component__label">
 												<span className="furnace__component__control">
 													<input
@@ -81,6 +80,19 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 																	? ' (required)'
 																	: ''
 															}
+														<div>
+															{
+																MODULES[module].dependencies.length > 0 &&
+																<span className="furnace__component__dependencies">
+																	<DependencyList dependencies={ MODULES[ module ].dependencies } MODULES={ MODULES } />
+																</span>
+
+															}
+																<a className="furnace__component__documentation" href={ _relativeURL( `/components/${ MODULES[ module ].ID }`, _ID ) }>
+																	<span className="sronly">{ MODULES[ module ].name }</span>
+																	Documentation
+																</a>
+														</div>
 													</span>
 												</span>
 											</label>
@@ -89,22 +101,11 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 												<svg className="furnace__component__details__img" aria-hidden="true" title={ MODULES[ module ].name }>
 													<use xlinkHref={ `/assets/svg/map.svg#${ MODULES[ module ].ID }` } />
 												</svg>
-
-												<p className="furnace__component__dependencies">
-													<DependencyList dependencies={ MODULES[ module ].dependencies } MODULES={ MODULES } />
-												</p>
-
-												<p className="furnace__component__documentation">
-													<a href={ _relativeURL( `/components/${ MODULES[ module ].ID }`, _ID ) }>
-														<span className="sronly">{ MODULES[ module ].name }</span>
-														Documentation
-													</a>
-												</p>
 											</div>
 
 										</li>
 									)
-								)
+									)
 							}
 						</ul>
 
@@ -118,21 +119,21 @@ const Furnace = ({ components, _ID, _body, _parseYaml, _relativeURL }) => {
 
 					<div className="furnace__buildbox">
 						<div className="furnace__buildbox__wrapper">
-						<fieldset className="au-fieldset">
-							<legend>Stylesheets</legend>
+							<fieldset className="au-fieldset">
+								<legend>Stylesheets</legend>
 
-							<AUradio id="css-minified-radio" label="CSS minified" block name="styleOutput" value="css" defaultChecked />
-							<AUradio id="css-modules-radio" label="CSS modules" block name="styleOutput" value="cssModules" />
-							<AUradio id="sass-modules-radio" label="SASS modules" block name="styleOutput" value="sassModules" />
-						</fieldset>
+								<AUradio id="css-minified-radio" label="CSS minified" block name="styleOutput" value="css" defaultChecked />
+								<AUradio id="css-modules-radio" label="CSS modules" block name="styleOutput" value="cssModules" />
+								<AUradio id="sass-modules-radio" label="SASS modules" block name="styleOutput" value="sassModules" />
+							</fieldset>
 
-						<fieldset className="au-fieldset">
-							<legend>JavaScript</legend>
+							<fieldset className="au-fieldset">
+								<legend>JavaScript</legend>
 
-							<AUradio label="JavaScript minified" id="js-minified-radio" block name="jsOutput" value="js" defaultChecked />
-							<AUradio label="JavaScript modules" id="js-modules-radio" block name="jsOutput" value="jsModules" />
-							<AUradio label="React modules" block id="react-modules-radio" name="jsOutput" value="react" />
-						</fieldset>
+								<AUradio label="JavaScript minified" id="js-minified-radio" block name="jsOutput" value="js" defaultChecked />
+								<AUradio label="JavaScript modules" id="js-modules-radio" block name="jsOutput" value="jsModules" />
+								<AUradio label="React modules" block id="react-modules-radio" name="jsOutput" value="react" />
+							</fieldset>
 						</div>
 						<button type="submit" className="furnace__buildbox__download au-btn au-btn--block icon icon--dark icon--download">Download</button>
 					</div>

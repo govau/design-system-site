@@ -13,12 +13,12 @@ Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA stand
 
 #### Props
 
-| Prop name | Type    | Description
-|-----------|---------------------------------------------------------------------------------------
-| `foreground` | string  | Color one
-| `background` | string  | Color two
-| `silent`     | silent  | If the logs get printed in the terminal
-| `rounded`    | boolean | If the value is rounded or not
+| Prop name    | Type   | Description |
+|--------------|--------|-------------|
+| `foreground` | string | Color one   |
+| `background` | string | Color two   |
+| `silent`     | silent  | If the logs get printed in the terminal   |
+| `rounded`    | boolean | If the value is rounded or not   |
 
 
 #### Example
@@ -37,12 +37,12 @@ The function to find the nearest accessible color.
 
 #### Props
 
-| Prop name | Type    | Description
-|-----------|---------------------------------------------------------------------------------------
-| `toMakeA11y` | string | The color that is to be changed.
-| `background` | string | The background color to compare against toMakeA11y for the contrast.
-| `ratioKey`   | string | The keyword `small` or `large` to set the WCAG 2.1 contrast ration or 3.0 or 4.5.
-| `steps`      | number | The step size our function is searching for a new color in. The bigger the number the faster the process the rougher the found color. Must be from 0.1 to 100.
+| Prop name | Type    | Description |
+|-----------|---------|-------------|
+| `toMakeA11y` | string | The color that is to be changed.   |
+| `background` | string | The background color to compare against toMakeA11y for the contrast.   |
+| `ratioKey`   | string | The keyword `small` or `large` to set the WCAG 2.1 contrast ration or 3.0 or 4.5.   |
+| `steps`      | number | The step size our function is searching for a new color in. The bigger the number the faster the process the rougher the found color. Must be from 0.1 to 100.   |
 
 
 #### Example
@@ -62,7 +62,7 @@ Generate an optimized SVG data-uri.
 #### Props
 
 | Prop name | Type    | Description
-|-----------|---------------------------------------------------------------------------------------
+|-----------|---------|-------------------------|
 | `svg` | string  | The SVG data to be converted.
 
 
@@ -87,9 +87,9 @@ Create media queries and wraps the @content code inside of it.
 
 #### Props
 
-| Prop name | Type    | Description
-|-----------|---------------------------------------------------------------------------------------
-| `breakpoint` | string | Either one of the following keywords: `xs`, `sm`, `md`, `lg`
+| Prop name | Type    | Description |
+|-----------|---------|-------------|
+| `breakpoint` | string | Either one of the following keywords: `xs`, `sm`, `md`, `lg` |
 
 
 #### Example
@@ -110,10 +110,10 @@ Mixin for setting font-size and line-height that snaps to the grid. Please visit
 
 #### Props
 
-| Prop name | Type    | Description
-|-----------|---------------------------------------------------------------------------------------
-| `fontsize`   | string | Either one of the following keywords: `xs`, `sm`, `md`, `lg`, `xl`, `xxl`, `xxxl`.
-| `lineheight` | string | Either one of the following keywords: `heading`, `nospace`, `default`.
+| Prop name | Type    | Description |
+|-----------|---------|-------------|
+| `fontsize`   | string | Either one of the following keywords: `xs`, `sm`, `md`, `lg`, `xl`, `xxl`, `xxxl`.   |
+| `lineheight` | string | Either one of the following keywords: `heading`, `nospace`, `default`.   |
 
 
 #### Example
@@ -132,10 +132,10 @@ Mixin for setting a properties value to snap to the grid, with a fallback for RE
 
 #### Props
 
-| Prop name | Type    | Description
-|-----------|---------------------------------------------------------------------------------------
-| `property` | string | The css property to apply the spacing ( `padding`, `margin`, `border` )
-| `value`    | string | The values of the property ( `0`, `20px`, `1unit`, `5%` )
+| Prop name | Type    | Description |
+|-----------|---------|-------------|
+| `property` | string | The css property to apply the spacing ( `padding`, `margin`, `border` )   |
+| `value`    | string | The values of the property ( `0`, `20px`, `1unit`, `5%` )   |
 
 
 #### Example
@@ -154,10 +154,9 @@ Add the outline to focus.
 
 #### Props
 
-| Prop name | Type    | Description
-|-----------|---------------------------------------------------------------------------------------
-| `theme` | string | Either one of the following keywords: `light` or `dark`.
-
+| Prop name | Type    | Description |
+|-----------|---------|------------|
+| `theme` | string | Either one of the following keywords: `light` or `dark`.   |
 
 #### Example
 
