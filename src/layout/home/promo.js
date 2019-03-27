@@ -45,7 +45,7 @@ Promo.propTypes = {
 	/**
 	 * promos:
 	 *   - title: Community
-	 *     imgurl: http://placehold.it/320x320
+	 *     imgurl: /assets/img/placeholder/320x320.png
 	 *     imgalt: Community Alt tag
 	 *     url: /community
 	 *     text: The community has been created for designers and developers to help them transform their agency’s products and services.
