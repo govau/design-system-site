@@ -69,7 +69,7 @@ function ClearNPM() {
 /**
  * Selects all component checkboxes on page
  */ 
-AddEvent( furnaceSelectAll, "click", function( event, $this ) {
+AddEvent( furnaceSelectAll, "click", function() {
 	for ( i = 0; i < furnaceComponents.length; i++ ) {
 		furnaceComponents[ i ].checked = true;		
 	}
