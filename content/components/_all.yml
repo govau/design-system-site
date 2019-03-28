@@ -1570,12 +1570,12 @@ form:
     - name: Adam Zerella
       img: adam-zerella.jpg
       url: 'https://github.com/adamzerella'
-  state: published
+  state: inprogress
   status:
     usable: done
-    consistent: todo
-    versatile: todo
-    coded: todo
+    consistent: done
+    versatile: done
+    coded: doing
     tested: todo
     considered: todo
   order: 10
