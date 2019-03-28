@@ -1,13 +1,20 @@
-.au-body .furnace__title {
+.furnace__panel {
+	 .furnace__title {
+	 
 	@include AU-space( margin-top, 2unit );
-	@include AU-space( padding-bottom, 1.5unit );
-	@include AU-space( margin-bottom, 1.5unit );
+	@include AU-space( padding-bottom, 1unit );
+	@include AU-space( margin-bottom, 1unit );
 	@include AU-space( border-bottom, solid 0.25unit $AU-color-background-shade );
 
+	}
+
 	.furnace__clear {
-		@include AU-space( padding, 0.5unit 0 );
-		@include AU-space( margin-top, -0.5unit );
-		float: right;
+		@include AU-space( margin-bottom, 1unit );
+	}
+
+	.furnace__selectall {
+		@include AU-space( margin-right, 1unit );
+		@include AU-space( margin-bottom, 1unit );
 	}
 }
 
