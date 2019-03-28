@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Form overview
+pagetitle: Form accessibility
 
 header:
   - /_shared/header.md
@@ -12,7 +12,9 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - default.md
+  - keyboard.md
+  - screenreader-desktop.md
+  - screenreader-mobile.md
 
 footer:
   - /_shared/footer.md
