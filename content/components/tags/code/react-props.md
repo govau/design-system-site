@@ -5,7 +5,7 @@ layout: section
 ### Props
 
 | Prop name | Type    | Description
-|-----------|---------------------------------------------------------------------------------------
+|-----------|--------------------------------------------------------------------------------------- | --- |
 | dark          | boolean | A dark variation of the component
 | tags          | array   | All tags inside a neat array
 | linkComponent | string  | The component used for the child links, optional

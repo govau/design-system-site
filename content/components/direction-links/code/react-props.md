@@ -5,7 +5,7 @@ layout: section
 ### Props
 
 | Prop name | Type    | Description
-|-----------|---------------------------------------------------------------------------------------
+|-----------|--------------------------------------------------------------------------------------- | --- |
 | text          | string  | The text of the link
 | link          | string  | The href link, optional
 | linkComponent | string  | The component used for the link, optional

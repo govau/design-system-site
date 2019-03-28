@@ -7,7 +7,7 @@ layout: section
 #### AUmainNav
 
 | Prop name | Type    | Description
-|-----------|---------------------------------------------------------------------------------------
+|-----------|--------------------------------------------------------------------------------------- | --- |
 | alt         | boolean | An alternate variation of the component
 | dark        | boolean | A dark variation of the component
 
@@ -17,7 +17,7 @@ All other props are spread into the component
 #### AUmainNavContent
 
 | Prop name | Type    | Description
-|-----------|---------------------------------------------------------------------------------------
+|-----------|--------------------------------------------------------------------------------------- | --- |
 | linkComponent     | string   | The component used for the child links, optional
 | ariaLabel         | string   | The aria-label attribute, defaults to "main navigation"
 | speed             | number   | Speed of the animation in ms, optional
