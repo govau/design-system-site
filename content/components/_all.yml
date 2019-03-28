@@ -1539,8 +1539,9 @@ table:
   hasReact: true    # <-- auto generated, don't change
 form:
   name: Form
-  description: 'A collection of styles for labels, hint text, inline error messages,
-    fieldsets and spacing for form controls.'
+  description: >
+    A collection of styles for labels, hint text,  inline error messages,
+    fieldsets and spacing for form controls.
   metatags:
     - forms
     - interactive
