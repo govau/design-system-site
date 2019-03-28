@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Form overview
+pagetitle: Form rationale
 
 header:
   - /_shared/header.md
@@ -12,7 +12,7 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - default.md
+  - todo
 
 footer:
   - /_shared/footer.md

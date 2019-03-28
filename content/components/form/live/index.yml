@@ -1,0 +1,8 @@
+layout: example/page
+pagetitle: Form demo
+examples:
+  - template: ../examples/example-default/example-code.md
+  - template: ../examples/example-default/example-dark.md
+    style: dark
+fullwidth: true
+livedemo: true
