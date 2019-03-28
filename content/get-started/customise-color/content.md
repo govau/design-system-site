@@ -26,13 +26,13 @@ The first step is to choose your own colours for the `background`, `action`, `fo
 
 > If you have not set up your project already or do not have a developer environment we recommend following our [development environment guide](/get-started/development-environment).
 
-Once you have this set up and you should have your components installed, and have a script that compiles `sass` into `css` from one `main.scss` file that imports the generated `pancake.scss` file.
+Once you have this set up and you should have your components installed, and have a script that compiles `sass` into `css` from one `main.scss` file that imports the generated `auds.scss` file.
 
 ### Override the colours
 
 To override the default colours you can assign your own value to any sass variable that ends with `!default`. You will find the colour variables inside the core component ( however we will modify it in another location).
 
-When you change a colour variable above the import of `pancake.scss` it flows through all of the components in the design system. In this `main.scss` example we have changed the dark colour scheme above the import of the design system:
+When you change a colour variable above the import of `auds.scss` it flows through all of the components in the design system. In this `main.scss` example we have changed the dark colour scheme above the import of the design system:
 ```scss
 // main.scss
 
@@ -43,7 +43,7 @@ $AU-colordark-foreground-focus:  #13e241;
 $AU-colordark-background:        #134169;
 
 // Import the design system components
-@import "./pancake.scss";
+@import "./auds.scss";
 
 // Additional customisation not related to components
 body {
