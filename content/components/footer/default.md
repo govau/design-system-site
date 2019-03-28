@@ -34,7 +34,7 @@ code:
             <div class="col-sm-12">
               <div class="au-footer__end">
                 <p>Footer text</p>
-                <img class="au-responsive-media-img" src="http://placehold.it/157x80" alt="Brand image">
+                <img class="au-responsive-media-img" src="/assets/img/placeholder/157x80.png" alt="Brand image">
                 <p><small>&copy; Commonwealth of Australia, <a href="https://github.com/govau/design-system-components/blob/master/LICENSE.md" rel="external license">MIT licensed</a></small></p>
               </div>
             </div>
@@ -77,7 +77,7 @@ code:
               <div className="col-sm-12">
                 <AUfooterEnd>
                   <p>Footer text</p>
-                  <img className="au-responsive-media-img" src="http://placehold.it/157x80" alt="Brand image" />
+                  <img className="au-responsive-media-img" src="/assets/img/placeholder/157x80.png" alt="Brand image" />
                   <p><small>&copy; Commonwealth of Australia, <a href="https://github.com/govau/design-system-components/blob/master/LICENSE.md" rel="external license">MIT licensed</a></small></p>
                 </AUfooterEnd>
               </div>
