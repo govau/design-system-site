@@ -5,7 +5,7 @@ layout: section
 ### Props
 
 | Prop name | Type    | Description
-|-----------|---------------------------------------------------------------------------------------
+|-----------|--------------------------------------------------------------------------------------- | --- |
 | ariaLabel        | string   | The aria-label attribute, defaults to "side navigation"
 | links            | array    | All links inside an array, format: [{ url: '', text: '' },{...},{...}]
 | links[0].link    | string   | The href link of this link

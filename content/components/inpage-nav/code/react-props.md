@@ -7,7 +7,7 @@ layout: section
 #### AUinpageNavLinks
 
 | Prop name | Type    | Description
-|-----------|---------------------------------------------------------------------------------------
+|-----------|--------------------------------------------------------------------------------------- | --- |
 | title                 | string   | The title above all sections
 | ariaLabel             | string   | The aria-label attribute, defaults to "in page navigation"
 | sections              | array    | All of the sections in a neat array
@@ -22,7 +22,7 @@ All other props are spread into the component
 #### AUinpageNavSection
 
 | Prop name | Type    | Description
-|-----------|---------------------------------------------------------------------------------------
+|-----------|--------------------------------------------------------------------------------------- | --- |
 | title        | string  | The title of the section
 | link         | string  | The link of this section, corresponds to the link inside AUinpageNavLinks
 | level        | number  | The semantic heading tag level, h1-h6, optional

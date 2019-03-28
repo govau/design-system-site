@@ -5,7 +5,7 @@ layout: section
 ### Props
 
 | Prop name | Type    | Description
-|-----------|---------------------------------------------------------------------------------------
+|-----------|--------------------------------------------------------------------------------------- | --- |
 | repeatedName  | string  | Provide the aria label
 | items         | object  | The text That is repeated in each item
 | linkComponent | string  | The component used for the child links, optional

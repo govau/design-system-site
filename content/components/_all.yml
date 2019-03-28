@@ -1453,7 +1453,7 @@ cards:
     usable: done
     consistent: done
     versatile: done
-    coded: doing
+    coded: todo
     tested: todo
     considered: todo
   order: 10
@@ -1522,7 +1522,7 @@ table:
     usable: done
     consistent: done
     versatile: done
-    coded: doing
+    coded: todo
     tested: todo
     considered: todo
   order: 10
@@ -1539,7 +1539,9 @@ table:
   hasReact: true    # <-- auto generated, don't change
 form:
   name: Form
-  description: 'A collection of styles for labels, hint text, inline error messages, fieldsets and spacing for form controls.'
+  description: >
+    A collection of styles for labels, hint text,  inline error messages,
+    fieldsets and spacing for form controls.
   metatags:
     - forms
     - interactive
@@ -1565,7 +1567,10 @@ form:
     - name: Andrew Arch
       img: andrew-arch.jpg
       url: 'https://github.com/AndrewArch'
-  state: inprogress
+    - name: Adam Zerella
+      img: adam-zerella.jpg
+      url: 'https://github.com/adamzerella'
+  state: published
   status:
     usable: done
     consistent: todo

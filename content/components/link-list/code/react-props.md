@@ -5,7 +5,7 @@ layout: section
 ### Props
 
 | Prop name | Type    | Description
-|-----------|---------------------------------------------------------------------------------------
+|-----------|--------------------------------------------------------------------------------------- | --- |
 | inline           | boolean  | The inline option to make the list inline
 | items            | object   | The link, text and props for each of the breadcrumbs
 | linkComponent    | string   | The component used for the child links, optional

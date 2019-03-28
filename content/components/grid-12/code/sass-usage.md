@@ -22,7 +22,7 @@ Iterates through the columns to create a new list and then sets the float.
 ### Props
 
 | Prop name | Type    | Description
-|-----------|---------------------------------------------------------------------------------------
+|-----------|--------------------------------------------------------------------------------------- | --- |
 | `class` | string  | The class to iterate and set the float against
 
 
@@ -41,7 +41,7 @@ Calculates the correct widths as a percentage based on the column count, column 
 ### Props
 
 | Prop name | Type    | Description
-|-----------|---------------------------------------------------------------------------------------
+|-----------|--------------------------------------------------------------------------------------- | --- |
 | `i`      | number  | The current column 1-12
 | `class`  | string  | The current class xs, sm, md, lg
 | `type`   | string  | The type of styles to be applied
@@ -62,7 +62,7 @@ Calls the `AU-grid-12-calc-grid-column` mixin and combines them.
 ### Props
 
 | Prop name | Type    | Description
-|-----------|---------------------------------------------------------------------------------------
+|-----------|--------------------------------------------------------------------------------------- | --- |
 | `columns` | number  | Total number of columns
 | `class`   | string  | The current class xs, sm, md, lg
 | `type`    | string  | The type of styles to be applied
@@ -82,7 +82,7 @@ Create the grid and all the necessary classes.
 ### Props
 
 | Prop name | Type    | Description
-|-----------|---------------------------------------------------------------------------------------
+|-----------|--------------------------------------------------------------------------------------- | --- |
 | `class` | string  | The current class xs, sm, md, lg
 
 

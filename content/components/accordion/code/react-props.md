@@ -4,8 +4,8 @@ layout: section
 
 ### Props
 
-| Prop name | Type    | Description
-|-----------|---------------------------------------------------------------------------------------
+| Prop name | Type    | Description 
+|-----------|--------------------------------------------------------------------------------------- | --- |
 | header      | string   | The headline of the accordion
 | closed      | boolean  | Closed state, optional
 | speed       | number   | Speed of the animation in ms, optional
