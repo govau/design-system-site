@@ -5,18 +5,18 @@ The patterns below are the best practice way to modify and change the components
 
 ## Set up
 
-When you install a component from the design system the `pancake.scss` file is automatically generated.
+When you install a component from the design system the `auds.scss` file is automatically generated.
 
-It is recommended to not touch the generated `pancake.scss` and import it into a `main.scss` file. You can import the `pancake.scss` in the `main.scss` file like so:
+It is recommended to not touch the generated `auds.scss` and import it into a `main.scss` file. You can import the `auds.scss` in the `main.scss` file like so:
 ```scss
-@import "./pancake.scss";
+@import "./auds.scss";
 ```
 
 ## Customise components with SASS variables
 
 Any SASS variable on a line that ends with `!default` can be changed.
 
-When you change a variable above the import of `pancake.scss` it flows throughout all of the components in the system. In this `main.scss` example you can see customisations to the colours and grid:
+When you change a variable above the import of `auds.scss` it flows throughout all of the components in the system. In this `main.scss` example you can see customisations to the colours and grid:
 ```scss
 // Dark colour theme changes
 $AU-colordark-foreground-text:   #ffffff;
@@ -29,7 +29,7 @@ $AU-media-sm: 750px;
 $AU-media-md: 980px;
 
 // Import the design system components
-@import "./pancake.scss";
+@import "./auds.scss";
 
 // Additional customisation not related to components
 body {
@@ -53,7 +53,7 @@ If you were going to make a large button with an icon you could add some additio
 </button>
 ```
 
-The system doesn't come with `.au-btn--lg` however you can add your own styles below the import of the generated `./pancake.scss` file.
+The system doesn't come with `.au-btn--lg` however you can add your own styles below the import of the generated `./auds.scss` file.
 ```scss
 // Dark colour theme changes
 $AU-colordark-foreground-text:   #ffffff;
@@ -66,7 +66,7 @@ $AU-media-sm: 750px;
 $AU-media-md: 980px;
 
 // Import the design system components
-@import "./pancake.scss";
+@import "./auds.scss";
 
 // Additional customisation not related to components
 body {
