@@ -45,12 +45,12 @@ Promo.propTypes = {
 	/**
 	 * promos:
 	 *   - title: Community
-	 *     imgurl: http://placehold.it/320x320
+	 *     imgurl: /assets/img/placeholder/320x320.png
 	 *     imgalt: Community Alt tag
 	 *     url: /community
 	 *     text: The community has been created for designers and developers to help them transform their agency’s products and services.
 	 *   - title: Components
-	 *     imgurl: http://placehold.it/320x320
+	 *     imgurl: /assets/img/placeholder/320x320.png
 	 *     imgalt: Components Alt tag
 	 *     url: /components
 	 *     text: Components are a collection of interface elements that can be used by teams of designers and developers across government to build products.

@@ -43,7 +43,7 @@ Intro.propTypes = {
 	title: PropTypes.string,
 
 	/**
-	 * imgurl: http://placehold.it/500x400
+	 * imgurl: /assets/img/placeholder/500x400.png
 	 */
 	imgurl: PropTypes.string.isRequired,
 
