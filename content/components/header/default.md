@@ -14,7 +14,7 @@ code:
           <div class="row">
             <div class="col-md-9">
               <a class="au-header__brand" href="#">
-                <img class="au-header__brand-image" alt="Insert alternate text here" src="/assets/img/placeholder/256x80.png">
+                <img class="au-header__brand-image" alt="Insert alternate text here" src="https://designsystem.gov.au/assets/img/placeholder/256x80.png">
                 <div class="au-header__text">
                   <h1 class="au-header__heading">Site title</h1>
                   <div class="au-header__subline">
@@ -43,7 +43,7 @@ code:
                 title="Page title" 
                 subline="Service sub-title that could be a little longer"
                 link="#"
-                brandImage="/assets/img/placeholder/256x80.png"
+                brandImage="https://designsystem.gov.au/assets/img/placeholder/256x80.png"
                 brandImageAlt="Insert alternate text here"
               />
             </div>
