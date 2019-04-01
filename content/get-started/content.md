@@ -2,7 +2,7 @@
 
 There are many ways to get started with the Australian Government Design System. It all depends on your project's needs and whether you are a developer or a designer (or somewhere in between). Don’t forget to check out our [community](https://community.digital.gov.au/c/designsystem) to see what others are doing!
 
-There are four main ways to get started with the Design System;
+There are four ways to get started with the Design System;
 
 - If you have prior experience with `npm`, [use npm to install the components](get-started/npm-install)
 - If you don't have prior experience with `npm`, [visit our Download page to install the components](get-started/download-page)
