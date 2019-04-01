@@ -2,12 +2,12 @@
 
 There are many ways to get started with the Australian Government Design System. It all depends on your project's needs and whether you are a developer or a designer (or somewhere in between). Don’t forget to check out our [community](https://community.digital.gov.au/c/designsystem) to see what others are doing!
 
-The main ways of getting started with the design system include:
+There are four main ways to get started with the Design System;
 
-- [Use npm to install the components](get-started/npm-install)
-- [Visit our Download page to install the components](get-started/download-page)
-- [Download the design system starter kit](get-started/starter-kit)
-- [Design assets in sketch](get-started/design-assets)
+- If you have prior experience with `npm`, [use npm to install the components](get-started/npm-install)
+- If you don't have prior experience with `npm`, [visit our Download page to install the components](get-started/download-page)
+- For designers, visit our download page to use [design assets in sketch](get-started/design-assets)
+- For full page templates, [download the design system starter kit](get-started/starter-kit)
 
 Once you have the components in a website we have advanced guides for developers on how to:
 
@@ -17,6 +17,8 @@ Once you have the components in a website we have advanced guides for developers
 - [Create a new component](get-started/create-components)
 - [Set up a development environment](get-started/development-environment)
 - [Spacing between components](get-started/spacing-between-components)
+
+The advanced guides assume prior knowledge of `npm` and `SASS`. 
 
 Throughout the process you may notice issues, missing features or have ideas for new components. If you would like to contribute or help build the future of the Australian Government Design System you can:
 
