@@ -33,4 +33,4 @@ code:
 ---
 
 ## Different width sizes for inputs
-The width of a text input field should indicate the amount of information expected to be entered into the field. The size of the field acts as a visual constraint for the end user. Generally, fields such as postcodes should be shorter than ones for emails for example.
+The width of a text input field should indicate the amount of information expected to be entered into the field. The size of the field acts as a visual constraint for the end user. As an example, input fields for postcodes should have a smaller width than fields for emails.
