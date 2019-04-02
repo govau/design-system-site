@@ -3,6 +3,7 @@
 
 	.au-link-list > li {
 		border: 0;
+		@include AU-space( padding, .15unit .18unit );
 
 		&.active-trail {
 			position: relative;
