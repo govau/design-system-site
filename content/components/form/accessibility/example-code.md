@@ -4,17 +4,17 @@
             <h1>Which devices do you use?</h1>
             <span class="au-hint-text">You may select more than one</span>
         </legend>
-        <label class="au-control-input au-control-input--block">
-            <input class="au-control-input__input" type="checkbox" name="checkbox-ex" checked>
-            <span class="au-control-input__text">Phone</span>
-        </label>
-        <label class="au-control-input au-control-input--block">
-            <input class="au-control-input__input" type="checkbox" name="checkbox-ex">
-            <span class="au-control-input__text">Tablet</span>
-        </label>
-        <label class="au-control-input au-control-input--block">
-            <input class="au-control-input__input" type="checkbox" name="checkbox-ex" checked>
-            <span class="au-control-input__text">Laptop</span>
-        </label>
+        <div class="au-control-input">
+            <input class="au-control-input__input" type="checkbox" name="checkbox-ex" id="cb-phone" checked>
+            <label class="au-control-input__text" for="radio-phone">Phone</label>
+        </div>
+        <div class="au-control-input">
+            <input class="au-control-input__input" type="checkbox" name="checkbox-ex" id="cb-tablet">
+            <label class="au-control-input__text" for="radio-tablet">Tablet</label>
+        </div>
+        <div class="au-control-input">
+            <input class="au-control-input__input" type="checkbox" name="checkbox-ex" id="cb-laptop" checked>
+            <label class="au-control-input__text" for="radio-laptop">Laptop</label>
+        </div>
     </fieldset>
 </form>

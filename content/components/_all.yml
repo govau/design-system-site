@@ -1540,7 +1540,7 @@ table:
 form:
   name: Form
   description: >
-    A collection of styles for labels, hint text,  inline error messages,
+    A collection of styles for labels, hint text, inline error messages,
     fieldsets and spacing for form controls.
   metatags:
     - forms
@@ -1570,7 +1570,7 @@ form:
     - name: Adam Zerella
       img: adam-zerella.jpg
       url: 'https://github.com/adamzerella'
-  state: inprogress
+  state: published
   status:
     usable: done
     consistent: done
