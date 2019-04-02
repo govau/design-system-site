@@ -71,7 +71,10 @@ function ClearNPM() {
  */ 
 AddEvent( furnaceSelectAll, "click", function() {
 	for ( i = 0; i < furnaceComponents.length; i++ ) {
-		furnaceComponents[ i ].checked = true;	
+		if (furnaceComponents[ i ].value === "core" ) {
+			continue;
+		}
+		furnaceComponents[ i ].checked = true;
 		ToggleNPM( furnaceComponents[ i ] );
 	}
 })
