@@ -68,9 +68,10 @@ function ClearNPM() {
 
 /**
  * Selects all component checkboxes on page
- */ 
+ */
 AddEvent( furnaceSelectAll, "click", function() {
 	for ( i = 0; i < furnaceComponents.length; i++ ) {
+		// Don't toggle core
 		if (furnaceComponents[ i ].value === "core" ) {
 			continue;
 		}
