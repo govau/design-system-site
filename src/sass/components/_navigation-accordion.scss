@@ -50,6 +50,10 @@
 		text-decoration: none;
 		font-weight: bold;
 		@include AU-fontgrid( xs, nospace );
+
+		&:focus {
+			outline-offset: 0;
+		}
 	}
 
 	.au-accordion--closed.au-accordion__title {
