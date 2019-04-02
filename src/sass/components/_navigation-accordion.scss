@@ -3,6 +3,7 @@
 
 	.au-link-list > li {
 		border: 0;
+		@include AU-space( padding, .15unit .18unit );
 
 		&.active-trail {
 			position: relative;
@@ -49,6 +50,10 @@
 		text-decoration: none;
 		font-weight: bold;
 		@include AU-fontgrid( xs, nospace );
+
+		&:focus {
+			outline-offset: 0;
+		}
 	}
 
 	.au-accordion--closed.au-accordion__title {
