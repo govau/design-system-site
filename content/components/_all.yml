@@ -1550,7 +1550,7 @@ form:
   related:
     - body
     - text-inputs
-    - control-input
+    - control inputs
     - select
   related-articles:
     - TODO
