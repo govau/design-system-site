@@ -4,10 +4,6 @@ layout: section
 
 ### Props
 
-#### AUform
-
-All default props are spread into the component
-
 
 #### AUfieldset
 
@@ -19,18 +15,12 @@ All default props are spread into the component
 All other props are spread into the component
 
 
-
 #### AUformGroup
 
 | Prop name   | Type        | Description |
 | ----------- | ----------- | ----------- |
 
 All other props are spread into the component
-
-
-#### AUlegend
-
-All default props are spread into the component
 
 
 #### AUformGroup

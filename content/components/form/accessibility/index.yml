@@ -13,8 +13,7 @@ sidebar:
 
 main:
   - keyboard.md
-  - screenreader-desktop.md
-  - screenreader-mobile.md
+  - screenreader.md
 
 footer:
   - /_shared/footer.md

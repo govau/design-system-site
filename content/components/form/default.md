@@ -12,15 +12,15 @@ code:
             </legend>
             <div class="au-control-input">
                 <input class="au-control-input__input" type="checkbox" name="checkbox-ex" id="cb-phone" checked>
-                <label class="au-control-input__text" for="radio-phone">Phone</label>
+                <label class="au-control-input__text" for="cb-phone">Phone</label>
             </div>
             <div class="au-control-input">
                 <input class="au-control-input__input" type="checkbox" name="checkbox-ex" id="cb-tablet">
-                <label class="au-control-input__text" for="radio-tablet">Tablet</label>
+                <label class="au-control-input__text" for="cb-tablet">Tablet</label>
             </div>
             <div class="au-control-input">
                 <input class="au-control-input__input" type="checkbox" name="checkbox-ex" id="cb-laptop" checked>
-                <label class="au-control-input__text" for="radio-laptop">Laptop</label>
+                <label class="au-control-input__text" for="cb-laptop">Laptop</label>
             </div>
         </fieldset>
   - React: |
@@ -32,10 +32,9 @@ code:
                 <h1>Which devices do you use?</h1>
                 <span className="au-hint-text">You may select more than one</span>
             </AUlegend>
-
-            <AUcheckbox label="Phone" name="cb-phone" id="cb-phone" block checked/>
-            <AUcheckbox label="Tablet" name="cb-tablet" id="cb-tablet" block/>
-            <AUcheckbox label="Laptop" name="cb-laptop" id="cb-laptop" block checked/>
+            <AUcheckbox label="Phone" name="checkbox-ex" id="cb-phone" block checked/>
+            <AUcheckbox label="Tablet" name="checkbox-ex" id="cb-tablet" block/>
+            <AUcheckbox label="Laptop" name="checkbox-ex" id="cb-laptop" block checked/>
         </AUfieldset>
 ---
 ## Default
@@ -44,6 +43,8 @@ The form component is intended to be used as a collection of seperate form eleme
 
 ### Tips
 
-- Always wrap the form elements inside a `<form>` tag.
+- Always wrap form elements inside a `<form>` tag.
 - When coupling input and labels, utilise the `for` and `id` relationship attributes over nesting the elements together.
 - Divide long forms into smaller, more manageable forms.
+- The first element inside of a `fieldset` element must be a `legend`, a legend is used to describe the group of elements inside the fieldset.
+- The `legend` element can be used as a page title if the form is the only thing on the page.
