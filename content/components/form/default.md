@@ -39,12 +39,10 @@ code:
 ---
 ## Default
 
-The form component is intended to be used as a collection of seperate form elements.
+The form component contains layout, labelling and inline validations for form fields.
 
 ### Tips
 
 - Always wrap form elements inside a `<form>` tag.
-- When coupling input and labels, utilise the `for` and `id` relationship attributes over nesting the elements together.
-- Divide long forms into smaller, more manageable forms.
-- The first element inside of a `fieldset` element must be a `legend`, a legend is used to describe the group of elements inside the fieldset.
-- The `legend` element can be used as a page title if the form is the only thing on the page.
+- When coupling input and labels, utilise the `for` and `id` relationship attributes.
+- The first element inside of a `<fieldset>` element must be a `<legend>`, a legend is used to describe the group of elements inside the fieldset.
