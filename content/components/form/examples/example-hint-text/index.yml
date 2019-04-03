@@ -1,0 +1,3 @@
+layout: example/page
+examples:
+  - template: example-hint-text.md
