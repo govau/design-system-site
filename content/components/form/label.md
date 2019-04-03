@@ -27,4 +27,4 @@ The form component contains layout, labelling and inline validations for form fi
 
 ### Labels
 
-add text here
+Use labels to associate text with a form control. This is done using the `for` and `id` attributes on the label and the form control, respectively. 
