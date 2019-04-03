@@ -37,7 +37,7 @@ code:
         </AUfieldset>
 ---
 
-### Tips
+### Fieldset
 
 - Always wrap form elements inside a `<form>` tag.
 - When coupling input and labels, utilise the `for` and `id` relationship attributes.
