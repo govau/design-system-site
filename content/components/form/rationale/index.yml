@@ -13,6 +13,7 @@ sidebar:
 
 main:
   - fieldset.md
+  - label.md
 
 footer:
   - /_shared/footer.md
