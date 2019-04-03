@@ -13,6 +13,9 @@ sidebar:
 
 main:
   - default.md
+  - field-errors.md
+  - groups.md
+  - labels.md
 
 footer:
   - /_shared/footer.md
