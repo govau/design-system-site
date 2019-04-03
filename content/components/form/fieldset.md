@@ -39,6 +39,8 @@ code:
 
 ### Fieldset
 
+Fieldset is used to associate a number of form controls to a legend
+
 - Always wrap form elements inside a `<form>` tag.
 - When coupling input and labels, utilise the `for` and `id` relationship attributes.
 - The first element inside of a `<fieldset>` element must be a `<legend>`, a legend is used to describe the group of elements inside the fieldset.
