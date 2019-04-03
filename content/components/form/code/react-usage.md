@@ -14,9 +14,9 @@ import { AUcheckbox } from '@gov.au/control-input';
             <h1>Which devices do you use?</h1>
             <span className="au-hint-text">You may select more than one</span>
         </AUlegend>
-        <AUcheckbox label="Phone" name="checkbox-ex-err" id="cb-phone-err" block checked/>
-        <AUcheckbox label="Tablet" name="checkbox-ex-err" id="cb-tablet-err" block/>
-        <AUcheckbox label="Laptop" name="checkbox-ex-err" id="cb-laptop-err" block checked/>
+        <AUcheckbox label="Phone" name="checkbox-ex" id="cb-phone" block checked/>
+        <AUcheckbox label="Tablet" name="checkbox-ex" id="cb-tablet" block/>
+        <AUcheckbox label="Laptop" name="checkbox-ex" id="cb-laptop" block checked/>
     </AUfieldset>
 </AUform>
 ```

@@ -6,7 +6,6 @@ layout: section
 
 | Name       | Type    | Description |
 |------------|---------|----------------------------------------------------------------------------- |
-| `AUform`      | todo | todo | 
 | `AUfieldset`      | todo | todo |
 | `AUlegend`      | todo | todo |
 | `AUformGroup`      | todo | todo |
@@ -17,11 +16,11 @@ layout: section
 ### [md]node_modules import
 
 ```jsx
-import { AUform, AUfieldset, AUformGroup, AUlabel, AUlegend, AUhintText, AUerrorText } from '@gov.au/form';
+import { AUfieldset, AUformGroup, AUlabel, AUlegend, AUhintText, AUerrorText } from '@gov.au/form';
 ```
 
 ### [md]pancake import
 
 ```jsx
-import { AUform, AUfieldset, AUformGroup, AUlabel, AUlegend, AUhintText, AUerrorText } from './form';
+import { AUfieldset, AUformGroup, AUlabel, AUlegend, AUhintText, AUerrorText } from './form';
 ```
