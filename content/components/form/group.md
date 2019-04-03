@@ -17,6 +17,7 @@ code:
             status:  <AUformGroup status="invalid" />
         */
         import { AUlabel, AUformGroup } from '@gov.au/form';
+        import { AUtextInput } from '@gov.au/text-inputs';
 
         <AUformGroup>
             <AUlabel text="Username" htmlFor="fg-username" />
