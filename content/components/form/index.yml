@@ -15,7 +15,7 @@ main:
   - label.md
   - fieldset.md
   - field-errors.md
-  - groups.md
+  - group.md
 
 footer:
   - /_shared/footer.md
