@@ -23,7 +23,6 @@ code:
             <AUtextInput type="email" id="fg-username"/>
         </AUformGroup>
 ---
-## Form Groups
+## Form groups
 
-Used to group form controls with a form. These also add consistent spacing between controls in a form.
-
+Used to group form controls and provide structure and consistent spacing within a form. 
