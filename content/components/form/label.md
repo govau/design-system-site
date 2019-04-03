@@ -22,4 +22,10 @@ code:
       <AUtextInput type="email" id="label" />
        
 ---
-## Labels
+## Default
+
+The form component contains layout, labelling and inline validations for form fields.
+
+### Labels
+
+add text here
