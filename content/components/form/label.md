@@ -15,7 +15,8 @@ code:
         Inline:  <AULabel inline />
       */
 
-      import AULabel from '@gov.au/form';
+      import { AUlabel } from '@gov.au/form';
+      import { AUtextInput } from '@gov.au/text-inputs';
 
       <AUlabel htmlFor="label" text="Email" />
       <AUtextInput type="email" id="label" />
