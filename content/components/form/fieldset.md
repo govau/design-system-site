@@ -37,9 +37,6 @@ code:
             <AUcheckbox label="Laptop" name="checkbox-ex" id="cb-laptop" block checked/>
         </AUfieldset>
 ---
-## Default
-
-The form component contains layout, labelling and inline validations for form fields.
 
 ### Tips
 

@@ -13,7 +13,7 @@ sidebar:
 
 main:
   - label.md
-  - default.md
+  - fieldset.md
   - field-errors.md
   - groups.md
 
