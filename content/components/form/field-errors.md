@@ -15,6 +15,6 @@ code:
         <AUerrorText type="email" text="Enter an email address in the correct format, like name@example.com" id="error-text" />
         <AUtextInput id="email-with-error" aria-describedby="error-text hint-text-with-error" status="invalid" />
 ---
-## Field errors
+## Error messages
 
-Field errors are used for validation where the form input isn't correct.
+Error messages are used to notify the user when a form field has not passed validation. Use clear messages to explain what went wrong and how to fix it.

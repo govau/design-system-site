@@ -14,9 +14,9 @@ sidebar:
 main:
   - label.md
   - hint-text.md
-  - fieldset.md
   - field-errors.md
   - group.md
+  - fieldset.md
 
 footer:
   - /_shared/footer.md
