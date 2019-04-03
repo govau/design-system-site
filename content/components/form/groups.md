@@ -2,7 +2,6 @@
 layout: component/code-demo
 iframe: examples/example-groups
 iframeFullwidth: true
-height: 300
 code:
   - HTML: |
         <fieldset class="au-fieldset">

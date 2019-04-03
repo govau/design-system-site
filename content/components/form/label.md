@@ -1,8 +1,7 @@
 ---
 layout: component/code-demo
-iframe: examples/example-labels
+iframe: examples/example-label
 iframeFullwidth: true
-height: 300
 code:
   - HTML: |
       <!--
