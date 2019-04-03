@@ -17,4 +17,4 @@ code:
 ---
 ## Hint text
 
-Hint text is used to guide the user on what they need to enter into the input.
+Hint text can be used to provide more context that will help the user successfully complete the form field.
