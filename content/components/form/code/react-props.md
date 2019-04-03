@@ -24,7 +24,7 @@ All props are spread into the component.
 | Prop name   | Type        | Description |
 | ----------- | ----------- | ----------- |
 | dark        | boolean     | A dark variation of the component |
-| status        | string     | Mark this field as either 'valid' or 'invalid' |
+| status        | string     | Mark this field as either `valid` or `invalid` |
 
 All other props are spread into the component
 
