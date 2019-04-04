@@ -6,7 +6,7 @@ code:
   - HTML: |
         <fieldset class="au-fieldset">
             <legend class="au-fieldset__legend">
-                <h1>Which devices do you use?</h1>
+                <h1 class="au-display-xxl">Which devices do you use?</h1>
                 <span class="au-hint-text">You may select more than one</span>
             </legend>
             <div class="au-control-input">
@@ -28,7 +28,7 @@ code:
 
         <AUfieldset>
             <AUlegend>
-                <h1>Which devices do you use?</h1>
+                <h1 class="au-display-xxl">Which devices do you use?</h1>
                 <span className="au-hint-text">You may select more than one</span>
             </AUlegend>
             <AUcheckbox label="Laptop" name="checkbox-ex" id="cb-laptop" block checked/>
