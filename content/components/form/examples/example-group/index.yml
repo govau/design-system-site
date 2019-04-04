@@ -1,6 +1,5 @@
 layout: example/page
 examples:
   - template: example-group.md
-  - template: example-group-invalid.md
 alignment: inline
 
