@@ -1655,7 +1655,6 @@ main-nav:
       img: simon-victory.jpg
       url: 'https://github.com/svict4'
   state: published
-  highlight: new
   status:
     usable: done
     consistent: done
@@ -1743,7 +1742,6 @@ side-nav:
       img: raj-ghuman.jpg
       url: 'https://github.com/sukhrajghuman'
   state: published
-  highlight: new
   status:
     usable: done
     consistent: done
