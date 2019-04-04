@@ -6,11 +6,11 @@ speak: |
 
   You may select more than one
 
-  ticked, Tick box, Laptop
-  
+  unticked, Tick box, Laptop
+
   unticked, Tick box, Phone
 
-  unticked, Tick box, Tablet
+  ticked, Tick box, Tablet
 
 ---
 How the form is described by assistive technology.
