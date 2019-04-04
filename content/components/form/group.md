@@ -28,6 +28,7 @@ code:
             <AUlabel text="First Name" htmlFor="firstname" />
             <AUtextInput type="email" id="firstname"/>
         </AUformGroup>
+        
         <AUformGroup status="invalid">
             <AUlabel text="Surname" htmlFor="surname" />
             <AUtextInput type="surname" id="surname"/>
