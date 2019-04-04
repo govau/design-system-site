@@ -1584,7 +1584,7 @@ form:
     - active: 7
     - something: something
   ID: form    # <-- auto generated, don't change
-  version: 0.0.0    # <-- auto generated, don't change
+  version: 0.1.0    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
