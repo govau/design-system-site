@@ -1,4 +1,0 @@
-layout: example/page
-examples:
-  - template: ../example-code.md
-filter: grayscale

@@ -12,7 +12,6 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - grayscale.md
   - keyboard.md
   - screenreader.md
 

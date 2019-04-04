@@ -6,4 +6,4 @@ height: 300
 ---
 ## Keyboard accessibility
 
-How keyboard navigation works with the form.
+How keyboard navigation works with the fieldset.
