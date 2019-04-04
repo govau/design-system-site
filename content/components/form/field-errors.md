@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-field-errors
-iframeFullwidth: true
 code:
   - HTML: |
         <label class="au-label" for="text-input-error">Email</label>

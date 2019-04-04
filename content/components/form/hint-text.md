@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-hint-text
-iframeFullwidth: true
 code:
   - HTML: |
       <label class="au-label" for="phone-input">Phone</label>
