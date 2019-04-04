@@ -762,7 +762,6 @@ header:
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
-  highlight: update
   order: 10
   discussions:
     - open: 2
@@ -1571,6 +1570,7 @@ form:
       img: adam-zerella.jpg
       url: 'https://github.com/adamzerella'
   state: published
+  highlight: new
   status:
     usable: done
     consistent: done
