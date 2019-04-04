@@ -1,0 +1,4 @@
+layout: example/page
+examples:
+  - template: example-label.md
+alignment: inline
