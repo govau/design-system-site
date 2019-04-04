@@ -3,16 +3,16 @@ layout: component/code-demo
 iframe: examples/example-hint-text
 code:
   - HTML: |
-      <label class="au-label" for="phone-input">Phone</label>
-      <span class="au-hint-text">Maximum 10 digits</span>
-      <input type="phone" class="au-text-input" id="phone-input" name="phone-input" />
+      <label class="au-label" for="email-input">Email</label>
+      <span class="au-hint-text" id="email-hint">We will only use this to respond to your query</span>
+      <input type="email" class="au-text-input" id="email-input" name="email-input" aria-describedby="email-hint"/>
   - React: |
       import { AUlabel, AUhintText } from "@gov.au/form";
       import { AUtextInput } from "@gov.au/text-inputs";
 
-      <AUlabel text="Phone" htmlFor="txt-phone" />
-      <AUhintText text="Maximum 10 digits" id="hint-text-with-error-inline"/>
-      <AUtextInput type="phone" id="phone-with-error-inline" aria-describedby="phone-text-inline hint-text-with-error-inline" status="invalid" />
+      <AUlabel text="Email" htmlFor="email" />
+      <AUhintText text="We will only use this to respond to your query" id="hint-text"/>
+      <AUtextInput type="email" id="email" aria-describedby="hint-text" status="invalid" />
 ---
 ## Hint text
 
