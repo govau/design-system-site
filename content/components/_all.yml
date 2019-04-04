@@ -762,7 +762,6 @@ header:
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
-  highlight: update
   order: 10
   discussions:
     - open: 2
@@ -1540,7 +1539,7 @@ table:
 form:
   name: Form
   description: >
-    A collection of styles for labels, hint text,  inline error messages,
+    A collection of styles for labels, hint text, inline error messages,
     fieldsets and spacing for form controls.
   metatags:
     - forms
@@ -1570,7 +1569,8 @@ form:
     - name: Adam Zerella
       img: adam-zerella.jpg
       url: 'https://github.com/adamzerella'
-  state: inprogress
+  state: published
+  highlight: new
   status:
     usable: done
     consistent: done
@@ -1584,7 +1584,7 @@ form:
     - active: 7
     - something: something
   ID: form    # <-- auto generated, don't change
-  version: 0.0.0    # <-- auto generated, don't change
+  version: 0.1.0    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -1655,7 +1655,6 @@ main-nav:
       img: simon-victory.jpg
       url: 'https://github.com/svict4'
   state: published
-  highlight: new
   status:
     usable: done
     consistent: done
@@ -1743,7 +1742,6 @@ side-nav:
       img: raj-ghuman.jpg
       url: 'https://github.com/sukhrajghuman'
   state: published
-  highlight: new
   status:
     usable: done
     consistent: done
