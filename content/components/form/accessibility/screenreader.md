@@ -6,7 +6,7 @@ speak: |
 
   You may select more than one
 
-  ticked, Tick box, Phone
+  unticked, Tick box, Phone
 
   unticked, Tick box, Tablet
 
