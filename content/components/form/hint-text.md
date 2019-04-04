@@ -3,9 +3,9 @@ layout: component/code-demo
 iframe: examples/example-hint-text
 code:
   - HTML: |
-      <label class="au-label" for="email-input">Email</label>
+      <label class="au-label" for="email">Email</label>
       <span class="au-hint-text" id="email-hint">We will only use this to respond to your query</span>
-      <input type="email" class="au-text-input" id="email-input" name="email-input" aria-describedby="email-hint"/>
+      <input type="email" class="au-text-input" id="email" name="email" aria-describedby="email-hint"/>
   - React: |
       import { AUlabel, AUhintText } from "@gov.au/form";
       import { AUtextInput } from "@gov.au/text-inputs";

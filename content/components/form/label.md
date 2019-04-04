@@ -7,8 +7,8 @@ code:
         Inline:  <label class="au-label au-label--inline">
       -->
 
-      <label class="au-label" for="text-input-block-label">Email</label>
-      <input type="text" class="au-text-input" id="text-input-block-label" name="text-input-block-label">
+      <label class="au-label" for="email">Email</label>
+      <input type="email" class="au-text-input" id="email" name="email">
   - React: |
       /*
         Inline:  <AULabel inline />
@@ -17,8 +17,8 @@ code:
       import { AUlabel } from '@gov.au/form';
       import { AUtextInput } from '@gov.au/text-inputs';
 
-      <AUlabel htmlFor="label" text="Email" />
-      <AUtextInput type="email" id="label" />
+      <AUlabel htmlFor="email" text="Email" />
+      <AUtextInput type="email" id="email" />
        
 ---
 
