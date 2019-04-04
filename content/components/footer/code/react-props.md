@@ -17,6 +17,6 @@ All other props are spread into the component
 
 | Prop name | Type    | Description
 |-----------|--------------------------------------------------------------------------------------- | --- |
-| ariaLabel | string  | The aria-label attribute, defaults to "footer navigation"
+| ariaLabel | string  | The aria-label attribute, defaults to "footer"
 
 All other props are spread into the component

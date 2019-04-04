@@ -12,7 +12,7 @@ code:
 
       <footer class="au-footer au-body" role="contentinfo">
         <div class="container">
-          <nav class="au-footer__navigation row" aria-label="footer navigation">
+          <nav class="au-footer__navigation row" aria-label="footer">
             <div class="col-md-3 col-sm-6">
               <h3 class="au-display-lg">Section</h3>
               <ul class="au-link-list">

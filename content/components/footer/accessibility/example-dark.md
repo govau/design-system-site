@@ -1,6 +1,6 @@
 <footer class="au-footer au-footer--dark au-body au-body--dark" role="contentinfo">
   <div class="container">
-    <nav class="au-footer__navigation row" aria-label="footer navigation">
+    <nav class="au-footer__navigation row" aria-label="footer">
       <div class="col-xs-4">
         <h3 class="au-display-lg">Section</h3>
         <ul class="au-link-list">
