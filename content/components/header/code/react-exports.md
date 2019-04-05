@@ -7,7 +7,7 @@ layout: section
 | Name       | Type    | Description
 |------------|---------|-----------------------------------------------------------------------------
 | `AUheader`      | default | The header component
-| `AUheaderBrand` | named | The header component
+| `AUheaderBrand` | named | The branding information inside the AUheader component
 
 ### [md]node_modules import
 
