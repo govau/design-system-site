@@ -20,6 +20,7 @@ pre[class*="language-"] {
 /* Code blocks */
 .au-body pre code {
 	overflow: auto;
+	@include AU-space( padding-top, 2.5unit );
 }
 
 /* Inline code */
