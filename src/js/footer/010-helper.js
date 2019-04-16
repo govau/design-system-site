@@ -110,3 +110,11 @@ function GetSelectedFormItems( id ){
 
 	return selected;
 }
+
+
+// IE8+ complaint polyfill for String.trim();
+if(typeof String.prototype.trim !== 'function') {
+	String.prototype.trim = function() {
+	  return this.replace(/^\s+|\s+$/g, ''); 
+	};
+}
