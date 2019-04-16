@@ -56,7 +56,7 @@ core:
     - open: 2
     - active: 7
     - something: something
-  version: 3.4.0    # <-- auto generated, don't change
+  version: 3.4.1    # <-- auto generated, don't change
   dependencies: []    # <-- auto generated, don't change
   hasSass: true    # <-- auto generated, don't change
   hasJs: false    # <-- auto generated, don't change
@@ -1006,6 +1006,9 @@ link-list:
     - name: Hannah J. Nicdao
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
+    - name: Tengis Batsaikhan
+      img: tengis-batsaikhan.jpg
+      url: 'https://github.com/tengis'
   state: published
   order: 10
   discussions:
@@ -1584,7 +1587,7 @@ form:
     - active: 7
     - something: something
   ID: form    # <-- auto generated, don't change
-  version: 0.1.1    # <-- auto generated, don't change
+  version: 0.1.2    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
