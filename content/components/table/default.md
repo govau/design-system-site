@@ -128,7 +128,6 @@ code:
             ]}
         />
 ---
+### Default
 
-### Table
-
-Table is used to associate 
+Table includes styling for arranging data in rows and columns.

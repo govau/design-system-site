@@ -1,6 +1,5 @@
 layout: example/page
-pagetitle: Form demo
+pagetitle: Table demo
 examples:
   - template: ../examples/example-fieldset/example-code.md
-fullwidth: true
 livedemo: true
