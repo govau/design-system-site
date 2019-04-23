@@ -138,7 +138,8 @@ const ComponentPage = ({
 				</div>
 
 				{ footer }
-			</div>
+			</div>						<script src={ _relativeURL( '/assets/js/tabs.js', _ID ) } />
+
 			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
 			{
 				_ID !== 'components'

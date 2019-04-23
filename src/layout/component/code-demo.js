@@ -15,6 +15,7 @@ const CodeDemo = ({ iframe, iframeFullwidth, height = null, code, _body, _ID, _r
 	const componentId = _body.key.split( '/' )[ _body.key.split( '/' ).length - 1 ];
 	const iframeTitle = `${ componentId.split( '-' )[ 0 ] } example`;
 
+
 	return (
 		<div className="code-demo">
 			<div className="row">
@@ -41,16 +42,54 @@ const CodeDemo = ({ iframe, iframeFullwidth, height = null, code, _body, _ID, _r
 						<div className="row">
 							<div className="col-sm-12">
 								<div className="code-demo__example__code">
+								<div data-atabs="" class="atabs">
+        
+          
+          <section id="a" data-atabs-panel="react" role="tabpanel" aria-labelledby="atab_664_tab_0" className="atabs__panel">
+            
+            <p>
+              No explicit default was set, so this
+              panel should be shown by default.
+            </p>
+            <p><a href="#">and a link for focus fun (i go nowhere)</a>.</p>
+          </section>
+        
+          <section id="inject-content" data-atabs-panel="" role="tabpanel" aria-labelledby="atab_664_tab_1" className="atabs__panel" hidden="">
+          <h2>Was External</h2>
+          <p>
+            This section was outside of the main tab grouping.
+          </p>
+          <p>
+            If JS is off / broken, "was" won't make much sense here...
+          </p>
+        </section><section id="inject-content2" role="tabpanel" aria-labelledby="atab_664_tab_2" className="atabs__panel" hidden="">
+          <h2>Was External 2</h2>
+          <p>
+            This next section was outside of the main tab grouping.
+          </p>
+          <p>
+            If JS is off / broken, "was" won't make much sense here...
+          </p>
+        </section><section id="inject-content3" role="tabpanel" aria-labelledby="atab_664_tab_3" className="atabs__panel" hidden="">
+          <h2>Was External 3</h2>
+          <p>
+            This other next section, after the previous next section, was outside of the main tab grouping.
+          </p>
+          <p>
+            If JS is off / broken, "was" won't make much sense here...
+          </p>
+        </section></div>
 									<div className="tabs">
-										<nav className="tabs-nav">
+										<nav data-atabs className="tabs-nav">
 											<div className="au-link-list au-link-list--inline" role="tablist">
 												{
 													code && code.map( ( section, i ) => (
 														<button
 															key={ i }
-															className={ i === 0 ? ' tab-item--active' : '' }
+															className={`tab-item ${ i === 0 ? ' tab-item--active' : '' }`}
 															aria-controls={`demo-${ i }-${ componentId }`}
 															role="tab"
+															data-controls= { `demo-${ i }-${ componentId }` }
 														>
 															{ Object.keys( section )[ 0 ] }
 														</button>
@@ -62,6 +101,7 @@ const CodeDemo = ({ iframe, iframeFullwidth, height = null, code, _body, _ID, _r
 											{
 												code && code.map( ( section, i ) => (
 													<div
+													data-atabs-panel="react"
 														className={ `tab-content ${ i === 0 ? 'tab-content--active' : '' }` }
 														key={ i }
 														tabIndex="-1"
@@ -86,8 +126,10 @@ const CodeDemo = ({ iframe, iframeFullwidth, height = null, code, _body, _ID, _r
 				: null
 			}
 		</div>
+		
 	);
 }
+
 
 CodeDemo.propTypes = {
 	/**
