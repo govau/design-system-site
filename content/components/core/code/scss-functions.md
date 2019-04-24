@@ -167,7 +167,7 @@ Add the outline to focus.
 
 ### AU-sronly
 
-Hide an element from the screen but not a screen reader.
+Hide an element from the screen but not a screen reader. This mixin should be used to provide additional information or context to a webpage or form that screenreader users would otherwise miss out on. 
 
 `AU-sronly()`
 
