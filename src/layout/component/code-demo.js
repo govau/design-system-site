@@ -42,49 +42,36 @@ const CodeDemo = ({ iframe, iframeFullwidth, height = null, code, _body, _ID, _r
 						<div className="row">
 							<div className="col-sm-12">
 								<div className="code-demo__example__code">
+								
 								<div data-atabs="" class="atabs">
         
           
-          <section id="a" data-atabs-panel="react" role="tabpanel" aria-labelledby="atab_664_tab_0" className="atabs__panel">
-            
-            <p>
-              No explicit default was set, so this
-              panel should be shown by default.
-            </p>
-            <p><a href="#">and a link for focus fun (i go nowhere)</a>.</p>
-          </section>
-        
-          <section id="inject-content" data-atabs-panel="" role="tabpanel" aria-labelledby="atab_664_tab_1" className="atabs__panel" hidden="">
-          <h2>Was External</h2>
-          <p>
-            This section was outside of the main tab grouping.
-          </p>
-          <p>
-            If JS is off / broken, "was" won't make much sense here...
-          </p>
-        </section><section id="inject-content2" role="tabpanel" aria-labelledby="atab_664_tab_2" className="atabs__panel" hidden="">
-          <h2>Was External 2</h2>
-          <p>
-            This next section was outside of the main tab grouping.
-          </p>
-          <p>
-            If JS is off / broken, "was" won't make much sense here...
-          </p>
-        </section><section id="inject-content3" role="tabpanel" aria-labelledby="atab_664_tab_3" className="atabs__panel" hidden="">
-          <h2>Was External 3</h2>
-          <p>
-            This other next section, after the previous next section, was outside of the main tab grouping.
-          </p>
-          <p>
-            If JS is off / broken, "was" won't make much sense here...
-          </p>
-        </section></div>
+			<section id="a" data-atabs-panel="React" data-atabs-tab-label="React" role="tabpanel" aria-labelledby="atab_664_tab_0" className="atabs__panel">
+				
+				<p>
+				No explicit default was set, so this
+				panel should be shown by default.
+				</p>
+				<p><a href="#">and a link for focus fun (i go nowhere)</a>.</p>
+			</section>
+			
+			<section  data-atabs-tab-label="HTML" data-atabs-panel="HTML" role="tabpanel" aria-labelledby="atab_664_tab_1" className="atabs__panel" hidden="">
+			<h2>Was External</h2>
+			<p>
+				This section was outside of the main tab grouping.
+			</p>
+			<p>
+				If JS is off / broken, "was" won't make much sense here...
+			</p>
+			</section><section id="inject-content2" role="tabpanel" aria-labelledby="atab_664_tab_2" className="atabs__panel" hidden="">
+        </section>
+		</div>
 									<div className="tabs">
 										<nav data-atabs className="tabs-nav">
 											<div className="au-link-list au-link-list--inline" role="tablist">
 												{
 													code && code.map( ( section, i ) => (
-														<button
+														<button 
 															key={ i }
 															className={`tab-item ${ i === 0 ? ' tab-item--active' : '' }`}
 															aria-controls={`demo-${ i }-${ componentId }`}
@@ -97,11 +84,12 @@ const CodeDemo = ({ iframe, iframeFullwidth, height = null, code, _body, _ID, _r
 												}
 											</div>
 										</nav>
-										<div className="tab-contents">
+										<div id="inject-content" className="tab-contents">
 											{
 												code && code.map( ( section, i ) => (
 													<div
-													data-atabs-panel="react"
+													
+													//data-atabs-panel="react"
 														className={ `tab-content ${ i === 0 ? 'tab-content--active' : '' }` }
 														key={ i }
 														tabIndex="-1"

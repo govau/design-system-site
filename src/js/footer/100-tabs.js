@@ -475,10 +475,24 @@ var util = {
   w.ARIAtabs = ARIAtabs;
 })( window, document );
 
-  var widget = '[data-atabs]';
-  var els = document.querySelectorAll(widget);
 
-  // Generate all Tab Widget instances
+  var tabInstance = '[data-atabs]';
+  var els = document.querySelectorAll(tabInstance);
+  var injectContent = document.getElementById('inject-content');
+  var cloneContent = injectContent.cloneNode(true);
+  var allTabs = [];
+
+  // Generate all tab instances
   for ( var i = 0; i < els.length; i++ ) {
     var nTabs = new ARIAtabs( els[i] );
+
+    allTabs.push(nTabs);
   }
+
+  // remove the original instance of the external content from the document.
+  injectContent.parentNode.removeChild(injectContent);
+
+  // Inject the external content into a particular
+  // tab, captured in the allTabs var.
+  allTabs[1].addTab(cloneContent, 'HTML');
+
