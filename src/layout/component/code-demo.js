@@ -42,30 +42,25 @@ const CodeDemo = ({ iframe, iframeFullwidth, height = null, code, _body, _ID, _r
 						<div className="row">
 							<div className="col-sm-12">
 								<div className="code-demo__example__code">
-								
-								<div data-atabs="" class="atabs">
+		<div data-atabs="" className="tabs">
         
-          
-			<section id="a" data-atabs-panel="React" data-atabs-tab-label="React" role="tabpanel" aria-labelledby="atab_664_tab_0" className="atabs__panel">
-				
-				<p>
-				No explicit default was set, so this
-				panel should be shown by default.
-				</p>
-				<p><a href="#">and a link for focus fun (i go nowhere)</a>.</p>
-			</section>
-			
-			<section  data-atabs-tab-label="HTML" data-atabs-panel="HTML" role="tabpanel" aria-labelledby="atab_664_tab_1" className="atabs__panel" hidden="">
-			<h2>Was External</h2>
-			<p>
-				This section was outside of the main tab grouping.
-			</p>
-			<p>
-				If JS is off / broken, "was" won't make much sense here...
-			</p>
-			</section><section id="inject-content2" role="tabpanel" aria-labelledby="atab_664_tab_2" className="atabs__panel" hidden="">
-        </section>
+		<div data-atabs-panel data-atabs-tab-label="HTML">
+    	<code>
+		nav class="au-breadcrumbs au-breadcrumbs--dark" aria-label="breadcrumb"
+		</code>
+  		</div>
+							
+		<div data-atabs-panel data-atabs-tab-label="React">
+		<div data-atabs-tab-label="React">
+    	<code>
+		nav class="au-breadcrumbs au-breadcrumbs--dark" aria-label="breadcrumb"
+		nav class="au-breadcrumbs au-breadcrumbs--dark" aria-label="breadcrumb"
+		</code>
 		</div>
+  		</div>
+
+		</div>
+		<div data-atabs="" className="atabs">
 									<div className="tabs">
 										<nav data-atabs className="tabs-nav">
 											<div className="au-link-list au-link-list--inline" role="tablist">
@@ -84,7 +79,7 @@ const CodeDemo = ({ iframe, iframeFullwidth, height = null, code, _body, _ID, _r
 												}
 											</div>
 										</nav>
-										<div id="inject-content" className="tab-contents">
+										<div className="tab-contents">
 											{
 												code && code.map( ( section, i ) => (
 													<div
@@ -107,6 +102,7 @@ const CodeDemo = ({ iframe, iframeFullwidth, height = null, code, _body, _ID, _r
 												))
 											}
 										</div>
+									</div>
 									</div>
 								</div>
 							</div>

@@ -154,7 +154,7 @@ var util = {
       var customClass = customClass || panel.getAttribute(_options.customTabClassAttribute);
 
       var generateTab = function ( index, id, tabPanel, customClass ) {
-        var newTab = doc.createElement('span');
+        var newTab = doc.createElement('button');
         newTab.id = elID + '_tab_' + index;
         newTab.tabIndex = -1;
         newTab.setAttribute('role', 'tab');
@@ -476,23 +476,11 @@ var util = {
 })( window, document );
 
 
-  var tabInstance = '[data-atabs]';
-  var els = document.querySelectorAll(tabInstance);
-  var injectContent = document.getElementById('inject-content');
-  var cloneContent = injectContent.cloneNode(true);
-  var allTabs = [];
+var widget = '[data-atabs]';
+var els = document.querySelectorAll(widget);
 
-  // Generate all tab instances
-  for ( var i = 0; i < els.length; i++ ) {
-    var nTabs = new ARIAtabs( els[i] );
-
-    allTabs.push(nTabs);
-  }
-
-  // remove the original instance of the external content from the document.
-  injectContent.parentNode.removeChild(injectContent);
-
-  // Inject the external content into a particular
-  // tab, captured in the allTabs var.
-  allTabs[1].addTab(cloneContent, 'HTML');
+// Generate all Tab Widget instances
+for ( var i = 0; i < els.length; i++ ) {
+  var nTabs = new ARIAtabs( els[i], {tabListClass: 'tabs-nav'});
+}
 
