@@ -1,5 +1,5 @@
 layout: example/page
 pagetitle: Table demo
 examples:
-  - template: ../examples/example-fieldset/example-code.md
+  - template: ../examples/example-default/example-code.md
 livedemo: true

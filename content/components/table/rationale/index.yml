@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Form rationale
+pagetitle: Table rationale
 
 header:
   - /_shared/header.md
@@ -12,6 +12,8 @@ sidebar:
   - /components/sidebar.md
 
 main:
+  - vertical-layout.md
+  - caption-summary.md
 
 footer:
   - /_shared/footer.md
