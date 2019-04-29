@@ -4,8 +4,8 @@ iframe: examples/example-default
 iframeFullwidth: true
 code:
   - HTML: |
-        <table class="au-table" tabindex="0" aria-describedby="table_desc">
-            <caption id="table_desc">Population of Australian states and territories, December 2015</caption>
+        <table class="au-table" tabindex="0">
+            <caption>Population of Australian states and territories, December 2015</caption>
             <thead>
                 <tr>
                     <th scope="col">Location</th>
