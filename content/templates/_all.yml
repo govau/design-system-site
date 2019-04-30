@@ -37,6 +37,25 @@ form:
   name: Form
   description: >
     Form pages ask users a question and allow them to answer it.
+  state: published
+  version: 1.0.0
+  components:
+    - core
+    - header
+    - footer
+    - body
+    - grid-12
+    - text-inputs
+    - buttons
+    - page-alerts
+    - main-nav
+    - skip-link
+    - headings
+
+form-flow:
+  name: Form flow
+  description: >
+    Form flow pages ask users questions and allow them to answer it across multiple stages.
   state: inprogress
   components:
     - core
