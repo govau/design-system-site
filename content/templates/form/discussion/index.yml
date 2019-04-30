@@ -1,18 +1,17 @@
 layout: templates/page
-pagetitle: Form
-state: released
 
 header:
   - /_shared/header.md
 
-tabs:
-  - /templates/_tabs.md
-
 sidebar:
   - /templates/sidebar.md
 
+tabs:
+  - /templates/_tabs.md
+
 main:
-  - main.md
+  - community-intro.md
+  - github-intro.md
 
 footer:
   - /_shared/footer.md
