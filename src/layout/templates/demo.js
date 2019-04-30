@@ -10,6 +10,11 @@ import AUbutton  from '../../_auds/layout/buttons';
  */
 const TemplateDemo = ({ _ID, _body, _relativeURL }) => {
 	const templateID = _ID.split( '/' )[ 1 ];
+	const templateImgAssetDir = Path.normalize( `${ __dirname }/../../../src/assets/img/templates` );
+	const templateImgs = Fs.readdirSync( templateImgAssetDir );
+
+	// Match the template ID with the img filename, we do this so we can use whatever file ext.
+	let templateImg = templateImgs.find( item => new RegExp( templateID ).test( item ) );
 
 	return (
 		<div className="template-demo">
@@ -19,7 +24,7 @@ const TemplateDemo = ({ _ID, _body, _relativeURL }) => {
 						<img
 							alt={ `${ templateID } page template` }
 							className="template-demo_img"
-							src={ _relativeURL( `/assets/img/templates/${ templateID }.jpg`, _ID ) }
+							src={ _relativeURL( `/assets/img/templates/${ templateImg }`, _ID ) }
 						/>
 					</a>
 				</div>
