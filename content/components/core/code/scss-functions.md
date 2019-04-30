@@ -169,7 +169,9 @@ Add the outline to focus.
 
 Hide an element from the screen but not a screen reader. This mixin should be used to provide additional information or context to a webpage or form that the screen reader users would otherwise miss out on. With this mixin, the additional information will be picked up by a screen reader but will _not_ be displayed in the browser. 
 
-An example of a use case for this class would be, providing more context to a 'read more' link on a webpage. Using this class, additional information about what the 'read more' link relates to could be hidden from the browser, but still picked up by a screenreader. This would provide a screenreader user with the required context to understand what information is being provided.   
+An example of a use case for this class could be to provide more context to a `read more` link on a webpage.
+
+Using this class, additional information about what the `read more` link relates to could be hidden from the browser, but will still be picked up by a screen reader. This would provide a screen reader user with the required context to understand what information is being provided.
 
 `AU-sronly()`
 
