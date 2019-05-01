@@ -171,7 +171,6 @@ Hide an element from the screen but not a screen reader. This mixin should be us
 
 An example of a use case for this class could be to provide more context to a `read more` link on a webpage.
 
-Using this class, additional information about what the `read more` link relates to could be hidden from the browser, but will still be picked up by a screen reader. This would provide a screen reader user with the required context to understand what information is being provided.
 
 `AU-sronly()`
 
