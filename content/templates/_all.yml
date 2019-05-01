@@ -37,7 +37,8 @@ form:
   name: Form
   description: >
     Form pages ask users a question and allow them to answer it.
-  state: inprogress
+  state: published
+  version: 1.0.0
   components:
     - core
     - header
