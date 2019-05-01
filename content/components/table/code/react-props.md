@@ -18,6 +18,5 @@ layout: section
 | `alt`        | string     | A alternative variation of the component |
 | `dark`        | string     | A dark variation of the component |
 | `striped`        | string     | A striped variation of the component |
-| `fullWidth`        | string     | The table with full width |
 
 All other props are spread into the component
