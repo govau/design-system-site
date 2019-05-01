@@ -5,7 +5,7 @@ btnURL: /community
 btntext: Community
 
 tiles:
-  - image: assets/img/users-logo-acsc.png
+  - image: assets/img/users-logo-acsc.jpg
     alt: Australian Cyber Security Centre
     link: https://www.cyber.gov.au/
 
