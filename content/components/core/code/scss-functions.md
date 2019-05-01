@@ -167,7 +167,7 @@ Add the outline to focus.
 
 ### AU-sronly
 
-Hide an element from the screen but not a screen reader. This mixin should be used to provide additional information or context to a webpage or form that the screen reader users would otherwise miss out on. With this mixin, the additional information will be picked up by a screen reader but will _not_ be displayed in the browser. 
+Hide an element from the screen but not a screen reader. This mixin should be used to provide additional information or context to an element on the page that screen reader users would otherwise miss out on. An example of this could be applying the mixin to  a `span` that has the text `close` on a button with a close icon. 
 
 
 
