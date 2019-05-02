@@ -56,7 +56,7 @@ core:
     - open: 2
     - active: 7
     - something: something
-  version: 3.3.0    # <-- auto generated, don't change
+  version: 3.4.1    # <-- auto generated, don't change
   dependencies: []    # <-- auto generated, don't change
   hasSass: true    # <-- auto generated, don't change
   hasJs: false    # <-- auto generated, don't change
@@ -663,7 +663,7 @@ footer:
     - open: 2
     - active: 7
     - something: something
-  version: 3.0.3    # <-- auto generated, don't change
+  version: 3.0.4    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -1012,7 +1012,7 @@ link-list:
     - open: 2
     - active: 7
     - something: something
-  version: 3.0.5    # <-- auto generated, don't change
+  version: 3.0.6    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
     - body
@@ -1584,7 +1584,7 @@ form:
     - active: 7
     - something: something
   ID: form    # <-- auto generated, don't change
-  version: 0.1.0    # <-- auto generated, don't change
+  version: 0.1.2    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -1668,7 +1668,7 @@ main-nav:
     - active: 7
     - something: something
   ID: main-nav    # <-- auto generated, don't change
-  version: 1.0.5    # <-- auto generated, don't change
+  version: 1.0.6    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
     - animate

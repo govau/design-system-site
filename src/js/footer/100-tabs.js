@@ -476,11 +476,11 @@ var util = {
 })( window, document );
 
 
-var widget = '[data-atabs]';
+var widget = '.tabs';
 var els = document.querySelectorAll(widget);
 
 // Generate all Tab Widget instances
 for ( var i = 0; i < els.length; i++ ) {
-  var nTabs = new ARIAtabs( els[i], {tabListClass: 'tabs-nav'});
+  var nTabs = new ARIAtabs( els[i], {tabListClass: 'tabs-nav'}, {elClass: 'tabs'});
 }
 

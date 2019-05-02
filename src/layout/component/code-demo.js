@@ -42,71 +42,30 @@ const CodeDemo = ({ iframe, iframeFullwidth, height = null, code, _body, _ID, _r
 						<div className="row">
 							<div className="col-sm-12">
 								<div className="code-demo__example__code">
-		<div data-atabs="" className="tabs">
-        
-		<div data-atabs-panel data-atabs-tab-label="HTML">
-    	<code>
-		nav class="au-breadcrumbs au-breadcrumbs--dark" aria-label="breadcrumb"
-		</code>
-  		</div>
-							
-		<div data-atabs-panel data-atabs-tab-label="React">
-		<div data-atabs-tab-label="React">
-    	<code>
-		nav class="au-breadcrumbs au-breadcrumbs--dark" aria-label="breadcrumb"
-		nav class="au-breadcrumbs au-breadcrumbs--dark" aria-label="breadcrumb"
-		</code>
-		</div>
-  		</div>
-
-		</div>
-		<div data-atabs="" className="atabs">
-									<div className="tabs">
-										<nav data-atabs className="tabs-nav">
-											<div className="au-link-list au-link-list--inline" role="tablist">
-												{
-													code && code.map( ( section, i ) => (
-														<button 
-															key={ i }
-															className={`tab-item ${ i === 0 ? ' tab-item--active' : '' }`}
-															aria-controls={`demo-${ i }-${ componentId }`}
-															role="tab"
-															data-controls= { `demo-${ i }-${ componentId }` }
-														>
-															{ Object.keys( section )[ 0 ] }
-														</button>
-													))
-												}
-											</div>
-										</nav>
-										<div className="tab-contents">
-											{
-												code && code.map( ( section, i ) => (
-													<div
-													
-													//data-atabs-panel="react"
-														className={ `tab-content ${ i === 0 ? 'tab-content--active' : '' }` }
-														key={ i }
-														tabIndex="-1"
-														role="tabpanel"
-														id={ `demo-${ i }-${ componentId }` }
-													>
-														<CodeSnippet language={
+								<div className="tabs">
+								{
+								code && code.map( ( section, i ) => (
+									<div data-atabs-panel 
+									key={ i }
+									id={`demo-${ i }-${componentId}`}
+									data-atabs-tab-label={Object.keys( section )[ 0 ]}>
+									{<CodeSnippet language={
 															Object.keys( section )[ 0 ] === 'HTML' ? 'html' : '' +
 															Object.keys( section )[ 0 ] === 'SCSS' ? 'scss' : '' +
 															Object.keys( section )[ 0 ] === 'React' ? 'jsx' : ''
 														}>
 															{ section[ Object.keys( section )] }
-														</CodeSnippet>
-													</div>
-												))
-											}
-										</div>
-									</div>
+														</CodeSnippet>}
+														
+								  </div>	
+													))
+													
+								}
+								</div>
+		
 									</div>
 								</div>
 							</div>
-						</div>
 				: null
 			}
 		</div>
