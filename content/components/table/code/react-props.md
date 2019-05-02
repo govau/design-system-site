@@ -15,8 +15,6 @@ layout: section
 | `rows`        | array     | The table data inside an array |
 | `rows[i]`        | array     | The table data wrapper |
 | `rows[i].text`        | string     | The table data |
-| `alt`        | string     | A alternative variation of the component |
-| `dark`        | string     | A dark variation of the component |
 | `striped`        | string     | A striped variation of the component |
 
 All other props are spread into the component
