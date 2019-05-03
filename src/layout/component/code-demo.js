@@ -42,7 +42,7 @@ const CodeDemo = ({ iframe, iframeFullwidth, height = null, code, _body, _ID, _r
 						<div className="row">
 							<div className="col-sm-12">
 								<div className="code-demo__example__code">
-								<div className="tabs">
+								<div className="tabs" >
 								{
 								code && code.map( ( section, i ) => (
 									<div data-atabs-panel 

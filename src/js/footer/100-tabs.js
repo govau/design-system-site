@@ -53,7 +53,7 @@ var util = {
   },
 
   generateID: function ( base ) {
-    return base + Math.floor(Math.random() * 999);
+    return base;
   },
 
   getDirectChildren: function ( elm, selector ) {
@@ -74,7 +74,7 @@ var util = {
    * License: https://github.com/scottaohara/a11y_tab_widget/blob/master/LICENSE
    */
   var ARIAtabsOptions = {
-    baseID: 'atab_',
+    baseID: 'demo',
     defaultTabLabel: 'Tab ',
     elClass: 'atabs',
     customTabClassAttribute: 'data-atabs-tab-class',
@@ -139,7 +139,7 @@ var util = {
       var tabListContainer = el.querySelector(_options.tablistSelector) || doc.createElement('div');
       tabListContainer.setAttribute('role', 'tablist');
       tabListContainer.classList.add(_options.tabListClass);
-      tabListContainer.id = elID + '_list';
+      tabListContainer.id = elID + '-tab-list';
       tabListContainer.innerHTML = ''; // clear out anything that shouldn't be there
       if ( orientation === 'vertical' ) {
         tabListContainer.setAttribute('aria-orientation', orientation);
@@ -155,7 +155,7 @@ var util = {
 
       var generateTab = function ( index, id, tabPanel, customClass ) {
         var newTab = doc.createElement('button');
-        newTab.id = elID + '_tab_' + index;
+        newTab.id = elID + '-tab-' + index;
         newTab.tabIndex = -1;
         newTab.setAttribute('role', 'tab');
         newTab.setAttribute('aria-selected', activeIndex === index);
