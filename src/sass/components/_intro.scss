@@ -20,6 +20,18 @@
 		@include AU-space( max-width, 40unit );
 		margin: 0 auto;
 	}
+
+	.intro__buttons {
+		margin-top: 1rem;
+
+		a {
+			display: inline-block;
+		}
+
+		a + a {
+			margin-left: 1rem;
+		}
+	}
 }
 
 //specific to override AU-body
@@ -31,3 +43,4 @@
 		text-align: left;
 	}
 }
+

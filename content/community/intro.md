@@ -7,6 +7,11 @@ button:
   text: Join our community
   type: secondary
   icon: community
+slackButton:
+  link: https://govau-guides.slack.com/
+  text: Talk to us
+  type: secondary
+  icon: slack
 ---
 
 *Together we‘ll be able to build products and services better, faster and easier.*
