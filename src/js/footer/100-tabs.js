@@ -481,6 +481,6 @@ var els = document.querySelectorAll(widget);
 
 // Generate all Tab Widget instances
 for ( var i = 0; i < els.length; i++ ) {
-  var nTabs = new ARIAtabs( els[i], {tabListClass: 'tabs-nav'}, { tabClass: 'tab-item'});
+  var nTabs = new ARIAtabs( els[i], {tabListClass: 'tabs-nav',tabClass: 'tab-item'});
 }
 
