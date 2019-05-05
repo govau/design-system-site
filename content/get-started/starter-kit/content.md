@@ -17,7 +17,7 @@ When the user runs `npm run build` or `npm run watch` we use [node-sass](https:/
 
 > Refer to the `package.json` scripts for how this has been set up
 
-This set up allows you to modify the variables in the design system file from the `main.scss` file. You can [add your own colour scheme](/get-started/customise-color), or [change the typography and spacing](/get-started/font-size-space). Tweaks to the components or additional ones should be added below the import of `_auds.scss` in the `main.scss` file. Changes to these files will be injected into your browser so you don’t even need to refresh thanks to [Browser Sync](https://www.browsersync.io/).
+This set up allows you to modify the variables in the design system file from the `main.scss` file. You can [add your own colour scheme](/get-started/customise-colour), or [change the typography and spacing](/get-started/font-size-space). Tweaks to the components or additional ones should be added below the import of `_auds.scss` in the `main.scss` file. Changes to these files will be injected into your browser so you don’t even need to refresh thanks to [Browser Sync](https://www.browsersync.io/).
 
 The `docs` folder contains all the files required to publish a website. The `index.html` file references the `main.css` file and `script.min.js` assets to generate the page. We name the folder `docs` because [GitHub pages](https://pages.github.com/) uses the docs folder to host static websites.
 
