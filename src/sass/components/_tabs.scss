@@ -35,6 +35,8 @@
 
 			&.tab-item[aria-selected="true"]{
 				@include AU-space( border-bottom, 0.25unit solid $AU-color-foreground-action );
+				@include AU-space( margin-bottom, -0.25unit );
+
 			}
 		}
 	}
