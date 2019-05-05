@@ -134,12 +134,10 @@ function ApplyColors( queryString ) {
  * @param   {string} query - The query string, usually window.location.search
  */
 function ApplyQueryToIframe( query ){
-	// These two lines are hacky and should be replaced
-	var template = templateName === 'home' ? '' : '/' + templateName;
-	var iframeQuery = template + query.replace( '&palette=on&a11y=on', '' );
+	var templateEndpoint = '/' + templateName;
+	var iframeQuery = query.replace( '&palette=on&a11y=on', '' );
+	var iframeSrc = isCloud ? 'http://localhost:3000/chameleon' + templateEndpoint : '/chameleon' + templateEndpoint;
 
-	// Need to fix this up
-	var iframeSrc = isCloud ? "http://localhost:3000/chameleon" : "/chameleon";
 	iframe.src = iframeSrc + iframeQuery;
 }
 

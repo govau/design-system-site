@@ -6,7 +6,7 @@ order:
   - download-page
   - starter-kit
   - design-assets
-  - customise-color
+  - customise-colour
   - font-size-space
   - customise-components
 ---

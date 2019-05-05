@@ -11,7 +11,7 @@ There are four ways to get started with the Design System;
 
 Once you have the components in a website we have advanced guides for developers on how to:
 
-- [Customise the colour scheme](get-started/customise-color)
+- [Customise the colour scheme](get-started/customise-colour)
 - [How to use the font size and space functions](get-started/font-size-space)
 - [Customise existing components](get-started/customise-components)
 - [Create a new component](get-started/create-components)

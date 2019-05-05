@@ -1006,6 +1006,9 @@ link-list:
     - name: Hannah J. Nicdao
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
+    - name: Tengis Batsaikhan
+      img: tengis-batsaikhan.jpg
+      url: 'https://github.com/tengis'
   state: published
   order: 10
   discussions:

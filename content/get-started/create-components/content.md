@@ -88,7 +88,7 @@ $boxshadow: 0 2px 4px rgba( 0, 0, 0, 0.3 ) !default;
 }
 ```
 
-Understanding the [colour system](/get-started/customise-color) and the [spacing functions](/get-started/font-size-space) will allow your new components to get the most out of the Design System. The [core component](/components/core/code) provides functions and variables to make creating components easier. Core will not have everything you need and you will need to create your own variables for example `$boxshadow` seen above.
+Understanding the [colour system](/get-started/customise-colour) and the [spacing functions](/get-started/font-size-space) will allow your new components to get the most out of the Design System. The [core component](/components/core/code) provides functions and variables to make creating components easier. Core will not have everything you need and you will need to create your own variables for example `$boxshadow` seen above.
 
 > We recommend using [autoprefixer](https://github.com/postcss/autoprefixer) to automatically add [vendor prefixes](https://developer.mozilla.org/en-US/docs/Glossary/Vendor_Prefix).
 

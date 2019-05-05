@@ -1,18 +1,18 @@
-We provide designers with a sketch file to get started prototyping using the components of the Design System.
+We provide designers with a Sketch file to get started prototyping using the components of the Design System.
 
-Download the sketch design files from the [download page](/download).
+Download the Sketch design files from the [download page](/download).
 
-> The design system sketch files use the default system font for OSX, San Francisco. San Francisco is not usable in sketch by default, to use the typeface in sketch you have to [download and install San Francisco](https://developer.apple.com/fonts/).
+> The design system Sketch files use the default system font for OSX, San Francisco. San Francisco is not usable in Sketch by default, to use the typeface in Sketch you have to [download and install San Francisco](https://developer.apple.com/fonts/).
 
 
-## Using the sketch file
+## Using the Sketch file
 
-Open the file in Sketch, the file contains three pages Design System, Symbols and Example. 
+Open the file in Sketch, the file contains three pages: Design System, Symbols and Example. 
 
 <img alt="A screenshot of the sketch pages" src="/assets/img/get-started/sketch-pages.png" width="280">
 
 The Design System page is split into multiple art boards and includes:
-- Changelog; what changes have recently been made to the sketch file
+- Changelog: what changes have recently been made to the Sketch file
 - Basic instructions on how to use the file
 - Light, dark and system colour schemes
 - Font sizes
@@ -29,7 +29,7 @@ The Example page contains example pages created using the symbols. This includes
 
 ## Changing the colours
 
-The sketch symbols are themable and you are able to apply your own colour scheme.
+The Sketch symbols are themeable and you are able to apply your own colour scheme.
 
 To change the colours make sure you are on the Design System page. Go to the dark or light colour palette artboard and click the square of the colour you want to change.
 
