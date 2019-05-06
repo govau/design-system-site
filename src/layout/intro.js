@@ -5,7 +5,7 @@ import React from 'react';
 /**
  * The Intro component
  */
-const Intro = ({ title, imgalt, imgurl, button, slackButton, _relativeURL, _ID, _body }) => (
+const Intro = ({ title, imgalt, imgurl, buttons, _relativeURL, _ID, _body }) => (
 	<div className="intro">
 		<div className="row">
 
@@ -21,22 +21,24 @@ const Intro = ({ title, imgalt, imgurl, button, slackButton, _relativeURL, _ID, 
 				{ title ? <h2 className="intro__title">{ title }</h2> : '' }
 				<div className="content">{ _body }</div>
 				{
-					button && slackButton
-						?
-							<div className="intro__buttons">
-								<a href={ button.link } className={ `au-btn au-btn--${ button.type }${ button.icon ? ` icon icon--${ button.icon }` : '' }` }>
-									{ button.text }
-								</a>
-								<a href={ slackButton.link } className={ `au-btn au-btn--${ slackButton.type }${ slackButton.icon ? ` icon icon--${ slackButton.icon }`: '' }` }>
-									{ slackButton.text }
-								</a>
-							</div>
-						: ''
-				}
-			</div>
+					buttons ? (
+				<div className="intro__buttons">
+					
+					{ buttons.map((button, i) => {
+					
+					return (
+						<a href={ button.link } className={ `au-btn au-btn--${ button.type }${ button.icon ? ` icon icon--${ button.icon }` : '' }` }>
+							{ button.text }
+						</a>
+					)
+					
+					})}
+				</div>
+					
+					):''}
 
 		</div>
-	</div>
+	</div></div>
 );
 
 Intro.propTypes = {
@@ -62,7 +64,7 @@ Intro.propTypes = {
 	 *   type: secondary
 	 *   icon: github
 	 */
-	button: PropTypes.shape({
+	buttons: PropTypes.arrayOf({
 		link: PropTypes.string,
 		text: PropTypes.string,
 		type: PropTypes.string,
@@ -76,12 +78,12 @@ Intro.propTypes = {
 	 *   type: secondary
 	 *   icon: github
 	 */
-	slackButton: PropTypes.shape({
-		link: PropTypes.string,
-		text: PropTypes.string,
-		type: PropTypes.string,
-		icon: PropTypes.string,
-	}),
+	// slackButton: PropTypes.shape({
+	// 	link: PropTypes.string,
+	// 	text: PropTypes.string,
+	// 	type: PropTypes.string,
+	// 	icon: PropTypes.string,
+	// }),
 
 	/**
 	 * _body: (text)(4)

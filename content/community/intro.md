@@ -2,13 +2,12 @@
 layout: intro
 imgurl: assets/img/artwork-community.png
 imgalt: designers and developers working together illustration
-button:
-  link: https://community.digital.gov.au/c/designsystem
+buttons:
+- link: https://community.digital.gov.au/c/designsystem
   text: Join our community
   type: secondary
   icon: community
-slackButton:
-  link: https://govau-guides.slack.com/
+- link: https://govau-guides.slack.com/
   text: Talk to us
   type: secondary
   icon: slack
