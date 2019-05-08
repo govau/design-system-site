@@ -71,20 +71,6 @@ Intro.propTypes = {
 	}),
 
 	/**
-	 * slackButton:
-	 *   link: #
-	 *   text: Button text
-	 *   type: secondary
-	 *   icon: github
-	 */
-	// slackButton: PropTypes.shape({
-	// 	link: PropTypes.string,
-	// 	text: PropTypes.string,
-	// 	type: PropTypes.string,
-	// 	icon: PropTypes.string,
-	// }),
-
-	/**
 	 * _body: (text)(4)
 	 */
 	_body: PropTypes.node.isRequired,
