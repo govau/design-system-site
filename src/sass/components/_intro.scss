@@ -22,7 +22,7 @@
 	}
 
 	.intro__buttons {
-		margin-top: 1rem;
+		@include AU-space( margin-top, 1unit );
 
 		.au-btn {
 			display: block;
