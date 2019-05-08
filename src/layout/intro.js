@@ -17,28 +17,27 @@ const Intro = ({ title, imgalt, imgurl, buttons, _relativeURL, _ID, _body }) => 
 				</div>
 			</div>
 
-			<div className="intro__text col-sm-12 col-md-5 col-md-pull-6">
+			<div className="intro__text col-sm-12 col-md-6 col-md-pull-6">
 				{ title ? <h2 className="intro__title">{ title }</h2> : '' }
 				<div className="content">{ _body }</div>
 				{
-					buttons ? (
-				<div className="intro__buttons">
-					
-					{ buttons.map((button, i) => {
-					
-					return (
-						<a href={ button.link } className={ `au-btn au-btn--${ button.type }${ button.icon ? ` icon icon--${ button.icon }` : '' }` }>
-							{ button.text }
-						</a>
+					buttons && (
+					<div className="intro__buttons">
+
+						{ buttons.map((button, i) => {
+							return (
+								<a href={ button.link } className={ `au-btn au-btn--${ button.type }${ button.icon ? ` icon icon--${ button.icon }` : '' }` }>
+									{ button.text }
+								</a>
+							)
+						})}
+					</div>
 					)
-					
-					})}
-				</div>
-					
-					):''}
+				}
+			</div>
 
 		</div>
-	</div></div>
+	</div>
 );
 
 Intro.propTypes = {

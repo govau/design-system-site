@@ -24,13 +24,16 @@
 	.intro__buttons {
 		margin-top: 1rem;
 
-		a {
-			display: inline-block;
+		.au-btn {
+			display: block;
+			float: left;
+			clear: left;
+
+			+ .au-btn {
+				@include AU-space( margin-top, 0.5unit );
+			}
 		}
 
-		a + a {
-			margin-left: 1rem;
-		}
 	}
 }
 

@@ -8,7 +8,7 @@ buttons:
   type: secondary
   icon: community
 - link: https://govau-guides.slack.com/
-  text: Talk to us
+  text: Talk to us on slack
   type: secondary
   icon: slack
 ---
