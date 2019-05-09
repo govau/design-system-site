@@ -8,6 +8,8 @@ mainlist:
     link: /roadmap
   - text: GitHub
     link: https://github.com/govau/design-system-components/
+  - text: Slack
+    link: https://govau-guides.slack.com/
 legallist:
   - text: Privacy
     link: https://www.dta.gov.au/privacy-statement

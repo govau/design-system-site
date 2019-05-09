@@ -2,10 +2,10 @@
 layout: intro
 imgurl: assets/img/artwork-about.png
 imgalt: designers and developers working together illustration
-button:
-  link: /get-started
-  text: Get started
-  type: secondary
+buttons:
+  - link: /get-started
+    text: Get started
+    type: secondary
 ---
 
 *The Australian Government Design System provides a framework and a set of tools to help designers and developers build government products and services more easily.*

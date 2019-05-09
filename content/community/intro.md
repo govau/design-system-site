@@ -2,11 +2,15 @@
 layout: intro
 imgurl: assets/img/artwork-community.png
 imgalt: designers and developers working together illustration
-button:
-  link: https://community.digital.gov.au/c/designsystem
+buttons:
+- link: https://community.digital.gov.au/c/designsystem
   text: Join our community
   type: secondary
   icon: community
+- link: https://govau-guides.slack.com/
+  text: Talk to us on slack
+  type: secondary
+  icon: slack
 ---
 
 *Together we‘ll be able to build products and services better, faster and easier.*

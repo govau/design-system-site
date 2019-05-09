@@ -20,6 +20,28 @@
 		@include AU-space( max-width, 40unit );
 		margin: 0 auto;
 	}
+
+	.intro__buttons {
+		@include AU-space( margin-top, 1.25unit );
+
+		.au-btn {
+			+ .au-btn {
+				@include AU-space( margin-left, 0.5unit );
+			}
+
+			//display buttons on top of each other when smaller device
+			@media (max-width: 576px) {
+				display: block;
+				float: left;
+
+				+ .au-btn {
+					@include AU-space( margin, 0.5unit 0 0 0 );
+					clear: left;
+				}
+			}
+		}
+
+	}
 }
 
 //specific to override AU-body
@@ -31,3 +53,4 @@
 		text-align: left;
 	}
 }
+
