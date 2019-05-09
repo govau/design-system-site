@@ -4,10 +4,15 @@ headline: Community
 mainlist:
   - text: Forums
     link: https://community.digital.gov.au/c/designsystem
-  - text: Roadmap
-    link: /roadmap
   - text: GitHub
     link: https://github.com/govau/design-system-components/
+  - text: Slack
+    link: https://govau-guides.slack.com/
+  - text: Roadmap
+    link: /roadmap
+  - text: Design principles
+    link: /design-principles
+
 legallist:
   - text: Privacy
     link: https://www.dta.gov.au/privacy-statement

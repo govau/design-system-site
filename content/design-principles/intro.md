@@ -1,0 +1,1 @@
+These Design Principles are intended to support and be directly compatible with the [Digital Service Standard](https://www.dta.gov.au/help-and-advice/about-digital-service-standard), recognising that other jurisdictions not covered by the Standard are leveraging and extending the Design System.
