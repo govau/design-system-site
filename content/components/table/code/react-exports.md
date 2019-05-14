@@ -17,5 +17,5 @@ import { AUtable } from '@gov.au/table';
 ### [md]pancake import
 
 ```jsx
-import { AUtable } from './form';
+import { AUtable } from './table';
 ```

@@ -12,8 +12,7 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - vertical-layout.md
-  - caption-summary.md
+  - alternating-rows.md
 
 footer:
   - /_shared/footer.md

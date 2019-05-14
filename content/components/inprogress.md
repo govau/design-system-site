@@ -7,7 +7,6 @@ btnURL: /community
 btnIcon: community
 tableTH:
   - text: Title
-    className: component-table--title
   - text: Usable
     link: https://github.com/govau/design-system-components/blob/master/CONTRIBUTING.md#usable
     className: component-table--minwidth

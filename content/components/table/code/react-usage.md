@@ -5,7 +5,7 @@ layout: section
 ## React Usage
 
 ```jsx
-import AUtable, {AUtableResponsiveWrapper, AUtableCaption, AUtableCell, AUtableHead, AUtableHeader, AUtableBody, AUtableRow} from './table.js';
+import AUtable, {AUtableResponsiveWrapper, AUtableCaption, AUtableCell, AUtableHead, AUtableHeader, AUtableBody, AUtableRow} from '@gov.au/table';
 
 
 //simple example
@@ -65,7 +65,7 @@ const complexHeaders = [
             ];
 
 <AUtable
-    caption="Example table in a col-md-6"
+    caption="Example table"
     headers={complexHeaders}
     data = {complexData}
 />

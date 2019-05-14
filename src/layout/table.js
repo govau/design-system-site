@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import  AUtable, {AUtableResponsiveWrapper, AUtableCaption, AUtableCell, AUtableHead, AUtableHeader, AUtableBody, AUtableRow} from '../_auds/layout/table';
 
 
 /**
@@ -7,70 +8,40 @@ import PropTypes from 'prop-types';
  *
  * @disable-docs
  */
-const Table = ({ caption, header, body, footer, className, responsive, smallTable, striped, firstColTH }) => (
-	<div className={`au-table au-body ${ smallTable ? 'au-table--small ' : ''}${ responsive ? 'au-table--responsive ' : ''}${ striped ? 'au-table--striped ' : ''}${ className }`}>
-		<table>
-			<caption className="au-table__caption">{ caption }</caption>
+const Table = ({ caption, headers, body, className, striped, firstColTH }) => (
+	<AUtableResponsiveWrapper>
+		<table className={`au-table ${ striped ? 'au-table--striped ' : ' '} ${className}`}>
+			<AUtableCaption tableCaption={caption} />
 			{
-				header &&
-					<thead>
-						<tr className="au-table__header">
-							{
-								header.map( ( th, i ) => (
-									<th key={ i } scope="col" className={ th.className }>
-										{
-											th.link
-												? th.link.startsWith('http://') || th.link.startsWith('https://')
-													? <a href={ th.link } rel="external">{ th.text }</a>
-													: <a href={ th.link }>{ th.text }</a>
-												: th.text
-										}
-									</th>
-								))
-							}
-						</tr>
-					</thead>
+				<AUtableRow>
+					<AUtableHead>
+						{
+							headers.map( (header, i) => (
+							<AUtableHeader title={header.text} />
+						))
+						}
+					</AUtableHead>
+				</AUtableRow>
 			}
 
 			<tbody>
 				{
-					body.map( ( bodyTD, i ) => (
-						<tr key={ i } className="au-table__body">
-							{
-								bodyTD.map( ( td, j ) => (
 
-									firstColTH && j === 0
-									?
-										<th key={ j } scope="row" className={ td.className }>
-											{ td.text }
-										</th>
-
-									:	<td key={ j } className={ td.className }>
-											{ td.text }
-										</td>
-								))
-							}
-						</tr>
-					))
+					<AUtableBody>
+					{body.map( (row, i) => (
+						<AUtableRow>
+							{row.map((cell, j ) => (
+								firstColTH && j === 0 ?
+								<AUtableHeader title={cell.text} scope="row" /> :
+								<AUtableCell data={cell.text} />
+							))}
+						</AUtableRow>
+					))}
+					</AUtableBody>
 				}
 			</tbody>
-
-			{
-				footer &&
-					<tfoot>
-						<tr className="au-table__footer">
-							{
-								footer.map( ( td, i ) => (
-									<td key={ i } scope="col" className={ td.className }>
-										{ td.text }
-									</td>
-								))
-							}
-						</tr>
-					</tfoot>
-			}
 		</table>
-	</div>
+	</AUtableResponsiveWrapper>
 );
 
 Table.propTypes = {
@@ -79,10 +50,6 @@ Table.propTypes = {
 	 */
 	caption: PropTypes.string.isRequired,
 
-	/**
-	 * smallTitle: If the titles are small
-	 */
-	smallTable: PropTypes.bool,
 
 	/**
 	 * header:
@@ -119,18 +86,6 @@ Table.propTypes = {
 		)
 	).isRequired,
 
-	/**
-	 * footer:
-	 *   - text: Title
-	 *     className: optional
-	 *   - text: Status
-	 */
-	footer: PropTypes.arrayOf(
-		PropTypes.shape({
-			text: PropTypes.string.isRequired,
-			className: PropTypes.string,
-		})
-	),
 };
 
 export default Table;

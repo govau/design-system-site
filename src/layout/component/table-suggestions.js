@@ -33,6 +33,13 @@ const TableSuggestions = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _
 		}
 	);
 
+
+	const headers = tableTH.map((header) => {
+
+		return {text: header.link ? <a href={header.link}>{header.text}</a> : header.text}
+
+	});
+
 	return (
 		<Fragment>
 			{
@@ -44,11 +51,8 @@ const TableSuggestions = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _
 							<Table
 								className="component-table"
 								caption={ caption }
-								header={ tableTH }
+								headers={ headers }
 								body={ body }
-								smallTable
-								responsive
-								striped
 								firstColTH
 							/>
 
