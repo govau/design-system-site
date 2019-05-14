@@ -1,6 +1,6 @@
 ---
 layout: component/code-demo
-iframe: examples/example-default
+iframe: examples/example-width
 iframeFullwidth: true
 code:
   - HTML: |
@@ -8,9 +8,9 @@ code:
             <caption class="au-table__caption">Population of Australian states and territories, December 2015</caption>
             <thead class="au-table__head">
                 <tr class="au-table__row">
-                    <th scope="col" class="au-table__header">Location</th>
-                    <th scope="col" class="au-table__header au-table__header--numeric">Population</th>
-                    <th scope="col" class="au-table__header au-table__header--numeric">Change over previous year %</th>
+                    <th scope="col" class="au-table__header au-table__header--width-50">Location</th>
+                    <th scope="col" class="au-table__header au-table__header--numeric au-table__header--width-25">Population</th>
+                    <th scope="col" class="au-table__header au-table__header--numeric au-table__header--width-25">Change over previous year %</th>
                 </tr>
             </thead>
             <tbody class="au-table__body">
@@ -33,16 +33,18 @@ code:
         </table>
   - React: |
         import AUtable, {AUtableResponsiveWrapper} from "@gov.au/table";
-        
+
         const simpleData = [
-            {population: "7,670,700",     location: "New South Wales"},
-            {location: "Victoria",        population: "5,996,400"},
-            {location: "Tasmania",        population: "514,400"}
+                {location: "New South Wales",              population: "7,670,700", changeYear: "3.1%"},
+                {location: "Victoria",                     population: "5,996,400", changeYear: "2.5%"},
+                {location: "Tasmania",                     population: "517,400",   changeYear: "4%"}
         ];
 
         const simpleHeaders = [
-            {title: "Location",   key: "location"},
-            {title: "Population", key: "population", type: 'numeric'}
+            {title: "Location",                    key: "location",   width: '50'},
+            {title: "Population",                  key: "population", width: '25', type: 'numeric'}
+            {title: "Change over previous year %", key: "changeYear", width: '25', type: 'numeric'},
+
         ];
 
         <AUtableResponsiveWrapper>
@@ -52,7 +54,10 @@ code:
                 data={simpleData}
             />
         </AUtableResponsiveWrapper>
----
-## Default table
 
-For data tables with fewer than four rows, use a table without stripes. Align text columns and corresponding data cells to the left. When comparing numbers in a column, align data cells and column headers to the right.
+---
+## Custom widths
+
+Use custom widths based on the length of the data under each corresponding cell.
+
+

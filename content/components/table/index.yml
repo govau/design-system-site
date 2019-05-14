@@ -13,6 +13,9 @@ sidebar:
 
 main:
   - default.md
+  - width.md
+  - striped.md
+  - responsive.md
 
 footer:
   - /_shared/footer.md
