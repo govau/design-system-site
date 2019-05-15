@@ -98,9 +98,33 @@ module.exports = exports = function renderer({ Marked, _ID, _relativeURL }) {
 	 * @return {string}       - The table element
 	 */
 	Marked.table = ( header, body ) => {
-		return `<div class="au-table au-table--responsive">\n<table>\n<thead>\n${ header }</thead>\n<tbody>\n${ body }</tbody>\n</table>\n</div>\n`;
+		return `<div class="au-table__wrapper">\n<table class="au-table">\n<thead class="au-table__head">\n${ header }</thead>\n<tbody class="au-table__body">\n${ body }</tbody>\n</table>\n</div>\n`;
 	};
 
+	/**
+	 *
+	 * @param {string} content - The content inside the row
+	 *
+	 * @return {string}        - The row element
+	 */
+	Marked.tablerow = ( content ) => {
+		return `<tr class="au-table__row">\n${ content }</tr>\n`;
+	  }
+
+
+	/**
+	 * Table cell overwrite
+	 * @param {string} content - The content inside the cell
+	 *
+	 * @returns                - The cell element
+	 */
+	Marked.tablecell = ( content, flags ) => {
+	const type = flags.header ? 'th' : 'td';
+	const className = type === 'th' ? 'au-table__header' : 'au-table__cell';
+	const tag = `<${ type } class="${className}">`;
+
+	return `${ tag }${ content }</${ type }>\n`;
+	}
 
 	/**
 	 * Convert all applicable characters to HTML entities
