@@ -70,6 +70,6 @@ code:
 ---
 ## Custom header widths
 
-Use custom widths based on the expected length of the data under each corresponding column. By default the table is full width, however the table can be used with the grid to take up a desired amount of horizontal space on the page. Wrapping the `table` element in a `<div class="au-table__wrapper">` allows for horizontal scrolling on smaller devices, this is especially useful for tables with a larger number of columns.
+Use custom widths based on the expected length of the data under each corresponding column. By default the table is full width, however the table can be used with the grid to take up a desired amount of horizontal space on the page. Wrapping the `table` element in a `<div class="au-table__wrapper">` allows for horizontal scrolling on smaller devices. This is especially useful for tables with a larger number of columns.
 
 

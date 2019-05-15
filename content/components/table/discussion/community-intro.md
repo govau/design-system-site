@@ -5,4 +5,4 @@ btnurl: https://community.digital.gov.au/t/
 btntype: secondary
 ---
 
-Our components are a collaborative effort, we welcome constructive conversation and contribution.
+Our components are a collaborative effort. We welcome constructive conversation and contribution.
