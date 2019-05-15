@@ -4,12 +4,6 @@ layout: section
 
 ### Props
 
-
-| Prop name | Type    | Description |
-|-----------|---------|-------------|
-| Caption   | blaring | asdfsadf    |
-
-
 #### AUtable
 
 | Prop name           | Type        | Description |
