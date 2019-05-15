@@ -18,6 +18,9 @@ const TableSuggestions = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _
 		yaml: _parseYaml,
 	});
 
+	console.log("TITLE type:::   ")
+	console.log(typeof title);
+
 	const body = components.map( component => {
 			return [
 				{
@@ -96,9 +99,6 @@ TableSuggestions.propTypes = {
 
 	/**
 	 * tableTH:
-	 *   - text: Title
-	 *   - text: Status
-	 *     tightcol: true
 	 */
 	tableTH: PropTypes.arrayOf(
 		PropTypes.shape({

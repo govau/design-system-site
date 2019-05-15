@@ -7,3 +7,7 @@
 		@include AU-space( 'padding', 0.75rem )
 	}
 }
+
+* + .au-table__wrapper {
+	@include AU-space( margin-top, 1unit)
+}

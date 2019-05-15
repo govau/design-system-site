@@ -9,20 +9,14 @@ tableTH:
   - text: Title
   - text: Usable
     link: https://github.com/govau/design-system-components/blob/master/CONTRIBUTING.md#usable
-    className: component-table--minwidth
   - text: Consistent
     link: https://github.com/govau/design-system-components/blob/master/CONTRIBUTING.md#consistent
-    className: component-table--minwidth
   - text: Versatile
     link: https://github.com/govau/design-system-components/blob/master/CONTRIBUTING.md#versatile
-    className: component-table--minwidth
   - text: Coded
     link: https://github.com/govau/design-system-components/blob/master/CONTRIBUTING.md#coded
-    className: component-table--minwidth
   - text: Tested
     link: https://github.com/govau/design-system-components/blob/master/CONTRIBUTING.md#tested
-    className: component-table--minwidth
   - text: Considered
     link: https://github.com/govau/design-system-components/blob/master/CONTRIBUTING.md#considered
-    className: component-table--minwidth
 ---

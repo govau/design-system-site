@@ -17,7 +17,7 @@ const Table = ({ caption, headers, body, className, striped, firstColTH }) => (
 					<AUtableHead>
 						{
 							headers.map( (header, i) => (
-							<AUtableHeader title={header.text} />
+							<AUtableHeader title={header.text} key={i} />
 						))
 						}
 					</AUtableHead>
@@ -29,11 +29,11 @@ const Table = ({ caption, headers, body, className, striped, firstColTH }) => (
 
 					<AUtableBody>
 					{body.map( (row, i) => (
-						<AUtableRow>
+						<AUtableRow key={i}>
 							{row.map((cell, j ) => (
 								firstColTH && j === 0 ?
-								<AUtableHeader title={cell.text} scope="row" /> :
-								<AUtableCell data={cell.text} />
+								<AUtableHeader title={cell.text} scope="row" key={j} /> :
+								<AUtableCell data={cell.text} key={j} />
 							))}
 						</AUtableRow>
 					))}
@@ -57,9 +57,9 @@ Table.propTypes = {
 	 *     className: optional
 	 *   - text: Status
 	 */
-	header: PropTypes.arrayOf(
+	headers: PropTypes.arrayOf(
 		PropTypes.shape({
-			text: PropTypes.string.isRequired,
+			text: PropTypes.isRequired,
 			className: PropTypes.string,
 		})
 	),
