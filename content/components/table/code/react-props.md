@@ -68,5 +68,5 @@ All other props are spread into the component
 
 | Prop name   | Type        | Description |
 | ----------- | ----------- | ----------- |
-| `tableCaption`        | string     | Title of the caption |
+| `tableCaption`        | string     | Caption (or title) of the table |
 | `className`        | string     | An additional class, optional |
