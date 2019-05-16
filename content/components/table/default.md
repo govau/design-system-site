@@ -55,4 +55,4 @@ code:
 ---
 ## Default table
 
-For data tables with fewer than four rows, use a table without stripes. Align text columns and corresponding data cells to the left. When comparing numbers in a column, align data cells and column headers to the right.
+For data tables with a small amount of rows use the default table. Align text columns and corresponding data cells to the left. When comparing numbers in a column, align data cells and column headers to the right.

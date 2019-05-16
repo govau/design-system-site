@@ -18,9 +18,6 @@ const TableSuggestions = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _
 		yaml: _parseYaml,
 	});
 
-	console.log("TITLE type:::   ")
-	console.log(typeof title);
-
 	const body = components.map( component => {
 			return [
 				{
@@ -73,12 +70,12 @@ const TableSuggestions = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _
 
 TableSuggestions.propTypes = {
 	/**
-	 * title: In progress
+	 * title: Sugggesions
 	 */
 	title: PropTypes.string.isRequired,
 
 	/**
-	 * caption: A table of in progress components including their status, current version, and contributors.
+	 * caption: A table of suggested components including their current status.
 	 */
 	caption: PropTypes.string.isRequired,
 

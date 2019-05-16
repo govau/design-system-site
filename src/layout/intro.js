@@ -26,7 +26,7 @@ const Intro = ({ title, imgalt, imgurl, buttons, _relativeURL, _ID, _body }) => 
 
 						{ buttons.map((button, i) => {
 							return (
-								<a href={ button.link } className={ `au-btn au-btn--${ button.type }${ button.icon ? ` icon icon--${ button.icon }` : '' }` }>
+								<a key={i} href={ button.link } className={ `au-btn au-btn--${ button.type }${ button.icon ? ` icon icon--${ button.icon }` : '' }` }>
 									{ button.text }
 								</a>
 							)
@@ -63,12 +63,12 @@ Intro.propTypes = {
 	 *   type: secondary
 	 *   icon: github
 	 */
-	buttons: PropTypes.arrayOf({
+	buttons: PropTypes.arrayOf(PropTypes.shape({
 		link: PropTypes.string,
 		text: PropTypes.string,
 		type: PropTypes.string,
 		icon: PropTypes.string,
-	}),
+	})),
 
 	/**
 	 * _body: (text)(4)
