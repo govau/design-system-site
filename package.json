@@ -95,7 +95,7 @@
 		"@gov.au/select": "latest",
 		"@gov.au/side-nav": "latest",
 		"@gov.au/skip-link": "latest",
-		"@gov.au/table": "^0.1.0",
+		"@gov.au/table": "latest",
 		"@gov.au/tags": "latest",
 		"@gov.au/text-inputs": "latest",
 		"autoprefixer": "^9.4.10",
