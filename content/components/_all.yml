@@ -1519,7 +1519,14 @@ table:
     - name: Gary Broadbent
       img: gary-broadbent.jpg
       url: 'https://github.com/gazhands'
-  state: inprogress
+    - name: Adam Zerella
+      img: adam-zerella.jpg
+      url: 'https://github.com/adamzerella'
+    - name: Raj Ghuman
+      img: raj-ghuman.jpg
+      url: 'https://github.com/sukhrajghuman'
+  state: published
+  highlight: alpha
   status:
     usable: done
     consistent: done
@@ -1533,11 +1540,11 @@ table:
     - active: 7
     - something: something
   ID: table    # <-- auto generated, don't change
-  version: 0.0.0    # <-- auto generated, don't change
+  version: 0.1.0    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
-  hasJs: false    # <-- auto generated, don't change
+  hasJs: true    # <-- auto generated, don't change
   hasReact: true    # <-- auto generated, don't change
 form:
   name: Form

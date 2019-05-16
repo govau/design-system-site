@@ -3,8 +3,10 @@ import Table               from '../table';
 import GetData             from '../../helper/getData';
 import ContributorStatus   from './contributor-status';
 
+
 import React, { Fragment } from 'react';
 import PropTypes           from 'prop-types';
+import { clearLine } from 'readline';
 
 
 /**
@@ -43,8 +45,13 @@ const TableInProgress = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _p
 			},
 		];
 	}
-
 );
+
+const headers = tableTH.map((header) => {
+
+	return {text: header.link ? <a href={header.link}>{header.text}</a> : header.text}
+
+});
 
 	return (
 		<Fragment>
@@ -57,14 +64,10 @@ const TableInProgress = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _p
 							<Table
 								className="component-table"
 								caption={ caption }
-								header={ tableTH }
+								headers={ headers }
 								body={ body }
-								smallTable
-								responsive
-								striped
 								firstColTH
-							/>
-
+								/>
 							<p>
 								<AUbutton link={ btnURL } className={ btnIcon && `icon icon--${ btnIcon } icon--dark`}>
 									{ btntext }

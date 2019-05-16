@@ -5,7 +5,7 @@ import React from 'react';
 /**
  * The Intro component
  */
-const Intro = ({ title, imgalt, imgurl, button, _relativeURL, _ID, _body }) => (
+const Intro = ({ title, imgalt, imgurl, buttons, _relativeURL, _ID, _body }) => (
 	<div className="intro">
 		<div className="row">
 
@@ -17,18 +17,22 @@ const Intro = ({ title, imgalt, imgurl, button, _relativeURL, _ID, _body }) => (
 				</div>
 			</div>
 
-			<div className="intro__text col-sm-12 col-md-5 col-md-pull-6">
+			<div className="intro__text col-sm-12 col-md-6 col-md-pull-6">
 				{ title ? <h2 className="intro__title">{ title }</h2> : '' }
 				<div className="content">{ _body }</div>
 				{
-					button
-						?
-							<p className="intro__button">
+					buttons && (
+					<div className="intro__buttons">
+
+						{ buttons.map((button, i) => {
+							return (
 								<a href={ button.link } className={ `au-btn au-btn--${ button.type }${ button.icon ? ` icon icon--${ button.icon }` : '' }` }>
 									{ button.text }
 								</a>
-							</p>
-						: ''
+							)
+						})}
+					</div>
+					)
 				}
 			</div>
 
@@ -59,7 +63,7 @@ Intro.propTypes = {
 	 *   type: secondary
 	 *   icon: github
 	 */
-	button: PropTypes.shape({
+	buttons: PropTypes.arrayOf({
 		link: PropTypes.string,
 		text: PropTypes.string,
 		type: PropTypes.string,

@@ -18,6 +18,9 @@ const TableSuggestions = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _
 		yaml: _parseYaml,
 	});
 
+	console.log("TITLE type:::   ")
+	console.log(typeof title);
+
 	const body = components.map( component => {
 			return [
 				{
@@ -33,6 +36,13 @@ const TableSuggestions = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _
 		}
 	);
 
+
+	const headers = tableTH.map((header) => {
+
+		return {text: header.link ? <a href={header.link}>{header.text}</a> : header.text}
+
+	});
+
 	return (
 		<Fragment>
 			{
@@ -44,11 +54,8 @@ const TableSuggestions = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _
 							<Table
 								className="component-table"
 								caption={ caption }
-								header={ tableTH }
+								headers={ headers }
 								body={ body }
-								smallTable
-								responsive
-								striped
 								firstColTH
 							/>
 
@@ -92,9 +99,6 @@ TableSuggestions.propTypes = {
 
 	/**
 	 * tableTH:
-	 *   - text: Title
-	 *   - text: Status
-	 *     tightcol: true
 	 */
 	tableTH: PropTypes.arrayOf(
 		PropTypes.shape({
