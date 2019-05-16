@@ -37,7 +37,7 @@ code:
                     <tr class="au-table__row">
                         <td class="au-table__cell">Tasmania</td>
                         <td class="au-table__cell au-table__cell--numeric">517,400</td>
-                        <td class="au-table__cell au-table__cell--numeric">4%</td>
+                        <td class="au-table__cell au-table__cell--numeric">4.0%</td>
                     </tr>
                 </tbody>
             </table>
@@ -55,7 +55,7 @@ code:
         const simpleData = [
                 {location: "New South Wales", population: "7,670,700", changeYear: "3.1%"},
                 {location: "Victoria",        population: "5,996,400", changeYear: "2.5%"},
-                {location: "Tasmania",        population: "517,400",   changeYear: "4%"}
+                {location: "Tasmania",        population: "517,400",   changeYear: "4.0%"}
         ];
 
 

@@ -27,7 +27,7 @@ code:
                 <tr class="au-table__row">
                     <td class="au-table__cell">Tasmania</td>
                     <td class="au-table__cell au-table__cell--numeric">517,400</td>
-                    <td class="au-table__cell au-table__cell--numeric">4%</td>
+                    <td class="au-table__cell au-table__cell--numeric">4.0%</td>
                 </tr>
             </tbody>
         </table>
