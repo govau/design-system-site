@@ -1,4 +1,4 @@
-var tabItems = document.querySelectorAll( '.tabs .au-link-list button' );
+var tabItems = document.querySelectorAll( '.tabs button' );
 
 // Hide and show based on the active class
 AddEvent( tabItems, 'click', function( event, $this ) {
@@ -7,13 +7,17 @@ AddEvent( tabItems, 'click', function( event, $this ) {
 	// Add and remove active class for tab links
 	var currentTabItems = $this.parentElement.children;
 
+
 	for( var i = 0; i < currentTabItems.length; i++ ) {
 		RemoveClass( currentTabItems[ i ], 'tab-item--active' );
 		currentTabItems[ i ].removeAttribute( 'aria-selected' );
+		currentTabItems[ i ].setAttribute( 'tabindex', '1' );
 	}
 
 	AddClass( $this, 'tab-item--active' );
 	$this.setAttribute( 'aria-selected', 'true' );
+	$this.setAttribute( 'tabindex', '0' );
+	$this.focus();
 
 	// Add and remove active class for tab content
 	var contentID = $this.getAttribute( 'aria-controls' );
@@ -26,7 +30,6 @@ AddEvent( tabItems, 'click', function( event, $this ) {
 	}
 
 	AddClass( content, 'tab-content--active' );
-	content.focus();
 });
 
 // Add aria roles with javascript ( nojs should be visible )
@@ -38,6 +41,29 @@ var InitialiseTabs = function( tabs ) {
 			tabs[ i ].setAttribute( 'aria-selected', 'true' );
 		}
 	}
-}
+};
+
+
+// Add event for left and right key arrow press on tabs
+AddEvent( tabItems, 'keyup', function( event, $this ){
+	switch (event.keyCode ) {
+		case 39:
+			if( $this.nextElementSibling ) {
+				$this.nextElementSibling.click();
+			}
+			else {
+				$this.previousElementSibling.click();
+			}
+			break;
+		case 37:
+			if( $this.previousElementSibling ) {
+				$this.previousElementSibling.click();
+			}
+			else {
+				$this.nextElementSibling.click();
+			}
+			break;
+	}
+})
 
 InitialiseTabs( tabItems );
