@@ -1,10 +1,8 @@
 .tabs {
-	.tabs-nav {
-		@include AU-space( border-bottom, 0.25unit solid $AU-color-background-shade );
+		@include AU-space( border-bottom, 0.25unit solid $AU-color-background-alt-shade );
 		width: 100%;
 		position: relative;
 		z-index: 5;
-	}
 
 	.tab-content {
 		code {
@@ -18,25 +16,21 @@
 	}
 
 
-	.au-link-list {
+	& > button {
+		@include AU-fontgrid( xs, nospace );
+		@include AU-focus();
+		@include AU-space( padding, 0.75unit 1unit 0.75unit );
+		border: 0;
+		@include AU-space( border-bottom, 0.25unit solid $AU-color-background-alt-shade );
 		@include AU-space( margin-bottom, -0.25unit );
-		padding: 0;
+		color: $AU-color-foreground-action;
+		background: transparent;
+		text-decoration: none;
+		cursor: pointer;
+		display: inline-block;
 
-		& > button {
-			@include AU-fontgrid( xs, nospace );
-			@include AU-focus();
-			@include AU-space( padding, 0.75unit 1unit 0.75unit );
-			border: 0;
-			@include AU-space( border-bottom, 0.25unit solid $AU-color-background-alt-shade );
-			color: $AU-color-foreground-action;
-			background: transparent;
-			text-decoration: none;
-			cursor: pointer;
-			display: inline-block;
-
-			&.tab-item--active {
-				@include AU-space( border-bottom, 0.25unit solid $AU-color-foreground-action );
-			}
+		&.tab-item--active {
+			@include AU-space( border-bottom, 0.25unit solid $AU-color-foreground-action );
 		}
 	}
 }
