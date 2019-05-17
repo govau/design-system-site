@@ -29,6 +29,10 @@
 		cursor: pointer;
 		display: inline-block;
 
+		+ button {
+			@include AU-space( margin-left, .35unit );
+		}
+
 		&.tab-item--active {
 			@include AU-space( border-bottom, 0.25unit solid $AU-color-foreground-action );
 		}
