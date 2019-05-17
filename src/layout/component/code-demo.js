@@ -41,9 +41,7 @@ const CodeDemo = ({ iframe, iframeFullwidth, height = null, code, _body, _ID, _r
 						<div className="row">
 							<div className="col-sm-12">
 								<div className="code-demo__example__code">
-									<div className="tabs">
-										<nav className="tabs-nav">
-											<div className="au-link-list au-link-list--inline" role="tablist">
+									<div className="tabs" role="tablist">
 												{
 													code && code.map( ( section, i ) => (
 														<button
@@ -51,13 +49,13 @@ const CodeDemo = ({ iframe, iframeFullwidth, height = null, code, _body, _ID, _r
 															className={ i === 0 ? ' tab-item--active' : '' }
 															aria-controls={`demo-${ i }-${ componentId }`}
 															role="tab"
+															tabindex={`${i===0 ? '0' : '1' }`}
 														>
 															{ Object.keys( section )[ 0 ] }
 														</button>
 													))
 												}
-											</div>
-										</nav>
+										</div>
 										<div className="tab-contents">
 											{
 												code && code.map( ( section, i ) => (
@@ -82,7 +80,6 @@ const CodeDemo = ({ iframe, iframeFullwidth, height = null, code, _body, _ID, _r
 									</div>
 								</div>
 							</div>
-						</div>
 				: null
 			}
 		</div>
