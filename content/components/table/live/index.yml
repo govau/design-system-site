@@ -1,0 +1,6 @@
+layout: example/page
+pagetitle: Table demo
+examples:
+  - template: ../examples/example-striped/example-code.md
+livedemo: true
+fullwidth: true

@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Table overview
+pagetitle: Table rationale
 
 header:
   - /_shared/header.md
@@ -12,9 +12,9 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - default.md
-  - width.md
-  - striped.md
+  - react-usage.md
+  - react-props.md
+  - react-exports.md
 
 footer:
   - /_shared/footer.md

@@ -33,6 +33,13 @@ const TableSuggestions = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _
 		}
 	);
 
+
+	const headers = tableTH.map((header) => {
+
+		return {text: header.link ? <a href={header.link}>{header.text}</a> : header.text}
+
+	});
+
 	return (
 		<Fragment>
 			{
@@ -44,11 +51,8 @@ const TableSuggestions = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _
 							<Table
 								className="component-table"
 								caption={ caption }
-								header={ tableTH }
+								headers={ headers }
 								body={ body }
-								smallTable
-								responsive
-								striped
 								firstColTH
 							/>
 
@@ -66,12 +70,12 @@ const TableSuggestions = ({ title, caption, btntext, btnURL, btnIcon, tableTH, _
 
 TableSuggestions.propTypes = {
 	/**
-	 * title: In progress
+	 * title: Sugggesions
 	 */
 	title: PropTypes.string.isRequired,
 
 	/**
-	 * caption: A table of in progress components including their status, current version, and contributors.
+	 * caption: A table of suggested components including their current status.
 	 */
 	caption: PropTypes.string.isRequired,
 
@@ -92,9 +96,6 @@ TableSuggestions.propTypes = {
 
 	/**
 	 * tableTH:
-	 *   - text: Title
-	 *   - text: Status
-	 *     tightcol: true
 	 */
 	tableTH: PropTypes.arrayOf(
 		PropTypes.shape({
