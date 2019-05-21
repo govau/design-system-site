@@ -254,3 +254,8 @@ $AU-main-nav-breakpoint: sm;
 .example-label {
 	display: block;
 }
+
+.au-table__wrapper {
+	width: 1px;
+	min-width: 100%;
+}

@@ -49,7 +49,7 @@ const CodeDemo = ({ iframe, iframeFullwidth, height = null, code, _body, _ID, _r
 															className={ i === 0 ? ' tab-item--active' : '' }
 															aria-controls={`demo-${ i }-${ componentId }`}
 															role="tab"
-															tabindex={`${i===0 ? '0' : '1' }`}
+															tabIndex={`${i===0 ? '0' : '1' }`}
 														>
 															{ Object.keys( section )[ 0 ] }
 														</button>
