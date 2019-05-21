@@ -5,8 +5,11 @@ lists:
     links:
       - text: Suggest a component
         link: https://community.digital.gov.au/c/designsystem/suggest-a-component
+      - text: Suggest a template
+        link: https://community.digital.gov.au/c/designsystem/suggest-a-template
       - text: Improve documentation
         link: https://github.com/govau/design-system-site/tree/master/content
+        icon: github
 
   - heading: Help with planning
     links:
