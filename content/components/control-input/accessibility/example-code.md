@@ -1,7 +1,7 @@
 <div>
   <div class="au-control-input">
     <input class="js-focus-me au-control-input__input" type="checkbox" name="checkbox-ex" id="cb-phone">
-     <label class="au-control-input__text" for="cb-phone">Phone</label>
+    <label class="au-control-input__text" for="cb-phone">Phone</label>
   </div>
   <div class="au-control-input">
     <input class="js-focus-me au-control-input__input" type="checkbox" name="checkbox-ex" id="cb-tablet" checked>
