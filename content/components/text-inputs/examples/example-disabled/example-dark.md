@@ -1,4 +1,4 @@
 <div class="au-body au-body--dark">
-  <label class="au-label" for="text-input">label text</label>
+  <label class="au-label--dark" for="text-input">label text</label>
   <input class="au-text-input au-text-input--block" name="text-input" id="text-input" disabled type="text" value="ABCZ abcjg liI1 12340">
 </div>
