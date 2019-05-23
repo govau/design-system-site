@@ -1,5 +1,5 @@
 <div class="au-body au-body--dark">
-  <label for="select2block">What option?</label>
+  <label class="au-label au-label--dark" for="select2block">What option?</label>
   <select id="select2block" class="au-select au-select--dark au-select--block">
     <option value="">Please select</option>
     <option value="1">Option 1</option>
