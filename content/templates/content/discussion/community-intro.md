@@ -1,7 +1,7 @@
 ---
 layout: component/discussion-callout
 btntext: Community
-btnurl: https://community.digital.gov.au/t/content-page
+btnurl: https://community.digital.gov.au/t/content-page/1135
 btntype: secondary
 ---
 
