@@ -1495,7 +1495,9 @@ table:
     - row
     - column
   tags:
-    - grouping
+    - data
+    - structure
+    - content
   related:
     - body
   related-articles:
