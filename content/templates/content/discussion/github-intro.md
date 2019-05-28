@@ -1,7 +1,7 @@
 ---
 layout: component/discussion-callout
 btntext: GitHub
-btnurl: https://community.digital.gov.au/t/content-page/1135
+btnurl: https://github.com/govau/design-system-starter/tree/master/docs
 btntype: secondary
 ---
 
