@@ -11,7 +11,7 @@ import React     from 'react';
 const CalloutWithButton = ({ btntext, btnurl, btntype, _body, _parents, _ID }) => {
 
 	const module = GetModule( _parents, _ID );
-{
+
 	return (
 		
 		<div className="calloutWithButton calloutWithButton__text">
@@ -23,7 +23,7 @@ const CalloutWithButton = ({ btntext, btnurl, btntype, _body, _parents, _ID }) =
 			</div>
 		</div>
 	);
-}
+
 }
 
 
