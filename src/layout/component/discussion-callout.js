@@ -10,7 +10,6 @@ import React     from 'react';
  */
 const CalloutWithButton = ({ btntext, btnurl, btntype, _body, _parents, _ID }) => {
 
-	const module = GetModule( _parents, _ID );
 
 	return (
 		
