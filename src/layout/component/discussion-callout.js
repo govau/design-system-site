@@ -10,18 +10,19 @@ import React     from 'react';
  */
 const CalloutWithButton = ({ btntext, btnurl, btntype, _body, _parents, _ID }) => {
 
-	const module = GetModule( _parents, _ID );
 
 	return (
+		
 		<div className="calloutWithButton calloutWithButton__text">
 			<div className="col-sm-6 col-md-7">
 				{ _body }
 			</div>
 			<div className="col-sm-6 col-md-offset-1 col-md-4 calloutWithButton__buttons">
-				<AUbutton link={ `${ btnurl }${ module ? module : '' }` } as={ btntype } block>{ btntext }</AUbutton>
+				<AUbutton link={ `${ btnurl }` } as={ btntype } block>{ btntext }</AUbutton>
 			</div>
 		</div>
 	);
+
 }
 
 
