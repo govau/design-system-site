@@ -4,11 +4,11 @@ header:
   - /_shared/header.md
 
 main:
+  - meta-data.md
   - intro.md
   - now.md
   - next.md
   - later.md
-
 
 footer:
   - /_shared/footer.md

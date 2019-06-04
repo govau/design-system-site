@@ -2,10 +2,5 @@
 
 Things we will be working on in the near future:
 
-- Build most requested components from the community such as tables and cards.
-- Sourcing contributions from the community for an Angular implimentation of the Design System.
-- Make it easier to get started with and contribute to the Design System:
-    - Run a workshop on getting started with the Design System.
-    - Video tutorials on getting started with the Design System, customising colours etc.
-    - Refine the existing contribution guide.
-- Decouple components from one another.
+- Work with GovCMS team to ensure tight feedback loops between Design System and default GovCMS theme
+- Expand template offerings to include [commonly-requested templates](https://community.digital.gov.au/c/designsystem/suggest-a-template) (for example, search engine result pages, entry/exit steps to multi-factor authentication)
