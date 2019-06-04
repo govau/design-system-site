@@ -5,9 +5,9 @@ btnURL: /community
 btntext: Community
 
 tiles:
-  - image: assets/img/users-logo-dta.png
-    alt: Digital Transformation Agency
-    link: https://digital.gov.au
+  - image: assets/img/users-logo-acsc.png
+    alt: Australian Cyber Security Centre
+    link: https://www.cyber.gov.au/
 
   - image: assets/img/users-logo-mygov.png
     alt: MyGov
