@@ -5,7 +5,7 @@ btnURL: /community
 btntext: Community
 
 tiles:
-  - image: assets/img/users-logo-acsc.jpg
+  - image: assets/img/users-logo-acsc.png
     alt: Australian Cyber Security Centre
     link: https://www.cyber.gov.au/
 
@@ -21,9 +21,9 @@ tiles:
     alt: The Department of Health
     link: https://beta.health.gov.au
 
-  - image: assets/img/users-logo-sbr.png
-    alt: Standard Business Reporting
-    link: https://www.sbr.gov.au/
+  - image: assets/img/users-logo-dashboard.png
+    alt: Performance Dashboard
+    link: https://dashboard.gov.au/
 
   - image: assets/img/users-logo-dva.png
     alt: Department of Veterans' Affairs
