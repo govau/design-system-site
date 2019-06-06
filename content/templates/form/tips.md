@@ -4,7 +4,7 @@
 
 - Do not rely on client side validation. Make sure server side validation is implemented, in case javascript does not load.
 - If any part of the form is incomplete when submitted, make sure to provide a list of all invalid fields. This should include anchor links to each of the fields that require attention.
-- Don't rely on HTML5 validation. HTML5 validation is often incompatible for users of assistive technologies. Furthermore each browser handles it differently.
+- Do not rely on HTML5 validation. HTML5 validation is often incompatible for users of assistive technologies. Furthermore each browser handles it differently.
 
 
 ### Structure

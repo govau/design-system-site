@@ -2,7 +2,7 @@
 
 ### Structure
 
-- Use skip links on each page to make it easier for screen reader users to skip to the navigation or main content.
+- Use [skip links](https://designsystem.gov.au/components/skip-link/) on each page to make it easier for screen reader users to skip to the navigation or main content.
 - Variations of the `.au-body` selector such as `.au-body--alt or .au-body--dark` or a combination of them can be used to slice up the page into horizontal sections of different shades. These contrasting sections can make it easier to categorise different sections on the page. 
 
 
