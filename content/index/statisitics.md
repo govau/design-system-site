@@ -6,7 +6,7 @@ title: Usage statistics
 
 features:
   - text: Live projects
-    title: "25"
+    title: "27"
   - text: GitHub stars
     title: stars-replace
   - text: Downloads in the last year
