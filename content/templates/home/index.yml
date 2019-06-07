@@ -8,5 +8,6 @@ tabs: /templates/_tabs.md
 
 main:
   - main.md
+  - tips.md
 
 footer: /_shared/footer.md
