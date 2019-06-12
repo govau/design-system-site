@@ -28,6 +28,10 @@ tiles:
   - image: assets/img/users-logo-dva.png
     alt: Department of Veterans' Affairs
     link: https://www.dva.gov.au/myservice/
+
+  - image: assets/img/users-logo-dhs.png
+    alt: Department of Human Services
+    link: https://www.humanservices.gov.au/
 ---
 
 The design system is in its early days but a number of government teams have already jumped on board. Why not join them? Together we‘ll be able to build better, faster, easier.
