@@ -1,29 +1,23 @@
 ---
 layout: component/code-demo
-iframe: examples/example-image
-iframeFullwidth: true
+iframe: examples/example-link
 code:
   - HTML: |
-        <div class="au-card au-card--shadow">
+        <div class="au-card au-card--shadow au-card--clickable" href="#">
             <img class="au-card__image" src="http://placehold.it/1200x500" alt="Placeholder image 1200 by 500"/>
             <div class="au-card__inner">
-                <div class="au-card__title">
-                        <h2>Some heading</h2>
-                </div>
-                <div class="au-card__body">
-                    <p>Some text</p>
-                    <p>Additional text</p>
+                <div class="au-body">
+                        <h3><a class="au-card__link" href="#">Title of article</a></h3>
                 </div>
                 <hr class="au-card__divider">
-                <div class="au-card__footer">
-                    <a class="au-cta-link" href="#">Sign up</a>
-                </div>
+                <p>Some text</p>
+                <p>Additional text</p>
             </div>
         </div>
   - React: |
       TODO React
       Get from https://github.com/govau/design-system-components
 ---
-## Images
+## Single call to action
 
-A card with an images.
+For cards with a single call to action, the hit area can be made to wrap the entire card. This pattern may be used for a list of news items on a landing page, for example.

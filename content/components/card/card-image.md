@@ -1,7 +1,6 @@
 ---
 layout: component/code-demo
 iframe: examples/example-image
-iframeFullwidth: true
 code:
   - HTML: |
         <div class="au-card au-card--shadow">
