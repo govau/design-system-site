@@ -9,7 +9,7 @@
             <p>Additional text</p>
         </div>
         <div class="au-body au-card__footer">
-            <a href="#">Action</a>
+            <a href="#">Action link</a>
         </div>
     </div>
 </div>
