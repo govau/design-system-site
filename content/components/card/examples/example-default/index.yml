@@ -1,6 +1,4 @@
 layout: example/page
 examples:
   - template: example-code.md
-  - template: example-divider.md
-alignment: inline
 

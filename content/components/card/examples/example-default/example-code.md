@@ -3,6 +3,7 @@
         <div class="au-card__title">
             <h2>Card Title</h2>
         </div>
+        <hr class="au-card__divider"/>
         <div class="au-card__body">
             <p>Some text</p>
             <p>Additional text</p>
