@@ -1822,23 +1822,20 @@ search-box:
   hasReact: true    # <-- auto generated, don't change
 card:
   name: Card
-  description: >
-    An input that allows users to enter a keyword to filter content on the
-    website.
+  description: |
+    Cards group related content together.
   metatags:
-    - mobile menu
-    - nav
-    - links
-    - hamburger
+    - content
+    - card
+    - article
     - horizontal
   tags:
-    - navigation
+    - card
+    - container
+    - content
     - interactive
   related:
-    - side-nav
-    - header
-    - link-list
-    - breadcrumbs
+    - body
   related-articles:
     - TODO
   used-in:
@@ -1857,9 +1854,6 @@ card:
     - name: Gary Broadbent
       img: gary-broadbent.jpg
       url: 'https://github.com/gazhands'
-    - name: Simon Pascal Klein
-      img: simon-pascal-klein.jpg
-      url: 'https://github.com/klepas'
     - name: Dominik Wilkowski
       img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
@@ -1869,7 +1863,7 @@ card:
     - active: 7
     - something: something
   ID: card    # <-- auto generated, don't change
-  version: 0.1.0    # <-- auto generated, don't change
+  version: 0.1.1    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
