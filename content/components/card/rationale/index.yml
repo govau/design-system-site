@@ -12,7 +12,7 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - todo.md
+  - card-link.md
 
 footer:
   - /_shared/footer.md

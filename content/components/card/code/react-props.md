@@ -4,14 +4,64 @@ layout: section
 
 ### Props
 
-| Prop name | Type    | Description
-|-----------|---------------------------------------------------------------------------------------
-| TODO      | TODO    | TODO Get from https://github.com/govau/design-system-components
-<!-- | label       | string  | Provide the aria label
-| items       | object  | The link, text and props for each of the breadcrumbs
-| items[0].link  | string  | The link of the breadcrumb, optional
-| items[0].text  | string  | The text of the breadcrumb
-| items[0].li    | object  | An object that will be spread onto the `<li>` tag, optional
-| dark        | boolean | A dark variation of the component -->
+
+#### AUcard
+
+| Prop name     | Type        | Description |
+| --------------| ----------- | ----------- |
+| `link`        | string      | Link of where the card goes to. Should only be used when card has minimal content. |
+| `shadow`      | boolean     | The table column header title text |
+| `centred`     | boolean     | Center the contents of the table |
+| `clickable`   | boolean     | Makes the entire contents of the card clickable, provided there is an `<AUcardLink>` component is a child of the `<AUcard>` |
+| `className`         | string     | An additional class, optional |
+
+
+
+#### AUcardInner
+
+| Prop name   | Type        | Description |
+| ----------- | ----------- | ----------- |
+| `className`        | string     | An additional class, optional |
+
+
+
+#### AUcardImage
+
+| Prop name    | Type       | Description |
+| ------------ | ---------- | ----------- |
+| `src`        | string     | Source of the image |
+| `className`  | string     | An additional class, optional |
+
+
+#### AUcardLink
+
+| Prop name    | Type       | Description |
+| ------------ | ---------- | ----------- |
+| `link`       | string     | Source code |
+| `text`       | string     | Source of the image |
+| `className`  | string     | An additional class, optional |
+
+
+#### AUcardDivider
+
+| Prop name   | Type        | Description |
+| ----------- | ----------- | ----------- |
+| `className`        | string     | An additional class, optional |
+
+
+#### AUcardFooter
+
+| Prop name   | Type        | Description |
+| ----------- | ----------- | ----------- |
+| `className`        | string     | An additional class, optional |
+
+
+
+#### AUcardBody
+
+| Prop name   | Type        | Description |
+| ----------- | ----------- | ----------- |
+| `className`        | string     | An additional class, optional |
+
 
 All other props are spread into the component
