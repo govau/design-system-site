@@ -1,8 +1,7 @@
 ---
 layout: component/code-demo
-examples: 
-  - template: a11y-colorblind
+iframe: a11y-colorblind
 ---
 ## Colour impairment
 
-How the TODO are viewed with various colour blindnesses
+How the card is viewed with various colour blindnesses

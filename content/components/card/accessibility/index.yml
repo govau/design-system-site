@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: TODO accessibility
+pagetitle: Card accessibility
 
 header:
   - /_shared/header.md
@@ -12,8 +12,8 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - colorblind.md
   - grayscale.md
+  - colorblind.md
   - keyboard.md
   - screenreader.md
 
