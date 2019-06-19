@@ -1,5 +1,5 @@
 <div class="au-card">
-    <img class="au-card__image" src="http://placehold.it/1200x500" />
+    <img class="au-card__image" src="../../../../assets/img/placeholder/600X260.png" />
     <div class="au-card__inner au-body">
         <a href="#">Action</a>
     </div>
