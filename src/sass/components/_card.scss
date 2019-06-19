@@ -38,14 +38,7 @@
 // 			border: solid 1px $AU-color-foreground-border;
 // 		}
 
-// 		.au-card__fullwidth,
-// 		.au-card__bg {
-// 			@include AU-space( margin-left, -1unit );
-// 			@include AU-space( margin-right, -1unit );
 
-// 			&:first-child {
-// 				@include AU-space( margin-top, -1unit );
-// 			}
 
 // 			&:last-child {
 // 				@include AU-space( margin-bottom, -1unit );
@@ -145,3 +138,14 @@
 // 		}
 // 	}
 // }
+
+
+.au-card__fullwidth,
+.au-card__bg {
+	@include AU-space( margin-left, -1unit );
+	@include AU-space( margin-right, -1unit );
+
+	&:first-child {
+		@include AU-space( margin-top, -1unit );
+	}
+}

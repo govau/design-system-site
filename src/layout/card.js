@@ -274,7 +274,7 @@ const AUcard = ({ rows, appearance, alignment, link, href, ...attributesOptions 
 	return (
 		<CardContainer { ...attributesOptions } className={
 			`au-card ${ appearance === 'shadow' ? ' au-card--shadow' : '' }` +
-			`${ alignment === 'center' ? ' au-card--centered': '' }`
+			`${ alignment === 'center' ? ' au-card--centred': '' }`
 		}>
 			<div className='au-card__inner'>
 				{
