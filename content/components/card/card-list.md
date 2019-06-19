@@ -56,4 +56,4 @@ code:
 ---
 ## Card lists
 
-For cards with a single call to action, the hit area can be made to wrap the entire card. This pattern may be used for a list of news items on a landing page, for example. Avoid wrapping an entire card in an anchor tag.
+Multiple cards can be used in a list to display a collection of results or articles for example.

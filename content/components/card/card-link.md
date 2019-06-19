@@ -15,8 +15,17 @@ code:
             </div>
         </div>
   - React: |
-      TODO React
-      Get from https://github.com/govau/design-system-components
+        <AUcard className="au-body" clickable shadow>
+            <AUcardImage src="http://placehold.it/1200x500" />
+                <AUcardInner>
+                    <h3 className=""><AUcardLink link="#" text="Title of article" /></h3>
+                    <AUcardDivider />
+                    <AUcardBody>
+                        <p>Some text</p>
+                        <p>Additional text</p>
+                    </AUcardBody>
+                </AUcardInner>
+        </AUcard>
 ---
 ## Single call to action
 

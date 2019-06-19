@@ -5,22 +5,33 @@ code:
   - HTML: |
         <div class="au-card">
             <div class="au-card__inner">
-                <div class="au-card__title">
-                    <h2>Card Title</h2>
-                </div>
+                <h2>Card Title</h2>
                 <hr class="au-card__divider"/>
                 <div class="au-card__body">
                     <p>Some text</p>
                     <p>Additional text</p>
                 </div>
                 <div class="au-body au-card__footer">
-                    <a href="#">Action</a>
+                    <a href="#">Action Link</a>
                 </div>
             </div>
         </div>
   - React: |
-      TODO React
-      Get from https://github.com/govau/design-system-components
+        import AUcard, { AUcardInner, AUcardDivider, AUcardFooter } from '@gov.au/card';
+
+        <AUcard>
+            <AUcardInner>
+                <h3>Some Heading</h3>
+                <AUcardDivider />
+                <AUcardBody>
+                    <p>Some text</p>
+                    <p>Additional content</p>
+                </AUcardBody>
+                <AUcardFooter class="au-body">
+                    <a href="#">Action Link</a>
+                </AUcardFooter>
+            </AUcardInner>
+        </AUcard>
 ---
 ## Basic card
 
