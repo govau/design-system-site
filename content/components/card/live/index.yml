@@ -1,5 +1,5 @@
 layout: example/page
-pagetitle: TODO live demo
+pagetitle: Card live demo
 examples:
   - template: ../accessibility/example-code.md
 livedemo: true

@@ -1,7 +1,12 @@
 ---
 layout: component/screenreader
 heading: Screen readers
-speak: aria-pressed, selected, toggle button
+speak: |
+    Heading level 3, link, title of article
+
+    Some text,
+    
+    Additional text
 ---
 
 

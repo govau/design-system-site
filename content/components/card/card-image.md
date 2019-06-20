@@ -4,7 +4,7 @@ iframe: examples/example-image
 code:
   - HTML: |
         <div class="au-card">
-            <img class="au-card__image" src="https://designsystem.gov.au/assets/img/placeholder/600X260.png" />
+            <img class="au-card__image" src="https://designsystem.gov.au/assets/img/placeholder/600X260.png" alt />
             <div class="au-card__inner au-body">
                 <a href="#">Action</a>
             </div>
@@ -13,7 +13,7 @@ code:
         import AUcard, { AUcardInner, AUcardImage, } from '@gov.au/card';
 
         <AUcard>
-            <AUcardImage src="https://designsystem.gov.au/assets/img/placeholder/600X260.png" />
+            <AUcardImage src="https://designsystem.gov.au/assets/img/placeholder/600X260.png" alt />
             <AUcardInner className="au-body">
                 Image caption
             </AUcardInner>

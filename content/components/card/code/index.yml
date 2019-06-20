@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: TODO rationale
+pagetitle: Card Code
 
 header:
   - /_shared/header.md

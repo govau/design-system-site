@@ -8,7 +8,7 @@ layout: section
 import AUTODO from '@gov.au/TODO';
 
 <AUcard className="au-body">
-    <AUcardImage src="https://designsystem.gov.au/assets/img/placeholder/600X260.png" />
+    <AUcardImage src="https://designsystem.gov.au/assets/img/placeholder/600X260.png"  alt/>
     <AUcardInner>
             <span>Image caption or description</span>
         <AUcardFooter>
@@ -19,7 +19,7 @@ import AUTODO from '@gov.au/TODO';
 
 //Entire card clickable and single anchor:
 <AUcard class="au-body">
-    <AUcardImage src="https://designsystem.gov.au/assets/img/placeholder/600X260.png" />
+    <AUcardImage src="https://designsystem.gov.au/assets/img/placeholder/600X260.png" alt />
     <AUcardInner>
             <h3 className="au-card__title"><AUcardLink link="#" text="Some link" /></h3>
     </AUcardInner>
