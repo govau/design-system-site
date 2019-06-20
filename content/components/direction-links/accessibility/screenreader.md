@@ -3,11 +3,11 @@ layout: component/screenreader
 heading: Screen readers
 speak: |
 
-  [Link]  back
+  [Link] back
 
-  [Link]  next
+  [Link] next
 
-  [Link]  arrow
+  [Link] arrow
 
   [Link] skip to footer
 
