@@ -7,7 +7,7 @@ code:
             <img class="au-card__image" src="https://designsystem.gov.au/assets/img/placeholder/600X260.png" />
             <div class="au-card__inner">
                 <div class="au-body">
-                        <h3><a class="au-card__link" href="#">Title of article</a></h3>
+                        <h3><a class="au-card--clickable__link" href="#">Title of article</a></h3>
                 </div>
                 <hr class="au-card__divider">
                 <p>Some text</p>
