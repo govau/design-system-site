@@ -4,7 +4,7 @@
     </a>
 </p>
 <p>
-    <a class="js-focus-me au-direction-link au-direction-link--dark " href="#">
+    <a class="js-focus-me au-direction-link au-direction-link--dark" href="#">
         Next<span class="au-direction-link__arrow" aria-hidden="true"></span>
     </a>
 </p>
