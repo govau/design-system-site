@@ -1,5 +1,5 @@
 <p>
-    <a class="au-direction-link au-direction-link--left" href="#">
+    <a class="au-direction-link" href="#">
         <span class="au-direction-link__arrow au-direction-link__arrow--left" aria-hidden="true"></span>Back
     </a>
 </p>
@@ -9,12 +9,12 @@
     </a>
 </p>
 <p>
-    <a class="au-direction-link au-direction-link--up" href="#">
+    <a class="au-direction-link" href="#">
         Top<span class="au-direction-link__arrow au-direction-link__arrow--up" aria-hidden="true"></span>
     </a>
 </p>
 <p>
-    <a class="au-direction-link au-direction-link--down" href="#">
+    <a class="au-direction-link" href="#">
         Skip to footer<span class="au-direction-link__arrow au-direction-link__arrow--down" aria-hidden="true"></span>
     </a>
 </p>
