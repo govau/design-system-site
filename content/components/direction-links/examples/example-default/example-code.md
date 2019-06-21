@@ -1,5 +1,5 @@
 <p>
-    <a class="au-direction-link au-direction-link--left" href="#">
+    <a class="au-direction-link" href="#">
         <span class="au-direction-link__arrow au-direction-link__arrow--left" aria-hidden="true"></span>Back
     </a>
 </p>
