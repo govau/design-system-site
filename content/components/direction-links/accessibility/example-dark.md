@@ -1,6 +1,6 @@
 <p>
     <a class="js-focus-me au-direction-link au-direction-link--dark" href="#">
-        Back<span class="au-direction-link__arrow  au-direction-link--left" aria-hidden="true"></span>
+        Back<span class="au-direction-link__arrow  au-direction-link__arrow--left" aria-hidden="true"></span>
     </a>
 </p>
 <p>
