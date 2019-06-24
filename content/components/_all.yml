@@ -114,7 +114,7 @@ accordion:
       img: raj-ghuman.jpg
       url: 'https://github.com/sukhrajghuman'
   state: published
-  order: 10
+  order: 1
   discussions:
     - open: 2
     - active: 7
@@ -156,7 +156,7 @@ animate:
       img: simon-schwartz.jpg
       url: 'https://github.com/simonschwartz'
   state: published
-  order: 10
+  order: 2
   discussions:
     - open: 2
     - active: 7
@@ -1722,50 +1722,6 @@ side-nav:
   hasSass: true    # <-- auto generated, don't change
   hasJs: true    # <-- auto generated, don't change
   hasReact: true    # <-- auto generated, don't change
-search-box:
-  name: Search box
-  description: >
-    An input that allows users to enter a keyword to filter content on the
-    website.
-  metatags:
-    - search
-  tags:
-    - search
-    - filter
-  related:
-    - text-inputs
-    - buttons
-  related-articles:
-    - TODO
-  used-in:
-    - TODO
-  required: false
-  contributors:
-    - name: Trevor Brennan
-      img: trevor-brennan.jpg
-      url: 'https://github.com/TrebBrennan'
-    - name: Alex Page
-      img: alex-page.jpg
-      url: 'https://github.com/alex-page'
-    - name: Patrick De Young
-      img: patrick-de-young.jpg
-      url: 'https://github.com/pattyde'
-  state: suggestion
-  status:
-    useful: done
-    unique: done
-  order: 10
-  discussions:
-    - open: 2
-    - active: 7
-    - something: something
-  ID: search-box    # <-- auto generated, don't change
-  version: 0.0.0    # <-- auto generated, don't change
-  dependencies:    # <-- auto generated, don't change
-    - core
-  hasSass: true    # <-- auto generated, don't change
-  hasJs: false    # <-- auto generated, don't change
-  hasReact: true    # <-- auto generated, don't change
 card:
   name: Card
   description: |
@@ -1810,7 +1766,51 @@ card:
     - active: 7
     - something: something
   ID: card    # <-- auto generated, don't change
-  version: 0.1.2    # <-- auto generated, don't change
+  version: 0.1.4    # <-- auto generated, don't change
+  dependencies:    # <-- auto generated, don't change
+    - core
+  hasSass: true    # <-- auto generated, don't change
+  hasJs: false    # <-- auto generated, don't change
+  hasReact: true    # <-- auto generated, don't change
+search-box:
+  name: Search box
+  description: >
+    An input that allows users to enter a keyword to filter content on the
+    website.
+  metatags:
+    - search
+  tags:
+    - search
+    - filter
+  related:
+    - text-inputs
+    - buttons
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
+  required: false
+  contributors:
+    - name: Trevor Brennan
+      img: trevor-brennan.jpg
+      url: 'https://github.com/TrebBrennan'
+    - name: Alex Page
+      img: alex-page.jpg
+      url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.jpg
+      url: 'https://github.com/pattyde'
+  state: suggestion
+  status:
+    useful: done
+    unique: done
+  order: 10
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  ID: search-box    # <-- auto generated, don't change
+  version: 0.0.0    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change

@@ -2,7 +2,7 @@
 	.au-card {
 		margin: 0 auto;
 		@include AU-space( max-width, 20unit );
-		@include AU-space( padding-bottom, 2unit );
+		@include AU-space( padding-bottom, 1unit );
 	}
 
 	.au-card__image {

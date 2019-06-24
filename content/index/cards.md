@@ -22,6 +22,8 @@ promos:
 cardList:
   columnSize: col-xs-12 col-sm-4
   matchHeight: true
-  appearance: shadow
-  alignment: center
+  shadow: true
+  centred: true
+  clickable: true
+
 ---

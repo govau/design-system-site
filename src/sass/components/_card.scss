@@ -140,8 +140,7 @@
 // }
 
 
-.au-card__fullwidth,
-.au-card__bg {
+.au-card__fullwidth {
 	@include AU-space( margin-left, -1unit );
 	@include AU-space( margin-right, -1unit );
 

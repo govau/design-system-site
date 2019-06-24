@@ -52,10 +52,11 @@ const Features = ({ title, btnURL, btntext, features, featureTitleSize, cardList
 		<AUcardList
 			className="row"
 			cards={ cards }
-			appearance={ cardList.appearance }
+			clickable={ cardList.clickable }
+			centered={cardList.centered}
 			columnSize={ cardList.columnSize }
 			matchHeight={ cardList.matchHeight }
-			alignment={ cardList.alignment }/>
+			/>
 
 		{
 			btnURL && btntext

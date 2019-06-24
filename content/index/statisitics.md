@@ -17,6 +17,9 @@ featureTitleSize: xxl
 cardList:
   columnSize: col-xs-12 col-sm-4
   matchHeight: true
+  shadow: false
+  centred: true
+  clickable: false
 
 # Live sites:
 # https://community.digital.gov.au/t/showcase/222
