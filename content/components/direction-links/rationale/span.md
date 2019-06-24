@@ -1,6 +1,6 @@
 ---
 layout: component/rationale.js
-heading: Arrows icons inside span attribute
+heading: Arrows as a visual cue
 ---
 
 Previous versions of the direction links component added the arrow icon as content using the css `:after` selector to the anchor/button tag.
