@@ -11,7 +11,7 @@ layout: section
 | --------------| ----------- | ----------- |
 | `link`        | string      | Link of where the card goes to. Should only be used when card has minimal content. |
 | `shadow`      | boolean     | The table column header title text |
-| `centred`     | boolean     | Center the contents of the table |
+| `centred`     | boolean     | Centre the contents of the table |
 | `clickable`   | boolean     | Makes the entire contents of the card clickable, provided there is an `<AUcardLink>` component is a child of the `<AUcard>` |
 | `className`         | string     | An additional class, optional |
 

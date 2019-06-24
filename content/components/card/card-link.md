@@ -15,7 +15,6 @@ code:
                 <div class="au-body">
                         <h3><a class="au-card--clickable__link" href="#">Title of article</a></h3>
                 </div>
-                <hr class="au-card__divider">
                 <p>Some text</p>
                 <p>Additional text</p>
             </div>
@@ -31,7 +30,6 @@ code:
             <AUcardImage src="https://designsystem.gov.au/assets/img/placeholder/600X260.png" alt />
                 <AUcardInner>
                     <h3 className=""><AUcardLink link="#" text="Title of article" /></h3>
-                    <AUcardDivider />
                     <AUcardBody>
                         <p>Some text</p>
                         <p>Additional text</p>
@@ -39,6 +37,6 @@ code:
                 </AUcardInner>
         </AUcard>
 ---
-## Single call to action
+## Clickable cards
 
-For cards with a single call to action, the hit area can be made to wrap the entire card. This pattern may be used for a list of news items on a landing page, for example. Avoid wrapping an entire card in an anchor tag.
+For cards that contain a single link, the hit area for that link can be made to wrap the entire card. This pattern may be used for a list of news items on a landing page, for example. Avoid wrapping an entire card in an anchor tag as this can be a [difficult experience](/components/card/rationale/#cards-as-links) for a screen reader user.

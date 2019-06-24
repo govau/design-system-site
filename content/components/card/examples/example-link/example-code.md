@@ -4,7 +4,6 @@
         <div class="au-body">
                 <h3><a class="au-card--clickable__link" href="#">Title of article</a></h3>
         </div>
-        <hr class="au-card__divider">
         <p>Some text</p>
         <p>Additional text</p>
     </div>

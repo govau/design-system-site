@@ -4,8 +4,7 @@
         <div class="au-body">
                 <h3><a class="au-card--clickable__link js-focus-me" href="#">Title of article</a></h3>
         </div>
-        <hr class="au-card__divider">
-        <p class="js-focus-me">Some text</p>
-        <p>Additional text</p>
+        <p class="js-focus-me" tabindex="0">Some text</p>
+        <p class="js-focus-me" tabindex="0">Additional text</p>
     </div>
 </div>
