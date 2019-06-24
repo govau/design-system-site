@@ -9,10 +9,9 @@ import React from 'react';
  */
 const Promo = ({ promos, cardList, _relativeURL, _ID, _parseMD }) => {
 	const cards = promos.map( promo => ({
-			link: _relativeURL( promo.url, _ID ),
 			rows: [{
 				type: 'image',
-				image: promo.imgurl.startsWith('http')
+				src: promo.imgurl.startsWith('http')
 					? promo.imgurl
 					: _relativeURL( promo.imgurl, _ID ),
 				description: promo.imgalt,
@@ -21,6 +20,7 @@ const Promo = ({ promos, cardList, _relativeURL, _ID, _parseMD }) => {
 				type: 'heading',
 				headingSize: '2',
 				text: promo.title,
+				link: _relativeURL( promo.url, _ID ),
 			},
 			{
 				type: 'content',
@@ -32,10 +32,11 @@ const Promo = ({ promos, cardList, _relativeURL, _ID, _parseMD }) => {
 		<div className="promo row">
 			<AUcardList
 				cards={ cards }
-				appearance={ cardList.appearance }
+				shadow={ cardList.shadow }
 				columnSize={ cardList.columnSize }
 				matchHeight={ cardList.matchHeight }
-				alignment={ cardList.alignment }
+				centred={ cardList.centred }
+				clickable={cardList.clickable}
 			/>
 		</div>
 	);

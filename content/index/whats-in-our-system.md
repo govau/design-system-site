@@ -35,6 +35,7 @@ featureTitleSize: xs
 cardList:
   columnSize: col-xs-6 col-sm-3 col-lg-2
   matchHeight: true
+  centred: true
 ---
 
 When you install a component you benefit from the shared efforts of a community dedicated to making government products and services better, faster, easier.

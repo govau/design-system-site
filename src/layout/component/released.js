@@ -16,7 +16,6 @@ const ComponentReleased = ({ cardList, _ID, _body, _parseYaml, _relativeURL }) =
 	});
 
 	const cards = components.map( component => {
-
 		const cardData = {
 			link: _relativeURL( `/components/${ component.ID }`, _ID ),
 			rows: [{
@@ -50,10 +49,9 @@ const ComponentReleased = ({ cardList, _ID, _body, _parseYaml, _relativeURL }) =
 			<div className="row released">
 				<AUcardList
 					cards={ cards }
-					appearance={ cardList.appearance }
+					shadow={ cardList.shadow }
 					columnSize={ cardList.columnSize }
 					matchHeight={ cardList.matchHeight }
-					alignment={ cardList.alignment }
 				/>
 			</div>
 		</Fragment>
