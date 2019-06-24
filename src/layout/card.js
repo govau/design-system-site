@@ -187,17 +187,10 @@ AUcardHTML.propTypes = {
  * @param  {string}  href             - We add the href so it isn't added to the attributeOptions
  * @param  {object}  attributeOptions - All of the other properties that can be added
  */
-const AUcard = ({ rows, appearance, alignment, link, href, ...attributesOptions }) => {
-
-	let CardContainer = 'div';
-
-	if( link !== undefined ) {
-		CardContainer = 'a';
-		attributesOptions.href = link;
-	}
+const AUcardCreator = ({ rows, centred, clickable, shadow, link, href, ...attributesOptions }) => {
 
 	const CardComponents = {
-		line: AUcardLine,
+		line: AUcardDivider,
 		cta: AUcardCTA,
 		image: AUcardImage,
 		svg: AUcardSVG,
@@ -222,11 +215,8 @@ const AUcard = ({ rows, appearance, alignment, link, href, ...attributesOptions 
 	});
 
 	return (
-		<CardContainer { ...attributesOptions } className={
-			`au-card ${ appearance === 'shadow' ? ' au-card--shadow' : '' }` +
-			`${ alignment === 'center' ? ' au-card--centred': '' }`
-		}>
-			<div className='au-card__inner'>
+		<AUcard { ...attributesOptions }
+			shadow={shadow}
 			link={link ? link : undefined}
 			clickable={clickable}
 			centred={centred}
