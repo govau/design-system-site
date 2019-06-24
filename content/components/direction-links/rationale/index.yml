@@ -13,6 +13,7 @@ sidebar:
 
 main:
   - arrows.md
+  - span.md
 
 footer:
   - /_shared/footer.md
