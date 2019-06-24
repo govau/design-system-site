@@ -7,7 +7,7 @@ speak: |
 
   [Link] next
 
-  [Link] arrow
+  [Link] up
 
   [Link] skip to footer
 
