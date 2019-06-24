@@ -10,5 +10,5 @@ In this example, a screen reader would read:
 
 The arrow icon is a visual cue and not necessary information for a screen reader user. 
 
-Because of this, the arrow icon is now added by `css` inside a `<span>` attribute with an `aria-hidden` attribute set to `true`, this hides the arrow icon from a screen reader. 
+Because of this, the arrow icon is now added by `css` inside a `<span>` attribute with an `aria-hidden` attribute set to `true`. This prevents the arrow icon from being read by a screen reader. 
 
