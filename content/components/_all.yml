@@ -114,7 +114,7 @@ accordion:
       img: raj-ghuman.jpg
       url: 'https://github.com/sukhrajghuman'
   state: published
-  order: 1
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -156,7 +156,7 @@ animate:
       img: simon-schwartz.jpg
       url: 'https://github.com/simonschwartz'
   state: published
-  order: 2
+  order: 10
   discussions:
     - open: 2
     - active: 7
@@ -1737,6 +1737,7 @@ card:
     - container
     - content
     - interactive
+  order: 10
   related:
     - body
   related-articles:
