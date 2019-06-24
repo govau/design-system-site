@@ -3,6 +3,7 @@ layout: component/code-demo
 iframe: examples/example-default
 code:
   - HTML: |
+  
         <div class="au-card">
             <div class="au-card__inner">
                 <h2>Card Title</h2>
@@ -17,7 +18,7 @@ code:
             </div>
         </div>
   - React: |
-        import AUcard, { AUcardInner, AUcardDivider, AUcardFooter } from '@gov.au/card';
+        import AUcard, { AUcardInner, AUcardDivider, AUcardFooter, AUcardBody } from '@gov.au/card';
 
         <AUcard>
             <AUcardInner>

@@ -5,7 +5,7 @@ layout: section
 ## React Usage
 
 ```jsx
-import AUTODO from '@gov.au/TODO';
+import AUcard, { AUcardInner, AUcardImage, AUcardDivider, AUcardLink, AUcardBody, AUcardFooter } from '@gov.au/card';
 
 <AUcard className="au-body">
     <AUcardImage src="https://designsystem.gov.au/assets/img/placeholder/600X260.png"  alt/>

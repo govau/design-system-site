@@ -3,7 +3,13 @@ layout: component/code-demo
 iframe: examples/example-link
 code:
   - HTML: |
-        <div class="au-card au-card--shadow au-card--clickable" href="#">
+        <!--
+            shadow:  <div class="au-card au-card--shadow">
+            centred:   <div class="au-card au-card--centred">
+            clickable:   <div class="au-card au-card--clickable">
+        -->
+
+        <div class="au-card au-card--shadow au-card--clickable">
             <img class="au-card__image" src="https://designsystem.gov.au/assets/img/placeholder/600X260.png" alt />
             <div class="au-card__inner">
                 <div class="au-body">
@@ -15,6 +21,12 @@ code:
             </div>
         </div>
   - React: |
+        <!--
+            shadow:  <AUcard shadow>
+            centred:   <AUcard centred>
+            clickable:   <AUcard clickable>
+        -->
+
         <AUcard className="au-body" clickable shadow>
             <AUcardImage src="https://designsystem.gov.au/assets/img/placeholder/600X260.png" alt />
                 <AUcardInner>
