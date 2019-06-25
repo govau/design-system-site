@@ -197,14 +197,15 @@ AUcardHTML.propTypes = {
 };
 
 /**
- * AUcard - An individual card
+ * AUcardCreator - Creates a  card
  *
- * @param  {object}  rows             - The rows inside the card
- * @param  {string}  appearance       - The appearance of the card ( shadow border-left etc)
- * @param  {boolean} alignment        - If the card has alignment text
- * @param  {string}  link             - The link that the element goes to
- * @param  {string}  href             - We add the href so it isn't added to the attributeOptions
- * @param  {object}  attributeOptions - All of the other properties that can be added
+ * @param  {object}   rows             - The rows inside the card
+ * @param  {boolean}  clickable        - Whether or not card is clickable
+ * @param  {boolean}  shadow           - Add a card shadow or not
+ * @param  {boolean}  centred          - Card contents are centred or not
+ * @param  {string}   link             - The link that the card goes to
+ * @param  {string}   href             - We add the href so it isn't added to the attributeOptions
+ * @param  {object}   attributeOptions - All of the other properties that can be added
  */
 const AUcardCreator = ({ rows, centred, clickable, shadow, link, href, ...attributesOptions }) => {
 
@@ -253,6 +254,9 @@ const AUcardCreator = ({ rows, centred, clickable, shadow, link, href, ...attrib
 
 AUcardCreator.propTypes = {
 	link: PropTypes.string,
+	shadow: PropTypes.bool,
+	clickable: PropTypes.bool,
+	centred: PropTypes.bool,
 	rows: PropTypes.arrayOf(
 		PropTypes.shape({
 			type: PropTypes.string.isRequired,
