@@ -25,14 +25,6 @@ layout: section
 
 
 
-#### AUcardImage
-
-| Prop name    | Type       | Description |
-| ------------ | ---------- | ----------- |
-| `src`        | string     | Source of the image |
-| `className`  | string     | An additional class, optional |
-
-
 #### AUcardLink
 
 | Prop name    | Type       | Description |

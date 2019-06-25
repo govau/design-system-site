@@ -1724,9 +1724,12 @@ side-nav:
   hasReact: true    # <-- auto generated, don't change
 card:
   name: Card
-  description: |
-    The card component is used to provide a brief summary of content or a task, often with a link to more detail.
-    Cards are frequently displayed alongside other cards to group related content or tasks.
+  description: >
+    The card component is used to provide a brief summary of content or a task,
+    often with a link to more detail.
+
+    Cards are frequently displayed alongside other cards to group related
+    content or tasks.
   highlight: alpha
   metatags:
     - content
@@ -1768,7 +1771,7 @@ card:
     - active: 7
     - something: something
   ID: card    # <-- auto generated, don't change
-  version: 0.1.4    # <-- auto generated, don't change
+  version: 0.2.0    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change

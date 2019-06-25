@@ -10,7 +10,7 @@ code:
         -->
 
         <div class="au-card au-card--shadow au-card--clickable">
-            <img class="au-card__image" src="https://designsystem.gov.au/assets/img/placeholder/600X260.png" alt />
+            <img class="au-responsive-media-img" src="https://designsystem.gov.au/assets/img/placeholder/600X260.png" alt />
             <div class="au-card__inner">
                 <div class="au-body">
                         <h3><a class="au-card--clickable__link" href="#">Title of article</a></h3>
@@ -27,7 +27,7 @@ code:
         -->
 
         <AUcard className="au-body" clickable shadow>
-            <AUcardImage src="https://designsystem.gov.au/assets/img/placeholder/600X260.png" alt />
+            <img className="au-responsive-media-img" src="https://designsystem.gov.au/assets/img/placeholder/600X260.png" alt="" />
                 <AUcardInner>
                     <h3 className=""><AUcardLink link="#" text="Title of article" /></h3>
                     <AUcardBody>

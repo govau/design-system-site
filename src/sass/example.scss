@@ -261,7 +261,7 @@ $AU-main-nav-breakpoint: sm;
 }
 
 
-.au-card__image + .au-card__inner {
+.au-responsive-media-img + .au-card__inner {
 	.au-card__title > * {
 		@include AU-space( margin-top, 0unit );
 	}

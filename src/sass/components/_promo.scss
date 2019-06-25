@@ -5,7 +5,7 @@
 		@include AU-space( padding-bottom, 1unit );
 	}
 
-	.au-card__image {
+	.au-responsive-media-img {
 		@include AU-space( max-width, 15unit );
 		margin: 0 auto;
 	}

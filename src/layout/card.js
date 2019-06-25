@@ -11,7 +11,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import AUcard,{ AUcardImage, AUcardLink, AUcardDivider, AUcardInner } from '../_auds/layout/card';
+import AUcard,{ AUcardLink, AUcardDivider, AUcardInner } from '../_auds/layout/card';
 
 
 /**
@@ -52,6 +52,25 @@ AUcardHeading.defaultProps = {
 	headingSize: '3',
 };
 
+
+/**
+ * AUcardImage - An image row inside a card
+ *
+ * @param  {string}  description      - The text only description for the image
+ * @param  {string}  src             - The link that the element goes to
+ * @param  {object}  attributeOptions - All of the other properties that can be added
+ */
+const AUcardImage = ({ description, src, ...attributesOptions }) => {
+	return(
+			<img className="au-responsive-media-img" alt={ description } src={ src } />
+	);
+};
+
+AUcardImage.propTypes = {
+	description: PropTypes.string.isRequired,
+	src: PropTypes.string.isRequired,
+};
+
 /**
  * AUcardSVG - An SVG row inside a card
  *
@@ -71,7 +90,7 @@ const AUcardSVG = ({ svg, title, fullwidth, link, href, ...attributesOptions }) 
 	}
 
 	return(
-		<ImageContainer { ...attributesOptions } className={ `au-card__image${ fullwidth ? ' au-card__fullwidth' : '' }` }>
+		<ImageContainer { ...attributesOptions } className={ `au-responsive-media-img${ fullwidth ? ' au-card__fullwidth' : '' }` }>
 			<svg role="img" title={ title }>
 				<title>{ title }</title>
 				<use xlinkHref={ svg }/>

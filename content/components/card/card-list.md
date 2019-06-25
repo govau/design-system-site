@@ -32,7 +32,7 @@ code:
             </ul>
         </div>
   - React: |
-        import AUcard, { AUcardInner, AUcardImage, AUcardDivider, AUcardLink, AUcardFooter } from '@gov.au/card';
+        import AUcard, { AUcardInner, AUcardDivider, AUcardLink, AUcardFooter } from '@gov.au/card';
 
         <div class="row">
             <ul className="au-card-list au-card-list--matchheight">

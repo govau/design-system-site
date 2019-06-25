@@ -4,7 +4,7 @@ iframe: examples/example-image
 code:
   - HTML: |
         <div class="au-card">
-            <img class="au-card__image" src="https://designsystem.gov.au/assets/img/placeholder/600X260.png" alt />
+            <img class="au-responsive-media-img" src="https://designsystem.gov.au/assets/img/placeholder/600X260.png" alt />
             <div class="au-card__inner">
                 <div class="au-body">
                     <a href="#">Action</a>
@@ -12,10 +12,10 @@ code:
             </div>
         </div>
   - React: |
-        import AUcard, { AUcardInner, AUcardImage, } from '@gov.au/card';
+        import AUcard, { AUcardInner } from '@gov.au/card';
 
         <AUcard>
-            <AUcardImage src="https://designsystem.gov.au/assets/img/placeholder/600X260.png" alt />
+            <img className="au-responsive-media-img" src="https://designsystem.gov.au/assets/img/placeholder/600X260.png" alt="" />
             <AUcardInner className="au-body">
                 Image caption
             </AUcardInner>
