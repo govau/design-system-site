@@ -17,6 +17,8 @@
 		@include AU-space( margin-top, -0.25unit );
 		@include AU-space( border-top, 0.25unit solid $AU-color-background-alt );
 		@include AU-space( border-bottom, 0.25unit solid $AU-color-background-alt );
+		@include AU-space( border-right, 0 );
+		@include AU-space( border-left, 0 );
 		@include AU-space( padding, 2unit 0 );
 	}
 

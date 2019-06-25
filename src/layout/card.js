@@ -11,6 +11,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import AUcard,{ AUcardLink, AUcardDivider, AUcardInner } from '../_auds/layout/card';
 
 
 /**
@@ -18,26 +19,22 @@ import PropTypes from 'prop-types';
  *
  * @param  {string}  text             - The text inside the heading
  * @param  {string}  headingSize      - The tag level (<h1/> <h2/> etc)
- * @param  {boolean} fullwidth        - If the element stretches to the fullwidth of the container
  * @param  {string}  link             - The link that the element goes to
- * @param  {string}  href             - We add the href so it isn't added to the attributeOptions
  * @param  {object}  attributeOptions - All of the other properties that can be added
  */
-const AUcardHeading = ({ text, headingSize, fullwidth, link, href, className = '', ...attributesOptions }) => {
+const AUcardHeading = ({ text, headingSize, link, href, className = '', ...attributesOptions }) => {
 	const HeadingContainer = `h${ headingSize }`;
 
 	if( link ) {
 		return (
-			<HeadingContainer className={
-				`au-card__title${ fullwidth ? ' au-card__fullwidth' : '' } ${ className }`
-			} { ...attributesOptions }>
-				<a href={ link } >{ text }</a>
+			<HeadingContainer className={ className } { ...attributesOptions }>
+				<AUcardLink link={link} text={text}/>
 			</HeadingContainer>
 		)
 	}
 
 	return(
-		<HeadingContainer className={ `au-card__title${ fullwidth ? ' au-card__fullwidth' : '' } ${ className }` } { ...attributesOptions }>
+		<HeadingContainer className={`au-card__title ${className}`} { ...attributesOptions }>
 			{ text }
 		</HeadingContainer>
 	);
@@ -59,35 +56,20 @@ AUcardHeading.defaultProps = {
 /**
  * AUcardImage - An image row inside a card
  *
- * @param  {string}  image            - The image inside the row
  * @param  {string}  description      - The text only description for the image
- * @param  {boolean} fullwidth        - If the element stretches to the fullwidth of the container
- * @param  {string}  link             - The link that the element goes to
- * @param  {string}  href             - We add the href so it isn't added to the attributeOptions
+ * @param  {string}  src             - The link that the element goes to
  * @param  {object}  attributeOptions - All of the other properties that can be added
  */
-const AUcardImage = ({ image, description, fullwidth, link, href, ...attributesOptions }) => {
-	let ImageContainer = 'div';
-
-	if( link !== undefined ) {
-		ImageContainer = 'a';
-		attributesOptions.href = link;
-	}
-
+const AUcardImage = ({ description, src, ...attributesOptions }) => {
 	return(
-		<ImageContainer { ...attributesOptions } className={ `au-card__image${ fullwidth ? ' au-card__fullwidth' : '' }` }>
-			<img alt={ description } src={ image } />
-		</ImageContainer>
+			<img className="au-responsive-media-img" alt={ description } src={ src } />
 	);
 };
 
 AUcardImage.propTypes = {
-	image: PropTypes.string.isRequired,
 	description: PropTypes.string.isRequired,
-	fullwidth: PropTypes.bool,
-	link: PropTypes.string,
+	src: PropTypes.string.isRequired,
 };
-
 
 /**
  * AUcardSVG - An SVG row inside a card
@@ -108,7 +90,7 @@ const AUcardSVG = ({ svg, title, fullwidth, link, href, ...attributesOptions }) 
 	}
 
 	return(
-		<ImageContainer { ...attributesOptions } className={ `au-card__image${ fullwidth ? ' au-card__fullwidth' : '' }` }>
+		<ImageContainer { ...attributesOptions } className={ `au-responsive-media-img${ fullwidth ? ' au-card__fullwidth' : '' }` }>
 			<svg role="img" title={ title }>
 				<title>{ title }</title>
 				<use xlinkHref={ svg }/>
@@ -123,6 +105,7 @@ AUcardSVG.propTypes = {
 	fullwidth: PropTypes.bool,
 	link: PropTypes.string,
 };
+
 
 
 /**
@@ -195,6 +178,7 @@ AUcardCTA.propTypes = {
 };
 
 
+
 /**
  * AUcardHTML - A html row inside a card
  *
@@ -212,42 +196,21 @@ AUcardHTML.propTypes = {
 	fullwidth: PropTypes.bool,
 };
 
-
 /**
- * AUcardLine - A line row inside a card
+ * AUcardCreator - Creates a  card
  *
- * @param  {string} fullwidth - If the element stretches to the fullwidth of the container
+ * @param  {object}   rows             - The rows inside the card
+ * @param  {boolean}  clickable        - Whether or not card is clickable
+ * @param  {boolean}  shadow           - Add a card shadow or not
+ * @param  {boolean}  centred          - Card contents are centred or not
+ * @param  {string}   link             - The link that the card goes to
+ * @param  {string}   href             - We add the href so it isn't added to the attributeOptions
+ * @param  {object}   attributeOptions - All of the other properties that can be added
  */
-const AUcardLine = ({ fullwidth }) => (
-	<hr className={ `au-card__line${ fullwidth ? ' au-card__fullwidth' : '' }` } />
-);
-
-AUcardLine.propTypes = {
-	fullwidth: PropTypes.bool,
-};
-
-
-/**
- * AUcard - An individual card
- *
- * @param  {object}  rows             - The rows inside the card
- * @param  {string}  appearance       - The appearance of the card ( shadow border-left etc)
- * @param  {boolean} alignment        - If the card has alignment text
- * @param  {string}  link             - The link that the element goes to
- * @param  {string}  href             - We add the href so it isn't added to the attributeOptions
- * @param  {object}  attributeOptions - All of the other properties that can be added
- */
-const AUcard = ({ rows, appearance, alignment, link, href, ...attributesOptions }) => {
-
-	let CardContainer = 'div';
-
-	if( link !== undefined ) {
-		CardContainer = 'a';
-		attributesOptions.href = link;
-	}
+const AUcardCreator = ({ rows, centred, clickable, shadow, link, href, ...attributesOptions }) => {
 
 	const CardComponents = {
-		line: AUcardLine,
+		line: AUcardDivider,
 		cta: AUcardCTA,
 		image: AUcardImage,
 		svg: AUcardSVG,
@@ -272,25 +235,28 @@ const AUcard = ({ rows, appearance, alignment, link, href, ...attributesOptions 
 	});
 
 	return (
-		<CardContainer { ...attributesOptions } className={
-			`au-card ${ appearance === 'shadow' ? ' au-card--shadow' : '' }` +
-			`${ alignment === 'center' ? ' au-card--centered': '' }`
-		}>
-			<div className='au-card__inner'>
+		<AUcard { ...attributesOptions }
+			shadow={shadow}
+			link={link ? link : undefined}
+			clickable={clickable}
+			centred={centred}
+			>
+			<AUcardInner>
 				{
 					items.map( ( item, i ) => (
 						<item.component { ...item.props } key={ i } />
 					))
 				}
-			</div>
-		</CardContainer>
+			</AUcardInner>
+		</AUcard>
 	);
 };
 
-AUcard.propTypes = {
-	apperance: PropTypes.oneOf([ 'flat', 'shadow', 'border-left' ]),
-	alignment: PropTypes.oneOf([ 'left', 'center', 'right' ]),
+AUcardCreator.propTypes = {
 	link: PropTypes.string,
+	shadow: PropTypes.bool,
+	clickable: PropTypes.bool,
+	centred: PropTypes.bool,
 	rows: PropTypes.arrayOf(
 		PropTypes.shape({
 			type: PropTypes.string.isRequired,
@@ -306,10 +272,10 @@ AUcard.propTypes = {
 };
 
 
-AUcard.defaultProps = {
-	alignment: 'left',
-	appearance: 'flat',
+AUcardCreator.defaultProps = {
 };
 
 
-export default AUcard;
+export default AUcardCreator;
+
+

@@ -1,0 +1,21 @@
+layout: component/page
+pagetitle: Card accessibility
+
+header:
+  - /_shared/header.md
+
+component_nav:
+  - /components/_tabs.md
+
+sidebar:
+  - /components/search.md
+  - /components/sidebar.md
+
+main:
+  - grayscale.md
+  - colorblind.md
+  - keyboard.md
+  - screenreader.md
+
+footer:
+  - /_shared/footer.md
