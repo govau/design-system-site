@@ -39,4 +39,4 @@ code:
 ---
 ## Clickable cards
 
-For cards that contain a single link, the hit area for that link can be made to wrap the entire card. This pattern may be used for a list of news items on a landing page, for example. Avoid wrapping an entire card in an anchor tag as this can be a [difficult experience](/components/card/rationale/#cards-as-links) for a screen reader user.
+For cards that contain a single link, the hit area for that link can be made to wrap the entire card. This pattern may be used on cards that act as a preview for an article or blog post, for example. These cards could contain an image, the article title and a brief summary of an article. Avoid wrapping an entire card in an anchor tag as this can be a [difficult experience](/components/card/rationale/#cards-as-links) for a screen reader user.
