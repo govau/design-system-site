@@ -38,6 +38,7 @@ const Features = ({ title, btnURL, btntext, features, featureTitleSize, cardList
 			{
 				type: 'content',
 				text: feature.text,
+				link: feature.link,
 			}]
 		};
 	});
