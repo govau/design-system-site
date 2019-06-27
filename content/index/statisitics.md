@@ -7,10 +7,13 @@ title: Usage statistics
 features:
   - text: Live projects
     title: "28"
+    link: https://community.digital.gov.au/t/showcase/222
   - text: GitHub stars
     title: stars-replace
+    link: https://github.com/govau/design-system-components
   - text: Downloads in the last year
     title: downloads-replace
+    link: https://www.npmjs.com/org/gov.au
 
 featureTitleSize: xxl
 
