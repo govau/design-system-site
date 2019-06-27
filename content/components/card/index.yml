@@ -16,6 +16,8 @@ main:
   - card-image.md
   - card-link.md
   - card-list.md
+  - header.md
+  - footer.md
 
 footer:
   - /_shared/footer.md

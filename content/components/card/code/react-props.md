@@ -13,6 +13,8 @@ layout: section
 | `shadow`      | boolean     | The table column header title text |
 | `centred`     | boolean     | Centre the contents of the table |
 | `clickable`   | boolean     | Makes the entire contents of the card clickable, provided there is an `<AUcardLink>` component is a child of the `<AUcard>` |
+| `alt`       | bool       | The alt variation |
+| `dark`      | bool       | The dark variation |
 | `className`         | string     | An additional class, optional |
 
 
@@ -45,11 +47,32 @@ layout: section
 
 | Prop name   | Type        | Description |
 | ----------- | ----------- | ----------- |
+| `alt`       | bool       | The alt variation |
+| `dark`      | bool       | The dark variation |
 | `className`        | string     | An additional class, optional |
 
 
 
-#### AUcardBody
+#### AUcardHeader
+
+(Feature header)
+
+| Prop name   | Type        | Description |
+| ----------- | ----------- | ----------- |
+| `level`     | string     | The heading level of the title inside the header, optional. Between 1-6 |
+| `alt`       | bool       | The alt variation |
+| `dark`      | bool       | The dark variation |
+| `className` | string     | An additional class, optional |
+
+
+#### AUcardTitle
+
+| Prop name   | Type        | Description |
+| ----------- | ----------- | ----------- |
+| `level`     | string     | The heading level of the title inside the header. Between 1-6 |
+| `className` | string     | An additional class, optional |
+
+#### AUcardHeader
 
 | Prop name   | Type        | Description |
 | ----------- | ----------- | ----------- |

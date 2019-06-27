@@ -10,7 +10,8 @@ layout: section
 | `AUcardInner` | named | An inner container with padding
 | `AUcardDivider` | named | A horizontal rule to seperate contents in a card
 | `AUcardLink` | named | The AUcardLink component
-| `AUcardBody` | named | The body container
+| `AUcardTitle` | named | The body container
+| `AUcardHeader` | named | The body container
 | `AUcardFooter` | named | The footer of the card
 
 
@@ -18,12 +19,12 @@ layout: section
 ### [md]node_modules import
 
 ```jsx
-import AUcard, { AUcardInner, AUcardDivider, AUcardLink, AUcardBody, AUcardFooter } from '@gov.au/card';
+import AUcard, { AUcardInner, AUcardDivider, AUcardLink, AUcardHeader, AUcardTitle, AUcardFooter } from '@gov.au/card';
 
 ```
 
 ### [md]pancake import
 
 ```jsx
-import AUcard, { AUcardInner, AUcardDivider, AUcardLink, AUcardBody, AUcardFooter } from './card.js';
+import AUcard, { AUcardInner, AUcardDivider, AUcardLink, AUcardHeader, AUcardTitle, AUcardFooter } from './card.js';
 ```
