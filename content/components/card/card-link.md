@@ -23,6 +23,8 @@ code:
             clickable:   <AUcard clickable>
         -->
 
+        import AUcard, { AUcardInner, AUcardLink, AUcardTitle } from '@gov.au/card';
+
         <AUcard className="au-body" clickable shadow>
             <img className="au-responsive-media-img" src="https://designsystem.gov.au/assets/img/placeholder/600X260.png" alt="" />
                 <AUcardInner>
