@@ -9,14 +9,11 @@ code:
             clickable:   <div class="au-card au-card--clickable">
         -->
 
-        <div class="au-card au-card--shadow au-card--clickable">
+        <div class="au-card au-body au-card--shadow au-card--clickable">
             <img class="au-responsive-media-img" src="https://designsystem.gov.au/assets/img/placeholder/600X260.png" alt />
             <div class="au-card__inner">
-                <div class="au-body">
-                        <h3><a class="au-card--clickable__link" href="#">Title of article</a></h3>
-                </div>
+                <h3 class="au-card__title"><a class="au-card--clickable__link" href="#">Title of article</a></h3>
                 <p>Some text</p>
-                <p>Additional text</p>
             </div>
         </div>
   - React: |
@@ -26,14 +23,13 @@ code:
             clickable:   <AUcard clickable>
         -->
 
+        import AUcard, { AUcardInner, AUcardLink, AUcardTitle } from '@gov.au/card';
+
         <AUcard className="au-body" clickable shadow>
             <img className="au-responsive-media-img" src="https://designsystem.gov.au/assets/img/placeholder/600X260.png" alt="" />
                 <AUcardInner>
-                    <h3 className=""><AUcardLink link="#" text="Title of article" /></h3>
-                    <AUcardBody>
+                    <AUcardTitle level="3"><AUcardLink link="#" text="Title of article" /></h3>
                         <p>Some text</p>
-                        <p>Additional text</p>
-                    </AUcardBody>
                 </AUcardInner>
         </AUcard>
 ---

@@ -3,34 +3,31 @@ layout: component/code-demo
 iframe: examples/example-default
 code:
   - HTML: |
-  
+        <!-- 
+            dark: <div class="au-card au-body au-body--dark">
+        -->
+
         <div class="au-card">
             <div class="au-card__inner">
-                <h2>Card Title</h2>
-                <hr class="au-card__divider"/>
-                <div class="au-card__body">
-                    <p>Some text</p>
-                    <p>Additional text</p>
-                </div>
-                <div class="au-body au-card__footer">
-                    <a href="#">Action Link</a>
-                </div>
+                <h2 class="au-card__title">Card Title</h2>
+                <p>Additional text relating to the card</p>
             </div>
         </div>
+
   - React: |
-        import AUcard, { AUcardInner, AUcardDivider, AUcardFooter, AUcardBody } from '@gov.au/card';
+        /*
+            Light: <AUcard >
+            Dark:  <AUcard dark>
+            Alt:   <AUcard alt>
+        */
+
+        import AUcard, { AUcardInner, AUcardTitle } from '@gov.au/card';
 
         <AUcard>
             <AUcardInner>
-                <h3>Some Heading</h3>
-                <AUcardDivider />
-                <AUcardBody>
-                    <p>Some text</p>
-                    <p>Additional content</p>
-                </AUcardBody>
-                <AUcardFooter class="au-body">
-                    <a href="#">Action Link</a>
-                </AUcardFooter>
+                <AUcardTitle>Card Title</h3>
+                <p>Some text</p>
+                <p>Additional content</p>
             </AUcardInner>
         </AUcard>
 ---

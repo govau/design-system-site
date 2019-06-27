@@ -26,6 +26,7 @@
 		font-weight: normal;
 		position: relative;
 		font-weight: normal;
+		@include AU-space( margin, 1.5unit 0 0 0 );
 
 		&:after {
 			content: ' ';

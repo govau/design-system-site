@@ -32,21 +32,21 @@ code:
             </ul>
         </div>
   - React: |
-        import AUcard, { AUcardInner, AUcardDivider, AUcardLink, AUcardFooter } from '@gov.au/card';
+        import AUcard, { AUcardInner } from '@gov.au/card';
 
         <div class="row">
             <ul className="au-card-list au-card-list--matchheight">
                     <li className="col-sm-3 col-xs-6">
                         <AUcard >
                             <AUcardInner>
-                                    <h3 className="au-body">Card 1</h3>
+                                    <h3 >Card 1</h3>
                             </AUcardInner>
                         </AUcard>
                     </li>
                     <li className="col-sm-3 col-xs-6">
                         <AUcard>
                             <AUcardInner>
-                                    <h3 className="au-body">Card 2</h3>
+                                    <h3 >Card 2</h3>
                             </AUcardInner>
                         </AUcard>
                     </li>
