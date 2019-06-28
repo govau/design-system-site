@@ -1,5 +1,5 @@
 <div class="au-card au-card--shadow au-card--clickable">
-    <img class="au-responsive-media-img" src="../../../../assets/img/placeholder/600X260.png" alt />
+    <img class="au-responsive-media-img" src="../../../../assets/img/placeholder/900X400.png" alt />
     <div class="au-card__inner">
         <div class="au-body">
                 <h3><a class="au-card--clickable__link js-focus-me" href="#">Title of article</a></h3>

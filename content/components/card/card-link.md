@@ -7,6 +7,7 @@ code:
             shadow:  <div class="au-card au-card--shadow">
             centred:   <div class="au-card au-card--centred">
             clickable:   <div class="au-card au-card--clickable">
+            anchor wrapper: <a href="#" class="au-card">
         -->
 
         <div class="au-card au-body au-card--shadow au-card--clickable">
@@ -21,6 +22,7 @@ code:
             shadow:  <AUcard shadow>
             centred:   <AUcard centred>
             clickable:   <AUcard clickable>
+            anchor wrapper: <AUcard link="#" />
         -->
 
         import AUcard, { AUcardInner, AUcardLink, AUcardTitle } from '@gov.au/card';
