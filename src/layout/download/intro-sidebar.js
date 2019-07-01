@@ -11,7 +11,7 @@ const IntroSidebar = ({ links, title, _relativeURL }) => (
 		<h2> {title} </h2>
 		<AUlinkList items={
 			links.map( link => ({
-				link: _relativeURL( link.download ),
+				link: link.download,
 				text: link.title,
 				className: link.icon ? ` icon icon--${link.icon} ` : ''
 			}))
