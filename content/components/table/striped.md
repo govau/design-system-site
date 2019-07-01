@@ -95,6 +95,7 @@ code:
                 caption="Population of Australian states and territories, December 2015"
                 headers={detailedPopulationData}
                 data={detailedPopulationDataHeaders}
+                striped={true}
             />
         </AUtableResponsiveWrapper>
 

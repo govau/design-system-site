@@ -4,6 +4,11 @@ iframe: examples/example-default
 iframeFullwidth: true
 code:
   - HTML: |
+        <!--
+        Row header:  <th class="au-table__header" scope="row">
+        Column header:  <th class="au-table__header" scope="col">
+        -->
+
         <table class="au-table">
             <caption class="au-table__caption">Population of Australian states and territories, December 2015</caption>
             <thead class="au-table__head">
@@ -32,7 +37,7 @@ code:
             </tbody>
         </table>
   - React: |
-        import AUtable, {AUtableResponsiveWrapper} from "@gov.au/table";
+        import AUtable, {AUtableResponsiveWrapper, AUtableHead, AUtableRow, AUtableBody, AUtableHeader, AUtableCell } from "@gov.au/table";
         
         const simpleData = [
             {population: "7,670,700",     location: "New South Wales"},
@@ -52,6 +57,35 @@ code:
                 data={simpleData}
             />
         </AUtableResponsiveWrapper>
+
+
+        /*
+            Row header:  <AUtableHeader scope="row" />
+            Column header:  <AUtableHeader scope="col" />
+        */
+
+        //Using individual components
+        <table className="au-table">
+            <AUtableHead>
+                <AUtableRow>
+                    <AUtableHeader type="text" title="Location"/>
+                    <AUtableHeader type="numeric" title="Population"/>
+                    <AUtableHeader type="numeric" title="Change over previous year %"/>
+                </AUtableRow>
+            </AUtableHead>
+            <AUtableBody>
+                <AUtableRow>
+                    <AUtableCell data="New South Wales" type="text" />
+                    <AUtableCell data="7,670,700" type="numeric"/>
+                    <AUtableCell data="3.1%" type="numeric"/>
+                </AUtableRow>
+                <AUtableRow>
+                    <AUtableCell data="Victoria" type="text" />
+                    <AUtableCell data="5,996,400" type="numeric" className="bold-cell" />
+                    <AUtableCell data="2.5%" type="numeric"/>
+                </AUtableRow>
+            </AUtableBody>
+        </table>
 ---
 ## Default table
 
