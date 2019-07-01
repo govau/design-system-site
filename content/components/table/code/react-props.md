@@ -18,7 +18,7 @@ layout: section
 | `data`              | array      | The table data in the body |
 | `data[0]`           | string     | The first row of data in the body. |
 | `data[0].example`   | array      | The value of the cell for key `example`. This will correspond with the header that has the `example` key |
-| `striped`           | string     | A striped variation of the component |
+| `striped`           | bool     | A striped variation of the component |
 | `className`         | string     | An additional class, optional |
 
 All other props are spread into the component
@@ -29,6 +29,7 @@ All other props are spread into the component
 | Prop name   | Type        | Description |
 | ----------- | ----------- | ----------- |
 | `title`        |  string    | The table column header title text |
+| `scope`        |  string    | Can either be a `row` or `col`, default is `col` |
 | `type`        |  string    | Type of the header, can be either `text` or `numeric` for left or right alignment respectively. |
 | `width`        |  string    | The width of the header. Can be either `10`, `20`, `25`, `33`, `50` or `75` |
 | `className`        | string     | An additional class, optional |
