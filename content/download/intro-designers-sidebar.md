@@ -3,6 +3,6 @@ layout: download/intro-sidebar
 title: Resources
 links:
   - title: Sketch Design Files
-    download: /assets/files/AuDS_v1.1.0.zip
+    download: https://github.com/govau/design-system-sketch-file/blob/master/public/auds.zip?raw=true
     icon: sketch
 ---
