@@ -42,9 +42,9 @@ const Page = ({
 <meta property="og:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:url" content="https://designsystem.gov.au">
 <meta name="google-site-verification" content="rd00twS6xfSXiS4gzkLEBfJ3sRmQXz2YBhkCFWTivzI" />
-<meta name="theme-color" content="#45c2f0">
-<meta name="msapplication-navbutton-color" content="#45c2f0">
-<meta name="apple-mobile-web-app-status-bar-style" content="#45c2f0">
+<meta name="theme-color" content="#313131">
+<meta name="msapplication-navbutton-color" content="#313131">
+<meta name="apple-mobile-web-app-status-bar-style" content="#313131">
 <title>Homepage - Australian Government Design System</title>
 
 <link rel="stylesheet" href=${ _relativeURL( '/assets/css/style.css', _ID ) }>
