@@ -1,6 +1,6 @@
 <div class="au-body au-body--dark">
   <div class="au-page-alerts au-page-alerts--info au-page-alerts--dark">
-    <h3>Application saved</h3>
-    <p>Draft application saved. <a href="#">Resume appication.</a></p>
+    <h3>Notice</h3>
+    <p>All vacancies close on the advertised closing date unless otherwise specified.</p>
   </div>
 </div>
