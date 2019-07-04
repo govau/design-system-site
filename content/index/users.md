@@ -9,10 +9,6 @@ tiles:
     alt: Australian Cyber Security Centre
     link: https://www.cyber.gov.au/
 
-  - image: assets/img/users-logo-mygov.png
-    alt: MyGov
-    link: https://my.gov.au
-
   - image: assets/img/users-logo-marketplace.png
     alt: Digital Marketplace
     link: https://marketplace.service.gov.au
