@@ -12,8 +12,8 @@ code:
       -->
 
       <div class="au-body au-page-alerts au-page-alerts--success">
-        <h3>Success</h3>
-        <p>Alert Content</p>
+        <h3>Submission successful</h3>
+        <p>Your application has been successfully submitted.</p>
       </div>
   - React: |
       /*
@@ -26,8 +26,8 @@ code:
       import AUpageAlert from '@gov.au/page-alerts';
 
       <AUpageAlert as='success'>
-        <h3>Success</h3>
-        <p>Alert Content</p>
+        <h3>Submission successful</h3>
+        <p>Your application has been successfully submitted.</p>
       </AUpageAlert>
 ---
 ## Success

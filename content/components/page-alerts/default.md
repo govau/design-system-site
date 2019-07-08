@@ -12,8 +12,8 @@ code:
       -->
 
       <div class="au-body au-page-alerts au-page-alerts--info">
-        <h3>Important</h3>
-        <p>Alert Content</p>
+        <h3>Notice</h3>
+        <p>All vacancies close on the advertised closing date unless otherwise specified.</p>
       </div>
   - React: |
       /*
@@ -26,8 +26,8 @@ code:
       import AUpageAlert from '@gov.au/page-alerts';
 
       <AUpageAlert as='info'>
-        <h3>Important</h3>
-        <p>Alert Content</p>
+       <h3>Notice</h3>
+       <p>All vacancies close on the advertised closing date unless otherwise specified.</p>
       </AUpageAlert>
 ---
 ## Info

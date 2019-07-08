@@ -12,8 +12,8 @@ code:
       -->
 
       <div class="au-body au-page-alerts au-page-alerts--warning">
-        <h3>Warning</h3>
-        <p>Alert Content</p>
+        <h3>Browser out of date</h3>
+        <p>Your web browser is out of date.</p>
       </div>
   - React: |
       /*
@@ -26,8 +26,8 @@ code:
       import AUpageAlert from '@gov.au/page-alerts';
 
       <AUpageAlert as='warning'>
-        <h3>Warning</h3>
-        <p>Alert Content</p>
+        <h3>Browser out of date</h3>
+        <p>Your web browser is out of date.</p>
       </AUpageAlert>
 ---
 ## Warning
