@@ -102,7 +102,7 @@
 		"autoprefixer": "^9.4.10",
 		"cfonts": "^2.4.2",
 		"concat-cli": "^4.0.0",
-		"cuttlebelle": "^1.0.0-alpha.60",
+		"cuttlebelle": "^1.0.0-alpha.66",
 		"express": "^4.16.4",
 		"mkdirp": "^0.5.1",
 		"node-fetch": "^2.3.0",
