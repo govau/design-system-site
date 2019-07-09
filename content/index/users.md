@@ -9,10 +9,6 @@ tiles:
     alt: Australian Cyber Security Centre
     link: https://www.cyber.gov.au/
 
-  - image: assets/img/users-logo-mygov.png
-    alt: MyGov
-    link: https://my.gov.au
-
   - image: assets/img/users-logo-marketplace.png
     alt: Digital Marketplace
     link: https://marketplace.service.gov.au
@@ -32,6 +28,10 @@ tiles:
   - image: assets/img/users-logo-dhs.png
     alt: Department of Human Services
     link: https://www.humanservices.gov.au/
+
+  - image: assets/img/users-logo-nsw.png
+    alt: Digital New South Wales
+    link: https://www.digital.nsw.gov.au/digital-design-system
 ---
 
 The design system is in its early days but a number of government teams have already jumped on board. Why not join them? Together we‘ll be able to build better, faster, easier.
