@@ -1730,7 +1730,7 @@ card:
 
     Cards are frequently displayed alongside other cards to group related
     content or tasks.
-  highlight: new
+  highlight: alpha
   metatags:
     - content
     - card
