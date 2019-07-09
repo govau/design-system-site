@@ -1474,7 +1474,7 @@ table:
       img: raj-ghuman.jpg
       url: 'https://github.com/sukhrajghuman'
   state: published
-  highlight: alpha
+  highlight: new
   status:
     usable: done
     consistent: done
@@ -1730,7 +1730,7 @@ card:
 
     Cards are frequently displayed alongside other cards to group related
     content or tasks.
-  highlight: alpha
+  highlight: new
   metatags:
     - content
     - card
