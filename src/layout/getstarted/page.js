@@ -32,6 +32,7 @@ const Page = ({
 <link rel="shortcut icon" href="/assets/favicons/favicon.ico">
 <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml">
 <meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Digital Transformation Agency">
 <meta name="description" content="${ description }">
@@ -47,9 +48,7 @@ const Page = ({
 <meta property="og:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:url" content="https://designsystem.gov.au">
 <meta name="google-site-verification" content="rd00twS6xfSXiS4gzkLEBfJ3sRmQXz2YBhkCFWTivzI" />
-<meta name="theme-color" content="#45c2f0">
-<meta name="msapplication-navbutton-color" content="#45c2f0">
-<meta name="apple-mobile-web-app-status-bar-style" content="#45c2f0">
+
 <title>${ pagetitle } - Australian Government Design System</title>
 
 <link rel="stylesheet" href=${ _relativeURL( '/assets/css/style.css', _ID ) }>
