@@ -40,6 +40,9 @@ var InitialiseTabs = function( tabs ) {
 		if( HasClass( tabs[ i ], 'tab-item--active' ) ){
 			tabs[ i ].setAttribute( 'aria-selected', 'true' );
 		}
+		else  {
+			tabs[ i ].setAttribute( 'aria-selected', 'false' );
+		}
 	}
 };
 
