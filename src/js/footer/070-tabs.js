@@ -10,7 +10,7 @@ AddEvent( tabItems, 'click', function( event, $this ) {
 
 	for( var i = 0; i < currentTabItems.length; i++ ) {
 		RemoveClass( currentTabItems[ i ], 'tab-item--active' );
-		currentTabItems[ i ].removeAttribute( 'aria-selected' );
+		currentTabItems[ i ].setAttribute( 'aria-selected', 'false' );
 		currentTabItems[ i ].setAttribute( 'tabindex', '1' );
 	}
 
@@ -39,6 +39,9 @@ var InitialiseTabs = function( tabs ) {
 	for( var i = 0; i < tabs.length; i++ ) {
 		if( HasClass( tabs[ i ], 'tab-item--active' ) ){
 			tabs[ i ].setAttribute( 'aria-selected', 'true' );
+		}
+		else  {
+			tabs[ i ].setAttribute( 'aria-selected', 'false' );
 		}
 	}
 };
