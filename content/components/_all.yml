@@ -1361,7 +1361,7 @@ tags:
     - active: 7
     - something: something
   ID: tags    # <-- auto generated, don't change
-  version: 3.1.7    # <-- auto generated, don't change
+  version: 4.0.0    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -1805,6 +1805,9 @@ search-box:
     - name: Patrick De Young
       img: patrick-de-young.jpg
       url: 'https://github.com/pattyde'
+    - name: Raj Ghuman
+      img: raj-ghuman.jpg
+      url: 'https://github.com/sukhrajghuman'
   state: suggestion
   status:
     useful: done

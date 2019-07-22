@@ -4,25 +4,25 @@ iframe: examples/example-default
 code:
   - HTML: |
       <!--
-        Light:  <ul class="au-tags">
-        Dark:   <ul class="au-tags au-tags--dark">
+        Light:  <span class="au-tag">
+        Dark:   <span class="au-tag au-tag--dark">
       -->
 
       <h2>Tags:</h2>
-      <ul class="au-tags">
-        <li><a href="#">foo</a></li>
-        <li><a href="#">bar</a></li>
-        <li><a href="#">baz</a></li>
+      <ul class="au-tag-list">
+        <li><a href="#" class="au-tag">foo</a></li>
+        <li><a href="#" class="au-tag">bar</a></li>
+        <li><a href="#" class="au-tag">baz</a></li>
       </ul>
   - React: |
       /*
-        Light:  <AUtags tags={[
-        Dark:   <AUtags dark tags={[
+        Light:  <AUtagList tags={[
+        Dark:   <AUtagList dark tags={[
       */
 
-      import AUtags from '@gov.au/tags';
+      import AUtagList, {AUtag} from '@gov.au/tags';
 
-      <AUtags tags={[
+      <AUtagList tags={[
         {
           link: '#',
           text: 'foo',
@@ -34,6 +34,10 @@ code:
         {
           link: '#',
           text: 'baz',
+          className: ''
+          attributeOptions: {
+            onClick: () => {console.log('clicked')},
+          }
         },
       ]} />
 ---

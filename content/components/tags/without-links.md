@@ -4,25 +4,25 @@ iframe: examples/example-nolink
 code:
   - HTML: |
       <!--
-        Light:  <ul class="au-tags">
-        Dark:   <ul class="au-tags au-tags--dark">
+        Light:  <span class="au-tag">
+        Dark:   <span class="au-tag au-tag--dark">
       -->
 
       <h2>Tags:</h2>
-      <ul class="au-tags">
-        <li>foo</li>
-        <li>bar</li>
-        <li>baz</li>
+      <ul class="au-tag-list">
+        <li><span class="au-tag au-tag--dark">foo</span></li>
+        <li><span class="au-tag au-tag--dark">bar</span></li>
+        <li><span class="au-tag au-tag--dark">baz</span></li>
       </ul>
   - React: |
       /*
-        Light:  <AUtags tags={[
-        Dark:   <AUtags dark tags={[
+        Light:  <AUtagList tags={[
+        Dark:   <AUtagList dark tags={[
       */
 
-      import AUtags from '@gov.au/tags';
+      import AUtagList, {AUtag} from '@gov.au/tags';
 
-      <AUtags tags={[
+      <AUtagList tags={[
         {
           text: 'foo',
         },
