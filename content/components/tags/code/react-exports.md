@@ -6,16 +6,18 @@ layout: section
 
 | Name       | Type    | Description
 |------------|---------|-----------------------------------------------------------------------------
-| `AUtags` | default | The tags component
+| `AUtag` | named | A single tag
+| `AUtagList` | default | The tag list component
+
 
 ### [md]node_modules import
 
 ```jsx
-import AUtags from '@gov.au/tags';
+import AUtagList, {AUtag} from '@gov.au/tags';
 ```
 
 ### [md]pancake import
 
 ```jsx
-import AUtags from './tags';
+import AUtagList, {AUtag} from '@gov.au/tags';
 ```
