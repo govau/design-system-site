@@ -3,7 +3,7 @@ layout: component/rationale
 heading: When to use accordions
 ---
 
-We recommend that accordions be used sparingly for primary content on a page.  While they can be appropriate for organising small, specific sections of content, accordions are not a suitable replacement for well formattted plain text. If a user requires all, or most of the informmation on the page it should be visible, and not hidden inside an accordion. 
+We recommend that accordions be used sparingly for primary content on a page.  While they can be appropriate for organising small, specific sections of content, accordions are not a suitable replacement for well formattted plain text. If a user requires all, or most of the information on the page it should be visible, and not hidden inside an accordion. 
 
 [Things to consider](https://www.nngroup.com/articles/accordions-complex-content/) when using accordions are, 
 
