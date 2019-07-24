@@ -5,7 +5,7 @@
 
 <div class="au-body au-body--dark example-form-item">
   <label class="example-label au-label au-label--dark" for="text-input-md-dark">Mobile</label>
-  <input class="au-text-input au-text-input--dark au-text-input--width-md au-text-input--number" name="text-input-md-dark" id="text-input-md-dark" type="tel" value="0400 000 000">
+  <input class="au-text-input au-text-input--dark au-text-input--width-md" name="text-input-md-dark" id="text-input-md-dark" type="tel" value="0400 000 000">
 </div>
 
 <div class="au-body au-body--dark example-form-item">
