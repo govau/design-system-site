@@ -1,8 +1,8 @@
 ---
 layout: home/users
 title: Who's using it?
-btnURL: /community
-btntext: Community
+btnURL: https://community.digital.gov.au/t/showcase/222
+btntext: Showcase
 
 tiles:
   - image: assets/img/users-logo-acsc.png
