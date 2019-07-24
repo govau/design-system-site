@@ -1,6 +1,6 @@
 <div class="au-body example-form-item">
   <label class="example-label au-label" for="text-input-xs">Postcode</label>
-  <input class="au-text-input au-text-input--width-sm au-text-input--number" name="text-input-sm" id="text-input-sm" type="number" value="2600">
+  <input class="au-text-input au-text-input--width-sm" name="text-input-sm" id="text-input-sm" type="number" value="2600">
 </div>
 
 <div class="au-body example-form-item">
