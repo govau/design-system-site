@@ -4,13 +4,15 @@ iframe: examples/example-header
 code:
   - HTML: |
         <!-- 
-            light: <h2 class="au-card__header">...</h2>
-            alt:  <div class="au-body au-body--alt"><h2 class="au-card__header">...</h2></div>
-            dark: <div class="au-body au-body--dark"><h2 class="au-card__header">...</h2></div>
+            light: <div class="au-card__header"><h2>
+            alt:  <div class="au-body au-body--alt au-card__header"><h2>...</h2></div>
+            dark: <div class="au-body au-body--dark au-card__header"><h2>...</h2></div>
         -->
 
         <div class="au-card au-card--centred au-body">
-            <h4 class="au-card__header">Feature card title</h4>
+        <div class="au-body au-body--alt au-card__header">
+            <h4>Feature card title</h4>
+        </div>
             <div class="au-card__inner">
                 <p> Additional conent relating to the card</p>
             </div>
