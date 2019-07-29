@@ -6,7 +6,7 @@ title: Usage statistics
 
 features:
   - text: Live projects
-    title: "32"
+    title: "39"
     link: https://community.digital.gov.au/t/showcase/222
   - text: GitHub stars
     title: stars-replace
