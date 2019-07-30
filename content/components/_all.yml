@@ -1765,6 +1765,9 @@ card:
     - name: Dominik Wilkowski
       img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
+    - name: Petr Illek
+      img: petr.jpg
+      url: 'https://github.com/petrillek/'
   state: published
   discussions:
     - open: 2
