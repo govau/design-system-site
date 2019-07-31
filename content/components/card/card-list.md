@@ -6,7 +6,7 @@ code:
   - HTML: |
         <div class="row">
             <ul class="au-card-list au-card-list--matchheight">
-                <li class="col-sm-3 xol-xs-6">
+                <li class="col-sm-3 col-xs-6">
                     <div class="au-card">
                     <div class="au-card__inner">
                         <div class="au-card__title">
@@ -17,7 +17,7 @@ code:
                     </div>
                 </div>
                 </li>
-                <li class="col-sm-3 xol-xs-6">
+                <li class="col-sm-3 col-xs-6">
                     <div class="au-card">
                     <div class="au-card__inner">
                         <div class="au-card__title">
