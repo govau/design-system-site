@@ -594,6 +594,9 @@ direction-links:
     - name: Hannah J. Nicdao
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
+    - name: Kiri Hoy
+      img: kiri-hoy.jpg
+      url: 'https://github.com/kirihoy'
   state: published
   order: 10
   discussions:
@@ -657,6 +660,9 @@ footer:
     - name: Hannah J. Nicdao
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
+    - name: Kiri Hoy
+      img: kiri-hoy.jpg
+      url: 'https://github.com/kirihoy'
   state: published
   order: 10
   discussions:
@@ -1419,6 +1425,9 @@ text-inputs:
     - name: Hannah J. Nicdao
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
+    - name: Kiri Hoy
+      img: kiri-hoy.jpg
+      url: 'https://github.com/kirihoy'
   state: published
   order: 10
   discussions:
@@ -1612,6 +1621,9 @@ main-nav:
     - name: Simon Victory
       img: simon-victory.jpg
       url: 'https://github.com/svict4'
+    - name: Kiri Hoy
+      img: kiri-hoy.jpg
+      url: 'https://github.com/kirihoy'
   state: published
   status:
     usable: done
