@@ -49,7 +49,6 @@ const Customise = ({ _ID, _relativeURL, _parseYaml }) => {
 <link rel="schema.dcterms" href="http://purl.org/dc/terms/" />
 <link rel="schema.AGLSTERMS" href="http://www.agls.gov.au/agls/terms/" />
 <meta name="dcterms.title" content="${pagetitle} - Australian Government Design System" />
-<meta name="dcterms.identifier" content="https://www.bom.gov.au/media/2019/aurora-activity" />
 <meta name="dcterms.creator" content="scheme=AGLSTERMS.AglsAgent; corporateName=Digital Transformation Agency, Australia; address=50 Marcus Clarke St Canberra ACT 2601; contact=+61 427 136 791" />
 <meta name="dcterms.publisher" content="scheme=AGLSTERMS.AglsAgent; corporateName=Digital Transformation Agency, Australia; address=50 Marcus Clarke St Canberra ACT 2601; contact=+61 427 136 791" />
 <meta name="dcterms.description" content="${ description }" />
