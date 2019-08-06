@@ -5,6 +5,7 @@
         <div id="main-nav-default--dark" class="au-main-nav__content">
           <button
             aria-controls="main-nav-default--dark"
+            aria-expanded="false"
             class="au-main-nav__toggle au-main-nav__toggle--open"
             onClick="return AU.mainNav.Toggle( this )">
             Menu
