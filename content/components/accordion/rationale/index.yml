@@ -14,6 +14,7 @@ sidebar:
 main:
   - expand-collapse.md
   - iconography.md
+  - usage.md
 
 footer:
   - /_shared/footer.md
