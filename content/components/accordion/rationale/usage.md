@@ -9,5 +9,5 @@ Before using an accordion, consider whether the benefits outweigh [the negative 
 
 **Hiding content makes it harder for a user to scan a webpage.**  If content is hidden inside an accordion it can be difficult for a user to scan a whole web page for content relevant to them. Web browser's 'Find on page...' search functions do not detect content hidden by accordions, making it harder for users to use their existing tools and behaviours to locate text. 
 
-**Accordions increase cognitive load.**  Forcing a user to click on each accordion in order to receive the full text fragments their user experience, causing them to switch focus between accordions in order to gather all the information. It is also possible that with hidden content, a user might ignore, or not see imortant information.  
+**Accordions increase cognitive load.**  Forcing a user to click on each accordion in order to receive the full text fragments their user experience, causing them to switch focus between accordions in order to gather all the information. It is also possible that with hidden content, a user might ignore, or not see important information.  
 
