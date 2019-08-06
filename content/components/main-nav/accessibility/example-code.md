@@ -5,6 +5,7 @@
         <div id="main-nav-default" class="au-main-nav__content">
           <button
             aria-controls="main-nav-default"
+            aria-expanded="false"
             class="au-main-nav__toggle au-main-nav__toggle--open js-focus-me"
             onClick="return AU.mainNav.Toggle( this )">
             Menu

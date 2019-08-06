@@ -4,11 +4,11 @@ heading: Screen reader mobile
 speak: |
   [ Navigation ]
 
-  Menu [ button ]
+  Menu, collapsed [ button ], main-navigation
 
   ~ Enter key ~
 
-  Close [ button ]
+  Close, expanded [ button ]
 
   [ List 6 items ]
 
