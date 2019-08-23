@@ -10,6 +10,7 @@ sidebar:
 
 main:
   - default.md
+  - responsive.md
 
 footer:
   - /_shared/footer.md
