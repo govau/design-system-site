@@ -25,7 +25,7 @@ code:
 
       import AUsearchbox from './searchbox.js';
         
-      <AUsearchbox respsonive label="Search" btnText="Search" id="site-search"/>
+      <AUsearchbox respsonive aria-label="sitewide" label="Search this website" btnText="Search" id="site-search"/>
 
 
 ---

@@ -12,7 +12,7 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - responsive.md
+  - placement.md
 
 footer:
   - /_shared/footer.md
