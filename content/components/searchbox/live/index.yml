@@ -1,0 +1,7 @@
+layout: example/page
+pagetitle: Progress indicator live demo
+examples:
+  - template: ../example/example-code.md
+  - template: ../example/example-dark.md
+    style: dark
+livedemo: true

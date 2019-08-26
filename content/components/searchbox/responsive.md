@@ -5,8 +5,8 @@ iframeFullwidth: true
 code:
   - HTML: |
       <!--
-        Light:  <form class="au-search">
-        Dark:   <form class="au-search au-search--dark">
+        Respsonive:  <form class="au-search au-search--responsive">
+        Icon only:   <form class="au-search au-search--icon">
       -->
 
         <form role="search" class="au-search au-search--responsive">
@@ -31,4 +31,4 @@ code:
 ---
 ## Responsive
 
-**Note:** Select boxes (drop-down lists) have been provided in the system by necessity but should be avoided where possible. Select boxes are implemented differently on various devices and are proven to be difficult to use for users with low digital literacy. Instead consider using [text inputs](/components/text-inputs/) or for multiple-choice options try [radio buttons](/components/control-input/#radio).
+The responsive variation replaces the button text with a search icon on smaller devices. This allows more space for text to be written in the text input.
