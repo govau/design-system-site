@@ -32,7 +32,7 @@
 	},
 	"author": {
 		"name": "Commonwealth of Australia, DTA",
-		"email": "designsystem@digital.gov.au",
+		"email": "designsystem@dta.gov.au",
 		"url": "https://www.dta.gov.au/"
 	},
 	"homepage": "https://github.com/govau/design-system-site",
@@ -64,7 +64,7 @@
 		},
 		{
 			"name": "Kiri Hoy",
-			"email": "kiri.hoy@digital.gov.au",
+			"email": "kiri.hoy@dta.gov.au",
 			"url": "https://github.com/kirihoy"
 		}
 	],
