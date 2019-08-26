@@ -9,8 +9,8 @@ code:
         Icon only:   <form class="au-search au-search--icon">
       -->
 
-        <form role="search" class="au-search au-search--responsive">
-            <label for="standard" class="au-search__label">Enter a domain</label>
+        <form role="search" aria-label="sitewide" class="au-search au-search--responsive">
+            <label for="standard" class="au-search__label">Search this website</label>
             <input type="search" id="standard" name="standard" class="au-text-input"/>
             <div class="au-search__btn">
                 <button class="au-btn" type="submit"><span class="au-search__submit-btn-text">Search</span></button>
@@ -19,8 +19,8 @@ code:
 
   - React: |
       /*
-        Light:  <AUsearchbox >
-        Dark:   <AUsearchbox dark />
+        Responsive:  <AUsearchbox responsive>
+        Icon only:   <AUsearchbox icon />
       */
 
       import AUsearchbox from './searchbox.js';

@@ -1,7 +1,7 @@
 ---
 layout: component/discussion-callout
 btntext: Community
-btnurl: https://community.digital.gov.au/t/progress-indicator
+btnurl: https://community.digital.gov.au/t/search-box
 btntype: secondary
 ---
 

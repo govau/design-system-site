@@ -1,7 +1,7 @@
 layout: example/page
 pagetitle: Progress indicator live demo
 examples:
-  - template: ../example/example-code.md
-  - template: ../example/example-dark.md
+  - template: ../examples/example-responsive/example-code.md
+  - template: ../examples/example-responsive/example-dark.md
     style: dark
 livedemo: true

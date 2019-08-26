@@ -7,7 +7,7 @@ import React from 'react';
  * The Searchbox component
  */
 const Searchbox = ({ label, placeholder, _relativeURL, _ID, _pages }) => (
-	<form role="search" className="au-search au-stretch_row" method="get" action={`${ _relativeURL( '/components/search/', _ID ) }/`}>
+	<form role="search" aria-label="sitewide" className="au-search au-stretch_row" method="get" action={`${ _relativeURL( '/components/search/', _ID ) }/`}>
 		<label className="sronly" htmlFor="s1">{ label }</label>
 
 		<div className="au-stretch_col-fill">

@@ -1,4 +1,4 @@
-<form class="au-search au-search--dark au-search--responsive" role="search">
+<form class="au-search au-search--dark au-search--responsive" aria-label="sitewide" role="search">
     <label for="standard-dark" class="au-search__label">Search</label>
     <input type="search" id="standard-dark" class="au-text-input au-text-input--dark " />
     <div class="au-search__btn">

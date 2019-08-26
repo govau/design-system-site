@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Buttons accessibility
+pagetitle: Progress indicator code
 
 header:
   - /_shared/header.md
@@ -12,10 +12,9 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - colorblind.md
-  - grayscale.md
-  - keyboard.md
-  - screenreader.md
+  - react-usage.md
+  - react-props.md
+  - react-exports.md
 
 footer:
   - /_shared/footer.md
