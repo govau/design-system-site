@@ -1836,7 +1836,7 @@ searchbox:
     - active: 7
     - something: something
   ID: searchbox    # <-- auto generated, don't change
-  version: 0.1.0    # <-- auto generated, don't change
+  version: 0.2.1    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
     - text-inputs
