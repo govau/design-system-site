@@ -5,4 +5,4 @@ iframeFullwidth: true
 ---
 ## Colour impairment
 
-How the progress indicators are viewed with various colour blindnesses
+How the search box is viewed with various colour blindnesses

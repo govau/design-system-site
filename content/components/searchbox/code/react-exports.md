@@ -6,7 +6,7 @@ layout: section
 
 | name                      | type         | description
 |---------------------------|--------------|---------------------------------------------------------
-| `AUsearchbox` | none default | An item inside the AUprogressIndicator component
+| `AUsearchbox` | none default | The searchbox component
 
 ### [md]node_modules import
 

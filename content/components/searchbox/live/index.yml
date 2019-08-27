@@ -1,5 +1,5 @@
 layout: example/page
-pagetitle: Progress indicator live demo
+pagetitle: Search box live demo
 examples:
   - template: ../examples/example-responsive/example-code.md
   - template: ../examples/example-responsive/example-dark.md

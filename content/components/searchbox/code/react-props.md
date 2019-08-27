@@ -19,4 +19,4 @@ layout: section
 | wrapper        | string   | The wrapping container element. Default is `form`
 
 
-All other props are spread into the component
+All other props are spread into the component.

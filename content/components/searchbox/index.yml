@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Main navigation overview
+pagetitle: Search box overview
 
 header:
   - /_shared/header.md
