@@ -13,7 +13,12 @@ const Searchbox = ({ label, placeholder, _relativeURL, _ID, _pages }) => (
 		label="Search for a component"
 		btnText="Search"
 		inputProps= {{
-			defaultValue: _pages[ _ID ].searchvalue && _pages[ _ID ].searchvalue
+			defaultValue: _pages[ _ID ].searchvalue && _pages[ _ID ].searchvalue,
+			placeholder: 'e.g. body'
+		}}
+		btnProps= {{
+			as: 'secondary',
+			type: 'submit'
 		}}
 		action={`${ _relativeURL( '/components/search/', _ID ) }/`}
 		method="get"

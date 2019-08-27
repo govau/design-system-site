@@ -1856,7 +1856,7 @@ pagination:
     - filter
   related:
     - text-inputs
-    - link list
+    - link-list
   related-articles:
     - TODO
   used-in:

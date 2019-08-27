@@ -1,5 +1,16 @@
 .au-search {
+
 	.au-btn {
-		border-width: 3px;
+		border-width: 1px;
+		height: 46px;
+		background: white;
+		@include AU-fontgrid( xs, heading );
+
+	}
+
+	.au-text-input {
+		border-width: 1px;
+		@include AU-fontgrid( xs, heading );
+
 	}
 }
