@@ -31,4 +31,4 @@ code:
 ---
 ## Default
 
-Insert words here
+Use search component to help users find content or pages through keywords. This can be particularly useful for a web service with a large amount of pages.
