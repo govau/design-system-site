@@ -25,14 +25,15 @@ const TemplatesReleased = ({ _body, _relativeURL, _parseYaml, _parseMD }) => {
 
 		return (
 			<Fragment>
-				<div className="browser-bar">
+	
 				<img className="au-responsive-media-img template-card__image" 
 						alt={ `${ templateID } page template` }
 						src={ _relativeURL( `/assets/img/templates/${ templateImg }` ) } />
-				</div>		
+						
 				<div className="au-card__inner">
 					<div  className="au-card__title">
 					<h2 className="au-display-lg"><a className="au-card--clickable__link" href={ templateID }>{ templates[ templateID ].name }</a></h2>
+					{ _parseMD( templates[ templateID ].description ) }
 					</div>
 				</div>
 			</Fragment>
@@ -46,7 +47,7 @@ const TemplatesReleased = ({ _body, _relativeURL, _parseYaml, _parseMD }) => {
 			<ul className="au-card-list au-card-list--matchheight">
 			{ cards.map( ( card, i ) => (
 					<li key={ i } className="col-md-4">
-						<div  className="au-card au-body">
+						<div  className="au-card au-body au-card--shadow au-card--clickable">
 						{ card }
 						</div>	
 				 	</li>
