@@ -25,19 +25,16 @@ const TemplatesReleased = ({ _body, _relativeURL, _parseYaml, _parseMD }) => {
 
 		return (
 			<Fragment>
-				<div className="template-card__content">
-					<h2 className="au-display-xl">{ templates[ templateID ].name }</h2>
-					{ _parseMD( templates[ templateID ].description ) }
-					<ul className="au-btn__list au-btn__list--inline">
-						<li><AUbutton link={ templateID }>Overview</AUbutton></li>
-						<li><AUbutton link={ `${ templateID }/customise` } as='secondary'>Customise</AUbutton></li>
-					</ul>
-				</div>
-				<a href={ templateID } className="template-card__image au-card au-card--shadow browser-bar">
-					<img
+				<div className="browser-bar">
+				<img className="au-responsive-media-img template-card__image" 
 						alt={ `${ templateID } page template` }
 						src={ _relativeURL( `/assets/img/templates/${ templateImg }` ) } />
-				</a>
+				</div>		
+				<div className="au-card__inner">
+					<div  className="au-card__title">
+					<h2 className="au-display-lg"><a class="au-card--clickable__link" href={ templateID }>{ templates[ templateID ].name }</a></h2>
+					</div>
+				</div>
 			</Fragment>
 		);
 	 } );
@@ -46,10 +43,14 @@ const TemplatesReleased = ({ _body, _relativeURL, _parseYaml, _parseMD }) => {
 	return (
 		<Fragment>
 			{ _body }
-			<ul className="templates__released">
-				{ cards.map( ( card, i ) => (
-					<li key={ i } className="template-card au-card">{ card }</li>
-				)) }
+			<ul className="au-card-list au-card-list--matchheight">
+			{ cards.map( ( card, i ) => (
+					<li key={ i } className="col-md-4">
+						<div  className="au-card au-body">
+						{ card }
+						</div>	
+				 	</li>
+				 ))}
 			</ul>
 		</Fragment>
 	)

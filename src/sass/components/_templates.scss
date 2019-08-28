@@ -49,10 +49,9 @@
 
 
 // The image inside the card
-.template-card .template-card__image {
-	@include AU-space( max-width, 24unit );
+.template-card__image {
 	@include AU-space( max-height, 18unit );
-	@include AU-space( margin-top, 2unit );
+	//@include AU-space( margin-top, 2unit );
 	width: auto;
 
 	.ie8 & {
@@ -63,11 +62,11 @@
 		width: 100%;
 	}
 
-	@include AU-media( xs ){
-		@include AU-space( margin-left, 19unit );
-		margin-top: 0;
-		float: right;
-	}
+	// @include AU-media( xs ){
+	// 	@include AU-space( margin-left, 19unit );
+	// 	margin-top: 0;
+		
+	// }
 }
 
 

@@ -31,12 +31,7 @@ const TemplateDemo = ({ _ID, _body, _relativeURL }) => {
 				<div className="col-sm-6">
 					{ _body }
 					<ul className="au-btn__list au-btn__list--inline">
-						<li><AUbutton link="https://github.com/govau/design-system-starter/archive/master.zip">
-							Download
-						</AUbutton></li>
-						<li><AUbutton link="/get-started/starter-kit" as='secondary'>
-							Get started
-						</AUbutton></li>
+						<li><AUbutton link={ `${ templateID }/customise` } as='primary'>Customise</AUbutton></li>
 					</ul>
 				</div>
 			</div>
