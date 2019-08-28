@@ -9,4 +9,6 @@ Enabling the [`autocomplete`](https://developer.mozilla.org/en-US/docs/Web/HTML/
 
 The [`autocorrect`](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocorrect) and [`spellcheck`](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/spellcheck) attributes may not deliver consistent behaviours across users' devices, and even conflict with a server-side autocorrect or spellcheck function provided by the search engine.
 
+The [`autocapitalize`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/autocapitalize) attribute targets touch-screen devices, and does not have wide browser support. Users may not reasonably expect their search queries to be autocapitalised as they type, but most search engines treat queries case-insensitively.
+
 Setting the `required` attribute may also provide search users with a reminder that "empty" search terms are not able to be submitted, but this is not to be relied on as the sole means of providing that information.
