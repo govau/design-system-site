@@ -31,7 +31,7 @@ const TemplateDemo = ({ _ID, _body, _relativeURL }) => {
 				<div className="col-sm-6">
 					{ _body }
 					<ul className="au-btn__list au-btn__list--inline">
-						<li><AUbutton link={ `${ templateID }/customise` } as='primary'>Customise</AUbutton></li>
+						<li><AUbutton link={ _relativeURL(`/templates/${ templateID }/customise`, _ID ) } as='primary'>Customise</AUbutton></li>
 					</ul>
 				</div>
 			</div>
