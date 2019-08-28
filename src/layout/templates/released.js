@@ -32,7 +32,7 @@ const TemplatesReleased = ({ _body, _relativeURL, _parseYaml, _parseMD }) => {
 				</div>		
 				<div className="au-card__inner">
 					<div  className="au-card__title">
-					<h2 className="au-display-lg"><a class="au-card--clickable__link" href={ templateID }>{ templates[ templateID ].name }</a></h2>
+					<h2 className="au-display-lg"><a className="au-card--clickable__link" href={ templateID }>{ templates[ templateID ].name }</a></h2>
 					</div>
 				</div>
 			</Fragment>

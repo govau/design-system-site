@@ -1,5 +1,5 @@
 ---
-layout: templates/discussion-callout
+layout: component/discussion-callout
 btntext: GitHub
 btnurl: https://github.com/govau/design-system-components/tree/master/packages/
 btntype: secondary
