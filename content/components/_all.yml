@@ -1810,6 +1810,7 @@ searchbox:
   used-in:
     - TODO
   required: false
+  highlight: new
   contributors:
     - name: Trevor Brennan
       img: trevor-brennan.jpg

@@ -9,7 +9,6 @@ import React from 'react';
 const Searchbox = ({ label, placeholder, _relativeURL, _ID, _pages }) => (
 	<AUsearchBox
 		id="s1"
-		aria-label="sitewide"
 		label="Search for a component"
 		btnText="Search"
 		responsive
