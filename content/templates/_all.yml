@@ -36,7 +36,7 @@ content:
 form:
   name: Form
   description: >
-    Form pages ask users a question and allow them to answer it.
+    Forms are used to collect information from the end users with regards to a specific topic.
   state: published
   version: 1.0.0
   components:
