@@ -10,7 +10,7 @@ code:
       -->
 
       <a class="au-direction-link" href="#">
-        Back<span class="au-direction-link__arrow au-direction-link__arrow--left" aria-hidden="true"></span>
+        <span class="au-direction-link__arrow au-direction-link__arrow--left" aria-hidden="true"></span>Back
       </a>
       <a class="au-direction-link" href="#">
         Next<span class="au-direction-link__arrow" aria-hidden="true"></span>
