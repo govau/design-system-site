@@ -1551,7 +1551,7 @@ form:
     - active: 7
     - something: something
   ID: form    # <-- auto generated, don't change
-  version: 0.1.4    # <-- auto generated, don't change
+  version: 0.1.5    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
@@ -1638,7 +1638,7 @@ main-nav:
     - active: 7
     - something: something
   ID: main-nav    # <-- auto generated, don't change
-  version: 1.0.7    # <-- auto generated, don't change
+  version: 1.0.8    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
     - animate
@@ -1792,7 +1792,7 @@ card:
   hasSass: true    # <-- auto generated, don't change
   hasJs: false    # <-- auto generated, don't change
   hasReact: true    # <-- auto generated, don't change
-search-box:
+searchbox:
   name: Search box
   description: >
     An input that allows users to enter a keyword to filter content on the
@@ -1810,6 +1810,7 @@ search-box:
   used-in:
     - TODO
   required: false
+  highlight: new
   contributors:
     - name: Trevor Brennan
       img: trevor-brennan.jpg
@@ -1823,6 +1824,49 @@ search-box:
     - name: Raj Ghuman
       img: raj-ghuman.jpg
       url: 'https://github.com/sukhrajghuman'
+    - name: Gordon Grace
+      img: gordon-grace.jpg
+      url: 'https://github.com/gordongrace'
+  state: published
+  status:
+    useful: done
+    unique: done
+  order: 10
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  ID: searchbox    # <-- auto generated, don't change
+  version: 0.2.1    # <-- auto generated, don't change
+  dependencies:    # <-- auto generated, don't change
+    - core
+    - text-inputs
+    - buttons
+  hasSass: true    # <-- auto generated, don't change
+  hasJs: false    # <-- auto generated, don't change
+  hasReact: true    # <-- auto generated, don't change
+pagination:
+  name: Paginaton
+  description: >
+    Pagination allows large amounts of content to be seperated into multiple
+    pages.
+  metatags:
+    - search
+  tags:
+    - search
+    - filter
+  related:
+    - text-inputs
+    - link-list
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
+  required: false
+  contributors:
+    - name: Trevor Brennan
+      img: trevor-brennan.jpg
+      url: 'https://github.com/TrebBrennan'
   state: suggestion
   status:
     useful: done
@@ -1832,7 +1876,7 @@ search-box:
     - open: 2
     - active: 7
     - something: something
-  ID: search-box    # <-- auto generated, don't change
+  ID: pagination    # <-- auto generated, don't change
   version: 0.0.0    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
