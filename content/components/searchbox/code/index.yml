@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Progress indicator code
+pagetitle: Search box code
 
 header:
   - /_shared/header.md

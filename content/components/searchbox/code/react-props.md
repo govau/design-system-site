@@ -4,7 +4,7 @@ layout: section
 
 ### Props
 
-`AUprogressIndicatorItem`
+`AUsearchbox`
 
 | Prop name  | Type    | Description
 |------------|-------------------------------------------------------------------------------------- | --- |
