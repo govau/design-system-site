@@ -1827,6 +1827,12 @@ searchbox:
     - name: Gordon Grace
       img: gordon-grace.jpg
       url: 'https://github.com/gordongrace'
+    - name: Christopher Lee
+      img: christopher-lee.jpg
+      url: 'https://github.com/sirleech'
+    - name: Alexandra Baranov
+      img: alexandra-baranov.jpg
+      url: 'https://au.linkedin.com/in/alexandrabaranov'
   state: published
   status:
     useful: done
