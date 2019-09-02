@@ -16,6 +16,7 @@ home:
     - headings
     - card
     - cta-link
+    - searchbox
 
 content:
   name: Content
