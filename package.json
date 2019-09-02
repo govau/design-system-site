@@ -32,7 +32,7 @@
 	},
 	"author": {
 		"name": "Commonwealth of Australia, DTA",
-		"email": "designsystem@digital.gov.au",
+		"email": "designsystem@dta.gov.au",
 		"url": "https://www.dta.gov.au/"
 	},
 	"homepage": "https://github.com/govau/design-system-site",
@@ -64,7 +64,7 @@
 		},
 		{
 			"name": "Kiri Hoy",
-			"email": "kiri.hoy@digital.gov.au",
+			"email": "kiri.hoy@dta.gov.au",
 			"url": "https://github.com/kirihoy"
 		}
 	],
@@ -93,6 +93,7 @@
 		"@gov.au/page-alerts": "latest",
 		"@gov.au/progress-indicator": "latest",
 		"@gov.au/responsive-media": "latest",
+		"@gov.au/searchbox": "latest",
 		"@gov.au/select": "latest",
 		"@gov.au/side-nav": "latest",
 		"@gov.au/skip-link": "latest",
@@ -102,7 +103,7 @@
 		"autoprefixer": "^9.4.10",
 		"cfonts": "^2.4.2",
 		"concat-cli": "^4.0.0",
-		"cuttlebelle": "^1.0.0-alpha.66",
+		"cuttlebelle": "^1.0.0-alpha.67",
 		"express": "^4.16.4",
 		"mkdirp": "^0.5.1",
 		"node-fetch": "^2.3.0",

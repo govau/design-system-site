@@ -266,3 +266,45 @@ $AU-main-nav-breakpoint: sm;
 		@include AU-space( margin-top, 0unit );
 	}
 }
+
+
+@mixin ieImage( $url ) {
+
+	.ie8 & {
+		background-image: url( $url );
+	}
+}
+
+//generates fallback for IE8 search icon images
+@mixin generateSearchIconFallback() {
+	.au-btn {
+		@include ieImage( '/assets/img/search/search.png' );
+	}
+
+	.au-btn.au-btn--secondary {
+		@include ieImage( '/assets/img/search/search--dark.png' );
+
+		&:hover {
+			@include ieImage( '/assets/img/search/search.png' );
+		}
+	}
+
+	&.au-search--dark .au-btn {
+		@include ieImage( '/assets/img/search/search--dark.png' );
+	}
+}
+
+
+.au-search {
+	&.au-search--icon {
+
+		@include generateSearchIconFallback()
+	}
+
+	&.au-search--responsive {
+
+		@media screen and ( max-width: 576px ) {
+			@include generateSearchIconFallback();
+		}
+	}
+}

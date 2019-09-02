@@ -1,0 +1,7 @@
+layout: example/page
+pagetitle: Search box live demo
+examples:
+  - template: ../examples/example-responsive/example-code.md
+  - template: ../examples/example-responsive/example-dark.md
+    style: dark
+livedemo: true
