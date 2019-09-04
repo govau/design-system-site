@@ -1,7 +1,7 @@
 {
 	"name": "Australian Government Design System",
 	"short_name": "Design System",
-	"start_url": "https://designsystem.gov.au"
+	"start_url": "https://designsystem.gov.au",
 	"icons": [
 		{
 			"src": "/assets/favicons/android-chrome-192x192.png",
