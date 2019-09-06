@@ -93,8 +93,8 @@ code:
         <AUtableResponsiveWrapper>
             <AUtable
                 caption="Population of Australian states and territories, December 2015"
-                headers={detailedPopulationData}
-                data={detailedPopulationDataHeaders}
+                headers={detailedPopulationDataHeaders}
+                data={detailedPopulationData}
                 striped={true}
             />
         </AUtableResponsiveWrapper>
