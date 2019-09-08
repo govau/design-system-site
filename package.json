@@ -14,7 +14,7 @@
 		"build:js-a11y": "concat-cli -f src/js/a11y/*.js -o src/assets/js/a11y.js",
 		"build:js-header": "concat-cli -f src/js/header/*.js -o src/assets/js/header.js",
 		"build:js-footer": "concat-cli -f src/js/footer/*.js -o src/assets/js/footer.js",
-		"build:uglify": "uglifyjs src/assets/js/header.js --compress --output src/assets/js/header.js && uglifyjs src/assets/js/footer.js --compress --output src/assets/js/footer.js",
+		"build:uglify": "uglifyjs src/assets/js/header.js --compress --output src/assets/js/header.js && uglifyjs src/assets/js/footer.js -b --output src/assets/js/footer.js",
 		"build:js": "mkdirp src/assets/js/ && npm run build:js-a11y && npm run build:js-header && npm run build:js-footer && npm run build:uglify",
 		"build:assets": "npm run build:css && npm run build:js",
 		"build": "npm run build:assets && npm run build:site",

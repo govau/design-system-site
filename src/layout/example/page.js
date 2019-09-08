@@ -142,7 +142,18 @@ const Example = ({
 			}
 			{ filter ? a11yFilter : '' }
 			<main className={`${ fullwidth ? '' : ' example--align-middle' }${ tabbing ? ' js-tabbing' : '' }${ filter === 'protanopia' || filter === 'deuteranopia' ? ' js-filter' : '' }${ filter ? ` js-filter--${ filter}` : '' }`}>
-				<div className={`container-fluid content${ alignContent === 'center' ? ' content--center' : ''}${ tabbing ? ' js-tabbing-area' : '' }`}>
+			{ filter ==="deuteranopia"? 
+				<div className=" bar tabs" role="tablist">
+					<button role="tab" type="button" className="au-btn au-btn--tertiary a11y-button js-filter-btn is-active" data-filter="deuteranopia">
+						<span className="sronly">Apply </span>Deuteranopia<span className="sronly"> color filter</span>
+					</button>
+					<button role="tab" type="button" className="au-btn au-btn--tertiary a11y-button js-filter-btn" data-filter="tritanopia">
+						<span className="sronly">Apply </span>Tritanopia<span className="sronly"> color filter</span>
+					</button>
+				</div>
+				:
+				""}
+				<div className={`container-fluid content${ alignContent === 'center' ? ' content--center' : ''}${ tabbing ? ' js-tabbing-area' : '' }` } aria-controls={`demo-${ componentId }`}>
 					<div className="row">
 						{ exampleLayout }
 					</div>
