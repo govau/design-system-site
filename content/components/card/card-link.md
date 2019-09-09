@@ -30,7 +30,7 @@ code:
         <AUcard className="au-body" clickable shadow>
             <img className="au-responsive-media-img" src="https://designsystem.gov.au/assets/img/placeholder/600X260.png" alt="" />
                 <AUcardInner>
-                    <AUcardTitle level="3"><AUcardLink link="#" text="Title of article" />      </AUcardTitle>
+                    <AUcardTitle level="3"><AUcardLink link="#" text="Title of article" /></AUcardTitle>
                         <p>Some text</p>
                 </AUcardInner>
         </AUcard>
