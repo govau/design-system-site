@@ -3,6 +3,10 @@ import Fs                  from 'fs';
 import Path                from 'path';
 
 import AUbutton  from '../../_auds/layout/buttons';
+import AUcard from '../../_auds/layout/card';
+import AUcardInner  from '../../_auds/layout/card';
+import AUcardTitle  from '../../_auds/layout/card';
+import AUcardLink  from '../../_auds/layout/card';
 
 /**
  * The Discussion Intro component
@@ -25,17 +29,16 @@ const TemplatesReleased = ({ _body, _relativeURL, _parseYaml, _parseMD }) => {
 
 		return (
 			<Fragment>
-	
+	<AUcard className="au-body" clickable shadow>
 				<img className="au-responsive-media-img template-card__image" 
 						alt={ `${ templateID } page template` }
 						src={ _relativeURL( `/assets/img/templates/${ templateImg }` ) } />
 						
-				<div className="au-card__inner">
-					<div  className="au-card__title">
-					<h2 className="au-display-lg"><a className="au-card--clickable__link" href={ templateID }>{ templates[ templateID ].name }</a></h2>
+				<AUcardInner>
+					<AUcardTitle level="3"><AUcardLink link={ templateID } text={ templates[ templateID ].name } /></AUcardTitle>
 					{ _parseMD( templates[ templateID ].description ) }
-					</div>
-				</div>
+				</AUcardInner>
+				</AUcard>
 			</Fragment>
 		);
 	 } );
@@ -47,9 +50,9 @@ const TemplatesReleased = ({ _body, _relativeURL, _parseYaml, _parseMD }) => {
 			<ul className="au-card-list au-card-list--matchheight">
 			{ cards.map( ( card, i ) => (
 					<li key={ i } className="col-md-4">
-						<div  className="au-card au-body au-card--shadow au-card--clickable">
+						
 						{ card }
-						</div>	
+						
 				 	</li>
 				 ))}
 			</ul>
