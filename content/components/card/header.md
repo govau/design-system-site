@@ -20,7 +20,7 @@ code:
 
   - React: |
         /*
-            Light: <AUcardHeader >
+            Light: <AUcardHeader>
             Dark:  <AUcardHeader dark>
             Alt:   <AUcardHeader alt>
         */
