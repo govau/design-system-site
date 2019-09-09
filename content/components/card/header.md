@@ -29,7 +29,7 @@ code:
 
         <AUcard className="au-body">
             <AUcardInner>
-                <AUcardHeader level="3">Card Title</h3>
+                <AUcardHeader level="3">Card Title</AUcardTitle>
                 <p>Some text</p>
                 <p>Additional content</p>
             </AUcardInner>

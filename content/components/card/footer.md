@@ -12,7 +12,7 @@ code:
 
         <div class="au-card au-body">
             <div class="au-card__inner">
-                <h3 class="au-card__title">Card title</h3>
+                <h3 class="au-card__title">Card title</AUcardTitle>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, voluptatibus.</p>
             </div>
             <div class="au-card__footer">
@@ -32,7 +32,7 @@ code:
 
         <AUcard className="au-body">
             <AUcardInner>
-                <AUcardTitle level="3"> Card Title</AUcardTitle>
+                <AUcardTitle level="3">Card Title</AUcardTitle>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, voluptatibus.</p>
             </AUcardInner>
             <AUcardFooter alt>
