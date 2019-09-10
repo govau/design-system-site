@@ -32,7 +32,7 @@ code:
 
         <AUcard className="au-body">
             <AUcardInner>
-                <AUcardTitle level="3"> Card Title</AUcardTitle>
+                <AUcardTitle level="3">Card Title</AUcardTitle>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, voluptatibus.</p>
             </AUcardInner>
             <AUcardFooter alt>
