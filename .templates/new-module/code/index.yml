@@ -12,7 +12,9 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - github.md
+   - react-usage.md
+   - react-props.md
+   - react-exports.md
  
 
 footer:

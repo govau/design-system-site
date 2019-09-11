@@ -3,10 +3,8 @@ import Fs                  from 'fs';
 import Path                from 'path';
 
 import AUbutton  from '../../_auds/layout/buttons';
-import AUcard from '../../_auds/layout/card';
-import AUcardInner  from '../../_auds/layout/card';
-import AUcardTitle  from '../../_auds/layout/card';
-import AUcardLink  from '../../_auds/layout/card';
+import AUcard,{ AUcardLink, AUcardTitle, AUcardInner } from '../../_auds/layout/card';
+
 
 /**
  * The Discussion Intro component
@@ -29,15 +27,15 @@ const TemplatesReleased = ({ _body, _relativeURL, _parseYaml, _parseMD }) => {
 
 		return (
 			<Fragment>
-	<AUcard className="au-body" clickable shadow>
+				<AUcard className="au-body" clickable shadow>
 				<img className="au-responsive-media-img template-card__image" 
-						alt={ `${ templateID } page template` }
-						src={ _relativeURL( `/assets/img/templates/${ templateImg }` ) } />
-						
+															alt={ `${ templateID } page template` }
+															src={ _relativeURL( `/assets/img/templates/${ templateImg }` ) } />
 				<AUcardInner>
-					<AUcardTitle level="3"><AUcardLink link={ templateID } text={ templates[ templateID ].name } /></AUcardTitle>
-					{ _parseMD( templates[ templateID ].description ) }
-				</AUcardInner>
+				<AUcardTitle level="3"><AUcardLink link={ templateID } text={ templates[ templateID ].name } /></AUcardTitle>
+														{ _parseMD( templates[ templateID ].description ) }									
+				</AUcardInner>												
+																					
 				</AUcard>
 			</Fragment>
 		);

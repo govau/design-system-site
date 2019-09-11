@@ -111,3 +111,7 @@
 .template-demo .template-card__image {
 	@include AU-space( max-width, 25unit );
 }
+
+.customise-button {
+	@include AU-space( margin-top, 1.5unit );
+}
