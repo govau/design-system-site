@@ -25,3 +25,5 @@ legallist:
 ---
 
 © Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the [MIT license](https://github.com/govau/design-system-components/blob/master/LICENSE)
+
+Hosted on [cloud.gov.au](https://cloud.gov.au).
