@@ -13,6 +13,7 @@ sidebar:
 
 main:
   - default.md
+  - pull-push.md
   - offset.md
   - fluid.md
 
