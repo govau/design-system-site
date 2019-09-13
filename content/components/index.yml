@@ -10,10 +10,14 @@ sidebar:
   - /components/sidebar.md
 
 main:
+  - breadcrumbs.md
   - intro.md
-  - released.md
-  - inprogress.md
-  - suggestions.md
+  - core-group.md
+  - layout-group.md
+  - content-group.md
+  - navigation-group.md
+  - form-group.md
+  - utility-group.md
 
 footer:
   - /_shared/footer.md
