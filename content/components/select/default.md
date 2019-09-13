@@ -44,4 +44,4 @@ code:
 ---
 ## Default
 
-Select boxes (drop-down lists) allow users to select a value from a list that is hidden by default.
+Select boxes (drop-down lists) allow users to select a value from a list.
