@@ -4,6 +4,7 @@ core:
     Core includes a range of styles, variables and code that form the foundation
     of how the Design System works, including colour, typography and spacing.
   group: Foundations
+  group-order: 0
   metatags:
     - color
     - spacing
@@ -69,6 +70,7 @@ accordion:
     Accordions help users see only the content they need. Accordions expand and
     collapse sections of content.
   group: Layout
+  group-order: 5
   metatags:
     - show
     - hide
@@ -135,6 +137,7 @@ animate:
     Animations add visual effects to page elements and help users understand
     what buttons to click or what to do next in a website.
   group: Utility
+  group-order: 0
   metatags:
     - animation
     - movement
@@ -176,6 +179,7 @@ body:
     Body is a collection of styles that apply to common content elements, these
     styles help users read page body content more easily.
   group: Content
+  group-order: 0
   metatags:
     - tags
     - no classes
@@ -243,6 +247,7 @@ breadcrumbs:
     Breadcrumbs are a navigational aid that display a user's location on a
     website as a row of links, usually located at the top of the page.
   group: Navigation
+  group-order: 5
   metatags:
     - previous page
     - next page
@@ -311,6 +316,7 @@ buttons:
     Buttons use labels and sometimes icons to communicate the action that will
     occur when the user touches them.
   group: Forms
+  group-order: 4
   version: 3.0.7    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
@@ -378,6 +384,7 @@ cta-link:
     provoke an immediate response using verbs such as 'call now' or 'find out
     more'.
   group: Navigation
+  group-order: 6
   metatags:
     - buttons
     - call to action
@@ -437,6 +444,7 @@ callout:
     used as a visual clue to draw the eye to the text. They are used to help
     direct a user's attention to important pieces of information.
   group: Content
+  group-order: 5
   metatags:
     - error
     - success
@@ -491,6 +499,7 @@ control-input:
     Control inputs help users input one or more selections from multiple
     options. Our control inputs consist of checkboxes and radio buttons.
   group: Forms
+  group-order: 5
   metatags:
     - checkboxes
     - checkbox
@@ -557,6 +566,7 @@ direction-links:
     Direction links are accompanied by arrows to help users move quickly to
     other parts of the page or through a process.
   group: Navigation
+  group-order: 6
   metatags:
     - next
     - previous
@@ -628,6 +638,7 @@ footer:
     contact information, links to other pages within the website, and email and
     social media links.
   group: Layout
+  group-order: 3
   metatags:
     - page end
     - bottom
@@ -695,6 +706,7 @@ grid-12:
     more easily, and uses a column structure that is both responsive and
     scrollable.
   group: Layout
+  group-order: 1
   metatags:
     - bootstrap
     - 12 col
@@ -738,6 +750,7 @@ header:
     appear at the top of a page, above the main body text. They are usually
     styled as level (H1) headings.
   group: Layout
+  group-order: 2
   metatags:
     - banner
     - hero
@@ -799,6 +812,7 @@ headings:
     Headings help to structure content on a page using relative visual
     prominence.
   group: Content
+  group-order: 2
   metatags:
     - typography
     - headline
@@ -858,6 +872,7 @@ inpage-nav:
     Inpage nav links helps users scan the contents of a page and navigate to
     different sections of the page.
   group: Navigation
+  group-order: 4
   metatags:
     - inpage
     - to this section
@@ -924,6 +939,7 @@ keyword-list:
     The keyword list style helps to emphasise and draw the user's eye to phrases
     that are repeated in a list.
   group: Content
+  group-order: 7
   metatags:
     - departments
     - key
@@ -987,6 +1003,7 @@ link-list:
     The link list style is a simple list of vertical or horizontal links used
     for site navigation. It is used to order information for users.
   group: Navigation
+  group-order: 1
   metatags:
     - inline list
     - horizontal list
@@ -1053,7 +1070,8 @@ page-alerts:
     a page, in a way that attracts the user's attention without interrupting the
     user's task. Typically they appear at the top of a page following a submit
     action.
-  group: Forms
+  group: Content
+  group-order: 4
   metatags:
     - success
     - warning
@@ -1111,6 +1129,7 @@ progress-indicator:
     understand their current context at any given time and be assured that they
     are progressing through the system.
   group: Forms
+  group-order: 6
   metatags:
     - done
     - in progress
@@ -1166,6 +1185,7 @@ responsive-media:
     and slideshow dimensions and aspect ratios for various viewports and widths;
     that is, small screens, large screens and anything in between.
   group: Content
+  group-order: 8
   metatags:
     - ration
     - black bars
@@ -1222,6 +1242,7 @@ select:
     of select helps to reduce input errors and screen space. It's commonly used
     to help users enter a value into a form field.
   group: Forms
+  group-order: 7
   metatags:
     - choice
     - dropdown
@@ -1275,6 +1296,7 @@ skip-link:
     are detected by screen readers and help users quickly jump to and over
     content on the page.
   group: Navigation
+  group-order: 7
   metatags:
     - a11y
     - skip to content
@@ -1338,6 +1360,7 @@ tags:
     They are added to a web page, an asset or other content to help users search
     for and find related content quickly and easily.
   group: Content
+  group-order: 9
   metatags:
     - related
     - badges
@@ -1402,6 +1425,7 @@ text-inputs:
     enter text data in a structured format. Text inputs should be accompanied by
     labels.
   group: Forms
+  group-order: 2
   metatags:
     - text
     - textarea
@@ -1468,6 +1492,7 @@ table:
   name: Table
   description: Used to display tabular data.
   group: Content
+  group-order: 3
   metatags:
     - tabular
     - data
@@ -1533,6 +1558,7 @@ form:
     A collection of styles for labels, hint text, inline error messages,
     fieldsets and spacing for form controls.
   group: Forms
+  group-order: 1
   metatags:
     - forms
     - interactive
@@ -1588,6 +1614,7 @@ main-nav:
     A horizontal list of links to key areas on the website. Typically placed in
     the header.
   group: Navigation
+  group-order: 2
   metatags:
     - mobile menu
     - nav
@@ -1678,6 +1705,7 @@ side-nav:
     A vertical list of links for site navigation typically placed next to the
     body content.
   group: Navigation
+  group-order: 3
   metatags:
     - mobile menu
     - nav
@@ -1770,6 +1798,7 @@ card:
     Cards are frequently displayed alongside other cards to group related
     content or tasks.
   group: Layout
+  group-order: 4
   highlight: new
   metatags:
     - content
@@ -1826,6 +1855,7 @@ searchbox:
     An input that allows users to enter a keyword to filter content on the
     website.
   group: Forms
+  group-order: 3
   metatags:
     - search
   tags:
@@ -1886,6 +1916,7 @@ pagination:
     Pagination allows large amounts of content to be seperated into multiple
     pages.
   group: Navigation
+  group-order: 8
   metatags:
     - search
   tags:
