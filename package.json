@@ -1,7 +1,7 @@
 {
 	"name": "designsystem",
 	"version": "1.0.1",
-	"description": "The government open language for design website.",
+	"description": "The Australian Government Design System website.",
 	"scripts": {
 		"docs": "cuttlebelle docs",
 		"prebuild:pancake": "pancake",
@@ -31,7 +31,7 @@
 		"url": "https://github.com/govau/design-system-site"
 	},
 	"author": {
-		"name": "Commonwealth of Australia, DTA",
+		"name": "Australian Government - Digital Transformation Agency",
 		"email": "designsystem@dta.gov.au",
 		"url": "https://www.dta.gov.au/"
 	},
@@ -66,6 +66,11 @@
 			"name": "Kiri Hoy",
 			"email": "kiri.hoy@dta.gov.au",
 			"url": "https://github.com/kirihoy"
+		},
+		{
+			"name": "Gordon Grace",
+			"email": "gordon.grace@dta.gov.au",
+			"url": "https://github.com/gordongrace"
 		}
 	],
 	"license": "MIT",
