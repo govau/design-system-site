@@ -6,7 +6,6 @@ header:
   - /_shared/header.md
 
 sidebar:
-  - search.md
   - /components/sidebar.md
 
 main:
