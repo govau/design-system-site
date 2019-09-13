@@ -4,9 +4,6 @@ pagetitle: Components
 header:
   - /_shared/header.md
 
-sidebar:
-  - /components/sidebar.md
-
 main:
   - breadcrumbs.md
   - intro.md
