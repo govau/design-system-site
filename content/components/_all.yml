@@ -3,8 +3,7 @@ core:
   description: >
     Core includes a range of styles, variables and code that form the foundation
     of how the Design System works, including colour, typography and spacing.
-  group:
-    - foundations
+  group: Foundations
   metatags:
     - color
     - spacing
@@ -69,8 +68,7 @@ accordion:
   description: >
     Accordions help users see only the content they need. Accordions expand and
     collapse sections of content.
-  group:
-    - layout
+  group: Layout
   metatags:
     - show
     - hide
@@ -136,8 +134,7 @@ animate:
   description: >
     Animations add visual effects to page elements and help users understand
     what buttons to click or what to do next in a website.
-  group:
-    - utility
+  group: Utility
   metatags:
     - animation
     - movement
@@ -178,8 +175,7 @@ body:
   description: >
     Body is a collection of styles that apply to common content elements, these
     styles help users read page body content more easily.
-  group:
-    - content
+  group: Content
   metatags:
     - tags
     - no classes
@@ -246,8 +242,7 @@ breadcrumbs:
   description: >
     Breadcrumbs are a navigational aid that display a user's location on a
     website as a row of links, usually located at the top of the page.
-  group:
-    - navigation
+  group: Navigation
   metatags:
     - previous page
     - next page
@@ -315,8 +310,7 @@ buttons:
 
     Buttons use labels and sometimes icons to communicate the action that will
     occur when the user touches them.
-  group:
-    - forms
+  group: Forms
   version: 3.0.7    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
@@ -383,8 +377,7 @@ cta-link:
     Call to action links are visually distinct instructions to users designed to
     provoke an immediate response using verbs such as 'call now' or 'find out
     more'.
-  group:
-    - navigation
+  group: Navigation
   metatags:
     - buttons
     - call to action
@@ -443,8 +436,7 @@ callout:
     Callouts are an excerpt of text or an article that has been pulled out and
     used as a visual clue to draw the eye to the text. They are used to help
     direct a user's attention to important pieces of information.
-  group:
-    - content
+  group: Content
   metatags:
     - error
     - success
@@ -498,8 +490,7 @@ control-input:
   description: >
     Control inputs help users input one or more selections from multiple
     options. Our control inputs consist of checkboxes and radio buttons.
-  group:
-    - forms
+  group: Forms
   metatags:
     - checkboxes
     - checkbox
@@ -565,8 +556,7 @@ direction-links:
   description: >
     Direction links are accompanied by arrows to help users move quickly to
     other parts of the page or through a process.
-  group:
-    - navigation
+  group: Navigation
   metatags:
     - next
     - previous
@@ -637,8 +627,7 @@ footer:
     page. They provide supplementary information such as copyright, ABN details,
     contact information, links to other pages within the website, and email and
     social media links.
-  group:
-    - layout
+  group: Layout
   metatags:
     - page end
     - bottom
@@ -705,8 +694,7 @@ grid-12:
     horizontally.  A grid helps users read and visually navigate website content
     more easily, and uses a column structure that is both responsive and
     scrollable.
-  group:
-    - layout
+  group: Layout
   metatags:
     - bootstrap
     - 12 col
@@ -749,8 +737,7 @@ header:
     Headers help users understand what the content of the page is about. They
     appear at the top of a page, above the main body text. They are usually
     styled as level (H1) headings.
-  group:
-    - layout
+  group: Layout
   metatags:
     - banner
     - hero
@@ -811,8 +798,7 @@ headings:
   description: >
     Headings help to structure content on a page using relative visual
     prominence.
-  group:
-    - content
+  group: Content
   metatags:
     - typography
     - headline
@@ -871,8 +857,7 @@ inpage-nav:
   description: >
     Inpage nav links helps users scan the contents of a page and navigate to
     different sections of the page.
-  group:
-    - navigation
+  group: Navigation
   metatags:
     - inpage
     - to this section
@@ -938,8 +923,7 @@ keyword-list:
   description: >
     The keyword list style helps to emphasise and draw the user's eye to phrases
     that are repeated in a list.
-  group:
-    - content
+  group: Content
   metatags:
     - departments
     - key
@@ -1002,8 +986,7 @@ link-list:
   description: >
     The link list style is a simple list of vertical or horizontal links used
     for site navigation. It is used to order information for users.
-  group:
-    - navigation
+  group: Navigation
   metatags:
     - inline list
     - horizontal list
@@ -1070,8 +1053,7 @@ page-alerts:
     a page, in a way that attracts the user's attention without interrupting the
     user's task. Typically they appear at the top of a page following a submit
     action.
-  group:
-    - forms
+  group: Forms
   metatags:
     - success
     - warning
@@ -1128,8 +1110,7 @@ progress-indicator:
     Progress indicators provide visual feedback to users to let them know and
     understand their current context at any given time and be assured that they
     are progressing through the system.
-  group:
-    - forms
+  group: Forms
   metatags:
     - done
     - in progress
@@ -1184,8 +1165,7 @@ responsive-media:
     images and video on different size devices. Specifically it manages video
     and slideshow dimensions and aspect ratios for various viewports and widths;
     that is, small screens, large screens and anything in between.
-  group:
-    - content
+  group: Content
   metatags:
     - ration
     - black bars
@@ -1241,8 +1221,7 @@ select:
     Select provides a means to select a single item from a collapsible list. Use
     of select helps to reduce input errors and screen space. It's commonly used
     to help users enter a value into a form field.
-  group:
-    - forms
+  group: Forms
   metatags:
     - choice
     - dropdown
@@ -1295,8 +1274,7 @@ skip-link:
     Skip links are internal page links that aid navigation around a page. They
     are detected by screen readers and help users quickly jump to and over
     content on the page.
-  group:
-    - navigation
+  group: Navigation
   metatags:
     - a11y
     - skip to content
@@ -1359,8 +1337,7 @@ tags:
     Tags are a means of classifying content, typically using keywords or labels.
     They are added to a web page, an asset or other content to help users search
     for and find related content quickly and easily.
-  group:
-    - content
+  group: Content
   metatags:
     - related
     - badges
@@ -1424,8 +1401,7 @@ text-inputs:
     Text inputs are input fields typically used in forms that allow the user to
     enter text data in a structured format. Text inputs should be accompanied by
     labels.
-  group:
-    - forms
+  group: Forms
   metatags:
     - text
     - textarea
@@ -1491,8 +1467,7 @@ text-inputs:
 table:
   name: Table
   description: Used to display tabular data.
-  group:
-    - content
+  group: Content
   metatags:
     - tabular
     - data
@@ -1557,8 +1532,7 @@ form:
   description: >
     A collection of styles for labels, hint text, inline error messages,
     fieldsets and spacing for form controls.
-  group:
-    - forms
+  group: Forms
   metatags:
     - forms
     - interactive
@@ -1613,8 +1587,7 @@ main-nav:
   description: >
     A horizontal list of links to key areas on the website. Typically placed in
     the header.
-  group:
-    - navigation
+  group: Navigation
   metatags:
     - mobile menu
     - nav
@@ -1704,8 +1677,7 @@ side-nav:
   description: >
     A vertical list of links for site navigation typically placed next to the
     body content.
-  group:
-    - navigation
+  group: Navigation
   metatags:
     - mobile menu
     - nav
@@ -1797,8 +1769,7 @@ card:
 
     Cards are frequently displayed alongside other cards to group related
     content or tasks.
-  group:
-    - layout
+  group: Layout
   highlight: new
   metatags:
     - content
@@ -1854,8 +1825,7 @@ searchbox:
   description: >
     An input that allows users to enter a keyword to filter content on the
     website.
-  group:
-    - forms
+  group: Forms
   metatags:
     - search
   tags:
@@ -1915,8 +1885,7 @@ pagination:
   description: >
     Pagination allows large amounts of content to be seperated into multiple
     pages.
-  group:
-    - navigation
+  group: Navigation
   metatags:
     - search
   tags:
