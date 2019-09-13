@@ -1,6 +1,5 @@
 layout: component/page
 pagetitle: Components
-landingpage: true
 
 header:
   - /_shared/header.md
