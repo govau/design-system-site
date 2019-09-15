@@ -12,6 +12,7 @@ sidebar:
   - /components/sidebar.md
 
 main:
+  - usage.md
   - appearance.md
 
 footer:
