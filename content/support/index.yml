@@ -8,6 +8,7 @@ main:
   - git-issue.md
   - faqs.md
   - email-the-team.md
+  - implementations.md
 
 footer:
   - /_shared/footer.md

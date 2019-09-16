@@ -680,9 +680,8 @@ grid-12:
   name: Grid 12
   description: >
     A grid consists of a framework of cells laid out and aligned vertically and
-    horizontally.  A grid helps users read and visually navigate website content
-    more easily, and uses a column structure that is both responsive and
-    scrollable.
+    horizontally.  It helps users read and visually navigate website content
+    more easily, using a responsive, scrollable column structure.
   metatags:
     - bootstrap
     - 12 col
