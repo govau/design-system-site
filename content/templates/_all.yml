@@ -1,7 +1,7 @@
 home:
   name: Home
   description: >
-    Home pages explain your product or service and help users find what they are looking for.
+    Provide a strong first impression.
   state: published
   version: 1.0.0
   components:
@@ -18,7 +18,7 @@ home:
 content:
   name: Content
   description: >
-    Content pages display information clearly.
+    Present information clearly.
   state: published
   version: 1.0.0
   components:
@@ -36,7 +36,7 @@ content:
 form:
   name: Form
   description: >
-    Forms are used to collect information from the end users with regards to a specific topic.
+    Request information from users.
   state: published
   version: 1.0.0
   components:
