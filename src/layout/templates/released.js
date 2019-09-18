@@ -28,9 +28,12 @@ const TemplatesReleased = ({ _body, _relativeURL, _parseYaml, _parseMD }) => {
 		return (
 			<Fragment>
 				<AUcard className="au-body" clickable shadow>
-				<img className="au-responsive-media-img template-card__image" 
+				<div className="template-card__image">
+				<img className="au-responsive-media-img" 
 															alt={ `${ templateID } page template` }
 															src={ _relativeURL( `/assets/img/templates/${ templateImg }` ) } />
+				</div>
+															
 				<AUcardInner>
 				<AUcardTitle level="3"><AUcardLink link={ templateID } text={ templates[ templateID ].name } /></AUcardTitle>
 														{ _parseMD( templates[ templateID ].description ) }									
