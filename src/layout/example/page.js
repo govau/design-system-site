@@ -129,7 +129,7 @@ const Example = ({
 	return (
 		<html>
 		<head dangerouslySetInnerHTML={{ __html: headContent }}  />
-		<body className={ `au-grid${ a11yPage ? ' a11y' : '' }${ livedemo ? ' live-demo' : '' }` }>
+		<body className={ `au-grid${ a11yPage ? ' a11y' : '' }${ livedemo ? ' live-demo' : '' }${ tabbing ? ' tabbing-frame' : '' }` }>
 			{
 				livedemo
 					? <header className="header__bar">
