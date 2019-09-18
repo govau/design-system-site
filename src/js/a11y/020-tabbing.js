@@ -2,15 +2,6 @@
  * Add the tab button to each tab section
  */
 var tabs = document.querySelector( '.js-tabbing' );
-if( tabs !== null ) {
-	tabs.insertAdjacentHTML(
-		'afterbegin',
-		'<div class="bar">' +
-		'<button type="button" class="au-btn au-btn--tertiary a11y-button js-tabbing-switch">Show tabbing</button>' +
-		'</div>'
-	);
-}
-
 
 /**
  * Toggle the tabs on the button click

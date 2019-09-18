@@ -1,10 +1,4 @@
 var filters = document.querySelector( '.js-filter' );
-// if( filters !== null ) {
-// 	filters.insertAdjacentHTML(
-// 		'afterbegin',
-		
-// 	);
-// }
 
 AddEvent( document.querySelectorAll( '.js-filter-btn' ), 'click', function( event, $this ) {
 	var newFilter = 'js-filter--' + $this.getAttribute( 'data-filter' );
