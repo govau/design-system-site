@@ -6,7 +6,7 @@ AddEvent( tabItems, 'click', function( event, $this ) {
 
 	// Add and remove active class for tab links
 	var currentTabItems = $this.parentElement.children;
-
+	console.log(currentTabItems);
 
 	for( var i = 0; i < currentTabItems.length; i++ ) {
 		RemoveClass( currentTabItems[ i ], 'tab-item--active' );
