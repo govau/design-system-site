@@ -11,6 +11,7 @@ const Searchbox = ({ label, placeholder, _relativeURL, _ID, _pages }) => (
 		id="s1"
 		label="Search for a component"
 		btnText="Search"
+		name="s"
 		responsive
 		inputProps= {{
 			defaultValue: _pages[ _ID ].searchvalue && _pages[ _ID ].searchvalue,
