@@ -20,7 +20,7 @@ const TemplateDemo = ({ _ID, _body, _relativeURL }) => {
 		<div className="template-demo">
 			<div className="row">
 				<div className="col-sm-6">
-					<a href="customise" className="template-card__image browser-bar au-card au-card--shadow">
+					<a href="customise" className="browser-bar au-card au-card--shadow">
 						<img
 							alt={ `${ templateID } page template` }
 							className="template-demo_img"
