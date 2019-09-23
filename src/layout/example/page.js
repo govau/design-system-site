@@ -155,7 +155,7 @@ const Example = ({
 				}
 				{ tabbing ? 
 					<div class="bar">
-						<button type="button" class="au-btn au-btn--tertiary a11y-button js-tabbing-switch">Show tabbing</button>
+						<button type="button" className="au-btn au-btn--tertiary a11y-button js-tabbing-switch">Show tabbing</button>
 					</div>	
 					: ""
 				}
