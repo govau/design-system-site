@@ -82,13 +82,13 @@ const Example = ({
 		if( example.style ){
 			return (
 				<div className={ `${ colWidth } col-${ example.style }` } key={ key }>
-					<div className={ `example example-${ componentID }` }>
+					<div className={ `example  example-${ componentID }` }>
 						{ example.template }
 					</div>
 				</div>
 			);
 		}
-
+	
 		return (
 			<div className={ `${ colWidth }` } key={ key }>
 				<div className={ `example example-${ componentID }` }>
@@ -144,10 +144,10 @@ const Example = ({
 			<main className={`${ fullwidth ? '' : ' example--align-middle' }${ tabbing ? ' js-tabbing' : '' }${ filter === 'protanopia' || filter === 'deuteranopia' ? ' js-filter' : '' }${ filter ? ` js-filter--${ filter}` : '' }`}>
 				{ filter === 'deuteranopia'? 
 					<div className=" bar tabs" role="tablist">
-						<button role="tab" type="button" className="au-btn au-btn--tertiary a11y-button js-filter-btn is-active tab-item--active" aria-controls="example" data-filter="deuteranopia">
+						<button role="tab" type="button" className="au-btn au-btn--tertiary a11y-button js-filter-btn is-active tab-item--active" aria-controls={ `iframe-code-example-${ componentID }` } data-filter="deuteranopia">
 							<span className="sronly">Apply </span>Deuteranopia<span className="sronly"> color filter</span>
 						</button>
-						<button role="tab" type="button" className="au-btn au-btn--tertiary a11y-button js-filter-btn" aria-controls="example" data-filter="tritanopia">
+						<button role="tab" type="button" className="au-btn au-btn--tertiary a11y-button js-filter-btn" aria-controls={ `iframe-code-example-${ componentID }` } data-filter="tritanopia">
 							<span className="sronly">Apply </span>Tritanopia<span className="sronly"> color filter</span>
 						</button>
 					</div>
@@ -159,7 +159,7 @@ const Example = ({
 					</div>	
 					: ""
 				}
-				<div id="example" className={`container-fluid content${ alignContent === 'center' ? ' content--center' : ''}${ tabbing ? ' js-tabbing-area' : '' }` } >
+				<div id={ `iframe-code-example-${ componentID }` } className={`container-fluid content${ alignContent === 'center' ? ' content--center' : ''}${ tabbing ? ' js-tabbing-area' : '' }` } >
 					<div className="row">
 						{ exampleLayout }
 					</div>
