@@ -40,7 +40,7 @@ function Tab() {
 		if( loop >= items.length ) {
 			StopTab( interval, document.querySelector( '.js-tabbing-switch' ) );
 		}
-		
+
 		items[ loop ].focus();
 
 		loop ++;
