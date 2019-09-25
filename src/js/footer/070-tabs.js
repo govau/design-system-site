@@ -7,7 +7,6 @@ AddEvent( tabItems, 'click', function( event, $this ) {
 	// Add and remove active class for tab links
 	var currentTabItems = $this.parentElement.children;
 
-
 	for( var i = 0; i < currentTabItems.length; i++ ) {
 		RemoveClass( currentTabItems[ i ], 'tab-item--active' );
 		currentTabItems[ i ].setAttribute( 'aria-selected', 'false' );

@@ -2,5 +2,7 @@
 
 Things we will be working on in the near future:
 
-- Work with GovCMS team to ensure tight feedback loops between Design System and default GovCMS theme
-- Expand template offerings to include [commonly-requested templates](https://community.digital.gov.au/c/designsystem/suggest-a-template) (for example, search engine result pages, entry/exit steps to multi-factor authentication)
+- Building a gallery of example deployments of the design system
+- Update information architecture for supporting documentation
+- Track and provide referrals to third-party frameworks and content management systems implementing the design system
+- Increase automation of test/deployment of `design-system-starter` site to align with `design-system-components`

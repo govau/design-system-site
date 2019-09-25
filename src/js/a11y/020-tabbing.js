@@ -2,15 +2,6 @@
  * Add the tab button to each tab section
  */
 var tabs = document.querySelector( '.js-tabbing' );
-if( tabs !== null ) {
-	tabs.insertAdjacentHTML(
-		'afterbegin',
-		'<div class="bar">' +
-		'<button type="button" class="au-btn au-btn--tertiary a11y-button js-tabbing-switch">Show tabbing</button>' +
-		'</div>'
-	);
-}
-
 
 /**
  * Toggle the tabs on the button click
@@ -33,7 +24,7 @@ AddEvent( document.querySelector( '.js-tabbing-switch' ), 'click', function( eve
 /**
  * Event listener for when the user scrolls or uses the tab key to stop Tab() function
  */
-AddEvent( document.querySelector( 'body' ), 'keydown', function( event, $this ) {
+AddEvent( document.querySelector( '.tabbing-frame' ), 'keydown', function( event, $this ) {
 	StopTab( interval, document.querySelector( '.js-tabbing-switch' ) )
 });
 

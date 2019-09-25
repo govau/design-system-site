@@ -2,8 +2,8 @@
 
 Things we are currently working on:
 
-- Add more detailed documentation and rationale around existing [templates](https://designsystem.gov.au/templates).
-- Build most-requested component from the community: `cards`
 - Improvements to [`table`](https://designsystem.gov.au/components/table) component
+- Add `pagination` component
 - Simplify onboarding processes for designers, developers and product owners
-- Version control for Sketch files using Design System components and templates
+- Expand template offerings to include [commonly-requested templates](https://community.digital.gov.au/c/designsystem/suggest-a-template) (for example, search engine result pages, media releases, etc.)
+- Ensure common government CMS platforms can easily align with current versions of components and templates

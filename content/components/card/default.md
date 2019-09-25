@@ -25,7 +25,7 @@ code:
 
         <AUcard>
             <AUcardInner>
-                <AUcardTitle>Card Title</h3>
+                <AUcardTitle>Card Title</AUcardTitle>
                 <p>Some text</p>
                 <p>Additional content</p>
             </AUcardInner>

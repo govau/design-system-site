@@ -32,6 +32,10 @@ tiles:
   - image: assets/img/users-logo-nsw.png
     alt: Digital New South Wales
     link: https://www.digital.nsw.gov.au/digital-design-system
+  
+  - image: assets/img/users-logo-act.png
+    alt: ACT Government
+    link: https://www.act.gov.au
 ---
 
 The design system is in its early days but a number of government teams have already jumped on board. Why not join them? Together we‘ll be able to build better, faster, easier.
