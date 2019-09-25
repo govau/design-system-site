@@ -103,10 +103,6 @@
 	}
 }
 
-.template-card__image .template-demo__img{
-	border-bottom: 0;
-}
-
 .template-demo .template-card__image {
 	@include AU-space( max-width, 25unit );
 }
