@@ -3,6 +3,8 @@ import Fs                  from 'fs';
 import Path                from 'path';
 
 import AUbutton  from '../../_auds/layout/buttons';
+import AUcard,{ AUcardLink, AUcardTitle, AUcardInner } from '../../_auds/layout/card';
+
 
 /**
  * The Discussion Intro component
@@ -25,19 +27,21 @@ const TemplatesReleased = ({ _body, _relativeURL, _parseYaml, _parseMD }) => {
 
 		return (
 			<Fragment>
-				<div className="template-card__content">
-					<h2 className="au-display-xl">{ templates[ templateID ].name }</h2>
-					{ _parseMD( templates[ templateID ].description ) }
-					<ul className="au-btn__list au-btn__list--inline">
-						<li><AUbutton link={ templateID }>Overview</AUbutton></li>
-						<li><AUbutton link={ `${ templateID }/customise` } as='secondary'>Customise</AUbutton></li>
-					</ul>
-				</div>
-				<a href={ templateID } className="template-card__image au-card au-card--shadow browser-bar">
-					<img
-						alt={ `${ templateID } page template` }
-						src={ _relativeURL( `/assets/img/templates/${ templateImg }` ) } />
-				</a>
+				<AUcard className="au-body" clickable shadow>
+					<div className="template-card__image">
+						<img className="au-responsive-media-img" 
+							alt={ `${ templateID } page template` }
+							src={ _relativeURL( `/assets/img/templates/${ templateImg }` ) }
+						/>
+					</div>
+																
+					<AUcardInner>
+						<AUcardTitle className="au-display-lg" level="2">
+							<AUcardLink link={ templateID } text={ templates[ templateID ].name } />
+						</AUcardTitle>
+						{ _parseMD( templates[ templateID ].description ) }									
+					</AUcardInner>
+				</AUcard>
 			</Fragment>
 		);
 	 } );
@@ -46,10 +50,14 @@ const TemplatesReleased = ({ _body, _relativeURL, _parseYaml, _parseMD }) => {
 	return (
 		<Fragment>
 			{ _body }
-			<ul className="templates__released">
-				{ cards.map( ( card, i ) => (
-					<li key={ i } className="template-card au-card">{ card }</li>
-				)) }
+			<ul className="au-card-list au-card-list--matchheight">
+			{ cards.map( ( card, i ) => (
+					<li key={ i } className="col-md-4">
+						
+						{ card }
+						
+				 	</li>
+				 ))}
 			</ul>
 		</Fragment>
 	)

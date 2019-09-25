@@ -10,7 +10,7 @@ tabs:
   - /templates/_tabs.md
 
 main:
-  - todo.md
+  - github.md
 
 footer:
   - /_shared/footer.md
