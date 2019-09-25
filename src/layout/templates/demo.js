@@ -30,7 +30,7 @@ const TemplateDemo = ({ _ID, _body, _relativeURL }) => {
 				</div>
 				<div className="col-sm-6">
 					{ _body }
-						<AUctaLink className="template-demo__cta" text="Customise this template" link={ _relativeURL(`/templates/${ templateID }/customise`, _ID ) } as='primary'></AUctaLink>
+						<AUctaLink className="template-demo__cta" text="Customise this template" link={ '_relativeURL(`/templates/${ templateID }/customise`, _ID ) '} />
 				</div>
 			</div>
 		</div>
