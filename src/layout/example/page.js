@@ -88,7 +88,7 @@ const Example = ({
 				</div>
 			);
 		}
-	
+
 		return (
 			<div className={ `${ colWidth }` } key={ key }>
 				<div className={ `example example-${ componentID }` }>
