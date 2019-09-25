@@ -20,5 +20,4 @@ navigation:
       items:
         - text: Download
           link: /download
-        - text: Customise
-          link: /customise
+     
