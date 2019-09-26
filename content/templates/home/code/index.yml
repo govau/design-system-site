@@ -1,5 +1,5 @@
 layout: templates/page
-pagetitel: Home template code
+pagetitle: Home template code
 
 header:
   - /_shared/header.md
