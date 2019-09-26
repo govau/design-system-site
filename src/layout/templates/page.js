@@ -24,14 +24,13 @@ const TemplatePage = ({
 	const templatesYaml = Fs.readFileSync( `${ templatesDir }/_all.yml`, 'utf-8' )
 	const templates =  _parseYaml( templatesYaml );
 
+
 	const templateID = _ID.split( '/' )[ 1 ];
 	const template = templates[ templateID ];
 
 	// Use the page title otherwise use the template name
 	let description = "Choose from any of the templates below to get your project up and running faster. They’ll save your team time and resources and help get value to your users sooner.";
-	let title = pagetitle;
 	if( template ){
-		title = template.name;
 		description = template.description;
 	}
 
@@ -58,13 +57,13 @@ const TemplatePage = ({
 <meta name="twitter:name" content="Australian Government Design System">
 <meta name="twitter:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:type" content="website">
-<meta property="og:title" content="${ title } - Australian Government Design System">
+<meta property="og:title" content="${ pagetitle } - Australian Government Design System">
 <meta property="og:site_name" content="Australian Government Design System">
 <meta property="og:description" content="${ description }">
 <meta property="og:image" content="https://designsystem.gov.au/assets/favicons/designsystem.jpg">
 <meta property="og:url" content="https://designsystem.gov.au">
 
-<title>${ title } - Australian Government Design System</title>
+<title>${ pagetitle } - Australian Government Design System</title>
 
 <link rel="stylesheet" href=${ _relativeURL( '/assets/css/style.css', _ID ) }>
 
@@ -102,7 +101,7 @@ const TemplatePage = ({
 													_parseYaml={ _parseYaml }
 												/>
 											</Fragment>
-										: <h1>{ title }</h1>
+										: <h1>{ pagetitle }</h1>
 								}
 								{ tabs ? tabs : null }
 								{ main }
