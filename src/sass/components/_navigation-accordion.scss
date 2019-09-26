@@ -32,7 +32,7 @@
 
 	.au-accordion__body-wrapper {
 		padding: 2px 3px;
-		background-color: $AU-color-background-alt-shade;
+		background-color: lighten($AU-color-background-alt-shade, 3%);
 		border-top: 1px solid darken($AU-color-background-shade, 15%);
 	}
 
