@@ -1,4 +1,5 @@
 layout: templates/page
+pagetitle: Form template code
 
 header:
   - /_shared/header.md
