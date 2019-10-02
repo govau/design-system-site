@@ -66,7 +66,7 @@ code:
               https://www.paulirish.com/2009/avoiding-the-fouc-v3/
       */
 
-      import AUmainNav, { AUmainNavContent } from './main-nav.js';
+      import AUmainNav, { AUmainNavContent } from '@gov.au/main-nav';
 
       <AUmainNav dark alt>
         <div className="container">
