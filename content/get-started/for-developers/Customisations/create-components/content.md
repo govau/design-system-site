@@ -9,7 +9,7 @@ If you are in the process of making a new component make sure it is something yo
 
 We like to ask these questions before making new components:
 - Is it possible to use an exisiting component?
-- Is it possible to meet this user need by [customising an existing component](/get-started/customise-components)?
+- Is it possible to meet this user need by [customising an existing component](/get-started/for-developers/customisations/customise-components)?
 
 If you can't use or modify an existing component we ask:
 - Is it possible to use components that exist to make this ( grid, buttons, responsive-media, body )?

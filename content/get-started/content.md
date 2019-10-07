@@ -2,27 +2,18 @@
 
 There are many ways to get started with the Australian Government Design System. It all depends on your project's needs and whether you are a developer or a designer (or somewhere in between). Don’t forget to check out our [community](https://community.digital.gov.au/c/designsystem) to see what others are doing!
 
-There are four ways to get started with the Design System;
+In publishing and graphic design, lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used before final copy is available, but it may also be used to temporarily replace copy in a process called greeking, which allows designers to consider form without the meaning of the text influencing the design.
 
-- If you have prior experience with `npm`, [use npm to install the components](get-started/npm-install)
-- If you don't have prior experience with `npm`, [visit our Download page to install the components](get-started/download-page)
-- For designers, visit our download page to use [design assets in sketch](get-started/design-assets)
-- For full page templates, [download the design system starter kit](get-started/starter-kit)
+Lorem ipsum is typically a corrupted version of De finibus bonorum et malorum, a first-century BCE text by Cicero, with words altered, added, and removed to make it nonsensical, improper Latin.
 
-Once you have the components in a website we have advanced guides for developers on how to:
+Versions of the lorem ipsum text have been used in typesetting at least since the 1960s, when it was popularized by advertisements for Letraset transfer sheets. Lorem ipsum was introduced to the digital world in the mid-1980s when Aldus employed it in graphic and word-processing templates for its desktop publishing program PageMaker. Other popular word processors including Pages and Microsoft Word have since adopted lorem ipsum as well.
 
-- [Customise the colour scheme](get-started/customise-colour)
-- [How to use the font size and space functions](get-started/font-size-space)
-- [Customise existing components](get-started/customise-components)
-- [Create a new component](get-started/create-components)
-- [Set up a development environment](get-started/development-environment)
-- [Spacing between components](get-started/spacing-between-components)
+A common form of lorem ipsum reads:
 
-The advanced guides assume prior knowledge of `npm` and `SASS`. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor sed viverra ipsum nunc aliquet bibendum enim. In massa tempor nec feugiat. Nunc aliquet bibendum enim facilisis gravida. Nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Amet luctus venenatis lectus magna fringilla. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque in. Egestas egestas fringilla phasellus faucibus scelerisque eleifend. Sagittis orci a scelerisque purus semper eget duis. Nulla pharetra diam sit amet nisl suscipit. Sed adipiscing diam donec adipiscing tristique risus nec feugiat in. Fusce ut placerat orci nulla. Pharetra vel turpis nunc eget lorem dolor. Tristique senectus et netus et malesuada.
 
-Throughout the process you may notice issues, missing features or have ideas for new components. If you would like to contribute or help build the future of the Australian Government Design System you can:
+Etiam tempor orci eu lobortis elementum nibh tellus molestie. Neque egestas congue quisque egestas. Egestas integer eget aliquet nibh praesent tristique. Vulputate mi sit amet mauris. Sodales neque sodales ut etiam sit. Dignissim suspendisse in est ante in. Volutpat commodo sed egestas egestas. Felis donec et odio pellentesque diam. Pharetra vel turpis nunc eget lorem dolor sed viverra. Porta nibh venenatis cras sed felis eget. Aliquam ultrices sagittis orci a. Dignissim diam quis enim lobortis. Aliquet porttitor lacus luctus accumsan. Dignissim convallis aenean et tortor at risus viverra adipiscing at.
 
-- [Join the community](/community)
-- [Submit a bug report](https://github.com/govau/design-system-components/issues/new?template=----bug-report.md)
-- [Submit a feature request](https://github.com/govau/design-system-components/issues/new?template=---feature-request.md)
-- [Suggest a component](https://community.digital.gov.au/c/designsystem/suggest-a-component)
+"Lorem ipsum" text is derived from sections 1.10.33 of Cicero's De finibus bonorum et malorum.
+
+It is not known exactly when the text obtained its current standard form; it may have been as late as the 1960s. Dr Richard McClintock, a Latin scholar who was the publication's director at Hampden–Sydney College in Virginia, discovered the source of the passage sometime before 1982 while searching for instances of the Latin word "consectetur" ("that he/she/it pursue", subjunctive), rarely used in classical literature. The physical source of the lorem ipsum text may be the 1914 Loeb Classical Library Edition of the De Finibus, where the Latin text, presented on the left-hand (even) pages, breaks off on page 34 with "Neque porro quisquam est qui do-" and continues on page 36 with "lorem ipsum ...", suggesting that the galley type of that page was mixed up to make the dummy text seen today.

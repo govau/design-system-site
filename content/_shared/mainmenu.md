@@ -8,7 +8,7 @@ navigation:
       items:
         - text: About
           link: /
-        - text: Get started
+        - text: Documentation
           link: /get-started
         - text: Components
           link: /components

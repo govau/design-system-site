@@ -1,7 +1,11 @@
+layout: getstarted/page
 pagetitle: Design Principles
 
 header:
   - /_shared/header.md
+
+sidenav:
+  - /get-started/sidenav.md
 
 main:
   - intro.md

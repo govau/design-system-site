@@ -2,9 +2,8 @@
 layout: side-nav
 startID: get-started
 order:
-  - npm-install
-  - download-page
-  - starter-kit
+  - design-principles
+  - brag-board
   - design-assets
   - customise-colour
   - font-size-space

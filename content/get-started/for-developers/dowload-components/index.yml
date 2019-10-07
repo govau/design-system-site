@@ -1,6 +1,5 @@
 layout: getstarted/page
-pagetitle: Documentation
-
+pagetitle: Download Components
 header:
   - /_shared/header.md
 

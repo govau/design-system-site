@@ -27,6 +27,7 @@ const Search = ({ headline, link, _parseReact }) => {
 					{
 						type: 'svg',
 						title: '##name##',
+						name: '##name##',
 						svg: '##svg##',
 						description: '##description##',
 						fullwidth: true,

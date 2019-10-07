@@ -35,7 +35,7 @@ const TemplateDemo = ({ _ID, _body, _relativeURL }) => {
 							Download
 						</AUbutton></li>
 						<li><AUbutton link="/get-started/starter-kit" as='secondary'>
-							Get started
+							Documentation
 						</AUbutton></li>
 					</ul>
 				</div>
