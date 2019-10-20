@@ -15,5 +15,8 @@ main:
   - inprogress.md
   - suggestions.md
 
+community:
+  - /_shared/community-links.md
+
 footer:
   - /_shared/footer.md

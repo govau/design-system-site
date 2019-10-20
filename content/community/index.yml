@@ -13,5 +13,8 @@ main:
   - headingleft_collaborative.md
   - footer-lists.md
 
+community:
+  - /_shared/community-links.md
+
 footer:
   - /_shared/footer.md

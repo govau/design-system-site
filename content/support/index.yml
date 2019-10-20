@@ -10,5 +10,8 @@ main:
   - email-the-team.md
   - implementations.md
 
+community:
+  - /_shared/community-links.md
+
 footer:
   - /_shared/footer.md
