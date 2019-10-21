@@ -6,30 +6,29 @@ import PropTypes from 'prop-types';
 /**
  * The CommunityLinks component
  */
-const CommunityLinks = ({ headline, links, _body, items }) => (
+const CommunityLinks = ({ items }) => (
 	<div className="community-links au-body">
-	<div className="container-fluid">
-		<div className="row">
+		<div className="container-fluid">
+			<div className="row">
+			{
+				items.map( ( item, i ) => {
 
-		{
-			items.map( ( item, i ) => {
-
-				return (
-					<div className="col-md-4 col-sm-6">
-						<img src={item.imageUrl}></img>
-						<span class="community-links--title"><strong>{item.title}</strong></span>
-						<a href={item.url} className={`icon icon--${item.icon} icon--action`}>{item.urlText}</a>
-					</div>
-				)
-			})
-		}
+					return (
+						<div className="col-md-4 col-sm-6" key={ i }>
+							<img src={item.imageUrl}></img>
+							<span className="community-links--title"><strong>{item.title}</strong></span>
+							<a href={item.url} className={`icon icon--${item.icon} icon--action`}>{item.urlText}</a>
+						</div>
+					)
+				})
+			}
+			</div>
 		</div>
-	</div>
 	</div>
 );
 
 CommunityLinks.propTypes = {
-
+	items: PropTypes.arrayOf(Object)
 };
 
 CommunityLinks.defaultProps = {
