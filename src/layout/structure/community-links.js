@@ -17,7 +17,7 @@ const CommunityLinks = ({ headline, links, _body, items }) => (
 				return (
 					<div className="col-md-4 col-sm-6">
 						<img src={item.imageUrl}></img>
-						<span class="community-links--title"><strong>{item.title}</strong></span>
+						<span className="community-links--title"><strong>{item.title}</strong></span>
 						<a href={item.url} className={`icon icon--${item.icon} icon--action`}>{item.urlText}</a>
 					</div>
 				)

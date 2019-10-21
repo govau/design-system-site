@@ -56,7 +56,8 @@ const Page = ({
 
 <script src=${ _relativeURL( '/assets/js/header.js', _ID ) }></script>`;
 
-	const mainContent = main.map( ( content, i ) => (
+	const mainContent = main.map( ( content, i ) => {
+		return (
 		<div className={ `tier tier--${ i % 2 === 0 ? 'even' : 'odd' }` } key={ i }>
 			<div className="container-fluid">
 				<div className="row">
@@ -67,7 +68,8 @@ const Page = ({
 				</div>
 			</div>
 		</div>
-	) );
+	)
+	} );
 
 	return (
 		<html>

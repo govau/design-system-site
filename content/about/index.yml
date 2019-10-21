@@ -1,16 +1,18 @@
 layout: about/page
 
 pagetitle: About
+
 header:
   - /index/header.md
+
 main:
   - intro.md
   - vision.md
   - what.md
   - why.md
-  - how.md
-  - governance.md
+  - how-it-works.md
   - contributors.md
+  - style-manual.md
 
 community:
   - /_shared/community-links.md

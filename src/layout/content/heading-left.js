@@ -7,8 +7,8 @@ import AnchorTitle from '../anchor-title';
 /**
  * The partial component
  */
-const headingLeft = ({ heading, headingSize, _body }) => (
-	<div className="row headingLeft">
+const HeadingLeft = ({ heading, _body, headingSize }) => (
+	<div className="row HeadingLeft">
 		<div className="col-md-2">
 			<AnchorTitle
 				heading={ heading }
@@ -18,7 +18,7 @@ const headingLeft = ({ heading, headingSize, _body }) => (
 	</div>
 );
 
-headingLeft.propTypes = {
+HeadingLeft.propTypes = {
 	/**
 	 * _body: (text)(4)
 	 */
@@ -26,8 +26,8 @@ headingLeft.propTypes = {
 
 };
 
-headingLeft.defaultProps = {
+HeadingLeft.defaultProps = {
 	headingSize: '3',
 };
 
-export default headingLeft;
+export default HeadingLeft;

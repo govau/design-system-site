@@ -8,8 +8,11 @@ navigation:
       items:
         - text: Home
           link: /
+        - text: Download
+          link: /download
         - text: Get started
           link: /get-started
+
         - text: Components
           link: /components
         - text: Templates
@@ -20,10 +23,4 @@ navigation:
           link: /community
         - text: Support
           link: /support
-    - alignment: right
-      items:
-        - text: GitHub
-          link: https://github.com/govau/design-system-components/
-        - text: Download
-          link: /download
 ---

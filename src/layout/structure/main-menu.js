@@ -41,9 +41,6 @@ const MainMenu = ({ navigation, _relativeURL, _ID, _pages }) => {
 						<AUmainNavContent items={ navigation.sections[ 0 ].items.map(
 							item => CreateMainMenuLink( item, _relativeURL, _ID, _pages )
 						) }>
-							<AUlinkList className="au-main-nav--submenu" items={ navigation.sections[ 1 ].items.map(
-								item => CreateLink( item, _relativeURL, _ID, _pages )
-							) } />
 						</AUmainNavContent>
 					</div>
 				</div>
