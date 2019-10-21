@@ -163,4 +163,4 @@ This gives a total element height of `40px` * 1.225 = `49px`.
 
 > Note 49 is divisible by the `$AU-unit`, which we have changed to 7
 
-System fonts may also change the the layout of the page, using these functions makes certain that while the text may change between different operating systems, they are still going to align to a grid.
+Use of system fonts may cause changes in the layout of the page across operating systems. Using these functions ensures that the text will still align to a grid.
