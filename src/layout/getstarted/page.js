@@ -14,7 +14,8 @@ const Page = ({
 	pagetitle,
 	sidenav,
 	main,
-	footer,
+	community,
+	footer
 }) => {
 
 	const description = `Documentation to help you ${ pagetitle.toLowerCase() }`;
@@ -91,6 +92,7 @@ const Page = ({
 						</main>
 					</div>
 				</div>
+				{ community }
 				{ footer }
 			</div>
 			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
