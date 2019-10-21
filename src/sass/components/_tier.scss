@@ -5,14 +5,6 @@
 		@include AU-space( padding, 5unit 0 );
 	}
 
-	&.tier--community {
-		@include AU-space( padding, 1unit 0 );
-
-		@include AU-media( sm ){
-			@include AU-space( padding, 3unit 0 );
-		}
-	}
-
 	&.tier--odd {
 		background: $AU-color-background-alt;
 	}
