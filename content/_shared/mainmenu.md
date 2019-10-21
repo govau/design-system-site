@@ -6,7 +6,7 @@ navigation:
   sections:
     - alignment: left
       items:
-        - text: About
+        - text: Home
           link: /
         - text: Get started
           link: /get-started
@@ -14,6 +14,8 @@ navigation:
           link: /components
         - text: Templates
           link: /templates
+        - text: About
+          link: /about
         - text: Community
           link: /community
         - text: Support
