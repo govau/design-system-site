@@ -8,7 +8,7 @@ import AnchorTitle from '../anchor-title';
  * The Rationale component
  */
 const Rationale = ({ heading, _body }) => (
-	<div className="row headingLeft">
+	<div className="row HeadingLeft">
 		<div className="col-md-4">
 			<AnchorTitle heading={ heading } headingSize={ 3 } />
 		</div>

@@ -1,11 +1,11 @@
-// headingLeft
+// HeadingLeft
 // Block of text with the introduction heading on the left
 
-* + .headingLeft {
+* + .HeadingLeft {
 	@include AU-space( margin-top, 3unit );
 }
 
-.headingLeft .col-md-9 {
+.HeadingLeft .col-md-9 {
 	@include AU-space( margin-top, 1unit );
 
 	@include AU-media ( md) {
