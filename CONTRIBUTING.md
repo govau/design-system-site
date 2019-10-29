@@ -10,7 +10,7 @@ Wherever you are, and whatever your discipline is, you are invited to contribute
 
 ## Contents
 
-* [Getting started](#before-you-start)
+* [Before you start](#before-you-start)
 * [Initial set up](#initial-set-up)
 * [Reporting Bugs, Sending Suggestions](#reporting-bugs-asking-questions-sending-suggestions)
 * [Content changes](#content-changes)
