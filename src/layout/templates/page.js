@@ -16,6 +16,7 @@ const TemplatePage = ({
 	header,
 	sidebar,
 	main,
+	community,
 	footer,
 	tabs,
 	pagetitle = '',
@@ -109,6 +110,7 @@ const TemplatePage = ({
 						</div>
 					</main>
 				</div>
+				{ community }
 				{ footer }
 			</div>
 			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />

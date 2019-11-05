@@ -10,5 +10,8 @@ sidebar:
 main:
   - released.md
 
+community:
+  - /_shared/community-links.md
+
 footer:
   - /_shared/footer.md
