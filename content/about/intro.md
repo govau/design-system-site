@@ -6,7 +6,7 @@ imgalt: designers and developers working together illustration
 
 *Together we‘ll be able to build products and services better, faster and easier.*
 
-Join in the community today. This is a great chance for you to:
+Join the community today. This is a great chance for you to:
 
 - **collaborate** on developing up great solutions to common design problems
 

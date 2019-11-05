@@ -16,8 +16,4 @@ navigation:
           link: /templates
         - text: About
           link: /about
-        - text: Community
-          link: /community
-        - text: Support
-          link: /support
 ---
