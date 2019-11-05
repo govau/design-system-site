@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 
 
 /**
- * A list of contributors for the about page
+ * Displays a list of contributors for the about page in random (shuffle) order,
  */
 const Contributors = ({ contributors, _relativeURL }) => {
 
