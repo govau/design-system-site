@@ -10,6 +10,7 @@ const Searchbox = ({ label, placeholder, _relativeURL, _ID, _pages }) => (
 	<AUsearchBox
 		id="s1"
 		label="Search for a component"
+		name="s"
 		btnText="Search"
 		responsive
 		inputProps= {{

@@ -18,7 +18,7 @@ import AUmainNav, { AUmainNavContent } from './main-nav.js';
 					},
 					{
 						link: '#',
-						text: 'Get started',
+						text: 'Documentation',
 					},
 					{
 						link: '#',

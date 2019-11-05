@@ -30,7 +30,14 @@ const TemplateDemo = ({ _ID, _body, _relativeURL }) => {
 				</div>
 				<div className="col-sm-6">
 					{ _body }
-						<AUctaLink className="template-demo__cta" text="Customise this template" link={ _relativeURL(`/templates/${ templateID }/customise`, _ID ) }></AUctaLink>
+					<ul className="au-btn__list au-btn__list--inline">
+						<li><AUbutton link="https://github.com/govau/design-system-starter/archive/master.zip">
+							Download
+						</AUbutton></li>
+						<li><AUbutton link="/get-started/starter-kit" as='secondary'>
+							Documentation
+						</AUbutton></li>
+					</ul>
 				</div>
 			</div>
 		</div>

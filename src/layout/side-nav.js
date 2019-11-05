@@ -76,7 +76,7 @@ const SideNav = ({
 		<AUsideNav
 			accordionHeader="More information on getting started"
 			menuHeaderLink="/get-started"
-			menuHeader="Get started"
+			menuHeader="Documentation"
 			items={ navItems }
 		/>
 	);

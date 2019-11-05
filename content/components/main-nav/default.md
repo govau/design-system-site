@@ -37,7 +37,7 @@ code:
                     </button>
                     <ul class="au-link-list">
                       <li><a href="#">About</a></li>
-                      <li><a href="#">Get started</a></li>
+                      <li><a href="#">Documentation</a></li>
                       <li class="active"><a href="#" aria-current="page">Components</a></li>
                       <li><a href="#">Templates</a></li>
                       <li><a href="#">Community</a></li>
@@ -79,7 +79,7 @@ code:
                 },
                 {
                   link: 'get-started',
-                  text: 'Get started',
+                  text: 'Documentation',
                 },
                 {
                   link: 'components',

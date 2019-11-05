@@ -21,7 +21,7 @@
               </button>
               <ul class="au-link-list">
                 <li><a class="js-focus-me" href="#">About</a></li>
-                <li><a class="js-focus-me" href="#">Get started</a></li>
+                <li><a class="js-focus-me" href="#">Documentation</a></li>
                 <li class="active"><a class="js-focus-me" href="#" aria-current="page">Components</a></li>
                 <li><a class="js-focus-me" href="#">Templates</a></li>
                 <li><a class="js-focus-me" href="#">Community</a></li>

@@ -1,6 +1,5 @@
 layout: getstarted/page
-pagetitle: Documentation
-
+pagetitle: Download Components
 header:
   - /_shared/header.md
 
@@ -9,9 +8,6 @@ sidenav:
 
 main:
   - content.md
-
-community:
-  - /_shared/community-links.md
 
 footer:
   - /_shared/footer.md

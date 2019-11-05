@@ -66,3 +66,14 @@
 		}
 	}
 }
+
+
+.au-side-nav__content ul ul ul a:before, .au-side-nav__content ul ul ul .active > span:before {
+	// background: none;
+}
+
+
+.au-side-nav .au-link-list li.active {
+	border-left: solid 3px $AU-color-foreground-action;
+	background: #e8e6e6;
+}

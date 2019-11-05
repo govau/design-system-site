@@ -8,11 +8,8 @@ navigation:
       items:
         - text: Home
           link: /
-        - text: Download
-          link: /download
-        - text: Get started
+        - text: Documentation
           link: /get-started
-
         - text: Components
           link: /components
         - text: Templates

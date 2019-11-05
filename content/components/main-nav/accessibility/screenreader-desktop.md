@@ -8,7 +8,7 @@ speak: |
 
   [ Link ] About
 
-  [ Link ] Get started
+  [ Link ] Documentation
 
   Current Page, [ Link ] Components
 

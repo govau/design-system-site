@@ -72,22 +72,26 @@ const Page = ({
 				<div className="content-wrapper">
 					<div className="tier">
 						<main tabIndex="-1" id="content" className="main au-body container-fluid">
-							<div className="row">
-								<div className="col-sm-4 col-sm-push-8">
-									{ sidenav }
-								</div>
-								<div className="col-sm-8 col-sm-pull-4">
+							<div className="row documentation--breadcrumbs">
+								<div className="col-sm-8">
 									{ _ID === 'get-started'
 										? null
 										: <Breadcrumbs parents={ _parents } ID={ _ID } relativeURL={ _relativeURL } pages={ _pages } startPath="get-started" />
 									}
+								</div>
+							</div>
+
+							<div className="row">
+							<div className="col-sm-4 col-md-3">
+									{ sidenav }
+								</div>
+								<div className="col-sm-8 col-md-offset-1">
 									<h1 className={
 										_ID === 'index' || _ID === '404'
 											? 'sronly'
 											: '' }>{ pagetitle }</h1>
 									{ main }
 								</div>
-
 							</div>
 						</main>
 					</div>

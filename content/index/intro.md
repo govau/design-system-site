@@ -6,9 +6,6 @@ buttons:
   - link: /get-started
     text: Documentation
     type: secondary
-  - link: /download
-    text: Download
-    type: secondary
 ---
 
 *The Australian Government Design System provides a framework and a set of tools to help designers and developers build government products and services more easily.*

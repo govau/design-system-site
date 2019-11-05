@@ -1,0 +1,2 @@
+- Our team uses sketch to design files. [Learn more about sketch](https://www.sketch.com/)
+- Visit our download page to use [design assets in sketch](get-started/design-assets)

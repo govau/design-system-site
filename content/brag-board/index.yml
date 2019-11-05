@@ -1,17 +1,14 @@
 layout: getstarted/page
-pagetitle: Documentation
+
+pagetitle: Brag board
 
 header:
-  - /_shared/header.md
+  - /index/header.md
 
 sidenav:
   - /get-started/sidenav.md
 
 main:
   - content.md
-
-community:
-  - /_shared/community-links.md
-
 footer:
   - /_shared/footer.md
