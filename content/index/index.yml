@@ -5,8 +5,6 @@ header:
 main:
   - intro.md
   - users.md
-  - brag-board.md
-  - gallery.md
   - statisitics.md
 
 community:
