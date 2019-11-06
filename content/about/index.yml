@@ -12,7 +12,7 @@ main:
   - why.md
   - how-it-works.md
   - contributors.md
-  - style-manual.md
+  - implementations.md
 
 community:
   - /_shared/community-links.md

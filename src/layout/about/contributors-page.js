@@ -33,16 +33,18 @@ const ContributorsPage = ({ title, body, _relativeURL }) => {
 
 	return (
 		<div className="row">
-			<Fragment>
-				<h2>{ title }</h2>
-				<p>{ body }</p>
-				<p>
-					<Contributors
-						contributors={ allContributors }
-						_relativeURL={ _relativeURL }
-					/>
-				</p>
-			</Fragment>
+			<div className="col-md-12">
+				<Fragment>
+					<h2>{ title }</h2>
+					<p>{ body }</p>
+					<p>
+						<Contributors
+							contributors={ allContributors }
+							_relativeURL={ _relativeURL }
+						/>
+					</p>
+				</Fragment>
+			</div>
 		</div>
 	)
 };
