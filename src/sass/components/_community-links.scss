@@ -8,6 +8,11 @@
 
 		background: $AU-color-background-alt-shade;
 
+		.community-links--inline {
+			display: inline-block;
+			vertical-align: top;
+		}
+
 		.community-links--title {
 			display: block;
 		}
