@@ -20,5 +20,8 @@ main:
   - disabled.md
   - small.md
 
+community:
+  - /_shared/community-links.md
+
 footer:
   - /_shared/footer.md

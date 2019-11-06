@@ -16,5 +16,8 @@ main:
   - video-16-9.md
   - video-4-3.md
 
+community:
+  - /_shared/community-links.md
+
 footer:
   - /_shared/footer.md

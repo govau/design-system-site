@@ -17,5 +17,8 @@ main:
   - offset.md
   - fluid.md
 
+community:
+  - /_shared/community-links.md
+
 footer:
   - /_shared/footer.md

@@ -80,9 +80,8 @@ const Page = ({
 									}
 								</div>
 							</div>
-
 							<div className="row">
-							<div className="col-sm-4 col-md-3">
+								<div className="col-sm-4 col-md-3">
 									{ sidenav }
 								</div>
 								<div className="col-sm-8 col-md-offset-1">

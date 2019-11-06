@@ -19,5 +19,8 @@ main:
   - header.md
   - footer.md
 
+community:
+  - /_shared/community-links.md
+
 footer:
   - /_shared/footer.md

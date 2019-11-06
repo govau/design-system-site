@@ -26,6 +26,7 @@ const ComponentPage = ({
 	sidebar,
 	pagetitle,
 	main,
+	community,
 	footer
 }) => {
 	// Get the module from the page ID and parents
@@ -136,7 +137,7 @@ const ComponentPage = ({
 						</div>
 					</main>
 				</div>
-
+				{ community }
 				{ footer }
 			</div>
 			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />

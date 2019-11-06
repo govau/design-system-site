@@ -14,5 +14,8 @@ sidebar:
 main:
   - default.md
 
+community:
+  - /_shared/community-links.md
+
 footer:
   - /_shared/footer.md

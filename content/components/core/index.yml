@@ -16,5 +16,8 @@ main:
   - typography.md
   - spacing.md
 
+community:
+  - /_shared/community-links.md
+
 footer:
   - /_shared/footer.md
