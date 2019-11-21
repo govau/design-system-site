@@ -10,14 +10,12 @@ mainlist:
     link: https://govau-guides.slack.com/
   - text: Roadmap
     link: /roadmap
-  - text: Design principles
-    link: /design-principles
 
 legallist:
   - text: Privacy
     link: https://www.dta.gov.au/privacy-statement
-  - text: Need help?
-    link: /support
+  - text: Get help from the community
+    link: https://community.digital.gov.au/c/designsystem
   - text: Accessibility
     link: https://www.dta.gov.au/accessibility
   - text: Disclaimer
