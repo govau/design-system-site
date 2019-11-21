@@ -16,4 +16,8 @@ navigation:
           link: /templates
         - text: About
           link: /about
+    - alignment: right
+      items:
+        - text: Download
+          link: /download
 ---

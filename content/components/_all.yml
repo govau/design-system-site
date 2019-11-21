@@ -1,5 +1,6 @@
 core:
   name: Core
+  category: core
   description: >
     Core includes a range of styles, variables and code that form the foundation
     of how the Design System works, including colour, typography and spacing.
@@ -64,6 +65,7 @@ core:
   ID: core    # <-- auto generated, don't change
 accordion:
   name: Accordion
+  category: layout
   description: >
     Accordions help users see only the content they need. Accordions expand and
     collapse sections of content.
@@ -129,6 +131,7 @@ accordion:
   ID: accordion    # <-- auto generated, don't change
 animate:
   name: Animate
+  category: content
   description: >
     Animations add visual effects to page elements and help users understand
     what buttons to click or what to do next in a website.
@@ -169,6 +172,7 @@ animate:
   ID: animate    # <-- auto generated, don't change
 body:
   name: Body
+  category: content
   description: >
     Body is a collection of styles that apply to common content elements, these
     styles help users read page body content more easily.
@@ -235,6 +239,7 @@ body:
   ID: body    # <-- auto generated, don't change
 breadcrumbs:
   name: Breadcrumbs
+  category: navigation
   description: >
     Breadcrumbs are a navigational aid that display a user's location on a
     website as a row of links, usually located at the top of the page.
@@ -299,6 +304,7 @@ breadcrumbs:
   hasReact: true    # <-- auto generated, don't change
 buttons:
   name: Buttons
+  category: forms
   description: >
     Buttons make common actions more obvious and help users more easily perform
     them.
@@ -367,6 +373,7 @@ buttons:
   ID: buttons    # <-- auto generated, don't change
 cta-link:
   name: Call to action
+  category: content
   description: >
     Call to action links are visually distinct instructions to users designed to
     provoke an immediate response using verbs such as 'call now' or 'find out
@@ -425,6 +432,7 @@ cta-link:
   hasReact: true    # <-- auto generated, don't change
 callout:
   name: Callout
+  category: content
   description: >
     Callouts are an excerpt of text or an article that has been pulled out and
     used as a visual clue to draw the eye to the text. They are used to help
@@ -479,6 +487,7 @@ callout:
   hasReact: true    # <-- auto generated, don't change
 control-input:
   name: Control input
+  category: forms
   description: >
     Control inputs help users input one or more selections from multiple
     options. Our control inputs consist of checkboxes and radio buttons.
@@ -544,6 +553,7 @@ control-input:
   ID: control-input    # <-- auto generated, don't change
 direction-links:
   name: Direction links
+  category: navigation
   description: >
     Direction links are accompanied by arrows to help users move quickly to
     other parts of the page or through a process.
@@ -612,6 +622,7 @@ direction-links:
   hasReact: true    # <-- auto generated, don't change
 footer:
   name: Footer
+  category: layout
   description: >
     Footers help users find what they need after scrolling to the bottom of a
     page. They provide supplementary information such as copyright, ABN details,
@@ -678,6 +689,7 @@ footer:
   ID: footer    # <-- auto generated, don't change
 grid-12:
   name: Grid 12
+  category: layout
   description: >
     A grid consists of a framework of cells laid out and aligned vertically and
     horizontally.  It helps users read and visually navigate website content
@@ -720,6 +732,7 @@ grid-12:
   ID: grid-12    # <-- auto generated, don't change
 header:
   name: Header
+  category: layout
   description: >
     Headers help users understand what the content of the page is about. They
     appear at the top of a page, above the main body text. They are usually
@@ -781,6 +794,7 @@ header:
   ID: header    # <-- auto generated, don't change
 headings:
   name: Headings
+  category: content
   description: >
     Headings help to structure content on a page using relative visual
     prominence.
@@ -839,6 +853,7 @@ headings:
   ID: headings    # <-- auto generated, don't change
 inpage-nav:
   name: Inpage nav
+  category: navigation
   description: >
     Inpage nav links helps users scan the contents of a page and navigate to
     different sections of the page.
@@ -904,6 +919,7 @@ inpage-nav:
   hasReact: true    # <-- auto generated, don't change
 keyword-list:
   name: Keyword list
+  category: content
   description: >
     The keyword list style helps to emphasise and draw the user's eye to phrases
     that are repeated in a list.
@@ -966,6 +982,7 @@ keyword-list:
   hasReact: true    # <-- auto generated, don't change
 link-list:
   name: Link list
+  category: navigation
   description: >
     The link list style is a simple list of vertical or horizontal links used
     for site navigation. It is used to order information for users.
@@ -1030,6 +1047,7 @@ link-list:
   ID: link-list    # <-- auto generated, don't change
 page-alerts:
   name: Page alerts
+  category: content
   description: >
     Page alerts are used to notify users of important information or changes on
     a page, in a way that attracts the user's attention without interrupting the
@@ -1087,6 +1105,7 @@ page-alerts:
   hasReact: true    # <-- auto generated, don't change
 progress-indicator:
   name: Progress indicator
+  category: forms
   description: >
     Progress indicators provide visual feedback to users to let them know and
     understand their current context at any given time and be assured that they
@@ -1141,6 +1160,7 @@ progress-indicator:
   hasReact: true    # <-- auto generated, don't change
 responsive-media:
   name: Responsive media
+  category: content
   description: >
     Responsive media helps create a responsive experience for users viewing
     images and video on different size devices. Specifically it manages video
@@ -1197,6 +1217,7 @@ responsive-media:
   ID: responsive-media    # <-- auto generated, don't change
 select:
   name: Select
+  category: forms
   description: >
     Select provides a means to select a single item from a collapsible list. Use
     of select helps to reduce input errors and screen space. It's commonly used
@@ -1249,6 +1270,7 @@ select:
   hasReact: true    # <-- auto generated, don't change
 skip-link:
   name: Skip link
+  category: navigation
   description: >
     Skip links are internal page links that aid navigation around a page. They
     are detected by screen readers and help users quickly jump to and over
@@ -1311,6 +1333,7 @@ skip-link:
   ID: skip-link    # <-- auto generated, don't change
 tags:
   name: Tags
+  category: content
   description: >
     Tags are a means of classifying content, typically using keywords or labels.
     They are added to a web page, an asset or other content to help users search
@@ -1374,6 +1397,7 @@ tags:
   hasReact: true    # <-- auto generated, don't change
 text-inputs:
   name: Text inputs
+  category: forms
   description: >
     Text inputs are input fields typically used in forms that allow the user to
     enter text data in a structured format. Text inputs should be accompanied by
@@ -1442,6 +1466,7 @@ text-inputs:
   hasReact: true    # <-- auto generated, don't change
 table:
   name: Table
+  category: content
   description: Used to display tabular data.
   metatags:
     - tabular
@@ -1504,6 +1529,7 @@ table:
   hasReact: true    # <-- auto generated, don't change
 form:
   name: Form
+  category: forms
   description: >
     A collection of styles for labels, hint text, inline error messages,
     fieldsets and spacing for form controls.
@@ -1558,6 +1584,7 @@ form:
   hasReact: true    # <-- auto generated, don't change
 main-nav:
   name: Main nav
+  category: navigation
   description: >
     A horizontal list of links to key areas on the website. Typically placed in
     the header.
@@ -1647,6 +1674,7 @@ main-nav:
   hasReact: true    # <-- auto generated, don't change
 side-nav:
   name: Side nav
+  category: navigation
   description: >
     A vertical list of links for site navigation typically placed next to the
     body content.
@@ -1735,6 +1763,7 @@ side-nav:
   hasReact: true    # <-- auto generated, don't change
 card:
   name: Card
+  category: layout
   description: >
     The card component is used to provide a brief summary of content or a task,
     often with a link to more detail.
@@ -1793,6 +1822,7 @@ card:
   hasReact: true    # <-- auto generated, don't change
 searchbox:
   name: Search box
+  category: forms
   description: >
     An input that allows users to enter a keyword to filter content on the
     website.
@@ -1852,6 +1882,7 @@ searchbox:
   hasReact: true    # <-- auto generated, don't change
 pagination:
   name: Pagination
+  category: navigation
   description: >
     Pagination allows large amounts of content to be separated into multiple
     pages.

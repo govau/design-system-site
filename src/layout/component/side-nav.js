@@ -1,4 +1,4 @@
-import AUsideNav from '../_auds/layout/side-nav';
+import AUsideNav from '../../_auds/layout/side-nav';
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -13,6 +13,9 @@ const SideNav = ({
 	_pages
 }) => {
 
+	console.log("-----------------")
+	console.log(_relativeURL)
+	console.log("-----------------")
 	const SortNavigation = ( a, b ) => {
 
 		// Split the values ../../ and return the ID
@@ -74,9 +77,9 @@ const SideNav = ({
 
 	return(
 		<AUsideNav
-			accordionHeader="More information on getting started"
-			menuHeaderLink="/get-started"
-			menuHeader="Documentation"
+			accordionHeader="Explore the comprehensive list of components"
+			menuHeaderLink="/components"
+			menuHeader="Components"
 			items={ navItems }
 		/>
 	);

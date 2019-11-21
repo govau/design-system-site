@@ -11,10 +11,14 @@ sidebar:
 
 main:
   - intro.md
-  - released.md
-  - inprogress.md
+  - core.md
+  - layout.md
+  - content.md
+  - navigation.md
+  - forms.md
   - suggestions.md
-
+  # - released.md
+  # - inprogress.md
 community:
   - /_shared/community-links.md
 

@@ -1,6 +1,8 @@
+---
+---
 ## Implementations
 
-Implementations listed below are provided for information purposes only, and may not use the latest version of the design system. Support for these implementations is provided by the author / organisation indicated.
+The implementations listed below are provided for information purposes only, and may not use the latest version of the design system. Support for these implementations is provided by the author / organisation indicated.
 
 | Name                                           | Distribution | Author                        | Notes                                                                                    |
 |------------------------------------------------|--------------|-------------------------------|------------------------------------------------------------------------------------------|
