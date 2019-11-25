@@ -9,9 +9,5 @@ main:
   - whats-in-our-system.md
   - users.md
   - statisitics.md
-
-community:
-  - /_shared/community-links.md
-
 footer:
   - /_shared/footer.md

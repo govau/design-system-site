@@ -10,8 +10,5 @@ sidenav:
 main:
   - content.md
 
-community:
-  - /_shared/community-links.md
-
 footer:
   - /_shared/footer.md

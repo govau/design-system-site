@@ -11,7 +11,6 @@ const Page = ({
 	header,
 	pagetitle,
 	main,
-	community,
 	footer
 }) => {
 
@@ -82,7 +81,6 @@ const Page = ({
 						{ mainContent }
 					</main>
 				</div>
-				{ community }
 				{ footer }
 			</div>
 			<script src={ _relativeURL( '/assets/js/footer.js', _ID ) } />
