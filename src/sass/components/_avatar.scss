@@ -18,25 +18,3 @@
 		z-index: 10;
 	}
 }
-
-.about-avatar {
-
-	border: 2px solid #fff;
-	overflow: hidden;
-	display: inline-block;
-	vertical-align: middle;
-	border-radius: 100%;
-	background-color: $AU-color-background-alt;
-	position: relative;
-	width: 4em;
-
-	img {
-		max-width: 100%;
-		display: block;
-	}
-
-	&:hover img {
-		opacity: 0.8;
-		z-index: 10;
-	}
-}

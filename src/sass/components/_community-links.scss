@@ -1,0 +1,14 @@
+.community-links {
+		@include AU-fontgrid( md, default );
+		@include AU-space( padding, 1unit 0 );
+
+		@include AU-media( sm ){
+			@include AU-space( padding, 2unit 0 );
+		}
+
+		background: $AU-color-background-alt;
+
+		.community-links--title {
+			display: block;
+		}
+}
