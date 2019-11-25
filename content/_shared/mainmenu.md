@@ -6,21 +6,22 @@ navigation:
   sections:
     - alignment: left
       items:
-        - text: Home
+        - text: About
           link: /
-        - text: Download
-          link: /download
         - text: Get started
           link: /get-started
-
         - text: Components
           link: /components
         - text: Templates
           link: /templates
-        - text: About
-          link: /about
         - text: Community
           link: /community
         - text: Support
           link: /support
+    - alignment: right
+      items:
+        - text: GitHub
+          link: https://github.com/govau/design-system-components/
+        - text: Download
+          link: /download
 ---

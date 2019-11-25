@@ -4,10 +4,7 @@ imgurl: assets/img/artwork-about.png
 imgalt: designers and developers working together illustration
 buttons:
   - link: /get-started
-    text: Documentation
-    type: secondary
-  - link: /download
-    text: Download
+    text: Get started
     type: secondary
 ---
 
