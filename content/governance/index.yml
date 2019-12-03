@@ -1,0 +1,11 @@
+pagetitle: Governance
+
+header:
+  - /_shared/header.md
+
+main:
+  - intro.md
+  - governance.md
+
+footer:
+  - /_shared/footer.md
