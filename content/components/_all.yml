@@ -371,6 +371,61 @@ buttons:
   hasJs: false    # <-- auto generated, don't change
   hasReact: true    # <-- auto generated, don't change
   ID: buttons    # <-- auto generated, don't change
+callout:
+  name: Callout
+  category: content
+  description: >
+    Callouts are an excerpt of text or an article that has been pulled out and
+    used as a visual clue to draw the eye to the text. They are used to help
+    direct a user's attention to important pieces of information.
+  metatags:
+    - error
+    - success
+    - notification
+  tags:
+    - alert
+  related:
+    - body
+  related-articles:
+    - TODO
+  used-in:
+    - TODO
+  required: false
+  contributors:
+    - name: Dominik Wilkowski
+      img: dominik-wilkowski.jpg
+      url: 'https://github.com/dominikwilkowski'
+    - name: Trevor Brennan
+      img: trevor-brennan.jpg
+      url: 'https://github.com/TrebBrennan'
+    - name: Alex Page
+      img: alex-page.jpg
+      url: 'https://github.com/alex-page'
+    - name: Patrick De Young
+      img: patrick-de-young.jpg
+      url: 'https://github.com/pattyde'
+    - name: Gary Broadbent
+      img: gary-broadbent.jpg
+      url: 'https://github.com/gazhands'
+    - name: Simon Pascal Klein
+      img: simon-pascal-klein.jpg
+      url: 'https://github.com/klepas'
+    - name: Julian Fleetwood
+      img: julian-fleetwood.jpg
+      url: 'https://github.com/joolswood'
+  state: published
+  order: 10
+  discussions:
+    - open: 2
+    - active: 7
+    - something: something
+  ID: callout    # <-- auto generated, don't change
+  version: 3.0.2    # <-- auto generated, don't change
+  dependencies:    # <-- auto generated, don't change
+    - core
+  hasSass: true    # <-- auto generated, don't change
+  hasJs: false    # <-- auto generated, don't change
+  hasReact: true    # <-- auto generated, don't change
 cta-link:
   name: Call to action
   category: content
@@ -425,61 +480,6 @@ cta-link:
     - something: something
   ID: cta-link    # <-- auto generated, don't change
   version: 2.2.0    # <-- auto generated, don't change
-  dependencies:    # <-- auto generated, don't change
-    - core
-  hasSass: true    # <-- auto generated, don't change
-  hasJs: false    # <-- auto generated, don't change
-  hasReact: true    # <-- auto generated, don't change
-callout:
-  name: Callout
-  category: content
-  description: >
-    Callouts are an excerpt of text or an article that has been pulled out and
-    used as a visual clue to draw the eye to the text. They are used to help
-    direct a user's attention to important pieces of information.
-  metatags:
-    - error
-    - success
-    - notification
-  tags:
-    - alert
-  related:
-    - body
-  related-articles:
-    - TODO
-  used-in:
-    - TODO
-  required: false
-  contributors:
-    - name: Dominik Wilkowski
-      img: dominik-wilkowski.jpg
-      url: 'https://github.com/dominikwilkowski'
-    - name: Trevor Brennan
-      img: trevor-brennan.jpg
-      url: 'https://github.com/TrebBrennan'
-    - name: Alex Page
-      img: alex-page.jpg
-      url: 'https://github.com/alex-page'
-    - name: Patrick De Young
-      img: patrick-de-young.jpg
-      url: 'https://github.com/pattyde'
-    - name: Gary Broadbent
-      img: gary-broadbent.jpg
-      url: 'https://github.com/gazhands'
-    - name: Simon Pascal Klein
-      img: simon-pascal-klein.jpg
-      url: 'https://github.com/klepas'
-    - name: Julian Fleetwood
-      img: julian-fleetwood.jpg
-      url: 'https://github.com/joolswood'
-  state: published
-  order: 10
-  discussions:
-    - open: 2
-    - active: 7
-    - something: something
-  ID: callout    # <-- auto generated, don't change
-  version: 3.0.2    # <-- auto generated, don't change
   dependencies:    # <-- auto generated, don't change
     - core
   hasSass: true    # <-- auto generated, don't change
