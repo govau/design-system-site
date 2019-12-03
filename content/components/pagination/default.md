@@ -1,3 +1,55 @@
-We're currently discussing whether or not our community will benefit from a
-navigation component. Join the conversation in our
-[community forum](https://community.digital.gov.au/t/pagination/118).
+---
+layout: component/code-demo
+iframe: examples/example-default
+iframeFullwidth: true
+code:
+  - HTML: |
+      
+      <div>
+        <nav role="navigation" aria-label="Pagination Navigation" class="au-pagination ">
+            <ul class=" au-link-list au-link-list--inline">
+                <li class="au-pagination-control disabled ">
+                  <a href="#" class="au-pagination-link au-pagination-controls-link disabled " aria-label="Go to previous page" text="Previous" aria-disabled="true">Previous
+                  </a>
+                </li>
+                <li class="au-pagination-item active">
+                  <a href="#" class="au-pagination-link active" id="1" aria-label="Page 1" aria-current="true">1
+                  </a>
+                </li>
+                <li class="au-pagination-item ">
+                  <a href="#" class="au-pagination-link " id="2" aria-label="Page 2" aria-current="false">2
+                  </a>
+                </li>
+                <li class="au-pagination-item ">
+                  <a href="#" class="au-pagination-link " id="3" aria-label="Page 3" aria-current="false">3
+                  </a>
+                </li>
+                <li class="au-pagination-item">
+                <a class="au-pagination-link " href="#" aria-label="">
+                <span class="au-pagination-link--quick-jumper " aria-hidden="true">...</span>
+                </a>
+                </li>
+                <li class="au-pagination-item ">
+                <a href="#" class="au-pagination-link " id="10" aria-label="Page 10" aria-current="false">10
+                </a>
+                </li>
+                <li class="au-pagination-control">
+                <a href="#" class="au-pagination-link au-pagination-controls-link" aria-label="Go to next page" text="Next">Next
+                </a>
+                </li>
+            </ul>
+          </nav>
+      </div>
+            
+
+  - React: |
+     
+      import AUpagination from '@gov.au/pagination';
+
+      <AUPagination totalResults={ 100 } recordsPerPage={ 10 } center onChange={ this.onChanged } />	
+
+      
+---
+## Default
+
+Pagination allows users to navigate through multiple pages of content. The first and last pagaination items are always visible to the user. Users can either select an individual page from the pagination list, or use the `Previous` and `Next` keys to navigate through the pagination items sequentially . The ellipsis can also be used to display ether the next 5 pages or the previous 5 pages in the list. 
