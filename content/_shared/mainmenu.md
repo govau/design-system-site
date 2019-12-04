@@ -6,7 +6,7 @@ navigation:
   sections:
     - alignment: left
       items:
-        - text: About
+        - text: Home
           link: /
         - text: Get started
           link: /get-started

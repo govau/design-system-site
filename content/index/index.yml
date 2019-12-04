@@ -1,6 +1,6 @@
 layout: home/page
 
-pagetitle: About
+pagetitle: Home
 header:
   - /index/header.md
 main:
