@@ -10,8 +10,8 @@ mainlist:
     link: https://govau-guides.slack.com/
   - text: Roadmap
     link: /roadmap
-  - text: Design principles
-    link: /design-principles
+  - text: About
+    link: /about
 
 legallist:
   - text: Privacy

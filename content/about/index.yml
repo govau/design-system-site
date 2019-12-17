@@ -1,11 +1,11 @@
-pagetitle: Design Principles
+layout: home/page
 
+pagetitle: About
 header:
-  - /_shared/header.md
-
+  - /index/header.md
 main:
   - intro.md
   - principles.md
-
+  - governance.md
 footer:
   - /_shared/footer.md
