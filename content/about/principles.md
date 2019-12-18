@@ -16,3 +16,7 @@ Favouring a distributed and modular approach we avoid tight coupling with partic
 
 #### Evidence over opinion
 We believe that consulting with many sources creates better insights, so we aim to involve the Design System community in everything we do. We are open in our processes and research, seeking feedback where possible, documenting decisions and producing rationale for published work.
+
+---
+
+You can provide feedback on our [design principles](https://community.digital.gov.au/t/australian-government-design-system-design-principles/1424) via the [community forum](https://community.digital.gov.au/c/designsystem/14)
