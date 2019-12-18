@@ -31,7 +31,7 @@ Many sellers on the [Digital Marketplace](https://marketplace.service.gov.au/) h
 
 #### Adapting and extending
 
-Agencies **may** choose to configure, adapt or modify the design system to align with their own agency’s style or branding guide. This may include configuring custom colour palettes, replacing branding imagery, substituting fonts or extending existing components.
+Agencies may choose to configure, adapt or modify the design system to align with their own agency’s style or branding guide. This may include configuring custom colour palettes, replacing branding imagery, substituting fonts or extending existing components.
 
 Agencies may choose to:
 
@@ -41,7 +41,7 @@ Agencies may choose to:
 
 Agencies are encouraged to retain as much consistency with the design system as possible. Relevant agencies also need to ensure that they maintain alignment with existing guidelines for the [digital implementation of the Australian Government brand](https://www.dta.gov.au/help-and-advice/guides-and-tools/requirements-australian-government-websites/branding).
 
-### Code Reviews and Pull Requests (PRs)
+#### Code Reviews and Pull Requests (PRs)
 
 All pull requests are subject to review, irrespective of the source.
 
@@ -70,7 +70,7 @@ Each core team member is directly involved in the design, development and delive
 #### Membership
 Membership of the core team is currently comprised of DTA staff.
 
-Core contributors are expected to have a background in **at least two** of the following: front-end design, front-end engineering, full-stack development, accessibility, content design, user research, interaction design or user experience design.
+Core contributors are expected to have a background in at least two of the following: front-end design, front-end engineering, full-stack development, accessibility, content design, user research, interaction design or user experience design.
 
 We are considering broadening membership to include trusted individuals or organisations who demonstrate appropriate experience and operate in accordance with the APS Code of Conduct. If you like to nominate someone as a potential member of the core team, please let us know by emailing [designsystem@dta.gov.au](mailto:designsystem@dta.gov.au).
 
@@ -79,4 +79,6 @@ The DTA is responsible for reviewing, attributing and potentially accepting all 
 
 While not all contributions can be accepted into the design system, all contributions will be automatically attributed to the authoring individual or organisation.
 
-You can provide feedback on our [design principles](https://community.digital.gov.au/t/australian-government-design-system-design-principles/1424) and [governance](https://community.digital.gov.au/t/updating-our-governance-model/2596) via the [community forum](https://community.digital.gov.au/c/designsystem/14)
+---
+
+You can provide feedback on our [governance](https://community.digital.gov.au/t/updating-our-governance-model/2596) via the [community forum](https://community.digital.gov.au/c/designsystem/14)
