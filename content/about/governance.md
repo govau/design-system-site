@@ -80,3 +80,4 @@ The DTA is responsible for reviewing, attributing and potentially accepting all 
 While not all contributions can be accepted into the design system, all contributions will be automatically attributed to the authoring individual or organisation.
 
 You can provide feedback on our [design principles](https://community.digital.gov.au/t/australian-government-design-system-design-principles/1424) and [governance](https://community.digital.gov.au/t/updating-our-governance-model/2596) via the [community forum](https://community.digital.gov.au/c/designsystem/14)
+
