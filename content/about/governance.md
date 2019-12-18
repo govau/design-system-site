@@ -1,8 +1,5 @@
 ## Governance
 
-A working draft of our governance model has been written and is available [here](https://community.digital.gov.au/t/updating-our-governance-model/2596). Feel free to provide your feedback directly by responding to the thread.
-
-
 #### Mandate
 The Australian Government Design System (design system) is not mandatory for Australian Government agencies.
 
@@ -16,7 +13,7 @@ The Digital Transformation Agency (DTA) is the curator of the design system and 
 
 We provide online and offline platforms for the community to discuss, contribute to, adapt and extend the design system and ensure the design system continues to meet the community’s needs. The DTA is also responsible for:
 
-- Defining and championing [design principles](https://designsystem.gov.au/design-principles) to guide the direction and shape of the product
+- Defining and championing [design principles](https://designsystem.gov.au/about#design-principles) to guide the direction and shape of the product
 - Managing administrators and moderators of the [design system community forum](https://community.digital.gov.au/c/designsystem) and the associated [Code of Conduct](https://community.digital.gov.au/faq)
 - Managing membership of the [core team](https://github.com/orgs/govau/teams/design-system) on our [GitHub project](https://github.com/orgs/govau/projects/7)
 
@@ -33,6 +30,7 @@ Bugs or issues can be reported to the DTA via [GitHub](https://github.com/govau/
 Many sellers on the [Digital Marketplace](https://marketplace.service.gov.au/) have demonstrated experience implementing the design system for agencies. Several third parties have implemented the design system on their platform or technology stack of choice, making their code available for reuse or educational purposes. The DTA encourages this behaviour, but support for those implementations cannot be offered by the design system team.
 
 #### Adapting and extending
+
 Agencies **may** choose to configure, adapt or modify the design system to align with their own agency’s style or branding guide. This may include configuring custom colour palettes, replacing branding imagery, substituting fonts or extending existing components.
 
 Agencies may choose to:
@@ -43,7 +41,8 @@ Agencies may choose to:
 
 Agencies are encouraged to retain as much consistency with the design system as possible. Relevant agencies also need to ensure that they maintain alignment with existing guidelines for the [digital implementation of the Australian Government brand](https://www.dta.gov.au/help-and-advice/guides-and-tools/requirements-australian-government-websites/branding).
 
-Code Reviews and Pull Requests (PRs)
+### Code Reviews and Pull Requests (PRs)
+
 All pull requests are subject to review, irrespective of the source.
 
 Only members of the core team can review and approve a pull request.
@@ -60,6 +59,7 @@ However, the DTA tracks usage of design system components using a combination of
 - [NPM download statistics](https://www.npmjs.com/package/@gov.au/core)
 - Markup signatures detected in the [whole-of-government web crawl](https://data.gov.au/dataset/ds-dga-99f43557-1d3d-40e7-bc0c-665a4275d625/details)
 - Users’ self-reporting via the [community forum](https://community.digital.gov.au/t/showcase/)
+
 If you are using the design system (even in a non-public environment), please let us know.
 
 #### Core Team
@@ -78,3 +78,6 @@ We are considering broadening membership to include trusted individuals or organ
 The DTA is responsible for reviewing, attributing and potentially accepting all contributions received in the form of code, design, research or discussion. Detailed contribution guides are maintained by the core team as CONTRIBUTING.md files in all relevant GitHub repositories.
 
 While not all contributions can be accepted into the design system, all contributions will be automatically attributed to the authoring individual or organisation.
+
+You can provide feedback on our [design principles](https://community.digital.gov.au/t/australian-government-design-system-design-principles/1424) and [governance](https://community.digital.gov.au/t/updating-our-governance-model/2596) via the [community forum](https://community.digital.gov.au/c/designsystem/14)
+

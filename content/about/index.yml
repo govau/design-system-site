@@ -7,5 +7,6 @@ main:
   - intro.md
   - principles.md
   - governance.md
+  - meta-data.md
 footer:
   - /_shared/footer.md
