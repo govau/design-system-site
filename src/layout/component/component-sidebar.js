@@ -5,18 +5,21 @@ import NavigationAccordion from '../navigation-accordion';
 
 
 const ComponentSidebar = ({ _relativeURL, _ID, _pages, _parseYaml }) => {
-	const componentStates = {
-		published: 'Released',
-		inprogress: 'In progress',
-		suggestion: 'Suggestions'
+
+	const componentCategories = {
+		core: 'Core',
+		layout: 'Layout',
+		navigation: 'Navigation',
+		content: 'Content',
+		forms: 'Forms'
 	};
 
-	// For each state create an accordion
+	// For each category create an accordion
 	const navItems = {};
 
-	Object.keys( componentStates ).forEach( ( state ) => {
-		 navItems[ componentStates[ state ] ] = GetData({
-			filter: ( key, COMPONENTS ) => COMPONENTS[ key ].state === state,
+	Object.keys( componentCategories ).forEach( ( category ) => {
+		 navItems[ componentCategories[ category ] ] = GetData({
+			filter: ( key, COMPONENTS ) => COMPONENTS[ key ].category === category,
 			yaml: _parseYaml,
 		});
 	});

@@ -33,6 +33,7 @@ Many sellers on the [Digital Marketplace](https://marketplace.service.gov.au/) h
 
 Agencies may choose to configure, adapt or modify the design system to align with their own agency’s style or branding guide. This may include configuring custom colour palettes, replacing branding imagery, substituting fonts or extending existing components.
 
+
 Agencies may choose to:
 
 - Make these modifications themselves

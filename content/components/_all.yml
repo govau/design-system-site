@@ -51,6 +51,7 @@ core:
       img: petra-gulicher.jpg
       url: 'https://github.com/petronbot'
   state: published
+  category: core
   order: 0
   discussions:
     - open: 2
@@ -114,7 +115,8 @@ accordion:
       img: raj-ghuman.jpg
       url: 'https://github.com/sukhrajghuman'
   state: published
-  order: 10
+  category: layout
+  order: 4
   discussions:
     - open: 2
     - active: 7
@@ -156,7 +158,8 @@ animate:
       img: simon-schwartz.jpg
       url: 'https://github.com/simonschwartz'
   state: published
-  order: 10
+  category: content
+  order: 9
   discussions:
     - open: 2
     - active: 7
@@ -221,7 +224,8 @@ body:
       img: raj-ghuman.jpg
       url: 'https://github.com/sukhrajghuman'
   state: published
-  order: 10
+  category: content
+  order: 0
   discussions:
     - open: 2
     - active: 7
@@ -284,7 +288,8 @@ breadcrumbs:
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
-  order: 10
+  category: navigation
+  order: 4
   discussions:
     - open: 2
     - active: 7
@@ -340,7 +345,8 @@ buttons:
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
-  order: 10
+  category: forms
+  order: 3
   discussions:
     - open: 2
     - active: 7
@@ -411,7 +417,8 @@ cta-link:
       img: julian-fleetwood.jpg
       url: 'https://github.com/joolswood'
   state: published
-  order: 10
+  category: content
+  order: 5
   discussions:
     - open: 2
     - active: 7
@@ -465,7 +472,8 @@ callout:
       img: julian-fleetwood.jpg
       url: 'https://github.com/joolswood'
   state: published
-  order: 10
+  category: content
+  order: 4
   discussions:
     - open: 2
     - active: 7
@@ -530,7 +538,8 @@ control-input:
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
-  order: 10
+  category: forms
+  order: 4
   discussions:
     - open: 2
     - active: 7
@@ -598,7 +607,8 @@ direction-links:
       img: kiri-hoy.jpg
       url: 'https://github.com/kirihoy'
   state: published
-  order: 10
+  category: navigation
+  order: 5
   discussions:
     - open: 2
     - active: 7
@@ -664,7 +674,8 @@ footer:
       img: kiri-hoy.jpg
       url: 'https://github.com/kirihoy'
   state: published
-  order: 10
+  category: layout
+  order: 2
   discussions:
     - open: 2
     - active: 7
@@ -706,7 +717,8 @@ grid-12:
       img: julian-fleetwood.jpg
       url: 'https://github.com/joolswood'
   state: published
-  order: 10
+  category: layout
+  order: 0
   discussions:
     - open: 2
     - active: 7
@@ -767,7 +779,8 @@ header:
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
-  order: 10
+  category: layout
+  order: 1
   discussions:
     - open: 2
     - active: 7
@@ -825,7 +838,8 @@ headings:
       img: julian-fleetwood.jpg
       url: 'https://github.com/joolswood'
   state: published
-  order: 10
+  category: content
+  order: 1
   discussions:
     - open: 2
     - active: 7
@@ -889,7 +903,8 @@ inpage-nav:
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
-  order: 10
+  category: navigation
+  order: 3
   discussions:
     - open: 2
     - active: 7
@@ -951,7 +966,8 @@ keyword-list:
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
-  order: 10
+  category: content
+  order: 6
   discussions:
     - open: 2
     - active: 7
@@ -1015,7 +1031,8 @@ link-list:
       img: tengis-batsaikhan.jpg
       url: 'https://github.com/tengis'
   state: published
-  order: 10
+  category: navigation
+  order: 0
   discussions:
     - open: 2
     - active: 7
@@ -1072,7 +1089,8 @@ page-alerts:
       img: julian-fleetwood.jpg
       url: 'https://github.com/joolswood'
   state: published
-  order: 10
+  category: content
+  order: 3
   discussions:
     - open: 2
     - active: 7
@@ -1127,7 +1145,8 @@ progress-indicator:
       img: alexander-sadleir.jpg
       url: 'https://github.com/maxious'
   state: published
-  order: 10
+  category: forms
+  order: 5
   discussions:
     - open: 2
     - active: 7
@@ -1183,7 +1202,8 @@ responsive-media:
       img: julian-fleetwood.jpg
       url: 'https://github.com/joolswood'
   state: published
-  order: 10
+  category: content
+  order: 7
   discussions:
     - open: 2
     - active: 7
@@ -1235,7 +1255,8 @@ select:
       img: gary-broadbent.jpg
       url: 'https://github.com/gazhands'
   state: published
-  order: 10
+  category: forms
+  order: 6
   discussions:
     - open: 2
     - active: 7
@@ -1297,7 +1318,8 @@ skip-link:
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
-  order: 10
+  category: navigation
+  order: 6
   discussions:
     - open: 2
     - active: 7
@@ -1360,6 +1382,7 @@ tags:
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
   state: published
+  category: content
   order: 10
   discussions:
     - open: 2
@@ -1428,7 +1451,8 @@ text-inputs:
       img: kiri-hoy.jpg
       url: 'https://github.com/kirihoy'
   state: published
-  order: 10
+  category: forms
+  order: 1
   discussions:
     - open: 2
     - active: 7
@@ -1482,6 +1506,7 @@ table:
       img: raj-ghuman.jpg
       url: 'https://github.com/sukhrajghuman'
   state: published
+  category: content
   highlight: new
   status:
     usable: done
@@ -1490,7 +1515,7 @@ table:
     coded: todo
     tested: todo
     considered: todo
-  order: 10
+  order: 2
   discussions:
     - open: 2
     - active: 7
@@ -1536,6 +1561,7 @@ form:
       img: adam-zerella.jpg
       url: 'https://github.com/adamzerella'
   state: published
+  category: forms
   highlight: new
   status:
     usable: done
@@ -1544,7 +1570,7 @@ form:
     coded: doing
     tested: todo
     considered: todo
-  order: 10
+  order: 0
   discussions:
     - open: 2
     - active: 7
@@ -1624,6 +1650,7 @@ main-nav:
       img: kiri-hoy.jpg
       url: 'https://github.com/kirihoy'
   state: published
+  category: navigation
   status:
     usable: done
     consistent: done
@@ -1631,7 +1658,7 @@ main-nav:
     coded: doing
     tested: todo
     considered: todo
-  order: 10
+  order: 1
   discussions:
     - open: 2
     - active: 7
@@ -1711,6 +1738,7 @@ side-nav:
       img: raj-ghuman.jpg
       url: 'https://github.com/sukhrajghuman'
   state: published
+  category: navigation
   status:
     usable: done
     consistent: done
@@ -1718,7 +1746,7 @@ side-nav:
     coded: doing
     tested: todo
     considered: todo
-  order: 10
+  order: 2
   discussions:
     - open: 2
     - active: 7
@@ -1752,7 +1780,6 @@ card:
     - container
     - content
     - interactive
-  order: 10
   related:
     - body
   related-articles:
@@ -1780,6 +1807,8 @@ card:
       img: petr.jpg
       url: 'https://github.com/petrillek/'
   state: published
+  category: layout
+  order: 3
   discussions:
     - open: 2
     - active: 7
@@ -1833,10 +1862,11 @@ searchbox:
       img: alexandra-baranov.jpg
       url: 'https://au.linkedin.com/in/alexandrabaranov'
   state: published
+  category: forms
   status:
     useful: done
     unique: done
-  order: 10
+  order: 2
   discussions:
     - open: 2
     - active: 7
