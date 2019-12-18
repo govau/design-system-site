@@ -33,7 +33,6 @@ Many sellers on the [Digital Marketplace](https://marketplace.service.gov.au/) h
 
 Agencies may choose to configure, adapt or modify the design system to align with their own agency’s style or branding guide. This may include configuring custom colour palettes, replacing branding imagery, substituting fonts or extending existing components.
 
-
 Agencies may choose to:
 
 - Make these modifications themselves
@@ -83,3 +82,4 @@ While not all contributions can be accepted into the design system, all contribu
 ---
 
 You can provide feedback on our [governance](https://community.digital.gov.au/t/updating-our-governance-model/2596) via the [community forum](https://community.digital.gov.au/c/designsystem/14)
+
