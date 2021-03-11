@@ -1,0 +1,18 @@
+layout: component/page
+pagetitle: TODO overview
+
+header:
+  - /_shared/header.md
+
+component_nav:
+  - /components/_tabs.md
+
+sidebar:
+  - /components/search.md
+  - /components/sidebar.md
+
+main:
+  - default.md
+
+footer:
+  - /_shared/footer.md
