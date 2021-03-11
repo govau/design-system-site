@@ -1,7 +1,7 @@
 test-module:
   name: Test Module
   description: >
-    This is a test site.
+    This is a test site. woohoo!
   metatags:
     - color
     - spacing
