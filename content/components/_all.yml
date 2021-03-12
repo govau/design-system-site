@@ -1,6 +1,6 @@
 test-module:
   name: Test Module
-  description: >
+  description: |
     This is a test site. woohoo!
   metatags:
     - color
@@ -19,36 +19,9 @@ test-module:
     - TODO
   required: true
   contributors:
-    - name: Dominik Wilkowski
-      img: dominik-wilkowski.jpg
-      url: 'https://github.com/dominikwilkowski'
-    - name: Trevor Brennan
-      img: trevor-brennan.jpg
-      url: 'https://github.com/TrebBrennan'
-    - name: Alex Page
-      img: alex-page.jpg
-      url: 'https://github.com/alex-page'
-    - name: Patrick De Young
-      img: patrick-de-young.jpg
-      url: 'https://github.com/pattyde'
-    - name: Gary Broadbent
-      img: gary-broadbent.jpg
-      url: 'https://github.com/gazhands'
-    - name: Simon Pascal Klein
-      img: simon-pascal-klein.jpg
-      url: 'https://github.com/klepas'
-    - name: Alexander Sadleir
-      img: alexander-sadleir.jpg
-      url: 'https://github.com/maxious'
-    - name: Julian Fleetwood
-      img: julian-fleetwood.jpg
-      url: 'https://github.com/joolswood'
-    - name: Hannah J. Nicdao
-      img: hannah-j-nicdao.jpg
-      url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
-    - name: Petra Gulicher
-      img: petra-gulicher.jpg
-      url: 'https://github.com/petronbot'
+    - name: Monica Gee
+      img: monicagee99.png
+      url: 'https://github.com/monicagee99'
   state: published
   category: core
   order: 0
