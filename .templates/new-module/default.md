@@ -1,5 +1,6 @@
 ---
 layout: component/code-demo
+iframe: examples/example-default
 examples: 
   - template: examples/example-default
 code:
