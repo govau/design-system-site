@@ -1,0 +1,12 @@
+layout: component/page
+pagetitle: Patterns
+landingpage: true
+
+header:
+  - /_shared/header.md
+
+main:
+  - intro.md
+
+footer:
+  - /_shared/footer.md
