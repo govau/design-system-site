@@ -34,7 +34,7 @@ code:
         {
           link: '#',
           text: 'baz',
-          className: '',
+          className: ''
           attributeOptions: {
             onClick: () => {console.log('clicked')},
           }
