@@ -314,6 +314,9 @@ buttons:
   dependencies:    # <-- auto generated, don't change
     - core
   contributors:
+    - name: Monica Gee
+      img: monica-gee.jpg
+      url: 'https://au.linkedin.com/in/monicayunagee'
     - name: Dominik Wilkowski
       img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
@@ -344,9 +347,6 @@ buttons:
     - name: Hannah J. Nicdao
       img: hannah-j-nicdao.jpg
       url: 'https://au.linkedin.com/in/hannah-j-nicdao-78318024'
-    - name: Monica Gee
-      img: monica-gee.png
-      url: 'https://au.linkedin.com/in/monicayunagee'
   state: published
   category: forms
   order: 3
