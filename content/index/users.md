@@ -25,9 +25,9 @@ tiles:
     alt: Department of Veterans' Affairs
     link: https://www.dva.gov.au/myservice/
 
-  - image: assets/img/users-logo-dhs.png
-    alt: Department of Human Services
-    link: https://www.humanservices.gov.au/
+  - image: assets/img/users-logo-servicesaustralia.png
+    alt: Services Australia
+    link: https://www.servicesaustralia.gov.au/
 
   - image: assets/img/users-logo-nsw.png
     alt: Digital New South Wales

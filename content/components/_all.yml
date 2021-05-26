@@ -164,7 +164,7 @@ animate:
     - open: 2
     - active: 7
     - something: something
-  version: 1.0.13    # <-- auto generated, don't change
+  version: 1.0.14    # <-- auto generated, don't change
   dependencies: []    # <-- auto generated, don't change
   hasSass: false    # <-- auto generated, don't change
   hasJs: true    # <-- auto generated, don't change
