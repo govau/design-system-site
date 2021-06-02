@@ -5,12 +5,14 @@ import React from 'react';
 /**
  * The Intro component
  */
-const Intro = ({ title, imgalt, imgurl, buttons, _relativeURL, _ID, _body }) => (
+const Intro = ({ title, imgalt, imgurl, buttons, _relativeURL, _ID, _body, downloadPage }) => (
 	<div className="intro">
+
 		<div className="row">
 
 			<div className="col-sm-12 col-md-6 col-md-push-6">
-				<div className="intro__img">
+				
+				<div className={ downloadPage ? 'intro__img regular-hide' : 'intro__img' }>
 					<img className="au-responsive-media-img"
 						src={ _relativeURL( imgurl , _ID ) }
 						alt={ imgalt } />
