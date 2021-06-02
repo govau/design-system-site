@@ -6,7 +6,6 @@ There are four ways to get started with the Design System;
 
 - If you have prior experience with `npm`, [use npm to install the components](get-started/npm-install)
 - If you don't have prior experience with `npm`, [visit our Download page to install the components](get-started/download-page)
-- For designers, visit our download page to use [design assets in sketch](get-started/design-assets)
 - For full page templates, [download the design system starter kit](get-started/starter-kit)
 
 Once you have the components in a website we have advanced guides for developers on how to:
