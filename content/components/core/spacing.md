@@ -19,9 +19,6 @@ The consistent alignment of elements is paramount for good UI design. The design
 
 The base-unit `1unit` of spacing in the design system is derived from `1rem` which in most browsers equates to `16px`.
 
-### Design software
-For doing mockups in software like Sketch or Photoshop, use pixel values which are divisible by 4.
-
 ### Development
 Developers should use `AU-fontgrid` and `AU-space` SCSS functions.
 
