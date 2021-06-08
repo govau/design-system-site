@@ -2,7 +2,7 @@
 # THE `pancake` and `auds` FIELDS WILL BE OVERWRITTEN
 
 pancake:
-  downloads: 77604
+  downloads: 77732
   modules:
     '@gov.au/pancake': 19425
     '@gov.au/pancake-js': 11690
