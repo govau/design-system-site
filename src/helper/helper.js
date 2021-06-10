@@ -42,7 +42,7 @@ const Error = ( text ) => {
  *
  * @return {object}      - Parsed YAML object
  */
-const DecodeYAML = ( yaml ) => YAML.safeDump( yaml, warning => console.error( warning ) ) || {};
+const DecodeYAML = ( yaml ) => YAML.dump( yaml, warning => console.error( warning ) ) || {};
 
 
 /**
@@ -52,7 +52,7 @@ const DecodeYAML = ( yaml ) => YAML.safeDump( yaml, warning => console.error( wa
  *
  * @return {string}      - Parsed YAML string
  */
-const EncodeYAML = ( yaml ) => YAML.safeLoad( yaml, warning => console.error( warning ) ) || {};
+const EncodeYAML = ( yaml ) => YAML.load( yaml, warning => console.error( warning ) ) || {};
 
 
 /**
