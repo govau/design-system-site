@@ -3,7 +3,7 @@ version: 2
 jobs:
     build-and-test-ds:
         docker:
-            - image: circleci/node:10.19.0
+            - image: circleci/node:12.18.4                      # NodeLTS as of 10/2020
         working_directory: ~/designsystem
         steps:
             - run:
