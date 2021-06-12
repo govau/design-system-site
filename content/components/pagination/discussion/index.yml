@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Pagination overview
+pagetitle: TODO discussion
 
 header:
   - /_shared/header.md
@@ -12,7 +12,8 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - default.md
+  - community-intro.md
+  - github-intro.md
 
 footer:
   - /_shared/footer.md

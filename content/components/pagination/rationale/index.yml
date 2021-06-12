@@ -1,5 +1,5 @@
 layout: component/page
-pagetitle: Pagination overview
+pagetitle: TODO rationale
 
 header:
   - /_shared/header.md
@@ -12,7 +12,7 @@ sidebar:
   - /components/sidebar.md
 
 main:
-  - default.md
+  - first-last-items.md
 
 footer:
   - /_shared/footer.md

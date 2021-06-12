@@ -1,0 +1,5 @@
+layout: example/page
+examples:
+  - template: ../example-code.md
+tabbing: true
+alignment: inline
