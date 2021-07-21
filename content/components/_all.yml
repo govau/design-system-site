@@ -26,6 +26,9 @@ core:
     - name: Monica Gee
       img: monica-gee.jpg
       url: 'https://au.linkedin.com/in/monicayunagee'
+    - name: Ryan Phung
+      img: ryan-phung.jpg
+      url: 'https://www.linkedin.com/in/ryan-phung-162a8a17b/'
     - name: Dominik Wilkowski
       img: dominik-wilkowski.jpg
       url: 'https://github.com/dominikwilkowski'
