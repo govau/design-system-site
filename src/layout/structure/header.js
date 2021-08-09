@@ -28,7 +28,7 @@ const Header = ({ title, title_badge, mainmenu, header_govau, _relativeURL, _ID,
 						<div className="col-md-12 decommission-msg-container">
 							<div class="au-body au-page-alerts au-page-alerts--warning">
 								The Australian Government Design System has been decommissioned.&nbsp;
-								<a href="#" target="_blank" rel="noopener nofollow">Visit our community page for more information</a>
+								<a href="https://community.digital.gov.au/t/dta-design-system-has-been-decommissioned/4649" target="_blank" rel="noopener nofollow">Visit our community page for more information</a>
 							</div>
 						</div>
 
