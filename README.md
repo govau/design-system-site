@@ -3,13 +3,6 @@
 Australian Government Design System - Website
 ====
 
-
-| Production [![CircleCI](https://circleci.com/gh/govau/design-system-site/tree/master.svg?style=svg)](https://circleci.com/gh/govau/design-system-site/tree/master)                  | Staging [![CircleCI](https://circleci.com/gh/govau/design-system-site/tree/develop.svg?style=svg)](https://circleci.com/gh/govau/design-system-site/tree/develop)                        |
-|-----------------------------|--------------------------------|
-| https://designsystem.gov.au | https://designsystem.apps.y.cld.gov.au |
-|                             | user: `ds`, pass: `ds`                 |
-
-
 ## Branches
 
 All branches ending with `-test` will go live automatically to `https://designsystem[your-branch-name]-test.apps.y.cld.gov.au`.
