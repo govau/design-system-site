@@ -33,10 +33,10 @@ const Footer = ({ headline, legallist, mainlist, _body, _ID, _relativeURL }) => 
 
 					<div className="col-md-3 col-md-pull-9 footer__logo">
 						<p className="footer__affiliate">
-							<span>An initiative of the </span>
-							<span>Digital Transformation Agency </span>
+							<span>Maintained by the</span>
+							<span>Design System AU community</span>
 							<span className="footer__affiliate-link">
-								<AUctaLink link="https://www.dta.gov.au/our-projects" text="More projects" dark/>
+								<AUctaLink link="https://designsystemau.org/" text="Learn more" dark/>
 							</span>
 						</p>
 					</div>

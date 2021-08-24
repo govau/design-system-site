@@ -11,9 +11,9 @@
 		"build:sass": "mkdirp src/assets/css/ && node-sass src/sass --output-style compressed --output src/assets/css",
 		"build:sass:dev": "mkdirp src/assets/css/ && node-sass src/sass --output-style compact --source-map true --output src/assets/css/",
 		"build:css": "npm run build:sass && npm run build:autoprefix",
-		"build:js-a11y": "concat-cli -f src/js/a11y/*.js -o src/assets/js/a11y.js",
-		"build:js-header": "concat-cli -f src/js/header/*.js -o src/assets/js/header.js",
-		"build:js-footer": "concat-cli -f src/js/footer/*.js -o src/assets/js/footer.js",
+		"build:js-a11y": "concat-files-cli -i src/js/a11y/* -o src/assets/js/a11y.js",
+		"build:js-header": "concat-files-cli -i src/js/header/* -o src/assets/js/header.js",
+		"build:js-footer": "concat-files-cli -i src/js/footer/* -o src/assets/js/footer.js",
 		"build:uglify": "uglifyjs src/assets/js/header.js --compress --output src/assets/js/header.js && uglifyjs src/assets/js/footer.js --compress --output src/assets/js/footer.js",
 		"build:js": "mkdirp src/assets/js/ && npm run build:js-a11y && npm run build:js-header && npm run build:js-footer && npm run build:uglify",
 		"build:assets": "npm run build:css && npm run build:js",
@@ -28,54 +28,19 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/govau/design-system-site"
+		"url": "https://github.com/designsystemau/design-system-site"
 	},
 	"author": {
-		"name": "Australian Government - Digital Transformation Agency",
-		"email": "designsystem@dta.gov.au",
-		"url": "https://www.dta.gov.au/"
+		"name": "Design System AU",
+		"email": "maintainers@designsystemau.org",
+		"url": "https://designsystemau.org/"
 	},
-	"homepage": "https://github.com/govau/design-system-site",
+	"homepage": "https://github.com/designsystemau/design-system-site",
 	"contributors": [
 		{
-			"name": "Dominik Wilkowski",
-			"email": "hi@dominik-wilkowski.com",
-			"url": "https://dominik-wilkowski.com/"
-		},
-		{
-			"name": "Alex Page",
-			"email": "alex@alexpage.com.au",
-			"url": "http://alexpage.com.au"
-		},
-		{
-			"name": "Trevor Brennan",
-			"email": "t@trevorbrennan.com",
-			"url": "http://trevorbrennan.com/"
-		},
-		{
-			"name": "Adam Zerella",
-			"email": "hello@adamzerella.com",
-			"url": "https://adamzerella.com"
-		},
-		{
-			"name": "Sukhraj Ghuman",
-			"email": "sukhrajghuman@live.com",
-			"url": "https://github.com/sukhrajghuman"
-		},
-		{
-			"name": "Kiri Hoy",
-			"email": "kiri.hoy@dta.gov.au",
-			"url": "https://github.com/kirihoy"
-		},
-		{
-			"name": "Gordon Grace",
-			"email": "gordon.grace@dta.gov.au",
-			"url": "https://github.com/gordongrace"
-		},
-		{
-			"name": "Ross Mullen",
-			"email": "ross.mullen@canaxess.com.au",
-			"url": "https://github.com/rossmullen"
+			"name": "Australian Government - Digital Transformation Agency",
+			"email": "designsystem@dta.gov.au",
+			"url": "https://www.dta.gov.au/"
 		}
 	],
 	"license": "MIT",
@@ -101,6 +66,7 @@
 		"@gov.au/link-list": "latest",
 		"@gov.au/main-nav": "latest",
 		"@gov.au/page-alerts": "latest",
+		"@gov.au/pancake-sass": "^2.3.7",
 		"@gov.au/progress-indicator": "latest",
 		"@gov.au/responsive-media": "latest",
 		"@gov.au/searchbox": "latest",
@@ -113,11 +79,12 @@
 		"autoprefixer": "^9.4.10",
 		"cfonts": "^2.4.2",
 		"concat-cli": "^4.0.0",
+		"concat-files-cli": "^0.1.6",
 		"cuttlebelle": "^1.0.0-alpha.67",
 		"express": "^4.16.4",
 		"mkdirp": "^0.5.1",
 		"node-fetch": "^2.6.1",
-		"node-sass": "^4.13.1",
+		"node-sass": "^4.14.1",
 		"numeral": "^2.0.6",
 		"onchange": "^5.2.0",
 		"postcss-cli": "^6.1.2",

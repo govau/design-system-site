@@ -42,7 +42,7 @@ const Header = ({ title, title_badge, mainmenu, header_govau, _relativeURL, _ID,
 								}
 								subline={ _body }
 								link={ _ID === 'index' ? undefined : '/' }
-								brandImage={ _relativeURL( '/assets/img/header-logo-agov.png', _ID ) }
+								brandImage={ _relativeURL( '/assets/img/dsau-logo.svg', _ID ) }
 								brandImageAlt="The Australian Government coat of Arms"
 								>
 							</AUheaderBrand>
