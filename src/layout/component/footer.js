@@ -76,20 +76,20 @@ const ComponentFooter = ({ _ID, _parseYaml, _relativeURL, _parents }) => {
 							<a className="icon icon--community" href={ `https://community.digital.gov.au/t/${ MODULES[ module ].ID }` }>Community discussion</a>
 						</li>
 						<li>
-							<a className="icon icon--github" href="https://github.com/govau/design-system-components/issues/new">Report an issue</a>
+							<a className="icon icon--github" href="https://github.com/designsystemau/design-system-components/issues/new">Report an issue</a>
 						</li>
 						{
 							MODULES[ module ].status === 'published'
 								?
 									<li>
-										<a className="icon icon--github" href={`https://github.com/govau/design-system-components/tree/master/packages/${ MODULES[ module ].ID }`}>
+										<a className="icon icon--github" href={`https://github.com/designsystemau/design-system-components/tree/master/packages/${ MODULES[ module ].ID }`}>
 											Code Contribution
 										</a>
 									</li>
 								: null
 						}
 						<li>
-							<a className="icon icon--email" href="mailto:designsystem@dta.gov.au">Email the team</a>
+							<a className="icon icon--email" href="mailto:designsystem@designsystem.org">Email the team</a>
 						</li>
 					</ul>
 				</div>

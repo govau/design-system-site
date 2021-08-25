@@ -54,12 +54,12 @@ const HeaderGovAU = ({ publisher, publisher_url, left_title, left_content, right
 
 HeaderGovAU.propTypes = {
 	/**
-	 * publisher: dta.gov.au
+	 * publisher: designsystem.org
 	 */
 	publisher: PropTypes.string.isRequired,
 
 	/**
-	 * publisher_url: https://dta.gov.au
+	 * publisher_url: https://designsystem.org
 	 */
 	publisher_url: PropTypes.string.isRequired,
 

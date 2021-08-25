@@ -35,7 +35,7 @@
 
 	// Icons in <a> tags have a greater height than the <a> text. This causes unusual shaped focus states in Chrome.
 	// The below corrects and is a consistent solution for all browsers
-	// See here for more https://github.com/govau/design-system-site/issues/388
+	// See here for more https://github.com/designsystemau/design-system-site/issues/388
 	a[class^="icon"] {
 		display: inline-block;
 	}
