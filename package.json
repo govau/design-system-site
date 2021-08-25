@@ -97,7 +97,6 @@
 	},
 	"cuttlebelle": {
 		"folder": {
-			"site": "docs",
 			"code": "src/layout",
 			"assets": "src/assets"
 		},
