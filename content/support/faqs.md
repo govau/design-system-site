@@ -1,7 +1,7 @@
 ---
 layout: content/text-with-cta
 button:
-  link: https://github.com/govau/design-system-components/blob/master/FAQ.md
+  link: https://github.com/designsystemau/design-system-components/blob/master/FAQ.md
   text: Read FAQs
   type: secondary
   icon: github

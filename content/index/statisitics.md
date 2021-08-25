@@ -10,7 +10,7 @@ features:
     link: https://community.digital.gov.au/t/showcase/222
   - text: GitHub stars
     title: stars-replace
-    link: https://github.com/govau/design-system-components
+    link: https://github.com/designsystemau/design-system-components
   - text: Downloads in the last year
     title: downloads-replace
     link: https://www.npmjs.com/org/gov.au

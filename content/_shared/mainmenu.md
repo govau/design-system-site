@@ -21,7 +21,7 @@ navigation:
     - alignment: right
       items:
         - text: GitHub
-          link: https://github.com/govau/design-system-components/
+          link: https://github.com/designsystemau/design-system-components/
         - text: Download
           link: /download
 ---
