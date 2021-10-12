@@ -1,7 +1,7 @@
 ---
 layout: content/text-with-cta
 button:
-  link: https://github.com/govau/design-system-components/issues
+  link: https://github.com/designsystemau/design-system-components/issues
   text: Git issues
   type: secondary
   icon: github

@@ -7,7 +7,7 @@ btnURL: /community
 tableTH:
   - text: Title
   - text: Useful
-    link: https://github.com/govau/design-system-components/blob/master/CONTRIBUTING.md#useful
+    link: https://github.com/designsystemau/design-system-components/blob/master/CONTRIBUTING.md#useful
   - text: Unique
-    link: https://github.com/govau/design-system-components/blob/master/CONTRIBUTING.md#unique
+    link: https://github.com/designsystemau/design-system-components/blob/master/CONTRIBUTING.md#unique
 ---

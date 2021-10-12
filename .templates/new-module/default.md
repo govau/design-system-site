@@ -5,10 +5,10 @@ examples:
 code:
   - HTML: |
       TODO HTML
-      Get from https://github.com/govau/design-system-components
+      Get from https://github.com/designsystemau/design-system-components
   - React: |
       TODO React
-      Get from https://github.com/govau/design-system-components
+      Get from https://github.com/designsystemau/design-system-components
 ---
 ## Default
 

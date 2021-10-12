@@ -1,7 +1,7 @@
 ---
 layout: component/discussion-callout
 btntext: GitHub
-btnurl: https://github.com/govau/design-system-starter
+btnurl: https://github.com/designsystemau/design-system-starter
 btntype: secondary
 ---
 

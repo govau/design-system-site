@@ -1,6 +1,6 @@
 ## Design Principles
 
-These Design Principles are intended to support and be directly compatible with the [Digital Service Standard](https://www.dta.gov.au/help-and-advice/about-digital-service-standard), recognising that other jurisdictions not covered by the Standard are leveraging and extending the Design System.
+These Design Principles are intended to support and be directly compatible with the [Digital Service Standard](https://www.designsystem.org/help-and-advice/about-digital-service-standard), recognising that other jurisdictions not covered by the Standard are leveraging and extending the Design System.
 
 #### Users’ needs come first
 Our immediate users include designers, developers and researchers, but our ultimate users are the consumers of Australian Government digital services. We want the Design System to be easy to apply to the everyday problems encountered by digital practitioners in government, giving them inclusive, high-quality tools which allow them to serve their end users’ needs to access inclusive government services.

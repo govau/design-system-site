@@ -18,10 +18,10 @@ lists:
   - heading: Help with code
     links:
       - text: Code contribution guide
-        link: https://github.com/govau/design-system-components/blob/master/CONTRIBUTING.md
+        link: https://github.com/designsystemau/design-system-components/blob/master/CONTRIBUTING.md
         icon: github
       - text: Report an issue
-        link: https://github.com/govau/design-system-components/issues
+        link: https://github.com/designsystemau/design-system-components/issues
         icon: github
 
   - heading: Help with usability

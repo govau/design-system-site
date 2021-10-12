@@ -25,13 +25,6 @@ const Header = ({ title, title_badge, mainmenu, header_govau, _relativeURL, _ID,
 				<div className="container-fluid">
 					<div className="row">
 
-						<div className="col-md-12 decommission-msg-container">
-							<div class="au-body au-page-alerts au-page-alerts--warning">
-								The Australian Government Design System has been decommissioned and will be taken down on 30th Sep 2021.&nbsp;
-								<a href="https://community.digital.gov.au/t/dta-design-system-has-been-decommissioned/4649" target="_blank" rel="noopener nofollow">Visit our community page for more information</a>
-							</div>
-						</div>
-
 						<div className="col-md-12">
 
 							<AUheaderBrand
@@ -42,7 +35,7 @@ const Header = ({ title, title_badge, mainmenu, header_govau, _relativeURL, _ID,
 								}
 								subline={ _body }
 								link={ _ID === 'index' ? undefined : '/' }
-								brandImage={ _relativeURL( '/assets/img/header-logo-agov.png', _ID ) }
+								brandImage={ _relativeURL( '/assets/img/dsau-logo.svg', _ID ) }
 								brandImageAlt="The Australian Government coat of Arms"
 								>
 							</AUheaderBrand>

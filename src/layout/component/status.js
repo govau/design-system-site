@@ -66,7 +66,7 @@ const ComponentStatus = ({ module, _ID, _relativeURL, _parseYaml }) => {
 				<dd>
 					{
 						component.state === 'published'
-							? <a href={`https://github.com/govau/design-system-components/blob/master/packages/${ module }/CHANGELOG.md`}>View changes</a>
+							? <a href={`https://github.com/designsystemau/design-system-components/blob/master/packages/${ module }/CHANGELOG.md`}>View changes</a>
 							: <span>Not released</span>
 					}
 				</dd>
@@ -121,7 +121,7 @@ const ComponentStatus = ({ module, _ID, _relativeURL, _parseYaml }) => {
 								<dt>Get involved</dt>
 								<dd>
 									<a href={ `https://community.digital.gov.au/t/${ module } `}>Discussion</a>,&nbsp;
-									<a href={ `https://github.com/govau/design-system-components/issues?q=is%3Aissue+is%3Aopen+${ module } `}>Issues</a>
+									<a href={ `https://github.com/designsystemau/design-system-components/issues?q=is%3Aissue+is%3Aopen+${ module } `}>Issues</a>
 								</dd>
 							</Fragment>
 						: null

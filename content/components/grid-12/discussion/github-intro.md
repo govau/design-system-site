@@ -1,7 +1,7 @@
 ---
 layout: component/discussion-callout
 btntext: GitHub
-btnurl: https://github.com/govau/design-system-components/tree/master/packages/grid-12
+btnurl: https://github.com/designsystemau/design-system-components/tree/master/packages/grid-12
 btntype: secondary
 ---
 
